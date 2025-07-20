@@ -1,15 +1,36 @@
 - id: backend
-  name: Backend & Architecture
-  url: /expertise/backend/
+  name: PHP/Symfony Expertise
+  icon: php
+  description: "Architecture de solutions backend robustes avec PHP 8+ et Symfony. Conception d'APIs REST/GraphQL haute performance et développement de microservices scalables."
+  skills:
+    - "Architecture hexagonale et DDD"
+    - "APIs REST/GraphQL optimisées"
+    - "Microservices avec Docker"
+    - "Tests automatisés (PHPUnit, Behat)"
 - id: ecommerce
-  name: E-commerce & PrestaShop
-  url: /expertise/ecommerce/
+  name: PrestaShop Specialization
+  icon: prestashop
+  description: "Développement de modules PrestaShop sur mesure et optimisation de performances e-commerce. Expert certifié avec 11+ années d'expérience chez Business Tech."
+  skills:
+    - "Modules PrestaShop personnalisés"
+    - "Optimisation de performances"
+    - "Intégrations tiers complexes"
+    - "Architecture multi-boutiques"
 - id: ai
-  name: Intelligence Artificielle
-  url: /expertise/ai/
-- id: frontend
-  name: Frontend & UI/UX
-  url: /expertise/frontend/
-- id: devops
-  name: DevOps & Cloud
-  url: /expertise/devops/
+  name: AI Integration Capabilities
+  icon: ai
+  description: "Intégration d'intelligence artificielle dans les workflows de développement et automation des processus métier pour accélérer la livraison de projets."
+  skills:
+    - "Automation workflows avec AI"
+    - "Optimisation code assistée par IA"
+    - "Analyse prédictive e-commerce"
+    - "Chatbots et assistants virtuels"
+- id: framework
+  name: Framework Development
+  icon: development
+  description: "Conception et développement de frameworks internes et d'outils de développement pour optimiser la productivité des équipes chez Business Tech."
+  skills:
+    - "Frameworks internes Business Tech"
+    - "Outils de génération de code"
+    - "Bibliothèques réutilisables"
+    - "Standards et conventions équipe"

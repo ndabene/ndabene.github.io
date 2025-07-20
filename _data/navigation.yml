@@ -1,11 +1,13 @@
-- name: About
-  link: /about
+- name: Accueil
+  link: /
 - name: Expertise
   link: /expertise
 - name: Projects
   link: /projects
 - name: Case Studies
   link: /case-studies
+- name: Publications
+  link: /publications
 - name: Blog
   link: /blog
 - name: Contact

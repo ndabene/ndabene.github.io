@@ -158,3 +158,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Navigation JavaScript initialized successfully');
 });
+
+// Navigation mobile functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const body = document.body;
+
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', function() {
+            const isOpen = mobileNav.style.display === 'block';
+            
+            if (isOpen) {
+                // Close mobile nav
+                mobileNav.style.display = 'none';
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            } else {
+                // Open mobile nav
+                mobileNav.style.display = 'block';
+                mobileToggle.setAttribute('aria-expanded', 'true');
+                body.style.overflow = 'hidden';
+            }
+        });
+
+        // Close mobile nav when clicking on a link
+        const mobileNavLinks = mobileNav.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.style.display = 'none';
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            });
+        });
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileNav.contains(event.target) && !mobileToggle.contains(event.target)) {
+                mobileNav.style.display = 'none';
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
+            }
+        });
+    }
+
+    // Active navigation highlighting
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.header-nav a, .mobile-nav a');
+    
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPath || (currentPath === '/' && linkPath === '/')) {
+            link.classList.add('active');
+        }
+    });
+});

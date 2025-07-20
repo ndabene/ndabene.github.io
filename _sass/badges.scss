@@ -1,73 +1,165 @@
-// Badges styles
+// _sass/badges.scss
 
+//================================================
+// TECH BADGES SYSTEM
+//================================================
 .badge {
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: $small-size;
-  font-weight: $font-medium;
-  color: $white;
   display: inline-block;
+  padding: $space-xs $space-sm;
+  border-radius: 20px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $white;
   white-space: nowrap;
-  transition: all 0.2s ease-in-out;
+  transition: $transition-base;
+  border: 1px solid transparent;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
   }
+
+  //================================================
+  // CATEGORY-BASED COLORS
+  //================================================
+
+  // PHP & Backend
+  &--php,
+  &--symfony,
+  &--laravel,
+  &--backend {
+    background-color: $primary-color;
+    border-color: $primary-color-dark;
+  }
+
+  // PrestaShop & E-commerce
+  &--prestashop,
+  &--ecommerce,
+  &--magento {
+    background-color: $accent-color-2;
+    border-color: darken($accent-color-2, 10%);
+  }
+
+  // AI & Machine Learning
+  &--ai,
+  &--ml,
+  &--artificial-intelligence {
+    background-color: #7C3AED;
+    border-color: #6D28D9;
+  }
+
+  // DevOps & Infrastructure
+  &--devops,
+  &--docker,
+  &--kubernetes,
+  &--cloud {
+    background-color: $accent-color-1;
+    border-color: darken($accent-color-1, 10%);
+  }
+
+  // Frontend & Design
+  &--frontend,
+  &--javascript,
+  &--vue,
+  &--react,
+  &--css {
+    background-color: #F59E0B;
+    border-color: #D97706;
+  }
+
+  // Database & Storage
+  &--database,
+  &--mysql,
+  &--postgresql,
+  &--redis {
+    background-color: #059669;
+    border-color: #047857;
+  }
+
+  // Business & Experience
+  &--business,
+  &--experience,
+  &--leadership {
+    background-color: $gray-dark;
+    border-color: #1A202C;
+  }
+
+  // Payment & Marketing
+  &--payment,
+  &--marketing,
+  &--seo {
+    background-color: #DC2626;
+    border-color: #B91C1C;
+  }
+
+  // Development Tools
+  &--development,
+  &--tools,
+  &--framework {
+    background-color: #7C2D12;
+    border-color: #92400E;
+  }
+
+  //================================================
+  // SIZE VARIANTS
+  //================================================
   
-  // Category-based colors
-  &--php-expert,
-  &--symfony-advanced,
-  &--laravel-proficient,
-  &--mysql-postgresql-expert,
-  &--redis-elasticsearch-advanced {
-    background: $php-purple;
+  &--small {
+    padding: 2px $space-xs;
+    font-size: 0.75rem;
   }
 
-  &--prestashop-certified-expert,
-  &--magento-developer,
-  &--woocommerce-advanced,
-  &--payment-systems-integration,
-  &--b2b-e-commerce-specialist {
-    background: $prestashop-orange;
+  &--large {
+    padding: $space-sm $space-md;
+    font-size: $font-size-base;
   }
 
-  &--python-for-ai,
-  &--tensorflow-integration,
-  &--api-orchestration,
-  &--data-pipeline-design,
-  &--ml-performance-optimization {
-    background: $ai-green;
+  //================================================
+  // STYLE VARIANTS
+  //================================================
+  
+  &--outline {
+    background-color: transparent;
+    color: $gray-dark;
+    border-color: $gray-light;
+
+    &:hover {
+      background-color: $gray-ultra-light;
+      border-color: $primary-color;
+      color: $primary-color;
+    }
   }
 
-  &--docker-expert,
-  &--aws-certified,
-  &--ci/cd-specialist,
-  &--kubernetes-proficient,
-  &--performance-monitoring {
-    background: $accent-cyan;
-  }
+  &--subtle {
+    background-color: $gray-ultra-light;
+    color: $text-color;
+    border-color: $gray-light;
 
-  &--technical-lead,
-  &--team-management,
-  &--architecture-design,
-  &--code-review-expert,
-  &--mentoring-training {
-    background: $primary-navy;
+    &:hover {
+      background-color: $gray-light;
+      color: $gray-dark;
+    }
   }
-
-  // Specific badges from hero section
-  &--php-expert { background: $php-purple; }
-  &--prestashop-certified { background: $prestashop-orange; }
-  &--ai-orchestrator { background: $ai-green; }
-  &--15-years { background: $primary-navy; }
 }
 
-// Dark mode adjustments
-body.dark-mode {
-  .badge {
-    &:hover {
-      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    }
+//================================================
+// TECH BADGE COMPONENT (for includes)
+//================================================
+// Tech badge component styles are handled by the base .badge class above
+
+//================================================
+// BADGE GROUPS
+//================================================
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+  
+  &--centered {
+    justify-content: center;
+  }
+  
+  &--spaced {
+    gap: $space-sm;
   }
 }

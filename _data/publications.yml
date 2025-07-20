@@ -1,0 +1,8 @@
+- title: "Optimiser les données structurées pour Geo PrestaShop"
+  link: "https://www.businesstech.fr/landing/articles/optimiser-donnees-structurees-geo-prestashop.html"
+- title: "Tutoriel : Créer un module Symfony pour PrestaShop"
+  link: "https://www.businesstech.fr/landing/articles/tutoriel-module-symfony-prestashop.html"
+- title: "PrestaShop & Symfony : Le guide de développement BDD"
+  link: "https://www.businesstech.fr/landing/articles/prestashop-symfony-database-development-guide.html"
+- title: "Éviter les requêtes N+1 dans PrestaShop pour optimiser les performances"
+  link: "https://www.businesstech.fr/landing/articles/requetes-n-plus-1-prestashop-performance-optimisation.html" 
