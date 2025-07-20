@@ -3,15 +3,19 @@
 
 {% include head.html %}
 
-<body>
+<body class="antialiased bg-white text-black dark:bg-dark-bg dark:text-dark-text" itemscope itemtype="http://schema.org/Person">
 
-  {% comment %} {% include header.html %} {% endcomment %}
+  {% include header.html %}
 
-  <main class="page-content" aria-label="Content">
+  <main id="main-content" class="container mx-auto px-6 py-8">
     {{ content }}
   </main>
 
-  {% comment %} {% include footer.html %} {% endcomment %}
+  {% include footer.html %}
 
+  <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/theme-switcher.js' | relative_url }}"></script>
+  {% include analytics.html %}
 </body>
+
 </html>

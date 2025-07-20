@@ -1,0 +1,15 @@
+- id: backend
+  name: Backend & Architecture
+  url: /expertise/backend/
+- id: ecommerce
+  name: E-commerce & PrestaShop
+  url: /expertise/ecommerce/
+- id: ai
+  name: Intelligence Artificielle
+  url: /expertise/ai/
+- id: frontend
+  name: Frontend & UI/UX
+  url: /expertise/frontend/
+- id: devops
+  name: DevOps & Cloud
+  url: /expertise/devops/

@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<article class="project-detail max-w-4xl mx-auto">
+  <header class="text-center my-8">
+    <h1 class="text-4xl font-bold text-primary-navy dark:text-dark-text">{{ page.title }}</h1>
+    <p class="text-lg text-secondary-gray dark:text-dark-text-muted mt-2">{{ page.subtitle }}</p>
+  </header>
+
+  <div class="my-8">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="rounded-lg shadow-lg">
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 my-8">
+    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
+      <h3 class="text-2xl font-bold text-primary-blue">{{ page.metrics.performance }}</h3>
+      <p class="text-secondary-gray dark:text-dark-text-muted">Performance</p>
+    </div>
+    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
+      <h3 class="text-2xl font-bold text-ai-green">{{ page.metrics.roi }}</h3>
+      <p class="text-secondary-gray dark:text-dark-text-muted">ROI</p>
+    </div>
+    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
+      <h3 class="text-2xl font-bold text-prestashop-orange">{{ page.metrics.impact }}</h3>
+      <p class="text-secondary-gray dark:text-dark-text-muted">Impact</p>
+    </div>
+  </div>
+
+  <div class="project-content prose lg:prose-xl max-w-none dark:prose-invert">
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Contexte Business</h2>
+      {{ page.business_context }}
+    </section>
+
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Défis Techniques</h2>
+      {{ page.technical_challenges }}
+    </section>
+
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Solutions & Architecture</h2>
+      {{ content }}
+    </section>
+  </div>
+
+  <div class="my-8">
+    <h3 class="text-xl font-semibold mb-4">Technologies Utilisées</h3>
+    <div class="flex flex-wrap gap-2">
+      {% for tech in page.technologies %}
+        {% include tech-badge.html tech=tech %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if page.screenshots %}
+  <div class="my-8">
+    <h3 class="text-xl font-semibold mb-4">Galerie</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {% for screenshot in page.screenshots %}
+        <img src="{{ screenshot.url | relative_url }}" alt="{{ screenshot.alt }}" class="rounded-lg shadow-md">
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+</article>

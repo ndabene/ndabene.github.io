@@ -1,0 +1,39 @@
+// _sass/layout.scss
+
+// Header et Footer
+.header {
+  // La classe sticky est dans le HTML
+}
+
+.footer {
+  // Styles spécifiques au footer si nécessaire
+}
+
+// Main content
+#main-content {
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+}
+
+// Grille pour les projets ou articles
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-md;
+}
+
+// Styles pour les études de cas
+.case-study {
+  .timeline {
+    // Styles pour la timeline
+  }
+}
+
+// Responsive
+@media (min-width: $tablet) {
+  // Styles pour tablettes
+}
+
+@media (min-width: $desktop) {
+  // Styles pour desktops
+}

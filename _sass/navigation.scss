@@ -1,0 +1,31 @@
+// _sass/navigation.scss
+
+// Styles pour la navigation principale
+.header nav {
+  a {
+    color: $white;
+    font-weight: $font-medium;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $primary-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+// Menu mobile
+#mobile-menu {
+  background-color: $primary-navy;
+
+  a {
+    display: block;
+    color: $white;
+    padding: $spacing-sm $spacing-md;
+
+    &:hover {
+      background-color: $primary-blue;
+    }
+  }
+}

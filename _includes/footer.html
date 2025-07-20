@@ -1,0 +1,24 @@
+<footer class="bg-primary-navy text-white mt-12 py-8">
+  <div class="container mx-auto px-6 text-center">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="credibility-item">
+        <h4 class="font-bold text-lg">15+ Ans d'Expérience</h4>
+        <p class="text-sm text-gray-300">Développement Full-Stack & Architecture</p>
+      </div>
+      <div class="credibility-item">
+        <h4 class="font-bold text-lg">Expert Certifié PrestaShop</h4>
+        <p class="text-sm text-gray-300">Optimisation E-commerce & Performance</p>
+      </div>
+      <div class="credibility-item">
+        <h4 class="font-bold text-lg">AI Orchestrator</h4>
+        <p class="text-sm text-gray-300">Intégration IA & Automatisation</p>
+      </div>
+    </div>
+    <div class="mt-8 border-t border-gray-700 pt-6">
+      <p class="text-sm text-gray-400">&copy; {{ "now" | date: "%Y" }} {{ site.author.name | default: "Votre Nom" }}. Tous droits réservés.</p>
+      <div class="mt-4">
+        {% include social-icons.html %}
+      </div>
+    </div>
+  </div>
+</footer>

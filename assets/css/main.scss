@@ -1,5 +1,10 @@
 
-// RÈGLE : Import des variables en premier
-@import "variables";
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
 
-// Les autres imports viendront ici (base, mixins, components, etc.)
+@import "variables";
+@import "base";
+@import "layout";
+@import "navigation";
+@import "components";

@@ -1,0 +1,20 @@
+<div class="flex justify-center space-x-6">
+  {% if site.author.linkedin %}
+    <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+      <span class="sr-only">LinkedIn</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><!-- ... SVG path for LinkedIn ... --></svg>
+    </a>
+  {% endif %}
+  {% if site.author.github %}
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+      <span class="sr-only">GitHub</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><!-- ... SVG path for GitHub ... --></svg>
+    </a>
+  {% endif %}
+  {% if site.author.twitter %}
+    <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+      <span class="sr-only">Twitter</span>
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><!-- ... SVG path for Twitter ... --></svg>
+    </a>
+  {% endif %}
+</div>

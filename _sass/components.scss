@@ -1,0 +1,420 @@
+// _sass/components.scss
+
+// Cards avec subtle shadows
+.card {
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: $spacing-md;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark & {
+    background: $dark-surface;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+// Badges technologies avec couleurs charte
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: $small-size;
+  font-weight: $font-medium;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  color: $white;
+
+  &--php { background-color: $php-purple; }
+  &--ai { background-color: $ai-green; }
+  &--prestashop { background-color: $prestashop-orange; }
+  &--frontend { background-color: $primary-blue; }
+  &--devops { background-color: $accent-cyan; }
+  &--secondary { background-color: $secondary-gray; }
+}
+
+// Buttons avec états hover
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 6px;
+  font-weight: $font-medium;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  
+  &--primary {
+    background: $primary-blue;
+    color: $white;
+    
+    &:hover {
+      background: darken($primary-blue, 10%);
+      color: $white;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+  }
+  
+  &--secondary {
+    background: transparent;
+    color: $primary-blue;
+    border: 2px solid $primary-blue;
+    
+    &:hover {
+      background: $primary-blue;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  background: linear-gradient(135deg, $white 0%, $light-gray 100%);
+  padding: $spacing-xl 0;
+  
+  .dark & {
+    background: linear-gradient(135deg, $dark-bg 0%, $dark-surface 100%);
+  }
+  
+  &__container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    align-items: center;
+    
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  &__content {
+    text-align: center;
+    
+    @media (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+  
+  &__title {
+    font-size: $h1-size;
+    font-weight: $font-bold;
+    color: $primary-navy;
+    margin: 0 0 $spacing-sm 0;
+    line-height: $line-height-tight;
+    
+    .dark & {
+      color: $dark-text;
+    }
+    
+    @media (max-width: $tablet) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &__subtitle {
+    display: block;
+    color: $primary-blue;
+    font-size: $h2-size;
+    
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+  }
+  
+  &__description {
+    font-size: $large-size;
+    color: $secondary-gray;
+    margin: $spacing-md 0;
+    line-height: $line-height-normal;
+    
+    .dark & {
+      color: $dark-text-muted;
+    }
+    
+    strong {
+      color: $primary-blue;
+      font-weight: $font-semibold;
+    }
+  }
+  
+  &__stats {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin: $spacing-lg 0;
+    
+    @media (min-width: $desktop) {
+      justify-content: flex-start;
+    }
+    
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: center;
+    
+    @media (min-width: $desktop) {
+      justify-content: flex-start;
+    }
+    
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  
+  &__badge-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-sm;
+    justify-content: center;
+    padding: $spacing-lg;
+  }
+}
+
+.stat {
+  text-align: center;
+  
+  &__number {
+    display: block;
+    font-size: $h3-size;
+    font-weight: $font-bold;
+    color: $primary-blue;
+    
+    .dark & {
+      color: $accent-cyan;
+    }
+  }
+  
+  &__label {
+    display: block;
+    font-size: $small-size;
+    color: $secondary-gray;
+    
+    .dark & {
+      color: $dark-text-muted;
+    }
+  }
+}
+
+// Sections génériques
+.section__title {
+  font-size: $h2-size;
+  font-weight: $font-bold;
+  color: $primary-navy;
+  text-align: center;
+  margin: 0 0 $spacing-md 0;
+  
+  .dark & {
+    color: $dark-text;
+  }
+}
+
+.section__subtitle {
+  font-size: $large-size;
+  color: $secondary-gray;
+  text-align: center;
+  margin: 0 0 $spacing-lg 0;
+  
+  .dark & {
+    color: $dark-text-muted;
+  }
+}
+
+// Expertise Section
+.expertise {
+  padding: $spacing-xl 0;
+  background: $white;
+  
+  .dark & {
+    background: $dark-bg;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__card {
+    @extend .card;
+    text-align: center;
+    
+    h3 {
+      font-size: $h4-size;
+      font-weight: $font-semibold;
+      color: $primary-navy;
+      margin: 0 0 $spacing-sm 0;
+      
+      .dark & {
+        color: $dark-text;
+      }
+    }
+    
+    p {
+      color: $secondary-gray;
+      margin: 0 0 $spacing-md 0;
+      
+      .dark & {
+        color: $dark-text-muted;
+      }
+    }
+  }
+  
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    justify-content: center;
+  }
+}
+
+// Tech categories avec bordures colorées
+.tech-category {
+  &--backend {
+    border-left: 4px solid $php-purple;
+  }
+  
+  &--ecommerce {
+    border-left: 4px solid $prestashop-orange;
+  }
+  
+  &--ai {
+    border-left: 4px solid $ai-green;
+  }
+  
+  &--frontend {
+    border-left: 4px solid $primary-blue;
+  }
+  
+  &--devops {
+    border-left: 4px solid $accent-cyan;
+  }
+}
+
+// Projects Preview Section
+.projects-preview {
+  padding: $spacing-xl 0;
+  background: $light-gray;
+  
+  .dark & {
+    background: $dark-surface;
+  }
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.projects__cta {
+  text-align: center;
+}
+
+.project-card {
+  @extend .card;
+  overflow: hidden;
+  
+  &__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  &:hover &__image img {
+    transform: scale(1.05);
+  }
+  
+  &__content {
+    padding: $spacing-md;
+    
+    h3 {
+      font-size: $h4-size;
+      font-weight: $font-semibold;
+      color: $primary-navy;
+      margin: 0 0 $spacing-sm 0;
+      
+      .dark & {
+        color: $dark-text;
+      }
+    }
+    
+    p {
+      color: $secondary-gray;
+      margin: 0 0 $spacing-md 0;
+      
+      .dark & {
+        color: $dark-text-muted;
+      }
+    }
+  }
+  
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__metrics {
+    display: flex;
+    gap: $spacing-sm;
+    
+    .metric {
+      background: $accent-cyan;
+      color: $white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: $small-size;
+      font-weight: $font-medium;
+    }
+  }
+}
+
+// Container générique
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}

@@ -1,0 +1,20 @@
+{% assign tech_name = include.tech | downcase %}
+{% assign category = include.category | default: "secondary" %}
+{% assign badge_class = "badge" %}
+
+{% case category %}
+  {% when "backend" %}
+    {% assign badge_class = badge_class | append: " badge--php" %}
+  {% when "frontend" %}
+    {% assign badge_class = badge_class | append: " badge--frontend" %}
+  {% when "ai" %}
+    {% assign badge_class = badge_class | append: " badge--ai" %}
+  {% when "ecommerce" %}
+    {% assign badge_class = badge_class | append: " badge--prestashop" %}
+  {% when "devops" %}
+    {% assign badge_class = badge_class | append: " badge--devops" %}
+  {% else %}
+    {% assign badge_class = badge_class | append: " badge--secondary" %}
+{% endcase %}
+
+<span class="{{ badge_class }}">{{ include.tech }}</span>
