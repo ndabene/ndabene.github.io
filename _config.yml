@@ -24,6 +24,7 @@ github_username:  ndabene
 # Build settings
 sass:
   style: compressed
+  load_paths: ["_sass"]
 
 # Plugins - Whitelisted for GitHub Pages
 plugins:
