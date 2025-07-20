@@ -28,7 +28,7 @@ collections:
     permalink: /articles/:year/:month/:day/:title/
   case_studies:
     output: true
-    permalink: /case-studies/:name/
+    permalink: /etudes-de-cas/:name/
 
 # Fichiers à exclure de la génération
 exclude:

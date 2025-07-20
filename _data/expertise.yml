@@ -1,5 +1,5 @@
 - id: backend
-  name: PHP/Symfony Expertise
+  name: Expertise PHP/Symfony
   icon: php
   description: "Architecture de solutions backend robustes avec PHP 8+ et Symfony. Conception d'APIs REST/GraphQL haute performance et développement de microservices scalables."
   skills:
@@ -8,7 +8,7 @@
     - "Microservices avec Docker"
     - "Tests automatisés (PHPUnit, Behat)"
 - id: ecommerce
-  name: PrestaShop Specialization
+  name: Spécialisation PrestaShop
   icon: prestashop
   description: "Développement de modules PrestaShop sur mesure et optimisation de performances e-commerce. Expert certifié avec 11+ années d'expérience chez Business Tech."
   skills:
@@ -17,7 +17,7 @@
     - "Intégrations tiers complexes"
     - "Architecture multi-boutiques"
 - id: ai
-  name: AI Integration Capabilities
+  name: Intégration d'IA
   icon: ai
   description: "Intégration d'intelligence artificielle dans les workflows de développement et automation des processus métier pour accélérer la livraison de projets."
   skills:
@@ -26,7 +26,7 @@
     - "Analyse prédictive e-commerce"
     - "Chatbots et assistants virtuels"
 - id: framework
-  name: Framework Development
+  name: Développement de Frameworks
   icon: development
   description: "Conception et développement de frameworks internes et d'outils de développement pour optimiser la productivité des équipes chez Business Tech."
   skills:
