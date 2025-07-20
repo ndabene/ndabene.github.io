@@ -3,8 +3,127 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+vendor/
 
 # Bundler
+.bundle/
 Gemfile.lock
-/.bundle/
-vendor/
+
+# Logs
+*.log
+
+# Environment variables et configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API Keys et secrets
+config.yml
+_config_dev.yml
+secrets.yml
+
+# Node.js (si vous ajoutez des dépendances npm)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Gemini CLI cache et configuration
+.gemini/
+gemini.cache
+.ai-cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Fichiers temporaires
+*~
+.tmp/
+temp/
+tmp/
+
+# Images et assets temporaires
+assets/temp/
+uploads/temp/
+.thumbnails/
+
+# Fichiers de build et optimisation
+dist/
+build/
+.cache/
+
+# Ruby
+*.gem
+.rvmrc
+.rbenv-version
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# WordPress (si migration depuis WP)
+wp-config.php
+wp-content/uploads/
+
+# Analytics et tracking (fichiers de configuration locale)
+google-analytics.yml
+gtag-config.js
+
+# Drafts sensibles (optionnel - si vous voulez garder certains drafts privés)
+_drafts/private/
+_posts/private/
+
+# Fichiers de test
+test/
+spec/
+coverage/
+
+# Documentation générée
+docs/_site/
+documentation/_site/
+
+# Fichiers de déploiement locaux
+deploy.sh
+deploy-config.yml
+
+# Base de données locale (si vous utilisez SQLite pour tests)
+*.db
+*.sqlite3
+
+# Certificates et clés SSH
+*.pem
+*.key
+*.cert
+*.crt
+
+# Fichiers de monitoring et analytics locaux
+lighthouse-reports/
+performance-logs/
+
+# Cache de compression d'images
+.image-cache/
+optimized-images/
+
+# Fichiers de configuration personnels
+my-config.yml
+personal-notes.md
+todo.md
