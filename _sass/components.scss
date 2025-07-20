@@ -24,6 +24,7 @@
   &--php { background: $php-purple; }
   &--ai { background: $ai-green; }
   &--prestashop { background: $prestashop-orange; }
+  &--navy { background: $primary-navy; }
   &--backend { border-left: 4px solid $php-purple; }
   &--ecommerce { border-left: 4px solid $prestashop-orange; }
   &--ai-category { border-left: 4px solid $ai-green; }
@@ -58,6 +59,15 @@
   }
 
   &--secondary {
+    background: $secondary-gray;
+    color: $white;
+
+    &:hover {
+      background: darken($secondary-gray, 10%);
+    }
+  }
+
+  &--secondary-outline {
     background: transparent;
     color: $primary-blue;
     border: 2px solid $primary-blue;
@@ -93,6 +103,11 @@
     }
   }
 }
+
+.icon-architecture::before { content: "\f015"; font-family: "Font Awesome 5 Free"; }
+.icon-ai::before { content: "\f007"; font-family: "Font Awesome 5 Free"; }
+.icon-php::before { content: "\f008"; font-family: "Font Awesome 5 Free"; }
+.icon-leadership::before { content: "\f009"; font-family: "Font Awesome 5 Free"; }
 
 .social-icons {
   display: flex;
@@ -235,5 +250,86 @@ body.dark-mode .site-footer {
   .footer-bottom {
     border-top-color: rgba($dark-text, 0.1);
     color: $dark-text-muted;
+  }
+}
+
+.skills-chart {
+  .skill-item {
+    margin-bottom: $spacing-md;
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $spacing-xs;
+
+      .skill-name {
+        font-weight: $font-medium;
+        color: $primary-navy;
+      }
+
+      .skill-level {
+        font-weight: $font-semibold;
+        color: $primary-blue;
+      }
+    }
+
+    .skill-bar {
+      background-color: $light-gray;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .skill-fill {
+        height: 100%;
+        border-radius: 5px;
+        transition: width 1s ease-out;
+        width: 0; // Initial state for animation
+      }
+
+      &--php-backend .skill-fill { background-color: $php-purple; }
+      &--ecommerce .skill-fill { background-color: $prestashop-orange; }
+      &--ai .skill-fill { background-color: $ai-green; }
+      &--frontend .skill-fill { background-color: $primary-blue; }
+      &--devops .skill-fill { background-color: $accent-cyan; }
+      &--leadership .skill-fill { background-color: $primary-navy; }
+    }
+
+    .skill-years {
+      font-size: $small-size;
+      color: $secondary-gray;
+      margin-top: $spacing-xs;
+      display: block;
+    }
+  }
+}
+
+body.dark-mode {
+  .skills-chart {
+    .skill-item {
+      .skill-header {
+        .skill-name {
+          color: $dark-text;
+        }
+
+        .skill-level {
+          color: $accent-cyan;
+        }
+      }
+
+      .skill-bar {
+        background-color: $dark-surface;
+
+        &--php-backend .skill-fill { background-color: lighten($php-purple, 10%); }
+        &--ecommerce .skill-fill { background-color: lighten($prestashop-orange, 10%); }
+        &--ai .skill-fill { background-color: lighten($ai-green, 10%); }
+        &--frontend .skill-fill { background-color: lighten($primary-blue, 10%); }
+        &--devops .skill-fill { background-color: lighten($accent-cyan, 10%); }
+        &--leadership .skill-fill { background-color: lighten($primary-navy, 10%); }
+      }
+
+      .skill-years {
+        color: $dark-text-muted;
+      }
+    }
   }
 }

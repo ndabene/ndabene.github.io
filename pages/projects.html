@@ -1,0 +1,58 @@
+---
+layout: page
+title: My Projects
+description: "Explore a selection of complex and impactful projects delivered by Nicolas Dabène, showcasing expertise in PHP, E-commerce, and AI orchestration."
+keywords: "php projects, e-commerce development, prestashop projects, ai integration, software architecture, web development portfolio"
+---
+
+<section class="projects-list-section">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="section-description">My portfolio showcases a range of enterprise-level projects, highlighting my expertise in complex architecture, innovative solutions, and delivering tangible business impact. Each project reflects a commitment to technical excellence and strategic problem-solving.</p>
+
+        <div class="project-filters">
+            <div class="filter-group">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter" multiple>
+                    <option value="all">All Categories</option>
+                    <option value="e-commerce">E-commerce</option>
+                    <option value="ai-integration">AI Integration</option>
+                    <option value="custom-platforms">Custom Platforms</option>
+                    <option value="apis">APIs & Integrations</option>
+                    <option value="performance-optimization">Performance Optimization</option>
+                    <option value="technical-leadership">Technical Leadership</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="tech-filter">Filter by Technology:</label>
+                <select id="tech-filter" multiple>
+                    <option value="all">All Technologies</option>
+                    {% assign all_technologies = site.projects | map: 'technologies' | compact | uniq %}
+                    {% for tech_list in all_technologies %}
+                        {% for tech in tech_list %}
+                            <option value="{{ tech | slugify }}">{{ tech }}</option>
+                        {% endfor %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="date-desc">Date (Newest First)</option>
+                    <option value="date-asc">Date (Oldest First)</option>
+                    <option value="impact-desc">Business Impact (High to Low)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+            {% for project in site.projects %}
+                {% include project-card.html project=project %}
+            {% endfor %}
+        </div>
+
+        {% if site.projects.size == 0 %}
+            <p class="no-projects">No projects found yet. Please check back soon!</p>
+        {% endif %}
+    </div>
+</section>

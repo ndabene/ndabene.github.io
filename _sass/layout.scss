@@ -227,47 +227,191 @@ body {
   }
 }
 
-.hero-section {
-  background-color: $white;
+.about-section {
   padding: $spacing-xl 0;
 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: $spacing-lg;
 
     @media (max-width: $tablet) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-content {
+    .lead-paragraph {
+      font-size: $large-size;
+      color: $primary-navy;
+      margin-bottom: $spacing-lg;
+    }
+
+    h2,
+    h3 {
+      color: $primary-navy;
+      margin-bottom: $spacing-md;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: $spacing-md;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .about-sidebar {
+    .metrics-summary,
+    .skills-summary {
+      margin-bottom: $spacing-lg;
+
+      h3 {
+        color: $primary-navy;
+        margin-bottom: $spacing-md;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: $spacing-xs;
+          color: $secondary-gray;
+
+          strong {
+            color: $primary-navy;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.dark-mode {
+  .about-section {
+    .about-content {
+      .lead-paragraph {
+        color: $dark-text;
+      }
+
+      h2,
+      h3 {
+        color: $dark-text;
+      }
+
+      ul li {
+        color: $dark-text-muted;
+
+        strong {
+          color: $dark-text;
+        }
+      }
+    }
+
+    .about-sidebar {
+      .metrics-summary,
+      .skills-summary {
+        h3 {
+          color: $dark-text;
+        }
+
+        ul li {
+          color: $dark-text-muted;
+
+          strong {
+            color: $dark-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hero-section {
+  background: linear-gradient(180deg, $primary-navy 0%, $black 100%);
+  color: $white;
+  padding: $spacing-xl 0;
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-lg;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
       text-align: center;
     }
   }
 
   .hero-content {
-    flex: 1;
+    animation: fadeIn 1s ease-out;
 
-    h1 {
+    .hero-title {
       font-size: $h1-size;
-      color: $primary-navy;
+      color: $white;
       margin-bottom: $spacing-sm;
+      line-height: $line-height-tight;
     }
 
-    .tagline {
+    .hero-subtitle {
       font-size: $h3-size;
       color: $primary-blue;
       margin-bottom: $spacing-md;
     }
 
-    .description {
+    .hero-description {
       font-size: $large-size;
-      color: $secondary-gray;
+      color: $light-gray;
       line-height: $line-height-relaxed;
       margin-bottom: $spacing-lg;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-md;
+      margin-bottom: $spacing-lg;
+      justify-content: flex-start;
+
+      @media (max-width: $tablet) {
+        justify-content: center;
+      }
+
+      .metric-item {
+        text-align: center;
+
+        .metric-value {
+          font-size: $h2-size;
+          font-weight: $font-bold;
+          color: $accent-cyan;
+          display: block;
+        }
+
+        .metric-label {
+          font-size: $small-size;
+          color: $light-gray;
+        }
+      }
     }
 
     .hero-actions {
       display: flex;
       gap: $spacing-sm;
+      margin-bottom: $spacing-lg;
+
+      @media (max-width: $tablet) {
+        justify-content: center;
+      }
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+      justify-content: flex-start;
 
       @media (max-width: $tablet) {
         justify-content: center;
@@ -276,19 +420,125 @@ body {
   }
 
   .hero-image {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: zoomIn 1s ease-out;
 
     img {
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border: 4px solid $primary-blue; // Subtle border
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
   }
 }
+
+.quick-wins-section {
+  padding: $spacing-xl 0;
+  background-color: $light-gray;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    font-size: $h2-size;
+    color: $primary-navy;
+  }
+
+  .quick-wins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-md;
+
+    .quick-win-item {
+      text-align: center;
+      padding: $spacing-md;
+
+      i {
+        font-size: $h1-size;
+        color: $primary-blue;
+        margin-bottom: $spacing-sm;
+        display: block;
+      }
+
+      h3 {
+        font-size: $h3-size;
+        color: $primary-navy;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        color: $secondary-gray;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+body.dark-mode {
+  .hero-section {
+    background: linear-gradient(180deg, $black 0%, $dark-bg 100%);
+
+    .hero-title {
+      color: $dark-text;
+    }
+
+    .hero-subtitle {
+      color: $accent-cyan;
+    }
+
+    .hero-description {
+      color: $dark-text-muted;
+    }
+
+    .hero-metrics .metric-item .metric-value {
+      color: $accent-cyan;
+    }
+
+    .hero-metrics .metric-item .metric-label {
+      color: $dark-text-muted;
+    }
+
+    .hero-image img {
+      border: 4px solid $accent-cyan;
+    }
+  }
+
+  .quick-wins-section {
+    background-color: $dark-surface;
+
+    h2 {
+      color: $dark-text;
+    }
+
+    .quick-win-item {
+      background-color: $dark-bg;
+
+      i {
+        color: $accent-cyan;
+      }
+
+      h3 {
+        color: $dark-text;
+      }
+
+      p {
+        color: $dark-text-muted;
+      }
+    }
+  }
+}
+
 
 .expertise-overview-section {
   padding: $spacing-xl 0;
@@ -405,100 +655,817 @@ body {
   background-color: $primary-blue;
 }
 
-body.dark-mode {
-  .hero-section {
-    background-color: $dark-bg;
+.projects-list-section {
+  padding: $spacing-xl 0;
 
-    .hero-content {
+  .section-description {
+    font-size: $large-size;
+    color: $secondary-gray;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    justify-content: center;
+    margin-bottom: $spacing-lg;
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-xs / 2;
+      }
+
+      select {
+        padding: $spacing-xs;
+        border: 1px solid $light-gray;
+        border-radius: 4px;
+        background-color: $white;
+        color: $primary-navy;
+        font-size: $body-size;
+        min-width: 180px;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-blue;
+          box-shadow: 0 0 0 2px rgba($primary-blue, 0.2);
+        }
+      }
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+
+    @media (min-width: $desktop) {
+      grid-template-columns: repeat(3, 1fr); // 3 columns on desktop
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop - 1px) {
+      grid-template-columns: repeat(2, 1fr); // 2 columns on tablet
+    }
+  }
+
+  .project-card {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-thumbnail {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card-content {
+      padding: $spacing-md;
+
+      h3 {
+        font-size: $h4-size;
+        color: $primary-navy;
+        margin-bottom: $spacing-xs;
+      }
+
+      .project-tagline {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-sm;
+      }
+
+      .project-meta {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-sm;
+
+        .meta-item {
+          margin-right: $spacing-sm;
+        }
+      }
+
+      .tech-badges {
+        margin-top: $spacing-sm;
+      }
+    }
+
+    .business-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+      margin-top: $spacing-sm;
+
+      .metric-item {
+        font-size: $small-size;
+        color: $primary-blue;
+        font-weight: $font-medium;
+      }
+    }
+
+    .card-actions {
+      padding: $spacing-md;
+      border-top: 1px solid $light-gray;
+      display: flex;
+      justify-content: flex-end;
+      gap: $spacing-sm;
+    }
+  }
+
+  .no-projects {
+    text-align: center;
+    font-size: $large-size;
+    color: $secondary-gray;
+    padding: $spacing-lg 0;
+  }
+}
+
+.case-studies-list-section {
+  padding: $spacing-xl 0;
+
+  .section-description {
+    font-size: $large-size;
+    color: $secondary-gray;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+  }
+
+  .case-study-card {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .case-study-thumbnail {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .card-content {
+      padding: $spacing-md;
+
+      h3 {
+        font-size: $h4-size;
+        color: $primary-navy;
+        margin-bottom: $spacing-xs;
+      }
+
+      .case-study-tagline {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-sm;
+      }
+
+      .case-study-meta {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-sm;
+
+        .meta-item {
+          margin-right: $spacing-sm;
+        }
+      }
+
+      .tech-badges {
+        margin-top: $spacing-sm;
+      }
+
+      .summary-preview {
+        font-size: $body-size;
+        color: $secondary-gray;
+        margin-top: $spacing-sm;
+      }
+    }
+
+    .card-actions {
+      padding: $spacing-md;
+      border-top: 1px solid $light-gray;
+      display: flex;
+      justify-content: flex-end;
+      gap: $spacing-sm;
+    }
+  }
+
+  .no-case-studies {
+    text-align: center;
+    font-size: $large-size;
+    color: $secondary-gray;
+    padding: $spacing-lg 0;
+  }
+}
+
+.case-study-page {
+  .case-study-header-section {
+    background-color: $primary-navy;
+    color: $white;
+    padding: $spacing-lg 0;
+    text-align: center;
+
+    h1 {
+      font-size: $h1-size;
+      margin-bottom: $spacing-sm;
+    }
+
+    .case-study-tagline {
+      font-size: $large-size;
+      color: $dark-text-muted;
+    }
+
+    .case-study-meta {
+      font-size: $body-size;
+      color: $dark-text-muted;
+      margin-top: $spacing-md;
+
+      .meta-item {
+        margin: 0 $spacing-xs;
+      }
+    }
+  }
+
+  .case-study-main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: $spacing-lg;
+    padding: $spacing-xl 0;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .case-study-content-area {
+    .case-study-section {
+      margin-bottom: $spacing-lg;
+
+      h2 {
+        font-size: $h2-size;
+        color: $primary-navy;
+        margin-bottom: $spacing-md;
+        border-bottom: 2px solid $light-gray;
+        padding-bottom: $spacing-sm;
+      }
+
+      p {
+        margin-bottom: $spacing-sm;
+      }
+
+      ul {
+        list-style: disc;
+        margin-left: $spacing-md;
+        margin-bottom: $spacing-md;
+      }
+
+      .metrics-charts,
+      .case-study-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-md;
+        margin-top: $spacing-md;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  .case-study-sidebar {
+    .card {
+      margin-bottom: $spacing-lg;
+
+      h3 {
+        color: $primary-navy;
+        margin-bottom: $spacing-md;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: $spacing-xs;
+          color: $secondary-gray;
+
+          strong {
+            color: $primary-navy;
+          }
+        }
+      }
+
+      .tech-badges {
+        margin-top: $spacing-sm;
+      }
+
+      p {
+        color: $secondary-gray;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}
+
+.case-study-navigation {
+  background-color: $light-gray;
+  padding: $spacing-lg 0;
+  text-align: center;
+
+  h3 {
+    color: $primary-navy;
+    margin-bottom: $spacing-md;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .similar-projects {
+    margin-bottom: $spacing-lg;
+
+    h4 {
+      color: $primary-navy;
+      margin-bottom: $spacing-sm;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $spacing-sm;
+
+      li a {
+        color: $primary-blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .cta-discussion {
+    p {
+      font-size: $large-size;
+      color: $secondary-gray;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+.case-study-navigation {
+  background-color: $light-gray;
+  padding: $spacing-lg 0;
+  text-align: center;
+
+  h3 {
+    color: $primary-navy;
+    margin-bottom: $spacing-md;
+  }
+
+  .navigation-links {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  .similar-projects {
+    margin-bottom: $spacing-lg;
+
+    h4 {
+      color: $primary-navy;
+      margin-bottom: $spacing-sm;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $spacing-sm;
+
+      li a {
+        color: $primary-blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .cta-discussion {
+    p {
+      font-size: $large-size;
+      color: $secondary-gray;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+.blog-list-section {
+  padding: $spacing-xl 0;
+
+  .section-description {
+    font-size: $large-size;
+    color: $secondary-gray;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+  }
+
+  .post-item {
+    .card-content {
+      padding: $spacing-md;
+
+      .post-title {
+        font-size: $h4-size;
+        color: $primary-navy;
+        margin-bottom: $spacing-xs;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $primary-blue;
+          }
+        }
+      }
+
+      .post-meta {
+        font-size: $small-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-sm;
+      }
+
+      .post-excerpt {
+        font-size: $body-size;
+        color: $secondary-gray;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+
+  .no-posts {
+    text-align: center;
+    font-size: $large-size;
+    color: $secondary-gray;
+    padding: $spacing-lg 0;
+  }
+}
+
+.contact-section {
+  padding: $spacing-xl 0;
+
+  .section-description {
+    font-size: $large-size;
+    color: $secondary-gray;
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $spacing-lg;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: $spacing-lg;
+
+    h3 {
+      color: $primary-navy;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $secondary-gray;
+      margin-bottom: $spacing-md;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: $spacing-sm;
+        color: $secondary-gray;
+
+        strong {
+          color: $primary-navy;
+        }
+
+        a {
+          color: $primary-blue;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    .form-group {
+      margin-bottom: $spacing-md;
+
+      label {
+        display: block;
+        font-weight: $font-medium;
+        color: $primary-navy;
+        margin-bottom: $spacing-xs;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: $spacing-sm;
+        border: 1px solid $light-gray;
+        border-radius: 4px;
+        font-size: $body-size;
+        color: $primary-navy;
+        background-color: $white;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-blue;
+          box-shadow: 0 0 0 2px rgba($primary-blue, 0.2);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+
+    .form-note {
+      font-size: $small-size;
+      color: $secondary-gray;
+      margin-top: $spacing-sm;
+    }
+  }
+}
+
+body.dark-mode {
+  .case-studies-list-section {
+    .section-description {
+      color: $dark-text-muted;
+    }
+
+    .case-study-card {
+      background-color: $dark-surface;
+
+      .card-content {
+        h3 {
+          color: $dark-text;
+        }
+
+        .case-study-tagline,
+        .case-study-meta,
+        .summary-preview {
+          color: $dark-text-muted;
+        }
+      }
+
+      .card-actions {
+        border-top-color: $dark-bg;
+      }
+    }
+
+    .no-case-studies {
+      color: $dark-text-muted;
+    }
+  }
+
+  .case-study-page {
+    .case-study-header-section {
+      background-color: $dark-surface;
+
       h1 {
         color: $dark-text;
       }
 
-      .tagline {
-        color: $accent-cyan;
-      }
-
-      .description {
+      .case-study-tagline,
+      .case-study-meta {
         color: $dark-text-muted;
       }
     }
 
-    .hero-image img {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    .case-study-main-content {
+      .case-study-content-area {
+        .case-study-section {
+          h2 {
+            color: $dark-text;
+            border-bottom-color: $dark-surface;
+          }
+
+          p {
+            color: $dark-text;
+          }
+
+          ul li {
+            color: $dark-text-muted;
+          }
+
+          .metrics-charts img,
+          .case-study-gallery img {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+
+      .case-study-sidebar {
+        .card {
+          background-color: $dark-surface;
+
+          h3 {
+            color: $dark-text;
+          }
+
+          ul li {
+            color: $dark-text-muted;
+
+            strong {
+              color: $dark-text;
+            }
+          }
+
+          p {
+            color: $dark-text-muted;
+          }
+        }
+      }
     }
   }
 
-  .expertise-overview-section {
+  .case-study-navigation {
     background-color: $dark-surface;
 
-    h2 {
+    h3,
+    h4 {
       color: $dark-text;
     }
 
-    .expertise-item {
-      background-color: $dark-bg;
+    .similar-projects ul li a {
+      color: $accent-cyan;
+
+      &:hover {
+        color: lighten($accent-cyan, 10%);
+      }
+    }
+
+    .cta-discussion p {
+      color: $dark-text-muted;
+    }
+  }
+
+  .blog-list-section {
+    .section-description {
+      color: $dark-text-muted;
+    }
+
+    .post-item {
+      background-color: $dark-surface;
+
+      .card-content {
+        .post-title {
+          a {
+            color: $dark-text;
+
+            &:hover {
+              color: $accent-cyan;
+            }
+          }
+        }
+
+        .post-meta,
+        .post-excerpt {
+          color: $dark-text-muted;
+        }
+      }
+    }
+
+    .no-posts {
+      color: $dark-text-muted;
+    }
+  }
+
+  .contact-section {
+    .section-description {
+      color: $dark-text-muted;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+      background-color: $dark-surface;
 
       h3 {
-        color: $accent-cyan;
+        color: $dark-text;
       }
 
       p {
         color: $dark-text-muted;
       }
 
-      .btn--link {
-        color: $accent-cyan;
+      ul li {
+        color: $dark-text-muted;
 
-        &:hover {
-          color: lighten($accent-cyan, 10%);
+        strong {
+          color: $dark-text;
+        }
+
+        a {
+          color: $accent-cyan;
+
+          &:hover {
+            color: lighten($accent-cyan, 10%);
+          }
         }
       }
     }
-  }
 
-  .metrics-section {
-    background-color: $black;
+    .contact-form {
+      .form-group {
+        label {
+          color: $dark-text;
+        }
 
-    h2 {
-      color: $dark-text;
-    }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          background-color: $dark-bg;
+          border-color: $dark-surface;
+          color: $dark-text;
 
-    .metric-item {
-      background-color: $dark-surface;
-
-      .metric-value {
-        color: $accent-cyan;
+          &:focus {
+            border-color: $accent-cyan;
+            box-shadow: 0 0 0 2px rgba($accent-cyan, 0.2);
+          }
+        }
       }
 
-      .metric-label {
+      .form-note {
         color: $dark-text-muted;
       }
     }
-  }
-
-  .cta-section {
-    background-color: $accent-cyan;
-
-    h2,
-    p {
-      color: $dark-text;
-    }
-
-    .btn--white {
-      background-color: $dark-text;
-      color: $accent-cyan;
-
-      &:hover {
-        background-color: lighten($dark-text, 5%);
-      }
-    }
-  }
-
-  .light-gray-bg {
-    background-color: $dark-surface;
-  }
-
-  .primary-blue-bg {
-    background-color: $accent-cyan;
   }
 }

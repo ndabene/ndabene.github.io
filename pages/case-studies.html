@@ -1,0 +1,51 @@
+---
+layout: page
+title: Case Studies
+description: "In-depth case studies showcasing complex projects, technical challenges, and measurable business impact delivered by Nicolas Dabène."
+keywords: "case studies, project analysis, technical solutions, business impact, senior developer, php, ai, e-commerce"
+---
+
+<section class="case-studies-list-section">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="section-description">Dive deep into my most significant projects, where I break down the business context, technical challenges, innovative solutions, and the tangible results achieved.</p>
+
+        <div class="case-studies-grid">
+            {% for case_study in site.case_studies %}
+                <div class="case-study-card card">
+                    <a href="{{ case_study.url | relative_url }}">
+                        {% if case_study.thumbnail %}
+                            <img src="{{ case_study.thumbnail }}" alt="{{ case_study.title }}" class="case-study-thumbnail">
+                        {% endif %}
+                        <div class="card-content">
+                            <h3>{{ case_study.title }}</h3>
+                            <p class="case-study-tagline">{{ case_study.tagline }}</p>
+                            <div class="case-study-meta">
+                                {% if case_study.client %}<span class="meta-item">Client: {{ case_study.client }}</span>{% endif %}
+                                {% if case_study.duration %}<span class="meta-item">Duration: {{ case_study.duration }}</span>{% endif %}
+                            </div>
+                            <div class="tech-badges">
+                                {% for tech in case_study.technologies limit: 3 %}
+                                    {% include tech-badge.html tech=tech %}
+                                {% endfor %}
+                                {% if case_study.technologies.size > 3 %}
+                                    <span class="badge">+{{ case_study.technologies.size | minus: 3 }} more</span>
+                                {% endif %}
+                            </div>
+                            <div class="business-metrics">
+                                {% if case_study.executive_summary %}<p class="summary-preview">{{ case_study.executive_summary | strip_html | truncatewords: 20 }}</p>{% endif %}
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-actions">
+                        <a href="{{ case_study.url | relative_url }}" class="btn btn--primary">Read Case Study</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if site.case_studies.size == 0 %}
+            <p class="no-case-studies">No case studies found yet. Please check back soon!</p>
+        {% endif %}
+    </div>
+</section>

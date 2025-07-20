@@ -2,57 +2,107 @@
 layout: default
 ---
 
-<div class="case-study-header">
-    <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="case-study-tagline">{{ page.tagline }}</p>
-        {% if page.hero_image %}
-            <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image">
-        {% endif %}
+<div class="case-study-page">
+    <div class="case-study-header-section">
+        <div class="container">
+            <h1>{{ page.title }}</h1>
+            <p class="case-study-tagline">{{ page.tagline }}</p>
+            <div class="case-study-meta">
+                <span class="meta-item"><strong>Client:</strong> {{ page.client }}</span>
+                <span class="meta-item"><strong>Duration:</strong> {{ page.duration }}</span>
+                <span class="meta-item"><strong>Team:</strong> {{ page.team_size }}</span>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="container case-study-content">
-    <section class="case-study-section">
-        <h2>Project Overview</h2>
-        {{ page.overview | markdownify }}
-    </section>
+    <div class="container case-study-main-content">
+        <div class="case-study-content-area">
+            <section class="case-study-section">
+                <h2>Executive Summary</h2>
+                {{ page.executive_summary | markdownify }}
+            </section>
 
-    {% if page.timeline %}
-        <section class="case-study-section">
-            <h2>Development Timeline</h2>
-            <div class="timeline">
-                {% for item in page.timeline %}
-                    <div class="timeline-item">
-                        <div class="timeline-date">{{ item.date }}</div>
-                        <div class="timeline-content">
-                            <h3>{{ item.title }}</h3>
-                            <p>{{ item.description }}</p>
-                        </div>
+            <section class="case-study-section">
+                <h2>Business Context</h2>
+                {{ page.business_context | markdownify }}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Technical Challenges</h2>
+                {{ page.technical_challenges | markdownify }}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Solution Approach & Architecture</h2>
+                {{ page.solution_architecture | markdownify }}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Implementation Details</h2>
+                {{ page.implementation_details | markdownify }}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Results & Metrics</h2>
+                {{ page.results_metrics | markdownify }}
+                {% if page.metrics_charts %}
+                    <div class="metrics-charts">
+                        {% for chart in page.metrics_charts %}
+                            <img src="{{ chart.image }}" alt="{{ chart.alt }}" loading="lazy">
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                {% endif %}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Team & Leadership</h2>
+                {{ page.team_leadership | markdownify }}
+            </section>
+
+            <section class="case-study-section">
+                <h2>Key Learnings</h2>
+                {{ page.key_learnings | markdownify }}
+            </section>
+
+            {% if page.screenshots %}
+                <section class="case-study-section">
+                    <h2>Visuals & Demos</h2>
+                    <div class="case-study-gallery">
+                        {% for screenshot in page.screenshots %}
+                            <img src="{{ screenshot.image }}" alt="{{ screenshot.alt | default: 'Case Study Screenshot' }}" loading="lazy">
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        </div>
+
+        <aside class="case-study-sidebar">
+            <div class="quick-facts card">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li><strong>Client Type:</strong> {{ page.client_type }}</li>
+                    <li><strong>Duration:</strong> {{ page.duration }}</li>
+                    <li><strong>Team Size:</strong> {{ page.team_size }}</li>
+                    <li><strong>Business Impact Score:</strong> {{ page.business_impact_score }}/10</li>
+                </ul>
             </div>
-        </section>
-    {% endif %}
 
-    {% if page.testimonials %}
-        <section class="case-study-section">
-            <h2>Client Testimonials</h2>
-            <div class="testimonials">
-                {% for testimonial in page.testimonials %}
-                    <blockquote class="testimonial">
-                        <p>"{{ testimonial.quote }}"</p>
-                        <footer>— {{ testimonial.author }}, {{ testimonial.role }}</footer>
-                    </blockquote>
-                {% endfor %}
+            <div class="technologies-used card">
+                <h3>Technologies Used</h3>
+                <div class="tech-badges">
+                    {% for tech in page.technologies %}
+                        {% include tech-badge.html tech=tech %}
+                    {% endfor %}
+                </div>
             </div>
-        </section>
-    {% endif %}
 
-    <section class="case-study-section">
-        <h2>Measurable Business Results</h2>
-        {{ page.results | markdownify }}
-    </section>
+            <div class="cta-sidebar card">
+                <h3>Discuss Your Project</h3>
+                <p>Have a similar challenge? Let's connect and explore how my expertise can benefit your business.</p>
+                <a href="/contact" class="btn btn--primary">Get in Touch</a>
+            </div>
+        </aside>
+    </div>
 
-    {{ content }}
+    {% include case-study-nav.html %}
 </div>

@@ -1,0 +1,48 @@
+<div class="case-study-navigation">
+    <div class="container">
+        <h3>Explore More Case Studies</h3>
+        <div class="navigation-links">
+            {% assign sorted_case_studies = site.case_studies | sort: 'date' %}
+            {% for cs in sorted_case_studies %}
+                {% if cs.url == page.url %}
+                    {% assign current_index = forloop.index0 %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign previous_cs = nil %}
+            {% if current_index > 0 %}
+                {% assign previous_cs = sorted_case_studies[current_index | minus: 1] %}
+            {% endif %}
+
+            {% assign next_cs = nil %}
+            {% if current_index < sorted_case_studies.size | minus: 1 %}
+                {% assign next_cs = sorted_case_studies[current_index | plus: 1] %}
+            {% endif %}
+
+            {% if previous_cs %}
+                <a href="{{ previous_cs.url | relative_url }}" class="btn btn--secondary">&larr; Previous Case Study</a>
+            {% endif %}
+
+            {% if next_cs %}
+                <a href="{{ next_cs.url | relative_url }}" class="btn btn--secondary">Next Case Study &rarr;</a>
+            {% endif %}
+        </div>
+
+        <div class="similar-projects">
+            <h4>Similar Projects You Might Be Interested In:</h4>
+            <ul>
+                {% assign current_case_study_tags = page.technologies %}
+                {% assign similar_projects = site.projects | where_exp: "item", "item.technologies contains current_case_study_tags[0]" | sample: 3 %}
+                {% for project in similar_projects %}
+                    <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="cta-discussion text-center">
+            <h3>Ready to Discuss Your Project?</h3>
+            <p>Let's explore how my expertise can drive success for your next major initiative.</p>
+            <a href="/contact" class="btn btn--primary">Schedule a Consultation</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="project-card card" data-categories="{{ project.categories | join: ' ' | slugify }}" data-technologies="{{ project.technologies | join: ' ' | slugify }}" data-date="{{ project.date | date: "%s" }}" data-impact="{{ project.business_impact_score }}">
+    <a href="{{ project.url | relative_url }}" class="project-link">
+        {% if project.thumbnail %}
+            <img src="{{ project.thumbnail }}" alt="{{ project.title }}" class="project-thumbnail" loading="lazy">
+        {% endif %}
+        <div class="card-content">
+            <h3>{{ project.title }}</h3>
+            <p class="project-tagline">{{ project.tagline }}</p>
+            <div class="project-meta">
+                {% if project.client_type %}<span class="meta-item">Client: {{ project.client_type }}</span>{% endif %}
+                {% if project.duration %}<span class="meta-item">Duration: {{ project.duration }}</span>{% endif %}
+                {% if project.team_size %}<span class="meta-item">Team Size: {{ project.team_size }}</span>{% endif %}
+            </div>
+            <div class="tech-badges">
+                {% for tech in project.technologies limit: 3 %}
+                    {% include tech-badge.html tech=tech %}
+                {% endfor %}
+                {% if project.technologies.size > 3 %}
+                    <span class="badge">+{{ project.technologies.size | minus: 3 }} more</span>
+                {% endif %}
+            </div>
+            <div class="business-metrics">
+                {% if project.metrics.performance %}<span class="metric-item">Perf: {{ project.metrics.performance }}</span>{% endif %}
+                {% if project.metrics.roi %}<span class="metric-item">ROI: {{ project.metrics.roi }}</span>{% endif %}
+            </div>
+        </div>
+    </a>
+    <div class="card-actions">
+        <a href="{{ project.url | relative_url }}" class="btn btn--primary">{{ project.layout == 'case-study' ? 'View Case Study' : 'Quick View' }}</a>
+    </div>
+</div>

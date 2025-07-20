@@ -19,6 +19,11 @@ github_url: "https://github.com/ndabene"
 # SEO & Meta
 keywords: "senior php developer, prestashop expert, ai orchestrator, php architect, prestashop performance optimization, php microservices architecture"
 
+# Maintenance Mode
+maintenance_mode: true  # Set to false to disable maintenance mode
+allowed_ips:
+  - "109.210.10.225"  # IP autorisée pour le développement
+
 # Build settings
 plugins:
   - jekyll-feed
@@ -37,6 +42,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
 
 # Fichiers à exclure de la génération
 exclude:

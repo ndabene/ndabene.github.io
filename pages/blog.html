@@ -1,0 +1,32 @@
+---
+layout: page
+title: Blog
+description: "Insights and articles on PHP, AI, E-commerce, and software engineering from Nicolas Dabène."
+keywords: "php blog, ai blog, e-commerce blog, software engineering, technical articles, prestashop"
+---
+
+<section class="blog-list-section">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="section-description">Here you'll find my thoughts, insights, and technical articles on a range of topics including PHP, AI, E-commerce, and general software engineering best practices.</p>
+
+        <div class="post-list">
+            {% for post in site.posts %}
+                <article class="post-item card">
+                    <div class="card-content">
+                        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} {% if post.author %}by {{ post.author }}{% endif %}</p>
+                        <div class="post-excerpt">
+                            {{ post.excerpt | markdownify }}
+                        </div>
+                        <a href="{{ post.url | relative_url }}" class="btn btn--link">Read More &rarr;</a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+            <p class="no-posts">No blog posts found yet. Please check back soon!</p>
+        {% endif %}
+    </div>
+</section>

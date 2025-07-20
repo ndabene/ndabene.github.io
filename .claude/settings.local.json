@@ -8,7 +8,9 @@
       "Bash(mv:*)",
       "Bash(jekyll build)",
       "Bash(jekyll serve:*)",
-      "WebFetch(domain:ibb.co)"
+      "WebFetch(domain:ibb.co)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": []
   }
