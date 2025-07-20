@@ -31,6 +31,9 @@ collections:
     permalink: /case-studies/:name/
 
 # Fichiers à exclure de la génération
+maintenance_mode: false
+maintenance_authorized_ip: "109.210.10.225"
+
 exclude:
   - Gemfile
   - Gemfile.lock
