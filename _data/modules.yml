@@ -22,3 +22,27 @@
       category: prestashop
     - tech: Marketing
       category: marketing 
+- title: "Google Merchant Center PRO (Google Shopping)"
+  description: "Intégrez Google Shopping pour augmenter vos ventes."
+  link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
+  tags:
+    - tech: PrestaShop
+      category: prestashop
+    - tech: Marketing
+      category: marketing 
+- title: "Social Login"
+  description: "Permet aux utilisateurs de se connecter avec leurs comptes Facebook, Google, etc."
+  link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/30-social-login-0656272557829.html"
+  tags:
+    - tech: PrestaShop
+      category: prestashop
+    - tech: Social
+      category: Social 
+- title: "Google Analytics PRO"
+  description: "Intégrez Google Analytics pour suivre les performances de votre site."
+  link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/46-google-analytics-pro-0656272943080.html"
+  tags:
+    - tech: PrestaShop
+      category: prestashop
+    - tech: Marketing
+      category: marketing 
