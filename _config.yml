@@ -36,3 +36,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - PLAN.md
+
+# Maintenance mode settings
+maintenance_mode: false
+maintenance_authorized_ip: ""
+under_construction: true # Bannière "under construction" en haut du site
