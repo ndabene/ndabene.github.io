@@ -202,7 +202,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                 </div>
 
                 <div class="partnership-cta">
-                    <a href="https://business-tech.fr" class="btn btn--primary" target="_blank">
+                    <a href="https://businesstech.fr" class="btn btn--primary" target="_blank">
                         Découvrir Business Tech <span class="external-icon">↗</span>
                     </a>
                     <a href="/about#business-tech" class="btn btn--secondary">
