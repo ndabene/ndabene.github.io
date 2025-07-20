@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-# Pour assurer la compatibilité avec GitHub Pages
-# Cette gem inclut Jekyll et tous les plugins autorisés par GitHub Pages
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
+
+gem "jekyll-feed", "~> 0.17.0"
+gem "jekyll-seo-tag", "~> 2.8.0"

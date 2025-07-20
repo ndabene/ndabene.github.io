@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
+
+{% include head.html %}
+
+<body>
+
+  {% comment %} {% include header.html %} {% endcomment %}
+
+  <main class="page-content" aria-label="Content">
+    {{ content }}
+  </main>
+
+  {% comment %} {% include footer.html %} {% endcomment %}
+
+</body>
+</html>
