@@ -5,28 +5,97 @@ description: "Insights and articles on PHP, AI, E-commerce, and software enginee
 keywords: "php blog, ai blog, e-commerce blog, software engineering, technical articles, prestashop"
 ---
 
-<section class="blog-list-section">
-    <div class="container">
+<section class="blog-hero-section">
+    <div class="container text-center">
         <h1>{{ page.title }}</h1>
-        <p class="section-description">Here you'll find my thoughts, insights, and technical articles on a range of topics including PHP, AI, E-commerce, and general software engineering best practices.</p>
+        <p class="section-description">Here you'll find my thoughts, insights, and technical articles on a range of topics including PHP, AI, E-commerce, and general software engineering best practices. My goal is to share knowledge, foster discussion, and demonstrate practical applications of advanced concepts.</p>
+    </div>
+</section>
 
-        <div class="post-list">
-            {% for post in site.posts %}
-                <article class="post-item card">
-                    <div class="card-content">
-                        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} {% if post.author %}by {{ post.author }}{% endif %}</p>
-                        <div class="post-excerpt">
-                            {{ post.excerpt | markdownify }}
-                        </div>
-                        <a href="{{ post.url | relative_url }}" class="btn btn--link">Read More &rarr;</a>
+<section class="blog-content-section">
+    <div class="container">
+        <div class="blog-grid">
+            <div class="main-blog-content">
+                <h2>Featured Articles</h2>
+                <div class="featured-posts-grid">
+                    {% assign featured_posts = site.posts | where: "featured", true | limit: 2 %}
+                    {% for post in featured_posts %}
+                        {% include post-preview.html post=post %}
+                    {% endfor %}
+                </div>
+
+                <h2>All Articles</h2>
+                <div class="blog-filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            {% assign all_categories = site.posts | map: 'categories' | compact | flatten | uniq %}
+                            {% for category in all_categories %}
+                                <option value="{{ category | slugify }}">{{ category }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                </article>
-            {% endfor %}
-        </div>
+                    <div class="filter-group">
+                        <label for="tag-filter">Tags:</label>
+                        <select id="tag-filter" multiple>
+                            <option value="all">All Tags</option>
+                            {% assign all_tags = site.posts | map: 'tags' | compact | flatten | uniq %}
+                            {% for tag in all_tags %}
+                                <option value="{{ tag | slugify }}">{{ tag }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-by">Sort By:</label>
+                        <select id="sort-by">
+                            <option value="date-desc">Newest First</option>
+                            <option value="date-asc">Oldest First</option>
+                            <option value="read-time-asc">Shortest Read Time</option>
+                        </select>
+                    </div>
+                </div>
 
-        {% if site.posts.size == 0 %}
-            <p class="no-posts">No blog posts found yet. Please check back soon!</p>
-        {% endif %}
+                <div class="post-list" id="blog-posts-container">
+                    {% for post in site.posts %}
+                        {% include post-preview.html post=post %}
+                    {% endfor %}
+                </div>
+
+                {% if site.posts.size == 0 %}
+                    <p class="no-posts">No blog posts found yet. Please check back soon!</p>
+                {% endif %}
+            </div>
+
+            <aside class="blog-sidebar">
+                <div class="newsletter-signup card">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to my newsletter for exclusive technical insights, project updates, and industry trends.</p>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="recent-posts card">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        {% for post in site.posts limit: 5 %}
+                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="blog-categories card">
+                    <h3>Categories</h3>
+                    <ul>
+                        {% assign all_categories = site.posts | map: 'categories' | compact | flatten | uniq %}
+                        {% for category in all_categories %}
+                            <li><a href="/blog/#category-{{ category | slugify }}">{{ category }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </div>
 </section>

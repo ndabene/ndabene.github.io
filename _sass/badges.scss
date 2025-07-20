@@ -1,0 +1,73 @@
+// Badges styles
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: $small-size;
+  font-weight: $font-medium;
+  color: $white;
+  display: inline-block;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  // Category-based colors
+  &--php-expert,
+  &--symfony-advanced,
+  &--laravel-proficient,
+  &--mysql-postgresql-expert,
+  &--redis-elasticsearch-advanced {
+    background: $php-purple;
+  }
+
+  &--prestashop-certified-expert,
+  &--magento-developer,
+  &--woocommerce-advanced,
+  &--payment-systems-integration,
+  &--b2b-e-commerce-specialist {
+    background: $prestashop-orange;
+  }
+
+  &--python-for-ai,
+  &--tensorflow-integration,
+  &--api-orchestration,
+  &--data-pipeline-design,
+  &--ml-performance-optimization {
+    background: $ai-green;
+  }
+
+  &--docker-expert,
+  &--aws-certified,
+  &--ci/cd-specialist,
+  &--kubernetes-proficient,
+  &--performance-monitoring {
+    background: $accent-cyan;
+  }
+
+  &--technical-lead,
+  &--team-management,
+  &--architecture-design,
+  &--code-review-expert,
+  &--mentoring-training {
+    background: $primary-navy;
+  }
+
+  // Specific badges from hero section
+  &--php-expert { background: $php-purple; }
+  &--prestashop-certified { background: $prestashop-orange; }
+  &--ai-orchestrator { background: $ai-green; }
+  &--15-years { background: $primary-navy; }
+}
+
+// Dark mode adjustments
+body.dark-mode {
+  .badge {
+    &:hover {
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+  }
+}

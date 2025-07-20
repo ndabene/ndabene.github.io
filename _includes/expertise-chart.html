@@ -1,0 +1,78 @@
+<canvas id="expertiseRadarChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('expertiseRadarChart');
+
+    if (ctx) {
+        const expertiseData = {{ site.data.skills | jsonify }};
+
+        const labels = expertiseData.map(skill => skill.name);
+        const data = expertiseData.map(skill => skill.level);
+
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Proficiency Level',
+                    data: data,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)', // primary-blue with transparency
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(59, 130, 246, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(100, 116, 139, 0.3)' // secondary-gray with transparency
+                        },
+                        grid: {
+                            color: 'rgba(100, 116, 139, 0.3)'
+                        },
+                        pointLabels: {
+                            color: '#1e293b', // primary-navy
+                            font: {
+                                size: 12
+                            }
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        ticks: {
+                            display: false // Hide the numbers on the radar axis
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                label += context.raw + '%';
+                                const skill = expertiseData[context.dataIndex];
+                                if (skill.years_experience) {
+                                    label += ' (' + skill.years_experience + ' Years)';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+});
+</script>

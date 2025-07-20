@@ -1,1 +1,1 @@
-<span class="badge badge--{{ include.tech | slugify }}">{{ include.tech }}</span>
+<span class="badge badge--{{ include.category | default: (include.tech | slugify) }}" {% if include.years %}title="{{ include.years }} years experience"{% endif %}>{{ include.tech }}</span>
