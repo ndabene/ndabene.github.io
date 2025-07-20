@@ -1,7 +1,5 @@
 - name: Accueil
   link: /
-- name: À propos
-  link: /about/
 - name: Expertise
   link: /expertise/
 - name: Projets

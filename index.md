@@ -166,7 +166,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                         </div>
                         <div class="highlight-content">
                             <h4>Projets Marquants</h4>
-                            <p>Plus de 200 projets e-commerce livrés avec succès, incluant des architectures complexes pour des clients Fortune 500.</p>
+                            <p>Création de plusieurs modules best seller pour Prestashop</p>
                         </div>
                     </div>
                     
@@ -176,7 +176,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                         </div>
                         <div class="highlight-content">
                             <h4>Innovation Continue</h4>
-                            <p>Développement de frameworks internes et intégration de technologies AI pour optimiser nos processus de développement.</p>
+                            <p>Création de modules innovants et avance sur leurs temps, pour aider les e-commerçant a performer</p>
                         </div>
                     </div>
                     
@@ -191,22 +191,9 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                     </div>
                 </div>
 
-                <div class="partnership-testimonial">
-                    <blockquote>
-                        <p>"Nicolas apporte une expertise technique exceptionnelle et une vision stratégique qui nous permet de rester à la pointe de l'innovation e-commerce. Sa capacité à intégrer des technologies AI dans nos workflows a révolutionné notre approche du développement."</p>
-                        <footer>
-                            <strong>Équipe Business Tech</strong>
-                            <span>Témoignage interne</span>
-                        </footer>
-                    </blockquote>
-                </div>
-
                 <div class="partnership-cta">
                     <a href="https://businesstech.fr" class="btn btn--primary" target="_blank">
                         Découvrir Business Tech <span class="external-icon">↗</span>
-                    </a>
-                    <a href="/about#business-tech" class="btn btn--secondary">
-                        Notre collaboration
                     </a>
                 </div>
             </div>
@@ -218,15 +205,15 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                 </div>
                 <div class="metric-card">
                     <span class="metric-number">200+</span>
-                    <span class="metric-label">Projets livrés</span>
+                    <span class="metric-label">PCafès bu</span>
                 </div>
                 <div class="metric-card">
                     <span class="metric-number">50+</span>
                     <span class="metric-label">Modules développés</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">€25M+</span>
-                    <span class="metric-label">Chiffre d'affaires généré</span>
+                    <span class="metric-number">Support</span>
+                    <span class="metric-label">98% de satisfaction client</span>
                 </div>
             </div>
         </div>
