@@ -1,3 +1,14 @@
-{% for item in site.data.navigation %}
-  <a href="{{ item.url | relative_url }}" class="block md:inline-block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-primary-blue focus:outline-none focus:bg-primary-blue transition duration-150 ease-in-out">{{ item.title }}</a>
-{% endfor %}
+<ul class="main-nav-list">
+    {% for item in site.data.navigation %}
+        <li class="main-nav-item">
+            <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+            {% if item.subitems %}
+                <ul class="sub-nav-list">
+                    {% for subitem in item.subitems %}
+                        <li class="sub-nav-item"><a href="{{ subitem.link | relative_url }}">{{ subitem.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

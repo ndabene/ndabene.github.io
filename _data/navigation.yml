@@ -1,10 +1,12 @@
-- title: Accueil
-  url: /
-- title: Projets
-  url: /projects/
-- title: Blog
-  url: /blog/
-- title: À Propos
-  url: /about/
-- title: Contact
-  url: /contact/
+- name: About
+  link: /about
+- name: Expertise
+  link: /expertise
+- name: Projects
+  link: /projects
+- name: Case Studies
+  link: /case-studies
+- name: Blog
+  link: /blog
+- name: Contact
+  link: /contact

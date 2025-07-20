@@ -226,3 +226,279 @@ body {
     }
   }
 }
+
+.hero-section {
+  background-color: $white;
+  padding: $spacing-xl 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .hero-content {
+    flex: 1;
+
+    h1 {
+      font-size: $h1-size;
+      color: $primary-navy;
+      margin-bottom: $spacing-sm;
+    }
+
+    .tagline {
+      font-size: $h3-size;
+      color: $primary-blue;
+      margin-bottom: $spacing-md;
+    }
+
+    .description {
+      font-size: $large-size;
+      color: $secondary-gray;
+      line-height: $line-height-relaxed;
+      margin-bottom: $spacing-lg;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: $spacing-sm;
+
+      @media (max-width: $tablet) {
+        justify-content: center;
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.expertise-overview-section {
+  padding: $spacing-xl 0;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    font-size: $h2-size;
+    color: $primary-navy;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+
+    .expertise-item {
+      text-align: center;
+
+      h3 {
+        font-size: $h3-size;
+        color: $primary-blue;
+        margin-bottom: $spacing-sm;
+      }
+
+      p {
+        color: $secondary-gray;
+        margin-bottom: $spacing-md;
+      }
+
+      .btn--link {
+        color: $primary-blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.metrics-section {
+  padding: $spacing-xl 0;
+  background-color: $primary-navy;
+  color: $white;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+    font-size: $h2-size;
+    color: $white;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-md;
+    text-align: center;
+
+    .metric-item {
+      background-color: $dark-surface;
+      padding: $spacing-md;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      .metric-value {
+        font-size: $h1-size;
+        font-weight: $font-bold;
+        color: $accent-cyan;
+        display: block;
+        margin-bottom: $spacing-xs;
+      }
+
+      .metric-label {
+        font-size: $body-size;
+        color: $dark-text-muted;
+      }
+    }
+  }
+}
+
+.cta-section {
+  padding: $spacing-xl 0;
+  background-color: $primary-blue;
+  color: $white;
+
+  h2 {
+    font-size: $h2-size;
+    margin-bottom: $spacing-md;
+    color: $white;
+  }
+
+  p {
+    font-size: $large-size;
+    margin-bottom: $spacing-lg;
+  }
+
+  .btn--white {
+    background-color: $white;
+    color: $primary-blue;
+
+    &:hover {
+      background-color: darken($white, 5%);
+    }
+  }
+}
+
+.light-gray-bg {
+  background-color: $light-gray;
+}
+
+.primary-blue-bg {
+  background-color: $primary-blue;
+}
+
+body.dark-mode {
+  .hero-section {
+    background-color: $dark-bg;
+
+    .hero-content {
+      h1 {
+        color: $dark-text;
+      }
+
+      .tagline {
+        color: $accent-cyan;
+      }
+
+      .description {
+        color: $dark-text-muted;
+      }
+    }
+
+    .hero-image img {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .expertise-overview-section {
+    background-color: $dark-surface;
+
+    h2 {
+      color: $dark-text;
+    }
+
+    .expertise-item {
+      background-color: $dark-bg;
+
+      h3 {
+        color: $accent-cyan;
+      }
+
+      p {
+        color: $dark-text-muted;
+      }
+
+      .btn--link {
+        color: $accent-cyan;
+
+        &:hover {
+          color: lighten($accent-cyan, 10%);
+        }
+      }
+    }
+  }
+
+  .metrics-section {
+    background-color: $black;
+
+    h2 {
+      color: $dark-text;
+    }
+
+    .metric-item {
+      background-color: $dark-surface;
+
+      .metric-value {
+        color: $accent-cyan;
+      }
+
+      .metric-label {
+        color: $dark-text-muted;
+      }
+    }
+  }
+
+  .cta-section {
+    background-color: $accent-cyan;
+
+    h2,
+    p {
+      color: $dark-text;
+    }
+
+    .btn--white {
+      background-color: $dark-text;
+      color: $accent-cyan;
+
+      &:hover {
+        background-color: lighten($dark-text, 5%);
+      }
+    }
+  }
+
+  .light-gray-bg {
+    background-color: $dark-surface;
+  }
+
+  .primary-blue-bg {
+    background-color: $accent-cyan;
+  }
+}

@@ -7,7 +7,8 @@
       "Bash(jekyll build --verbose)",
       "Bash(mv:*)",
       "Bash(jekyll build)",
-      "Bash(jekyll serve:*)"
+      "Bash(jekyll serve:*)",
+      "WebFetch(domain:ibb.co)"
     ],
     "deny": []
   }

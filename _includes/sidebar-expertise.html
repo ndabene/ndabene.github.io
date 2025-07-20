@@ -1,10 +1,10 @@
-<div class="p-4 bg-light-gray dark:bg-dark-surface rounded-lg">
-  <h3 class="text-lg font-bold mb-4">Domaines d'Expertise</h3>
-  <ul>
-    {% for category in site.data.expertise %}
-      <li class="tech-category tech-category--{{ category.id }} mb-2">
-        <a href="{{ category.url | relative_url }}" class="font-semibold">{{ category.name }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="sidebar-section expertise-sidebar">
+    <h3>My Expertise</h3>
+    <ul>
+        {% for expertise in site.data.expertise %}
+            <li class="tech-category tech-category--{{ expertise.id }}">
+                <a href="{{ expertise.url | relative_url }}">{{ expertise.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 </div>

@@ -1,137 +1,78 @@
 ---
 layout: default
-title: "Senior PHP Developer & AI Orchestrator"
-description: "Expert PrestaShop certifié avec 15+ ans d'expérience. Architecture complexe, innovation AI et performance e-commerce."
-permalink: /
+title: Home
+description: "Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience. Expert PrestaShop certified, specializing in complex architecture and AI innovation."
+keywords: "senior php developer, prestashop expert, ai orchestrator, php architect, prestashop performance optimization, php microservices architecture"
 ---
 
-<section class="hero">
-  <div class="hero__container">
-    <div class="hero__content">
-      <h1 class="hero__title">
-        Senior PHP FullStack Developer
-        <span class="hero__subtitle">& AI Orchestrator</span>
-      </h1>
-      <p class="hero__description">
-        Expert PrestaShop certifié avec <strong>15+ ans d'expérience</strong>. 
-        Spécialisé en architecture complexe et innovation AI pour l'e-commerce haute performance.
-      </p>
-      <div class="hero__stats">
-        <div class="stat">
-          <span class="stat__number">50+</span>
-          <span class="stat__label">Projets complexes</span>
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Nicolas Dabène</h1>
+            <p class="tagline">Senior PHP FullStack Developer & AI Orchestrator</p>
+            <p class="description">With over 15 years of experience, I specialize in architecting robust, scalable, and innovative web solutions, with a strong focus on PHP, PrestaShop, and AI integration. I help businesses achieve their digital transformation goals and drive measurable ROI.</p>
+            <div class="hero-actions">
+                <a href="/projects" class="btn btn--primary">View My Work</a>
+                <a href="/contact" class="btn btn--secondary">Get in Touch</a>
+            </div>
         </div>
-        <div class="stat">
-          <span class="stat__number">€10M+</span>
-          <span class="stat__label">Revenue générée</span>
+        <div class="hero-image">
+            <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior Developer">
         </div>
-        <div class="stat">
-          <span class="stat__number">Fortune 500</span>
-          <span class="stat__label">Clients</span>
-        </div>
-      </div>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">Démarrer un projet</a>
-        <a href="/projects" class="btn btn--secondary">Voir mes réalisations</a>
-      </div>
     </div>
-    <div class="hero__image">
-      <div class="hero__badge-cloud">
-        {% include tech-badge.html tech="PHP" category="backend" %}
-        {% include tech-badge.html tech="PrestaShop" category="ecommerce" %}
-        {% include tech-badge.html tech="AI/ML" category="ai" %}
-        {% include tech-badge.html tech="Symfony" category="backend" %}
-        {% include tech-badge.html tech="Docker" category="devops" %}
-        {% include tech-badge.html tech="Vue.js" category="frontend" %}
-      </div>
-    </div>
-  </div>
 </section>
 
-<section class="expertise">
-  <div class="container">
-    <h2 class="section__title">Expertise Technique</h2>
-    <div class="expertise__grid">
-      <div class="expertise__card tech-category--backend">
-        <h3>Backend Architecture</h3>
-        <p>PHP 8+, Symfony, microservices, API REST/GraphQL</p>
-        <div class="expertise__tech">
-          {% include tech-badge.html tech="PHP 8" category="backend" %}
-          {% include tech-badge.html tech="Symfony" category="backend" %}
-          {% include tech-badge.html tech="API REST" category="backend" %}
+<section class="expertise-overview-section light-gray-bg">
+    <div class="container">
+        <h2>My Core Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-item card">
+                <h3>Backend & Architecture</h3>
+                <p>Designing and building high-performance, scalable backend systems with PHP, Symfony, and microservices.</p>
+                <a href="/expertise#backend" class="btn btn--link">Learn More</a>
+            </div>
+            <div class="expertise-item card">
+                <h3>E-commerce & PrestaShop</h3>
+                <p>Certified PrestaShop expert, optimizing platforms for performance, custom features, and seamless integrations.</p>
+                <a href="/expertise#ecommerce" class="btn btn--link">Learn More</a>
+            </div>
+            <div class="expertise-item card">
+                <h3>AI Orchestration</h3>
+                <p>Integrating AI/ML solutions into existing systems to automate processes, enhance decision-making, and unlock new value.</p>
+                <a href="/expertise#ai" class="btn btn--link">Learn More</a>
+            </div>
         </div>
-      </div>
-      
-      <div class="expertise__card tech-category--ecommerce">
-        <h3>E-commerce Expert</h3>
-        <p>PrestaShop certifié, optimisation performance, modules custom</p>
-        <div class="expertise__tech">
-          {% include tech-badge.html tech="PrestaShop" category="ecommerce" %}
-          {% include tech-badge.html tech="WooCommerce" category="ecommerce" %}
-          {% include tech-badge.html tech="Magento" category="ecommerce" %}
-        </div>
-      </div>
-      
-      <div class="expertise__card tech-category--ai">
-        <h3>AI Orchestrator</h3>
-        <p>Machine Learning, NLP, automation intelligente</p>
-        <div class="expertise__tech">
-          {% include tech-badge.html tech="TensorFlow" category="ai" %}
-          {% include tech-badge.html tech="OpenAI" category="ai" %}
-          {% include tech-badge.html tech="Python" category="ai" %}
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<section class="projects-preview">
-  <div class="container">
-    <h2 class="section__title">Projets Récents</h2>
-    <p class="section__subtitle">Solutions innovantes pour des clients exigeants</p>
-    
-    <div class="projects__grid">
-      <div class="project-card">
-        <div class="project-card__image">
-          <img src="/assets/images/projects/ecommerce-platform.jpg" alt="Plateforme E-commerce" loading="lazy">
+<section class="metrics-section">
+    <div class="container">
+        <h2>Impact & Achievements</h2>
+        <div class="metrics-grid">
+            <div class="metric-item">
+                <span class="metric-value">15+</span>
+                <span class="metric-label">Years of Experience</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-value">50+</span>
+                <span class="metric-label">Complex Projects Delivered</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-value">€10M+</span>
+                <span class="metric-label">Revenue Generated for Clients</span>
+            </div>
+            <div class="metric-item">
+                <span class="metric-value">Fortune 500</span>
+                <span class="metric-label">Client Engagements</span>
+            </div>
         </div>
-        <div class="project-card__content">
-          <h3>Plateforme E-commerce Multi-tenant</h3>
-          <p>Architecture microservices pour marketplace B2B avec 50k+ produits</p>
-          <div class="project-card__tech">
-            {% include tech-badge.html tech="PHP 8" category="backend" %}
-            {% include tech-badge.html tech="Symfony" category="backend" %}
-            {% include tech-badge.html tech="Docker" category="devops" %}
-          </div>
-          <div class="project-card__metrics">
-            <span class="metric">300% performance boost</span>
-            <span class="metric">€2M+ revenue</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-card__image">
-          <img src="/assets/images/projects/ai-optimization.jpg" alt="AI Optimization" loading="lazy">
-        </div>
-        <div class="project-card__content">
-          <h3>AI-Powered Inventory Management</h3>
-          <p>Système prédictif pour optimisation stock e-commerce</p>
-          <div class="project-card__tech">
-            {% include tech-badge.html tech="Python" category="ai" %}
-            {% include tech-badge.html tech="TensorFlow" category="ai" %}
-            {% include tech-badge.html tech="API REST" category="backend" %}
-          </div>
-          <div class="project-card__metrics">
-            <span class="metric">40% réduction stock</span>
-            <span class="metric">95% précision</span>
-          </div>
-        </div>
-      </div>
     </div>
-    
-    <div class="projects__cta">
-      <a href="/projects" class="btn btn--primary">Voir tous les projets</a>
+</section>
+
+<section class="cta-section primary-blue-bg">
+    <div class="container text-center">
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Let's discuss how my expertise can drive your next successful project.</p>
+        <a href="/contact" class="btn btn--white">Schedule a Consultation</a>
     </div>
-  </div>
 </section>

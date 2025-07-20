@@ -91,25 +91,6 @@ body.dark-mode {
     }
   }
 
-  .main-navigation {
-    background-color: $dark-surface;
-
-    .logo a {
-      color: $dark-text;
-
-      &:hover {
-        color: $accent-cyan;
-      }
-    }
-
-    .nav-menu li a {
-      color: $dark-text;
-
-      &::after {
-        background-color: $accent-cyan;
-      }
-    }
-  }
 
   .page-header {
     background-color: $dark-surface;
