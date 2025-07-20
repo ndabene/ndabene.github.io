@@ -2,66 +2,61 @@
 layout: default
 ---
 
-<article class="project-detail max-w-4xl mx-auto">
-  <header class="text-center my-8">
-    <h1 class="text-4xl font-bold text-primary-navy dark:text-dark-text">{{ page.title }}</h1>
-    <p class="text-lg text-secondary-gray dark:text-dark-text-muted mt-2">{{ page.subtitle }}</p>
-  </header>
-
-  <div class="my-8">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="rounded-lg shadow-lg">
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8 my-8">
-    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
-      <h3 class="text-2xl font-bold text-primary-blue">{{ page.metrics.performance }}</h3>
-      <p class="text-secondary-gray dark:text-dark-text-muted">Performance</p>
+<div class="project-header">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="project-tagline">{{ page.tagline }}</p>
+        {% if page.hero_image %}
+            <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image">
+        {% endif %}
     </div>
-    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
-      <h3 class="text-2xl font-bold text-ai-green">{{ page.metrics.roi }}</h3>
-      <p class="text-secondary-gray dark:text-dark-text-muted">ROI</p>
-    </div>
-    <div class="metric-card bg-light-gray dark:bg-dark-surface p-4 rounded-lg text-center">
-      <h3 class="text-2xl font-bold text-prestashop-orange">{{ page.metrics.impact }}</h3>
-      <p class="text-secondary-gray dark:text-dark-text-muted">Impact</p>
-    </div>
-  </div>
+</div>
 
-  <div class="project-content prose lg:prose-xl max-w-none dark:prose-invert">
-    <section class="my-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Contexte Business</h2>
-      {{ page.business_context }}
+<div class="container project-content">
+    <section class="project-section">
+        <h2>Business Context & Objectives</h2>
+        {{ page.business_context | markdownify }}
     </section>
 
-    <section class="my-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Défis Techniques</h2>
-      {{ page.technical_challenges }}
+    <section class="project-section">
+        <h2>Technical Challenges & Solutions</h2>
+        {{ page.technical_challenges | markdownify }}
     </section>
 
-    <section class="my-8">
-      <h2 class="text-2xl font-semibold border-b-2 border-primary-blue pb-2">Solutions & Architecture</h2>
-      {{ content }}
+    <section class="project-section">
+        <h2>Key Metrics & Impact</h2>
+        <ul>
+            {% if page.metrics.performance %}
+                <li><strong>Performance Improvement:</strong> {{ page.metrics.performance }}</li>
+            {% endif %}
+            {% if page.metrics.roi %}
+                <li><strong>ROI:</strong> {{ page.metrics.roi }}</li>
+            {% endif %}
+            {% if page.metrics.impact %}
+                <li><strong>Business Impact:</strong> {{ page.metrics.impact }}</li>
+            {% endif %}
+        </ul>
     </section>
-  </div>
 
-  <div class="my-8">
-    <h3 class="text-xl font-semibold mb-4">Technologies Utilisées</h3>
-    <div class="flex flex-wrap gap-2">
-      {% for tech in page.technologies %}
-        {% include tech-badge.html tech=tech %}
-      {% endfor %}
-    </div>
-  </div>
+    <section class="project-section">
+        <h2>Technologies Used</h2>
+        <div class="tech-badges">
+            {% for tech in page.technologies %}
+                {% include tech-badge.html tech=tech %}
+            {% endfor %}
+        </div>
+    </section>
 
-  {% if page.screenshots %}
-  <div class="my-8">
-    <h3 class="text-xl font-semibold mb-4">Galerie</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {% for screenshot in page.screenshots %}
-        <img src="{{ screenshot.url | relative_url }}" alt="{{ screenshot.alt }}" class="rounded-lg shadow-md">
-      {% endfor %}
-    </div>
-  </div>
-  {% endif %}
+    {% if page.screenshots %}
+        <section class="project-section">
+            <h2>Screenshots & Demonstrations</h2>
+            <div class="project-gallery">
+                {% for screenshot in page.screenshots %}
+                    <img src="{{ screenshot.image }}" alt="{{ screenshot.alt | default: 'Project Screenshot' }}">
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
 
-</article>
+    {{ content }}
+</div>

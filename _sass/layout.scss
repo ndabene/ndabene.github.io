@@ -1,39 +1,228 @@
-// _sass/layout.scss
+// Layout styles
 
-// Header et Footer
-.header {
-  // La classe sticky est dans le HTML
+body {
+  font-family: $font-primary;
+  font-size: $body-size;
+  line-height: $line-height-normal;
+  color: $black;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.footer {
-  // Styles spécifiques au footer si nécessaire
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
 }
 
-// Main content
-#main-content {
-  padding-top: $spacing-lg;
-  padding-bottom: $spacing-lg;
+.content {
+  padding: $spacing-lg 0;
 }
 
-// Grille pour les projets ou articles
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: $spacing-md;
-}
+.page-header {
+  background-color: $light-gray;
+  padding: $spacing-lg 0;
+  text-align: center;
 
-// Styles pour les études de cas
-.case-study {
-  .timeline {
-    // Styles pour la timeline
+  h1 {
+    font-size: $h1-size;
+    color: $primary-navy;
+    margin-bottom: $spacing-sm;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: $spacing-md;
+    border-radius: 8px;
   }
 }
 
-// Responsive
-@media (min-width: $tablet) {
-  // Styles pour tablettes
+.breadcrumb {
+  margin-top: $spacing-sm;
+  font-size: $small-size;
+  color: $secondary-gray;
+
+  a {
+    color: $secondary-gray;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+
+  span {
+    font-weight: $font-medium;
+    color: $primary-navy;
+  }
+
+  a + span::before,
+  a + a::before {
+    content: '/ ';
+    margin: 0 5px;
+  }
 }
 
-@media (min-width: $desktop) {
-  // Styles pour desktops
+.page-content {
+  display: flex;
+  gap: $spacing-lg;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  .main-content {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+    padding-left: $spacing-md;
+    border-left: 1px solid $light-gray;
+
+    @media (max-width: $tablet) {
+      border-left: none;
+      padding-left: 0;
+      border-top: 1px solid $light-gray;
+      padding-top: $spacing-md;
+      margin-top: $spacing-md;
+    }
+  }
+}
+
+.project-header,
+.case-study-header {
+  background-color: $primary-navy;
+  color: $white;
+  padding: $spacing-lg 0;
+  text-align: center;
+
+  h1 {
+    font-size: $h1-size;
+    margin-bottom: $spacing-sm;
+  }
+
+  .project-tagline,
+  .case-study-tagline {
+    font-size: $large-size;
+    color: $dark-text-muted;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: $spacing-md;
+    border-radius: 8px;
+  }
+}
+
+.project-content,
+.case-study-content {
+  padding: $spacing-lg 0;
+
+  .project-section,
+  .case-study-section {
+    margin-bottom: $spacing-lg;
+
+    h2 {
+      font-size: $h2-size;
+      color: $primary-navy;
+      margin-bottom: $spacing-md;
+      border-bottom: 2px solid $light-gray;
+      padding-bottom: $spacing-sm;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: $spacing-md;
+
+      li {
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-md;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: $spacing-md;
+  border-left: 2px solid $light-gray;
+
+  .timeline-item {
+    margin-bottom: $spacing-lg;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -($spacing-md + 5px);
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background-color: $primary-blue;
+      border-radius: 50%;
+      border: 2px solid $white;
+    }
+  }
+
+  .timeline-date {
+    font-size: $small-size;
+    color: $secondary-gray;
+    margin-bottom: $spacing-xs;
+  }
+
+  .timeline-content {
+    h3 {
+      font-size: $h4-size;
+      color: $primary-navy;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      font-size: $body-size;
+      color: $secondary-gray;
+    }
+  }
+}
+
+.testimonials {
+  .testimonial {
+    background-color: $light-gray;
+    padding: $spacing-md;
+    border-radius: 8px;
+    margin-bottom: $spacing-md;
+    border-left: 4px solid $accent-cyan;
+
+    p {
+      font-style: italic;
+      margin-bottom: $spacing-sm;
+    }
+
+    footer {
+      font-size: $small-size;
+      text-align: right;
+      color: $secondary-gray;
+    }
+  }
 }

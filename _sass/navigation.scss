@@ -1,31 +1,106 @@
-// _sass/navigation.scss
+// Styles for navigation
 
-// Styles pour la navigation principale
-.header nav {
-  a {
-    color: $white;
-    font-weight: $font-medium;
-    padding: $spacing-sm $spacing-md;
-    border-radius: 6px;
+.main-navigation {
+  background-color: $primary-navy;
+  padding: $spacing-sm 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-    &:hover {
-      background-color: $primary-blue;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: $h3-size;
+    font-weight: $font-bold;
+
+    a {
+      color: $white;
       text-decoration: none;
+
+      &:hover {
+        color: $accent-cyan;
+      }
     }
   }
-}
 
-// Menu mobile
-#mobile-menu {
-  background-color: $primary-navy;
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 
-  a {
-    display: block;
+    li {
+      margin-left: $spacing-md;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: $font-medium;
+        padding: 5px 0;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $primary-blue;
+          transition: width 0.3s ease-in-out;
+        }
+
+        &:hover::after,
+        &.active::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     color: $white;
-    padding: $spacing-sm $spacing-md;
+    font-size: $h2-size;
+    cursor: pointer;
 
-    &:hover {
-      background-color: $primary-blue;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: $primary-navy;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: $spacing-sm 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &.open {
+        display: flex;
+      }
+
+      li {
+        margin: $spacing-xs $spacing-md;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: $spacing-xs 0;
+        }
+      }
     }
   }
 }

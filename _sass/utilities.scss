@@ -1,0 +1,49 @@
+// Utility classes
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.margin-top-sm {
+  margin-top: $spacing-sm;
+}
+
+.margin-top-md {
+  margin-top: $spacing-md;
+}
+
+.margin-top-lg {
+  margin-top: $spacing-lg;
+}
+
+.padding-sm {
+  padding: $spacing-sm;
+}
+
+.padding-md {
+  padding: $spacing-md;
+}
+
+.padding-lg {
+  padding: $spacing-lg;
+}
+
+.hide-on-mobile {
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
+}
+
+.show-on-mobile {
+  @media (min-width: $mobile + 1px) {
+    display: none !important;
+  }
+}

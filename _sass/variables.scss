@@ -1,37 +1,30 @@
-// _sass/variables.scss
+// Couleurs exactes
+$primary-navy: #1e293b;
+$primary-blue: #3b82f6;
+$accent-cyan: #06b6d4;
 
-// Couleurs principales - SYNTAXE STRICTE
-$primary-navy: #1e293b;          // Headers, navigation
-$primary-blue: #3b82f6;          // CTA, liens
-$accent-cyan: #06b6d4;           // Highlights, badges
+$php-purple: #8b5cf6;
+$ai-green: #10b981;
+$prestashop-orange: #ff6b35;
 
-// Couleurs expertise  
-$php-purple: #8b5cf6;            // Badges PHP/Backend
-$ai-green: #10b981;              // Badges AI/ML
-$prestashop-orange: #ff6b35;     // Badge PrestaShop (parcimonie)
+$white: #ffffff;
+$light-gray: #f1f5f9;
+$secondary-gray: #64748b;
+$black: #0f172a;
 
-// Couleurs neutres
-$white: #ffffff;                 // Backgrounds
-$light-gray: #f1f5f9;           // Sections alternées
-$secondary-gray: #64748b;        // Texte secondaire
-$black: #0f172a;                // Texte principal
+$dark-bg: #0f172a;
+$dark-surface: #1e293b;
+$dark-text: #f8fafc;
+$dark-text-muted: #94a3b8;
 
-// Dark mode
-$dark-bg: #0f172a;              // Background principal dark
-$dark-surface: #1e293b;         // Cards dark mode
-$dark-text: #f8fafc;            // Texte principal dark
-$dark-text-muted: #94a3b8;      // Texte secondaire dark
-
-// Status colors
 $success: #10b981;
 $warning: #f59e0b;
 $error: #ef4444;
 
-// Google Fonts - SYNTAXE CORRECTE
+// Typographie SCSS
 $font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 $font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
 
-// Hiérarchie typographique
 $h1-size: 3.5rem;
 $h2-size: 2.5rem;
 $h3-size: 2rem;
@@ -42,13 +35,11 @@ $body-size: 1rem;
 $large-size: 1.125rem;
 $small-size: 0.875rem;
 
-// Font weights
 $font-bold: 700;
 $font-semibold: 600;
 $font-medium: 500;
 $font-regular: 400;
 
-// Line heights
 $line-height-tight: 1.2;
 $line-height-normal: 1.6;
 $line-height-relaxed: 1.8;

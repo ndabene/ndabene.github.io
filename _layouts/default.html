@@ -1,21 +1,133 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }} | {{ page.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="index, follow">
 
-{% include head.html %}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}/assets/images/social-share.jpg">
 
-<body class="antialiased bg-white text-black dark:bg-dark-bg dark:text-dark-text" itemscope itemtype="http://schema.org/Person">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{{ site.title }} | {{ page.title }}">
+    <meta property="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta property="twitter:image" content="{{ site.url }}/assets/images/social-share.jpg">
 
-  {% include header.html %}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
-  <main id="main-content" class="container mx-auto px-6 py-8">
-    {{ content }}
-  </main>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 
-  {% include footer.html %}
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author }}",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/assets/images/profile.jpg",
+      "sameAs": [
+        "{{ site.linkedin_url }}",
+        "{{ site.github_url }}"
+      ],
+      "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
+      "alumniOf": "Your University/Certifications",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Consulting"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "description": "{{ site.description }}",
+      "providerMobility": "National",
+      "serviceType": [
+        "Web Development",
+        "AI Integration",
+        "E-commerce Solutions",
+        "Technical Consulting"
+      ],
+      "areaServed": {
+        "@type": "State",
+        "name": "France"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Offered",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Web Development",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Web Applications"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "PrestaShop Development"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "AI & Data",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "AI Integration"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Data Orchestration"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+    {% include head.html %}
+</head>
+<body>
+    {% include header.html %}
 
-  <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/theme-switcher.js' | relative_url }}"></script>
-  {% include analytics.html %}
+    <main class="content">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include analytics.html %}
+
+    <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/theme-switcher.js"></script>
 </body>
-
 </html>

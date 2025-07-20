@@ -2,58 +2,57 @@
 layout: default
 ---
 
-<article class="case-study max-w-4xl mx-auto">
+<div class="case-study-header">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p class="case-study-tagline">{{ page.tagline }}</p>
+        {% if page.hero_image %}
+            <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image">
+        {% endif %}
+    </div>
+</div>
 
-  <header class="text-center my-12">
-    <p class="text-primary-blue font-semibold">Étude de Cas Approfondie</p>
-    <h1 class="text-5xl font-bold text-primary-navy dark:text-dark-text mt-2">{{ page.title }}</h1>
-    <p class="text-xl text-secondary-gray dark:text-dark-text-muted mt-4">{{ page.subtitle }}</p>
-  </header>
+<div class="container case-study-content">
+    <section class="case-study-section">
+        <h2>Project Overview</h2>
+        {{ page.overview | markdownify }}
+    </section>
 
-  <div class="my-8">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="rounded-lg shadow-2xl">
-  </div>
+    {% if page.timeline %}
+        <section class="case-study-section">
+            <h2>Development Timeline</h2>
+            <div class="timeline">
+                {% for item in page.timeline %}
+                    <div class="timeline-item">
+                        <div class="timeline-date">{{ item.date }}</div>
+                        <div class="timeline-content">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
 
-  <div class="project-content prose lg:prose-xl max-w-none dark:prose-invert">
+    {% if page.testimonials %}
+        <section class="case-study-section">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials">
+                {% for testimonial in page.testimonials %}
+                    <blockquote class="testimonial">
+                        <p>"{{ testimonial.quote }}"</p>
+                        <footer>— {{ testimonial.author }}, {{ testimonial.role }}</footer>
+                    </blockquote>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    <section class="case-study-section">
+        <h2>Measurable Business Results</h2>
+        {{ page.results | markdownify }}
+    </section>
+
     {{ content }}
-  </div>
-
-  {% if page.timeline %}
-  <section class="my-12">
-    <h2 class="text-3xl font-semibold text-center mb-8">Timeline du Projet</h2>
-    <div class="timeline relative border-l-2 border-primary-blue ml-4">
-      {% for item in page.timeline %}
-        <div class="mb-8 ml-8">
-          <div class="absolute -left-4 w-8 h-8 bg-primary-blue rounded-full text-center text-white flex items-center justify-center">{{ forloop.index }}</div>
-          <p class="font-bold text-lg">{{ item.date }}</p>
-          <p class="text-secondary-gray dark:text-dark-text-muted">{{ item.description }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-  {% endif %}
-
-  {% if page.testimonial %}
-  <section class="my-12 bg-light-gray dark:bg-dark-surface rounded-lg p-8">
-    <blockquote class="text-center">
-      <p class="text-2xl italic text-primary-navy dark:text-dark-text">"{{ page.testimonial.quote }}"</p>
-      <footer class="mt-4">
-        <span class="font-bold">{{ page.testimonial.author }}</span>, <span class="text-secondary-gray dark:text-dark-text-muted">{{ page.testimonial.title }}</span>
-      </footer>
-    </blockquote>
-  </section>
-  {% endif %}
-
-  <section class="my-12">
-    <h2 class="text-3xl font-semibold text-center mb-8">Résultats Business Mesurables</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      {% for result in page.results %}
-        <div class="metric-card text-center p-4">
-          <h3 class="text-4xl font-bold text-primary-blue">{{ result.value }}</h3>
-          <p class="text-secondary-gray dark:text-dark-text-muted mt-2">{{ result.label }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-
-</article>
+</div>
