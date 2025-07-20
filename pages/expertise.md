@@ -1,6 +1,7 @@
 ---
 layout: page
 title: My Expertise
+permalink: /expertise/
 description: "Explore Nicolas Dabène's deep technical expertise across PHP, E-commerce, AI, Frontend, and DevOps, backed by 15+ years of experience and continuous learning."
 keywords: "php expert, prestashop consultant, ai orchestrator, fullstack developer, devops architect, technical leadership, software engineering expertise"
 show_sidebar: true

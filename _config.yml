@@ -25,7 +25,7 @@ collections:
     permalink: /projects/:name/
   posts:
     output: true
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: /articles/:year/:month/:day/:title/
   case_studies:
     output: true
     permalink: /case-studies/:name/
