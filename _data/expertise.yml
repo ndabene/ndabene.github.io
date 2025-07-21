@@ -1,36 +1,65 @@
-- id: backend
-  name: Expertise PHP/Symfony
-  icon: php
-  description: "Architecture de solutions backend robustes avec PHP 8+ et Symfony. Conception d'APIs REST/GraphQL haute performance et développement de microservices scalables."
-  skills:
-    - "Architecture hexagonale et DDD"
-    - "APIs REST/GraphQL optimisées"
-    - "Microservices avec Docker"
-    - "Tests automatisés (PHPUnit, Behat)"
-- id: ecommerce
-  name: Spécialisation PrestaShop
+- id: prestashop
+  name: Expert PrestaShop & PHP Moderne
   icon: prestashop
-  description: "Développement de modules PrestaShop sur mesure et optimisation de performances e-commerce. Expert certifié avec 11+ années d'expérience chez BusinessTech."
+  description: "Plus de 15 ans d'expertise en développement e-commerce PrestaShop avec une évolution continue vers les technologies modernes. Spécialiste de l'analyse approfondie des besoins clients pour créer 50+ modules à forte valeur ajoutée."
   skills:
-    - "Modules PrestaShop personnalisés"
-    - "Optimisation de performances"
-    - "Intégrations tiers complexes"
-    - "Architecture multi-boutiques"
+    - "50+ modules PrestaShop développés (évolution native → Symfony)"
+    - "Analyse approfondie des besoins clients et enjeux business"
+    - "Développement de modules à forte valeur ajoutée"
+    - "Intégration progressive des composants Symfony"
+    - "Architecture moderne avec services containers et DI"
+
+- id: ecommerce
+  name: Architecture E-commerce Complexe
+  icon: ecommerce
+  description: "Expertise technique approfondie en e-commerce, spécialement PrestaShop. Conception d'architectures évolutives pour boutiques multi-sites, intégrations tiers complexes et optimisation des performances."
+  skills:
+    - "Architecture multi-boutiques et multi-devises"
+    - "Intégrations ERP/CRM/Marketplace complexes"
+    - "Optimisation performances et temps de chargement"
+    - "Sécurité e-commerce et conformité RGPD"
+    - "Migration et refactoring de boutiques existantes"
+
+- id: product
+  name: Product Management & Vision Business
+  icon: product
+  description: "Approche holistique combinant expertise technique et vision produit. Analyse approfondie des besoins clients pour transformer les défis e-commerce en solutions techniques qui génèrent des résultats business mesurables."
+  skills:
+    - "Approche holistique : technique, commercial et marketing"
+    - "Analyse approfondie des besoins clients et enjeux business"
+    - "Développement de modules à forte valeur ajoutée"
+    - "Stratégie produit et roadmap technique"
+    - "Optimisation des conversions et UX e-commerce"
+
 - id: ai
-  name: Intégration d'IA
+  name: Orchestration IA & Automation
   icon: ai
-  description: "Intégration d'intelligence artificielle dans les workflows de développement et automation des processus métier pour accélérer la livraison de projets."
+  description: "Spécialiste de l'intégration d'intelligence artificielle pour optimiser les workflows de développement. Expert de l'automation intelligente des processus métier et de l'accélération de la livraison de projets e-commerce."
   skills:
-    - "Automation workflows avec AI"
-    - "Optimisation code assistée par IA"
-    - "Analyse prédictive e-commerce"
-    - "Chatbots et assistants virtuels"
-- id: framework
-  name: Développement de Frameworks
+    - "Workflows de développement assistés par IA"
+    - "Génération automatique de code optimisé"
+    - "Analyse prédictive pour e-commerce"
+    - "Chatbots et assistants virtuels intelligents"
+    - "Optimisation continue basée sur l'IA"
+
+- id: fullstack
+  name: Développement FullStack & APIs
   icon: development
-  description: "Conception et développement de frameworks internes et d'outils de développement pour optimiser la productivité des équipes chez BusinessTech."
+  description: "Expertise complète en développement web moderne, de l'architecture backend aux interfaces utilisateur. Maîtrise de PHP 8+ et des technologies émergentes pour créer des APIs performantes et des expériences utilisateur exceptionnelles."
   skills:
-    - "Frameworks internes BusinessTech"
-    - "Outils de génération de code"
-    - "Bibliothèques réutilisables"
-    - "Standards et conventions équipe"
+    - "PHP 8+ avec features avancées (Attributes, Enums, etc.)"
+    - "APIs REST pour intégrations e-commerce complexes"
+    - "Vue.js/Nuxt.js pour interfaces dynamiques"
+    - "Tests automatisés (PHPUnit, Behat)"
+    - "Progressive Web Apps (PWA) et optimisation mobile"
+
+- id: innovation
+  name: Innovation & Leadership Technique
+  icon: innovation
+  description: "Veille technologique constante et capacité à transformer les innovations en solutions concrètes. Leadership technique sur des projets complexes avec focus sur la création de valeur business et le partage de connaissances."
+  skills:
+    - "Frameworks et outils de développement innovants"
+    - "Rédaction de tutoriels et articles techniques"
+    - "Blogging tech et partage de bonnes pratiques"
+    - "Mentorat et formation d'équipes techniques"
+    - "Transformation digitale et modernisation legacy"
