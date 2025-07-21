@@ -1035,3 +1035,253 @@ a:hover {
     margin-top: 110px; /* Ajusté pour la hauteur du header (70px) + la bannière (40px) */
   }
 }
+
+/* Expertise Tabs */
+.expertise-tabs-container {
+  margin-top: 2rem;
+}
+
+.expertise-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.expertise-tabs::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #E2E8F0;
+}
+
+.tab-button {
+  background: #f8fafc;
+  border: 1px solid #E2E8F0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #4A5568;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab-button:hover {
+  background-color: #EBF5FF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button.active {
+  background-color: #ffffff;
+  color: #2D3748;
+  border-color: #2563EB;
+  border-bottom-width: 3px;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+.tab-label {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .expertise-tabs {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .tab-button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  border: 1px solid #E2E8F0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Expertise Selection Hint */
+.expertise-selection-hint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: -0.5rem 0 1.5rem 0;
+  color: #4A5568;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.hint-arrow {
+  font-size: 1.25rem;
+  color: #3182CE;
+  animation: bounce 2s infinite;
+}
+
+.hint-text {
+  background-color: #EBF8FF;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px dashed #3182CE;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-selection-hint {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .hint-arrow:first-child {
+    display: none;
+  }
+}
+
+/* Personnalisation des badges par catégorie */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.08);
+}
+
+.expertise-badge.large .badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.badge--prestashop {
+  background-color: #ED8936;
+  border-color: #DD6B20;
+}
+
+.badge--ecommerce {
+  background-color: #3182CE;
+  border-color: #2B6CB0;
+}
+
+.badge--product {
+  background-color: #38A169;
+  border-color: #2F855A;
+}
+
+.badge--ai {
+  background-color: #805AD5;
+  border-color: #6B46C1;
+}
+
+.badge--development {
+  background-color: #E53E3E;
+  border-color: #C53030;
+}
+
+.badge--innovation {
+  background-color: #2B6CB0;
+  border-color: #2C5282;
+}
+
+/* Autres styles d'expertise */
+.expertise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-header h3 {
+  font-size: 1.75rem;
+  color: #2D3748;
+  margin: 0;
+}
+
+.expertise-badge.large .badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.expertise-description {
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+.expertise-description p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4A5568;
+}
+
+.expertise-skills h4 {
+  font-size: 1.25rem;
+  color: #2D3748;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  padding-bottom: 0.5rem;
+}
+
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .expertise-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .expertise-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

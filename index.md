@@ -59,25 +59,39 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle">Plus de 15 ans d'expérience dans le développement de solutions e-commerce et d'applications web complexes</p>
         </div>
         
-        <div class="grid-system grid-2-cols">
-            {% for expertise in site.data.expertise %}
-            <div class="card expertise-card">
-                <div class="card-header">
-                    <div class="card-icon">
-                        {% include tech-badge.html tech=expertise.icon category=expertise.icon %}
-                    </div>
-                    <h3 class="card-title">{{ expertise.name }}</h3>
-                </div>
-                <div class="card-content">
-                    <p class="card-description">{{ expertise.description }}</p>
-                    <ul class="expertise-list">
-                        {% for skill in expertise.skills %}
-                        <li>{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+        <div class="expertise-tabs-container">
+            <div class="expertise-tabs">
+                {% for expertise in site.data.expertise %}
+                <button class="tab-button{% if forloop.first %} active{% endif %}" data-tab="{{ expertise.id }}">
+                    <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
+                    <span class="tab-label">{{ expertise.name }}</span>
+                </button>
+                {% endfor %}
             </div>
-            {% endfor %}
+            
+            <div class="expertise-content">
+                {% for expertise in site.data.expertise %}
+                <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ expertise.id }}">
+                    <div class="expertise-header">
+                        <h3>{{ expertise.name }}</h3>
+                        <div class="expertise-badge large">
+                            <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
+                        </div>
+                    </div>
+                    <div class="expertise-description">
+                        <p>{{ expertise.description }}</p>
+                    </div>
+                    <div class="expertise-skills">
+                        <h4>Compétences clés</h4>
+                        <ul class="expertise-list">
+                            {% for skill in expertise.skills %}
+                            <li>{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
@@ -134,71 +148,6 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                 </div>
             </a>
             {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- INNOVATION & AI SECTION -->
-<section class="section innovation-section">
-    <div class="container">
-        <div class="innovation-grid">
-            <div class="innovation-content">
-                <div class="section-header">
-                    <h2>Innovation & Intelligence Artificielle</h2>
-                    <p class="section-subtitle">Pionnier dans l'intégration de l'IA pour optimiser les workflows de développement e-commerce</p>
-                </div>
-                
-                <div class="innovation-highlights">
-                    <div class="highlight-item">
-                        <div class="highlight-icon">
-                            <span class="icon-achievement">🚀</span>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Accélération des Projets</h4>
-                            <p>Réduction de 40% du temps de développement grâce à l'orchestration IA</p>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-item">
-                        <div class="highlight-icon">
-                            <span class="icon-innovation">💡</span>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Solutions Innovantes</h4>
-                            <p>Création de modules PrestaShop intégrant des fonctionnalités IA avancées</p>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-item">
-                        <div class="highlight-icon">
-                            <span class="icon-expertise">🔧</span>
-                        </div>
-                        <div class="highlight-content">
-                            <h4>Automatisation Intelligente</h4>
-                            <p>Workflows automatisés pour optimiser les performances e-commerce</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="innovation-metrics">
-                <div class="metric-card">
-                    <span class="metric-number">40%</span>
-                    <span class="metric-label">Gain de productivité</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">3</span>
-                    <span class="metric-label">Années d'expertise IA</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">15+</span>
-                    <span class="metric-label">Projets IA intégrés</span>
-                </div>
-                <div class="metric-card">
-                    <span class="metric-number">100%</span>
-                    <span class="metric-label">Projets optimisés</span>
-                </div>
-            </div>
         </div>
     </div>
 </section>
