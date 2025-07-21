@@ -1,6 +1,7 @@
 - title: Geo Suite
   description: "Optimisez vos données structurées pour le SEO local et international."
   link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html"
+  image: "assets/images/modules/geo-generative-engine-optimization.png"
   tags:
     - tech: PrestaShop
       category: prestashop
@@ -9,6 +10,7 @@
 - title: Google Pay
   description: "Intégrez un moyen de paiement rapide et sécurisé pour améliorer la conversion."
   link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html"
+  image: "assets/images/modules/google-pay-for-prestashop.png"
   tags:
     - tech: PrestaShop
       category: prestashop
@@ -17,6 +19,7 @@
 - title: "Facebook Dynamic Ads + Pixel"
   description: "Ciblez vos clients avec des publicités dynamiques sur Facebook."
   link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
+  image: "assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
   tags:
     - tech: PrestaShop
       category: prestashop
@@ -25,6 +28,7 @@
 - title: "Google Merchant Center PRO (Google Shopping)"
   description: "Intégrez Google Shopping pour augmenter vos ventes."
   link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
+  image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
   tags:
     - tech: PrestaShop
       category: prestashop
@@ -33,6 +37,7 @@
 - title: "Social Login"
   description: "Permet aux utilisateurs de se connecter avec leurs comptes Facebook, Google, etc."
   link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/30-social-login-0656272557829.html"
+  image: "assets/images/modules/social-login-prestashop-facebook-google-tiktok-amazon-twitter-paypal.png"
   tags:
     - tech: PrestaShop
       category: prestashop
@@ -41,6 +46,7 @@
 - title: "Google Analytics PRO"
   description: "Intégrez Google Analytics pour suivre les performances de votre site."
   link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/46-google-analytics-pro-0656272943080.html"
+  image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
   tags:
     - tech: PrestaShop
       category: prestashop

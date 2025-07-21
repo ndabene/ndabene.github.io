@@ -59,39 +59,26 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle">Plus de 15 ans d'expérience dans le développement de solutions e-commerce et d'applications web complexes</p>
         </div>
         
-        <div class="expertise-tabs-container">
-            <div class="expertise-tabs">
-                {% for expertise in site.data.expertise %}
-                <button class="tab-button{% if forloop.first %} active{% endif %}" data-tab="{{ expertise.id }}">
+        <div class="expertise-grid">
+            {% for expertise in site.data.expertise %}
+            <div class="expertise-item" data-id="{{ expertise.id }}">
+                <div class="expertise-item-header">
                     <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
-                    <span class="tab-label">{{ expertise.name }}</span>
-                </button>
-                {% endfor %}
-            </div>
-            
-            <div class="expertise-content">
-                {% for expertise in site.data.expertise %}
-                <div class="tab-content{% if forloop.first %} active{% endif %}" id="tab-{{ expertise.id }}">
-                    <div class="expertise-header">
-                        <h3>{{ expertise.name }}</h3>
-                        <div class="expertise-badge large">
-                            <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
-                        </div>
-                    </div>
-                    <div class="expertise-description">
-                        <p>{{ expertise.description }}</p>
-                    </div>
-                    <div class="expertise-skills">
-                        <h4>Compétences clés</h4>
-                        <ul class="expertise-list">
-                            {% for skill in expertise.skills %}
-                            <li>{{ skill }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                    <h3>{{ expertise.name }}</h3>
                 </div>
-                {% endfor %}
+                <p class="expertise-item-description">{{ expertise.description }}</p>
+                <div class="expertise-item-skills">
+                    <ul>
+                        {% for skill in expertise.skills limit:3 %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% if expertise.id == 'prestashop' or expertise.id == 'ai' %}
+                <div class="expertise-item-highlight">{{ expertise.id | capitalize }} Expert</div>
+                {% endif %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -107,11 +94,18 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
         <div class="grid-system grid-3-cols">
             {% for module in site.data.modules %}
             <div class="card module-card">
+                {% if module.image %}
+                <a href="{{ module.link }}" target="_blank" class="card-image-link">
+                    <div class="card-image">
+                        <img src="{{ module.image }}" alt="{{ module.title }}" class="module-image">
+                    </div>
+                </a>
+                {% endif %}
                 <div class="card-header">
                     <h3 class="card-title">{{ module.title }}</h3>
                     <div class="module-tags">
                         {% for tag in module.tags %}
-                        {% include tech-badge.html tech=tag.tech category=tag.category %}
+                        <span class="badge badge--{{ tag.category | downcase }}">{{ tag.tech }}</span>
                         {% endfor %}
                     </div>
                 </div>
@@ -137,17 +131,40 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
-        <div class="grid-system grid-2-cols">
+        <div class="grid-system grid-3-cols">
             {% for publication in site.data.publications %}
-            <a href="{{ publication.link }}" target="_blank" class="card publication-card">
-                <div class="card-content">
+            <div class="card publication-card">
+                {% if publication.image %}
+                <a href="{{ publication.link }}" target="_blank" class="card-image-link">
+                    <div class="card-image">
+                        <img src="{{ publication.image }}" alt="{{ publication.title }}" class="publication-image">
+                    </div>
+                </a>
+                {% endif %}
+                <div class="card-header">
                     <h3 class="card-title">{{ publication.title }}</h3>
-                    <span class="publication-link">
-                        Lire l'article <span class="external-icon">↗</span>
-                    </span>
+                    {% if publication.category %}
+                    <div class="publication-category">
+                        <span class="badge badge--{{ publication.category | downcase }}">{{ publication.category }}</span>
+                    </div>
+                    {% endif %}
                 </div>
-            </a>
+                <div class="card-content">
+                    <p class="card-description">{{ publication.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ publication.link }}" class="btn btn--outline" target="_blank">
+                        Lire l'article <span class="external-icon">↗</span>
+                    </a>
+                </div>
+            </div>
             {% endfor %}
+        </div>
+        
+        <div class="view-all-publications">
+            <a href="https://www.businesstech.fr/landing/articles/index.html" class="btn btn--primary" target="_blank">
+                Voir toutes les publications <span class="external-icon">↗</span>
+            </a>
         </div>
     </div>
 </section>
@@ -159,7 +176,6 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <h2>Prêt à propulser votre projet e-commerce ?</h2>
             <p>Discutons de vos besoins en développement e-commerce et de la façon dont mon expertise peut transformer vos défis en opportunités de croissance.</p>
             <div class="cta-actions">
-                <a href="/contact" class="btn btn--primary btn--large">Démarrer une collaboration</a>
                 <a href="/projects" class="btn btn--secondary btn--large">Voir mes réalisations</a>
             </div>
         </div>

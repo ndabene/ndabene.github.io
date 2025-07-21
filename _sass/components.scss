@@ -559,11 +559,61 @@
 //================================================
 // MODULE CARDS
 //================================================
+.module-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.module-card:hover .module-image {
+  transform: scale(1.05);
+}
+
+.module-card .card-header {
+  padding-bottom: 0.75rem;
+}
+
+.module-card .card-title {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
 .module-card .module-tags {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   flex-wrap: wrap;
+}
+
+.module-card .card-content {
+  padding-top: 0;
+}
+
+.module-card .card-footer {
+  display: flex;
+  justify-content: center;
 }
 
 .external-icon {

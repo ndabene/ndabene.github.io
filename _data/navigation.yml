@@ -1,10 +1,6 @@
 - name: Accueil
   link: /
-- name: Expertise
-  link: /expertise/
 - name: Projets
   link: /projects/
-- name: Publications
-  link: /publications/
 - name: Blog
   link: /blog/
