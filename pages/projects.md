@@ -18,12 +18,13 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
             <button class="filter-btn" data-filter="ai">Intelligence Artificielle</button>
             <button class="filter-btn" data-filter="opensource">Open Source</button>
             <button class="filter-btn" data-filter="payment">Paiement</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
         </div>
 
         <div class="projects-list">
             {% assign projects = site.projects | sort: 'date' | reverse %}
             {% for project in projects %}
-                <div class="project-item" data-categories="{{ project.tags | map: 'category' | join: ' ' }}">
+                <div class="project-item" data-categories="{{ project.categories | join: ' ' }}">
                     <div class="project-header">
                         <h2 class="project-title">{{ project.title }}</h2>
                         <div class="project-meta">
@@ -39,9 +40,12 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
                     </div>
                     
                     <div class="project-tech-tags">
-                        {% for tag in project.tags %}
+                        {% for tag in project.tags limit:5 %}
                             {% include tech-badge.html tech=tag.tech category=tag.category %}
                         {% endfor %}
+                        {% if project.tags.size > 5 %}
+                            <span class="more-tags">+{{ project.tags.size | minus: 5 }}</span>
+                        {% endif %}
                     </div>
                     
                     <div class="project-content">
@@ -80,8 +84,7 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
                         {% endif %}
                         
                         <div class="project-technologies">
-                            <h3>Technologies</h3>
-                            <div class="technologies-list">
+                            <div class="tech-pills-container">
                                 {% for tech in project.technologies %}
                                 <span class="tech-pill">{{ tech }}</span>
                                 {% endfor %}
@@ -99,6 +102,13 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectItems = document.querySelectorAll('.project-item');
         
+        // Animation des projets au chargement
+        projectItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('appear');
+            }, 100 * index);
+        });
+        
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 const filter = this.getAttribute('data-filter');
@@ -107,17 +117,21 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
                 filterBtns.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Filter projects
+                // Filter projects with animation
+                let visibleCount = 0;
                 projectItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        const categories = item.getAttribute('data-categories');
-                        if (categories.includes(filter)) {
+                    item.classList.remove('appear');
+                    
+                    if (filter === 'all' || (item.getAttribute('data-categories') && item.getAttribute('data-categories').includes(filter))) {
+                        setTimeout(() => {
                             item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
+                            setTimeout(() => {
+                                item.classList.add('appear');
+                            }, 50);
+                        }, 50 * visibleCount);
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
                     }
                 });
             });

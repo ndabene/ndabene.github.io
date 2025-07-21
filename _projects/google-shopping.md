@@ -1,11 +1,12 @@
 ---
 layout: project
-title: "Google Merchant Center Pro pour PrestaShop"
-date: 2014-03-01
-description: "Solution complète pour connecter votre boutique PrestaShop à Google Shopping et Google Ads, avec export automatisé des produits et tracking avancé des conversions."
-tagline: "Maximisez votre visibilité et vos ventes grâce à Google Shopping"
+title: "Google Shopping Pro - Module PrestaShop"
+date: 2024-07-01
+description: "Module PrestaShop premium permettant l'intégration complète avec Google Shopping et Google Merchant Center, avec exportation automatisée de flux produits."
+tagline: "Maximisez votre présence sur Google Shopping"
 company: "Business Tech"
 role: "Lead Developer & Product Manager"
+categories: ["prestashop", "marketing"]
 hero_image: "/assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
 project_url: "https://addons.prestashop.com/fr/referencement-payant-affiliation/41402-google-merchant-center-pro-pour-google-shopping.html"
 business_context: |

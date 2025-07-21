@@ -1,11 +1,12 @@
 ---
 layout: project
-title: "Facebook Dynamic Ads pour PrestaShop"
-date: 2016-03-01
-description: "Module PrestaShop complet pour l'intégration des Facebook & Instagram Dynamic Ads, permettant l'exportation automatisée de catalogues produits et l'installation du Pixel pour un suivi avancé des conversions."
-tagline: "Boostez vos ventes grâce à la publicité automatisée sur Facebook & Instagram"
+title: "Facebook Dynamic Ads - Module PrestaShop"
+date: 2024-09-01
+description: "Module PrestaShop permettant une intégration avancée avec les Facebook Dynamic Ads pour maximiser le ROI publicitaire des marchands."
+tagline: "Boostez vos ventes avec le remarketing produits sur Facebook"
 company: "Business Tech"
 role: "Lead Developer"
+categories: ["prestashop", "marketing"]
 hero_image: "/assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
 project_url: "https://addons.prestashop.com/fr/remarketing-paniers-abandonnes/19033-facebook-dynamic-ads-pixel-pro-tag-catalogue-produits.html"
 business_context: |

@@ -8,6 +8,7 @@ company: "Projet Open Source"
 role: "Créateur & Mainteneur"
 hero_image: "/assets/images/modules/nd-faker-shop-module.png"
 project_url: "https://github.com/ndabene/nd_faker_shop"
+categories: ["prestashop", "opensource"]
 business_context: |
   Face au problème simple mais agaçant du temps perdu à créer manuellement des données de test pour les boutiques PrestaShop, l'idée est devenue évidente : pourquoi ne pas automatiser tout cela ? Les développeurs et intégrateurs perdent des heures précieuses à configurer des environnements de test avec des données réalistes. Ce module communautaire résout ce problème en générant automatiquement un ensemble complet de données de test adaptées aux besoins spécifiques de développement et d'intégration.
 technical_challenges: |

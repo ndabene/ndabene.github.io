@@ -7,6 +7,7 @@ tagline: "Préparez votre e-commerce pour l'ère des IA génératives"
 company: "Business Tech"
 role: "Lead Developer"
 project_url: "https://addons.prestashop.com/fr/seo-referencement-naturel/31771-geo-suite-ai-visibilite-boutique-ia.html"
+categories: ["prestashop", "ai"]
 business_context: |
   🚀 Transformation majeure : notre module AI Store Sitemap évolue vers une suite complète de Generative Engine Optimization (GEO). Cette première pierre permet aux e-commerçants de maximiser leur visibilité sur les LLM (ChatGPT, Gemini, Perplexity). Et ce n'est que le début : nouvelles features en développement et roadmap ambitieuse pour préparer le e-commerce de demain. L'avenir appartient à ceux qui anticipent. 💡
 technical_challenges: |

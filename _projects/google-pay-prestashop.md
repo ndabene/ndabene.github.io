@@ -1,11 +1,12 @@
 ---
 layout: project
-title: "Google Pay For PrestaShop"
-date: 2025-01-01
-description: "Module de paiement intégrant Google Pay via Stripe pour les boutiques PrestaShop, permettant un checkout rapide et sécurisé en 1 clic."
-tagline: "Paiement en 1 clic sécurisé via Stripe"
+title: "Google Pay pour PrestaShop"
+date: 2025-01-15
+end_date: 2025-04-25
+description: "Module de paiement officiel Google Pay pour PrestaShop, simplifiant les transactions mobiles avec une intégration transparente et sécurisée."
 company: "Business Tech"
 role: "Lead Developer"
+categories: ["prestashop", "payment"]
 project_url: "https://addons.prestashop.com/fr/paiement-modules-prestashop/54474-google-pay-payment-via-stripe.html"
 business_context: |
   Les consommateurs exigent des processus de paiement toujours plus rapides et fluides. L'abandon de panier reste un défi majeur pour les e-commerçants, souvent causé par des procédures de paiement complexes. Google Pay résout ce problème en offrant une expérience de paiement en un clic, éliminant la nécessité de saisir à nouveau les informations de carte et d'expédition, tout en maintenant un niveau de sécurité élevé grâce à l'intégration avec Stripe.

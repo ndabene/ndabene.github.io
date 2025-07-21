@@ -1,40 +1,13 @@
 ---
 layout: project
-title: "AI Store Sitemap - Visibilité e-commerce pour les IA"
-date: 2025-04-01
-end_date: 2025-06-01
-description: "Module PrestaShop innovant qui génère un fichier llms.txt pour optimiser la compréhension de votre boutique par les IA conversationnelles comme ChatGPT et Gemini."
-tagline: "Optimisez la visibilité de votre boutique sur les IA génératives"
+title: "AI Store Sitemap - Optimisation e-commerce pour IA"
+date: 2025-04-15
+description: "Module PrestaShop révolutionnaire permettant aux boutiques en ligne d'être mieux comprises par les IA conversationnelles comme ChatGPT et Google Bard."
+tagline: "Préparez votre e-commerce pour l'ère des IA conversationnelles"
 company: "Business Tech"
 role: "Lead Developer"
-hero_image: "/assets/images/modules/geo-generative-engine-optimization.png"
-project_url: "https://addons.prestashop.com/fr/seo-referencement-naturel/31771-ai-store-sitemap-contenu-boutique-pour-ia-llm.html"
-business_context: |
-  Avec l'émergence des assistants IA comme ChatGPT et Gemini comme nouveaux canaux de recherche et de recommandation produits, les e-commerçants font face à un nouveau défi : comment s'assurer que leur boutique et leurs produits sont correctement compris et recommandés par ces IA ? Le module AI Store Sitemap répond à cette problématique en créant un format standardisé pour communiquer avec les grands modèles de langage, permettant une meilleure indexation et compréhension du contenu e-commerce.
-technical_challenges: |
-  - **Développement d'un nouveau standard** : Création et implémentation du format llms.txt, spécifiquement conçu pour la communication avec les IA génératives.
-  - **Extraction intelligente du contenu** : Algorithmes pour identifier et prioriser les informations les plus pertinentes à inclure dans le sitemap IA.
-  - **Structure hiérarchique optimisée** : Organisation du contenu pour faciliter la compréhension des relations entre produits, catégories et caractéristiques par les IA.
-  - **Performance et scalabilité** : Génération efficace du fichier même pour les grandes boutiques avec milliers de produits.
-  - **Compatibilité avec les différents LLM** : Adaptation du format pour assurer la compatibilité avec les différents modèles IA du marché.
-metrics:
-  performance: "Augmentation de 40% de la précision des réponses des IA concernant les produits de la boutique"
-  roi: "Nouveau canal d'acquisition prometteur pour les early adopters"
-  impact: "Positionnement comme pionnier sur l'optimisation e-commerce pour les IA"
-technologies:
-  - PHP
-  - PrestaShop
-  - Symfony
-  - LLMs
-  - API OpenAI
-tags:
-  - { tech: "PrestaShop", category: "platform" }
-  - { tech: "PHP", category: "backend" }
-  - { tech: "IA", category: "ai" }
-  - { tech: "SEO", category: "marketing" }
-screenshots:
-  - image: "/assets/images/modules/ai-store-sitemap-interface.png"
-    alt: "Interface du module AI Store Sitemap"
+project_url: "https://addons.prestashop.com/fr/seo-referencement-naturel/31771-ai-store-sitemap.html"
+categories: ["prestashop", "ai"]
 ---
 
 ## Origine et vision

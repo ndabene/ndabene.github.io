@@ -1,13 +1,14 @@
 ---
 layout: project
-title: "Contribution PrestaShop - Open Source"
-date: 2025-03-01
-description: "Participation active à l'écosystème open source PrestaShop avec la contribution de code, documentation et modules communautaires suite au FopDays#2025."
-tagline: "S'engager pour un e-commerce open source plus fort"
-company: "Projet Open Source"
+title: "Contribution à PrestaShop - Amélioration du Core"
+date: 2024-01-15
+description: "Contributions actives au projet open-source PrestaShop, incluant corrections de bugs, améliorations de fonctionnalités et revues de code."
+tagline: "Participation à l'amélioration continue de PrestaShop"
+company: "Contribution Open Source"
 role: "Contributeur"
+project_url: "https://github.com/PrestaShop/PrestaShop/pulls?q=is%3Apr+author%3Andabene"
+categories: ["prestashop", "opensource"]
 hero_image: "/assets/images/modules/prestashop-contribution.png"
-project_url: "https://github.com/ndabene/PrestaShop"
 business_context: |
   Après plusieurs années d'utilisation professionnelle de PrestaShop et suite à ma participation aux conférences inspirantes du FopDays#2025, j'ai décidé de m'engager activement dans la communauté open source en contribuant directement au projet. Cette décision s'inscrit dans une volonté de partager mon expertise acquise au fil des ans et de participer à l'amélioration de l'écosystème e-commerce open source dont dépendent de nombreuses entreprises.
 technical_challenges: |

@@ -858,6 +858,115 @@
 }
 
 //================================================
+// SKILLS CHART
+//================================================
+.skills-chart {
+  margin-top: 2rem;
+}
+
+.skills-category-group {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(12, 12, 12, 0.05);
+}
+
+.skills-category-group h2 {
+  font-size: 1.75rem;
+  color: #2D3748;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #E2E8F0;
+  padding-bottom: 0.75rem;
+}
+
+.skill-item {
+  margin-bottom: 1.25rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #4A5568;
+}
+
+.skill-name {
+  font-size: 1rem;
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  color: #2563EB;
+}
+
+.skill-bar {
+  background-color: #E2E8F0;
+  border-radius: 5px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #2563EB; /* Default color */
+  border-radius: 5px;
+  transition: width 0.8s ease-in-out;
+}
+
+/* Skill bar colors by category */
+.skill-bar--php-backend .skill-fill {
+  background-color: #2563EB;
+}
+
+.skill-bar--ecommerce .skill-fill {
+  background-color: #ED8936;
+}
+
+.skill-bar--ai .skill-fill {
+  background-color: #7C3AED;
+}
+
+.skill-bar--frontend .skill-fill {
+  background-color: #F59E0B;
+}
+
+.skill-bar--devops .skill-fill {
+  background-color: #38B2AC;
+}
+
+.skill-bar--leadership .skill-fill {
+  background-color: #2D3748;
+}
+
+.skill-years {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .skills-category-group {
+    padding: 1rem;
+  }
+
+  .skills-category-group h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-level {
+    margin-top: 0.2rem;
+  }
+}
+
+//================================================
 // CONTAINER
 //================================================
 .container {

@@ -1,12 +1,13 @@
 ---
 layout: project
-title: "Module Vision pour PrestaShop"
-date: 2024-08-01
-end_date: 2025-05-31
-description: "Copilote e-commerce utilisant la technologie Vision d'OpenAI pour générer automatiquement des descriptions de produits à partir des images."
-tagline: "Générez vos descriptions de produits en un clic grâce à votre copilote e-commerce Vision"
+title: "Module Vision - Framework de développement PrestaShop"
+date: 2023-11-01
+description: "Framework interne pour le développement rapide et standardisé de modules PrestaShop, utilisant une architecture moderne et des bonnes pratiques."
+tagline: "Standardisation et accélération du développement de modules PrestaShop"
 company: "Business Tech"
-role: "Lead Developer & Product Manager"
+role: "Lead Developer & Architecte"
+hero_image: "/assets/images/modules/vision-prestashop-module-interface.png"
+categories: ["prestashop", "opensource"]
 project_url: "https://addons.prestashop.com/fr/seo-referencement-naturel/55732-vision-description-auto-openai.html"
 business_context: |
   La création manuelle de descriptions de produits est l'une des tâches les plus chronophages pour les e-commerçants. Avec des milliers de produits à gérer, produire des descriptions uniques et optimisées pour le SEO représente un défi considérable. Le Module Vision pour PrestaShop révolutionne ce processus en exploitant la puissance de l'IA générative d'OpenAI pour créer automatiquement des descriptions de qualité basées sur l'analyse visuelle des produits.

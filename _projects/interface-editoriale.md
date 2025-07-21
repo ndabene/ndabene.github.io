@@ -1,11 +1,13 @@
 ---
 layout: project
-title: "Interface Éditoriale Sur Mesure"
-date: 2025-02-01
-description: "Conception et développement d'une solution éditoriale personnalisée pour remplacer WordPress, offrant plus d'agilité et d'indépendance technique tout en intégrant des fonctionnalités d'IA."
-tagline: "Une plateforme de contenu agile et intelligente"
+title: "Interface Éditoriale - CMS pour e-commerce"
+date: 2023-05-01
+description: "Plateforme éditoriale interne permettant la gestion centralisée de contenus pour des dizaines de sites e-commerce et blogs liés à PrestaShop."
+tagline: "Gestion de contenu centralisée pour l'écosystème PrestaShop"
 company: "Business Tech"
 role: "Lead Developer & Architecte"
+project_url: ""
+categories: ["content", "prestashop"]
 hero_image: "/assets/images/modules/interface-editoriale-businesstech.png"
 business_context: |
   Face aux limitations de WordPress (complexité, performances, sécurité) et aux besoins spécifiques de publication technique, Business Tech nécessitait une solution éditoriale sur mesure. L'objectif était de créer une plateforme légère, performante et parfaitement adaptée aux processus de publication d'articles techniques, avec une intégration poussée de l'IA pour faciliter la création et l'optimisation du contenu.
