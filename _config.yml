@@ -22,13 +22,13 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projects/:path/
   posts:
     output: true
     permalink: /articles/:year/:month/:day/:title/
   case_studies:
     output: true
-    permalink: /etudes-de-cas/:name/
+    permalink: /case-studies/:path/
 
 # Fichiers à exclure de la génération
 exclude:

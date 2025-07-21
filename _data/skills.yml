@@ -1,3 +1,4 @@
+# PHP & Backend
 - name: PHP
   level: 95
   category: php-backend
@@ -10,6 +11,8 @@
   level: 85
   category: php-backend
   years_experience: 7
+
+# E-commerce
 - name: PrestaShop
   level: 95
   category: ecommerce
@@ -18,14 +21,22 @@
   level: 90
   category: ecommerce
   years_experience: 10
-- name: AI/ML Integration
+
+# AI
+- name: Data Orchestration
   level: 80
   category: ai
-  years_experience: 5
-- name: Data Orchestration
-  level: 75
-  category: ai
-  years_experience: 6
+  years_experience: 1
+
+# Frontend
+- name: HTML5
+  level: 95
+  category: frontend
+  years_experience: 15
+- name: SCSS/CSS
+  level: 85
+  category: frontend
+  years_experience: 10
 - name: JavaScript
   level: 80
   category: frontend
@@ -34,22 +45,38 @@
   level: 70
   category: frontend
   years_experience: 4
-- name: SCSS/CSS
-  level: 85
-  category: frontend
+
+# DevOps & Tools
+- name: Git
+  level: 90
+  category: devops
   years_experience: 10
 - name: DevOps
   level: 70
   category: devops
   years_experience: 5
+- name: GitHub Actions
+  level: 75
+  category: devops
+  years_experience: 3
 - name: AWS
   level: 65
   category: devops
   years_experience: 3
+- name: Jekyll
+  level: 80
+  category: devops
+  years_experience: 3
+
+# Leadership & Management
 - name: Technical Leadership
   level: 90
   category: leadership
   years_experience: 8
+- name: Product Management
+  level: 85
+  category: leadership
+  years_experience: 5
 - name: Project Management
   level: 85
   category: leadership
