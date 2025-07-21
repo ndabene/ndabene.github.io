@@ -1,62 +1,51 @@
 ---
 layout: default
 title: "Nicolas Dabène - Senior PHP Developer & AI Orchestrator | Expert PrestaShop"
-description: "15+ ans d'expérience, 11+ ans chez Business Tech. Modules PrestaShop, architecture e-commerce, AI-assisted development."
-keywords: "senior php developer, prestashop expert, business tech, ai orchestrator, symfony, e-commerce architecture, php fullstack"
+description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, AI-assisted development."
+keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack"
 ---
 
 <!-- HERO SECTION EXECUTIVE -->
 <section class="hero-section">
     <div class="container">
-        <div class="hero-grid">
-            <div class="hero-content">
+        <div class="hero-top">
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP Developer" class="profile-image">
+                </div>
+            </div>
+            <div class="hero-header">
                 <h1>Nicolas Dabène</h1>
                 <p class="hero-subtitle">Senior PHP FullStack Developer & AI Orchestrator</p>
                 <div class="hero-badges">
                     {% include tech-badge.html tech="Expert PrestaShop" category="prestashop" %}
                     {% include tech-badge.html tech="15+ ans d'expérience" category="experience" %}
-                    {% include tech-badge.html tech="Business Tech" category="business" %}
-                </div>
-                
-                <div class="hero-description">
-                    <p>Chez <strong>Business Tech</strong>, je contribue depuis plus de <strong>11 ans</strong> à l'élaboration de solutions e-commerce performantes et à la création de modules PrestaShop personnalisés, répondant aux besoins spécifiques de nos clients. Mon rôle inclut également l'intégration de technologies assistées par intelligence artificielle pour optimiser les workflows de développement et accélérer la livraison de projets.</p>
-                    <p>Fort de plusieurs années d'expérience en développement Full Stack et en orchestration AI-Assisted, je suis motivé par l'innovation et la création de valeur dans le secteur du e-commerce. Mon objectif est de transformer les défis techniques en opportunités stratégiques, tout en promouvant des solutions sur mesure qui maximisent les performances des boutiques en ligne.</p>
-                </div>
-
-                <div class="hero-metrics">
-                    <div class="metric-box">
-                        <span class="metric-value">15+</span>
-                        <span class="metric-label">ans d'expérience</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">11+</span>
-                        <span class="metric-label">ans chez Business Tech</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">50+</span>
-                        <span class="metric-label">Modules PrestaShop créés</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">25+</span>
-                        <span class="metric-label">Publications techniques</span>
-                    </div>
-                </div>
-
-                <div class="hero-actions">
-                    <a href="/projects" class="btn btn--primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn--secondary">Collaboration</a>
+                    {% include tech-badge.html tech="Innovation IA" category="ai" %}
                 </div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="expertise-cloud">
-                    {% include tech-badge.html tech="PHP" category="php" years="15" %}
-                    {% include tech-badge.html tech="Symfony" category="php" years="10" %}
-                    {% include tech-badge.html tech="PrestaShop" category="prestashop" years="11" %}
-                    {% include tech-badge.html tech="AI/ML" category="ai" years="3" %}
-                    {% include tech-badge.html tech="Docker" category="devops" years="8" %}
-                    {% include tech-badge.html tech="Vue.js" category="frontend" years="6" %}
-                </div>
+        </div>
+        
+        <div class="hero-description">
+            <p><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement et accélérer considérablement la mise en production des projets.</p>
+            <p><strong>Expert Full Stack animé par l'innovation, je transforme chaque défi technique en levier de croissance stratégique.</strong> Mon approche consiste à développer des solutions parfaitement adaptées qui propulsent les performances des boutiques en ligne et génèrent des résultats mesurables pour mes clients.</p>
+        </div>
+
+        <div class="hero-highlights">
+            <div class="highlight-item">
+                <span class="highlight-icon">🚀</span>
+                <span class="highlight-text">Architecture e-commerce optimisée et évolutive</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-icon">⚡</span>
+                <span class="highlight-text">Modules PrestaShop haute performance</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-icon">🤖</span>
+                <span class="highlight-text">Intégration IA pour automatiser les processus</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-icon">🎯</span>
+                <span class="highlight-text">Solutions sur mesure adaptées aux enjeux business</span>
             </div>
         </div>
     </div>
@@ -98,7 +87,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
     <div class="container">
         <div class="section-header">
             <h2>Modules PrestaShop Signature</h2>
-            <p class="section-subtitle">Sélection de modules développés chez Business Tech pour répondre aux besoins spécifiques de nos clients e-commerce</p>
+            <p class="section-subtitle">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
         </div>
         
         <div class="grid-system grid-3-cols">
@@ -117,7 +106,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                 </div>
                 <div class="card-footer">
                     <a href="{{ module.link }}" class="btn btn--outline" target="_blank">
-                        Voir chez Business Tech <span class="external-icon">↗</span>
+                        Voir le projet <span class="external-icon">↗</span>
                     </a>
                 </div>
             </div>
@@ -131,7 +120,7 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
     <div class="container">
         <div class="section-header">
             <h2>Mes Publications</h2>
-            <p class="section-subtitle">Retrouvez mes articles et tutoriels sur le blog de Business Tech.</p>
+            <p class="section-subtitle">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
         <div class="grid-system grid-2-cols">
@@ -149,24 +138,24 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
     </div>
 </section>
 
-<!-- BUSINESS TECH PARTNERSHIP SECTION -->
-<section class="section partnership-section">
+<!-- INNOVATION & AI SECTION -->
+<section class="section innovation-section">
     <div class="container">
-        <div class="partnership-grid">
-            <div class="partnership-content">
+        <div class="innovation-grid">
+            <div class="innovation-content">
                 <div class="section-header">
-                    <h2>Collaboration Business Tech</h2>
-                    <p class="section-subtitle">Plus de 11 années de collaboration fructueuse dans le développement de solutions e-commerce innovantes</p>
+                    <h2>Innovation & Intelligence Artificielle</h2>
+                    <p class="section-subtitle">Pionnier dans l'intégration de l'IA pour optimiser les workflows de développement e-commerce</p>
                 </div>
                 
-                <div class="partnership-highlights">
+                <div class="innovation-highlights">
                     <div class="highlight-item">
                         <div class="highlight-icon">
-                            <span class="icon-achievement">🏆</span>
+                            <span class="icon-achievement">🚀</span>
                         </div>
                         <div class="highlight-content">
-                            <h4>Projets Marquants</h4>
-                            <p>Création de plusieurs modules best seller pour Prestashop</p>
+                            <h4>Accélération des Projets</h4>
+                            <p>Réduction de 40% du temps de développement grâce à l'orchestration IA</p>
                         </div>
                     </div>
                     
@@ -175,8 +164,8 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                             <span class="icon-innovation">💡</span>
                         </div>
                         <div class="highlight-content">
-                            <h4>Innovation Continue</h4>
-                            <p>Création de modules innovants et avance sur leurs temps, pour aider les e-commerçant a performer</p>
+                            <h4>Solutions Innovantes</h4>
+                            <p>Création de modules PrestaShop intégrant des fonctionnalités IA avancées</p>
                         </div>
                     </div>
                     
@@ -185,35 +174,29 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
                             <span class="icon-expertise">🔧</span>
                         </div>
                         <div class="highlight-content">
-                            <h4>Expertise Technique</h4>
-                            <p>Leadership technique sur les projets complexes et mentorat des équipes junior pour maintenir notre excellence.</p>
+                            <h4>Automatisation Intelligente</h4>
+                            <p>Workflows automatisés pour optimiser les performances e-commerce</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="partnership-cta">
-                    <a href="https://businesstech.fr" class="btn btn--primary" target="_blank">
-                        Découvrir Business Tech <span class="external-icon">↗</span>
-                    </a>
-                </div>
             </div>
             
-            <div class="partnership-metrics">
+            <div class="innovation-metrics">
                 <div class="metric-card">
-                    <span class="metric-number">11+</span>
-                    <span class="metric-label">Années de collaboration</span>
+                    <span class="metric-number">40%</span>
+                    <span class="metric-label">Gain de productivité</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">200+</span>
-                    <span class="metric-label">PCafès bu</span>
+                    <span class="metric-number">3</span>
+                    <span class="metric-label">Années d'expertise IA</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">50+</span>
-                    <span class="metric-label">Modules développés</span>
+                    <span class="metric-number">15+</span>
+                    <span class="metric-label">Projets IA intégrés</span>
                 </div>
                 <div class="metric-card">
-                    <span class="metric-number">Support</span>
-                    <span class="metric-label">98% de satisfaction client</span>
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Projets optimisés</span>
                 </div>
             </div>
         </div>
@@ -224,8 +207,8 @@ keywords: "senior php developer, prestashop expert, business tech, ai orchestrat
 <section class="section cta-section">
     <div class="container">
         <div class="cta-content">
-            <h2>Prêt à collaborer sur votre prochain projet ?</h2>
-            <p>Discutons de vos besoins en développement e-commerce et de la façon dont mon expertise peut contribuer à votre succès.</p>
+            <h2>Prêt à propulser votre projet e-commerce ?</h2>
+            <p>Discutons de vos besoins en développement e-commerce et de la façon dont mon expertise peut transformer vos défis en opportunités de croissance.</p>
             <div class="cta-actions">
                 <a href="/contact" class="btn btn--primary btn--large">Démarrer une collaboration</a>
                 <a href="/projects" class="btn btn--secondary btn--large">Voir mes réalisations</a>

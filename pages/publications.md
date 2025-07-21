@@ -2,7 +2,7 @@
 layout: default
 title: Mes Publications
 permalink: /publications/
-description: "Retrouvez une sélection de mes articles techniques, tutoriels et analyses approfondies sur le développement web, l'e-commerce et l'intelligence artificielle, publiés sur le blog de Business Tech."
+description: "Retrouvez une sélection de mes articles techniques, tutoriels et analyses approfondies sur le développement web, l'e-commerce et l'intelligence artificielle, publiés sur le blog de BusinessTech."
 ---
 
 <section class="section">
@@ -18,7 +18,7 @@ description: "Retrouvez une sélection de mes articles techniques, tutoriels et 
                 <div class="card-content">
                     <h3 class="card-title">{{ publication.title }}</h3>
                     <span class="publication-link">
-                        Lire sur Business Tech <span class="external-icon">↗</span>
+                        Lire sur BusinessTech <span class="external-icon">↗</span>
                     </span>
                 </div>
             </a>

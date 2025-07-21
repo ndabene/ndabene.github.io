@@ -10,7 +10,7 @@ Ce site présente mon parcours professionnel, mes expertises techniques, mes pro
 - **PHP/Symfony** - Architecture backend robuste et APIs haute performance
 - **PrestaShop** - Développement de modules personnalisés et optimisation e-commerce
 - **AI Integration** - Intégration d'IA dans les workflows de développement
-- **Framework Development** - Conception d'outils internes chez Business Tech
+- **Framework Development** - Conception d'outils internes chez BusinessTech
 
 ## 🛠️ Technologies utilisées
 

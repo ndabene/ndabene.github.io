@@ -10,7 +10,7 @@
 - id: ecommerce
   name: Spécialisation PrestaShop
   icon: prestashop
-  description: "Développement de modules PrestaShop sur mesure et optimisation de performances e-commerce. Expert certifié avec 11+ années d'expérience chez Business Tech."
+  description: "Développement de modules PrestaShop sur mesure et optimisation de performances e-commerce. Expert certifié avec 11+ années d'expérience chez BusinessTech."
   skills:
     - "Modules PrestaShop personnalisés"
     - "Optimisation de performances"
@@ -28,9 +28,9 @@
 - id: framework
   name: Développement de Frameworks
   icon: development
-  description: "Conception et développement de frameworks internes et d'outils de développement pour optimiser la productivité des équipes chez Business Tech."
+  description: "Conception et développement de frameworks internes et d'outils de développement pour optimiser la productivité des équipes chez BusinessTech."
   skills:
-    - "Frameworks internes Business Tech"
+    - "Frameworks internes BusinessTech"
     - "Outils de génération de code"
     - "Bibliothèques réutilisables"
     - "Standards et conventions équipe"
