@@ -9,41 +9,41 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <section class="hero-section">
     <div class="container">
         <div class="hero-top">
-            <div class="hero-visual">
-                <div class="profile-container">
+            <div class="hero-visual scroll-reveal">
+                <div class="profile-container animate-float">
                     <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP Developer" class="profile-image">
                 </div>
             </div>
             <div class="hero-header">
-                <h1>Nicolas Dabène</h1>
-                <p class="hero-subtitle">Senior PHP FullStack Developer & AI Orchestrator</p>
-                <div class="hero-badges">
-                    {% include tech-badge.html tech="Expert PrestaShop" category="prestashop" %}
-                    {% include tech-badge.html tech="15+ ans d'expérience" category="experience" %}
-                    {% include tech-badge.html tech="Innovation IA" category="ai" %}
+                <h1 class="text-reveal">Nicolas Dabène</h1>
+                <p class="hero-subtitle animate-fade-in-up">Senior PHP FullStack Developer & AI Orchestrator</p>
+                <div class="hero-badges stagger-animation">
+                    <div class="animate-item">{% include tech-badge.html tech="Expert PrestaShop" category="prestashop" %}</div>
+                    <div class="animate-item">{% include tech-badge.html tech="15+ ans d'expérience" category="experience" %}</div>
+                    <div class="animate-item">{% include tech-badge.html tech="Innovation IA" category="ai" %}</div>
                 </div>
             </div>
         </div>
         
-        <div class="hero-description">
+        <div class="hero-description scroll-reveal">
             <p><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement et accélérer considérablement la mise en production des projets.</p>
             <p><strong>Expert Full Stack animé par l'innovation, je transforme chaque défi technique en levier de croissance stratégique.</strong> Mon approche consiste à développer des solutions parfaitement adaptées qui propulsent les performances des boutiques en ligne et génèrent des résultats mesurables pour mes clients.</p>
         </div>
 
-        <div class="hero-highlights">
-            <div class="highlight-item">
+        <div class="hero-highlights stagger-animation">
+            <div class="highlight-item animate-item">
                 <span class="highlight-icon">🚀</span>
                 <span class="highlight-text">Architecture e-commerce optimisée et évolutive</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item animate-item">
                 <span class="highlight-icon">⚡</span>
                 <span class="highlight-text">Modules PrestaShop haute performance</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item animate-item">
                 <span class="highlight-icon">🤖</span>
                 <span class="highlight-text">Intégration IA pour automatiser les processus</span>
             </div>
-            <div class="highlight-item">
+            <div class="highlight-item animate-item">
                 <span class="highlight-icon">🎯</span>
                 <span class="highlight-text">Solutions sur mesure adaptées aux enjeux business</span>
             </div>
@@ -54,14 +54,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <!-- EXPERTISE HIGHLIGHTS SECTION -->
 <section class="section expertise-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Expertise Technique</h2>
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Expertise Technique</h2>
             <p class="section-subtitle">Plus de 15 ans d'expérience dans le développement de solutions e-commerce et d'applications web complexes</p>
         </div>
         
-        <div class="expertise-grid">
+        <div class="expertise-grid stagger-animation">
             {% for expertise in site.data.expertise %}
-            <div class="expertise-item" data-id="{{ expertise.id }}">
+            <div class="expertise-item animate-item hover-lift" data-id="{{ expertise.id }}">
                 <div class="expertise-item-header">
                     <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
                     <h3>{{ expertise.name }}</h3>
@@ -86,14 +86,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <!-- MODULES PRESTASHOP FEATURED SECTION -->
 <section class="section modules-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Modules PrestaShop Signature</h2>
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Modules PrestaShop Signature</h2>
             <p class="section-subtitle">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
         </div>
         
-        <div class="grid-system grid-3-cols">
+        <div class="grid-system grid-3-cols stagger-animation">
             {% for module in site.data.modules %}
-            <div class="card module-card">
+            <div class="card-modern module-card animate-item hover-lift">
                 {% if module.image %}
                 <a href="{{ module.link }}" target="_blank" class="card-image-link">
                     <div class="card-image">
@@ -109,11 +109,11 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         {% endfor %}
                     </div>
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <p class="card-description">{{ module.description }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ module.link }}" class="btn btn--outline" target="_blank">
+                    <a href="{{ module.link }}" class="btn btn--primary ripple-effect" target="_blank">
                         Voir le projet <span class="external-icon">↗</span>
                     </a>
                 </div>
@@ -126,14 +126,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <!-- PUBLICATIONS SECTION -->
 <section class="section publications-section">
     <div class="container">
-        <div class="section-header">
-            <h2>Mes Publications</h2>
+        <div class="section-header scroll-reveal">
+            <h2 class="text-gradient">Mes Publications</h2>
             <p class="section-subtitle">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
-        <div class="grid-system grid-3-cols">
+        <div class="grid-system grid-3-cols stagger-animation">
             {% for publication in site.data.publications %}
-            <div class="card publication-card">
+            <div class="card-modern publication-card animate-item hover-lift">
                 {% if publication.image %}
                 <a href="{{ publication.link }}" target="_blank" class="card-image-link">
                     <div class="card-image">
@@ -149,11 +149,11 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </div>
                     {% endif %}
                 </div>
-                <div class="card-content">
+                <div class="card-body">
                     <p class="card-description">{{ publication.description }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ publication.link }}" class="btn btn--outline" target="_blank">
+                    <a href="{{ publication.link }}" class="btn btn--secondary ripple-effect" target="_blank">
                         Lire l'article <span class="external-icon">↗</span>
                     </a>
                 </div>
@@ -161,8 +161,8 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             {% endfor %}
         </div>
         
-        <div class="view-all-publications">
-            <a href="https://www.businesstech.fr/landing/articles/index.html" class="btn btn--primary" target="_blank">
+        <div class="view-all-publications scroll-reveal">
+            <a href="https://www.businesstech.fr/landing/articles/index.html" class="btn btn--primary ripple-effect" target="_blank">
                 Voir toutes les publications <span class="external-icon">↗</span>
             </a>
         </div>
@@ -172,11 +172,12 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <!-- CALL TO ACTION FINAL -->
 <section class="section cta-section">
     <div class="container">
-        <div class="cta-content">
-            <h2>Prêt à propulser votre projet e-commerce ?</h2>
+        <div class="cta-content scroll-reveal">
+            <h2 class="text-gradient">Prêt à propulser votre projet e-commerce ?</h2>
             <p>Discutons de vos besoins en développement e-commerce et de la façon dont mon expertise peut transformer vos défis en opportunités de croissance.</p>
             <div class="cta-actions">
-                <a href="/projects" class="btn btn--secondary btn--large">Voir mes réalisations</a>
+                <a href="/projects" class="btn btn--primary btn--large ripple-effect">Voir mes réalisations</a>
+                <a href="/contact" class="btn btn--secondary btn--large ripple-effect">Me contacter</a>
             </div>
         </div>
     </div>

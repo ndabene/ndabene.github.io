@@ -1,0 +1,384 @@
+//================================================
+// MODERN COMPONENTS - COMPOSANTS UI MODERNES
+//================================================
+
+//================================================
+// GLASS MORPHISM EFFECTS
+//================================================
+.glass-card {
+  background: $glass-bg;
+  backdrop-filter: $backdrop-blur;
+  -webkit-backdrop-filter: $backdrop-blur;
+  border: 1px solid $glass-border;
+  border-radius: $rounded-xl;
+  box-shadow: $shadow-lg;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+//================================================
+// MODERN BUTTONS
+//================================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: $space-sm $space-lg;
+  border-radius: $rounded-lg;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-decoration: none;
+  transition: $transition-normal;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  // Primary Button
+  &--primary {
+    background: $gradient-primary;
+    color: $white;
+    box-shadow: $shadow-colored;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: $shadow-xl, $shadow-colored;
+      text-decoration: none;
+      color: $white;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: $transition-slow;
+    }
+
+    &:hover::before {
+      left: 100%;
+    }
+  }
+
+  // Secondary Button
+  &--secondary {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+  }
+
+  // Ghost Button
+  &--ghost {
+    background: transparent;
+    color: $text-color;
+    border: 1px solid $gray-light;
+
+    &:hover {
+      background: $gray-ultra-light;
+      border-color: $primary-color;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+//================================================
+// ANIMATED CARDS
+//================================================
+.card-modern {
+  background: $white;
+  border-radius: $rounded-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: $transition-normal;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $gradient-primary;
+    transform: scaleX(0);
+    transition: $transition-normal;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  .card-header {
+    padding: $space-xl;
+    border-bottom: 1px solid $gray-light;
+    position: relative;
+  }
+
+  .card-body {
+    padding: $space-xl;
+  }
+
+  .card-footer {
+    padding: $space-lg $space-xl;
+    background: $gray-ultra-light;
+    border-top: 1px solid $gray-light;
+  }
+}
+
+//================================================
+// MODERN NAVIGATION
+//================================================
+.nav-modern {
+  background: rgba($white, 0.95);
+  backdrop-filter: $backdrop-blur;
+  border-bottom: 1px solid rgba($gray-light, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  transition: $transition-normal;
+
+  &.scrolled {
+    box-shadow: $shadow-lg;
+    background: rgba($white, 0.98);
+  }
+
+  .nav-brand {
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: $space-sm $space-md;
+    color: $text-color;
+    text-decoration: none;
+    transition: $transition-fast;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: $transition-normal;
+      transform: translateX(-50%);
+    }
+
+    &:hover,
+    &.active {
+      color: $primary-color;
+      
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+}
+
+//================================================
+// FLOATING ACTION ELEMENTS
+//================================================
+.floating-cta {
+  position: fixed;
+  bottom: $space-xl;
+  right: $space-xl;
+  z-index: $z-fixed;
+  
+  .fab {
+    width: 60px;
+    height: 60px;
+    border-radius: $rounded-full;
+    background: $gradient-primary;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    box-shadow: $shadow-xl, $shadow-colored;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: $transition-normal;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: $shadow-xl, 0 15px 30px rgba($primary-color, 0.3);
+    }
+  }
+}
+
+//================================================
+// SKILL PROGRESS MODERN
+//================================================
+.skill-modern {
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-sm;
+  }
+
+  .skill-name {
+    font-weight: $font-weight-semibold;
+    color: $text-color;
+  }
+
+  .skill-percentage {
+    font-size: $font-size-sm;
+    color: $text-color-light;
+    font-weight: $font-weight-medium;
+  }
+
+  .skill-bar {
+    height: 8px;
+    background: $gray-light;
+    border-radius: $rounded-full;
+    overflow: hidden;
+    position: relative;
+
+    .skill-progress {
+      height: 100%;
+      background: $gradient-primary;
+      border-radius: $rounded-full;
+      position: relative;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s $ease-bounce;
+
+      &.animate {
+        transform: scaleX(1);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: rgba($white, 0.5);
+        border-radius: $rounded-full;
+      }
+    }
+  }
+}
+
+//================================================
+// TESTIMONIAL CARDS
+//================================================
+.testimonial-modern {
+  position: relative;
+  padding: $space-xl;
+  background: $white;
+  border-radius: $rounded-xl;
+  box-shadow: $shadow-md;
+  border-left: 4px solid $primary-color;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: $space-lg;
+    font-size: 4rem;
+    color: $primary-color;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+  }
+
+  .testimonial-content {
+    font-style: italic;
+    margin-bottom: $space-lg;
+    line-height: 1.7;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: $rounded-full;
+      border: 3px solid $primary-color;
+    }
+
+    .author-info {
+      .author-name {
+        font-weight: $font-weight-semibold;
+        color: $text-color;
+        margin: 0;
+      }
+
+      .author-role {
+        font-size: $font-size-sm;
+        color: $text-color-light;
+        margin: 0;
+      }
+    }
+  }
+}
+
+//================================================
+// DARK MODE SUPPORT
+//================================================
+@media (prefers-color-scheme: dark) {
+  .card-modern {
+    background: $dark-card;
+    color: $dark-text;
+
+    .card-footer {
+      background: $dark-surface;
+    }
+  }
+
+  .nav-modern {
+    background: rgba($dark-surface, 0.95);
+    border-bottom-color: rgba($dark-text-muted, 0.1);
+
+    &.scrolled {
+      background: rgba($dark-surface, 0.98);
+    }
+
+    .nav-link {
+      color: $dark-text-muted;
+
+      &:hover,
+      &.active {
+        color: $dark-text;
+      }
+    }
+  }
+
+  .testimonial-modern {
+    background: $dark-card;
+    color: $dark-text;
+    border-left-color: $accent-color-1;
+  }
+} 
