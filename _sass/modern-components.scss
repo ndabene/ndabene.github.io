@@ -1352,11 +1352,12 @@ body {
     .expertise-visual {
       flex: 0 0 140px;
       background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.15) 100%);
-      display: flex;
-      flex-direction: column;
+      display: flex !important;
+      flex-direction: column !important;
       align-items: center;
       justify-content: center;
       position: relative;
+      gap: $space-sm;
       
       .expertise-icon-beautiful {
         width: 70px;
@@ -1383,6 +1384,12 @@ body {
         text-transform: uppercase;
         letter-spacing: 0.5px;
         box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        
+        // S'assurer que le badge est bien visible
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        white-space: nowrap;
       }
       
       &::before {
@@ -2759,10 +2766,18 @@ body {
   }
   
   .skills-grid {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     gap: $space-md;
     margin-bottom: $space-2xl;
+    width: 100%;
+    
+    // Force les cartes à être en ligne
+    .skill-card-modern {
+      width: 100%;
+      display: block !important;
+      margin-bottom: $space-md;
+    }
   }
 }
 
@@ -3006,12 +3021,15 @@ body {
 
 .skills-category-modern {
   margin-bottom: $space-3xl;
+  display: block !important;
+  width: 100%;
   
   .category-header-modern {
     text-align: center;
     margin-bottom: $space-2xl;
     position: relative;
     z-index: 10;
+    display: block !important;
     
     h2 {
       font-size: 2.2rem;
@@ -3094,3 +3112,125 @@ body {
     }
   }
 } 
+
+//================================================
+// AFFICHAGE LINÉAIRE UNIQUEMENT POUR LES COMPÉTENCES
+//================================================
+
+// SEULEMENT les compétences en ligne, pas les autres sections
+.skills-page-modern {
+  .skills-category-modern {
+    display: block !important;
+    width: 100%;
+    
+    .skills-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: $space-md;
+      
+      .skill-card-modern {
+        width: 100% !important;
+        display: block !important;
+        margin-bottom: $space-md !important;
+      }
+    }
+  }
+}
+
+//================================================
+// CSS DÉDIÉ POUR L'AFFICHAGE LINÉAIRE DES CARTES D'EXPERTISE
+//================================================
+
+// Force l'affichage linéaire SEULEMENT pour les cartes d'expertise sur la page skills
+.skills-page-modern {
+  
+  // Forcer les cartes d'expertise en ligne (vertical)
+  .expertise-section-clean .grid-unified {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    gap: $space-xl !important;
+    max-width: 100% !important;
+    
+    // Chaque carte d'expertise prend toute la largeur et s'affiche en bloc
+    .expertise-card-beautiful {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 0;
+      
+      // Force le contenu interne en mode vertical (icône au-dessus)
+      .expertise-card-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch;
+        min-height: auto;
+        text-align: center;
+        
+        .expertise-visual {
+          flex: none !important;
+          width: 100% !important;
+          min-height: 120px;
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: center;
+          align-items: center;
+          padding: $space-lg;
+          
+          .expertise-icon-beautiful {
+            margin-bottom: 0;
+            margin-right: $space-md;
+            order: 1;
+          }
+          
+          .expertise-badge-beautiful {
+            order: 2;
+          }
+        }
+        
+        .expertise-content-beautiful {
+          width: 100% !important;
+          padding: $space-xl;
+          text-align: center;
+          
+          .expertise-skills-beautiful {
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+  
+  // Les autres sections (skills-grid) gardent leur affichage normal
+  // Pas de modification ici = affichage en grille conservé
+}
+
+//================================================
+// OVERRIDE SPÉCIFIQUE POUR CARTES D'EXPERTISE EN LIGNE
+//================================================
+
+// Sélecteur ultra-spécifique pour forcer les cartes d'expertise en ligne
+div.skills-page-modern div.expertise-section-clean div.grid-unified {
+  display: flex !important;
+  flex-direction: column !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 2rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+// Force chaque carte à prendre toute la largeur
+div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertise-card-beautiful {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
+  grid-column: unset !important;
+  grid-row: unset !important;
+  margin: 0 !important;
+  margin-bottom: 1.5rem !important;
+}

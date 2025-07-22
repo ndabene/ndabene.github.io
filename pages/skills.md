@@ -13,6 +13,40 @@ show_sidebar: false
         <p class="section-description">Voici un aperçu détaillé de mes compétences techniques et humaines, acquises et affinées au fil de mes années d'expérience. Chaque compétence reflète ma passion pour l'excellence et l'innovation continue.</p>
     </div>
 
+    <!-- Section Expertise en ligne -->
+    <div class="expertise-section-clean">
+        <div class="container">
+            <div class="section-header-clean">
+                <h2 class="section-title-clean">Mes Domaines d'Expertise</h2>
+                <p class="section-subtitle-clean">Découvrez mes spécialisations techniques et sectorielles développées au fil de 15+ années d'expérience</p>
+            </div>
+            
+            <div class="grid-unified expertise-cards-linear" id="expertise-cards-container" style="display: flex !important; flex-direction: column !important; gap: 2rem !important;">
+                {% for expertise in site.data.expertise %}
+                <div class="expertise-card-beautiful animate-item" data-id="{{ expertise.id }}">
+                    <div class="expertise-card-inner">
+                        <div class="expertise-visual">
+                            <div class="expertise-icon-beautiful">{{ expertise.icon }}</div>
+                            {% if expertise.id == 'prestashop' or expertise.id == 'ai' %}
+                            <div class="expertise-badge-beautiful">Expert</div>
+                            {% endif %}
+                        </div>
+                        <div class="expertise-content-beautiful">
+                            <h3 class="expertise-title-beautiful">{{ expertise.name }}</h3>
+                            <p class="expertise-description-beautiful">{{ expertise.description }}</p>
+                            <div class="expertise-skills-beautiful">
+                                {% for skill in expertise.skills limit:4 %}
+                                <span class="skill-beautiful">{{ skill }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="skills-filter">
             <button class="skill-filter-btn active" data-filter="all">Toutes les compétences</button>
