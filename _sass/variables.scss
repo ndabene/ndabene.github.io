@@ -31,11 +31,26 @@ $error-color: #E53E3E;
 $warning-color: #D69E2E;
 
 //================================================
+// RÉTROCOMPATIBILITÉ ANCIENNES VARIABLES
+//================================================
+
+// Variables héritées pour compatibilité
+$font-primary: 'Inter', sans-serif;
+$body-size: 1rem;
+$line-height-normal: 1.6;
+$container-padding: 1rem;
+$spacing-sm: 0.5rem;
+$spacing-lg: 1.5rem;
+$light-gray: #E2E8F0;
+$h1-size: 2.5rem;
+$primary-navy: #2563EB;
+
+//================================================
 // TYPOGRAPHIE
 //================================================
 
 // Importation des polices depuis Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@600;700;800;900&display=swap');
 
 // Familles de polices
 $font-family-primary: 'Inter', sans-serif; // Pour le corps du texte
@@ -43,14 +58,17 @@ $font-family-headings: 'Poppins', sans-serif; // Pour les titres
 
 // Tailles de police (Base: 16px)
 $font-size-base: 1rem;
+$font-size-xs: 0.75rem; // 12px
 $font-size-sm: 0.875rem; // 14px
 $font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
 
 // Poids des polices
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+$font-weight-black: 900;
 
 // Hauteur de ligne
 $line-height-base: 1.6;
@@ -72,7 +90,10 @@ $space-sm: 0.5rem;  // 8px
 $space-md: 1rem;    // 16px
 $space-lg: 1.5rem;  // 24px
 $space-xl: 2rem;    // 32px
-$space-xxl: 3rem;   // 48px
+$space-2xl: 2.5rem; // 40px
+$space-3xl: 3rem;   // 48px
+$space-4xl: 4rem;   // 64px
+$space-xxl: 3rem;   // 48px (legacy)
 
 //================================================
 // BREAKPOINTS RESPONSIVE
@@ -110,6 +131,7 @@ $shadow-colored: 0 10px 25px rgba($primary-color, 0.15);
 $rounded-none: 0;
 $rounded-sm: 0.25rem;
 $rounded: 0.5rem;
+$rounded-md: 0.5rem;
 $rounded-lg: 0.75rem;
 $rounded-xl: 1rem;
 $rounded-2xl: 1.5rem;
@@ -134,3 +156,42 @@ $z-tooltip: 1070;
 $glass-bg: rgba(255, 255, 255, 0.1);
 $glass-border: rgba(255, 255, 255, 0.2);
 $backdrop-blur: blur(10px);
+
+//================================================
+// HOMEPAGE MODERN SPECIFICS
+//================================================
+
+// Hero Section
+$hero-background-primary: rgba(116, 182, 252, 0.05);
+$hero-background-secondary: rgba(147, 197, 253, 0.1);
+$hero-pattern-primary: rgba(59, 130, 246, 0.1);
+$hero-pattern-secondary: rgba(147, 51, 234, 0.1);
+
+// Status Indicators
+$status-online: linear-gradient(45deg, #22c55e, #16a34a);
+$status-busy: linear-gradient(45deg, #f59e0b, #d97706);
+$status-away: linear-gradient(45deg, #8b5cf6, #7c3aed);
+
+// Tech Tags Colors
+$tech-prestashop-bg: rgba(223, 49, 99, 0.1);
+$tech-prestashop-text: #df3163;
+$tech-api-bg: rgba(59, 130, 246, 0.1);
+$tech-api-text: #3b82f6;
+$tech-integration-bg: rgba(16, 185, 129, 0.1);
+$tech-integration-text: #10b981;
+$tech-ecommerce-bg: rgba(245, 158, 11, 0.1);
+$tech-ecommerce-text: #f59e0b;
+
+// Hover States
+$hover-lift-transform: translateY(-8px) scale(1.02);
+$hover-lift-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$hover-icon-rotate: rotate(10deg) scale(1.1);
+
+// Animation Delays
+$animation-delay-short: 0.1s;
+$animation-delay-medium: 0.3s;
+$animation-delay-long: 0.5s;
+
+// Modern Section Spacing
+$section-padding-mobile: $space-3xl 0;
+$section-padding-desktop: $space-4xl 0;

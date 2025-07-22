@@ -34,21 +34,3 @@
       category: prestashop
     - tech: Marketing
       category: marketing 
-- title: "Social Login"
-  description: "Permet aux utilisateurs de se connecter avec leurs comptes Facebook, Google, etc."
-  link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/30-social-login-0656272557829.html"
-  image: "assets/images/modules/social-login-prestashop-facebook-google-tiktok-amazon-twitter-paypal.png"
-  tags:
-    - tech: PrestaShop
-      category: prestashop
-    - tech: Social
-      category: Social 
-- title: "Google Analytics PRO"
-  description: "Intégrez Google Analytics pour suivre les performances de votre site."
-  link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/46-google-analytics-pro-0656272943080.html"
-  image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
-  tags:
-    - tech: PrestaShop
-      category: prestashop
-    - tech: Marketing
-      category: marketing 
