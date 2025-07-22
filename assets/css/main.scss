@@ -4,12 +4,12 @@
 ---
 
 @import "variables";
-@import "base";
-@import "modern-components";
-@import "animations";
+@import "base";  
 @import "components";
 @import "badges";
-@import "under-construction";
+@import "_under-construction";
 @import "layout";
 @import "navigation";
 @import "blog";
+@import "modern-components";
+@import "animations";

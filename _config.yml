@@ -40,4 +40,4 @@ exclude:
 # Maintenance mode settings
 maintenance_mode: false
 maintenance_authorized_ip: ""
-under_construction: true # Bannière "under construction" en haut du site
+under_construction: false # Bannière "under construction" désactivée
