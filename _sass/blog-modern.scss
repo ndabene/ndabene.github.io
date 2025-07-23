@@ -1048,3 +1048,201 @@ $blog-content-bg: $white;
     }
   }
 }
+
+//================================================
+// BOUTONS DE PARTAGE SOCIAL MODERNES
+//================================================
+
+.social-sharing-section {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  
+  .sharing-title {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+.social-sharing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  
+  i {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  &:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+}
+
+// Couleurs spécifiques par réseau social - Design circulaire
+.social-btn--linkedin {
+  background: #0077b5;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+  
+  &:hover {
+    background: #005885;
+    box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+  }
+}
+
+.social-btn--twitter {
+  background: #1da1f2;
+  color: white;
+  box-shadow: 0 4px 15px rgba(29, 161, 242, 0.3);
+  
+  &:hover {
+    background: #0d8bd9;
+    box-shadow: 0 8px 25px rgba(29, 161, 242, 0.4);
+  }
+}
+
+.social-btn--facebook {
+  background: #4267b2;
+  color: white;
+  box-shadow: 0 4px 15px rgba(66, 103, 178, 0.3);
+  
+  &:hover {
+    background: #365899;
+    box-shadow: 0 8px 25px rgba(66, 103, 178, 0.4);
+  }
+}
+
+.social-btn--reddit {
+  background: #ff4500;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+  
+  &:hover {
+    background: #cc3600;
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+  }
+}
+
+.social-btn--telegram {
+  background: #0088cc;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
+  
+  &:hover {
+    background: #006699;
+    box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4);
+  }
+}
+
+.social-btn--whatsapp {
+  background: #25d366;
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  
+  &:hover {
+    background: #1da851;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+}
+
+.social-btn--copy {
+  background: #6b7280;
+  color: white;
+  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+  
+  &:hover {
+    background: #4b5563;
+    box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+  }
+  
+  &.copied {
+    background: #10b981;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+    
+    .fas {
+      &::before {
+        content: '\f00c'; // Icône check
+      }
+    }
+  }
+}
+
+// Responsive pour boutons sociaux circulaires
+@media (max-width: 768px) {
+  .social-sharing-buttons {
+    gap: 0.6rem;
+  }
+  
+  .social-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    
+    i {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .social-sharing-buttons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    
+    i {
+      font-size: 1rem;
+    }
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+}

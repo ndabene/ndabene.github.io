@@ -5,7 +5,7 @@ author:
 description: "Portfolio de Nicolas Dabène, Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience. Spécialiste des solutions BusinessTech, expert des modules PrestaShop et de l'architecture e-commerce."
 
 # URL & Base URL
-url: "https://ndabene.github.io" # le domaine de votre site
+url: "https://nicolas-dabene.fr" # le domaine de votre site
 baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la racine.
 
 # Build settings

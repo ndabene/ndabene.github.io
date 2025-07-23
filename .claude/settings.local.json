@@ -6,7 +6,13 @@
       "WebFetch(domain:www.businesstech.fr)",
       "Bash(bundle list:*)",
       "Bash(bundle exec jekyll serve:*)",
-      "WebFetch(domain:localhost)"
+      "WebFetch(domain:localhost)",
+      "Bash(bundle exec:*)",
+      "Bash(powershell:*)",
+      "Bash(JEKYLL_ENV=production bundle exec jekyll build)",
+      "Bash(jekyll build:*)",
+      "Bash(bash:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   }
