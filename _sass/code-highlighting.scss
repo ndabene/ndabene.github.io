@@ -1,0 +1,242 @@
+// Code highlighting et copy button pour les articles de blog
+// Fichier dédié aux styles de code pour une meilleure organisation
+
+//================================================
+// COPY BUTTON POUR LES BLOCS DE CODE
+//================================================
+.code-block-container {
+  position: relative;
+  margin: 2rem 0;
+  
+  .copy-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.2) 100%);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    
+    &:hover {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(99, 102, 241, 0.3) 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+    
+    &.copied {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.2) 100%);
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+//================================================
+// AMÉLIORATION DES TABLES POUR LES COMPARAISONS DE CODE
+//================================================
+.post-content {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+    }
+    
+    th {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      font-weight: 600;
+      color: #2d3748;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    tr:nth-child(even) {
+      background: rgba(248, 250, 252, 0.5);
+    }
+    
+    tr:hover {
+      background: rgba(59, 130, 246, 0.05);
+    }
+    
+    // Styles spéciaux pour colonnes de code
+    .code-column {
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.85rem;
+      background: #f8fafc;
+      border-radius: 6px;
+      padding: 0.75rem;
+    }
+  }
+}
+
+//================================================
+// STYLES POUR LES EXEMPLES DE CODE DANGEREUX/SÉCURISÉ
+//================================================
+.code-example {
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  
+  &.dangerous {
+    border: 2px solid #ef4444;
+    
+    .code-header {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      color: #dc2626;
+      
+      &::before {
+        content: '⚠️';
+        margin-right: 0.5rem;
+      }
+    }
+    
+    pre {
+      border-top: 3px solid #ef4444;
+    }
+  }
+  
+  &.secure {
+    border: 2px solid #10b981;
+    
+    .code-header {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      color: #059669;
+      
+      &::before {
+        content: '✅';
+        margin-right: 0.5rem;
+      }
+    }
+    
+    pre {
+      border-top: 3px solid #10b981;
+    }
+  }
+  
+  .code-header {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  pre {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+//================================================
+// RESPONSIVE DESIGN POUR MOBILE
+//================================================
+@media (max-width: 768px) {
+  .code-block-container {
+    .copy-button {
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.7rem;
+    }
+  }
+  
+  .post-content {
+    pre {
+      padding: 1rem;
+      font-size: 0.85em;
+      
+      code {
+        font-size: 0.85em;
+      }
+    }
+    
+    code {
+      font-size: 0.85em;
+      padding: 2px 6px;
+    }
+    
+    table {
+      font-size: 0.9rem;
+      
+      th, td {
+        padding: 0.75rem 0.5rem;
+      }
+    }
+  }
+  
+  .code-example {
+    .code-header {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+//================================================
+// ANIMATIONS POUR LES ÉLÉMENTS INTERACTIFS
+//================================================
+@keyframes code-highlight {
+  0% { background-color: rgba(59, 130, 246, 0.1); }
+  50% { background-color: rgba(59, 130, 246, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.highlight-line {
+  animation: code-highlight 2s ease-in-out;
+}
+
+//================================================
+// PRINT STYLES
+//================================================
+@media print {
+  .copy-button {
+    display: none !important;
+  }
+  
+  .post-content {
+    pre {
+      background: #f8f9fa !important;
+      color: #000 !important;
+      border: 1px solid #ddd !important;
+      box-shadow: none !important;
+      
+      &::before {
+        display: none !important;
+      }
+    }
+    
+    code {
+      background: #f0f0f0 !important;
+      color: #000 !important;
+      border: 1px solid #ccc !important;
+    }
+  }
+  
+  .code-example {
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    
+    .code-header {
+      background: #f5f5f5 !important;
+      color: #000 !important;
+    }
+  }
+}

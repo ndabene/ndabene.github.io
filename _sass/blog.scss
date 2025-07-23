@@ -77,28 +77,165 @@
     font-style: italic;
   }
 
+  // Inline code styling
   code {
-    background-color: $light-gray;
-    padding: 2px 4px;
-    border-radius: 4px;
-    font-family: $font-mono;
-    font-size: $small-size;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.12) 100%);
+    color: #3b82f6;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    white-space: nowrap;
   }
 
+  // Code blocks styling
   pre {
-    background-color: $black;
-    color: $white;
-    padding: $spacing-sm;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
     overflow-x: auto;
-    margin-bottom: $spacing-md;
+    margin: 2rem 0;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    position: relative;
+    
+    // Add subtle glow effect
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      border-radius: 12px 12px 0 0;
+    }
 
     code {
-      background-color: transparent;
+      background: transparent;
       color: inherit;
       padding: 0;
       border-radius: 0;
-      font-size: $body-size;
+      font-size: 0.95em;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      line-height: 1.6;
+      border: none;
+      white-space: pre;
+      font-weight: 400;
+    }
+    
+    // Add scrollbar styling
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
     }
   }
+
+  // Language-specific syntax highlighting colors
+  .highlight {
+    pre {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+    
+    // Keywords (function, class, return, etc.)
+    .k, .kd, .kn, .kr {
+      color: #7c3aed;
+      font-weight: 600;
+    }
+    
+    // Strings
+    .s, .s1, .s2, .sb, .sc {
+      color: #10b981;
+    }
+    
+    // Comments
+    .c, .c1, .cm {
+      color: #6b7280;
+      font-style: italic;
+    }
+    
+    // Numbers
+    .m, .mi, .mf {
+      color: #f59e0b;
+    }
+    
+    // Functions
+    .nf {
+      color: #3b82f6;
+      font-weight: 600;
+    }
+    
+    // Variables
+    .n, .nv {
+      color: #e2e8f0;
+    }
+    
+    // Operators
+    .o {
+      color: #f97316;
+    }
+    
+    // Brackets and punctuation
+    .p {
+      color: #94a3b8;
+    }
+    
+    // Class names
+    .nc {
+      color: #06b6d4;
+      font-weight: 600;
+    }
+    
+    // Boolean values
+    .kc {
+      color: #ef4444;
+      font-weight: 600;
+    }
+  }
+
+  // Multi-line code blocks with language labels
+  .language-python, .language-php, .language-javascript, .language-typescript, 
+  .language-yaml, .language-scss, .language-bash {
+    position: relative;
+    
+    &::after {
+      content: attr(class);
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.2) 100%);
+      color: #3b82f6;
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+  }
+  
+  .language-python::after { content: 'Python'; }
+  .language-php::after { content: 'PHP'; }
+  .language-javascript::after { content: 'JavaScript'; }
+  .language-typescript::after { content: 'TypeScript'; }
+  .language-yaml::after { content: 'YAML'; }
+  .language-scss::after { content: 'SCSS'; }
+  .language-bash::after { content: 'Bash'; }
 }
