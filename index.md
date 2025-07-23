@@ -60,7 +60,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                             <li>Optimise la <strong>performance web</strong> et l'architecture logicielle</li>
                             <li>Accompagne les <strong>équipes techniques</strong> en tant que technical leader</li>
                         </ul>
-                        <p><strong>Technologies maîtrisées :</strong> PHP, Symfony, PrestaShop, JavaScript, AI/ML, AWS, Docker</p>
+                        <p><strong>Technologies maîtrisées :</strong> PHP, Symfony, PrestaShop, JavaScript, AI/ML, Orchestration d'agents IA</p>
                     </div>
                 </div>
 
