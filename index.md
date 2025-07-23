@@ -139,7 +139,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 <section class="section modules-section-modern">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Mes Modules PrestaShop</h2>
+            <h2 class="section-title-clean">Modules PrestaShop</h2>
             <p class="section-subtitle-clean">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
         </div>
         
