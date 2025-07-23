@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel"
-date: 2024-07-15
+date: 2025-06-15
 author: Nicolas Dabène
 categories: [AI, Development, Best Practices]
 tags: [IA générative, développement logiciel, qualité du code, sécurité, prompt engineering]

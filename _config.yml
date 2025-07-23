@@ -11,6 +11,13 @@ baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la r
 # Build settings
 lang: fr
 future: false  # Ne pas publier les posts avec une date future
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

@@ -762,3 +762,177 @@ $blog-content-bg: $white;
      transform: scale(1.02); 
    }
  }
+
+//================================================
+// COLORATION SYNTAXIQUE ROUGE - STYLES BLOG
+//================================================
+
+// Style de base pour les blocs de code avec coloration
+.post-content {
+  .highlight {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    pre {
+      background: transparent;
+      color: inherit;
+      padding: 1.5rem;
+      margin: 0;
+      border: none;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      overflow-x: auto;
+    }
+    
+    code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border: none;
+      font-size: inherit;
+    }
+
+    // Tokens de coloration pour différents langages
+    // Commentaires
+    .c, .c1, .cm, .cp, .cs { color: #6a9955; font-style: italic; }
+    
+    // Mots-clés
+    .k, .kc, .kd, .kn, .kp, .kr, .kt { color: #569cd6; font-weight: bold; }
+    
+    // Chaînes de caractères
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx { color: #ce9178; }
+    
+    // Nombres
+    .m, .mf, .mh, .mi, .mo { color: #b5cea8; }
+    
+    // Opérateurs
+    .o, .ow { color: #d4d4d4; }
+    
+    // Noms de variables et fonctions
+    .n, .na, .nb, .nc, .nd, .ne, .nf, .ni, .nl, .nn, .no, .nt, .nv { color: #dcdcaa; }
+    
+    // Classes
+    .nc { color: #4ec9b0; }
+    
+    // Fonctions
+    .nf { color: #dcdcaa; }
+    
+    // Attributs
+    .na { color: #92c5f8; }
+    
+    // Types
+    .kt { color: #4ec9b0; }
+    
+    // Erreurs
+    .err { color: #f44747; background: rgba(244, 71, 71, 0.1); }
+    
+    // Variables d'instance, globales
+    .vi, .vg { color: #4fc1ff; }
+    
+    // Ponctuation
+    .p { color: #d4d4d4; }
+    
+    // Délimiteurs
+    .dl { color: #ce9178; }
+
+    // Variables PHP (spécial)
+    .nv { color: #4fc1ff; }
+    
+    // Built-ins Python
+    .bp { color: #4ec9b0; }
+    
+    // Identifiants JavaScript
+    .nx { color: #9cdcfe; }
+  }
+
+  // Code inline
+  p code, li code, td code {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    color: #1e293b;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  // Style pour les blocs sans coloration (fallback)
+  pre:not(.highlight) {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    position: relative;
+    
+    code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      border: none;
+      font-size: 0.95em;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      line-height: 1.6;
+    }
+  }
+}
+
+//================================================
+// BOUTON COPIER POUR LES BLOCS DE CODE
+//================================================
+.code-block-container {
+  position: relative;
+  margin: 2rem 0;
+  
+  .copy-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.2) 100%);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    
+    &:hover {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(99, 102, 241, 0.3) 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+    
+    &.copied {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(5, 150, 105, 0.2) 100%);
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    
+    i {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+// Responsive pour le bouton copier
+@media (max-width: 768px) {
+  .code-block-container {
+    .copy-button {
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.7rem;
+    }
+  }
+}

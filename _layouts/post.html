@@ -60,57 +60,6 @@ layout: default
                 <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin">Partager sur LinkedIn</a>
                 <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&via={{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="btn btn--twitter">Partager sur Twitter</a>
             </div>
-
-            {% assign related_posts = site.posts | where_exp: "item", "item.url != page.url" | sample: 3 %}
-            {% if related_posts.size > 0 %}
-                <div class="related-posts-section">
-                    <h2>Related Posts</h2>
-                    <div class="related-posts-grid">
-                        {% for post in related_posts %}
-                            {% include post-preview.html post=post %}
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
-
-        </div>
-
-        <aside class="blog-post-sidebar">
-            <div class="sidebar-widget">
-                <h3>Articles récents</h3>
-                <div class="recent-posts-list">
-                    {% for post in site.posts limit: 5 %}
-                        {% unless post.url == page.url %}
-                            <article class="recent-post-item">
-                                {% if post.image %}
-                                    <div class="recent-post-thumb">
-                                        <img src="{{ post.image }}" alt="{{ post.title }}">
-                                    </div>
-                                {% endif %}
-                                <div class="recent-post-content">
-                                    <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-                                    <time>{% include date-fr.html date=post.date %}</time>
-                                </div>
-                            </article>
-                        {% endunless %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="sidebar-widget">
-                <h3>Catégories</h3>
-                <div class="categories-list">
-                    {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-                    {% for category in all_categories %}
-                        {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
-                        <a href="/blog/#category-{{ category }}" class="category-link">
-                            <span class="category-name">{{ category }}</span>
-                            <span class="category-count">{{ category_posts.size }}</span>
-                        </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </aside>
         </div>
     </div>
 </article>

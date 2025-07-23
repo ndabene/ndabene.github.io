@@ -3,7 +3,10 @@
     "allow": [
       "WebFetch(domain:www.linkedin.com)",
       "Bash(ls:*)",
-      "WebFetch(domain:www.businesstech.fr)"
+      "WebFetch(domain:www.businesstech.fr)",
+      "Bash(bundle list:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "WebFetch(domain:localhost)"
     ],
     "deny": []
   }
