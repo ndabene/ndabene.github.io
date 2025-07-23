@@ -92,31 +92,7 @@ body {
   }
 }
 
-.project-header,
-.case-study-header {
-  background-color: $primary-navy;
-  color: $white;
-  padding: $spacing-lg 0;
-  text-align: center;
-
-  h1 {
-    font-size: $h1-size;
-    margin-bottom: $spacing-sm;
-  }
-
-  .project-tagline,
-  .case-study-tagline {
-    font-size: $large-size;
-    color: $dark-text-muted;
-  }
-
-  .hero-image {
-    max-width: 100%;
-    height: auto;
-    margin-top: $spacing-md;
-    border-radius: 8px;
-  }
-}
+// Anciens styles de headers supprimés - voir _sass/page-headers.scss pour les nouveaux styles modernes
 
 .project-content,
 .case-study-content {
@@ -176,7 +152,7 @@ body {
     &::before {
       content: '';
       position: absolute;
-      left: -($spacing-md + 5px);
+      left: -($spacing-md + 0.3125rem);
       top: 5px;
       width: 10px;
       height: 10px;
@@ -1465,6 +1441,212 @@ body.dark-mode {
 
       .form-note {
         color: $dark-text-muted;
+      }
+    }
+  }
+}
+
+//================================================
+// FOOTER PRINCIPAL
+//================================================
+.footer {
+  background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
+  color: $white;
+  padding: $spacing-xxl 0 $spacing-lg;
+  margin-top: auto;
+  
+  .container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+    
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+      text-align: center;
+    }
+  }
+  
+  .footer-section {
+    h3 {
+      color: $white;
+      font-size: $h4-size;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacing-md;
+      font-family: $font-family-headings;
+    }
+    
+    p {
+      color: rgba($white, 0.8);
+      line-height: 1.6;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: $spacing-sm;
+      
+      a {
+        color: rgba($white, 0.8);
+        text-decoration: none;
+        transition: $transition-base;
+        font-weight: $font-weight-medium;
+        
+        &:hover {
+          color: $white;
+          text-decoration: none;
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: $spacing-md;
+    
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+    
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba($white, 0.1);
+      border: 2px solid rgba($white, 0.2);
+      border-radius: 50%;
+      color: rgba($white, 0.8);
+      text-decoration: none;
+      transition: $transition-base;
+      
+      &:hover {
+        background: rgba($white, 0.2);
+        border-color: rgba($white, 0.4);
+        color: $white;
+        transform: translateY(-2px);
+        text-decoration: none;
+      }
+      
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  
+  .footer-bottom {
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba($white, 0.2);
+    text-align: center;
+    
+    p {
+      margin: 0;
+      color: rgba($white, 0.7);
+      font-size: $font-size-sm;
+      margin-bottom: $spacing-xs;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    .heart {
+      color: #ff6b6b;
+      animation: heartbeat 2s ease-in-out infinite;
+    }
+  }
+}
+
+// Animation pour le coeur
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+// Dark mode pour le footer
+body.dark-mode {
+  .footer {
+    background: linear-gradient(135deg, $dark-bg 0%, $dark-surface 100%);
+    
+    .footer-section h3 {
+      color: $dark-text;
+    }
+    
+    .footer-section p {
+      color: $dark-text-muted;
+    }
+    
+    .footer-links li a {
+      color: $dark-text-muted;
+      
+      &:hover {
+        color: $accent-cyan;
+      }
+    }
+    
+    .social-icons .social-icon {
+      background: rgba($accent-cyan, 0.1);
+      border-color: rgba($accent-cyan, 0.3);
+      color: $dark-text-muted;
+      
+      &:hover {
+        background: rgba($accent-cyan, 0.2);
+        border-color: $accent-cyan;
+        color: $accent-cyan;
+      }
+    }
+    
+    .footer-bottom {
+      border-top-color: rgba($dark-text-muted, 0.2);
+      
+      p {
+        color: $dark-text-muted;
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: $mobile) {
+  .footer {
+    padding: $spacing-xl 0 $spacing-md;
+    
+    .footer-grid {
+      gap: $spacing-md;
+    }
+    
+    .footer-section {
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      p {
+        font-size: $font-size-sm;
+      }
+    }
+    
+    .social-icons .social-icon {
+      width: 40px;
+      height: 40px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
       }
     }
   }

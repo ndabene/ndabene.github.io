@@ -1,53 +1,83 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const categoryFilter = document.getElementById('category-filter');
-    const techFilter = document.getElementById('tech-filter');
-    const sortBy = document.getElementById('sort-by');
-    const projectsContainer = document.getElementById('projects-container');
+    const filterButtons = document.querySelectorAll('.filter-btn-modern');
+    const projectCards = document.querySelectorAll('.project-card-modern');
+    
+    if (!filterButtons.length || !projectCards.length) return;
 
-    if (!projectsContainer) return; // Exit if not on the projects page
-
-    const projects = Array.from(projectsContainer.children); // Get all project cards
-
-    const filterAndSortProjects = () => {
-        const selectedCategories = Array.from(categoryFilter.selectedOptions).map(option => option.value).filter(value => value !== 'all');
-        const selectedTechs = Array.from(techFilter.selectedOptions).map(option => option.value).filter(value => value !== 'all');
-        const sortOrder = sortBy.value;
-
-        let filteredProjects = projects.filter(project => {
-            const projectCategories = project.dataset.categories ? project.dataset.categories.split(' ') : [];
-            const projectTechs = project.dataset.technologies ? project.dataset.technologies.split(' ') : [];
-
-            const categoryMatch = selectedCategories.length === 0 || selectedCategories.some(cat => projectCategories.includes(cat));
-            const techMatch = selectedTechs.length === 0 || selectedTechs.some(tech => projectTechs.includes(tech));
-
-            return categoryMatch && techMatch;
-        });
-
-        // Sorting
-        filteredProjects.sort((a, b) => {
-            if (sortOrder === 'date-desc') {
-                return parseInt(b.dataset.date) - parseInt(a.dataset.date);
-            } else if (sortOrder === 'date-asc') {
-                return parseInt(a.dataset.date) - parseInt(b.dataset.date);
-            } else if (sortOrder === 'impact-desc') {
-                return parseInt(b.dataset.impact) - parseInt(a.dataset.impact);
+    // Fonction de filtrage
+    function filterProjects(category) {
+        projectCards.forEach(card => {
+            const cardCategories = card.dataset.categories ? card.dataset.categories.split(' ') : [];
+            
+            if (category === 'all' || cardCategories.includes(category)) {
+                card.style.display = 'block';
+                card.classList.add('fade-in');
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('fade-in');
             }
-            return 0;
         });
-
-        // Clear current projects and append sorted/filtered ones
-        projectsContainer.innerHTML = '';
-        if (filteredProjects.length === 0) {
-            projectsContainer.innerHTML = '<p class="no-projects">No projects match your criteria.</p>';
-        } else {
-            filteredProjects.forEach(project => projectsContainer.appendChild(project));
+        
+        // Mettre à jour le compteur si il existe
+        updateProjectCount(category);
+    }
+    
+    // Fonction pour mettre à jour le compteur de projets
+    function updateProjectCount(activeFilter) {
+        const visibleProjects = Array.from(projectCards).filter(card => 
+            card.style.display !== 'none'
+        );
+        
+        const countElement = document.querySelector('.projects-count');
+        if (countElement) {
+            const count = visibleProjects.length;
+            const total = projectCards.length;
+            countElement.textContent = activeFilter === 'all' 
+                ? `${total} projets au total`
+                : `${count} projet${count > 1 ? 's' : ''} trouvé${count > 1 ? 's' : ''}`;
         }
+    }
+    
+    // Gestionnaire d'événements pour les boutons de filtre
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Retirer la classe active de tous les boutons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Ajouter la classe active au bouton cliqué
+            this.classList.add('active');
+            
+            // Filtrer les projets
+            const filterValue = this.dataset.filter;
+            filterProjects(filterValue);
+            
+            // Animation d'effet de clic
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+    
+    // Initialisation : afficher tous les projets
+    filterProjects('all');
+    
+    // Ajouter des animations au scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
-
-    categoryFilter.addEventListener('change', filterAndSortProjects);
-    techFilter.addEventListener('change', filterAndSortProjects);
-    sortBy.addEventListener('change', filterAndSortProjects);
-
-    // Initial filter and sort on page load
-    filterAndSortProjects();
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+    
+    // Observer tous les cartes de projet
+    projectCards.forEach(card => {
+        observer.observe(card);
+    });
 });

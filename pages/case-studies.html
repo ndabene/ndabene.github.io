@@ -25,11 +25,11 @@ keywords: "case studies, project analysis, technical solutions, business impact,
                                 {% if case_study.duration %}<span class="meta-item">Duration: {{ case_study.duration }}</span>{% endif %}
                             </div>
                             <div class="tech-badges">
-                                {% for tech in case_study.technologies limit: 3 %}
-                                    {% include tech-badge.html tech=tech %}
+                                {% for tag in case_study.tags limit: 3 %}
+                                    {% include tech-badge.html tech=tag.tech category=tag.category %}
                                 {% endfor %}
-                                {% if case_study.technologies.size > 3 %}
-                                    <span class="badge">+{{ case_study.technologies.size | minus: 3 }} more</span>
+                                {% if case_study.tags.size > 3 %}
+                                    <span class="badge badge--subtle">+{{ case_study.tags.size | minus: 3 }} more</span>
                                 {% endif %}
                             </div>
                             <div class="business-metrics">

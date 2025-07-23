@@ -1,13 +1,13 @@
 # Projets PrestaShop - BusinessTech.fr
 # Modules et solutions e-commerce développés
 
-- title: "nd_faker_shop - Générateur de Données de Test"
+- title: "Faker Shop - Générateur de Données de Test"
   date: "2025-03-15"
   description: "Module communautaire open-source pour PrestaShop qui automatise la création de données de test (produits, clients, commandes) pour accélérer le développement."
   tagline: "Ne perdez plus de temps à créer des données de test"
   company: "Projet Communautaire"
   role: "Créateur & Mainteneur"
-  categories: ["prestashop", "dev-tools", "open-source"]
+  categories: ["prestashop", "dev-tools", "opensource"]
   hero_image: "/assets/images/projects/nd_faker_shop.png"
   project_url: "https://github.com/ndabene/nd_faker_shop"
   business_context: |
@@ -67,9 +67,9 @@
 
 - title: "Interface Éditoriale Sur-Mesure pour Blog"
   date: "2025-02-01"
-  description: "Développement d'une solution éditoriale sur-mesure pour le blog Business Tech, axée sur la performance, l'agilité et l'intégration de l'IA pour la génération de contenu."
+  description: "Développement d'une solution éditoriale sur-mesure pour le blog BusinessTech, axée sur la performance, l'agilité et l'intégration de l'IA pour la génération de contenu."
   tagline: "Un CMS agile et intelligent, sans les contraintes d'un CMS traditionnel"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Architecte & Développeur FullStack"
   categories: ["jamstack", "ai", "frontend"]
   hero_image: "/assets/images/projects/editorial-interface.png"
@@ -98,11 +98,11 @@
     - tech: "CMS"
       category: "platform"
 
-- title: "Geo Suite - IA pour SEO Local"
-  date: "2024-08-15"
-  description: "Solution IA révolutionnaire pour optimiser vos données structurées pour le SEO local et international avec Generative Engine Optimization."
-  tagline: "L'IA au service de votre visibilité locale"
-  company: "Business Tech"
+- title: "Geo Suite"
+  date: "2025-06-01"
+  description: "Solution IA révolutionnaire pour optimiser vos données structurées pour le Generative Engine Optimization."
+  tagline: "L'IA au service de votre visibilité "
+  company: "BusinessTech"
   role: "Lead AI Developer & SEO Expert"
   categories: ["prestashop", "ai", "seo"]
   hero_image: "/assets/images/modules/geo-generative-engine-optimization.png"
@@ -138,7 +138,7 @@
   date: "2024-07-01"
   description: "Module PrestaShop premium pour l'intégration complète avec Google Shopping et Google Merchant Center, avec exportation automatisée de flux produits."
   tagline: "Maximisez votre présence sur Google Shopping"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Product Manager"
   categories: ["prestashop", "marketing", "google"]
   hero_image: "/assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
@@ -174,7 +174,7 @@
   date: "2024-06-20"
   description: "Module PrestaShop pour cibler vos clients avec des publicités dynamiques Facebook, Instagram et Meta avec tracking pixel avancé."
   tagline: "Publicité sociale intelligente et performante"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Social Media Strategist"
   categories: ["prestashop", "social-ads", "facebook"]
   hero_image: "/assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
@@ -210,7 +210,7 @@
   date: "2024-05-15"
   description: "Intégration complète de Google Pay pour PrestaShop - moyen de paiement rapide et sécurisé pour améliorer la conversion."
   tagline: "Paiement en un clic, conversion maximisée"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Payment Expert"
   categories: ["prestashop", "payment", "google"]
   hero_image: "/assets/images/modules/google-pay-for-prestashop.png"
@@ -246,7 +246,7 @@
   date: "2024-04-10"
   description: "Module PrestaShop permettant la connexion rapide avec Facebook, Google, TikTok, Amazon, Twitter et plus pour simplifier l'inscription des clients."
   tagline: "Connexion sociale simplifiée pour vos clients"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & UX Designer"
   categories: ["prestashop", "social", "ux"]
   hero_image: "/assets/images/modules/social-login-prestashop-facebook-google-tiktok-amazon-twitter-paypal.png"
@@ -282,7 +282,7 @@
   date: "2024-03-25"
   description: "Système d'avis clients complet pour PrestaShop permettant de collecter, modérer et afficher les avis produits pour augmenter la confiance et les conversions."
   tagline: "Transformez vos clients satisfaits en ambassadeurs"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Customer Experience Designer"
   categories: ["prestashop", "reviews", "conversion"]
   hero_image: "/assets/images/modules/shop-product-reviews.png"
@@ -318,7 +318,7 @@
   date: "2024-02-20"
   description: "Intégration complète de Google Analytics 4 pour PrestaShop avec tracking avancé des événements e-commerce et mesure précise des performances."
   tagline: "Analytics nouvelle génération pour votre e-commerce"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Data Analyst"
   categories: ["prestashop", "analytics", "data"]
   hero_image: "/assets/images/modules/google-analytics-4-prestashop-interface-module.png"
@@ -354,7 +354,7 @@
   date: "2024-01-30"
   description: "Module PrestaShop pour intégrer le pixel TikTok et créer des campagnes publicitaires efficaces sur la plateforme sociale en forte croissance."
   tagline: "Conquérez la génération TikTok"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Social Media Strategist"
   categories: ["prestashop", "social-ads", "tiktok"]
   hero_image: "/assets/images/modules/tiktok-ads-pixel.png"
@@ -390,7 +390,7 @@
   date: "2023-12-15"
   description: "Module PrestaShop permettant la communication directe avec vos clients via WhatsApp Business pour améliorer le service client et les ventes."
   tagline: "Communication client instantanée et personnalisée"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Customer Experience Designer"
   categories: ["prestashop", "communication", "customer-service"]
   hero_image: "/assets/images/modules/whatsapp-chat.png"
@@ -426,7 +426,7 @@
   date: "2023-11-20"
   description: "Module PrestaShop pour la présentation avancée de produits vedettes avec options de merchandising et recommandations intelligentes."
   tagline: "Merchandising intelligent pour maximiser vos ventes"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Merchandising Expert"
   categories: ["prestashop", "merchandising", "conversion"]
   hero_image: "/assets/images/modules/advanced-featured-products.png"
@@ -462,7 +462,7 @@
   date: "2023-10-25"
   description: "Module PrestaShop de rapports de ventes avancés et statistiques détaillées pour une analyse business approfondie de votre e-commerce."
   tagline: "Business Intelligence pour votre e-commerce"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & Data Analyst"
   categories: ["prestashop", "analytics", "business-intelligence"]
   hero_image: "/assets/images/modules/sales-reports-pro.png"
@@ -498,7 +498,7 @@
   date: "2023-09-15"
   description: "Module PrestaShop pour le tracking précis des conversions Google Ads avec mesure ROI avancée et optimisation des campagnes publicitaires."
   tagline: "ROI précis pour vos campagnes Google Ads"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead Developer & PPC Specialist"
   categories: ["prestashop", "marketing", "google-ads"]  
   hero_image: "/assets/images/modules/google-ads-conversion-tracking.png"
@@ -534,7 +534,7 @@
   date: "2023-08-20"
   description: "Assistant IA révolutionnaire pour PrestaShop qui optimise automatiquement la gestion e-commerce quotidienne grâce à l'intelligence artificielle."
   tagline: "L'IA au service de votre e-commerce"
-  company: "Business Tech"
+  company: "BusinessTech"
   role: "Lead AI Developer & Product Manager"
   categories: ["prestashop", "artificial-intelligence", "automation"]
   hero_image: "/assets/images/modules/ecommerce-copilot.png"

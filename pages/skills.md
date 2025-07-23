@@ -1,17 +1,27 @@
 ---
-layout: page
+layout: default
 title: Mes Compétences Techniques
 permalink: /skills/
 description: "Découvrez l'ensemble de mes compétences techniques, classées par catégorie et niveau de maîtrise, incluant PHP, Symfony, PrestaShop, IA, Frontend, DevOps et Leadership."
 keywords: "compétences techniques, php, symfony, prestashop, ia, frontend, devops, leadership, nicolas dabène"
 show_sidebar: false
+body_class: "page-skills"
 ---
 
-<div class="skills-page-modern">
-    <div class="page-header">
-        <h1>{{ page.title }}</h1>
-        <p class="section-description">Voici un aperçu détaillé de mes compétences techniques et humaines, acquises et affinées au fil de mes années d'expérience. Chaque compétence reflète ma passion pour l'excellence et l'innovation continue.</p>
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/">Home</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>{{ page.title }}</h1>
+            <p class="section-description">Voici un aperçu détaillé de mes compétences techniques et humaines, acquises et affinées au fil de mes années d'expérience. Chaque compétence reflète ma passion pour l'excellence et l'innovation continue.</p>
+        </div>
     </div>
+</section>
+
+<div class="skills-page-modern">
 
     <div class="container">
         <div class="skills-filter">

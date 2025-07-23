@@ -34,11 +34,18 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
                 <label for="tech-filter">Filter by Technology:</label>
                 <select id="tech-filter" multiple>
                     <option value="all">All Technologies</option>
-                    {% assign all_technologies = site.data.projects | map: 'technologies' | compact | uniq %}
-                    {% for tech_list in all_technologies %}
-                        {% for tech in tech_list %}
-                            <option value="{{ tech | slugify }}">{{ tech }}</option>
+                    {% assign all_tags = site.data.projects | map: 'tags' | compact %}
+                    {% assign unique_techs = '' | split: '' %}
+                    {% for tag_list in all_tags %}
+                        {% for tag in tag_list %}
+                            {% unless unique_techs contains tag.tech %}
+                                {% assign unique_techs = unique_techs | push: tag.tech %}
+                            {% endunless %}
                         {% endfor %}
+                    {% endfor %}
+                    {% assign unique_techs = unique_techs | sort %}
+                    {% for tech in unique_techs %}
+                        <option value="{{ tech | slugify }}">{{ tech }}</option>
                     {% endfor %}
                 </select>
             </div>

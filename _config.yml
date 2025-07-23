@@ -1,7 +1,7 @@
 title: Nicolas Dabène - Senior PHP Developer & AI Orchestrator
 author:
   name: Nicolas Dabène
-  email: contact@ndabene.fr
+  email: ndabene2807@gmail.com
 description: "Portfolio de Nicolas Dabène, Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience. Spécialiste des solutions BusinessTech, expert des modules PrestaShop et de l'architecture e-commerce."
 
 # URL & Base URL
@@ -9,6 +9,8 @@ url: "https://ndabene.github.io" # le domaine de votre site
 baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la racine.
 
 # Build settings
+lang: fr
+future: false  # Ne pas publier les posts avec une date future
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -36,6 +38,9 @@ exclude:
   - Gemfile.lock
   - README.md
   - PLAN.md
+
+# Google Analytics
+google_analytics: G-38JJ2JLMX4
 
 # Maintenance mode settings
 maintenance_mode: false

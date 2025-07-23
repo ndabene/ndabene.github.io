@@ -3,11 +3,26 @@ layout: default
 ---
 
 <article class="post-page">
+    {% if page.image %}
+    <div class="post-banner">
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-banner-image">
+        <div class="post-banner-overlay">
+            <div class="container text-center">
+                <h1 class="post-title">{{ page.title }}</h1>
+                <p class="post-meta">
+                    <time datetime="{{ page.date | date_to_xmlschema }}">{% include date-fr.html date=page.date %}</time>
+                    {% if page.author %} &bull; {{ page.author }}{% endif %}
+                    {% if page.read_time_minutes %} &bull; {{ page.read_time_minutes }} min read{% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% else %}
     <header class="post-header-section">
         <div class="container text-center">
             <h1 class="post-title">{{ page.title }}</h1>
             <p class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{% include date-fr.html date=page.date %}</time>
                 {% if page.author %} &bull; {{ page.author }}{% endif %}
                 {% if page.read_time_minutes %} &bull; {{ page.read_time_minutes }} min read{% endif %}
                 {% if page.difficulty %} &bull; <span class="badge badge--difficulty-{{ page.difficulty | slugify }}">{{ page.difficulty }}</span>{% endif %}
@@ -22,38 +37,25 @@ layout: default
             </div>
         </div>
     </header>
+    {% endif %}
 
-    <div class="container post-content-main">
-        <div class="post-content-area">
-            {% if page.table_of_contents %}
-                <div class="table-of-contents card">
-                    <h3>Table of Contents</h3>
-                    {{ page.table_of_contents | markdownify }}
-                </div>
-            {% endif %}
-
-            <div class="post-content">
-                {{ content }}
-            </div>
-
-            <div class="author-box card">
-                <div class="author-info">
-                    {% if site.author.image %}
-                        <img src="{{ site.author.image }}" alt="{{ site.author.name }}" class="author-avatar">
-                    {% endif %}
-                    <div class="author-details">
-                        <h4>About {{ site.author.name }}</h4>
-                        <p>{{ site.author.bio | default: site.description }}</p>
-                        <div class="author-social">
-                            {% include social-icons.html %}
-                        </div>
+    <div class="post-content-wrapper">
+        <div class="container post-content-main">
+            <div class="post-content-area">
+                {% if page.table_of_contents %}
+                    <div class="table-of-contents card">
+                        <h3>Table of Contents</h3>
+                        {{ page.table_of_contents | markdownify }}
                     </div>
+                {% endif %}
+
+                <div class="post-content">
+                    {{ content }}
                 </div>
-            </div>
 
             <div class="social-sharing-buttons">
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin">Share on LinkedIn</a>
-                <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&via={{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="btn btn--twitter">Share on Twitter</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin">Partager sur LinkedIn</a>
+                <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&via={{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="btn btn--twitter">Partager sur Twitter</a>
             </div>
 
             {% assign related_posts = site.posts | where_exp: "item", "item.url != page.url" | sample: 3 %}
@@ -68,59 +70,44 @@ layout: default
                 </div>
             {% endif %}
 
-            <div class="comments-section">
-                <h2>Comments</h2>
-                <!-- Disqus Comments - Replace with your Disqus shortname -->
-                <div id="disqus_thread"></div>
-                <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                    /*
-                    var disqus_config = function () {
-                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
-                    */
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </div>
         </div>
 
         <aside class="blog-post-sidebar">
-            <div class="newsletter-signup card">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to my newsletter for exclusive technical insights, project updates, and industry trends.</p>
-                <form action="#" method="POST">
-                    <input type="email" placeholder="Your Email Address" required>
-                    <button type="submit" class="btn btn--primary">Subscribe</button>
-                </form>
-            </div>
-
-            <div class="recent-posts card">
-                <h3>Recent Posts</h3>
-                <ul>
+            <div class="sidebar-widget">
+                <h3>Articles récents</h3>
+                <div class="recent-posts-list">
                     {% for post in site.posts limit: 5 %}
-                        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                        {% unless post.url == page.url %}
+                            <article class="recent-post-item">
+                                {% if post.image %}
+                                    <div class="recent-post-thumb">
+                                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                                    </div>
+                                {% endif %}
+                                <div class="recent-post-content">
+                                    <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                                    <time>{% include date-fr.html date=post.date %}</time>
+                                </div>
+                            </article>
+                        {% endunless %}
                     {% endfor %}
-                </ul>
+                </div>
             </div>
 
-            <div class="blog-categories card">
-                <h3>Categories</h3>
-                <ul>
-                    {% assign all_categories = site.posts | map: 'categories' | compact | flatten | uniq %}
+            <div class="sidebar-widget">
+                <h3>Catégories</h3>
+                <div class="categories-list">
+                    {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
                     {% for category in all_categories %}
-                        <li><a href="/blog/#category-{{ category | slugify }}">{{ category }}</a></li>
+                        {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                        <a href="/blog/#category-{{ category }}" class="category-link">
+                            <span class="category-name">{{ category }}</span>
+                            <span class="category-count">{{ category_posts.size }}</span>
+                        </a>
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </aside>
+        </div>
     </div>
 </article>
