@@ -14,6 +14,20 @@
 
 </div>
 
+## ⚡ Commandes rapides
+
+```bash
+# 🚀 Démarrage rapide
+npm run serve                           # Démarre le serveur local
+
+# ✍️ Création de contenu  
+npm run new-post "Mon Nouvel Article"   # Crée un article optimisé GEO
+
+# 🔄 Maintenance
+npm run update-sitemap                  # Met à jour sitemap + notifie moteurs
+npm run build                          # Build pour production
+```
+
 ## 📋 Table des matières
 
 - [🚀 Aperçu](#-aperçu)
@@ -23,7 +37,7 @@
 - [🏃‍♂️ Installation et développement](#️-installation-et-développement)
 - [🎨 Design System](#-design-system)
 - [📝 Gestion du contenu](#-gestion-du-contenu)
-- [🚀 Déploiement](#-déploiement)
+- [🚀 Déploiement et SEO](#-déploiement-et-seo)
 - [🤝 Contribution](#-contribution)
 - [📄 License](#-license)
 
@@ -147,6 +161,12 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 # Vérifier la configuration
 bundle exec jekyll doctor
+
+# Scripts NPM (alternatives pratiques)
+npm run serve          # Démarre le serveur de développement
+npm run build          # Build pour production
+npm run clean          # Nettoie les fichiers générés
+npm run update-sitemap # Met à jour le sitemap et notifie les moteurs
 ```
 
 ## 🎨 Design System
@@ -181,44 +201,137 @@ $gradient-accent: linear-gradient(135deg, $accent-orange, #F59E0B);
 
 ## 📝 Gestion du contenu
 
-Le contenu est entièrement géré via des fichiers YAML dans le dossier `_data/` pour faciliter la maintenance :
+Le contenu est entièrement géré via des fichiers YAML dans le dossier `_data/` pour faciliter la maintenance.
 
-### Structure des données
+### 📰 Création d'articles de blog
+
+#### Méthode automatisée (recommandée)
+
+```bash
+# Créer un nouvel article avec template optimisé
+npm run new-post "Titre de votre article"
+
+# Exemple
+npm run new-post "Guide complet PrestaShop 8.0"
+```
+
+**Ce script :**
+- ✅ Génère automatiquement le fichier avec la date
+- ✅ Crée un template optimisé GEO (IA-friendly) 
+- ✅ Met à jour le sitemap automatiquement
+- ✅ Notifie les moteurs de recherche
+
+#### Template d'article généré
+
+```markdown
+---
+layout: post
+title: "Votre Titre"
+date: 2025-01-23
+author: Nicolas Dabène
+categories: [Development]
+tags: [PHP, PrestaShop]
+excerpt: "Description SEO-optimisée"
+image: /assets/images/blog/default-blog.jpg
+featured: false
+difficulty: "Intermédiaire"
+technologies: ["PHP", "JavaScript"]
+---
+
+# Titre
+
+## 📋 Résumé Exécutif
+**Points clés :** (optimisé pour IA génératives)
+- Point 1
+- Point 2
+
+**Temps de lecture :** X minutes | **Niveau :** Intermédiaire
+
+---
+
+Votre contenu...
+```
+
+### 🗂️ Structure des données YAML
 
 ```yaml
 # _data/expertise.yml
 - domain: "PrestaShop Development"
   icon: "fab fa-php"
-  description: "Architecture e-commerce et développement de modules"
+  description: "Architecture e-commerce haute performance"
   skills:
     - name: "Module Development"
       level: 95
-    - name: "Theme Integration"
+    - name: "Theme Integration" 
       level: 90
   projects_count: 50
 ```
 
-### Ajout de contenu
+### 📋 Types de contenu
 
-1. **Nouvel article** : Créer un fichier `.md` dans `_posts/`
-2. **Nouveau projet** : Ajouter une entrée dans `_data/modules.yml`
-3. **Nouvelle expertise** : Modifier `_data/expertise.yml`
+| Type | Localisation | Commande | Auto-sitemap |
+|------|--------------|----------|--------------|
+| **Articles blog** | `_posts/` | `npm run new-post "Titre"` | ✅ |
+| **Projets** | `_data/modules.yml` | Manuel | ✅ |
+| **Expertise** | `_data/expertise.yml` | Manuel | ✅ |
+| **Pages** | `pages/` | Manuel | ✅ |
 
-## 🚀 Déploiement
+### 🔄 Workflow de publication
+
+1. **Créer** l'article : `npm run new-post "Mon Article"`
+2. **Éditer** le fichier généré dans `_posts/`
+3. **Preview** : `npm run serve`
+4. **Publier** : `git add . && git commit -m "Nouvel article" && git push`
+5. **Sitemap** : Mise à jour automatique lors du build
+
+## 🚀 Déploiement et SEO
+
+### Déploiement automatique
 
 Le site est automatiquement déployé sur GitHub Pages via GitHub Actions :
 
 1. **Push sur `main`** déclenche le build automatique
 2. **Jekyll build** génère les fichiers statiques
 3. **Déploiement** sur `https://ndabene.github.io`
+4. **Sitemap** automatiquement mis à jour et indexé
 
-### Configuration GitHub Pages
+### 🔍 Optimisation GEO (Generative Engine Optimization)
+
+Le site est optimisé pour les **IA génératives** (ChatGPT, Claude, Bard) :
+
+#### Features GEO implémentées
+- ✅ **Schema.org enrichi** : Person, TechArticle, ProfessionalService
+- ✅ **FAQ structurées** : Questions/réponses pour extraction directe
+- ✅ **Résumés exécutifs** : Points clés en début d'articles
+- ✅ **Métadonnées IA** : Tags spécialisés pour crawlers génératifs
+- ✅ **Sitemap dynamique** : Mise à jour automatique avec nouveau contenu
+
+#### Sitemap intelligent
+
+```bash
+# Le sitemap se met à jour automatiquement lors de :
+- Nouvel article (npm run new-post)
+- Nouveau projet ajouté
+- Build Jekyll (bundle exec jekyll build)
+
+# Notification automatique des moteurs de recherche
+npm run update-sitemap  # Google, Bing notifiés automatiquement
+```
+
+### Configuration GEO
 
 ```yaml
-# _config.yml
-url: "https://ndabene.github.io"
-baseurl: ""
-repository: "ndabene/ndabene.github.io"
+# _config.yml - Optimisations pour IA
+sitemap:
+  file: "/sitemap.xml"
+  
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      sitemap:
+        changefreq: "monthly"
+        priority: 0.7
 ```
 
 ## 🤝 Contribution

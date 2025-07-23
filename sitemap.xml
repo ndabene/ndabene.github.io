@@ -1,0 +1,79 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Page d'accueil -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Pages statiques -->
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" %}
+    <url>
+      <loc>{{ page.url | prepend: site.url }}</loc>
+      {% if page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      {% if page.sitemap.changefreq %}
+        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+      {% else %}
+        <changefreq>monthly</changefreq>
+      {% endif %}
+      {% if page.sitemap.priority %}
+        <priority>{{ page.sitemap.priority }}</priority>
+      {% else %}
+        <priority>0.8</priority>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+  
+  <!-- Articles de blog -->
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ post.url | prepend: site.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+      <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
+    </url>
+  {% endfor %}
+  
+  <!-- Projets -->
+  {% for project in site.projects %}
+    <url>
+      <loc>{{ project.url | prepend: site.url }}</loc>
+      {% if project.date %}
+        <lastmod>{{ project.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+      <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+    </url>
+  {% endfor %}
+  
+  <!-- Études de cas -->
+  {% for case_study in site.case_studies %}
+    <url>
+      <loc>{{ case_study.url | prepend: site.url }}</loc>
+      {% if case_study.date %}
+        <lastmod>{{ case_study.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+      <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+    </url>
+  {% endfor %}
+  
+</urlset>

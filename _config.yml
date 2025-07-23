@@ -21,6 +21,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Sass/SCSS settings
 sass:
@@ -53,3 +54,44 @@ google_analytics: G-38JJ2JLMX4
 maintenance_mode: false
 maintenance_authorized_ip: ""
 under_construction: false # Bannière "under construction" désactivée
+
+# Sitemap configuration
+sitemap:
+  file: "/sitemap.xml"
+  
+# Defaults pour les priorités sitemap
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sitemap:
+        changefreq: "monthly"
+        priority: 0.7
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sitemap:
+        changefreq: "monthly" 
+        priority: 0.8
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      sitemap:
+        changefreq: "yearly"
+        priority: 0.8
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      sitemap:
+        changefreq: "yearly"
+        priority: 0.8
+  - scope:
+      path: "index.md"
+    values:
+      sitemap:
+        changefreq: "weekly"
+        priority: 1.0

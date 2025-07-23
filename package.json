@@ -1,0 +1,22 @@
+{
+  "name": "ndabene-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio de Nicolas Dabène - Senior PHP Developer & AI Orchestrator",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --port 4000",
+    "clean": "bundle exec jekyll clean",
+    "update-sitemap": "bash update-sitemap.sh",
+    "new-post": "bash scripts/new-post.sh",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndabene/ndabene.github.io.git"
+  },
+  "author": "Nicolas Dabène",
+  "license": "MIT",
+  "devDependencies": {
+    "watch": "^1.0.2"
+  }
+}
