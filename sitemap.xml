@@ -1,7 +1,5 @@
 ---
 layout: null
-sitemap:
-  exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -16,7 +14,7 @@ sitemap:
   
   <!-- Pages statiques -->
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" or page.name contains ".sh" or page.name contains "robots" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
       {% if page.date %}

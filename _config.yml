@@ -21,7 +21,6 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Sass/SCSS settings
 sass:
@@ -46,6 +45,15 @@ exclude:
   - Gemfile.lock
   - README.md
   - PLAN.md
+  - scripts/
+  - update-sitemap.sh
+  - package.json
+  - node_modules/
+
+# Fichiers à inclure explicitement
+include:
+  - sitemap.xml
+  - robots.txt
 
 # Google Analytics
 google_analytics: G-38JJ2JLMX4

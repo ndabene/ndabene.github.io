@@ -8,6 +8,7 @@
     "clean": "bundle exec jekyll clean",
     "update-sitemap": "bash update-sitemap.sh",
     "new-post": "bash scripts/new-post.sh",
+    "test-sitemap": "bash scripts/test-sitemap.sh",
     "deploy": "bash scripts/deploy.sh"
   },
   "repository": {
