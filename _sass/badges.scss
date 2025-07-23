@@ -148,6 +148,88 @@
 // Tech badge component styles are handled by the base .badge class above
 
 //================================================
+// MODERN TECH TAGS (for projects page)
+//================================================
+.tech-tag-modern {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: $font-weight-medium;
+  color: $white;
+  white-space: nowrap;
+  transition: $transition-base;
+  border: 1px solid transparent;
+  margin: 2px;
+
+  // Category-based colors matching the badge system
+  &.tech-tag--platform,
+  &.tech-tag--backend,
+  &.tech-tag--development {
+    background-color: $primary-color;
+    border-color: $primary-color-dark;
+  }
+
+  &.tech-tag--intelligence,
+  &.tech-tag--ai,
+  &.tech-tag--content {
+    background-color: #7C3AED;
+    border-color: #6D28D9;
+  }
+
+  &.tech-tag--marketing,
+  &.tech-tag--advertising,
+  &.tech-tag--social {
+    background-color: #DC2626;
+    border-color: #B91C1C;
+  }
+
+  &.tech-tag--integration,
+  &.tech-tag--tooling,
+  &.tech-tag--community {
+    background-color: $accent-color-1;
+    border-color: darken($accent-color-1, 10%);
+  }
+
+  &.tech-tag--payment,
+  &.tech-tag--fintech,
+  &.tech-tag--security {
+    background-color: #059669;
+    border-color: #047857;
+  }
+
+  &.tech-tag--experience,
+  &.tech-tag--support,
+  &.tech-tag--authentication {
+    background-color: $gray-dark;
+    border-color: #1A202C;
+  }
+
+  // Default fallback
+  &:not([class*="tech-tag--"]) {
+    background-color: $gray-medium;
+    border-color: $gray-dark;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+}
+
+.tech-more {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: $font-weight-medium;
+  color: $gray-dark;
+  background-color: $gray-ultra-light;
+  border: 1px solid $gray-light;
+  margin: 2px;
+}
+
+//================================================
 // BADGE GROUPS
 //================================================
 .badge-group {

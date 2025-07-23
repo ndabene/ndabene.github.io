@@ -1,0 +1,435 @@
+//================================================
+// STYLES PAGE PROJETS
+//================================================
+
+.projects-main-section {
+  padding: $space-4xl 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(99, 102, 241, 0.03) 100%);
+  min-height: 70vh;
+}
+
+//================================================
+// FILTRES PROJETS 
+//================================================
+
+.projects-filters-modern {
+  background: $white;
+  border-radius: $rounded-xl;
+  padding: $space-xl;
+  margin-bottom: $space-3xl;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  
+  .filters-header {
+    text-align: center;
+    margin-bottom: $space-xl;
+    
+    h2 {
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+      color: $text-color;
+      margin-bottom: $space-md;
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    p {
+      color: $text-color-light;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+  
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-md;
+    justify-content: center;
+    
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+.filter-btn-modern {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-lg;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.12) 100%);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  border-radius: $rounded-full;
+  color: $text-color;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: $transition-normal;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    transition: $transition-normal;
+    z-index: -1;
+  }
+  
+  .filter-icon {
+    font-size: 1.2rem;
+    filter: grayscale(20%);
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+    border-color: $primary-color;
+    
+    &::before {
+      left: 0;
+    }
+    
+    color: $white;
+    
+    .filter-icon {
+      filter: none;
+    }
+  }
+  
+  &.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    color: $white;
+    border-color: $primary-color;
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+    
+    &::before {
+      left: 0;
+    }
+    
+    .filter-icon {
+      filter: none;
+      animation: pulse-icon 2s infinite;
+    }
+  }
+  
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
+}
+
+//================================================
+// GRILLE PROJETS
+//================================================
+
+.projects-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: $space-xl;
+  
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+}
+
+//================================================
+// CARTES PROJETS
+//================================================
+
+.project-card-modern {
+  background: $white;
+  border-radius: $rounded-xl;
+  padding: 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  transition: $transition-normal;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+  
+  &.fade-in,
+  &.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+  }
+}
+
+// Header visuel élégant
+.project-header-visual {
+  position: relative;
+  height: 80px;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.06) 0%, 
+    rgba(147, 51, 234, 0.04) 50%, 
+    rgba(16, 185, 129, 0.06) 100%);
+  border-radius: $rounded-xl $rounded-xl 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  // Pattern décoratif subtil
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.08) 0%, transparent 50%);
+    opacity: 0.3;
+  }
+  
+  // Ligne d'accent subtile
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba(59, 130, 246, 0.3) 50%, 
+      transparent 100%);
+  }
+}
+
+.project-category-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: $text-color;
+  padding: $space-sm $space-lg;
+  border-radius: $rounded-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: $transition-normal;
+  
+  .project-card-modern:hover & {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.project-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: $space-xl;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+}
+
+.project-header {
+  margin-bottom: $space-lg;
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    margin-bottom: $space-sm;
+    line-height: 1.3;
+  }
+  
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    align-items: center;
+    
+    .project-company {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.15) 100%);
+      color: $primary-color;
+      padding: $space-xs $space-md;
+      border-radius: $rounded-full;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    
+    .project-role {
+      color: $text-color-light;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.project-description {
+  color: $text-color-light;
+  line-height: 1.6;
+  margin-bottom: $space-lg;
+  flex-grow: 1;
+}
+
+.project-tagline {
+  margin-bottom: $space-lg;
+  
+  em {
+    color: $primary-color;
+    font-style: italic;
+    font-weight: $font-weight-medium;
+    padding: $space-sm $space-md;
+    background: rgba(59, 130, 246, 0.05);
+    border-radius: $rounded-lg;
+    border-left: 3px solid $primary-color;
+    display: block;
+  }
+}
+
+
+
+.project-technologies {
+  margin-bottom: $space-lg;
+  
+  .tech-label {
+    display: block;
+    font-weight: $font-weight-semibold;
+    color: $text-color;
+    margin-bottom: $space-sm;
+    font-size: $font-size-sm;
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    
+    .tech-badge {
+      background: rgba(59, 130, 246, 0.08);
+      color: $primary-color;
+      padding: $space-xs $space-sm;
+      border-radius: $rounded-md;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-medium;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      transition: $transition-fast;
+      
+      &:hover {
+        background: rgba(59, 130, 246, 0.12);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+.project-links {
+  display: flex;
+  gap: $space-sm;
+  margin-top: auto;
+  
+  .project-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-xs;
+    padding: $space-sm $space-md;
+    border-radius: $rounded-lg;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    transition: $transition-normal;
+    
+    &.demo-link {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      color: $white;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+      }
+    }
+    
+    &.github-link {
+      background: linear-gradient(135deg, rgba(55, 65, 81, 0.1) 0%, rgba(75, 85, 99, 0.15) 100%);
+      color: #374151;
+      border: 1px solid rgba(55, 65, 81, 0.2);
+      
+      &:hover {
+        background: #374151;
+        color: $white;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(55, 65, 81, 0.3);
+      }
+    }
+  }
+}
+
+//================================================
+// ANIMATIONS
+//================================================
+
+@keyframes pulse-icon {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+// Animation d'entrée pour les cartes
+.project-card-modern {
+  animation: fadeInUp 0.6s ease-out forwards;
+  
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//================================================
+// COMPTEUR DE PROJETS
+//================================================
+
+.projects-count {
+  text-align: center;
+  color: $text-color-light;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  margin: $space-xl 0;
+  padding: $space-sm $space-md;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: $rounded-full;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  display: inline-block;
+} 

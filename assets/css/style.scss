@@ -1,15 +1,16 @@
-
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @import "variables";
-@import "base";  
+@import "base";
 @import "components";
 @import "badges";
 @import "_under-construction";
 @import "layout";
 @import "navigation";
+@import "page-headers";
+@import "projects";
 @import "blog-modern";
 @import "modern-components";
-@import "animations";
+@import "animations"; 

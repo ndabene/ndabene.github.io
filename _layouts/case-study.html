@@ -3,17 +3,26 @@ layout: default
 ---
 
 <div class="case-study-page">
-    <div class="case-study-header-section">
+    <section class="case-study-hero-modern">
         <div class="container">
-            <h1>{{ page.title }}</h1>
-            <p class="case-study-tagline">{{ page.tagline }}</p>
-            <div class="case-study-meta">
-                <span class="meta-item"><strong>Client:</strong> {{ page.client }}</span>
-                <span class="meta-item"><strong>Duration:</strong> {{ page.duration }}</span>
-                <span class="meta-item"><strong>Team:</strong> {{ page.team_size }}</span>
+            <nav class="breadcrumb">
+                <a href="/">Accueil</a>
+                <a href="/case-studies">Case Studies</a>
+                <span>{{ page.title }}</span>
+            </nav>
+            <div class="hero-content-modern">
+                <h1 class="case-study-title-modern">{{ page.title }}</h1>
+                {% if page.tagline %}
+                    <p class="case-study-tagline-modern">{{ page.tagline }}</p>
+                {% endif %}
+                <div class="case-study-meta-modern">
+                    {% if page.client %}<span class="meta-badge">👤 {{ page.client }}</span>{% endif %}
+                    {% if page.duration %}<span class="meta-badge">⏱️ {{ page.duration }}</span>{% endif %}
+                    {% if page.team_size %}<span class="meta-badge">👥 {{ page.team_size }}</span>{% endif %}
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <div class="container case-study-main-content">
         <div class="case-study-content-area">
@@ -90,8 +99,8 @@ layout: default
             <div class="technologies-used card">
                 <h3>Technologies Used</h3>
                 <div class="tech-badges">
-                    {% for tech in page.technologies %}
-                        {% include tech-badge.html tech=tech %}
+                    {% for tag in page.tags %}
+                        {% include tech-badge.html tech=tag.tech category=tag.category %}
                     {% endfor %}
                 </div>
             </div>

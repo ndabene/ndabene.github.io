@@ -1,0 +1,567 @@
+# Projets PrestaShop - BusinessTech.fr
+# Modules et solutions e-commerce développés
+
+- title: "Faker Shop - Générateur de Données de Test"
+  date: "2025-03-15"
+  description: "Module communautaire open-source pour PrestaShop qui automatise la création de données de test (produits, clients, commandes) pour accélérer le développement."
+  tagline: "Ne perdez plus de temps à créer des données de test"
+  company: "Projet Communautaire"
+  role: "Créateur & Mainteneur"
+  categories: ["prestashop", "dev-tools", "opensource"]
+  hero_image: "/assets/images/projects/nd_faker_shop.png"
+  project_url: "https://github.com/ndabene/nd_faker_shop"
+  business_context: |
+    Face au problème simple mais agaçant du temps perdu à créer manuellement des données de test pour les boutiques PrestaShop, ce projet est né de la volonté de résoudre ce problème en proposant un outil simple et puissant pour automatiser la génération de catalogues et de clients factices.
+  technical_challenges: |
+    - Utilisation de la librairie Faker pour générer des données réalistes.
+    - Interaction avec le modèle objet de PrestaShop pour créer les entités.
+    - Développement d'une interface en ligne de commande (CLI) avec Symfony Console.
+    - Optimisation des performances pour la génération de grands volumes de données.
+  metrics:
+    impact: "Gain de temps significatif pour les développeurs de l'écosystème PrestaShop."
+  technologies:
+    - "PrestaShop"
+    - "PHP"
+    - "Symfony"
+    - "Faker"
+    - "CLI"
+  tags:
+    - tech: "DevTools"
+      category: "tooling"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Open Source"
+      category: "community"
+
+- title: "Contribution au Core PrestaShop"
+  date: "2025-03-01"
+  description: "Contribution active au projet open-source PrestaShop pour améliorer le cœur du logiciel, corriger des bugs et proposer de nouvelles fonctionnalités à la communauté."
+  tagline: "Participer à l'évolution de l'écosystème PrestaShop"
+  company: "Contribution Open Source"
+  role: "Contributeur Core"
+  categories: ["prestashop", "open-source", "php"]
+  hero_image: "/assets/images/projects/prestashop-contribution.png"
+  project_url: "https://github.com/ndabene/PrestaShop"
+  business_context: |
+    Après des années d'expérience et des conférences inspirantes comme le FopDays#2025, la décision de contribuer directement au cœur de PrestaShop est devenue une évidence pour redonner à la communauté et participer activement à l'avenir de la plateforme.
+  technical_challenges: |
+    - Compréhension de l'architecture legacy et moderne de PrestaShop.
+    - Respect des standards de codage et des processus de contribution (pull requests, code reviews).
+    - Collaboration avec la communauté internationale de développeurs.
+    - Développement de solutions rétrocompatibles et performantes.
+  metrics:
+    impact: "Amélioration de la stabilité et des fonctionnalités du CMS pour des milliers d'utilisateurs."
+  technologies:
+    - "PrestaShop"
+    - "PHP"
+    - "Symfony"
+    - "Git"
+    - "GitHub"
+  tags:
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "PHP"
+      category: "backend"
+    - tech: "Open Source"
+      category: "community"
+
+- title: "Interface Éditoriale Sur-Mesure pour Blog"
+  date: "2025-02-01"
+  description: "Développement d'une solution éditoriale sur-mesure pour le blog BusinessTech, axée sur la performance, l'agilité et l'intégration de l'IA pour la génération de contenu."
+  tagline: "Un CMS agile et intelligent, sans les contraintes d'un CMS traditionnel"
+  company: "BusinessTech"
+  role: "Architecte & Développeur FullStack"
+  categories: ["jamstack", "ai", "frontend"]
+  hero_image: "/assets/images/projects/editorial-interface.png"
+  project_url: "https://www.businesstech.fr/fr/blog"
+  business_context: |
+    Face aux limitations et à la lourdeur des CMS traditionnels comme WordPress, le besoin d'une solution éditoriale plus agile, performante et indépendante techniquement s'est imposé. Ce projet vise à créer une plateforme de contenu sur-mesure, optimisée pour le SEO et l'expérience utilisateur.
+  technical_challenges: |
+    - Création d'une architecture 'headless' ou 'flat-file' (Jamstack).
+    - Intégration d'outils d'IA pour l'assistance à la rédaction et l'optimisation SEO.
+    - Développement d'une interface d'administration réactive avec JavaScript et Tailwind CSS.
+    - Mise en place d'un pipeline de déploiement continu pour le contenu.
+  metrics:
+    performance: "Temps de chargement des pages divisé par 3 par rapport à une solution WordPress."
+    impact: "Autonomie complète de l'équipe marketing pour la gestion du contenu."
+  technologies:
+    - "JavaScript"
+    - "Tailwind CSS"
+    - "Intelligence Artificielle"
+    - "Jekyll"
+    - "Markdown"
+  tags:
+    - tech: "Frontend"
+      category: "development"
+    - tech: "AI"
+      category: "content"
+    - tech: "CMS"
+      category: "platform"
+
+- title: "Geo Suite"
+  date: "2025-06-01"
+  description: "Solution IA révolutionnaire pour optimiser vos données structurées pour le Generative Engine Optimization."
+  tagline: "L'IA au service de votre visibilité "
+  company: "BusinessTech"
+  role: "Lead AI Developer & SEO Expert"
+  categories: ["prestashop", "ai", "seo"]
+  hero_image: "/assets/images/modules/geo-generative-engine-optimization.png"
+  project_url: "https://www.businesstech.fr/fr/ia/83-geo-suite.html"
+  business_context: |
+    L'évolution des moteurs de recherche vers l'IA conversationnelle (ChatGPT, Perplexity, Claude) transforme la découverte produit. Le Generative Engine Optimization (GEO) devient essentiel pour être recommandé par ces IA. Geo Suite optimise automatiquement vos données pour être cité par les assistants IA.
+  technical_challenges: |
+    - **IA Generative** : Adaptation des données pour les moteurs de recherche IA
+    - **Données structurées avancées** : Enrichissement au-delà des standards Schema.org
+    - **SEO Local intelligent** : Optimisation géolocalisée avec machine learning
+    - **Analyse prédictive** : Anticipation des requêtes IA futures
+    - **Performance temps réel** : Génération dynamique sans impact sur la vitesse
+  metrics:
+    performance: "Amélioration de 85% des citations dans les réponses IA"
+    roi: "Augmentation de 40% du trafic qualifié local"
+    impact: "Première solution GEO sur le marché PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "OpenAI API"
+    - "Machine Learning"
+    - "Schema.org"
+    - "Generative AI"
+    - "Python"
+  tags:
+    - tech: "AI"
+      category: "intelligence"
+    - tech: "SEO"
+      category: "marketing"
+    - tech: "PrestaShop"
+      category: "platform"
+
+- title: "Google Merchant Center PRO (Google Shopping)"
+  date: "2024-07-01"
+  description: "Module PrestaShop premium pour l'intégration complète avec Google Shopping et Google Merchant Center, avec exportation automatisée de flux produits."
+  tagline: "Maximisez votre présence sur Google Shopping"
+  company: "BusinessTech"
+  role: "Lead Developer & Product Manager"
+  categories: ["prestashop", "marketing", "google"]
+  hero_image: "/assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
+  business_context: |
+    Google Shopping est aujourd'hui un canal incontournable d'acquisition de trafic qualifié pour les e-commerçants. La complexité technique de l'export des produits vers Google Merchant Center et le respect des règles Google représentent un défi majeur. Ce module offre une solution complète évoluant depuis 2014.
+  technical_challenges: |
+    - **Conformité Google** : Respect des strictes exigences de format et qualité des données
+    - **Architecture scalable** : Gestion efficace de catalogues de dizaines de milliers de produits
+    - **Optimisation automatique** : Algorithmes d'amélioration de la qualité des données
+    - **Suivi conversions avancé** : Intégration tracking pour mesurer le ROI précisément
+    - **Évolution continue** : Adaptation aux changements fréquents des API Google
+  metrics:
+    performance: "Amélioration de 40% du taux d'approbation produits"
+    roi: "Augmentation moyenne de 30% du CA via Google Shopping"
+    impact: "Solution de référence pour plus de 15 000 boutiques"
+  technologies:
+    - "PrestaShop"
+    - "Google Merchant Center API"
+    - "Google Ads API"
+    - "PHP"
+    - "JavaScript"
+    - "XML"
+  tags:
+    - tech: "Google"
+      category: "marketing"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "API"
+      category: "integration"
+
+- title: "Facebook Dynamic Ads + Pixel PRO"
+  date: "2024-06-20"
+  description: "Module PrestaShop pour cibler vos clients avec des publicités dynamiques Facebook, Instagram et Meta avec tracking pixel avancé."
+  tagline: "Publicité sociale intelligente et performante"
+  company: "BusinessTech"
+  role: "Lead Developer & Social Media Strategist"
+  categories: ["prestashop", "social-ads", "facebook"]
+  hero_image: "/assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
+  business_context: |
+    Facebook Dynamic Ads révolutionne le retargeting en affichant automatiquement les produits consultés par les utilisateurs. Avec 2,9 milliards d'utilisateurs actifs, Meta représente un canal d'acquisition incontournable nécessitant une intégration technique sophistiquée pour maximiser les conversions.
+  technical_challenges: |
+    - **Pixel Facebook avancé** : Implémentation tracking complet avec événements e-commerce
+    - **Catalogues dynamiques** : Synchronisation automatique produits pour publicités shopping
+    - **API Conversions** : Server-side tracking pour améliorer la précision des données
+    - **Audiences personnalisées** : Création de segments basés sur le comportement d'achat
+    - **Optimisation iOS 14.5+** : Adaptation aux restrictions de tracking Apple
+  metrics:
+    performance: "Amélioration de 60% de la précision du tracking"
+    roi: "ROAS moyen de 5.2x sur les campagnes optimisées"
+    impact: "Plus de 12 000 boutiques utilisant la solution"
+  technologies:
+    - "PrestaShop"
+    - "Facebook Marketing API"
+    - "Meta Pixel"
+    - "JavaScript"
+    - "PHP"
+    - "Graph API"
+  tags:
+    - tech: "Facebook"
+      category: "social"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Marketing"
+      category: "advertising"
+
+- title: "Google Pay pour PrestaShop"
+  date: "2024-05-15"
+  description: "Intégration complète de Google Pay pour PrestaShop - moyen de paiement rapide et sécurisé pour améliorer la conversion."
+  tagline: "Paiement en un clic, conversion maximisée"
+  company: "BusinessTech"
+  role: "Lead Developer & Payment Expert"
+  categories: ["prestashop", "payment", "google"]
+  hero_image: "/assets/images/modules/google-pay-for-prestashop.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html"
+  business_context: |
+    L'abandon de panier lors du checkout représente 70% des pertes de CA en e-commerce. Google Pay simplifie drastiquement le processus de paiement en permettant aux utilisateurs de payer en un clic avec leurs informations stockées de manière sécurisée chez Google.
+  technical_challenges: |
+    - **API Google Pay** : Intégration complète avec les derniers standards de sécurité
+    - **Tokenisation avancée** : Protection des données bancaires avec cryptage de niveau bancaire
+    - **UX optimisée** : Interface utilisateur fluide et intuitive pour maximiser les conversions
+    - **Multi-device** : Compatibilité parfaite mobile, tablette et desktop
+    - **Conformité PCI DSS** : Respect des standards de sécurité bancaire les plus stricts
+  metrics:
+    performance: "Réduction de 45% du temps de checkout"
+    roi: "Augmentation de 25% du taux de conversion au paiement"
+    impact: "Déploiement sur plus de 5 000 boutiques PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "Google Pay API"
+    - "JavaScript"
+    - "PHP"
+    - "Tokenization"
+    - "SSL/TLS"
+  tags:
+    - tech: "Google Pay"
+      category: "payment"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Security"
+      category: "fintech"
+
+- title: "Social Login - Connexion Sociale Universelle"
+  date: "2024-04-10"
+  description: "Module PrestaShop permettant la connexion rapide avec Facebook, Google, TikTok, Amazon, Twitter et plus pour simplifier l'inscription des clients."
+  tagline: "Connexion sociale simplifiée pour vos clients"
+  company: "BusinessTech"
+  role: "Lead Developer & UX Designer"
+  categories: ["prestashop", "social", "ux"]
+  hero_image: "/assets/images/modules/social-login-prestashop-facebook-google-tiktok-amazon-twitter-paypal.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/76-social-login-facebook-google-tiktok-amazon-twitter-paypal-0656272505198.html"
+  business_context: |
+    L'inscription sur un site e-commerce représente un frein majeur à la conversion. Avec plus de 70% des utilisateurs qui abandonnent un processus d'inscription traditionnel, le Social Login devient une solution incontournable pour réduire les frictions et améliorer l'expérience utilisateur.
+  technical_challenges: |
+    - **Intégration multi-plateformes** : Support de Facebook, Google, TikTok, Amazon, Twitter, PayPal
+    - **Sécurité OAuth 2.0** : Implémentation sécurisée des protocoles d'authentification
+    - **Synchronisation données** : Récupération et mappage intelligent des informations utilisateur
+    - **Conformité RGPD** : Gestion des consentements et respect de la réglementation européenne
+    - **Performance optimisée** : Chargement asynchrone sans impact sur la vitesse du site
+  metrics:
+    performance: "Réduction de 65% du temps d'inscription des nouveaux clients"
+    roi: "Augmentation de 40% du taux de conversion lors de l'inscription"
+    impact: "Adoption par plus de 8 000 boutiques PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "OAuth 2.0"
+    - "Facebook API"
+    - "Google API"
+    - "JavaScript"
+    - "PHP"
+  tags:
+    - tech: "Social"
+      category: "authentication"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "UX"
+      category: "experience"
+
+- title: "Shop Product Reviews - Système d'Avis Clients"
+  date: "2024-03-25"
+  description: "Système d'avis clients complet pour PrestaShop permettant de collecter, modérer et afficher les avis produits pour augmenter la confiance et les conversions."
+  tagline: "Transformez vos clients satisfaits en ambassadeurs"
+  company: "BusinessTech"
+  role: "Lead Developer & Customer Experience Designer"
+  categories: ["prestashop", "reviews", "conversion"]
+  hero_image: "/assets/images/modules/shop-product-reviews.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-avis-clients/59-shop-product-reviews-0656272921669.html"
+  business_context: |
+    Les avis clients sont devenus un facteur déterminant dans les décisions d'achat online, avec 83% des consommateurs qui consultent les avis avant d'acheter. Ce module offre une solution complète pour collecter, gérer et valoriser les avis clients, créant un cercle vertueux de confiance.
+  technical_challenges: |
+    - **Collecte automatisée** : Système d'envoi d'emails de demande d'avis après livraison
+    - **Modération intelligente** : Filtrage automatique et modération manuelle des avis
+    - **Critères personnalisés** : Création de grilles d'évaluation adaptées à chaque produit
+    - **Intégration SEO** : Génération de rich snippets pour améliorer la visibilité Google
+    - **Protection anti-spam** : Mécanismes de sécurité contre les faux avis
+  metrics:
+    performance: "Amélioration de 25% du taux de clics dans les résultats Google"
+    roi: "Augmentation moyenne de 18% du taux de conversion sur les produits avec avis"
+    impact: "Plus de 500 000 avis collectés via le module"
+  technologies:
+    - "PrestaShop"
+    - "PHP"
+    - "MySQL"
+    - "Rich Snippets"
+    - "Email Marketing"
+    - "JavaScript"
+  tags:
+    - tech: "Reviews"
+      category: "social-proof"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "SEO"
+      category: "marketing"
+
+- title: "Google Analytics 4 (GA4) - Analytics Nouvelle Génération"
+  date: "2024-02-20"
+  description: "Intégration complète de Google Analytics 4 pour PrestaShop avec tracking avancé des événements e-commerce et mesure précise des performances."
+  tagline: "Analytics nouvelle génération pour votre e-commerce"
+  company: "BusinessTech"
+  role: "Lead Developer & Data Analyst"
+  categories: ["prestashop", "analytics", "data"]
+  hero_image: "/assets/images/modules/google-analytics-4-prestashop-interface-module.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/75-google-analytics-google-analytics-4-ga4-0656272500513.html"
+  business_context: |
+    La transition de Google Analytics Universal vers GA4 représente un défi majeur pour les e-commerçants qui doivent maintenir un suivi précis de leurs performances. GA4 introduit un nouveau modèle de données basé sur les événements, nécessitant une refonte complète de l'implémentation.
+  technical_challenges: |
+    - **Migration modèle événementiel** : Adaptation du tracking e-commerce aux nouveaux standards GA4
+    - **Enhanced Ecommerce** : Implémentation complète du suivi des ventes, paniers et conversions
+    - **Mesures personnalisées** : Configuration d'événements métier spécifiques au contexte PrestaShop
+    - **Conformité RGPD** : Gestion des consentements et anonymisation des données
+    - **Performance optimisée** : Optimisation du chargement sans impact sur la vitesse
+  metrics:
+    performance: "Réduction de 30% du temps de chargement vs implémentation manuelle"
+    roi: "Amélioration de 50% de la précision des données de conversion"
+    impact: "Migration réussie pour plus de 3 000 boutiques PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "Google Analytics 4"
+    - "Google Tag Manager"
+    - "JavaScript"
+    - "Data Layer"
+    - "PHP"
+  tags:
+    - tech: "Analytics"
+      category: "data"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Google"
+      category: "integration"
+
+- title: "TikTok Ads + Pixel - Marketing Génération Z"
+  date: "2024-01-30"
+  description: "Module PrestaShop pour intégrer le pixel TikTok et créer des campagnes publicitaires efficaces sur la plateforme sociale en forte croissance."
+  tagline: "Conquérez la génération TikTok"
+  company: "BusinessTech"
+  role: "Lead Developer & Social Media Strategist"
+  categories: ["prestashop", "social-ads", "tiktok"]
+  hero_image: "/assets/images/modules/tiktok-ads-pixel.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/73-tiktok-ads-pixel-0656272496514.html"
+  business_context: |
+    TikTok est devenu une plateforme incontournable pour toucher les générations Y et Z, avec plus d'1 milliard d'utilisateurs actifs mensuels. Pour les e-commerçants, c'est un canal d'acquisition client à fort potentiel, mais son approche publicitaire unique nécessite une intégration technique spécialisée.
+  technical_challenges: |
+    - **Intégration TikTok Pixel** : Implémentation du code de suivi TikTok avec événements e-commerce
+    - **API Conversions** : Configuration du server-side tracking pour améliorer la précision
+    - **Catalogue produits** : Synchronisation automatique du catalogue pour les publicités dynamiques
+    - **Événements personnalisés** : Tracking des micro-conversions spécifiques à TikTok
+    - **Optimisation mobile** : Performance adaptée à l'usage mobile dominant de TikTok
+  metrics:
+    performance: "Amélioration de 45% de la précision du tracking des conversions"
+    roi: "ROAS moyen de 4.2x sur les campagnes TikTok Ads optimisées"
+    impact: "Activation de TikTok Ads pour plus de 1 200 boutiques PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "TikTok Pixel"
+    - "TikTok Marketing API"
+    - "JavaScript"
+    - "Mobile Optimization"
+    - "PHP"
+  tags:
+    - tech: "TikTok"
+      category: "social"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Mobile"
+      category: "optimization"
+
+- title: "WhatsApp Chat - Communication Client Instantanée"
+  date: "2023-12-15"
+  description: "Module PrestaShop permettant la communication directe avec vos clients via WhatsApp Business pour améliorer le service client et les ventes."
+  tagline: "Communication client instantanée et personnalisée"
+  company: "BusinessTech"
+  role: "Lead Developer & Customer Experience Designer"
+  categories: ["prestashop", "communication", "customer-service"]
+  hero_image: "/assets/images/modules/whatsapp-chat.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-gestion-de-contenu/80-whatsapp-chat-0656272511192.html"
+  business_context: |
+    WhatsApp est devenu le canal de communication privilégié avec plus de 2 milliards d'utilisateurs dans le monde. Pour les e-commerçants, offrir un support client via WhatsApp répond aux attentes modernes de communication instantanée et personnalisée, tout en réduisant les coûts du service client traditionnel.
+  technical_challenges: |
+    - **Intégration WhatsApp Business** : Configuration de l'API officielle pour les entreprises
+    - **Chat widget intelligent** : Interface adaptative selon l'appareil et le contexte
+    - **Routing automatique** : Distribution des conversations selon les départements
+    - **Messages pré-définis** : Système de réponses rapides et templates personnalisables
+    - **Analytics intégrées** : Suivi des conversations et mesure de l'impact sur les ventes
+  metrics:
+    performance: "Réduction de 60% du temps de réponse moyen du service client"
+    roi: "Augmentation de 35% du taux de conversion des visiteurs utilisant WhatsApp"
+    impact: "Plus de 50 000 conversations facilitées par mois"
+  technologies:
+    - "PrestaShop"
+    - "WhatsApp Business API"
+    - "JavaScript"
+    - "Real-time Communication"
+    - "Mobile-First Design"
+    - "PHP"
+  tags:
+    - tech: "WhatsApp"
+      category: "communication"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Customer Service"
+      category: "support"
+
+- title: "Advanced Featured Products - Merchandising Intelligent"
+  date: "2023-11-20"
+  description: "Module PrestaShop pour la présentation avancée de produits vedettes avec options de merchandising et recommandations intelligentes."
+  tagline: "Merchandising intelligent pour maximiser vos ventes"
+  company: "BusinessTech"
+  role: "Lead Developer & Merchandising Expert"
+  categories: ["prestashop", "merchandising", "conversion"]
+  hero_image: "/assets/images/modules/advanced-featured-products.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-merchandising/64-advanced-featured-products-0656272925428.html"
+  business_context: |
+    Le merchandising digital est crucial pour maximiser les ventes d'un e-commerce. Mettre en avant les bons produits au bon moment et au bon endroit peut transformer radicalement les performances d'une boutique. Ce module offre des outils avancés de merchandising pour optimiser la présentation des produits vedettes.
+  technical_challenges: |
+    - **Algorithmes de recommandation** : Développement de logiques intelligentes pour suggérer les produits pertinents
+    - **Performance des requêtes** : Optimisation des performances pour gérer de gros catalogues produits
+    - **Personnalisation avancée** : Interface flexible pour configurer l'affichage selon différents critères
+    - **A/B Testing intégré** : Système de tests pour optimiser les emplacements et sélections
+    - **Analytics merchandising** : Mesure de l'impact des recommandations sur les ventes
+  metrics:
+    performance: "Amélioration de 25% du panier moyen grâce aux recommandations intelligentes"
+    roi: "Augmentation de 30% des ventes sur les produits mis en avant"
+    impact: "Utilisé par plus de 2 500 boutiques PrestaShop"
+  technologies:
+    - "PrestaShop"
+    - "PHP"
+    - "MySQL"
+    - "JavaScript"
+    - "CSS3"
+    - "Responsive Design"
+  tags:
+    - tech: "Merchandising"
+      category: "business"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Recommendations"
+      category: "ai"
+
+- title: "Sales Reports Pro - Business Intelligence"
+  date: "2023-10-25"
+  description: "Module PrestaShop de rapports de ventes avancés et statistiques détaillées pour une analyse business approfondie de votre e-commerce."
+  tagline: "Business Intelligence pour votre e-commerce"
+  company: "BusinessTech"
+  role: "Lead Developer & Data Analyst"
+  categories: ["prestashop", "analytics", "business-intelligence"]
+  hero_image: "/assets/images/modules/sales-reports-pro.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-rapports-et-statistiques/65-sales-reports-pro-0656272927364.html"
+  business_context: |
+    Les données de vente de PrestaShop par défaut restent basiques et ne permettent pas une analyse business approfondie. Pour prendre des décisions stratégiques éclairées, les e-commerçants ont besoin de rapports avancés, de segmentations client sophistiquées et d'indicateurs de performance précis.
+  technical_challenges: |
+    - **Architecture de données complexe** : Agrégation et traitement de gros volumes de données transactionnelles
+    - **Performance des requêtes** : Optimisation des requêtes SQL pour des rapports en temps réel
+    - **Visualisations interactives** : Graphiques dynamiques et tableaux de bord ergonomiques
+    - **Export multi-formats** : Génération de rapports PDF, Excel et CSV personnalisés
+    - **Sécurité des données** : Protection des informations sensibles avec contrôles d'accès granulaires
+  metrics:
+    performance: "Génération de rapports 10x plus rapide que les solutions concurrentes"
+    roi: "Identification moyenne de 15% d'opportunités d'optimisation business"
+    impact: "Plus de 100 000 rapports générés mensuellement"
+  technologies:
+    - "PrestaShop"
+    - "PHP"
+    - "MySQL"
+    - "Chart.js"
+    - "JavaScript"
+    - "PDF Generation"
+  tags:
+    - tech: "Business Intelligence"
+      category: "analytics"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Data Visualization"
+      category: "reporting"
+
+- title: "Google Ads Conversion Tracking Pro - ROI Publicitaire"
+  date: "2023-09-15"
+  description: "Module PrestaShop pour le tracking précis des conversions Google Ads avec mesure ROI avancée et optimisation des campagnes publicitaires."
+  tagline: "ROI précis pour vos campagnes Google Ads"
+  company: "BusinessTech"
+  role: "Lead Developer & PPC Specialist"
+  categories: ["prestashop", "marketing", "google-ads"]  
+  hero_image: "/assets/images/modules/google-ads-conversion-tracking.png"
+  project_url: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/77-google-ads-conversion-tracking-pro-0656272502593.html"
+  business_context: |
+    Le tracking des conversions Google Ads est crucial pour optimiser les budgets publicitaires, mais sa mise en place technique reste complexe. Sans mesure précise du ROI, les e-commerçants investissent à l'aveugle et perdent des opportunités d'optimisation. Ce module automatise l'installation du tracking.
+  technical_challenges: |
+    - **Implémentation Google Ads API** : Intégration des derniers standards de tracking de Google
+    - **Attribution multi-canal** : Mesure des conversions cross-device et multi-touchpoint
+    - **Données enrichies** : Transmission des valeurs de commande, marges et métriques avancées
+    - **Conformité privacy** : Respect du RGPD et des nouvelles contraintes iOS/Android
+    - **Optimisation performance** : Code léger qui n'impacte pas la vitesse du site
+  metrics:
+    performance: "Amélioration de 40% de la précision du tracking des conversions"
+    roi: "Optimisation moyenne de 25% du ROAS des campagnes Google Ads"
+    impact: "Plus de 50 millions d'euros de dépenses publicitaires optimisées"
+  technologies:
+    - "PrestaShop"
+    - "Google Ads API"
+    - "JavaScript"
+    - "Google Tag Manager"
+    - "Enhanced Conversions"
+    - "PHP"
+  tags:
+    - tech: "Google Ads"
+      category: "marketing"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Conversion Tracking"
+      category: "analytics"
+
+- title: "E-commerce Copilot - Assistant IA"
+  date: "2023-08-20"
+  description: "Assistant IA révolutionnaire pour PrestaShop qui optimise automatiquement la gestion e-commerce quotidienne grâce à l'intelligence artificielle."
+  tagline: "L'IA au service de votre e-commerce"
+  company: "BusinessTech"
+  role: "Lead AI Developer & Product Manager"
+  categories: ["prestashop", "artificial-intelligence", "automation"]
+  hero_image: "/assets/images/modules/ecommerce-copilot.png"
+  project_url: "https://www.businesstech.fr/fr/ia/81-e-commerce-copilot-0656272515194.html"
+  business_context: |
+    L'intelligence artificielle transforme l'e-commerce en automatisant les tâches répétitives et en optimisant les performances. E-commerce Copilot représente une nouvelle génération d'outils qui assistent les e-commerçants dans leurs décisions quotidiennes en analysant les données de leur boutique.
+  technical_challenges: |
+    - **Machine Learning intégré** : Algorithmes d'apprentissage adaptatifs pour chaque boutique
+    - **Traitement du langage naturel** : Interface conversationnelle intuitive
+    - **Analyse prédictive** : Modèles de prévision des ventes et tendances
+    - **Automatisation intelligente** : Actions autonomes basées sur des seuils de confiance
+    - **Privacy by design** : IA locale qui respecte la confidentialité des données
+  metrics:
+    performance: "Réduction de 70% du temps consacré aux tâches d'optimisation"
+    roi: "Amélioration moyenne de 20% des performances e-commerce"
+    impact: "Plus de 500 boutiques équipées de l'assistant IA"
+  technologies:
+    - "PrestaShop"
+    - "OpenAI API"
+    - "Machine Learning"
+    - "Natural Language Processing"
+    - "Python"
+    - "PHP"
+  tags:
+    - tech: "Artificial Intelligence"
+      category: "ai"
+    - tech: "PrestaShop"
+      category: "platform"
+    - tech: "Automation"
+      category: "efficiency" 

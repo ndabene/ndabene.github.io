@@ -3,81 +3,258 @@
   level: 95
   category: php-backend
   years_experience: 15
+  description: "Maîtrise avancée du développement back-end, création d'applications web robustes et évolutives."
+
 - name: Symfony
   level: 90
   category: php-backend
   years_experience: 10
+  description: "Framework PHP pour applications web modernes avec architecture MVC."
+
 - name: Microservices
   level: 85
   category: php-backend
   years_experience: 7
+  description: "Architecture distribuée pour applications scalables et modulaires."
+
+- name: Laravel
+  level: 80
+  category: php-backend
+  years_experience: 5
+  description: "Développement d'applications web robustes et évolutives avec le framework PHP Laravel."
+
+- name: MySQL
+  level: 88
+  category: php-backend
+  years_experience: 12
+  description: "Conception et optimisation de bases de données relationnelles, requêtes complexes et gestion des données."
 
 # E-commerce
 - name: PrestaShop
   level: 95
   category: ecommerce
   years_experience: 12
+  description: "Expertise dans le développement et la personnalisation de boutiques en ligne avec PrestaShop."
+
 - name: E-commerce Architecture
   level: 90
   category: ecommerce
   years_experience: 10
+  description: "Conception d'architectures e-commerce scalables et performantes."
 
-# AI
-- name: Data Orchestration
+- name: Outils PrestaShop
+  level: 90
+  category: ecommerce
+  years_experience: 10
+  description: "Maîtrise des outils PrestaShop pour le développement de modules et thèmes certifiés 'Built for PrestaShop'."
+
+- name: Gestion de produit digital
+  level: 85
+  category: ecommerce
+  years_experience: 8
+  description: "Expertise en analyse, conception et développement de produits digitaux, de l'idéation à la livraison."
+
+# Intelligence Artificielle
+- name: Intelligence Artificielle
+  level: 80
+  category: ai
+  years_experience: 2
+  description: "Compréhension et application des concepts d'IA, développement de solutions basées sur le machine learning."
+
+- name: Agentic Orchestration
   level: 80
   category: ai
   years_experience: 1
+  description: "Orchestration d'agents IA pour automatiser des processus complexes."
 
-# Frontend
+- name: Rédaction de contenu
+  level: 80
+  category: ai
+  years_experience: 1
+  description: "Génération automatisée de contenu avec assistance IA."
+
+# Frontend & Design
 - name: HTML5
   level: 95
   category: frontend
   years_experience: 15
+  description: "Maîtrise complète du HTML5 et des standards web modernes."
+
 - name: SCSS/CSS
   level: 85
   category: frontend
   years_experience: 10
+  description: "Styles CSS avancés et préprocesseurs pour interfaces modernes."
+
 - name: JavaScript
   level: 80
   category: frontend
   years_experience: 10
+  description: "Développement front-end dynamique et interactif, manipulation du DOM et utilisation d'APIs modernes."
+
 - name: React
   level: 70
   category: frontend
   years_experience: 4
+  description: "Développement d'interfaces utilisateur modernes avec React."
+
+- name: jQuery
+  level: 85
+  category: frontend
+  years_experience: 10
+  description: "Utilisation avancée de jQuery pour améliorer l'interactivité des boutiques PrestaShop."
+
+- name: Tailwind CSS
+  level: 75
+  category: frontend
+  years_experience: 3
+  description: "Création de designs responsifs et personnalisés pour PrestaShop avec Tailwind CSS."
+
+- name: Bootstrap
+  level: 80
+  category: frontend
+  years_experience: 8
+  description: "Développement rapide d'interfaces utilisables pour PrestaShop avec Bootstrap."
+
+- name: UX/UI Design
+  level: 75
+  category: frontend
+  years_experience: 6
+  description: "Conception d'interfaces utilisateur intuitives et esthétiques."
 
 # DevOps & Tools
 - name: Git
   level: 90
   category: devops
   years_experience: 10
+  description: "Maîtrise du contrôle de version et de la collaboration avec Git."
+
 - name: DevOps
   level: 70
   category: devops
   years_experience: 5
+  description: "Pratiques DevOps pour déploiement et maintenance d'applications."
+
 - name: GitHub Actions
   level: 75
   category: devops
   years_experience: 3
+  description: "Automatisation des workflows de développement avec GitHub Actions."
+
 - name: AWS
   level: 65
   category: devops
   years_experience: 3
+  description: "Services cloud Amazon pour hébergement et scaling d'applications."
+
 - name: Jekyll
   level: 80
   category: devops
   years_experience: 3
+  description: "Générateur de sites statiques pour blogs et documentation."
+
+# Intégrations & APIs
+- name: Intégration API
+  level: 88
+  category: integrations
+  years_experience: 8
+  description: "Maîtrise de l'intégration des API OpenAI, Google et Facebook dans les projets PrestaShop."
+
+- name: Review de code
+  level: 85
+  category: integrations
+  years_experience: 8
+  description: "Expertise en revue de code, identification des problèmes potentiels et suggestions d'améliorations pour PrestaShop et PHP."
+
+- name: Résolution de problèmes complexes
+  level: 90
+  category: integrations
+  years_experience: 12
+  description: "Capacité à analyser et résoudre des problèmes techniques complexes."
 
 # Leadership & Management
 - name: Technical Leadership
   level: 90
   category: leadership
   years_experience: 8
+  description: "Direction d'équipes techniques et prise de décisions architecturales."
+
 - name: Product Management
   level: 85
   category: leadership
   years_experience: 5
-- name: Project Management
+  description: "Gestion de produits digitaux de la conception à la livraison."
+
+- name: Gestion de projet
   level: 85
   category: leadership
   years_experience: 7
+  description: "Maîtrise des méthodologies agiles, planification et suivi de projets, coordination d'équipes."
+
+- name: Pédagogie
+  level: 88
+  category: leadership
+  years_experience: 10
+  description: "Capacité à transmettre des connaissances techniques complexes de manière claire et accessible."
+
+- name: Force de proposition
+  level: 85
+  category: leadership
+  years_experience: 8
+  description: "Aptitude à générer des idées innovantes et à proposer des solutions créatives aux défis techniques."
+
+# Soft Skills & Communication
+- name: Communication interculturelle
+  level: 80
+  category: soft-skills
+  years_experience: 8
+  description: "Capacité à communiquer efficacement dans un environnement multiculturel."
+
+- name: Anglais technique
+  level: 85
+  category: soft-skills
+  years_experience: 15
+  description: "Maîtrise de l'anglais technique pour la communication professionnelle et la documentation dans le domaine du développement web."
+
+- name: Savoir-être
+  level: 90
+  category: soft-skills
+  years_experience: 12
+  description: "Capacité à adopter un comportement professionnel et éthique dans toutes les situations."
+
+- name: Écoute active
+  level: 88
+  category: soft-skills
+  years_experience: 10
+  description: "Aptitude à écouter attentivement, à comprendre et à répondre de manière appropriée aux besoins des autres."
+
+- name: Empathie
+  level: 85
+  category: soft-skills
+  years_experience: 12
+  description: "Capacité à comprendre et à prendre en compte les besoins et les perspectives des autres."
+
+- name: Autonomie
+  level: 90
+  category: soft-skills
+  years_experience: 12
+  description: "Capacité à travailler de manière indépendante, à résoudre des problèmes et à prendre des initiatives."
+
+# Apprentissage & Adaptabilité
+- name: Veille technologique
+  level: 90
+  category: learning
+  years_experience: 10
+  description: "Suivi constant des nouvelles technologies et des tendances du secteur."
+
+- name: Apprentissage rapide
+  level: 88
+  category: learning
+  years_experience: 12
+  description: "Capacité à assimiler rapidement de nouvelles connaissances et compétences."
+
+- name: Agilité et adaptabilité
+  level: 85
+  category: learning
+  years_experience: 10
+  description: "Flexibilité face aux changements et capacité à s'adapter rapidement à de nouvelles situations."

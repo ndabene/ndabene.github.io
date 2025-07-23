@@ -1,6 +1,6 @@
 - id: prestashop
   name: Expert PrestaShop & PHP Moderne
-  icon: prestashop
+  icon: 🛒
   description: "Plus de 15 ans d'expertise en développement e-commerce PrestaShop avec une évolution continue vers les technologies modernes. Spécialiste de l'analyse approfondie des besoins clients pour créer 50+ modules à forte valeur ajoutée."
   skills:
     - "50+ modules PrestaShop développés (évolution native → Symfony)"
@@ -11,7 +11,7 @@
 
 - id: ecommerce
   name: Architecture E-commerce Complexe
-  icon: ecommerce
+  icon: 🏢
   description: "Expertise technique approfondie en e-commerce, spécialement PrestaShop. Conception d'architectures évolutives pour boutiques multi-sites, intégrations tiers complexes et optimisation des performances."
   skills:
     - "Architecture multi-boutiques et multi-devises"
@@ -22,7 +22,7 @@
 
 - id: product
   name: Product Management & Vision Business
-  icon: product
+  icon: 📊
   description: "Approche holistique combinant expertise technique et vision produit. Analyse approfondie des besoins clients pour transformer les défis e-commerce en solutions techniques qui génèrent des résultats business mesurables."
   skills:
     - "Approche holistique : technique, commercial et marketing"
@@ -33,7 +33,7 @@
 
 - id: ai
   name: Orchestration IA & Automation
-  icon: ai
+  icon: 🤖
   description: "Spécialiste de l'intégration d'intelligence artificielle pour optimiser les workflows de développement. Expert de l'automation intelligente des processus métier et de l'accélération de la livraison de projets e-commerce."
   skills:
     - "Workflows de développement assistés par IA"
@@ -44,7 +44,7 @@
 
 - id: fullstack
   name: Développement FullStack & APIs
-  icon: development
+  icon: 💻
   description: "Expertise complète en développement web moderne, de l'architecture backend aux interfaces utilisateur. Maîtrise de PHP 8+ et des technologies émergentes pour créer des APIs performantes et des expériences utilisateur exceptionnelles."
   skills:
     - "PHP 8+ avec features avancées (Attributes, Enums, etc.)"
@@ -55,7 +55,7 @@
 
 - id: innovation
   name: Innovation & Leadership Technique
-  icon: innovation
+  icon: 🚀
   description: "Veille technologique constante et capacité à transformer les innovations en solutions concrètes. Leadership technique sur des projets complexes avec focus sur la création de valeur business et le partage de connaissances."
   skills:
     - "Frameworks et outils de développement innovants"

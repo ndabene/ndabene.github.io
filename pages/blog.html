@@ -1,15 +1,22 @@
 ---
-layout: page
+layout: default
 title: Blog
 permalink: /blog/
 description: "Articles et analyses sur PHP, l'IA, l'e-commerce et l'ingénierie logicielle par Nicolas Dabène."
 keywords: "blog php, blog ia, blog e-commerce, ingénierie logicielle, articles techniques, prestashop"
+body_class: "page-blog"
 ---
 
-<section class="blog-hero-section">
-    <div class="container text-center">
-        <h1>Mon Blog Technique</h1>
-        <p class="section-description">Partage de connaissances, retours d'expérience et articles techniques sur PHP, l'e-commerce, l'IA et les meilleures pratiques en ingénierie logicielle.</p>
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/">Home</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>Mon Blog Technique</h1>
+            <p class="section-description">Partage de connaissances, retours d'expérience et articles techniques sur PHP, l'e-commerce, l'IA et les meilleures pratiques en ingénierie logicielle.</p>
+        </div>
     </div>
 </section>
 
@@ -18,12 +25,94 @@ keywords: "blog php, blog ia, blog e-commerce, ingénierie logicielle, articles 
         {% if site.posts.size > 0 %}
             <div class="blog-grid">
                 <div class="main-blog-content">
-                    <div class="post-list" id="blog-posts-container">
-                        {% for post in site.posts %}
+                    <!-- Filtres et tri -->
+                    <div class="blog-filters">
+                        <div class="filter-group">
+                            <label>Catégories:</label>
+                            <select id="category-filter">
+                                <option value="">Toutes les catégories</option>
+                                {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                                {% for category in all_categories %}
+                                    <option value="{{ category }}">{{ category }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Trier par:</label>
+                            <select id="sort-filter">
+                                <option value="date-desc">Plus récent</option>
+                                <option value="date-asc">Plus ancien</option>
+                                <option value="title">Titre A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="post-list-modern" id="blog-posts-container">
+                        {% assign posts_per_page = 6 %}
+                        {% for post in site.posts limit: posts_per_page %}
                             {% include post-preview.html post=post %}
                         {% endfor %}
                     </div>
+
+                    <!-- Pagination -->
+                    {% if site.posts.size > posts_per_page %}
+                        <div class="pagination-container">
+                            <div class="pagination">
+                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
+                                <div class="pagination-numbers" id="pagination-numbers"></div>
+                                <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
+                            </div>
+                            <p class="pagination-info">Affichage <span id="showing-range">1-{{ posts_per_page }}</span> sur <span id="total-posts">{{ site.posts.size }}</span> articles</p>
+                        </div>
+                    {% endif %}
                 </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Articles récents</h3>
+                        <div class="recent-posts-list">
+                            {% for post in site.posts limit: 5 %}
+                                <article class="recent-post-item">
+                                    {% if post.image %}
+                                        <div class="recent-post-thumb">
+                                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                                        </div>
+                                    {% endif %}
+                                    <div class="recent-post-content">
+                                        <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                                        <time>{% include date-fr.html date=post.date %}</time>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Catégories</h3>
+                        <div class="categories-list">
+                            {% assign categories_count = site.posts | group_by: 'categories' %}
+                            {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                            {% for category in all_categories %}
+                                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                                <a href="#category-{{ category }}" class="category-link">
+                                    <span class="category-name">{{ category }}</span>
+                                    <span class="category-count">{{ category_posts.size }}</span>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Tags populaires</h3>
+                        <div class="tags-cloud">
+                            {% assign all_tags = site.posts | map: 'tags' | flatten | uniq | sort %}
+                            {% for tag in all_tags limit: 10 %}
+                                <span class="tag-item">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </aside>
             </div>
         {% else %}
             <div class="no-posts-container">
@@ -35,3 +124,5 @@ keywords: "blog php, blog ia, blog e-commerce, ingénierie logicielle, articles 
         {% endif %}
     </div>
 </section>
+
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>

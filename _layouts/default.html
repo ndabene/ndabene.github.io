@@ -27,7 +27,7 @@
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
     <!-- Schema.org Markup -->
     <script type="application/ld+json">
@@ -118,11 +118,26 @@
     {% include head.html %}
     {% include maintenance-check.html %}
 </head>
-<body>
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+    <!-- Animation de fond légère -->
+    <div class="gradient-background"></div>
+    <div class="animated-background">
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+    
+    {% if site.under_construction %}
     <div class="under-construction-banner">
         <p>🚧 Ce site est actuellement en construction. Certaines sections peuvent être incomplètes ou en cours de mise à jour. Merci de votre compréhension ! 🚧</p>
     </div>
-    {% include header.html %}
+    {% endif %}
+    {% include header-modern.html %}
 
     <main class="content">
         {{ content }}
@@ -131,8 +146,8 @@
     {% include footer.html %}
     {% include analytics.html %}
 
-    <script src="/assets/js/navigation.js"></script>
-    <script src="/assets/js/theme-switcher.js"></script>
+    <!-- <script src="/assets/js/navigation.js"></script> Navigation moderne intégrée -->
+    <script src="/assets/js/modern-animations.js"></script>
     <script src="/assets/js/skills-animation.js"></script>
 </body>
 </html>

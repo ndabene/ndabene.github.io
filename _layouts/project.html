@@ -2,15 +2,26 @@
 layout: default
 ---
 
-<div class="project-header">
+<section class="project-hero-modern">
     <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="project-tagline">{{ page.tagline }}</p>
-        {% if page.hero_image %}
-            <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image">
-        {% endif %}
+        <nav class="breadcrumb">
+            <a href="/">Accueil</a>
+            <a href="/projects">Projets</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content-modern">
+            <h1 class="project-title-modern">{{ page.title }}</h1>
+            {% if page.tagline %}
+                <p class="project-tagline-modern">{{ page.tagline }}</p>
+            {% endif %}
+            {% if page.hero_image %}
+                <div class="project-hero-image">
+                    <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image-modern" loading="lazy">
+                </div>
+            {% endif %}
+        </div>
     </div>
-</div>
+</section>
 
 <div class="container project-content">
     <section class="project-section">
@@ -41,8 +52,8 @@ layout: default
     <section class="project-section">
         <h2>Technologies Used</h2>
         <div class="tech-badges">
-            {% for tech in page.technologies %}
-                {% include tech-badge.html tech=tech %}
+            {% for tag in page.tags %}
+                {% include tech-badge.html tech=tag.tech category=tag.category %}
             {% endfor %}
         </div>
     </section>

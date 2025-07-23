@@ -5,179 +5,274 @@ description: "15+ ans d'expérience en développement e-commerce. Modules Presta
 keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack"
 ---
 
-<!-- HERO SECTION EXECUTIVE -->
-<section class="hero-section">
+<!-- HERO SECTION MODERNE -->
+<section class="hero-section-modern">
+    <div class="hero-background-pattern"></div>
     <div class="container">
-        <div class="hero-top">
-            <div class="hero-visual">
-                <div class="profile-container">
-                    <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP Developer" class="profile-image">
+        <div class="hero-layout">
+            <!-- Profile Visual avec effets modernes -->
+            <div class="hero-visual scroll-reveal">
+                <div class="profile-container-modern glass-card">
+                    <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP Developer" class="profile-image-modern">
+                    <div class="profile-status-indicator"></div>
+                </div>
+                <div class="floating-tech-icons">
+                    <div class="tech-icon animate-float" style="animation-delay: 0s;">🚀</div>
+                    <div class="tech-icon animate-float" style="animation-delay: 0.5s;">⚡</div>
+                    <div class="tech-icon animate-float" style="animation-delay: 1s;">🤖</div>
+                    <div class="tech-icon animate-float" style="animation-delay: 1.5s;">🎯</div>
                 </div>
             </div>
-            <div class="hero-header">
-                <h1>Nicolas Dabène</h1>
-                <p class="hero-subtitle">Senior PHP FullStack Developer & AI Orchestrator</p>
-                <div class="hero-badges">
-                    {% include tech-badge.html tech="Expert PrestaShop" category="prestashop" %}
-                    {% include tech-badge.html tech="15+ ans d'expérience" category="experience" %}
-                    {% include tech-badge.html tech="Innovation IA" category="ai" %}
+            
+            <!-- Hero Content avec animations -->
+            <div class="hero-content">
+                <div class="hero-header scroll-reveal">
+                    <h1 class="hero-title text-gradient-animated">Nicolas Dabène</h1>
+                    <p class="hero-subtitle typing-effect">Senior PHP FullStack Developer & AI Orchestrator</p>
+                    
+                    <div class="hero-badges-modern stagger-animation">
+                        <div class="animate-item glass-card badge-modern">
+                            <span class="badge-icon">🏆</span>
+                            <span class="badge-text">Expert PrestaShop</span>
+                        </div>
+                        <div class="animate-item glass-card badge-modern">
+                            <span class="badge-icon">📅</span>
+                            <span class="badge-text">15+ ans d'expérience</span>
+                        </div>
+                        <div class="animate-item glass-card badge-modern">
+                            <span class="badge-icon">🤖</span>
+                            <span class="badge-text">Innovation IA</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="hero-description">
-            <p><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement et accélérer considérablement la mise en production des projets.</p>
-            <p><strong>Expert Full Stack animé par l'innovation, je transforme chaque défi technique en levier de croissance stratégique.</strong> Mon approche consiste à développer des solutions parfaitement adaptées qui propulsent les performances des boutiques en ligne et génèrent des résultats mesurables pour mes clients.</p>
-        </div>
+                
+                <div class="hero-description scroll-reveal">
+                    <p class="hero-text-highlight"><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement et accélérer considérablement la mise en production des projets.</p>
+                    <p><strong>Expert Full Stack animé par l'innovation, je transforme chaque défi technique en levier de croissance stratégique.</strong> Mon approche consiste à développer des solutions parfaitement adaptées qui propulsent les performances des boutiques en ligne et génèrent des résultats mesurables pour mes clients.</p>
+                </div>
 
-        <div class="hero-highlights">
-            <div class="highlight-item">
-                <span class="highlight-icon">🚀</span>
-                <span class="highlight-text">Architecture e-commerce optimisée et évolutive</span>
-            </div>
-            <div class="highlight-item">
-                <span class="highlight-icon">⚡</span>
-                <span class="highlight-text">Modules PrestaShop haute performance</span>
-            </div>
-            <div class="highlight-item">
-                <span class="highlight-icon">🤖</span>
-                <span class="highlight-text">Intégration IA pour automatiser les processus</span>
-            </div>
-            <div class="highlight-item">
-                <span class="highlight-icon">🎯</span>
-                <span class="highlight-text">Solutions sur mesure adaptées aux enjeux business</span>
+                <div class="hero-metrics stagger-animation">
+                    <div class="metric-card animate-item glass-card">
+                        <div class="metric-value metric-infinity">∞</div>
+                        <div class="metric-label">Cafés</div>
+                    </div>
+                    <div class="metric-card animate-item glass-card">
+                        <div class="metric-value">15</div>
+                        <div class="metric-label">Années d'expérience</div>
+                    </div>
+                    <div class="metric-card animate-item glass-card">
+                        <div class="metric-value">50</div>
+                        <div class="metric-label">Modules créés</div>
+                    </div>
+                </div>
+
+                <div class="hero-highlights-modern stagger-animation">
+                    <div class="highlight-card animate-item hover-lift">
+                        <div class="highlight-icon-modern">🚀</div>
+                        <div class="highlight-content">
+                            <h3>Architecture e-commerce</h3>
+                            <p>Optimisée et évolutive</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card animate-item hover-lift">
+                        <div class="highlight-icon-modern">⚡</div>
+                        <div class="highlight-content">
+                            <h3>Modules PrestaShop</h3>
+                            <p>Haute performance</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card animate-item hover-lift">
+                        <div class="highlight-icon-modern">🤖</div>
+                        <div class="highlight-content">
+                            <h3>Intégration IA</h3>
+                            <p>Automatisation des processus</p>
+                        </div>
+                    </div>
+                    <div class="highlight-card animate-item hover-lift">
+                        <div class="highlight-icon-modern">🎯</div>
+                        <div class="highlight-content">
+                            <h3>Solutions sur mesure</h3>
+                            <p>Adaptées aux enjeux business</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- EXPERTISE HIGHLIGHTS SECTION -->
-<section class="section expertise-section">
+<!-- EXPERTISE SECTION MODERNE -->
+<section class="section expertise-section-clean">
     <div class="container">
-        <div class="section-header">
-            <h2>Expertise Technique</h2>
-            <p class="section-subtitle">Plus de 15 ans d'expérience dans le développement de solutions e-commerce et d'applications web complexes</p>
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Mes Compétences</h2>
+            <p class="section-subtitle-clean">15+ années d'expertise en développement e-commerce et solutions web</p>
         </div>
         
-        <div class="expertise-grid">
-            {% for expertise in site.data.expertise %}
-            <div class="expertise-item" data-id="{{ expertise.id }}">
-                <div class="expertise-item-header">
-                    <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
-                    <h3>{{ expertise.name }}</h3>
+        <div class="grid-unified stagger-animation">
+            {% for expertise in site.data.expertise limit:4 %}
+            <div class="expertise-card-beautiful animate-item" data-id="{{ expertise.id }}">
+                <div class="expertise-card-inner">
+                    <div class="expertise-visual">
+                        <div class="expertise-icon-beautiful">{{ expertise.icon }}</div>
+                        {% if expertise.id == 'prestashop' or expertise.id == 'ai' %}
+                        <div class="expertise-badge-beautiful">Expert</div>
+                        {% endif %}
+                    </div>
+                    <div class="expertise-content-beautiful">
+                        <h3 class="expertise-title-beautiful">{{ expertise.name }}</h3>
+                        <p class="expertise-description-beautiful">{{ expertise.description }}</p>
+                        <div class="expertise-skills-beautiful">
+                            {% for skill in expertise.skills limit:4 %}
+                            <span class="skill-beautiful">{{ skill }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
-                <p class="expertise-item-description">{{ expertise.description }}</p>
-                <div class="expertise-item-skills">
-                    <ul>
-                        {% for skill in expertise.skills limit:3 %}
-                        <li>{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% if expertise.id == 'prestashop' or expertise.id == 'ai' %}
-                <div class="expertise-item-highlight">{{ expertise.id | capitalize }} Expert</div>
-                {% endif %}
             </div>
             {% endfor %}
         </div>
     </div>
 </section>
 
-<!-- MODULES PRESTASHOP FEATURED SECTION -->
-<section class="section modules-section">
+<!-- MODULES SECTION MODERNE -->
+<section class="section modules-section-modern">
     <div class="container">
-        <div class="section-header">
-            <h2>Modules PrestaShop Signature</h2>
-            <p class="section-subtitle">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Mes Modules PrestaShop</h2>
+            <p class="section-subtitle-clean">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
         </div>
         
-        <div class="grid-system grid-3-cols">
+        <div class="grid-unified stagger-animation">
             {% for module in site.data.modules %}
-            <div class="card module-card">
+            <div class="module-card-beautiful animate-item">
                 {% if module.image %}
-                <a href="{{ module.link }}" target="_blank" class="card-image-link">
-                    <div class="card-image">
-                        <img src="{{ module.image }}" alt="{{ module.title }}" class="module-image">
+                <div class="module-image-beautiful">
+                    <img src="{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                    <div class="module-overlay-beautiful">
+                        <a href="{{ module.link }}" class="preview-btn" target="_blank">
+                            Découvrir
+                        </a>
                     </div>
-                </a>
+                </div>
+                {% else %}
+                <div class="module-image-beautiful"></div>
                 {% endif %}
-                <div class="card-header">
-                    <h3 class="card-title">{{ module.title }}</h3>
-                    <div class="module-tags">
-                        {% for tag in module.tags %}
-                        <span class="badge badge--{{ tag.category | downcase }}">{{ tag.tech }}</span>
-                        {% endfor %}
+                
+                <div class="module-content-container">
+                    <div class="module-header-beautiful">
+                        <h3 class="module-title-beautiful">{{ module.title }}</h3>
+                        <div class="module-tags-beautiful">
+                            {% for tag in module.tags %}
+                            <span class="tech-tag-beautiful tech-tag-beautiful--{{ tag.category | downcase }}">{{ tag.tech }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
-                <div class="card-content">
-                    <p class="card-description">{{ module.description }}</p>
-                </div>
-                <div class="card-footer">
-                    <a href="{{ module.link }}" class="btn btn--outline" target="_blank">
-                        Voir le projet <span class="external-icon">↗</span>
-                    </a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- PUBLICATIONS SECTION -->
-<section class="section publications-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Mes Publications</h2>
-            <p class="section-subtitle">Articles techniques et retours d'expérience sur le développement e-commerce</p>
-        </div>
-        
-        <div class="grid-system grid-3-cols">
-            {% for publication in site.data.publications %}
-            <div class="card publication-card">
-                {% if publication.image %}
-                <a href="{{ publication.link }}" target="_blank" class="card-image-link">
-                    <div class="card-image">
-                        <img src="{{ publication.image }}" alt="{{ publication.title }}" class="publication-image">
+                    
+                    <div class="module-content-beautiful">
+                        <p class="module-description-beautiful">{{ module.description }}</p>
                     </div>
-                </a>
-                {% endif %}
-                <div class="card-header">
-                    <h3 class="card-title">{{ publication.title }}</h3>
-                    {% if publication.category %}
-                    <div class="publication-category">
-                        <span class="badge badge--{{ publication.category | downcase }}">{{ publication.category }}</span>
+                    
+                    <div class="module-footer-beautiful">
+                        <a href="{{ module.link }}" class="module-action-beautiful" target="_blank">
+                            <span>Voir le projet</span>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
                     </div>
-                    {% endif %}
-                </div>
-                <div class="card-content">
-                    <p class="card-description">{{ publication.description }}</p>
-                </div>
-                <div class="card-footer">
-                    <a href="{{ publication.link }}" class="btn btn--outline" target="_blank">
-                        Lire l'article <span class="external-icon">↗</span>
-                    </a>
                 </div>
             </div>
             {% endfor %}
         </div>
         
-        <div class="view-all-publications">
-            <a href="https://www.businesstech.fr/landing/articles/index.html" class="btn btn--primary" target="_blank">
-                Voir toutes les publications <span class="external-icon">↗</span>
+        <div class="view-all-section">
+            <a href="/projects" class="view-all-btn">
+                <span class="btn-text">Découvrir tous mes projets</span>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
             </a>
         </div>
     </div>
 </section>
 
-<!-- CALL TO ACTION FINAL -->
-<section class="section cta-section">
+<!-- PUBLICATIONS SECTION MODERNE -->
+<section class="section publications-section-modern">
     <div class="container">
-        <div class="cta-content">
-            <h2>Prêt à propulser votre projet e-commerce ?</h2>
-            <p>Discutons de vos besoins en développement e-commerce et de la façon dont mon expertise peut transformer vos défis en opportunités de croissance.</p>
-            <div class="cta-actions">
-                <a href="/projects" class="btn btn--secondary btn--large">Voir mes réalisations</a>
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Mes Publications</h2>
+            <p class="section-subtitle-clean">Articles techniques et retours d'expérience sur le développement e-commerce</p>
+        </div>
+        
+        <div class="grid-unified stagger-animation">
+            {% for publication in site.data.publications %}
+            <div class="publication-card-beautiful animate-item">
+                {% if publication.image %}
+                <div class="publication-image-beautiful">
+                    <img src="{{ publication.image }}" alt="{{ publication.title }}" loading="lazy">
+                    {% if publication.category %}
+                    <div class="publication-category-beautiful">{{ publication.category }}</div>
+                    {% endif %}
+                </div>
+                {% else %}
+                <div class="publication-image-beautiful">
+                    {% if publication.category %}
+                    <div class="publication-category-beautiful">{{ publication.category }}</div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                
+                <div class="publication-content-container">
+                    <div class="publication-header-beautiful">
+                        <div class="publication-meta-beautiful">
+                            <span class="publication-type-beautiful">Article technique</span>
+                            <span class="publication-time-beautiful">5 min de lecture</span>
+                        </div>
+                        <h3 class="publication-title-beautiful">{{ publication.title }}</h3>
+                    </div>
+                    
+                    <div class="publication-content-beautiful">
+                        <p class="publication-excerpt-beautiful">{{ publication.description }}</p>
+                        
+                        <div class="publication-topics-beautiful">
+                            <span class="topic-beautiful">PrestaShop</span>
+                            <span class="topic-beautiful">Développement</span>
+                            {% if publication.category and publication.category != '' %}
+                            <span class="topic-beautiful">{{ publication.category }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="publication-footer-beautiful">
+                        <a href="{{ publication.link }}" class="publication-link-beautiful" target="_blank">
+                            <span>Lire l'article complet</span>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
+            {% endfor %}
+        </div>
+        
+        <div class="view-all-section">
+            <a href="https://www.businesstech.fr/landing/articles/index.html" class="view-all-btn" target="_blank">
+                <span class="btn-text">Découvrir tous mes articles</span>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
+
+<!-- SCRIPTS SPÉCIFIQUES -->
+<script>
+// Script pour l'expansion des cartes d'expertise
+function expandExpertise(expertiseId) {
+    const card = document.querySelector(`[data-id="${expertiseId}"]`);
+    card.classList.toggle('expanded');
+}
+</script>
