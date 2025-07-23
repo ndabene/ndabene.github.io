@@ -7,8 +7,15 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
 
 <section class="projects-list-section">
     <div class="container">
-        <h1>{{ page.title }}</h1>
-        <p class="section-description">My portfolio showcases a range of enterprise-level projects, highlighting my expertise in complex architecture, innovative solutions, and delivering tangible business impact. Each project reflects a commitment to technical excellence and strategic problem-solving.</p>
+        <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
+            <div style="flex-shrink: 0;">
+                <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène" style="width: 120px; height: 120px; border-radius: 12px; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);">
+            </div>
+            <div style="flex: 1;">
+                <h1>{{ page.title }}</h1>
+                <p class="section-description" style="margin: 0;">My portfolio showcases a range of enterprise-level projects, highlighting my expertise in complex architecture, innovative solutions, and delivering tangible business impact. Each project reflects a commitment to technical excellence and strategic problem-solving.</p>
+            </div>
+        </div>
 
         <div class="project-filters">
             <div class="filter-group">
@@ -27,7 +34,7 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
                 <label for="tech-filter">Filter by Technology:</label>
                 <select id="tech-filter" multiple>
                     <option value="all">All Technologies</option>
-                    {% assign all_technologies = site.projects | map: 'technologies' | compact | uniq %}
+                    {% assign all_technologies = site.data.projects | map: 'technologies' | compact | uniq %}
                     {% for tech_list in all_technologies %}
                         {% for tech in tech_list %}
                             <option value="{{ tech | slugify }}">{{ tech }}</option>
@@ -46,12 +53,12 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
         </div>
 
         <div class="projects-grid" id="projects-container">
-            {% for project in site.projects %}
+            {% for project in site.data.projects %}
                 {% include project-card.html project=project %}
             {% endfor %}
         </div>
 
-        {% if site.projects.size == 0 %}
+        {% if site.data.projects.size == 0 %}
             <p class="no-projects">No projects found yet. Please check back soon!</p>
         {% endif %}
     </div>

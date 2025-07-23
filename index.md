@@ -159,30 +159,28 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                 <div class="module-image-beautiful"></div>
                 {% endif %}
                 
-                <div class="module-header-beautiful">
-                    <h3 class="module-title-beautiful">{{ module.title }}</h3>
-                    <div class="module-tags-beautiful">
-                        {% for tag in module.tags %}
-                        <span class="tech-tag-beautiful tech-tag-beautiful--{{ tag.category | downcase }}">{{ tag.tech }}</span>
-                        {% endfor %}
+                <div class="module-content-container">
+                    <div class="module-header-beautiful">
+                        <h3 class="module-title-beautiful">{{ module.title }}</h3>
+                        <div class="module-tags-beautiful">
+                            {% for tag in module.tags %}
+                            <span class="tech-tag-beautiful tech-tag-beautiful--{{ tag.category | downcase }}">{{ tag.tech }}</span>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
-                
-                <div class="module-content-beautiful">
-                    <p class="module-description-beautiful">{{ module.description }}</p>
                     
-                    <div class="module-features-beautiful">
-                        <div class="feature-beautiful">Prêt à l'emploi</div>
+                    <div class="module-content-beautiful">
+                        <p class="module-description-beautiful">{{ module.description }}</p>
                     </div>
-                </div>
-                
-                <div class="module-footer-beautiful">
-                    <a href="{{ module.link }}" class="module-action-beautiful" target="_blank">
-                        <span>Voir le projet</span>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
-                        </svg>
-                    </a>
+                    
+                    <div class="module-footer-beautiful">
+                        <a href="{{ module.link }}" class="module-action-beautiful" target="_blank">
+                            <span>Voir le projet</span>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -225,33 +223,35 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                 </div>
                 {% endif %}
                 
-                <div class="publication-header-beautiful">
-                    <div class="publication-meta-beautiful">
-                        <span class="publication-type-beautiful">Article technique</span>
-                        <span class="publication-time-beautiful">5 min de lecture</span>
+                <div class="publication-content-container">
+                    <div class="publication-header-beautiful">
+                        <div class="publication-meta-beautiful">
+                            <span class="publication-type-beautiful">Article technique</span>
+                            <span class="publication-time-beautiful">5 min de lecture</span>
+                        </div>
+                        <h3 class="publication-title-beautiful">{{ publication.title }}</h3>
                     </div>
-                    <h3 class="publication-title-beautiful">{{ publication.title }}</h3>
-                </div>
-                
-                <div class="publication-content-beautiful">
-                    <p class="publication-excerpt-beautiful">{{ publication.description }}</p>
                     
-                    <div class="publication-topics-beautiful">
-                        <span class="topic-beautiful">PrestaShop</span>
-                        <span class="topic-beautiful">Développement</span>
-                        {% if publication.category and publication.category != '' %}
-                        <span class="topic-beautiful">{{ publication.category }}</span>
-                        {% endif %}
+                    <div class="publication-content-beautiful">
+                        <p class="publication-excerpt-beautiful">{{ publication.description }}</p>
+                        
+                        <div class="publication-topics-beautiful">
+                            <span class="topic-beautiful">PrestaShop</span>
+                            <span class="topic-beautiful">Développement</span>
+                            {% if publication.category and publication.category != '' %}
+                            <span class="topic-beautiful">{{ publication.category }}</span>
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
-                
-                <div class="publication-footer-beautiful">
-                    <a href="{{ publication.link }}" class="publication-link-beautiful" target="_blank">
-                        <span>Lire l'article complet</span>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                        </svg>
-                    </a>
+                    
+                    <div class="publication-footer-beautiful">
+                        <a href="{{ publication.link }}" class="publication-link-beautiful" target="_blank">
+                            <span>Lire l'article complet</span>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             {% endfor %}

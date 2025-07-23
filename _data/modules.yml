@@ -16,7 +16,7 @@
       category: prestashop
     - tech: Payment
       category: payment
-- title: "Facebook Dynamic Ads + Pixel"
+- title: "Facebook Dynamic Ads + Pixel PRO"
   description: "Ciblez vos clients avec des publicités dynamiques sur Facebook."
   link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
   image: "assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
@@ -31,6 +31,9 @@
   image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
   tags:
     - tech: PrestaShop
+      category: prestashop
+    - tech: Marketing
+      category: marketing
       category: prestashop
     - tech: Marketing
       category: marketing 

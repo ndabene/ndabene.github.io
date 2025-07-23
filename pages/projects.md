@@ -57,7 +57,7 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
         </div>
 
         <div class="projects-grid-modern">
-            {% assign projects = site.projects | sort: 'date' | reverse %}
+            {% assign projects = site.data.projects | sort: 'date' | reverse %}
             {% for project in projects %}
                 <article class="project-card-modern" data-categories="{{ project.categories | join: ' ' }}">
                     <div class="project-content">
@@ -105,7 +105,7 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
                                 </svg>
                             </a>
                             {% endif %}
-                            <a href="{{ project.url | relative_url }}" class="btn-modern btn-secondary">
+                            <a href="{{ project.project_url }}" class="btn-modern btn-secondary" target="_blank">
                                 Détails
                             </a>
                         </div>
@@ -114,7 +114,7 @@ description: "Découvrez une sélection de mes projets, incluant des modules Pre
             {% endfor %}
         </div>
 
-        {% if site.projects.size == 0 %}
+        {% if site.data.projects.size == 0 %}
         <div class="no-projects-modern">
             <div class="empty-state">
                 <div class="empty-icon">📁</div>

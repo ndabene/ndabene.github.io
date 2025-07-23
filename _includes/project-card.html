@@ -1,7 +1,7 @@
 <div class="project-card card" data-categories="{{ project.categories | join: ' ' | slugify }}" data-technologies="{{ project.technologies | join: ' ' | slugify }}" data-date="{{ project.date | date: "%s" }}" data-impact="{{ project.business_impact_score }}">
-    <a href="{{ project.url | relative_url }}" class="project-link">
-        {% if project.thumbnail %}
-            <img src="{{ project.thumbnail }}" alt="{{ project.title }}" class="project-thumbnail" loading="lazy">
+    <a href="{{ project.project_url }}" class="project-link" target="_blank">
+        {% if project.hero_image %}
+            <img src="{{ project.hero_image }}" alt="{{ project.title }}" class="project-thumbnail" loading="lazy">
         {% endif %}
         <div class="card-content">
             <h3>{{ project.title }}</h3>
@@ -26,6 +26,6 @@
         </div>
     </a>
     <div class="card-actions">
-        <a href="{{ project.url | relative_url }}" class="btn btn--primary">{{ project.layout == 'case-study' ? 'View Case Study' : 'Quick View' }}</a>
+        <a href="{{ project.project_url }}" class="btn btn--primary" target="_blank">Voir le module</a>
     </div>
 </div>
