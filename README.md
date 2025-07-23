@@ -246,8 +246,7 @@ Ce projet étant un portfolio personnel, les contributions externes ne sont pas 
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-contact@ndabene.fr-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@ndabene.fr)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicolas%20Dabène-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolasdabene)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicolas%20Dabène-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
 [![GitHub](https://img.shields.io/badge/GitHub-ndabene-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ndabene)
 
 </div>
