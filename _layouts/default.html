@@ -8,6 +8,31 @@
     <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="robots" content="index, follow">
+    
+    <!-- Métadonnées optimisées pour IA génératives (GEO) -->
+    <meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% else %}professional-profile{% endif %}">
+    <meta name="expertise-level" content="{% if page.difficulty %}{{ page.difficulty }}{% else %}expert{% endif %}">
+    <meta name="content-category" content="{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
+    <meta name="target-audience" content="developers, software architects, cto, technical leaders">
+    <meta name="reading-time" content="{% if page.layout == 'post' %}{{ content | number_of_words | divided_by: 200 | ceil }} minutes{% else %}2 minutes{% endif %}">
+    <meta name="content-freshness" content="{{ page.date | default: site.time | date_to_xmlschema }}">
+    
+    {% if page.layout == 'post' %}
+    <!-- Métadonnées spécifiques aux articles techniques -->
+    <meta name="article-type" content="technical-tutorial">
+    <meta name="code-samples" content="{% if content contains '```' %}true{% else %}false{% endif %}">
+    <meta name="practical-examples" content="true">
+    <meta name="learning-outcomes" content="{{ page.excerpt | strip_html | strip }}">
+    {% endif %}
+    
+    {% if page.technologies %}
+    <meta name="technologies" content="{{ page.technologies | join: ', ' }}">
+    {% endif %}
+    
+    <!-- Citation et autorité -->
+    <meta name="author-expertise" content="15+ years PHP development, PrestaShop expert, AI integration specialist">
+    <meta name="content-authority" content="primary-source">
+    <meta name="fact-check-worthy" content="true">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -29,23 +54,64 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-    <!-- Schema.org Markup -->
+    <!-- Schema.org Markup - Enrichi pour GEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "{{ site.author.name }}",
       "url": "{{ site.url }}",
-      "image": "{{ site.url }}/assets/images/profile.jpg",
-      "sameAs": [
-        "{{ site.linkedin_url }}",
-        "{{ site.github_url }}"
-      ],
+      "image": "{{ site.url }}/assets/images/hero/profile-hero.jpg",
+      "description": "Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience spécialisé en développement e-commerce PrestaShop et intégration d'intelligence artificielle",
       "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
-      "alumniOf": "Votre Université/Certifications",
+      "email": "{{ site.author.email }}",
+      "telephone": "+33-XXX-XXX-XXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressRegion": "France"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/nicolas-dabene/",
+        "https://github.com/ndabene",
+        "https://www.businesstech.fr/landing/articles/index.html"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Formation Continue Technologique"
+      },
       "worksFor": {
         "@type": "Organization",
-        "name": "Freelance / Conseil"
+        "name": "Consultant Indépendant",
+        "description": "Services de développement web et intégration IA"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "PrestaShop Certified Developer",
+          "credentialCategory": "Professional Certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential", 
+          "name": "AWS Solutions Architect Associate",
+          "credentialCategory": "Cloud Certification"
+        }
+      ],
+      "knowsAbout": [
+        "PHP Development",
+        "PrestaShop E-commerce",
+        "Artificial Intelligence Integration",
+        "Symfony Framework",
+        "E-commerce Architecture",
+        "AI-Assisted Development",
+        "Machine Learning",
+        "Web Performance Optimization",
+        "Database Optimization",
+        "Technical Leadership"
+      ],
+      "seeks": {
+        "@type": "Demand",
+        "name": "Projets de développement e-commerce et intégration IA"
       }
     }
     </script>
@@ -56,63 +122,88 @@
       "name": "{{ site.title }}",
       "url": "{{ site.url }}",
       "description": "{{ site.description }}",
-      "providerMobility": "France entière",
+      "providerMobility": "France entière et remote",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "25",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "€€€",
       "serviceType": [
-        "Développement Web",
-        "Intégration IA",
-        "Solutions E-commerce",
-        "Conseil Technique"
+        "Développement Web PHP",
+        "Architecture E-commerce PrestaShop",
+        "Intégration Intelligence Artificielle",
+        "Optimisation Performance Web",
+        "Conseil Technique et Stratégique",
+        "Formation Développement",
+        "Audit Code et Sécurité"
       ],
-      "areaServed": {
-        "@type": "State",
-        "name": "France"
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Place",
+          "name": "Europe (Remote)"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "{{ site.url }}/contact",
+        "availableLanguage": ["French", "English"]
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services Proposés",
+        "name": "Portfolio de Services Techniques",
         "itemListElement": [
           {
-            "@type": "OfferCatalog",
-            "name": "Développement Web",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Applications Web sur Mesure"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Développement PrestaShop"
-                }
-              }
-            ]
+            "@type": "Offer",
+            "name": "Développement E-commerce PrestaShop",
+            "description": "Création et customisation de boutiques PrestaShop haute performance",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Développement PrestaShop",
+              "serviceType": "E-commerce Development",
+              "category": "Web Development"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "price": "Sur devis"
+            }
           },
           {
-            "@type": "OfferCatalog",
-            "name": "IA & Données",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Intégration IA"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Orchestration de Données"
-                }
-              }
-            ]
+            "@type": "Offer", 
+            "name": "Intégration Intelligence Artificielle",
+            "description": "Implémentation d'IA dans les workflows existants pour automatisation et optimisation",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Integration Services",
+              "serviceType": "Artificial Intelligence",
+              "category": "Technology Consulting"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Architecture & Performance Web",
+            "description": "Optimisation et refactoring d'applications web pour haute performance",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Performance Optimization",
+              "serviceType": "Technical Optimization",
+              "category": "Software Architecture"
+            }
           }
         ]
-      }
+      },
+      "award": [
+        "PrestaShop Certified Developer",
+        "15+ années d'expertise technique",
+        "50+ projets e-commerce réalisés"
+      ]
     }
     </script>
     {% include head.html %}

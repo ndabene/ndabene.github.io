@@ -2,6 +2,72 @@
 layout: default
 ---
 
+<!-- Schema.org Article pour GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.excerpt | strip_html | strip }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ page.image | default: '/assets/images/blog/default-blog.jpg' }}",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: site.author.name }}",
+    "url": "{{ site.url }}",
+    "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
+    "knowsAbout": [
+      "PHP Development",
+      "PrestaShop E-commerce", 
+      "Artificial Intelligence Integration",
+      "Web Development",
+      "Software Architecture"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "articleSection": "{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
+  "keywords": "{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
+  "inLanguage": "fr-FR",
+  "wordCount": "{{ content | number_of_words }}",
+  "timeRequired": "PT{{ content | number_of_words | divided_by: 200 | ceil }}M",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Développeurs, Architectes logiciel, CTO, Technical Leaders"
+  },
+  "teaches": "{{ page.excerpt | strip_html | strip }}",
+  "educationalLevel": "{% if page.difficulty %}{{ page.difficulty }}{% else %}Intermédiaire{% endif %}",
+  "learningResourceType": "Article technique",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "about": [
+    {% for tag in page.tags %}
+    {
+      "@type": "Thing",
+      "name": "{{ tag }}",
+      "sameAs": "https://en.wikipedia.org/wiki/{{ tag | replace: ' ', '_' }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
 <article class="post-page">
     {% if page.image %}
     <div class="post-banner">

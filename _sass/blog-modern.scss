@@ -936,3 +936,115 @@ $blog-content-bg: $white;
     }
   }
 }
+
+//================================================
+// STYLES GEO (Generative Engine Optimization)
+//================================================
+
+// FAQ Section pour optimisation IA
+.faq-section-geo {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  
+  .faq-grid-geo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .faq-item-geo {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #3b82f6;
+    
+    h3 {
+      color: #1e293b;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    p {
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      color: #475569;
+      line-height: 1.7;
+      
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+    strong {
+      color: #1e293b;
+      font-weight: 600;
+    }
+  }
+}
+
+// Encadré de synthèse pour IA
+.expertise-summary-geo {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.12) 100%);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  
+  h3 {
+    color: #1e293b;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      strong {
+        color: #3b82f6;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  strong {
+    color: #1e293b;
+    font-weight: 600;
+  }
+}
+
+// Responsive pour éléments GEO
+@media (max-width: 768px) {
+  .faq-grid-geo {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-item-geo {
+    padding: 1.5rem;
+  }
+  
+  .expertise-summary-geo {
+    padding: 1.5rem;
+    
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+}

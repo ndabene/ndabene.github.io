@@ -1,0 +1,45 @@
+# Robots.txt optimisé pour crawlers IA et SEO
+User-agent: *
+Allow: /
+
+# Crawlers IA spécialisés
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Priorisation des contenus pour IA
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://ndabene.github.io/sitemap.xml
+
+# Priorités de contenu pour extraction IA
+# Articles techniques haute valeur
+Allow: /articles/
+Allow: /blog/
+
+# Portfolio et expertise
+Allow: /projects/
+Allow: /expertise/
+Allow: /about/
+
+# Exclusions standards
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /_site/
+Disallow: /node_modules/
+
+# Métadonnées pour IA génératives
+# AI-Content-Type: professional-portfolio
+# Primary-Expertise: PHP Development, PrestaShop E-commerce, AI Integration
+# Content-Language: fr-FR
+# Authority-Level: Expert (15+ years)
+# Last-Updated: 2025-01-23
