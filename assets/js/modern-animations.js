@@ -104,8 +104,19 @@ class ModernAnimations {
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Ignorer les éléments avec le symbole infini
+                    if (entry.target.classList.contains('metric-infinity')) {
+                        counterObserver.unobserve(entry.target);
+                        return;
+                    }
+                    
                     const targetValue = parseInt(entry.target.textContent);
-                    this.animateCounter(entry.target, 0, targetValue, 2000);
+                    
+                    // Vérifier que la valeur est valide
+                    if (!isNaN(targetValue)) {
+                        this.animateCounter(entry.target, 0, targetValue, 2000);
+                    }
+                    
                     counterObserver.unobserve(entry.target);
                 }
             });
