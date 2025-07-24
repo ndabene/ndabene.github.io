@@ -619,9 +619,129 @@
 
 // Section Modules - Animation E-commerce/Shopping
 .modules-section-modern {
-  @extend .section-unified;
-  background: white;
+  padding: $space-lg 0;
+  background-color: #f8fafc;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   
+  .section-header-clean {
+    margin-bottom: $space-lg;
+    
+    .section-title-clean {
+      font-size: 1.7rem; // Taille de titre réduite
+    }
+  }
+  
+  .grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-md;
+    
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr); // Force 4 colonnes sur grand écran
+    }
+  }
+  
+  .module-card-beautiful {
+    height: 100%;
+    max-height: none; // Supprimer la limitation de hauteur
+    display: flex;
+    flex-direction: column;
+    
+    .module-image-beautiful {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: white;
+      
+      img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+    }
+    
+    .module-content-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    .module-header-beautiful {
+      padding: $space-md $space-lg $space-sm;
+      
+      .module-title-beautiful {
+        font-size: 1.3rem;
+        margin-bottom: $space-sm;
+        font-weight: $font-weight-bold;
+        line-height: 1.3;
+        min-height: 2.6rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+    
+    .module-content-beautiful {
+      padding: 0 $space-lg $space-sm;
+      flex: 1;
+      
+      .module-description-beautiful {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: $text-color-light;
+        margin-bottom: $space-md;
+      }
+    }
+    
+    .module-footer-beautiful {
+      padding: $space-sm $space-lg $space-lg;
+      margin-top: auto;
+    }
+    
+    &:hover .module-image-beautiful img {
+      transform: scale(1.08);
+    }
+  }
+  
+  .view-all-section {
+    margin-top: $space-xl;
+    text-align: center;
+    
+    .view-all-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1rem;
+      padding: $space-sm $space-xl;
+      border-radius: $rounded-lg;
+      background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+      color: white;
+      font-weight: $font-weight-semibold;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      
+      svg {
+        margin-left: $space-sm;
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(15, 23, 42, 0.2);
+        
+        svg {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
 }
 
 @keyframes ecommerce-glow {
@@ -670,11 +790,70 @@
 .publications-section-modern {
   @extend .section-unified;
   background: $gray-ultra-light;
+  padding: $space-lg 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   
+  .section-header-clean {
+    margin-bottom: $space-lg;
+    
+    .section-title-clean {
+      font-size: 1.7rem; // Taille de titre réduite
+    }
+  }
+  
+  .grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Colonnes plus petites
+    gap: $space-md;
+  }
+  
+  // Réduction de la hauteur des cartes publications
+  .publication-card-beautiful {
+    max-height: 380px; // Hauteur maximale réduite
+    
+    .publication-image-beautiful {
+      height: 140px; // Hauteur d'image réduite
+    }
+    
+    .publication-header-beautiful {
+      padding: $space-sm $space-lg $space-sm;
+      
+      .publication-title-beautiful {
+        font-size: 1.2rem; // Titre plus petit
+        margin-bottom: $space-sm;
+      }
+    }
+    
+    .publication-content-beautiful {
+      padding: 0 $space-lg $space-sm;
+      
+      .publication-excerpt-beautiful {
+        font-size: 0.9rem; // Texte plus petit
+        margin-bottom: $space-sm;
+        max-height: 3.2em; // Limite à ~2 lignes
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    
+    .publication-footer-beautiful {
+      padding: $space-sm $space-lg;
+    }
+  }
+  
+  // Réduire la visibilité du bouton "Voir tous"
+  .view-all-section {
+    margin-top: $space-lg;
+    
+    .view-all-btn {
+      font-size: 0.9rem;
+      padding: $space-xs $space-lg;
+    }
+  }
 }
-
-
-
 
 // Garder les images des modules et publications visibles
 
@@ -2199,9 +2378,129 @@ body {
 
 // Section Modules - Animation E-commerce/Shopping
 .modules-section-modern {
-  @extend .section-unified;
-  background: white;
+  padding: $space-lg 0;
+  background-color: #f8fafc;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   
+  .section-header-clean {
+    margin-bottom: $space-lg;
+    
+    .section-title-clean {
+      font-size: 1.7rem; // Taille de titre réduite
+    }
+  }
+  
+  .grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-md;
+    
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr); // Force 4 colonnes sur grand écran
+    }
+  }
+  
+  .module-card-beautiful {
+    height: 100%;
+    max-height: none; // Supprimer la limitation de hauteur
+    display: flex;
+    flex-direction: column;
+    
+    .module-image-beautiful {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: white;
+      
+      img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+    }
+    
+    .module-content-container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    
+    .module-header-beautiful {
+      padding: $space-md $space-lg $space-sm;
+      
+      .module-title-beautiful {
+        font-size: 1.3rem;
+        margin-bottom: $space-sm;
+        font-weight: $font-weight-bold;
+        line-height: 1.3;
+        min-height: 2.6rem;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+    
+    .module-content-beautiful {
+      padding: 0 $space-lg $space-sm;
+      flex: 1;
+      
+      .module-description-beautiful {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: $text-color-light;
+        margin-bottom: $space-md;
+      }
+    }
+    
+    .module-footer-beautiful {
+      padding: $space-sm $space-lg $space-lg;
+      margin-top: auto;
+    }
+    
+    &:hover .module-image-beautiful img {
+      transform: scale(1.08);
+    }
+  }
+  
+  .view-all-section {
+    margin-top: $space-xl;
+    text-align: center;
+    
+    .view-all-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1rem;
+      padding: $space-sm $space-xl;
+      border-radius: $rounded-lg;
+      background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+      color: white;
+      font-weight: $font-weight-semibold;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      
+      svg {
+        margin-left: $space-sm;
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(15, 23, 42, 0.2);
+        
+        svg {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
 }
 
 @keyframes ecommerce-glow {
@@ -2250,11 +2549,70 @@ body {
 .publications-section-modern {
   @extend .section-unified;
   background: $gray-ultra-light;
+  padding: $space-lg 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
   
+  .section-header-clean {
+    margin-bottom: $space-lg;
+    
+    .section-title-clean {
+      font-size: 1.7rem; // Taille de titre réduite
+    }
+  }
+  
+  .grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); // Colonnes plus petites
+    gap: $space-md;
+  }
+  
+  // Réduction de la hauteur des cartes publications
+  .publication-card-beautiful {
+    max-height: 380px; // Hauteur maximale réduite
+    
+    .publication-image-beautiful {
+      height: 140px; // Hauteur d'image réduite
+    }
+    
+    .publication-header-beautiful {
+      padding: $space-sm $space-lg $space-sm;
+      
+      .publication-title-beautiful {
+        font-size: 1.2rem; // Titre plus petit
+        margin-bottom: $space-sm;
+      }
+    }
+    
+    .publication-content-beautiful {
+      padding: 0 $space-lg $space-sm;
+      
+      .publication-excerpt-beautiful {
+        font-size: 0.9rem; // Texte plus petit
+        margin-bottom: $space-sm;
+        max-height: 3.2em; // Limite à ~2 lignes
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    
+    .publication-footer-beautiful {
+      padding: $space-sm $space-lg;
+    }
+  }
+  
+  // Réduire la visibilité du bouton "Voir tous"
+  .view-all-section {
+    margin-top: $space-lg;
+    
+    .view-all-btn {
+      font-size: 0.9rem;
+      padding: $space-xs $space-lg;
+    }
+  }
 }
-
-
-
 
 // Garder les images des modules et publications visibles
 
@@ -3584,6 +3942,106 @@ body {
 } 
 
 //================================================
+// BREADCRUMB COMPACT
+//================================================
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: $space-sm $space-md;
+  background: transparent;
+  border: none;
+  border-radius: $rounded-md;
+  margin-top: $space-sm;
+  margin-bottom: $space-sm;
+  box-shadow: none;
+  
+  a, span {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    font-size: 0.85rem;
+    transition: $transition-fast;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+  a {
+    color: $text-color-light;
+    
+    &:hover {
+      color: $primary-color;
+      background: transparent;
+      text-decoration: none;
+    }
+    
+    &:first-child {
+      color: $primary-color;
+      font-weight: $font-weight-semibold;
+      
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: $space-xs;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: text-bottom;
+      }
+    }
+  }
+  
+  span {
+    color: $text-color;
+    font-weight: $font-weight-semibold;
+    background: rgba(15, 23, 42, 0.04);
+    border: none;
+  }
+  
+  // Séparateurs simples
+  a + a::before,
+  a + span::before {
+    content: '›';
+    color: $text-color-light;
+    font-size: 0.8rem;
+    margin: 0 $space-xs;
+  }
+  
+  @media (max-width: 768px) {
+    padding: $space-xs $space-sm;
+    margin: $space-xs 0 $space-sm;
+    
+    a, span {
+      font-size: 0.8rem;
+      padding: 2px $space-xs;
+      background: transparent;
+      border: none;
+    }
+    
+    a:first-child::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: $space-xs;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+//================================================
 // SKILLS PAGE DESIGN MODERNE
 //================================================
 .skills-page-modern {
@@ -4406,4 +4864,347 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
 // Amélioration de l'animation d'apparition
 .skill-card-circular.animate-in {
   animation-delay: var(--animation-delay, 0s);
+}
+
+//================================================
+// RESPONSIVE ADJUSTMENTS FOR LAYOUT HIERARCHY
+//================================================
+@media (max-width: 768px) {
+  // Masquer les éléments décoratifs sur mobile
+  .expertise-section-clean::after {
+    display: none; // Masquer le code flottant sur mobile
+  }
+  
+  // Modules - Amélioration de l'affichage sur mobile
+  .modules-section-modern {
+    padding: $space-md 0;
+    
+    .grid-unified {
+      grid-template-columns: 1fr; // Une seule colonne sur mobile
+      gap: $space-lg;
+    }
+    
+    .module-card-beautiful {
+      height: auto;
+      
+      .module-image-beautiful {
+        height: 160px; // Hauteur adaptée pour mobile
+      }
+      
+      .module-header-beautiful {
+        padding: $space-md $space-md $space-sm;
+        
+        .module-title-beautiful {
+          font-size: 1.25rem;
+          min-height: auto;
+        }
+      }
+      
+      .module-content-beautiful {
+        padding: 0 $space-md $space-sm;
+      }
+      
+      .module-footer-beautiful {
+        padding: $space-sm $space-md $space-lg;
+      }
+    }
+    
+    .view-all-section {
+      margin-top: $space-lg;
+      
+      .view-all-btn {
+        width: 90%;
+        max-width: 320px;
+        padding: $space-md;
+        justify-content: center;
+      }
+    }
+  }
+  
+  // Publications - Réduction additionnelle sur mobile
+  .publications-section-modern {
+    padding: $space-md 0;
+    
+    .grid-unified {
+      grid-template-columns: 1fr; // Une seule colonne sur mobile
+    }
+    
+    .publication-card-beautiful {
+      max-height: none; // Permettre l'expansion en hauteur si nécessaire
+      
+      .publication-image-beautiful {
+        height: 120px; // Hauteur encore plus réduite
+      }
+      
+      .publication-header-beautiful {
+        .publication-title-beautiful {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  
+  // FAQ - Adaptation mobile
+  .faq-section-geo .faq-grid-geo {
+    grid-template-columns: 1fr; // Une seule colonne pour les FAQs
+  }
+}
+
+//================================================
+// MODULES CARDS - STYLE SIMPLE ET DIRECT
+//================================================
+.module-card-simple {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  &:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .module-image-simple {
+    height: 180px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+  }
+  
+  .module-content-simple {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .module-title-simple {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: $text-color;
+  }
+  
+  .module-tags-simple {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+    
+    .tag-simple {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      
+      &--prestashop {
+        background-color: #ffebee;
+        color: #e53935;
+      }
+      
+      &--ai {
+        background-color: #e8f5e9;
+        color: #43a047;
+      }
+      
+      &--marketing {
+        background-color: #fff8e1;
+        color: #ff8f00;
+      }
+      
+      &--payment {
+        background-color: #e3f2fd;
+        color: #1e88e5;
+      }
+    }
+  }
+  
+  .module-description-simple {
+    color: $text-color-light;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+  }
+  
+  .module-footer-simple {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    
+    .button-discover {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}
+
+// Ajustements responsifs pour les cartes modules
+@media (max-width: 768px) {
+  .module-card-simple {
+    .module-image-simple {
+      height: 160px;
+    }
+    
+    .module-title-simple {
+      font-size: 16px;
+    }
+    
+    .module-description-simple {
+      font-size: 13px;
+    }
+  }
+}
+
+// Améliorations pour la section modules
+.modules-section-modern {
+  padding: $space-md 0;
+  background-color: #f8fafc;
+  
+  .grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .section-header-clean {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-sharing-buttons {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .social-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+    
+    i {
+      font-size: 1rem;
+    }
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+}
+
+//================================================
+// FAQ CARDS - STYLE CIRCULAIRE COMME LES COMPÉTENCES
+//================================================
+.faq-section-geo {
+  .skills-grid-circular {
+    // Ajustements spécifiques pour les FAQ en mode compétences
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    .skill-card-circular {
+      background: white;
+      border-radius: $rounded-xl;
+      min-height: 320px;
+      
+      .skill-name-circular {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .skill-description-circular {
+        color: $text-color;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+      
+      .circular-progress-container {
+        .progress-percentage {
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: $accent-color-2;
+        }
+      }
+      
+      .circle {
+        stroke: $accent-color-2;
+        stroke-dasharray: 0, 100; // Commence à 0 pour l'animation
+        transition: stroke-dasharray 1.2s ease-in-out;
+      }
+      
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        
+        .circular-progress-container {
+          transform: scale(1.05);
+        }
+        
+        .circle {
+          filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.6));
+        }
+      }
+      
+      // Animation plus lente pour les FAQ
+      &.animate-in {
+        animation-duration: 0.8s;
+      }
+    }
+  }
+  
+  // Ajustements responsive
+  @media (max-width: 768px) {
+    .skills-grid-circular {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      
+      .skill-card-circular {
+        min-height: auto;
+        padding: 1rem;
+        
+        .circular-progress-container {
+          transform: scale(0.9);
+        }
+        
+        .skill-name-circular {
+          font-size: 1rem;
+        }
+        
+        .skill-description-circular {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
 }

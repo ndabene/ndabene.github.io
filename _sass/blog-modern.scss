@@ -983,43 +983,58 @@ $blog-content-bg: $white;
 // STYLES GEO (Generative Engine Optimization)
 //================================================
 
-// FAQ Section pour optimisation IA
+// FAQ Section pour optimisation IA - COMPACTE
 .faq-section-geo {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: $space-md 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  
+  .section-header-clean {
+    margin-bottom: $space-md;
+    
+    .section-title-clean {
+      font-size: 1.7rem; // Taille de titre réduite
+    }
+  }
   
   .faq-grid-geo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
   
   .faq-item-geo {
     background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid $primary-color;
+    border-radius: 10px;
+    padding: 1.5rem; // Padding réduit
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); // Ombre plus légère
+    border-left: 3px solid $primary-color; // Bordure plus fine
     
     h3 {
       color: #1e293b;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      font-size: 1.1rem; // Titre plus petit
+      margin-bottom: 0.75rem; // Espacement réduit
       font-weight: 600;
     }
     
     p {
       color: #475569;
-      line-height: 1.7;
-      margin-bottom: 1rem;
+      line-height: 1.6; // Interligne réduit
+      margin-bottom: 0.75rem; // Espacement réduit
+      font-size: 0.95rem; // Texte plus petit
     }
     
     ul {
       color: #475569;
-      line-height: 1.7;
+      line-height: 1.5; // Interligne réduit
+      margin-left: 1.25rem; // Marge gauche réduite
+      margin-bottom: 0.5rem; // Espacement réduit
       
       li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.35rem; // Espacement entre éléments réduit
+        font-size: 0.95rem; // Texte plus petit
       }
     }
     
