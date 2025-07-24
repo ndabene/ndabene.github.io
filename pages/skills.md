@@ -98,44 +98,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animation des progress circulaires
     function animateCircularProgress() {
         const circles = document.querySelectorAll('.circle');
-        const percentages = document.querySelectorAll('.progress-percentage');
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const circle = entry.target;
-                    const level = parseInt(circle.getAttribute('data-level'));
-                    const container = circle.closest('.skill-card-circular');
-                    const percentageEl = container.querySelector('.progress-percentage');
-                    
-                    // Animation du cercle
-                    setTimeout(() => {
-                        circle.style.strokeDasharray = `${level}, 100`;
-                    }, 200);
-                    
-                    // Animation du compteur
-                    let currentValue = 0;
-                    const increment = level / 60; // 60 frames pour 1 seconde
-                    const timer = setInterval(() => {
-                        currentValue += increment;
-                        if (currentValue >= level) {
-                            currentValue = level;
-                            clearInterval(timer);
-                        }
-                        percentageEl.textContent = Math.round(currentValue) + '%';
-                    }, 16); // ~60fps
-                    
-                    observer.unobserve(circle);
+        circles.forEach(circle => {
+            const level = parseInt(circle.getAttribute('data-level'));
+            const container = circle.closest('.skill-card-circular');
+            const percentageEl = container.querySelector('.progress-percentage');
+            
+            // Animation du cercle
+            setTimeout(() => {
+                circle.style.strokeDasharray = `${level}, 100`;
+            }, 200);
+            
+            // Animation du compteur
+            let currentValue = 0;
+            const increment = level / 60; // 60 frames pour 1 seconde
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= level) {
+                    currentValue = level;
+                    clearInterval(timer);
                 }
-            });
-        }, { threshold: 0.3 });
-
-        circles.forEach(circle => observer.observe(circle));
+                percentageEl.textContent = Math.round(currentValue) + '%';
+            }, 16); // ~60fps
+        });
     }
 
     // Gestion du filtrage
     const filterBtns = document.querySelectorAll('.skill-filter-btn');
-    const skillCards = document.querySelectorAll('.skill-card-circular');
+    const categoriesContainer = document.querySelector('.skills-page-modern .container');
+    const filtersSection = document.querySelector('.skills-filter');
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -145,57 +136,47 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const filter = this.getAttribute('data-filter');
             
-            // Filtrage des cartes de compétences
             if (filter === 'all') {
-                // Affiche toutes les catégories
-                document.querySelectorAll('.skills-category-modern').forEach(category => {
+                // Afficher toutes les catégories dans leur ordre original
+                const allCategories = document.querySelectorAll('.skills-category-modern');
+                allCategories.forEach(category => {
                     category.style.display = 'block';
-                    setTimeout(() => {
-                        category.classList.add('visible');
-                    }, 10);
+                    setTimeout(() => category.classList.add('visible'), 10);
+                    // Restaurer l'ordre original
+                    category.style.order = '';
                 });
             } else {
-                // Masque les catégories qui ne correspondent pas au filtre
+                // Filtrer et réorganiser les catégories
                 document.querySelectorAll('.skills-category-modern').forEach(category => {
-                    const categoryName = category.getAttribute('data-category');
-                    
-                    if (categoryName === filter) {
+                    if (category.getAttribute('data-category') === filter) {
                         category.style.display = 'block';
-                        setTimeout(() => {
-                            category.classList.add('visible');
-                        }, 10);
+                        setTimeout(() => category.classList.add('visible'), 10);
+                        // Mettre la catégorie filtrée en premier
+                        category.style.order = '0';
                     } else {
                         category.classList.remove('visible');
-                        setTimeout(() => {
-                            category.style.display = 'none';
-                        }, 300);
+                        setTimeout(() => category.style.display = 'none', 300);
+                        // Pousser les autres catégories plus bas (pour l'ordre)
+                        category.style.order = '1';
                     }
                 });
             }
-
-            // Re-animer les progress circulaires visibles
+            
+            // Ré-animer les cercles de progression après le filtrage
             setTimeout(animateCircularProgress, 400);
         });
     });
 
-    // Initialiser les animations
+    // Animation initiale des cercles de progression
     animateCircularProgress();
 
     // Animation d'apparition des cartes
-    const cards = document.querySelectorAll('.skill-card-circular');
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.animationDelay = (index * 0.1) + 's';
-                    entry.target.classList.add('animate-in');
-                }, index * 100);
-                cardObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => cardObserver.observe(card));
+    document.querySelectorAll('.skill-card-circular').forEach((card, index) => {
+        setTimeout(() => {
+            card.style.animationDelay = (index * 0.1) + 's';
+            card.classList.add('animate-in');
+        }, index * 100);
+    });
 });
 </script>
 
@@ -205,10 +186,16 @@ document.addEventListener('DOMContentLoaded', function() {
     transform: translateY(0) !important;
 }
 
+.skills-page-modern .container {
+    display: flex;
+    flex-direction: column;
+}
+
 .skills-category-modern {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s ease-out;
+    order: 0; /* Ordre par défaut */
 }
 
 .skills-category-modern.visible {

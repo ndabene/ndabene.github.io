@@ -2088,8 +2088,8 @@ body {
 // SKILLS PAGE BACKGROUNDS THÉMATIQUES ANIMÉS
 //================================================
 
-// Section PHP & Backend - Animation Code Matrix
-.skills-category-modern[data-category="php-backend"] {
+// Style commun pour toutes les catégories
+.skills-category-modern[data-category] {
   position: relative;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.04) 0%, rgba(30, 41, 59, 0.06) 100%);
   border-radius: $rounded-xl;
@@ -2111,6 +2111,18 @@ body {
     animation: php-matrix 8s ease-in-out infinite;
     z-index: 0;
   }
+}
+
+// Supprimer les styles spécifiques qui ne sont pas nécessaires
+.skills-category-modern[data-category="php-backend"]::after,
+.skills-category-modern[data-category="devops"]::after,
+.skills-category-modern[data-category="soft-skills"]::after {
+  display: none;
+}
+
+// Section PHP & Backend - Animation Code Matrix
+.skills-category-modern[data-category="php-backend"] {
+  @extend .skills-category-modern;
   
   &::after {
     content: '{ } </> PHP <?php $code = "amazing"; ?> function() { return "backend"; }';
@@ -2132,416 +2144,1506 @@ body {
   }
 }
 
-// Section E-commerce - Version professionnelle
-.skills-category-modern[data-category="ecommerce"] {
-  // Styles de base sans animations flashy
-}
-
-// Section AI - Styles de base sans animations flashy
-.skills-category-modern[data-category="ai"] {
-  // Styles de base sans animations flashy
-}
-
-// Section Frontend - Styles de base sans animations flashy
-.skills-category-modern[data-category="frontend"] {
-  // Styles de base sans animations flashy
-}
-
-// Section DevOps - Animation Gears & Tools
-.skills-category-modern[data-category="devops"] {
-  position: relative;
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.04) 0%, rgba(14, 165, 233, 0.06) 100%);
-  border-radius: $rounded-xl;
-  margin: $space-xl 0;
-  padding: $space-2xl;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.14) 0%, transparent 45%),
-      radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 20% 60%, rgba(34, 211, 238, 0.1) 0%, transparent 35%);
-    animation: devops-rotation 11s ease-in-out infinite;
-    z-index: 0;
-  }
-  
-  &::after {
-    content: '⚙️ Git 🐙 GitHub 🚀 AWS ☁️ DevOps 🔧 CI/CD 📡';
-    position: absolute;
-    top: 25%;
-    left: 5%;
-    font-size: 2.2rem;
-    opacity: 0.22;
-    animation: tools-spin 15s ease-in-out infinite;
-    z-index: 0;
-    pointer-events: none;
-    text-shadow: 0 0 22px rgba(6, 182, 212, 0.4);
-    transform: rotate(-3deg);
-  }
-}
-
-// Section Intégrations - Styles de base sans animations flashy
-.skills-category-modern[data-category="integrations"] {
-  // Styles de base sans animations flashy
-}
-
-// Section Leadership - Styles de base sans animations flashy
-.skills-category-modern[data-category="leadership"] {
-  // Styles de base sans animations flashy
-}
-
-// Section Soft Skills - Animation Heart & Communication
-.skills-category-modern[data-category="soft-skills"] {
-  position: relative;
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.04) 0%, rgba(219, 39, 119, 0.06) 100%);
-  border-radius: $rounded-xl;
-  margin: $space-xl 0;
-  padding: $space-2xl;
-  overflow: hidden;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-      radial-gradient(circle at 30% 40%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 70% 60%, rgba(219, 39, 119, 0.13) 0%, transparent 45%),
-      radial-gradient(circle at 50% 80%, rgba(244, 114, 182, 0.1) 0%, transparent 40%);
-    animation: soft-harmony 8s ease-in-out infinite;
-    z-index: 0;
-  }
-  
-  &::after {
-    content: '💬 Communication 🤝 Empathy 👂 Active Listening 🌍';
-    position: absolute;
-    bottom: 20%;
-    left: 15%;
-    font-size: 1.7rem;
-    opacity: 0.2;
-    animation: soft-breathe 13s ease-in-out infinite;
-    z-index: 0;
-    pointer-events: none;
-    text-shadow: 0 0 16px rgba(236, 72, 153, 0.4);
-    transform: rotate(4deg);
-  }
-}
-
-// Section Learning - Styles de base sans animations flashy
-.skills-category-modern[data-category="learning"] {
-  // Styles de base sans animations flashy
-}
-
-//================================================
-// ANIMATIONS KEYFRAMES POUR CHAQUE SECTION
-//================================================
-
-@keyframes php-matrix {
+@keyframes tech-pulse {
   0%, 100% { 
     opacity: 0.8; 
     transform: scale(1) rotate(0deg); 
   }
   33% { 
     opacity: 1; 
-    transform: scale(1.05) rotate(0.5deg); 
+    transform: scale(1.08) rotate(0.5deg); 
   }
   66% { 
     opacity: 0.9; 
-    transform: scale(1.02) rotate(-0.3deg); 
+    transform: scale(1.03) rotate(-0.3deg); 
   }
 }
 
-@keyframes code-float {
+@keyframes float-code {
   0%, 100% { 
-    transform: rotate(-8deg) translateY(0) translateX(0) scale(1); 
+    transform: rotate(-12deg) translateY(0) translateX(0); 
     opacity: 0.15;
   }
   25% { 
-    transform: rotate(-5deg) translateY(-6px) translateX(4px) scale(1.02); 
+    transform: rotate(-8deg) translateY(-8px) translateX(5px); 
     opacity: 0.25;
   }
   50% { 
-    transform: rotate(-12deg) translateY(-2px) translateX(-2px) scale(0.98); 
+    transform: rotate(-15deg) translateY(-3px) translateX(-3px); 
     opacity: 0.2;
   }
   75% { 
-    transform: rotate(-6deg) translateY(-8px) translateX(6px) scale(1.01); 
+    transform: rotate(-10deg) translateY(-12px) translateX(8px); 
     opacity: 0.18;
   }
 }
 
-@keyframes ecommerce-pulse {
-  0%, 100% { 
-    opacity: 0.85; 
-    transform: scale(1) rotate(0deg); 
-  }
-  25% { 
-    opacity: 1; 
-    transform: scale(1.04) rotate(0.8deg); 
-  }
-  75% { 
-    opacity: 0.95; 
-    transform: scale(1.06) rotate(-0.5deg); 
-  }
+// Section Modules - Animation E-commerce/Shopping
+.modules-section-modern {
+  @extend .section-unified;
+  background: white;
+  
 }
 
-@keyframes shop-bounce {
-  0%, 100% { 
-    transform: translateX(0) translateY(0) rotate(0deg) scale(1); 
-    opacity: 0.2;
-  }
-  20% { 
-    transform: translateX(6px) translateY(-3px) rotate(2deg) scale(1.05); 
-    opacity: 0.28;
-  }
-  60% { 
-    transform: translateX(-4px) translateY(-6px) rotate(-1deg) scale(0.95); 
-    opacity: 0.25;
-  }
-  80% { 
-    transform: translateX(8px) translateY(2px) rotate(3deg) scale(1.08); 
-    opacity: 0.3;
-  }
-}
-
-@keyframes ai-neural {
+@keyframes ecommerce-glow {
   0%, 100% { 
     opacity: 0.9; 
     transform: scale(1) rotate(0deg); 
   }
-  40% { 
-    opacity: 1; 
-    transform: scale(1.08) rotate(1deg); 
-  }
-  80% { 
-    opacity: 0.95; 
-    transform: scale(1.03) rotate(-0.8deg); 
-  }
-}
-
-@keyframes ai-glitch {
-  0%, 100% { 
-    transform: rotate(-5deg) translateX(0) translateY(0); 
-    opacity: 0.18;
-    filter: hue-rotate(0deg);
-  }
   25% { 
-    transform: rotate(-2deg) translateX(3px) translateY(-2px); 
-    opacity: 0.25;
-    filter: hue-rotate(90deg);
-  }
-  50% { 
-    transform: rotate(-8deg) translateX(-2px) translateY(-4px); 
-    opacity: 0.22;
-    filter: hue-rotate(180deg);
-  }
-  75% { 
-    transform: rotate(-3deg) translateX(4px) translateY(-1px); 
-    opacity: 0.2;
-    filter: hue-rotate(270deg);
-  }
-}
-
-@keyframes frontend-wave {
-  0%, 100% { 
-    opacity: 0.88; 
-    transform: scale(1) rotate(0deg); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: scale(1.06) rotate(0.6deg); 
-  }
-}
-
-@keyframes design-float {
-  0%, 100% { 
-    transform: rotate(3deg) translateY(0) translateX(0); 
-    opacity: 0.2;
-  }
-  30% { 
-    transform: rotate(6deg) translateY(-4px) translateX(3px); 
-    opacity: 0.28;
-  }
-  70% { 
-    transform: rotate(0deg) translateY(-7px) translateX(-2px); 
-    opacity: 0.25;
-  }
-}
-
-@keyframes devops-rotation {
-  0%, 100% { 
-    opacity: 0.87; 
-    transform: scale(1) rotate(0deg); 
-  }
-  35% { 
-    opacity: 1; 
-    transform: scale(1.07) rotate(1.2deg); 
-  }
-  65% { 
-    opacity: 0.93; 
-    transform: scale(1.04) rotate(-0.8deg); 
-  }
-}
-
-@keyframes tools-spin {
-  0%, 100% { 
-    transform: rotate(-3deg) translateX(0) translateY(0) scale(1); 
-    opacity: 0.22;
-  }
-  25% { 
-    transform: rotate(1deg) translateX(5px) translateY(-3px) scale(1.03); 
-    opacity: 0.3;
-  }
-  50% { 
-    transform: rotate(-7deg) translateX(-3px) translateY(-5px) scale(0.97); 
-    opacity: 0.26;
-  }
-  75% { 
-    transform: rotate(2deg) translateX(7px) translateY(-2px) scale(1.05); 
-    opacity: 0.28;
-  }
-}
-
-@keyframes integration-connect {
-  0%, 100% { 
-    opacity: 0.86; 
-    transform: scale(1) rotate(0deg); 
-  }
-  30% { 
-    opacity: 1; 
-    transform: scale(1.05) rotate(0.7deg); 
-  }
-  70% { 
-    opacity: 0.94; 
-    transform: scale(1.08) rotate(-0.4deg); 
-  }
-}
-
-@keyframes connect-pulse {
-  0%, 100% { 
-    transform: rotate(8deg) translateX(0) translateY(0) scale(1); 
-    opacity: 0.19;
-  }
-  40% { 
-    transform: rotate(12deg) translateX(4px) translateY(-3px) scale(1.06); 
-    opacity: 0.26;
-  }
-  80% { 
-    transform: rotate(5deg) translateX(-2px) translateY(-6px) scale(0.94); 
-    opacity: 0.23;
-  }
-}
-
-@keyframes leadership-inspire {
-  0%, 100% { 
-    opacity: 0.89; 
-    transform: scale(1) rotate(0deg); 
-  }
-  45% { 
-    opacity: 1; 
-    transform: scale(1.04) rotate(0.9deg); 
-  }
-  85% { 
-    opacity: 0.96; 
-    transform: scale(1.07) rotate(-0.6deg); 
-  }
-}
-
-@keyframes leader-glow {
-  0%, 100% { 
-    transform: rotate(-6deg) translateX(0) translateY(0); 
-    opacity: 0.21;
-    text-shadow: 0 0 18px rgba(239, 68, 68, 0.35);
-  }
-  35% { 
-    transform: rotate(-3deg) translateX(3px) translateY(-4px); 
-    opacity: 0.28;
-    text-shadow: 0 0 25px rgba(239, 68, 68, 0.45);
-  }
-  65% { 
-    transform: rotate(-9deg) translateX(-2px) translateY(-2px); 
-    opacity: 0.25;
-    text-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
-  }
-}
-
-@keyframes soft-harmony {
-  0%, 100% { 
-    opacity: 0.9; 
-    transform: scale(1) rotate(0deg); 
-  }
-  50% { 
-    opacity: 1; 
-    transform: scale(1.03) rotate(0.5deg); 
-  }
-}
-
-@keyframes soft-breathe {
-  0%, 100% { 
-    transform: rotate(4deg) translateX(0) translateY(0) scale(1); 
-    opacity: 0.2;
-  }
-  50% { 
-    transform: rotate(7deg) translateX(2px) translateY(-3px) scale(1.02); 
-    opacity: 0.27;
-  }
-}
-
-@keyframes learning-grow {
-  0%, 100% { 
-    opacity: 0.88; 
-    transform: scale(1) rotate(0deg); 
-  }
-  33% { 
     opacity: 1; 
     transform: scale(1.06) rotate(0.8deg); 
   }
-  66% { 
-    opacity: 0.94; 
-    transform: scale(1.09) rotate(-0.5deg); 
-  }
-}
-
-@keyframes growth-evolve {
-  0%, 100% { 
-    transform: rotate(-4deg) translateX(0) translateY(0) scale(1); 
-    opacity: 0.22;
-  }
-  25% { 
-    transform: rotate(-1deg) translateX(5px) translateY(-4px) scale(1.04); 
-    opacity: 0.29;
-  }
   50% { 
-    transform: rotate(-7deg) translateX(-3px) translateY(-6px) scale(0.96); 
-    opacity: 0.26;
+    opacity: 0.95; 
+    transform: scale(1.03) rotate(-0.5deg); 
   }
   75% { 
-    transform: rotate(-2deg) translateX(6px) translateY(-2px) scale(1.07); 
-    opacity: 0.31;
+    opacity: 1; 
+    transform: scale(1.08) rotate(1.2deg); 
   }
 }
 
-// Réduire l'animation sur mobile pour éviter la distraction
+@keyframes shop-float {
+  0%, 100% { 
+    transform: translateX(0) translateY(0) rotate(0deg); 
+    opacity: 0.25;
+  }
+  20% { 
+    transform: translateX(8px) translateY(-4px) rotate(2deg); 
+    opacity: 0.3;
+  }
+  40% { 
+    transform: translateX(-3px) translateY(-8px) rotate(-1deg); 
+    opacity: 0.28;
+  }
+  60% { 
+    transform: translateX(12px) translateY(3px) rotate(3deg); 
+    opacity: 0.32;
+  }
+  80% { 
+    transform: translateX(-6px) translateY(-2px) rotate(-2deg); 
+    opacity: 0.26;
+  }
+}
+
+// Section Publications - Animation Écriture/Blog
+.publications-section-modern {
+  @extend .section-unified;
+  background: $gray-ultra-light;
+  
+}
+
+
+
+
+// Garder les images des modules et publications visibles
+
+// Réduire l'animation de particules sur les sections avec backgrounds thématiques
 @media (max-width: 768px) {
-  .skills-category-modern::after {
+  .expertise-section-clean::after,
+  .modules-section-modern::after,
+  .publications-section-modern::after {
     display: none;
   }
+}
+
+//================================================
+// MODERN BUTTONS
+//================================================
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: $space-sm $space-lg;
+  border-radius: $rounded-lg;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-decoration: none;
+  transition: $transition-normal;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  &--large {
+    padding: $space-md $space-xl;
+    font-size: 1.1rem;
+  }
+
+  // Primary Button
+  &--primary {
+    background: $gradient-primary;
+    color: $white;
+    box-shadow: $shadow-colored;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: $shadow-xl, $shadow-colored;
+      text-decoration: none;
+      color: $white;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: $transition-slow;
+    }
+
+    &:hover::before {
+      left: 100%;
+    }
+  }
+
+  // Secondary Button
+  &--secondary {
+    background: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $white;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+  }
+
+  // Ghost Button
+  &--ghost {
+    background: transparent;
+    color: $text-color;
+    border: 1px solid $gray-light;
+
+    &:hover {
+      background: $gray-ultra-light;
+      border-color: $primary-color;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.btn-modern {
+  @extend .btn;
   
-  .skills-category-modern::before {
-    animation-duration: 15s;
-    opacity: 0.7;
+  svg {
+    width: 18px;
+    height: 18px;
+    transition: $transition-normal;
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
+}
+
+//================================================
+// ANIMATIONS
+//================================================
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 0.8; 
+  }
+}
+
+//================================================
+// ANIMATED CARDS
+//================================================
+.card-modern {
+  background: $white;
+  border-radius: $rounded-xl;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: $transition-normal;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $gradient-primary;
+    transform: scaleX(0);
+    transition: $transition-normal;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  .card-header {
+    padding: $space-md;
+    border-bottom: 1px solid $gray-light;
+    position: relative;
+  }
+
+  .card-body {
+    padding: $space-md;
+  }
+
+  .card-footer {
+    padding: $space-lg $space-xl;
+    background: $gray-ultra-light;
+    border-top: 1px solid $gray-light;
+  }
+}
+
+//================================================
+// MODERN NAVIGATION
+//================================================
+.nav-modern {
+  background: rgba($white, 0.95);
+  backdrop-filter: $backdrop-blur;
+  border-bottom: 1px solid rgba($gray-light, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  transition: $transition-normal;
+
+  &.scrolled {
+    box-shadow: $shadow-lg;
+    background: rgba($white, 0.98);
+  }
+
+  .nav-brand {
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: $space-sm $space-md;
+    color: $text-color;
+    text-decoration: none;
+    transition: $transition-fast;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: $transition-normal;
+      transform: translateX(-50%);
+    }
+
+    &:hover,
+    &.active {
+      color: $primary-color;
+      
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+}
+
+//================================================
+// SKILL PROGRESS MODERN
+//================================================
+.skill-modern {
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-sm;
+  }
+
+  .skill-name {
+    font-weight: $font-weight-semibold;
+    color: $text-color;
+  }
+
+  .skill-percentage {
+    font-size: $font-size-sm;
+    color: $text-color-light;
+    font-weight: $font-weight-medium;
+  }
+
+  .skill-bar {
+    height: 8px;
+    background: $gray-light;
+    border-radius: $rounded-full;
+    overflow: hidden;
+    position: relative;
+
+    .skill-progress {
+      height: 100%;
+      background: $gradient-primary;
+      border-radius: $rounded-full;
+      position: relative;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s $ease-bounce;
+
+      &.animate {
+        transform: scaleX(1);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: rgba($white, 0.5);
+        border-radius: $rounded-full;
+      }
+    }
+  }
+}
+
+//================================================
+// TESTIMONIAL CARDS
+//================================================
+.testimonial-modern {
+  position: relative;
+  padding: $space-md;
+  background: $white;
+  border-radius: $rounded-xl;
+  box-shadow: $shadow-md;
+  border-left: 4px solid $primary-color;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: $space-lg;
+    font-size: 4rem;
+    color: $primary-color;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+  }
+
+  .testimonial-content {
+    font-style: italic;
+    margin-bottom: $space-md;
+    line-height: 1.7;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: $rounded-full;
+      border: 3px solid $primary-color;
+    }
+
+    .author-info {
+      .author-name {
+        font-weight: $font-weight-semibold;
+        color: $text-color;
+        margin: 0;
+      }
+
+      .author-role {
+        font-size: $font-size-sm;
+        color: $text-color-light;
+        margin: 0;
+      }
+    }
+  }
+}
+
+//================================================
+// DARK MODE SUPPORT
+//================================================
+@media (prefers-color-scheme: dark) {
+  .hero-section-modern {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(67, 56, 202, 0.1) 100%);
+  }
+
+  .card-modern {
+    background: $dark-card;
+    color: $dark-text;
+
+    .card-footer {
+      background: $dark-surface;
+    }
+  }
+
+  .nav-modern {
+    background: rgba($dark-surface, 0.95);
+    border-bottom-color: rgba($dark-text-muted, 0.1);
+
+    &.scrolled {
+      background: rgba($dark-surface, 0.98);
+    }
+
+    .nav-link {
+      color: $dark-text-muted;
+
+      &:hover,
+      &.active {
+        color: $dark-text;
+      }
+    }
+  }
+
+  .testimonial-modern {
+    background: $dark-card;
+    color: $dark-text;
+    border-left-color: $accent-color-1;
+  }
+
+  .glass-card {
+    background: rgba($dark-card, 0.8);
+    border-color: rgba($dark-text-muted, 0.2);
+  }
+}
+
+//================================================
+// RESPONSIVE DESIGN
+//================================================
+@media (max-width: 768px) {
+  .hero-section-modern {
+    .hero-layout {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+      text-align: center;
+    }
+
+    .hero-badges-modern {
+      justify-content: center;
+    }
+
+    .hero-metrics {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-highlights-modern {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .expertise-grid-modern {
+    grid-template-columns: 1fr;
+  }
+
+  .modules-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .publications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+//================================================
+// RIPPLE EFFECT
+//================================================
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    transform: scale(0);
+    animation: rippleAnimation 600ms linear;
+  }
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4);
+    opacity: 0;
   }
 } 
 
- 
+//================================================
+// ANIMATIONS DE FOND LÉGÈRES
+//================================================
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  .particle {
+    position: absolute;
+    background: radial-gradient(circle, rgba(15, 23, 42, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-radius: 50%;
+    animation: float-particle 15s infinite ease-in-out;
+    
+    &:nth-child(1) {
+      width: 8px;
+      height: 8px;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+      animation-duration: 20s;
+    }
+    
+    &:nth-child(2) {
+      width: 12px;
+      height: 12px;
+      top: 60%;
+      left: 80%;
+      animation-delay: -5s;
+      animation-duration: 25s;
+    }
+    
+    &:nth-child(3) {
+      width: 6px;
+      height: 6px;
+      top: 80%;
+      left: 20%;
+      animation-delay: -10s;
+      animation-duration: 18s;
+    }
+    
+    &:nth-child(4) {
+      width: 10px;
+      height: 10px;
+      top: 40%;
+      left: 60%;
+      animation-delay: -15s;
+      animation-duration: 22s;
+    }
+    
+    &:nth-child(5) {
+      width: 4px;
+      height: 4px;
+      top: 10%;
+      left: 70%;
+      animation-delay: -8s;
+      animation-duration: 16s;
+    }
+    
+    &:nth-child(6) {
+      width: 14px;
+      height: 14px;
+      top: 70%;
+      left: 40%;
+      animation-delay: -12s;
+      animation-duration: 28s;
+    }
+  }
+}
+
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px) scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+// Animation gradient de fond subtile
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(45deg, 
+    rgba(249, 250, 251, 0.8) 0%, 
+    rgba(243, 244, 246, 0.9) 25%, 
+    rgba(249, 250, 251, 0.8) 50%, 
+    rgba(245, 247, 250, 0.9) 75%, 
+    rgba(249, 250, 251, 0.8) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 30s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// Réduire l'opacité sur mobile pour éviter la distraction
+@media (max-width: 768px) {
+  .animated-background {
+    opacity: 0.3;
+  }
+  
+  .floating-particles .particle {
+    animation-duration: 30s;
+  }
+} 
+
+// Styles tech-tags pour les modules
+.tech-tag {
+  padding: $space-xs $space-sm;
+  border-radius: $rounded-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+
+  &--prestashop { background: rgba(223, 49, 99, 0.1); color: #df3163; }
+  &--api { background: rgba(15, 23, 42, 0.1); color: $primary-color; }
+  &--integration { background: rgba(15, 23, 42, 0.1); color: $accent-color-2; }
+  &--ecommerce { background: rgba(245, 158, 11, 0.1); color: $accent-color-1; }
+}
+
+// Styles pour les actions de sections
+.view-all-section {
+  text-align: center;
+  padding: $space-md 0;
+  position: relative;
+  z-index: 10;
+  
+  .view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: $rounded-lg;
+    font-weight: $font-weight-semibold;
+    font-size: 1rem;
+    transition: $transition-normal;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      transition: $transition-normal;
+    }
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+      color: white;
+      text-decoration: none;
+      
+      &::before {
+        left: 100%;
+      }
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+      transition: $transition-fast;
+    }
+    
+    &:hover svg {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.publications-cta {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+
+  .cta-content-modern {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $space-3xl;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: $space-md;
+      color: $text-color;
+    }
+
+    p {
+      color: $text-color-light;
+      margin-bottom: $space-md;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Styles pour les features modules
+.module-features {
+  margin-bottom: $space-md;
+
+  .feature-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    padding: $space-xs $space-sm;
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border-radius: $rounded-md;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+  }
+} 
+
+//================================================
+// SYSTÈME DE CARTES COHÉRENT MAIS ADAPTATIF
+//================================================
+
+// Base commune pour toutes les cartes
+.card-base {
+  background: white;
+  border-radius: $rounded-xl;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: $transition-normal;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--card-accent, $primary-color) 50%, transparent 100%);
+    transform: scaleX(0);
+    transition: $transition-normal;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+//================================================
+// CARTES COMPÉTENCES - Design horizontal moderne
+//================================================
+.expertise-card-beautiful {
+  @extend .card-base;
+  --card-accent: $primary-color;
+  padding: 0;
+  overflow: hidden;
+  
+  .expertise-card-inner {
+    display: flex;
+    align-items: stretch;
+    min-height: 180px;
+    
+    .expertise-visual {
+      flex: 0 0 140px;
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.15) 100%);
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: $space-sm;
+      
+      .expertise-icon-beautiful {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+        border-radius: $rounded-2xl;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: white;
+        margin-bottom: $space-md;
+        box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
+        transition: $transition-normal;
+      }
+      
+      .expertise-badge-beautiful {
+        background: linear-gradient(135deg, $accent-color-1 0%, darken($accent-color-1, 10%) 100%);
+        color: white;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-full;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        
+        // S'assurer que le badge est bien visible
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        white-space: nowrap;
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(15, 23, 42, 0.02) 0%, rgba(30, 41, 59, 0.05) 100%);
+        opacity: 0;
+        transition: $transition-normal;
+      }
+    }
+    
+    .expertise-content-beautiful {
+      flex: 1;
+      padding: $space-md;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .expertise-title-beautiful {
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        margin-bottom: $space-md;
+        color: $text-color;
+        line-height: 1.2;
+      }
+
+      .expertise-description-beautiful {
+        color: $text-color-light;
+        line-height: 1.7;
+        margin-bottom: $space-md;
+        font-size: 1rem;
+      }
+
+      .expertise-skills-beautiful {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-sm;
+        
+        .skill-beautiful {
+          padding: $space-xs $space-md;
+          background: linear-gradient(135deg, rgba(15, 23, 42, 0.08) 0%, rgba(30, 41, 59, 0.12) 100%);
+          color: $primary-color;
+          border-radius: $rounded-full;
+          font-size: $font-size-sm;
+          font-weight: $font-weight-semibold;
+          border: 1px solid rgba(15, 23, 42, 0.2);
+          transition: $transition-fast;
+          
+          &:hover {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.15) 0%, rgba(30, 41, 59, 0.2) 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(15, 23, 42, 0.2);
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .expertise-visual {
+      &::before {
+        opacity: 1;
+      }
+      
+      .expertise-icon-beautiful {
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 0 12px 35px rgba(15, 23, 42, 0.4);
+      }
+    }
+  }
+  
+  // Version mobile : passage en vertical
+  @media (max-width: 768px) {
+    .expertise-card-inner {
+      flex-direction: column;
+      
+      .expertise-visual {
+        flex: 0 0 120px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $space-lg;
+        
+        .expertise-icon-beautiful {
+          margin-bottom: 0;
+          width: 60px;
+          height: 60px;
+          font-size: 1.8rem;
+        }
+      }
+      
+      .expertise-content-beautiful {
+        padding: $space-lg;
+      }
+    }
+  }
+}
+
+//================================================
+// CARTES MODULES - Avec images restaurées
+//================================================
+.module-card-beautiful {
+  @extend .card-base;
+  --card-accent: $accent-color-1;
+  padding: 0;
+  
+  .module-image-beautiful {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(34, 197, 94, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; // Modifié pour ne pas couper l'image
+      object-position: center;
+      background: #f8fafc;
+      transition: $transition-normal;
+    }
+    
+    .module-overlay-beautiful {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.8) 0%, rgba(34, 197, 94, 0.8) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: $transition-normal;
+      
+      .preview-btn {
+        padding: $space-md $space-xl;
+        background: rgba(255, 255, 255, 0.95);
+        color: $accent-color-1;
+        border-radius: $rounded-lg;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        transform: translateY(10px);
+        transition: $transition-normal;
+        
+        &:hover {
+          transform: translateY(8px) scale(1.05);
+          color: $accent-color-1;
+          text-decoration: none;
+        }
+      }
+    }
+    
+    // Placeholder si pas d'image
+    &:empty::before {
+      content: '';
+      display: none;
+    }
+  }
+  
+  .module-header-beautiful {
+    padding: $space-md $space-xl $space-lg;
+    
+    .module-title-beautiful {
+      font-size: 1.4rem;
+      font-weight: $font-weight-bold;
+      color: $text-color;
+      margin-bottom: $space-md;
+      line-height: 1.3;
+    }
+    
+    .module-tags-beautiful {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-sm;
+      
+      .tech-tag-beautiful {
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-md;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        
+        &--prestashop { 
+          background: linear-gradient(135deg, rgba(223, 49, 99, 0.1) 0%, rgba(219, 39, 119, 0.15) 100%);
+          color: #dc2626; 
+          border: 1px solid rgba(223, 49, 99, 0.2);
+        }
+        &--api { 
+          background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.15) 100%);
+          color: #2563eb; 
+          border: 1px solid rgba(15, 23, 42, 0.2);
+        }
+        &--integration { 
+          background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.15) 100%);
+          color: #059669; 
+          border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        &--ecommerce { 
+          background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.15) 100%);
+          color: darken($accent-color-1, 10%); 
+          border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+      }
+    }
+  }
+  
+  .module-content-beautiful {
+    padding: 0 $space-xl $space-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    .module-description-beautiful {
+      color: $text-color-light;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: $space-md;
+      flex: 1;
+    }
+    
+
+  }
+  
+  .module-footer-beautiful {
+    padding: $space-md $space-xl $space-xl;
+    
+    .module-action-beautiful {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: $space-xs;
+      padding: $space-sm $space-lg;
+      background: transparent;
+      color: $primary-color;
+      text-decoration: none;
+      border: 1px solid rgba(15, 23, 42, 0.3);
+      border-radius: $rounded-md;
+      font-weight: $font-weight-medium;
+      font-size: 0.9rem;
+      transition: $transition-normal;
+      
+      &:hover {
+        background: rgba(15, 23, 42, 0.05);
+        border-color: $primary-color;
+        color: $primary-color;
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+      
+      svg {
+        width: 14px;
+        height: 14px;
+        transition: $transition-fast;
+        flex-shrink: 0;
+      }
+      
+      &:hover svg {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &:hover {
+    .module-image-beautiful {
+      img {
+        transform: scale(1.05);
+      }
+      
+      .module-overlay-beautiful {
+        opacity: 1;
+        
+        .preview-btn {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// CARTES PUBLICATIONS - Avec images restaurées
+//================================================
+.publication-card-beautiful {
+  @extend .card-base;
+  --card-accent: $accent-color-1;
+  padding: 0;
+  
+  .publication-image-beautiful {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(15, 23, 42, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $transition-normal;
+    }
+    
+    .publication-category-beautiful {
+      position: absolute;
+      top: $space-md;
+      right: $space-md;
+      padding: $space-xs $space-md;
+      background: rgba(139, 92, 246, 0.9);
+      color: white;
+      border-radius: $rounded-full;
+      font-size: $font-size-xs;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+    }
+    
+    // Placeholder si pas d'image
+    &:empty::before {
+      content: '📝';
+      font-size: 4rem;
+      color: rgba(139, 92, 246, 0.3);
+    }
+  }
+  
+  .publication-header-beautiful {
+    padding: $space-md $space-xl $space-lg;
+    
+    .publication-meta-beautiful {
+      display: flex;
+      align-items: center;
+      gap: $space-md;
+      margin-bottom: $space-md;
+      
+      .publication-type-beautiful {
+        padding: $space-xs $space-md;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(30, 41, 59, 0.15) 100%);
+        color: $accent-color-2;
+        border-radius: $rounded-full;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: 1px solid rgba(139, 92, 246, 0.2);
+      }
+      
+      .publication-time-beautiful {
+        color: $text-color-light;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+      }
+    }
+    
+    .publication-title-beautiful {
+      font-size: 1.4rem;
+      font-weight: $font-weight-bold;
+      color: $text-color;
+      line-height: 1.3;
+      margin-bottom: $space-md;
+    }
+  }
+  
+  .publication-content-beautiful {
+    padding: 0 $space-xl $space-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    .publication-excerpt-beautiful {
+      color: $text-color-light;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: $space-md;
+      flex: 1;
+    }
+    
+    .publication-topics-beautiful {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-sm;
+      margin-bottom: $space-md;
+      
+      .topic-beautiful {
+        padding: $space-xs $space-sm;
+        background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(30, 41, 59, 0.12) 100%);
+        color: $accent-color-2;
+        border-radius: $rounded-md;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-semibold;
+        border: 1px solid rgba(139, 92, 246, 0.15);
+      }
+    }
+  }
+  
+  .publication-footer-beautiful {
+    padding: $space-lg $space-xl $space-xl;
+    
+    .publication-link-beautiful {
+      display: inline-flex;
+      align-items: center;
+      gap: $space-sm;
+      color: $accent-color-2;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
+      font-size: 1rem;
+      transition: $transition-normal;
+      padding: $space-md 0;
+      
+      &:hover {
+        gap: $space-md;
+        color: #6d28d9;
+        text-decoration: none;
+        transform: translateX(3px);
+      }
+      
+      svg {
+        width: 18px;
+        height: 18px;
+        transition: $transition-fast;
+      }
+      
+      &:hover svg {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  &:hover {
+    .publication-image-beautiful img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+//================================================
+// BOUTON "TOUS MES ARTICLES" - Style moderne
+//================================================
+.view-all-articles-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+  padding: $space-md $space-2xl;
+  background: linear-gradient(135deg, $accent-color-1 0%, $secondary-color 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: $rounded-xl;
+  font-weight: $font-weight-bold;
+  font-size: 1.1rem;
+  transition: $transition-normal;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  min-height: 64px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: $transition-normal;
+  }
+  
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+    color: white;
+    text-decoration: none;
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-2px) scale(1.01);
+  }
+  
+  svg {
+    width: 24px;
+    height: 24px;
+    transition: $transition-fast;
+  }
+  
+  &:hover svg {
+    transform: translateX(3px) rotate(5deg);
+  }
+  
+  .btn-text {
+    position: relative;
+    z-index: 1;
+  }
+} 
+
+//================================================
+// BREADCRUMB COMPACT
+//================================================
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  padding: $space-sm $space-md;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(226, 232, 240, 0.4);
+  border-radius: $rounded-md;
+  margin-top: $space-md;
+  margin-bottom: $space-md;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  
+  a, span {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    font-size: 0.85rem;
+    transition: $transition-fast;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+  }
+  
+  a {
+    color: $text-color-light;
+    
+    &:hover {
+      color: $primary-color;
+      background: rgba(15, 23, 42, 0.08);
+      text-decoration: none;
+    }
+    
+    &:first-child {
+      color: $primary-color;
+      font-weight: $font-weight-semibold;
+      
+      &::before {
+        content: '🏠';
+        margin-right: $space-xs;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  
+  span {
+    color: $text-color;
+    font-weight: $font-weight-semibold;
+    background: rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.15);
+  }
+  
+  // Séparateurs simples
+  a + a::before,
+  a + span::before {
+    content: '›';
+    color: $text-color-light;
+    font-size: 0.8rem;
+    margin: 0 $space-xs;
+  }
+  
+  @media (max-width: 768px) {
+    padding: $space-xs $space-sm;
+    margin: $space-xs 0 $space-md;
+    
+    a, span {
+      font-size: 0.8rem;
+      padding: 2px $space-xs;
+    }
+    
+    a:first-child::before {
+      content: '🏠';
+      margin-right: $space-xs;
+    }
+  }
+} 
 
 //================================================
 // SKILLS PAGE DESIGN MODERNE
