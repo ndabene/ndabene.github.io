@@ -57,6 +57,9 @@ body_class: "page-blog"
                     <div class="post-list-modern" id="blog-posts-container">
                         {% include blog-post-loop.html posts=site.posts limit=12 %}
                     </div>
+                    
+                    <!-- Données des futurs posts pour le mode admin -->
+                    {% include future-posts-data.html %}
 
                     <!-- Pagination -->
                     {% assign posts_per_page = 12 %}
@@ -131,3 +134,4 @@ body_class: "page-blog"
 </section>
 
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>
