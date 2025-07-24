@@ -4,7 +4,7 @@
 
 .page-hero-section {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(147, 197, 253, 0.12) 100%);
-  padding: $space-4xl 0 $space-3xl;
+  padding: $space-2xl 0 $space-xl;
   position: relative;
   overflow: hidden;
   
@@ -25,7 +25,7 @@
   
   // Fil d'Ariane
   .breadcrumb {
-    margin-bottom: $space-xl;
+    margin-bottom: $space-md;
     position: relative;
     z-index: 10;
     
@@ -33,31 +33,31 @@
       font-size: $font-size-sm;
       font-weight: $font-weight-medium;
       padding: $space-sm $space-md;
-      background: rgba($white, 0.9);
+      background: transparent;
       border-radius: $rounded-full;
       text-decoration: none;
       transition: $transition-normal;
       margin-right: $space-sm;
-      box-shadow: 0 2px 4px rgba($black, 0.1);
-      border: 1px solid rgba($primary-color, 0.1);
+      box-shadow: none;
+      border: none;
     }
     
     a {
       color: $text-color-light;
       
       &:hover {
-        background: $white;
+        background: transparent;
         color: $primary-color;
         transform: translateY(-1px);
-        box-shadow: 0 4px 8px rgba($primary-color, 0.15);
+        box-shadow: none;
         text-decoration: none;
       }
     }
     
     span {
       color: $primary-color;
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.15) 100%);
-      border-color: rgba($primary-color, 0.3);
+      background: rgba(15, 23, 42, 0.04);
+      border: none;
     }
   }
   
