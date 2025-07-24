@@ -1,6 +1,12 @@
 # Configuration des séries d'articles
 # Ajoutez ici vos séries avec leurs descriptions
 
+# Série de test pour valider le système
+"Test Série PrestaShop":
+  description: "Série de test pour valider le système de navigation et preview admin des futurs posts."
+  category: "Test"
+  difficulty: "Débutant"
+
 # Exemple de série (à adapter selon vos besoins)
 "Maîtriser PrestaShop":
   description: "Une série complète pour devenir expert en développement PrestaShop, de la création de modules à l'optimisation des performances."
