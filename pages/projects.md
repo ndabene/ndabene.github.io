@@ -155,3 +155,99 @@ body_class: "page-projects"
         {% endif %}
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestion des filtres de projets
+    const filterBtns = document.querySelectorAll('.filter-btn-modern');
+    const projectCards = document.querySelectorAll('.project-card-modern');
+    const projectsGrid = document.querySelector('.projects-grid-modern');
+
+    // Ajouter la classe visible à tous les projets initialement
+    projectCards.forEach(card => {
+        card.classList.add('visible');
+    });
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Mise à jour du bouton actif
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            // Filtrage des projets
+            if (filter === 'all') {
+                // Afficher tous les projets
+                projectCards.forEach(card => {
+                    card.style.display = '';
+                    card.classList.add('visible');
+                });
+            } else {
+                // Filtrer par catégorie
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-categories');
+                    if (categories && categories.includes(filter)) {
+                        card.style.display = '';
+                        card.classList.add('visible');
+                    } else {
+                        card.classList.remove('visible');
+                        setTimeout(() => {
+                            if (!card.classList.contains('visible')) {
+                                card.style.display = 'none';
+                            }
+                        }, 300);
+                    }
+                });
+            }
+            
+            // Force le réarrangement du layout
+            setTimeout(() => {
+                // Trick pour forcer un reflow
+                projectsGrid.style.display = 'none';
+                void projectsGrid.offsetHeight; // Force un reflow
+                projectsGrid.style.display = '';
+            }, 350);
+        });
+    });
+});
+</script>
+
+<style>
+/* Styles pour l'animation des projets */
+.project-card-modern {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+}
+
+.project-card-modern.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation pour les boutons de filtre */
+.filter-btn-modern {
+    transition: all 0.3s ease;
+}
+
+.filter-btn-modern.active {
+    background: #0f172a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+/* Correction pour la grille des projets */
+.projects-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-grid-modern {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
