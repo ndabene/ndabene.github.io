@@ -55,20 +55,11 @@ body_class: "page-blog"
                     </div>
                     
                     <div class="post-list-modern" id="blog-posts-container">
-                        {% assign posts_per_page = 6 %}
-                        {% for post in site.posts limit: posts_per_page %}
-                            <div class="post-preview-wrapper {% if post.date > site.time %}future-post-item{% endif %}" style="{% if post.date > site.time %}display: none;{% endif %}">
-                                {% include post-preview.html post=post %}
-                                {% if post.date > site.time %}
-                                    <div class="future-post-badge">
-                                        <i class="fas fa-clock"></i> Publication prévue le {% include date-fr.html date=post.date %}
-                                    </div>
-                                {% endif %}
-                            </div>
-                        {% endfor %}
+                        {% include blog-post-loop.html posts=site.posts limit=12 %}
                     </div>
 
                     <!-- Pagination -->
+                    {% assign posts_per_page = 12 %}
                     {% if site.posts.size > posts_per_page %}
                         <div class="pagination-container">
                             <div class="pagination">

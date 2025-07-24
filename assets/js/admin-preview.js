@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Afficher les futurs posts dans les listes
-        document.querySelectorAll('.future-post-item').forEach(el => {
+        document.querySelectorAll('[data-future="true"]').forEach(el => {
             el.style.display = 'block';
         });
         

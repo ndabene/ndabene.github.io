@@ -1,0 +1,50 @@
+{% comment %}
+Boucle pour afficher les posts avec gestion des futurs posts
+Usage: {% include blog-post-loop.html posts=site.posts limit=6 %}
+{% endcomment %}
+
+{% assign posts_to_show = include.posts | default: site.posts %}
+{% assign post_limit = include.limit | default: 12 %}
+
+<!-- Script pour détecter le mode admin avant le rendu -->
+<script>
+// Fonction pour vérifier le mode admin dès le chargement
+(function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isAdmin = urlParams.get('admin_preview') === 'true';
+    
+    if (isAdmin) {
+        // Marquer le mode admin avant que la page soit complètement rendue
+        document.documentElement.classList.add('admin-preview-active');
+        sessionStorage.setItem('admin_preview', 'true');
+    }
+})();
+</script>
+
+<style>
+/* Styles pour afficher les futurs posts en mode admin */
+html:not(.admin-preview-active) .future-post-item {
+    display: none !important;
+}
+
+html.admin-preview-active .future-post-item {
+    display: block !important;
+}
+</style>
+
+{% for post in posts_to_show limit: post_limit %}
+    <div class="post-preview-wrapper {% if post.date > site.time %}future-post-item{% endif %}" 
+         data-post-date="{{ post.date | date: '%Y-%m-%d' }}"
+         data-current-date="{{ site.time | date: '%Y-%m-%d' }}"
+         data-is-future="{% if post.date > site.time %}true{% else %}false{% endif %}">
+        
+        {% include post-preview.html post=post %}
+        
+        {% if post.date > site.time %}
+            <div class="future-post-badge">
+                <i class="fas fa-clock"></i> 
+                Publication prévue le {% include date-fr.html date=post.date %}
+            </div>
+        {% endif %}
+    </div>
+{% endfor %}
