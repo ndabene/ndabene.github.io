@@ -11,6 +11,9 @@ baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la r
 # Build settings
 lang: fr
 future: false  # Ne pas publier les posts avec une date future
+
+# Admin IP pour preview des futurs posts
+admin_preview_ip: "127.0.0.1"  # Remplacez par votre IP locale
 markdown: kramdown
 kramdown:
   input: GFM
@@ -75,6 +78,7 @@ defaults:
       path: ""
       type: "posts"
     values:
+      layout: post
       sitemap:
         changefreq: "monthly"
         priority: 0.7

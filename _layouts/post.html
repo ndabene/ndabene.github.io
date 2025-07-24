@@ -105,9 +105,14 @@ layout: default
     </header>
     {% endif %}
 
+    <!-- Barre d'administration pour preview -->
+    {% include admin-preview-bar.html %}
+    
     <div class="post-content-wrapper">
         <div class="container post-content-main">
             <div class="post-content-area">
+                <!-- Navigation série en haut de l'article -->
+                {% include series-navigation.html %}
                 {% if page.table_of_contents %}
                     <div class="table-of-contents card">
                         <h3>Table of Contents</h3>
@@ -118,6 +123,9 @@ layout: default
                 <div class="post-content">
                     {{ content }}
                 </div>
+                
+                <!-- Helper LinkedIn pour les futurs posts -->
+                {% include linkedin-preview-helper.html %}
                 
                 <!-- Intégrer le JavaScript pour l'amélioration des blocs de code -->
                 <script src="{{ '/assets/js/code-highlighting.js' | relative_url }}"></script>

@@ -1,0 +1,18 @@
+# Configuration des séries d'articles
+# Ajoutez ici vos séries avec leurs descriptions
+
+# Exemple de série (à adapter selon vos besoins)
+"Maîtriser PrestaShop":
+  description: "Une série complète pour devenir expert en développement PrestaShop, de la création de modules à l'optimisation des performances."
+  category: "E-commerce"
+  difficulty: "Intermédiaire"
+  
+"Intelligence Artificielle en PHP":
+  description: "Découvrez comment intégrer l'IA dans vos applications PHP, des APIs aux outils d'analyse de données."
+  category: "AI & Development"
+  difficulty: "Avancé"
+
+"Optimisation Performance Web":
+  description: "Techniques avancées pour optimiser les performances de vos applications web PHP et JavaScript."
+  category: "Performance"
+  difficulty: "Avancé"

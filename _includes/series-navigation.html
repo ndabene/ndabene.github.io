@@ -1,0 +1,80 @@
+{% comment %}
+Navigation pour les séries d'articles
+Usage: {% include series-navigation.html %}
+{% endcomment %}
+
+{% if page.series %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "series_part" %}
+  {% if series_posts.size > 1 %}
+    <div class="series-navigation card">
+      <h3 class="series-title">
+        <i class="fas fa-list-ol"></i> Série : {{ page.series }}
+      </h3>
+      
+      <div class="series-description">
+        {% assign series_description = site.data.series[page.series].description %}
+        {% if series_description %}
+          <p>{{ series_description }}</p>
+        {% endif %}
+      </div>
+      
+      <div class="series-progress">
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: {{ page.series_part | times: 100.0 | divided_by: series_posts.size }}%"></div>
+        </div>
+        <span class="progress-text">Partie {{ page.series_part }} sur {{ series_posts.size }}</span>
+      </div>
+      
+      <ol class="series-list">
+        {% for post in series_posts %}
+          <li class="series-item {% if post.url == page.url %}current{% endif %}">
+            {% if post.url == page.url %}
+              <span class="current-marker">📍</span>
+              <strong>{{ post.title }}</strong>
+              <span class="current-label">(Article actuel)</span>
+            {% elsif post.date > site.time and page.admin_preview != true %}
+              <span class="future-marker">🔒</span>
+              <span class="future-post">{{ post.title }}</span>
+              <small class="future-date">Publié le {% include date-fr.html date=post.date %}</small>
+            {% else %}
+              <a href="{{ post.url | relative_url }}" class="series-link">
+                <span class="link-marker">🔗</span>
+                {{ post.title }}
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+      
+      <div class="series-navigation-buttons">
+        {% assign current_index = 0 %}
+        {% for post in series_posts %}
+          {% if post.url == page.url %}
+            {% assign current_index = forloop.index0 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if current_index > 0 %}
+          {% assign prev_post = series_posts[current_index | minus: 1] %}
+          <a href="{{ prev_post.url | relative_url }}" class="btn btn-nav btn-prev">
+            <i class="fas fa-chevron-left"></i> Article précédent
+          </a>
+        {% endif %}
+        
+        {% if current_index < series_posts.size | minus: 1 %}
+          {% assign next_post = series_posts[current_index | plus: 1] %}
+          {% if next_post.date <= site.time or page.admin_preview == true %}
+            <a href="{{ next_post.url | relative_url }}" class="btn btn-nav btn-next">
+              Article suivant <i class="fas fa-chevron-right"></i>
+            </a>
+          {% else %}
+            <span class="btn btn-nav btn-next disabled">
+              Prochain article le {% include date-fr.html date=next_post.date %}
+            </span>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

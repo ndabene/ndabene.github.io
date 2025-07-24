@@ -47,10 +47,24 @@ body_class: "page-blog"
                         </div>
                     </div>
 
+                    <!-- Bouton admin pour voir les futurs posts -->
+                    <div id="admin-toggle-section" style="display: none;">
+                        <button onclick="enableAdminPreview()" class="btn btn-admin-toggle">
+                            <i class="fas fa-eye"></i> Mode Admin (voir futurs posts)
+                        </button>
+                    </div>
+                    
                     <div class="post-list-modern" id="blog-posts-container">
                         {% assign posts_per_page = 6 %}
                         {% for post in site.posts limit: posts_per_page %}
-                            {% include post-preview.html post=post %}
+                            <div class="post-preview-wrapper {% if post.date > site.time %}future-post-item{% endif %}" style="{% if post.date > site.time %}display: none;{% endif %}">
+                                {% include post-preview.html post=post %}
+                                {% if post.date > site.time %}
+                                    <div class="future-post-badge">
+                                        <i class="fas fa-clock"></i> Publication prévue le {% include date-fr.html date=post.date %}
+                                    </div>
+                                {% endif %}
+                            </div>
                         {% endfor %}
                     </div>
 

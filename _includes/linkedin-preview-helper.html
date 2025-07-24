@@ -1,0 +1,95 @@
+{% comment %}
+Helper pour prévisualiser et copier l'URL LinkedIn d'un article futur
+Usage: {% include linkedin-preview-helper.html %}
+{% endcomment %}
+
+{% if page.admin_preview == true or page.date > site.time %}
+<div class="linkedin-preview-helper">
+  <h4><i class="fab fa-linkedin"></i> Planification LinkedIn</h4>
+  
+  <div class="url-preview">
+    <label>URL de production :</label>
+    <div class="url-display">
+      <input type="text" id="production-url" value="https://nicolas-dabene.fr{{ page.url }}" readonly>
+      <button onclick="copyProductionUrl()" class="btn btn-sm btn-copy">
+        <i class="fas fa-copy"></i> Copier
+      </button>
+    </div>
+  </div>
+  
+  <div class="linkedin-post-preview">
+    <label>Suggestion de post LinkedIn :</label>
+    <textarea id="linkedin-suggestion" rows="4" readonly>🚀 Nouvel article publié : {{ page.title }}
+
+{{ page.excerpt | strip_html | truncate: 100 }}
+
+👉 https://nicolas-dabene.fr{{ page.url }}
+
+#{{ page.tags | join: ' #' | prepend: '#' }}</textarea>
+    <button onclick="copyLinkedInSuggestion()" class="btn btn-sm btn-copy">
+      <i class="fas fa-copy"></i> Copier le post
+    </button>
+  </div>
+  
+  <div class="publication-info">
+    <p><strong>Date de publication :</strong> {% include date-fr.html date=page.date %}</p>
+    <p><strong>Temps restant :</strong> <span id="countdown"></span></p>
+  </div>
+</div>
+
+<script>
+function copyProductionUrl() {
+  const urlInput = document.getElementById('production-url');
+  urlInput.select();
+  document.execCommand('copy');
+  
+  const btn = event.target.closest('button');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '<i class="fas fa-check"></i> Copié !';
+  btn.classList.add('success');
+  
+  setTimeout(() => {
+    btn.innerHTML = originalText;
+    btn.classList.remove('success');
+  }, 2000);
+}
+
+function copyLinkedInSuggestion() {
+  const textarea = document.getElementById('linkedin-suggestion');
+  textarea.select();
+  document.execCommand('copy');
+  
+  const btn = event.target.closest('button');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '<i class="fas fa-check"></i> Copié !';
+  btn.classList.add('success');
+  
+  setTimeout(() => {
+    btn.innerHTML = originalText;
+    btn.classList.remove('success');
+  }, 2000);
+}
+
+// Countdown jusqu'à la publication
+function updateCountdown() {
+  const publishDate = new Date('{{ page.date | date: "%Y-%m-%d %H:%M:%S" }}');
+  const now = new Date();
+  const diff = publishDate - now;
+  
+  if (diff > 0) {
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    
+    document.getElementById('countdown').innerHTML = 
+      `${days}j ${hours}h ${minutes}min`;
+  } else {
+    document.getElementById('countdown').innerHTML = 'Article publié !';
+  }
+}
+
+// Mettre à jour le countdown toutes les minutes
+updateCountdown();
+setInterval(updateCountdown, 60000);
+</script>
+{% endif %}

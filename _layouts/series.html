@@ -1,0 +1,138 @@
+---
+layout: default
+---
+
+<div class="series-page">
+  <div class="container">
+    <header class="series-header">
+      <h1 class="series-title">
+        <i class="fas fa-list-ol"></i>
+        {{ page.series_name }}
+      </h1>
+      
+      {% if page.series_info.description %}
+        <p class="series-description">{{ page.series_info.description }}</p>
+      {% endif %}
+      
+      <div class="series-meta">
+        {% if page.series_info.category %}
+          <span class="badge badge--category">{{ page.series_info.category }}</span>
+        {% endif %}
+        {% if page.series_info.difficulty %}
+          <span class="badge badge--difficulty-{{ page.series_info.difficulty | slugify }}">{{ page.series_info.difficulty }}</span>
+        {% endif %}
+        <span class="badge badge--count">{{ page.series_posts.size }} articles</span>
+      </div>
+    </header>
+    
+    <div class="series-content">
+      <div class="series-progress-overview">
+        <h2>Progression de la série</h2>
+        <div class="progress-stats">
+          {% assign published_count = 0 %}
+          {% for post in page.series_posts %}
+            {% if post.date <= site.time %}
+              {% assign published_count = published_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          
+          <div class="stat-item">
+            <span class="stat-number">{{ published_count }}</span>
+            <span class="stat-label">Articles publiés</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number">{{ page.series_posts.size | minus: published_count }}</span>
+            <span class="stat-label">À venir</span>
+          </div>
+          
+          <div class="stat-item">
+            <span class="stat-number">{{ page.series_posts.size }}</span>
+            <span class="stat-label">Total</span>
+          </div>
+        </div>
+        
+        <div class="overall-progress-bar">
+          <div class="progress-fill" style="width: {{ published_count | times: 100.0 | divided_by: page.series_posts.size }}%"></div>
+        </div>
+      </div>
+      
+      <div class="series-articles-list">
+        <h2>Articles de la série</h2>
+        
+        <div class="articles-grid">
+          {% for post in page.series_posts %}
+            <article class="series-article-card {% if post.date > site.time %}future-article{% endif %}">
+              <div class="article-number">
+                <span>{{ post.series_part | default: forloop.index }}</span>
+              </div>
+              
+              <div class="article-content">
+                <h3 class="article-title">
+                  {% if post.date <= site.time or page.admin_preview == true %}
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  {% else %}
+                    <span class="future-title">{{ post.title }}</span>
+                  {% endif %}
+                </h3>
+                
+                <div class="article-meta">
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {% if post.date <= site.time %}
+                      Publié le {% include date-fr.html date=post.date %}
+                    {% else %}
+                      Prévu le {% include date-fr.html date=post.date %}
+                    {% endif %}
+                  </time>
+                  
+                  {% if post.estimated_reading_time %}
+                    <span class="reading-time">
+                      <i class="fas fa-clock"></i> {{ post.estimated_reading_time }}
+                    </span>
+                  {% endif %}
+                </div>
+                
+                {% if post.excerpt %}
+                  <p class="article-excerpt">{{ post.excerpt | truncate: 120 }}</p>
+                {% endif %}
+                
+                <div class="article-tags">
+                  {% for tag in post.tags limit: 3 %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              </div>
+              
+              <div class="article-status">
+                {% if post.date <= site.time %}
+                  <span class="status-published">
+                    <i class="fas fa-check-circle"></i> Publié
+                  </span>
+                {% else %}
+                  <span class="status-future">
+                    <i class="fas fa-clock"></i> À venir
+                  </span>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="series-footer">
+        <div class="series-subscribe">
+          <h3>Suivre cette série</h3>
+          <p>Ne manquez aucun article de cette série !</p>
+          <div class="subscribe-buttons">
+            <a href="/feed.xml" class="btn btn-outline" target="_blank">
+              <i class="fas fa-rss"></i> Flux RSS
+            </a>
+            <a href="https://www.linkedin.com/in/nicolas-dabene/" class="btn btn-primary" target="_blank">
+              <i class="fab fa-linkedin"></i> Suivre sur LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
