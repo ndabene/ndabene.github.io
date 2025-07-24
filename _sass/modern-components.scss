@@ -2124,7 +2124,7 @@ body {
     animation: code-float 12s ease-in-out infinite;
     z-index: 0;
     pointer-events: none;
-    transform: rotate(-8deg);
+    transform: rotate(-12deg);
     text-shadow: 0 0 15px rgba(15, 23, 42, 0.2);
     white-space: nowrap;
     overflow: hidden;
@@ -3286,67 +3286,19 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
   }
   
   // Variants par catégorie avec couleurs spécifiques
-  &[data-category="php-backend"] {
-    --skill-gradient: linear-gradient(135deg, $primary-color 0%, $primary-color-dark 100%);
-    --skill-color: $primary-color-dark;
-    --skill-shadow: rgba(15, 23, 42, 0.3);
-    --skill-glow: rgba(15, 23, 42, 0.6);
-  }
-  
-  &[data-category="ecommerce"] {
-    --skill-gradient: linear-gradient(135deg, $accent-color-1 0%, darken($accent-color-1, 10%) 100%);
-    --skill-color: darken($accent-color-1, 10%);
-    --skill-shadow: rgba(245, 158, 11, 0.3);
-    --skill-glow: rgba(245, 158, 11, 0.6);
-  }
-  
-  &[data-category="ai"] {
-    --skill-gradient: linear-gradient(135deg, $accent-color-1 0%, $accent-color-2 100%);
-    --skill-color: $accent-color-2;
-    --skill-shadow: rgba(139, 92, 246, 0.3);
-    --skill-glow: rgba(139, 92, 246, 0.6);
-  }
-  
-  &[data-category="frontend"] {
-    --skill-gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-    --skill-color: $primary-color;
-    --skill-shadow: rgba(15, 23, 42, 0.3);
-    --skill-glow: rgba(15, 23, 42, 0.6);
-  }
-  
-  &[data-category="devops"] {
-    --skill-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    --skill-color: #dc2626;
-    --skill-shadow: rgba(239, 68, 68, 0.3);
-    --skill-glow: rgba(239, 68, 68, 0.6);
-  }
-  
-  &[data-category="integrations"] {
-    --skill-gradient: linear-gradient(135deg, $accent-color-2 0%, $secondary-color 100%);
-    --skill-color: $accent-color-2;
-    --skill-shadow: rgba(100, 116, 139, 0.3);
-    --skill-glow: rgba(100, 116, 139, 0.6);
-  }
-  
-  &[data-category="leadership"] {
+  &[data-category="php-backend"],
+  &[data-category="ecommerce"],
+  &[data-category="ai"],
+  &[data-category="frontend"],
+  &[data-category="devops"],
+  &[data-category="integrations"],
+  &[data-category="leadership"],
+  &[data-category="soft-skills"],
+  &[data-category="learning"] {
     --skill-gradient: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
     --skill-color: #65a30d;
     --skill-shadow: rgba(132, 204, 22, 0.3);
     --skill-glow: rgba(132, 204, 22, 0.6);
-  }
-  
-  &[data-category="soft-skills"] {
-    --skill-gradient: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-    --skill-color: #ea580c;
-    --skill-shadow: rgba(249, 115, 22, 0.3);
-    --skill-glow: rgba(249, 115, 22, 0.6);
-  }
-  
-  &[data-category="learning"] {
-    --skill-gradient: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
-    --skill-color: #9333ea;
-    --skill-shadow: rgba(168, 85, 247, 0.3);
-    --skill-glow: rgba(168, 85, 247, 0.6);
   }
 }
 
