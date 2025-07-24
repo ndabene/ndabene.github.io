@@ -38,12 +38,12 @@ html.admin-preview-active .future-post-item {
          data-current-date="{{ site.time | date: '%Y-%m-%d' }}"
          data-is-future="{% if post.date > site.time %}true{% else %}false{% endif %}">
         
-        {% include post-preview.html post=post %}
+        {% include post-preview-news.html post=post %}
         
         {% if post.date > site.time %}
-            <div class="future-post-badge">
+            <div class="future-post-badge-compact">
                 <i class="fas fa-clock"></i> 
-                Publication prévue le {% include date-fr.html date=post.date %}
+                Prévu le {% include date-fr.html date=post.date %}
             </div>
         {% endif %}
     </div>

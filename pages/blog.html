@@ -23,27 +23,39 @@ body_class: "page-blog"
 <section class="blog-content-section">
     <div class="container">
         {% if site.posts.size > 0 %}
-            <div class="blog-grid">
-                <div class="main-blog-content">
+            <div class="blog-grid-news">
+                <div class="main-blog-content-news">
                     <!-- Filtres et tri -->
-                    <div class="blog-filters">
-                        <div class="filter-group">
-                            <label>Catégories:</label>
-                            <select id="category-filter">
-                                <option value="">Toutes les catégories</option>
-                                {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-                                {% for category in all_categories %}
-                                    <option value="{{ category }}">{{ category }}</option>
-                                {% endfor %}
-                            </select>
+                    <div class="blog-filters-compact">
+                        <div class="filters-left">
+                            <div class="filter-group">
+                                <label>Filtrer:</label>
+                                <select id="category-filter">
+                                    <option value="">Toutes les catégories</option>
+                                    {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                                    {% for category in all_categories %}
+                                        <option value="{{ category }}">{{ category }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Trier:</label>
+                                <select id="sort-filter">
+                                    <option value="date-desc">Plus récent</option>
+                                    <option value="date-asc">Plus ancien</option>
+                                    <option value="title">Titre A-Z</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="filter-group">
-                            <label>Trier par:</label>
-                            <select id="sort-filter">
-                                <option value="date-desc">Plus récent</option>
-                                <option value="date-asc">Plus ancien</option>
-                                <option value="title">Titre A-Z</option>
-                            </select>
+                        <div class="filters-right">
+                            <div class="view-toggle">
+                                <button id="view-list" class="view-btn active" title="Vue liste">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <button id="view-grid" class="view-btn" title="Vue grille">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -54,8 +66,8 @@ body_class: "page-blog"
                         </button>
                     </div>
                     
-                    <div class="post-list-modern" id="blog-posts-container">
-                        {% include blog-post-loop.html posts=site.posts limit=12 %}
+                    <div class="post-list-news" id="blog-posts-container">
+                        {% include blog-post-loop.html posts=site.posts limit=15 %}
                     </div>
                     
                     <!-- Données des futurs posts pour le mode admin -->
@@ -76,19 +88,19 @@ body_class: "page-blog"
                 </div>
 
                 <!-- Sidebar -->
-                <aside class="blog-sidebar">
-                    <div class="sidebar-widget">
-                        <h3>Articles récents</h3>
-                        <div class="recent-posts-list">
-                            {% for post in site.posts limit: 5 %}
-                                <article class="recent-post-item">
+                <aside class="blog-sidebar-news">
+                    <div class="sidebar-widget-compact">
+                        <h4>Récents</h4>
+                        <div class="recent-posts-compact">
+                            {% for post in site.posts limit: 6 %}
+                                <article class="recent-post-compact">
                                     {% if post.image %}
-                                        <div class="recent-post-thumb">
+                                        <div class="recent-thumb-mini">
                                             <img src="{{ post.image }}" alt="{{ post.title }}">
                                         </div>
                                     {% endif %}
-                                    <div class="recent-post-content">
-                                        <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                                    <div class="recent-content-mini">
+                                        <h5><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a></h5>
                                         <time>{% include date-fr.html date=post.date %}</time>
                                     </div>
                                 </article>
@@ -96,30 +108,55 @@ body_class: "page-blog"
                         </div>
                     </div>
 
-                    <div class="sidebar-widget">
-                        <h3>Catégories</h3>
-                        <div class="categories-list">
-                            {% assign categories_count = site.posts | group_by: 'categories' %}
+                    <div class="sidebar-widget-compact">
+                        <h4>Catégories</h4>
+                        <div class="categories-compact">
                             {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
-                                <a href="#category-{{ category }}" class="category-link">
-                                    <span class="category-name">{{ category }}</span>
-                                    <span class="category-count">{{ category_posts.size }}</span>
+                                <a href="#category-{{ category }}" class="category-compact">
+                                    {{ category }} <span>({{ category_posts.size }})</span>
                                 </a>
                             {% endfor %}
                         </div>
                     </div>
 
-                    <div class="sidebar-widget">
-                        <h3>Tags populaires</h3>
-                        <div class="tags-cloud">
+                    <div class="sidebar-widget-compact">
+                        <h4>Tags</h4>
+                        <div class="tags-compact">
                             {% assign all_tags = site.posts | map: 'tags' | flatten | uniq | sort %}
-                            {% for tag in all_tags limit: 10 %}
-                                <span class="tag-item">{{ tag }}</span>
+                            {% for tag in all_tags limit: 12 %}
+                                <span class="tag-compact">{{ tag }}</span>
                             {% endfor %}
                         </div>
                     </div>
+                    
+                    {% if site.data.series %}
+                        {% assign has_series_with_posts = false %}
+                        {% for series in site.data.series %}
+                            {% assign series_posts = site.posts | where: "series", series[0] %}
+                            {% if series_posts.size > 0 %}
+                                {% assign has_series_with_posts = true %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% if has_series_with_posts %}
+                        <div class="sidebar-widget-compact">
+                            <h4>Séries</h4>
+                            <div class="series-compact">
+                                {% for series in site.data.series %}
+                                    {% assign series_posts = site.posts | where: "series", series[0] %}
+                                    {% if series_posts.size > 0 %}
+                                        <a href="/series/{{ series[0] | slugify }}.html" class="series-link-compact">
+                                            {{ series[0] }} <span>({{ series_posts.size }})</span>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
                 </aside>
             </div>
         {% else %}

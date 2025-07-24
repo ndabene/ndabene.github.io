@@ -29,6 +29,12 @@ function loadAndRenderFuturePosts() {
             container.insertAdjacentHTML('afterbegin', postHtml);
         });
         
+        // Réappliquer la vue actuelle après ajout des futurs posts
+        const savedView = localStorage.getItem('blog-view') || 'list';
+        if (savedView === 'grid') {
+            container.classList.add('grid-view');
+        }
+        
         console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin`);
         
     } catch (error) {
@@ -37,56 +43,60 @@ function loadAndRenderFuturePosts() {
 }
 
 function generatePostPreviewHtml(post) {
-    const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-    const categoriesHtml = post.categories.map(cat => `<span class="badge badge--category">${cat}</span>`).join('');
+    const tagsHtml = post.tags.slice(0, 3).map(tag => `<span class="tag-mini">${tag}</span>`).join('');
+    const moreTagsHtml = post.tags.length > 3 ? `<span class="tag-more">+${post.tags.length - 3}</span>` : '';
     
     return `
-        <div class="post-preview-wrapper future-post-item" data-is-future="true">
-            <article class="post-preview-card">
-                <div class="post-preview-content">
+        <div class="post-preview-wrapper future-post-item" 
+             data-is-future="true"
+             data-categories="${post.categories.join(' ')}"
+             data-tags="${post.tags.join(' ')}"
+             data-date="${new Date(post.date).getTime() / 1000}">
+            <article class="post-preview-news">
+                <div class="post-news-content">
                     ${post.image ? `
-                        <div class="post-preview-image">
+                        <div class="post-news-thumb">
                             <img src="${post.image}" alt="${post.title}" loading="lazy">
+                            <span class="post-category-mini">${post.categories[0] || 'Article'}</span>
                         </div>
                     ` : ''}
-                    <div class="post-preview-text">
-                        <div class="post-meta">
+                    
+                    <div class="post-news-text">
+                        <div class="post-news-meta">
                             <time datetime="${post.date}">${post.date_formatted}</time>
-                            ${post.author ? `<span class="author">• ${post.author}</span>` : ''}
-                            ${post.estimated_reading_time ? `<span class="reading-time">• ${post.estimated_reading_time}</span>` : ''}
+                            ${post.estimated_reading_time ? `<span class="reading-time">${post.estimated_reading_time}</span>` : ''}
+                            ${post.series ? `<span class="series-indicator">Série: ${post.series}</span>` : ''}
                         </div>
                         
-                        <h3 class="post-title">
+                        <h3 class="post-news-title">
                             <a href="${post.url}" class="future-post-link" onclick="return false;" title="Article futur - Non accessible">
                                 ${post.title}
                             </a>
                         </h3>
                         
-                        <p class="post-excerpt">${post.excerpt}</p>
+                        <p class="post-news-excerpt">${post.excerpt}</p>
                         
-                        <div class="post-footer">
-                            <div class="post-categories-tags">
-                                ${categoriesHtml}
-                                ${post.difficulty ? `<span class="badge badge--difficulty-${post.difficulty.toLowerCase()}">${post.difficulty}</span>` : ''}
-                            </div>
-                            <div class="post-tags">
-                                ${tagsHtml}
-                            </div>
+                        <div class="post-news-tags">
+                            ${tagsHtml}
+                            ${moreTagsHtml}
                         </div>
-                        
-                        ${post.series ? `
-                            <div class="post-series-info">
-                                <i class="fas fa-list-ol"></i>
-                                <strong>Série:</strong> ${post.series} 
-                                ${post.series_part ? `- Partie ${post.series_part}` : ''}
-                            </div>
+                    </div>
+                    
+                    <div class="post-news-actions">
+                        ${post.difficulty ? `
+                            <span class="difficulty-badge difficulty-${post.difficulty.toLowerCase()}">
+                                ${post.difficulty}
+                            </span>
                         ` : ''}
+                        <a href="${post.url}" class="read-more-compact" onclick="return false;" title="Article futur - Non accessible">
+                            Lire <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </article>
             
-            <div class="future-post-badge">
-                <i class="fas fa-clock"></i> Publication prévue le ${post.date_formatted}
+            <div class="future-post-badge-compact">
+                <i class="fas fa-clock"></i> Prévu le ${post.date_formatted}
             </div>
             
             <!-- Helper LinkedIn pour les futurs posts -->

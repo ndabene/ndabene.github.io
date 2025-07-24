@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const paginationNumbers = document.getElementById('pagination-numbers');
     const showingRange = document.getElementById('showing-range');
     const totalPostsSpan = document.getElementById('total-posts');
+    const viewListBtn = document.getElementById('view-list');
+    const viewGridBtn = document.getElementById('view-grid');
     
     if (!postsContainer) return;
     
@@ -18,15 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Récupérer tous les articles au chargement
     function initializePosts() {
-        const postElements = postsContainer.querySelectorAll('.post-preview');
-        allPosts = Array.from(postElements).map(post => ({
-            element: post,
-            categories: (post.dataset.categories || '').split(' '),
-            tags: (post.dataset.tags || '').split(' '),
-            date: parseInt(post.dataset.date) || 0,
-            title: post.querySelector('.post-title').textContent.trim(),
-            readTime: parseInt(post.dataset.readTime) || 0
-        }));
+        const postElements = postsContainer.querySelectorAll('.post-preview-news');
+        allPosts = Array.from(postElements).map(post => {
+            const wrapper = post.closest('.post-preview-wrapper');
+            return {
+                element: wrapper,
+                categories: (wrapper.dataset.categories || post.dataset.categories || '').split(' ').filter(c => c),
+                tags: (wrapper.dataset.tags || post.dataset.tags || '').split(' ').filter(t => t),
+                date: parseInt(wrapper.dataset.date || post.dataset.date) || 0,
+                title: post.querySelector('.post-news-title a')?.textContent.trim() || '',
+                readTime: parseInt(wrapper.dataset.readTime || post.dataset.readTime) || 0
+            };
+        });
         
         filteredPosts = [...allPosts];
         if (totalPostsSpan) {
@@ -237,6 +242,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Écouter les changements de hash
     window.addEventListener('hashchange', handleCategoryFromHash);
+    
+    // Toggle vue liste/grille
+    function toggleView(viewType) {
+        if (viewType === 'grid') {
+            postsContainer.classList.add('grid-view');
+            viewGridBtn.classList.add('active');
+            viewListBtn.classList.remove('active');
+        } else {
+            postsContainer.classList.remove('grid-view');
+            viewListBtn.classList.add('active');
+            viewGridBtn.classList.remove('active');
+        }
+        localStorage.setItem('blog-view', viewType);
+    }
+    
+    // Event listeners pour les boutons de vue
+    if (viewListBtn) {
+        viewListBtn.addEventListener('click', () => toggleView('list'));
+    }
+    
+    if (viewGridBtn) {
+        viewGridBtn.addEventListener('click', () => toggleView('grid'));
+    }
+    
+    // Restaurer la vue sauvegardée
+    const savedView = localStorage.getItem('blog-view') || 'list';
+    toggleView(savedView);
     
     // Initialiser
     initializePosts();
