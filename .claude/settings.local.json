@@ -12,7 +12,8 @@
       "Bash(JEKYLL_ENV=production bundle exec jekyll build)",
       "Bash(jekyll build:*)",
       "Bash(bash:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "WebFetch(domain:nicolas-dabene.fr)"
     ],
     "deny": []
   }

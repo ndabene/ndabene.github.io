@@ -55,6 +55,45 @@ document.addEventListener('DOMContentLoaded', function() {
         url.searchParams.set('admin_preview', 'true');
         window.location.href = url.toString();
     };
+    
+    // Créer une notification admin en haut de page si mode activé
+    if (isAdminPreview) {
+        createAdminNotification();
+    }
+    
+    function createAdminNotification() {
+        const notification = document.createElement('div');
+        notification.id = 'admin-notification';
+        notification.innerHTML = `
+            <div style="
+                background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+                color: white;
+                padding: 10px 20px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                text-align: center;
+                font-weight: bold;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            ">
+                🔮 MODE ADMIN ACTIF - Futurs posts visibles
+                <button onclick="disableAdminMode()" style="
+                    background: rgba(255,255,255,0.2);
+                    border: 1px solid rgba(255,255,255,0.3);
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    margin-left: 15px;
+                    cursor: pointer;
+                ">
+                    Désactiver
+                </button>
+            </div>
+        `;
+        document.body.insertBefore(notification, document.body.firstChild);
+    }
 });
 
 // Fonctions utilitaires pour les boutons admin
