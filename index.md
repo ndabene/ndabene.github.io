@@ -125,39 +125,31 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
         
         <div class="grid-unified stagger-animation">
             {% for module in site.data.modules %}
-            <div class="module-card-beautiful animate-item">
+            <div class="module-card-simple animate-item">
                 {% if module.image %}
-                <div class="module-image-beautiful">
+                <div class="module-image-simple">
                     <img src="{{ module.image }}" alt="{{ module.title }}" loading="lazy">
-                    <div class="module-overlay-beautiful">
-                        <a href="{{ module.link }}" class="preview-btn" target="_blank">
-                            Découvrir
-                        </a>
-                    </div>
                 </div>
                 {% else %}
-                <div class="module-image-beautiful"></div>
+                <div class="module-image-simple"></div>
                 {% endif %}
                 
-                <div class="module-content-container">
-                    <div class="module-header-beautiful">
-                        <h3 class="module-title-beautiful">{{ module.title }}</h3>
-                        <div class="module-tags-beautiful">
-                            {% for tag in module.tags %}
-                            <span class="tech-tag-beautiful tech-tag-beautiful--{{ tag.category | downcase }}">{{ tag.tech }}</span>
-                            {% endfor %}
-                        </div>
+                <div class="module-content-simple">
+                    <h3 class="module-title-simple">{{ module.title }}</h3>
+                    
+                    <div class="module-tags-simple">
+                        {% for tag in module.tags %}
+                        <span class="tag-simple tag-simple--{{ tag.category | downcase }}">{{ tag.tech }}</span>
+                        {% endfor %}
                     </div>
                     
-                    <div class="module-content-beautiful">
-                        <p class="module-description-beautiful">{{ module.description }}</p>
-                    </div>
+                    <p class="module-description-simple">{{ module.description }}</p>
                     
-                    <div class="module-footer-beautiful">
-                        <a href="{{ module.link }}" class="module-action-beautiful" target="_blank">
-                            <span>Voir le projet</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                    <div class="module-footer-simple">
+                        <a href="{{ module.link }}" class="button-discover" target="_blank">
+                            Découvrir
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-left: 4px;">
+                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                             </svg>
                         </a>
                     </div>
@@ -185,54 +177,55 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle-clean">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
-        <div class="grid-unified stagger-animation">
+        <div class="post-list-news stagger-animation">
             {% for publication in site.data.publications %}
-            <div class="publication-card-beautiful animate-item">
-                {% if publication.image %}
-                <div class="publication-image-beautiful">
-                    <img src="{{ publication.image }}" alt="{{ publication.title }}" loading="lazy">
-                    {% if publication.category %}
-                    <div class="publication-category-beautiful">{{ publication.category }}</div>
-                    {% endif %}
-                </div>
-                {% else %}
-                <div class="publication-image-beautiful">
-                    {% if publication.category %}
-                    <div class="publication-category-beautiful">{{ publication.category }}</div>
-                    {% endif %}
-                </div>
-                {% endif %}
-                
-                <div class="publication-content-container">
-                    <div class="publication-header-beautiful">
-                        <div class="publication-meta-beautiful">
-                            <span class="publication-type-beautiful">Article technique</span>
-                            <span class="publication-time-beautiful">5 min de lecture</span>
-                        </div>
-                        <h3 class="publication-title-beautiful">{{ publication.title }}</h3>
-                    </div>
-                    
-                    <div class="publication-content-beautiful">
-                        <p class="publication-excerpt-beautiful">{{ publication.description }}</p>
+            <div class="post-preview-wrapper animate-item">
+                <article class="post-preview-news">
+                    <div class="post-news-content">
+                        <!-- Vignette compacte -->
+                        {% if publication.image %}
+                            <div class="post-news-thumb">
+                                <img src="{{ publication.image }}" alt="{{ publication.title }}" loading="lazy">
+                                <span class="post-category-mini">Article</span>
+                            </div>
+                        {% endif %}
                         
-                        <div class="publication-topics-beautiful">
-                            <span class="topic-beautiful">PrestaShop</span>
-                            <span class="topic-beautiful">Développement</span>
-                            {% if publication.category and publication.category != '' %}
-                            <span class="topic-beautiful">{{ publication.category }}</span>
-                            {% endif %}
+                        <!-- Contenu principal -->
+                        <div class="post-news-text">
+                            <!-- Méta-données compactes -->
+                            <div class="post-news-meta">
+                                <span class="publication-type-beautiful">Article technique</span>
+                                <span class="reading-time">5 min de lecture</span>
+                            </div>
+                            
+                            <!-- Titre -->
+                            <h3 class="post-news-title">
+                                <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
+                            </h3>
+                            
+                            <!-- Extrait -->
+                            <p class="post-news-excerpt">
+                                {{ publication.description }}
+                            </p>
+                            
+                            <!-- Tags compacts -->
+                            <div class="post-news-tags">
+                                <span class="tag-mini">PrestaShop</span>
+                                <span class="tag-mini">Développement</span>
+                                {% if publication.category and publication.category != '' %}
+                                <span class="tag-mini">{{ publication.category }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <!-- Actions -->
+                        <div class="post-news-actions">
+                            <a href="{{ publication.link }}" class="read-more-compact" target="_blank">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="publication-footer-beautiful">
-                        <a href="{{ publication.link }}" class="publication-link-beautiful" target="_blank">
-                            <span>Lire l'article complet</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                </article>
             </div>
             {% endfor %}
         </div>
@@ -256,59 +249,87 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle-clean">Réponses directes aux questions les plus courantes sur mes services</p>
         </div>
         
-        <div class="faq-grid-geo">
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Qui est Nicolas Dabène ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>Nicolas Dabène est un Senior PHP FullStack Developer & AI Orchestrator avec plus de 15 ans d'expérience</strong> spécialisé dans le développement e-commerce PrestaShop et l'intégration d'intelligence artificielle. Expert certifié PrestaShop, il a développé plus de 50 modules sur mesure et dirigé des équipes techniques sur des projets d'envergure.</p>
+        <div class="skills-grid-circular stagger-animation">
+            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="skill-visual-circular">
+                    <div class="circular-progress-container">
+                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
+                        </svg>
+                        <div class="progress-percentage">?</div>
+                    </div>
+                </div>
+                
+                <div class="skill-info-circular">
+                    <h3 class="skill-name-circular" itemprop="name">Qui est Nicolas Dabène ?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text" class="skill-description-circular">
+                            <p><strong>Senior PHP FullStack Developer & AI Orchestrator avec plus de 15 ans d'expérience</strong> spécialisé dans le développement e-commerce PrestaShop et l'intégration d'intelligence artificielle.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Quelles sont les spécialités techniques de Nicolas Dabène ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>Ses principales spécialités incluent :</strong></p>
-                        <ul>
-                            <li>Développement PHP/Symfony avancé</li>
-                            <li>Architecture e-commerce PrestaShop</li>
-                            <li>Intégration d'intelligence artificielle dans les workflows</li>
-                            <li>Optimisation de performance web</li>
-                            <li>Leadership technique et mentorat d'équipes</li>
-                        </ul>
+            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="skill-visual-circular">
+                    <div class="circular-progress-container">
+                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
+                        </svg>
+                        <div class="progress-percentage">?</div>
+                    </div>
+                </div>
+                
+                <div class="skill-info-circular">
+                    <h3 class="skill-name-circular" itemprop="name">Quelles sont ses spécialités techniques ?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text" class="skill-description-circular">
+                            <p>PHP/Symfony avancé, architecture PrestaShop, intégration d'IA, optimisation de performance web, et leadership technique.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Quels types de projets Nicolas Dabène peut-il réaliser ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>Nicolas Dabène peut réaliser :</strong></p>
-                        <ul>
-                            <li>Développement de boutiques e-commerce PrestaShop haute performance</li>
-                            <li>Création de modules PrestaShop sur mesure</li>
-                            <li>Intégration d'IA pour automatiser les processus métier</li>
-                            <li>Optimisation et refactoring d'applications web existantes</li>
-                            <li>Audit technique et conseil en architecture logicielle</li>
-                            <li>Formation et accompagnement d'équipes techniques</li>
-                        </ul>
+            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="skill-visual-circular">
+                    <div class="circular-progress-container">
+                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
+                        </svg>
+                        <div class="progress-percentage">?</div>
+                    </div>
+                </div>
+                
+                <div class="skill-info-circular">
+                    <h3 class="skill-name-circular" itemprop="name">Quels types de projets peut-il réaliser ?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text" class="skill-description-circular">
+                            <p>Boutiques e-commerce PrestaShop, modules sur mesure, intégrations d'IA, optimisations web, audits techniques et formation d'équipes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Quelle est l'approche de Nicolas Dabène pour l'intégration IA ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>L'approche d'intégration IA de Nicolas Dabène se base sur :</strong></p>
-                        <ul>
-                            <li>Le Prompt-Driven Development pour une génération de code structurée</li>
-                            <li>L'automatisation intelligente des workflows existants</li>
-                            <li>L'optimisation des performances grâce aux algorithmes ML</li>
-                            <li>L'intégration seamless dans l'architecture technique existante</li>
-                        </ul>
+            
+            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="skill-visual-circular">
+                    <div class="circular-progress-container">
+                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
+                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
+                        </svg>
+                        <div class="progress-percentage">?</div>
+                    </div>
+                </div>
+                
+                <div class="skill-info-circular">
+                    <h3 class="skill-name-circular" itemprop="name">Quelle est son approche pour l'IA ?</h3>
+                    <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+                        <div itemprop="text" class="skill-description-circular">
+                            <p>Prompt-Driven Development, automatisation intelligente, optimisation par ML et intégration seamless dans les architectures existantes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -323,4 +344,38 @@ function expandExpertise(expertiseId) {
     const card = document.querySelector(`[data-id="${expertiseId}"]`);
     card.classList.toggle('expanded');
 }
+
+// Script pour l'animation des cercles FAQ
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation des FAQ circulaires
+    function animateFaqCircles() {
+        const circles = document.querySelectorAll('.faq-section-geo .circle');
+        const percentages = document.querySelectorAll('.faq-section-geo .progress-percentage');
+        
+        circles.forEach((circle, index) => {
+            setTimeout(() => {
+                circle.style.strokeDasharray = `${100}, 100`;
+                
+                if (percentages[index]) {
+                    percentages[index].textContent = "!";
+                }
+            }, index * 300);
+        });
+    }
+    
+    // Observer pour déclencher l'animation quand les FAQ sont visibles
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateFaqCircles();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    const faqSection = document.querySelector('.faq-section-geo');
+    if (faqSection) {
+        observer.observe(faqSection);
+    }
+});
 </script>
