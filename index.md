@@ -169,6 +169,8 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
+{% include future-posts-data.html %}
+
 <!-- PUBLICATIONS SECTION MODERNE -->
 <section class="section publications-section-modern">
     <div class="container">
@@ -177,7 +179,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle-clean">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
-        <div class="post-grid-home homepage-publications stagger-animation">
+        <div id="publications-home-container" class="post-grid-home homepage-publications stagger-animation">
             {% for publication in site.data.publications %}
             <div class="home-article-card animate-item">
                 <article class="home-article">
