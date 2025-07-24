@@ -1,0 +1,32 @@
+// Correctif différences de couleurs PC/Mac
+* {
+  -webkit-color-profile: sRGB;
+  color-profile: sRGB;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+nav, .nav, .navigation {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  // Assurez-vous d'utiliser des couleurs hexadécimales explicites
+  a {
+    color: #333333; // Couleur exacte à adapter selon votre design
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #0066cc; // Couleur hover à adapter selon votre design
+    }
+  }
+}
+
+@media (color-gamut: p3) {
+  * {
+    color-profile: sRGB;
+  }
+} 

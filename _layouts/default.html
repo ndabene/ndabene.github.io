@@ -51,6 +51,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
+    <!-- Gestion des profils de couleurs -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    
+    <!-- Force le rendu sRGB -->
+    <style>
+      * {
+        -webkit-color-profile: sRGB !important;
+        color-profile: sRGB !important;
+      }
+    </style>
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 

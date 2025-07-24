@@ -2,6 +2,20 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Force le profil sRGB pour tous les éléments
+* {
+  -webkit-color-profile: sRGB;
+  color-profile: sRGB;
+}
+
+// Optimisation du rendu des polices
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@import "_color-fix";
 @import "variables";
 @import "base";
 @import "components";
