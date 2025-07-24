@@ -1453,7 +1453,7 @@ body.dark-mode {
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $gray-medium 100%);
   color: $white;
   padding: $spacing-xxl 0 $spacing-lg;
-  margin-top: auto;
+  margin-top: 0; // Supprime la marge en haut pour coller à la dernière section
   
   .container {
     max-width: $container-max-width;

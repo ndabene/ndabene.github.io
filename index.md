@@ -144,15 +144,15 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </div>
                     
                     <p class="module-description-simple">{{ module.description }}</p>
-                    
-                    <div class="module-footer-simple">
-                        <a href="{{ module.link }}" class="button-discover" target="_blank">
-                            Découvrir
-                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-left: 4px;">
-                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                            </svg>
-                        </a>
-                    </div>
+                </div>
+                
+                <div class="module-footer-simple">
+                    <a href="{{ module.link }}" class="view-btn" target="_blank">
+                        <span class="btn-text">Découvrir</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             {% endfor %}
@@ -177,11 +177,11 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <p class="section-subtitle-clean">Articles techniques et retours d'expérience sur le développement e-commerce</p>
         </div>
         
-        <div class="post-list-news stagger-animation">
+        <div class="post-grid-home homepage-publications stagger-animation">
             {% for publication in site.data.publications %}
-            <div class="post-preview-wrapper animate-item">
-                <article class="post-preview-news">
-                    <div class="post-news-content">
+            <div class="home-article-card animate-item">
+                <article class="home-article">
+                    <div class="home-article-content">
                         <!-- Vignette compacte -->
                         {% if publication.image %}
                             <div class="post-news-thumb">
@@ -220,8 +220,11 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         
                         <!-- Actions -->
                         <div class="post-news-actions">
-                            <a href="{{ publication.link }}" class="read-more-compact" target="_blank">
-                                Lire <i class="fas fa-arrow-right"></i>
+                            <a href="{{ publication.link }}" class="view-btn" target="_blank">
+                                <span class="btn-text">Lire l'article</span>
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -234,7 +237,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <a href="https://www.businesstech.fr/landing/articles/index.html" class="view-all-btn" target="_blank">
                 <span class="btn-text">Découvrir tous mes articles</span>
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                 </svg>
             </a>
         </div>

@@ -4951,6 +4951,66 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
 }
 
 //================================================
+// BOUTONS DE DÉCOUVERTE UNIVERSELS
+//================================================
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: $space-sm $space-lg;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: $rounded-lg;
+  font-weight: $font-weight-semibold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+    color: white;
+    text-decoration: none;
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  &:hover svg {
+    transform: translateX(3px);
+  }
+  
+  .btn-text {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+//================================================
 // MODULES CARDS - STYLE SIMPLE ET DIRECT
 //================================================
 .module-card-simple {
@@ -4964,8 +5024,8 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   
   &:hover {
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
   }
 
   .module-image-simple {
@@ -4985,10 +5045,9 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
   }
   
   .module-content-simple {
-    padding: 16px;
+    padding: 16px 16px 0;
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
   
   .module-title-simple {
@@ -5033,54 +5092,78 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
   }
   
   .module-description-simple {
-    color: $text-color-light;
+    color: $text-color;
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 16px;
-    flex: 1;
+    font-weight: 400;
   }
   
   .module-footer-simple {
-    margin-top: auto;
+    padding: 0 16px 16px;
     display: flex;
-    justify-content: flex-end;
-    
-    .button-discover {
-      background-color: $primary-color;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 14px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.2s ease;
-      
-      &:hover {
-        background-color: darken($primary-color, 10%);
-        text-decoration: none;
-        color: white;
-      }
-    }
+    justify-content: center;
+    margin-top: auto;
   }
 }
 
-// Ajustements responsifs pour les cartes modules
-@media (max-width: 768px) {
-  .module-card-simple {
-    .module-image-simple {
-      height: 160px;
-    }
+//================================================
+// BOUTONS DE DÉCOUVERTE UNIVERSELS
+//================================================
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  padding: $space-sm $space-lg;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: $rounded-lg;
+  font-weight: $font-weight-semibold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+    color: white;
+    text-decoration: none;
     
-    .module-title-simple {
-      font-size: 16px;
+    &::before {
+      left: 100%;
     }
-    
-    .module-description-simple {
-      font-size: 13px;
-    }
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  &:hover svg {
+    transform: translateX(3px);
+  }
+  
+  .btn-text {
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -5101,6 +5184,52 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
   
   .section-header-clean {
     margin-bottom: 30px;
+  }
+  
+  // Style harmonisé pour le bouton "Voir tous mes projets"
+  .view-all-section {
+    margin-top: 30px;
+    text-align: center;
+    
+    .view-all-btn {
+      @extend .view-btn;
+      max-width: 300px;
+      padding: $space-md $space-xl;
+      display: inline-flex;
+    }
+  }
+}
+
+// Ajustements pour la section des publications
+.publications-section-modern {
+  .post-news-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px 16px;
+    
+    .view-btn {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px 15px;
+    }
+  }
+}
+
+// Ajustements responsifs pour les cartes modules
+@media (max-width: 768px) {
+  .module-card-simple {
+    .module-image-simple {
+      height: 160px;
+    }
+    
+    .module-title-simple {
+      font-size: 16px;
+    }
+    
+    .module-description-simple {
+      font-size: 13px;
+    }
   }
 }
 
@@ -5129,9 +5258,14 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
 // FAQ CARDS - STYLE CIRCULAIRE COMME LES COMPÉTENCES
 //================================================
 .faq-section-geo {
+  // Ajout d'un padding-bottom plus important pour éliminer l'espace avec le footer
+  padding-bottom: 0;
+  margin-bottom: 0;
+  
   .skills-grid-circular {
     // Ajustements spécifiques pour les FAQ en mode compétences
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 0; // Supprime la marge en bas
     
     .skill-card-circular {
       background: white;
@@ -5203,6 +5337,206 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
         
         .skill-description-circular {
           font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// PUBLICATIONS HOMEPAGE - STYLE CARDS
+//================================================
+
+.publications-section-modern {
+  background-color: #f8f9fb;
+  padding: 70px 0;
+  
+  // Style spécifique pour le bouton "voir tous" dans la section publications
+  .view-all-section {
+    margin-top: 3rem;
+    
+    .view-all-btn {
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
+      
+      &:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(59, 130, 246, 0.35);
+      }
+      
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  
+  .post-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    
+    &.homepage-publications {
+      margin: 0;
+    }
+    
+    .home-article-card {
+      height: 100%;
+    }
+    
+    /* Style spécifique pour les articles de la home page - indépendant du blog */
+.publications-section-modern .home-article {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+      
+      .home-article-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      
+      .post-news-thumb {
+        height: 180px;
+        overflow: hidden;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+        
+        &:hover img {
+          transform: scale(1.08);
+        }
+      }
+      
+      .post-news-text {
+        padding: 20px 25px 5px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        
+        .post-news-meta {
+          margin-bottom: 12px;
+          display: flex;
+          gap: 8px;
+          
+          .publication-type-beautiful, .reading-time {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+          }
+          
+          .publication-type-beautiful {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(30, 41, 59, 0.15) 100%);
+            color: #6d28d9;
+          }
+          
+          .reading-time {
+            background: rgba(15, 23, 42, 0.08);
+            color: #64748b;
+          }
+        }
+        
+        .post-news-title {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 14px;
+          line-height: 1.4;
+          
+          a {
+            color: #1e293b;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            
+            &:hover {
+              color: #3b82f6;
+            }
+          }
+        }
+        
+        .post-news-excerpt {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #64748b;
+          margin-bottom: 15px;
+          flex-grow: 1;
+        }
+        
+        .post-news-tags {
+          margin-bottom: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          
+          .tag-mini {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background-color: #f1f5f9;
+            color: #3b82f6;
+            font-weight: 500;
+          }
+        }
+      }
+      
+      .post-news-actions {
+        margin-top: auto;
+        padding: 0 25px 25px;
+        
+        .view-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          width: 100%;
+          padding: 12px 16px;
+          border-radius: 8px;
+          background: linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%);
+          color: white;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #4338ca 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            
+            svg {
+              transform: translateX(3px);
+            }
+          }
+          
+          svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+          }
         }
       }
     }

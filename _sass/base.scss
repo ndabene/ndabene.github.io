@@ -109,6 +109,11 @@ img {
   &:nth-child(even) {
     background-color: $gray-ultra-light;
   }
+  
+  &:last-of-type {
+    padding-bottom: 0; // Supprime le padding en bas de la dernière section
+    margin-bottom: 0; // Supprime la marge en bas
+  }
 }
 
 .section-header {

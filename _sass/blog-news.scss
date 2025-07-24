@@ -131,6 +131,16 @@ $news-hover: #f3f4f6; // Hover subtil
       background: rgba(251, 191, 36, 0.03);
       border-left: 3px solid #fbbf24;
     }
+
+    // Style de base pour la vue liste - exclusivement pour la page blog
+    .post-preview-news {
+      .post-news-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1rem 1.5rem;
+      }
+    }
   }
   
   // Vue grille (format vertical compact)
