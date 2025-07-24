@@ -93,6 +93,7 @@ body_class: "page-skills"
 </div>
 
 <script>
+// Animation des progress circulaires
 document.addEventListener('DOMContentLoaded', function() {
     // Animation des progress circulaires
     function animateCircularProgress() {
@@ -134,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gestion du filtrage
     const filterBtns = document.querySelectorAll('.skill-filter-btn');
-    const skillCategories = document.querySelectorAll('.skills-category-modern');
+    const skillCards = document.querySelectorAll('.skill-card-circular');
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -144,22 +145,33 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const filter = this.getAttribute('data-filter');
             
-            // Filtrage des catégories avec animation
-            skillCategories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                
-                if (filter === 'all' || categoryName === filter) {
+            // Filtrage des cartes de compétences
+            if (filter === 'all') {
+                // Affiche toutes les catégories
+                document.querySelectorAll('.skills-category-modern').forEach(category => {
                     category.style.display = 'block';
                     setTimeout(() => {
                         category.classList.add('visible');
                     }, 10);
-                } else {
-                    category.classList.remove('visible');
-                    setTimeout(() => {
-                        category.style.display = 'none';
-                    }, 300);
-                }
-            });
+                });
+            } else {
+                // Masque les catégories qui ne correspondent pas au filtre
+                document.querySelectorAll('.skills-category-modern').forEach(category => {
+                    const categoryName = category.getAttribute('data-category');
+                    
+                    if (categoryName === filter) {
+                        category.style.display = 'block';
+                        setTimeout(() => {
+                            category.classList.add('visible');
+                        }, 10);
+                    } else {
+                        category.classList.remove('visible');
+                        setTimeout(() => {
+                            category.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            }
 
             // Re-animer les progress circulaires visibles
             setTimeout(animateCircularProgress, 400);

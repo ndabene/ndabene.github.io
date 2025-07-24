@@ -9,7 +9,7 @@ $skills-primary: #0f172a; // Marine profond
 $skills-secondary: #1e293b; // Gris anthracite  
 $skills-text: #111827; // Noir journal
 $skills-text-light: #374151; // Gris lecture
-$skills-accent: #d4af37; // Or sourd
+$skills-accent: #059669; // Vert technique (couleur de Leadership)
 $skills-success: #059669; // Vert technique
 $skills-background: #f9fafb; // Fond papier
 $skills-border: #e2e8f0; // Bordures discrètes
@@ -51,17 +51,17 @@ $skills-hover: #f3f4f6; // Hover subtil
   text-transform: capitalize;
   
   &:hover {
-    border-color: $skills-primary;
-    color: $skills-primary;
+    border-color: $skills-accent;
+    color: $skills-accent;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba($skills-primary, 0.15);
+    box-shadow: 0 4px 12px rgba($skills-accent, 0.15);
   }
   
   &.active {
-    background: $skills-primary;
-    border-color: $skills-primary;
+    background: $skills-accent;
+    border-color: $skills-accent;
     color: white;
-    box-shadow: 0 4px 12px rgba($skills-primary, 0.25);
+    box-shadow: 0 4px 12px rgba($skills-accent, 0.25);
   }
 }
 
@@ -204,7 +204,7 @@ $skills-hover: #f3f4f6; // Hover subtil
   }
   
   .circle {
-    stroke: $skills-accent;
+    stroke: $skills-accent !important; /* Force la couleur verte pour tous */
     stroke-linecap: round;
     stroke-dasharray: 0, 100;
     transition: stroke-dasharray 1s ease-in-out;
@@ -248,17 +248,6 @@ $skills-hover: #f3f4f6; // Hover subtil
     color: $skills-text-light;
     line-height: 1.5;
     opacity: 0.9;
-  }
-}
-
-//================================================
-// COULEURS PAR CATÉGORIE - HARMONISÉES
-//================================================
-
-// Couleur unique pour toutes les catégories
-.skill-card-circular {
-  .circle {
-    stroke: $skills-accent;
   }
 }
 
