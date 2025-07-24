@@ -19,11 +19,11 @@ Usage: {% include linkedin-preview-helper.html %}
   
   <div class="linkedin-post-preview">
     <label>Suggestion de post LinkedIn :</label>
-    <textarea id="linkedin-suggestion" rows="4" readonly>🚀 Nouvel article publié : {{ page.title }}
+    <textarea id="linkedin-suggestion" rows="4" readonly>Nouvel article publié : {{ page.title }}
 
 {{ page.excerpt | strip_html | truncate: 100 }}
 
-👉 https://nicolas-dabene.fr{{ page.url }}
+🔗 https://nicolas-dabene.fr{{ page.url }}
 
 #{{ page.tags | join: ' #' | prepend: '#' }}</textarea>
     <button onclick="copyLinkedInSuggestion()" class="btn btn-sm btn-copy">

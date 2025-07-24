@@ -1,11 +1,12 @@
-// Blog style "site de presse" - Design professionnel et compact
-// Variables pour le thème news
-$news-primary: #1e293b;
-$news-secondary: #475569;
-$news-accent: #3b82f6;
-$news-light: #f8fafc;
-$news-border: #e2e8f0;
-$news-hover: #f1f5f9;
+// Blog style "site de presse" - Design expert senior
+// Variables pour le thème news harmonisées
+$news-primary: #111827; // Noir journal
+$news-secondary: #374151; // Gris lecture
+$news-accent: #0f172a; // Marine profond
+$news-gold: #d4af37; // Or sourd pour éléments importants
+$news-light: #f9fafb; // Fond papier
+$news-border: #e2e8f0; // Bordures discrètes
+$news-hover: #f3f4f6; // Hover subtil
 
 //================================================
 // LAYOUT PRINCIPAL - STYLE PRESSE
@@ -472,7 +473,7 @@ $news-hover: #f1f5f9;
         text-decoration: none;
         
         &:hover {
-          color: $news-accent;
+          color: $news-gold;
         }
       }
     }
@@ -552,8 +553,15 @@ $news-hover: #f1f5f9;
   position: relative;
   
   &::before {
-    content: "📚";
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
     margin-right: 0.5rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23374151" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
   }
   
   &:hover {

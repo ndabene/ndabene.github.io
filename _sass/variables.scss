@@ -4,37 +4,37 @@
 // PALETTE DE COULEURS - NOUVELLE IDENTITÉ
 //================================================
 
-// Couleurs de base
-$white: #FFFFFF;
-$black: #0C0C0C;
-$gray-dark: #2D3748;
-$gray-medium: #718096;
-$gray-light: #E2E8F0;
-$gray-ultra-light: #F7FAFC;
+// Couleurs de base - Palette Expert Senior
+$white: #FAFAFA; // Blanc cassé plus doux
+$black: #111827; // Noir journal professionnel
+$gray-dark: #1e293b; // Gris anthracite
+$gray-medium: #475569; // Gris ardoise
+$gray-light: #e2e8f0; // Gris clair
+$gray-ultra-light: #f9fafb; // Fond papier
 
-// Couleurs primaires
-$primary-color: #2563EB;
-$primary-color-dark: #1D4ED8;
+// Couleurs primaires - Style Expert
+$primary-color: #0f172a; // Bleu marine profond
+$primary-color-dark: #020617; // Marine très sombre
 
-// Couleurs secondaires
-$secondary-color: #2D3748;
-$text-color: #2D3748;
-$text-color-light: #4A5568;
+// Couleurs secondaires - Sophistication
+$secondary-color: #1e293b; // Gris anthracite
+$text-color: #111827; // Noir journal
+$text-color-light: #374151; // Gris lecture
 
-// Couleurs d'accentuation
-$accent-color-1: #38B2AC; // Teal pour certains badges
-$accent-color-2: #ED8936; // Orange pour d'autres
+// Couleurs d'accentuation - Touches professionnelles
+$accent-color-1: #d4af37; // Or sourd pour achievements
+$accent-color-2: #059669; // Vert technique pour validations
 
-// Couleurs de feedback
-$success-color: #38A169;
-$error-color: #E53E3E;
-$warning-color: #D69E2E;
+// Couleurs de feedback - Style professionnel
+$success-color: #059669; // Vert technique
+$error-color: #dc2626; // Rouge professionnel
+$warning-color: #d4af37; // Or sourd
 
 //================================================
 // RÉTROCOMPATIBILITÉ ANCIENNES VARIABLES
 //================================================
 
-// Variables héritées pour compatibilité
+// Variables héritées pour compatibilité - Mise à jour
 $font-primary: 'Inter', sans-serif;
 $body-size: 1rem;
 $line-height-normal: 1.6;
@@ -47,17 +47,17 @@ $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
 $spacing-xxl: 3rem;
-$light-gray: #E2E8F0;
+$light-gray: #e2e8f0; // Harmonisé
 $h1-size: 2.5rem;
 $h2-size: 2rem;
 $h3-size: 1.5rem;
 $h4-size: 1.25rem;
 $small-size: 0.875rem;
 $large-size: 1.125rem;
-$primary-navy: #2563EB;
-$primary-blue: #1D4ED8;
-$secondary-gray: #4A5568;
-$accent-cyan: #06B6D4;
+$primary-navy: #0f172a; // Marine profond
+$primary-blue: #1e293b; // Gris anthracite
+$secondary-gray: #475569; // Gris ardoise
+$accent-cyan: #94a3b8; // Argent métallique
 $container-max-width: 1200px;
 $border-radius: 8px;
 $transition-base: all 0.3s ease-in-out;
@@ -138,10 +138,11 @@ $dark-card: #334155;
 $dark-text: #F8FAFC;
 $dark-text-muted: #CBD5E1;
 
-// Modern Gradients
-$gradient-primary: linear-gradient(135deg, #{$primary-color} 0%, #{$accent-color-1} 100%);
+// Modern Gradients - Style Expert
+$gradient-primary: linear-gradient(135deg, #{$primary-color} 0%, #{$gray-dark} 100%);
 $gradient-hero: linear-gradient(135deg, #{$white} 0%, #{$gray-ultra-light} 100%);
 $gradient-dark: linear-gradient(135deg, #{$dark-bg} 0%, #{$dark-surface} 100%);
+$gradient-gold: linear-gradient(135deg, #{$accent-color-1} 0%, #b8941f 100%);
 
 // Advanced Shadows
 $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -199,9 +200,9 @@ $status-away: linear-gradient(45deg, #8b5cf6, #7c3aed);
 $tech-prestashop-bg: rgba(223, 49, 99, 0.1);
 $tech-prestashop-text: #df3163;
 $tech-api-bg: rgba(59, 130, 246, 0.1);
-$tech-api-text: #3b82f6;
+$tech-api-text: $primary-color;
 $tech-integration-bg: rgba(16, 185, 129, 0.1);
-$tech-integration-text: #10b981;
+$tech-integration-text: $accent-color-2;
 $tech-ecommerce-bg: rgba(245, 158, 11, 0.1);
 $tech-ecommerce-text: #f59e0b;
 

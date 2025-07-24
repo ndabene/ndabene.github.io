@@ -74,7 +74,7 @@
 
   /* Compensation pour la navbar fixed */
   body {
-    padding-top: 80px;
+    padding-top: 70px;
   }
 
   .header-container {
@@ -118,7 +118,7 @@
   .nav-link {
     position: relative;
     padding: 0.5rem 1rem;
-    color: #4A5568;
+    color: $text-color-light;
     text-decoration: none;
     transition: all 0.3s ease;
   }
@@ -130,14 +130,14 @@
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #2563EB 0%, #38B2AC 100%);
+    background: linear-gradient(135deg, $primary-color 0%, $accent-color-2 100%);
     transition: all 0.3s ease;
     transform: translateX(-50%);
   }
 
   .nav-link:hover,
   .nav-link.active {
-    color: #2563EB;
+    color: $primary-color;
   }
 
   .nav-link:hover::after,
@@ -160,14 +160,14 @@
   }
 
   .theme-toggle:hover {
-    background: rgba(37, 99, 235, 0.1);
+    background: transparent;
     transform: scale(1.1);
   }
 
   .theme-icon {
     width: 20px;
     height: 20px;
-    color: #4A5568;
+    color: $text-color-light;
     transition: all 0.3s ease;
   }
 
@@ -197,7 +197,7 @@
     display: block;
     height: 2px;
     width: 100%;
-    background: #4A5568;
+    background: $text-color-light;
     border-radius: 1px;
     transition: all 0.3s ease;
   }
@@ -255,7 +255,7 @@
   .mobile-nav-link {
     display: block;
     padding: 0.75rem 1rem;
-    color: #4A5568;
+    color: $text-color-light;
     text-decoration: none;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
@@ -263,8 +263,8 @@
 
   .mobile-nav-link:hover,
   .mobile-nav-link.active {
-    background: rgba(37, 99, 235, 0.1);
-    color: #2563EB;
+    background: rgba(15, 23, 42, 0.1);
+    color: $primary-color;
   }
 
   @media (max-width: 768px) {

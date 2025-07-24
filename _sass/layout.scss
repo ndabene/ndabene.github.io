@@ -1450,7 +1450,7 @@ body.dark-mode {
 // FOOTER PRINCIPAL
 //================================================
 .footer {
-  background: linear-gradient(135deg, #1E293B 0%, #334155 50%, #475569 100%);
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $gray-medium 100%);
   color: $white;
   padding: $spacing-xxl 0 $spacing-lg;
   margin-top: auto;
@@ -1566,7 +1566,7 @@ body.dark-mode {
     }
     
     .heart {
-      color: #ff6b6b;
+      color: $error-color;
       animation: heartbeat 2s ease-in-out infinite;
     }
   }
@@ -1595,19 +1595,19 @@ body.dark-mode {
       color: $dark-text-muted;
       
       &:hover {
-        color: $accent-cyan;
+        color: $accent-color-1;
       }
     }
     
     .social-icons .social-icon {
-      background: rgba($accent-cyan, 0.1);
-      border-color: rgba($accent-cyan, 0.3);
+      background: rgba($accent-color-1, 0.1);
+      border-color: rgba($accent-color-1, 0.3);
       color: $dark-text-muted;
       
       &:hover {
-        background: rgba($accent-cyan, 0.2);
-        border-color: $accent-cyan;
-        color: $accent-cyan;
+        background: rgba($accent-color-1, 0.2);
+        border-color: $accent-color-1;
+        color: $accent-color-1;
       }
     }
     

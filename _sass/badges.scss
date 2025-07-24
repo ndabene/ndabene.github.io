@@ -63,8 +63,8 @@
   &--vue,
   &--react,
   &--css {
-    background-color: #F59E0B;
-    border-color: #D97706;
+    background-color: $accent-color-1;
+    border-color: darken($accent-color-1, 10%);
   }
 
   // Database & Storage

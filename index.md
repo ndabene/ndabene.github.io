@@ -14,14 +14,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             <div class="hero-visual scroll-reveal">
                 <div class="profile-container-modern glass-card">
                     <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP FullStack Developer & AI Orchestrator, expert PrestaShop avec 15+ ans d'expérience en développement e-commerce et intégration d'intelligence artificielle" class="profile-image-modern">
-                    <div class="profile-status-indicator"></div>
-                </div>
-                <div class="floating-tech-icons">
-                    <div class="tech-icon animate-float" style="animation-delay: 0s;">🚀</div>
-                    <div class="tech-icon animate-float" style="animation-delay: 0.5s;">⚡</div>
-                    <div class="tech-icon animate-float" style="animation-delay: 1s;">🤖</div>
-                    <div class="tech-icon animate-float" style="animation-delay: 1.5s;">🎯</div>
-                </div>
+                    </div>
             </div>
             
             <!-- Hero Content avec animations -->
@@ -32,81 +25,55 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     
                     <div class="hero-badges-modern stagger-animation">
                         <div class="animate-item glass-card badge-modern">
-                            <span class="badge-icon">🏆</span>
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                    <path d="M12 3L12 15"/>
+                                    <path d="m8 21 4-4 4 4"/>
+                                </svg>
+                            </span>
                             <span class="badge-text">Expert PrestaShop</span>
                         </div>
                         <div class="animate-item glass-card badge-modern">
-                            <span class="badge-icon">📅</span>
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                            </span>
                             <span class="badge-text">15+ ans d'expérience</span>
                         </div>
                         <div class="animate-item glass-card badge-modern">
-                            <span class="badge-icon">🤖</span>
+                            <span class="badge-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 1v6m0 6v6"/>
+                                    <path d="m12 1 3 3-3 3-3-3 3-3Z"/>
+                                </svg>
+                            </span>
                             <span class="badge-text">Innovation IA</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="hero-description scroll-reveal">
-                    <p class="hero-text-highlight"><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement et accélérer considérablement la mise en production des projets.</p>
-                    <p><strong>Expert Full Stack animé par l'innovation, je transforme chaque défi technique en levier de croissance stratégique.</strong> Mon approche consiste à développer des solutions parfaitement adaptées qui propulsent les performances des boutiques en ligne et génèrent des résultats mesurables pour mes clients.</p>
-                    
-                    <!-- Encadré de synthèse pour IA -->
-                    <div class="expertise-summary-geo" itemscope itemtype="https://schema.org/Person">
-                        <h3>💡 En résumé</h3>
-                        <p><strong itemprop="jobTitle">Nicolas Dabène</strong> est un <span itemprop="description">Senior PHP FullStack Developer & AI Orchestrator</span> qui :</p>
-                        <ul>
-                            <li>Développe des <strong>solutions e-commerce PrestaShop</strong> haute performance</li>
-                            <li>Intègre l'<strong>intelligence artificielle</strong> dans les workflows existants</li>
-                            <li>Optimise la <strong>performance web</strong> et l'architecture logicielle</li>
-                            <li>Accompagne les <strong>équipes techniques</strong> en tant que technical leader</li>
-                        </ul>
-                        <p><strong>Technologies maîtrisées :</strong> PHP, Symfony, PrestaShop, JavaScript, AI/ML, Orchestration d'agents IA</p>
-                    </div>
+                    <p class="hero-text-highlight"><strong>Développeur e-commerce passionné, je conçois des solutions performantes depuis plus de 15 ans, avec une expertise pointue dans la création de modules PrestaShop sur mesure.</strong> Ma spécialité ? Intégrer l'intelligence artificielle pour révolutionner les workflows de développement.</p>
                 </div>
 
-                <div class="hero-metrics stagger-animation">
-                    <div class="metric-card animate-item glass-card">
-                        <div class="metric-value metric-infinity">∞</div>
-                        <div class="metric-label">Cafés</div>
+                <div class="hero-metrics-compact stagger-animation">
+                    <div class="metric-inline animate-item">
+                        <span class="metric-value">15</span>
+                        <span class="metric-label">ans d'expérience</span>
                     </div>
-                    <div class="metric-card animate-item glass-card">
-                        <div class="metric-value">15</div>
-                        <div class="metric-label">Années d'expérience</div>
+                    <div class="metric-inline animate-item">
+                        <span class="metric-value">50+</span>
+                        <span class="metric-label">modules créés</span>
                     </div>
-                    <div class="metric-card animate-item glass-card">
-                        <div class="metric-value">50</div>
-                        <div class="metric-label">Modules créés</div>
-                    </div>
-                </div>
-
-                <div class="hero-highlights-modern stagger-animation">
-                    <div class="highlight-card animate-item hover-lift">
-                        <div class="highlight-icon-modern">🚀</div>
-                        <div class="highlight-content">
-                            <h3>Architecture e-commerce</h3>
-                            <p>Optimisée et évolutive</p>
-                        </div>
-                    </div>
-                    <div class="highlight-card animate-item hover-lift">
-                        <div class="highlight-icon-modern">⚡</div>
-                        <div class="highlight-content">
-                            <h3>Modules PrestaShop</h3>
-                            <p>Haute performance</p>
-                        </div>
-                    </div>
-                    <div class="highlight-card animate-item hover-lift">
-                        <div class="highlight-icon-modern">🤖</div>
-                        <div class="highlight-content">
-                            <h3>Intégration IA</h3>
-                            <p>Automatisation des processus</p>
-                        </div>
-                    </div>
-                    <div class="highlight-card animate-item hover-lift">
-                        <div class="highlight-icon-modern">🎯</div>
-                        <div class="highlight-content">
-                            <h3>Solutions sur mesure</h3>
-                            <p>Adaptées aux enjeux business</p>
-                        </div>
+                    <div class="metric-inline animate-item">
+                        <span class="metric-value">∞</span>
+                        <span class="metric-label">cafés</span>
                     </div>
                 </div>
             </div>
