@@ -331,22 +331,6 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </div>
                 </div>
             </div>
-
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Comment contacter Nicolas Dabène pour un projet ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>Plusieurs moyens de contact sont disponibles :</strong></p>
-                        <ul>
-                            <li>Email professionnel : ndabene2807@gmail.com</li>
-                            <li>LinkedIn : <a href="https://www.linkedin.com/in/nicolas-dabene/">Nicolas Dabène</a></li>
-                            <li>Formulaire de contact sur ce site : <a href="/contact">/contact</a></li>
-                        </ul>
-                        <p>Disponible pour des missions en France et à l'international (remote).</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
                 <h3 itemprop="name">Quelle est l'approche de Nicolas Dabène pour l'intégration IA ?</h3>
                 <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
@@ -357,20 +341,6 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                             <li>L'automatisation intelligente des workflows existants</li>
                             <li>L'optimisation des performances grâce aux algorithmes ML</li>
                             <li>L'intégration seamless dans l'architecture technique existante</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item-geo" itemscope itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Quelles certifications possède Nicolas Dabène ?</h3>
-                <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                    <div itemprop="text">
-                        <p><strong>Certifications officielles :</strong></p>
-                        <ul>
-                            <li>PrestaShop Certified Developer (certification officielle)</li>
-                            <li>AWS Solutions Architect Associate</li>
-                            <li>15+ années d'expérience pratique validée par 50+ projets réalisés</li>
                         </ul>
                     </div>
                 </div>
