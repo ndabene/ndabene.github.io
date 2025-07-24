@@ -43,7 +43,7 @@
 .post-content {
   h1, h2, h3, h4, h5, h6 {
     color: $primary-navy;
-    margin-top: $spacing-md;
+    margin-top: $spacing-lg;
     margin-bottom: $spacing-sm;
   }
 
@@ -52,8 +52,19 @@
   h3 { font-size: $h4-size; }
 
   p {
-    margin-bottom: $spacing-sm;
-    line-height: $line-height-normal;
+    margin-bottom: $spacing-md;
+    line-height: 1.8;
+    color: #374151;
+    font-size: 1.05rem;
+  }
+  
+  // Améliorer l'espacement et la lisibilité
+  > *:first-child {
+    margin-top: 0;
+  }
+  
+  > *:last-child {
+    margin-bottom: 0;
   }
 
   img {
@@ -66,15 +77,35 @@
 
   ul, ol {
     margin-left: $spacing-md;
-    margin-bottom: $spacing-sm;
+    margin-bottom: $spacing-md;
+    
+    li {
+      margin-bottom: $spacing-xs;
+      line-height: 1.7;
+      color: #374151;
+    }
   }
 
   blockquote {
     border-left: 4px solid $primary-blue;
-    padding-left: $spacing-sm;
-    margin: $spacing-md 0;
-    color: $secondary-gray;
+    padding: $spacing-md $spacing-lg;
+    margin: $spacing-lg 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-radius: 0 8px 8px 0;
+    color: #475569;
     font-style: italic;
+    position: relative;
+    
+    &::before {
+      content: '"';
+      position: absolute;
+      top: -8px;
+      left: 16px;
+      font-size: 3rem;
+      color: rgba(59, 130, 246, 0.2);
+      font-family: serif;
+      line-height: 1;
+    }
   }
 
   // COLORATION SYNTAXIQUE - Styles Rouge
