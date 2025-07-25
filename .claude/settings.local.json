@@ -18,7 +18,8 @@
       "Bash(sass:*)",
       "Bash(rm:*)",
       "Bash(grep:*)",
-      "Bash(bundle install:*)"
+      "Bash(bundle install:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   }
