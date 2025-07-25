@@ -82,29 +82,54 @@ $news-hover: #f3f4f6; // Hover subtil
   .filters-right {
     .view-toggle {
       display: flex;
-      gap: 2px;
-      background: #e5e7eb;
-      border-radius: 4px;
-      padding: 2px;
+      gap: 3px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.12) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 8px;
+      padding: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       
       .view-btn {
-        padding: 0.4rem 0.7rem;
+        padding: 0.6rem 0.8rem;
         border: none;
         background: transparent;
-        color: $news-secondary;
-        border-radius: 3px;
+        color: #0f172a;
+        border-radius: 6px;
         cursor: pointer;
-        transition: all 0.2s ease;
-        font-size: 0.8rem;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        height: 36px;
+        
+        i {
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+        }
         
         &:hover {
-          color: $news-primary;
+          color: #0f172a;
+          background: rgba(255, 255, 255, 0.8);
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+          
+          i {
+            transform: scale(1.1);
+          }
         }
         
         &.active {
-          background: white;
-          color: $news-accent;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          color: white;
+          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+          transform: translateY(-1px);
+          
+          i {
+            transform: scale(1.05);
+          }
         }
       }
     }
@@ -623,25 +648,61 @@ $news-hover: #f3f4f6; // Hover subtil
         min-width: 120px;
       }
     }
+    
+    .filters-right {
+      display: none !important; // Cacher complètement les boutons de vue sur mobile
+    }
   }
   
-  .post-preview-news {
-    padding: 0.75rem 1rem;
+  // Force grid view on mobile - Always grid, better readability
+  .post-list-news {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem;
+    padding: 0.8rem;
     
-    .post-news-content {
-      flex-direction: column;
-      gap: 0.75rem;
+    .post-preview-wrapper {
+      border-bottom: none !important;
+      
+      .post-preview-news {
+        border: 1px solid $news-border;
+        border-radius: 6px;
+        height: 100%;
+        
+        .post-news-content {
+          flex-direction: column !important;
+          
+          .post-news-thumb {
+            width: 100% !important;
+            height: 100px;
+          }
+          
+          .post-news-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
     }
-    
-    .post-news-thumb {
-      width: 100%;
-      height: 80px;
-    }
-    
-    .post-news-actions {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+    .post-preview-news {
+      padding: 0.75rem 1rem;
+      
+      .post-news-content {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .post-news-thumb {
+        width: 100%;
+        height: 80px;
+      }
+      
+      .post-news-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
   

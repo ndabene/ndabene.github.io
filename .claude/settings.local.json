@@ -13,7 +13,10 @@
       "Bash(jekyll build:*)",
       "Bash(bash:*)",
       "Bash(sed:*)",
-      "WebFetch(domain:nicolas-dabene.fr)"
+      "WebFetch(domain:nicolas-dabene.fr)",
+      "Bash(ruby:*)",
+      "Bash(sass:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }

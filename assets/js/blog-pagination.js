@@ -257,18 +257,34 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('blog-view', viewType);
     }
     
-    // Event listeners pour les boutons de vue
-    if (viewListBtn) {
+    // Event listeners pour les boutons de vue - désactiver sur mobile
+    if (viewListBtn && !isMobile()) {
         viewListBtn.addEventListener('click', () => toggleView('list'));
     }
     
-    if (viewGridBtn) {
+    if (viewGridBtn && !isMobile()) {
         viewGridBtn.addEventListener('click', () => toggleView('grid'));
     }
     
-    // Restaurer la vue sauvegardée
-    const savedView = localStorage.getItem('blog-view') || 'list';
+    // Restaurer la vue sauvegardée - forcer grille sur mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    let savedView;
+    if (isMobile()) {
+        savedView = 'grid'; // Forcer grille sur mobile
+    } else {
+        savedView = localStorage.getItem('blog-view') || 'list';
+    }
     toggleView(savedView);
+    
+    // Gestion du redimensionnement - maintenir grille sur mobile
+    window.addEventListener('resize', function() {
+        if (isMobile()) {
+            toggleView('grid');
+        }
+    });
     
     // Initialiser
     initializePosts();
