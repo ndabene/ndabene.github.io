@@ -1,0 +1,34 @@
+# Configuration spécifique pour GitHub Pages
+# Ce fichier remplace certains paramètres de _config.yml pour le déploiement
+
+# URL GitHub Pages
+url: "https://ndabene.github.io"  # Remplacez par votre nom d'utilisateur GitHub
+baseurl: ""
+
+# Environnement de production
+environment: production
+
+# Désactiver les features non supportées par GitHub Pages
+future: false
+unpublished: false
+
+# Optimisations pour la production
+sass:
+  style: compressed
+  sourcemap: never
+
+# Exclusions pour GitHub Pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - PLAN.md
+  - scripts/
+  - update-sitemap.sh
+  - package.json
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/

@@ -16,7 +16,9 @@
       "WebFetch(domain:nicolas-dabene.fr)",
       "Bash(ruby:*)",
       "Bash(sass:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(grep:*)",
+      "Bash(bundle install:*)"
     ],
     "deny": []
   }
