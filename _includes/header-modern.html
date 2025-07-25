@@ -65,7 +65,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1050;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -82,6 +82,43 @@
   /* Compensation pour la navbar fixed */
   body {
     padding-top: 80px;
+  }
+  
+  /* Compensation supplémentaire pour les articles */
+  .post-page {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  /* Amélioration mobile pour les titres d'articles */
+  @media (max-width: 768px) {
+    .post-banner .container,
+    .post-header-section .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  /* S'assurer qu'aucun élément ne passe sous la navbar - GLOBAL */
+  .post-banner,
+  .post-header-section,
+  .post-page,
+  main.content,
+  article {
+    position: relative;
+    z-index: 1 !important;
+  }
+  
+  /* Force la hiérarchie des z-index */
+  .nav-modern {
+    z-index: 1050 !important;
+  }
+  
+  /* Éléments qui doivent rester sous la navbar */
+  .post-content-wrapper,
+  .post-content-main,
+  .container {
+    z-index: auto;
   }
 
   .header-container {

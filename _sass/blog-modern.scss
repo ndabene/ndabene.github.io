@@ -647,6 +647,12 @@ $blog-content-bg: $white;
   min-height: 60vh;
   position: relative;
   
+  // Amélioration mobile
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    border-radius: 8px 8px 0 0;
+  }
+  
   &::before {
     content: '';
     position: absolute;
@@ -666,10 +672,21 @@ $blog-content-bg: $white;
   position: relative;
   z-index: 1;
   
+  // Amélioration mobile
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+  }
+  
   .post-content-area {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 12px;
     padding: 2.5rem;
+    
+    // Padding plus adapté sur mobile
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
     margin-bottom: 2rem;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(226, 232, 240, 0.8);
@@ -682,7 +699,19 @@ $blog-content-bg: $white;
   position: relative;
   height: 400px;
   overflow: hidden;
-  margin-top: -2rem;
+  margin-top: 0; // Suppression de la marge négative problématique
+  z-index: 1; // S'assurer qu'elle reste sous la navbar
+  
+  // Amélioration mobile
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+  
+  // Pour les très petits écrans, on peut séparer l'image du titre
+  @media (max-width: 480px) {
+    height: 200px;
+    margin-bottom: 0;
+  }
   
   .post-banner-image {
     width: 100%;
@@ -699,34 +728,139 @@ $blog-content-bg: $white;
     color: white;
     padding: 2rem 0;
     
+    // Adaptation mobile - réduction de la hauteur et amélioration lisibilité
+    @media (max-width: 768px) {
+      padding: 1rem 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4));
+    }
+    
+    // Pour très petits écrans - on peut cacher l'overlay pour libérer l'espace
+    @media (max-width: 480px) {
+      padding: 0.5rem 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6));
+    }
+    
     .post-title {
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       margin-bottom: 0.5rem;
+      
+      // Adaptation mobile du titre
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 0.3rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+      }
+      
+      // Pour très petits écrans - titre encore plus compact
+      @media (max-width: 480px) {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        margin-bottom: 0.2rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        font-weight: 700;
+      }
     }
     
     .post-meta {
       color: rgba(255, 255, 255, 0.9);
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      
+      // Adaptation mobile des métadonnées
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+      }
+      
+      // Pour très petits écrans - métadonnées simplifiées
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+        line-height: 1.1;
+      }
+    }
+  }
+}
+
+// Titre alternatif pour mobile (sous l'image si nécessaire)
+.post-title-mobile-alt {
+  display: none;
+  
+  @media (max-width: 480px) {
+    display: block;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 3px solid #0f172a;
+    
+    .post-title {
+      color: #0f172a;
+      font-size: 1.4rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      text-shadow: none;
+      font-weight: 700;
+    }
+    
+    .post-meta {
+      color: #374151;
+      font-size: 0.85rem;
+      text-shadow: none;
     }
   }
 }
 
 // Header d'article sans banner
 .post-header-section {
-  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
   padding: 3rem 0;
-  margin-top: -2rem;
+  margin-top: 0; // Suppression de la marge négative problématique
+  z-index: 1; // S'assurer qu'il reste sous la navbar
+  position: relative;
+  
+  // Amélioration mobile
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem 0;
+  }
   
   .post-title {
     color: white;
     margin-bottom: 1rem;
+    
+    // Adaptation mobile pour le header sans bannière
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      margin-bottom: 0.8rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
   }
   
   .post-meta {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1.5rem;
+    
+    // Adaptation mobile pour les métadonnées du header
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+      margin-bottom: 0.8rem;
+    }
   }
 }
 
