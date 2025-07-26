@@ -19,7 +19,8 @@
       "Bash(rm:*)",
       "Bash(grep:*)",
       "Bash(bundle install:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(bundle lock:*)"
     ],
     "deny": []
   }
