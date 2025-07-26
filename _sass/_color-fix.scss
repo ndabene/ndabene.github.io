@@ -1,32 +1,56 @@
-// Correctif différences de couleurs PC/Mac
-* {
-  -webkit-color-profile: sRGB;
+// Correctif différences de couleurs PC/Mac/Android
+// Force sRGB pour tous les éléments
+:root {
   color-profile: sRGB;
+  -webkit-color-profile: sRGB;
 }
 
-html, body {
+* {
+  color-profile: sRGB !important;
+  -webkit-color-profile: sRGB !important;
+}
+
+html {
+  color-profile: sRGB;
+  -webkit-color-profile: sRGB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-nav, .nav, .navigation {
+body {
+  color-profile: sRGB;
+  -webkit-color-profile: sRGB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  // Assurez-vous d'utiliser des couleurs hexadécimales explicites
-  a {
-    color: #333333; // Couleur exacte à adapter selon votre design
-    transition: color 0.3s ease;
-    
-    &:hover {
-      color: #0066cc; // Couleur hover à adapter selon votre design
-    }
+}
+
+// Force sRGB pour tous les écrans P3/wide-gamut
+@media (color-gamut: p3) {
+  :root, *, html, body {
+    color-profile: sRGB !important;
+    -webkit-color-profile: sRGB !important;
   }
 }
 
-@media (color-gamut: p3) {
+@media (color-gamut: rec2020) {
+  :root, *, html, body {
+    color-profile: sRGB !important;
+    -webkit-color-profile: sRGB !important;
+  }
+}
+
+// Correction spécifique Android
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
   * {
-    color-profile: sRGB;
+    color-profile: sRGB !important;
+    -webkit-color-profile: sRGB !important;
+  }
+}
+
+// Meta viewport pour Android
+@supports (-webkit-appearance: none) {
+  html {
+    -webkit-color-profile: sRGB;
   }
 } 
