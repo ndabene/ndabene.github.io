@@ -1161,6 +1161,18 @@ body.dark-mode {
     }
   }
 
+  .contact-form-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .contact-form-container {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
   .contact-form-container,
   .contact-info-container {
     padding: $spacing-lg;

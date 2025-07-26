@@ -20,7 +20,12 @@
       "Bash(grep:*)",
       "Bash(bundle install:*)",
       "Bash(find:*)",
-      "Bash(bundle lock:*)"
+      "Bash(bundle lock:*)",
+      "Bash(move \"2025-01-26-prestashop-projet-etudiant-leader-europeen.md\" \"2025-07-24-prestashop-projet-etudiant-leader-europeen.md\")",
+      "Bash(mv:*)",
+      "Bash(npm run build:*)",
+      "Bash(chmod:*)",
+      "Bash(./force-css-update.sh:*)"
     ],
     "deny": []
   }

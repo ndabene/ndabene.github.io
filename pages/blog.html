@@ -10,11 +10,11 @@ body_class: "page-blog"
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">
-            <a href="/">Home</a>
+            <a href="/">Accueil</a>
             <span>{{ page.title }}</span>
         </nav>
         <div class="hero-content">
-            <h1>Mon Blog Technique</h1>
+            <h1>Blog Technique & E-commerce</h1>
             <p class="section-description">Partage de connaissances, retours d'expérience et articles techniques sur PHP, l'e-commerce, l'IA et les meilleures pratiques en ingénierie logicielle.</p>
         </div>
     </div>
@@ -26,28 +26,9 @@ body_class: "page-blog"
             <div class="blog-grid-news">
                 <div class="main-blog-content-news">
                     <!-- Filtres et tri -->
-                    <div class="blog-filters-compact">
-                        <div class="filters-left">
-                            <div class="filter-group">
-                                <label>Filtrer:</label>
-                                <select id="category-filter">
-                                    <option value="">Toutes les catégories</option>
-                                    {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-                                    {% for category in all_categories %}
-                                        <option value="{{ category }}">{{ category }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                            <div class="filter-group">
-                                <label>Trier:</label>
-                                <select id="sort-filter">
-                                    <option value="date-desc">Plus récent</option>
-                                    <option value="date-asc">Plus ancien</option>
-                                    <option value="title">Titre A-Z</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="filters-right">
+                    <div class="blog-filters-container">
+                        <div class="blog-filters-header">
+                            <h2 class="section-title">Articles du blog</h2>
                             <div class="view-toggle">
                                 <button id="view-list" class="view-btn active" title="Vue liste">
                                     <i class="fas fa-list"></i>
@@ -57,17 +38,56 @@ body_class: "page-blog"
                                 </button>
                             </div>
                         </div>
-                    </div>
+                        
+                        <div class="blog-filters-compact" style="display: flex !important; justify-content: center !important;">
+                            <div class="filters-center" style="display: flex !important; justify-content: center !important; gap: 1rem;">
+                                <div class="filter-group">
+                                    <label><i class="fas fa-folder"></i> Catégorie</label>
+                                    <select id="category-filter">
+                                        <option value="">Toutes les catégories</option>
+                                        {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                                        {% for category in all_categories %}
+                                            <option value="{{ category }}">{{ category }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label><i class="fas fa-sort"></i> Tri</label>
+                                    <select id="sort-filter">
+                                        <option value="date-desc">Plus récent</option>
+                                        <option value="date-asc">Plus ancien</option>
+                                        <option value="title">Titre A-Z</option>
+                                        <option value="reading-time">Temps de lecture</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-results-info" id="filter-results-info">
+                            <span class="results-count">Tous les articles <span id="filtered-count">({{ site.posts.size }})</span></span>
+                            <div class="active-filters" id="active-filters"></div>
+                        </div>
 
-                    <!-- Bouton admin pour voir les futurs posts -->
-                    <div id="admin-toggle-section" style="display: none;">
-                        <button onclick="enableAdminPreview()" class="btn btn-admin-toggle">
-                            <i class="fas fa-eye"></i> Mode Admin (voir futurs posts)
-                        </button>
+                        <!-- Bouton admin pour voir les futurs posts -->
+                        <div id="admin-toggle-section" style="display: none;">
+                            <button onclick="enableAdminPreview()" class="btn btn-admin-toggle">
+                                <i class="fas fa-eye"></i> Mode Admin (voir futurs posts)
+                            </button>
+                        </div>
                     </div>
                     
                     <div class="post-list-news" id="blog-posts-container">
                         {% include blog-post-loop.html posts=site.posts limit=15 %}
+                    </div>
+                    
+                    <!-- Message quand aucun résultat -->
+                    <div class="no-results" id="no-results">
+                        <div class="no-results-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Aucun article trouvé</h3>
+                        <p>Aucun article ne correspond à vos critères de recherche.</p>
+                        <button id="reset-filters" class="btn btn--primary">Réinitialiser les filtres</button>
                     </div>
                     
                     <!-- Données des futurs posts pour le mode admin -->
@@ -90,13 +110,13 @@ body_class: "page-blog"
                 <!-- Sidebar -->
                 <aside class="blog-sidebar-news">
                     <div class="sidebar-widget-compact">
-                        <h4>Récents</h4>
+                        <h4>Articles récents</h4>
                         <div class="recent-posts-compact">
-                            {% for post in site.posts limit: 6 %}
+                            {% for post in site.posts limit: 5 %}
                                 <article class="recent-post-compact">
                                     {% if post.image %}
                                         <div class="recent-thumb-mini">
-                                            <img src="{{ post.image }}" alt="{{ post.title }}">
+                                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
                                         </div>
                                     {% endif %}
                                     <div class="recent-content-mini">
@@ -114,22 +134,13 @@ body_class: "page-blog"
                             {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
-                                <a href="#category-{{ category }}" class="category-compact">
+                                <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
                                     {{ category }} <span>({{ category_posts.size }})</span>
                                 </a>
                             {% endfor %}
                         </div>
                     </div>
 
-                    <div class="sidebar-widget-compact">
-                        <h4>Tags</h4>
-                        <div class="tags-compact">
-                            {% assign all_tags = site.posts | map: 'tags' | flatten | uniq | sort %}
-                            {% for tag in all_tags limit: 12 %}
-                                <span class="tag-compact">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
                     
                     {% if site.data.series %}
                         {% assign has_series_with_posts = false %}
@@ -143,13 +154,15 @@ body_class: "page-blog"
                         
                         {% if has_series_with_posts %}
                         <div class="sidebar-widget-compact">
-                            <h4>Séries</h4>
+                            <h4>Séries d'articles</h4>
                             <div class="series-compact">
-                                {% for series in site.data.series %}
-                                    {% assign series_posts = site.posts | where: "series", series[0] %}
+                                {% for series_entry in site.data.series %}
+                                    {% assign series_key = series_entry[0] %}
+                                    {% assign series_data = series_entry[1] %}
+                                    {% assign series_posts = site.posts | where: "series", series_key %}
                                     {% if series_posts.size > 0 %}
-                                        <a href="/series/{{ series[0] | slugify }}.html" class="series-link-compact">
-                                            {{ series[0] }} <span>({{ series_posts.size }})</span>
+                                        <a href="/series/{{ series_key | slugify }}.html" class="series-link-compact">
+                                            {{ series_key }} <span>({{ series_posts.size }})</span>
                                         </a>
                                     {% endif %}
                                 {% endfor %}
@@ -169,6 +182,297 @@ body_class: "page-blog"
         {% endif %}
     </div>
 </section>
+
+<script>
+// Filtrage des articles et vue liste/grille
+document.addEventListener('DOMContentLoaded', function() {
+    // Définir la vue par défaut comme mode liste
+    const postsContainer = document.getElementById('blog-posts-container');
+    if (postsContainer) {
+        postsContainer.classList.remove('grid-view'); // Assurer que nous commençons en mode liste
+    }
+    
+    // Récupération des éléments DOM
+    const categoryFilter = document.getElementById('category-filter');
+    const sortFilter = document.getElementById('sort-filter');
+    const resetFiltersBtn = document.getElementById('reset-filters');
+    const noResultsDiv = document.getElementById('no-results');
+    const filteredCountSpan = document.getElementById('filtered-count');
+    const activeFiltersDiv = document.getElementById('active-filters');
+    
+    console.log("Blog script loaded");
+    
+    // Vérifier que les éléments DOM existent
+    if (!postsContainer) {
+        console.error("Conteneur d'articles non trouvé");
+        return;
+    }
+    
+    // Masquer par défaut le div "pas de résultats"
+    if (noResultsDiv) {
+        noResultsDiv.style.display = 'none';
+    }
+    
+    // Nettoyer les tags "intermédiaire" qui ne devraient pas apparaître
+    setTimeout(function() {
+        const allBadges = document.querySelectorAll('.badge');
+        if (allBadges.length > 0) {
+            allBadges.forEach(badge => {
+                if (badge.classList.contains('badge--intermediaire') || 
+                    badge.textContent.trim().toLowerCase() === 'intermédiaire') {
+                    
+                    // Vérifier si c'est bien un tag qui ne devrait pas être là
+                    const parentElement = badge.parentElement;
+                    if (!parentElement || 
+                        (!parentElement.classList.contains('series-card-difficulty') && 
+                         !parentElement.classList.contains('difficulty-badge'))) {
+                        badge.remove();
+                    }
+                }
+            });
+        }
+    }, 300);
+    
+    // Appliquer des styles spécifiques pour le mode liste
+    function applyListStyles() {
+        const wrappers = postsContainer.querySelectorAll('.post-preview-wrapper');
+        wrappers.forEach((wrapper, index) => {
+            wrapper.style.borderBottom = index < wrappers.length - 1 ? '1px solid #e2e8f0' : 'none';
+        });
+    }
+    
+    // Appliquer les styles de liste dès le chargement
+    setTimeout(applyListStyles, 100);
+    
+    // Sélecteurs de catégories dans la sidebar
+    const categorySidebarLinks = document.querySelectorAll('.category-compact');
+    
+    // Fonction pour appliquer les filtres
+    function applyFilters() {
+        const categoryValue = categoryFilter ? categoryFilter.value : '';
+        const sortValue = sortFilter ? sortFilter.value : 'date-desc';
+        
+        // Récupérer tous les articles
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        if (posts.length === 0) {
+            console.warn("Aucun article trouvé dans le conteneur");
+            return;
+        }
+        
+        let visibleCount = 0;
+        
+        // Mise à jour des filtres actifs
+        if (activeFiltersDiv) activeFiltersDiv.innerHTML = '';
+        if (categoryValue) {
+            addActiveFilter(categoryValue, 'category');
+        }
+        
+        // Filtrer les posts
+        posts.forEach(post => {
+            const postPreviewElement = post.querySelector('.post-preview-news');
+            if (!postPreviewElement) return;
+            
+            // Récupérer les données de l'article
+            const categoriesRaw = postPreviewElement.getAttribute('data-categories') || '';
+            const tagsRaw = postPreviewElement.getAttribute('data-tags') || '';
+            
+            const categories = categoriesRaw ? categoriesRaw.split(' ').filter(Boolean) : [];
+            const tags = tagsRaw ? tagsRaw.split(' ').filter(Boolean) : [];
+            
+            const titleElem = post.querySelector('.post-news-title');
+            const excerptElem = post.querySelector('.post-news-excerpt');
+            
+            const title = titleElem ? titleElem.textContent.toLowerCase() : '';
+            const content = excerptElem ? excerptElem.textContent.toLowerCase() : '';
+            
+            // Appliquer les filtres
+            let visible = true;
+            
+            if (categoryValue && categories.length > 0 && !categories.includes(categoryValue)) {
+                visible = false;
+            }
+            
+            
+            // Afficher/masquer les posts
+            post.style.display = visible ? '' : 'none';
+            
+            if (visible) {
+                visibleCount++;
+            }
+        });
+        
+        // Mettre à jour le compteur et afficher/masquer le message "aucun résultat"
+        if (filteredCountSpan) filteredCountSpan.textContent = `(${visibleCount})`;
+        
+        if (noResultsDiv) {
+            noResultsDiv.style.display = visibleCount === 0 ? 'flex' : 'none';
+        }
+        
+        // Appliquer le tri
+        sortPosts(sortValue);
+        
+        // S'assurer que les styles spécifiques au mode liste sont appliqués
+        if (!postsContainer.classList.contains('grid-view')) {
+            applyListStyles();
+        }
+    }
+    
+    // Fonction pour ajouter un filtre actif
+    function addActiveFilter(value, type) {
+        if (!activeFiltersDiv) return;
+        
+        const filterTag = document.createElement('div');
+        filterTag.className = 'active-filter';
+        
+        let icon = '';
+        let label = value;
+        
+        switch (type) {
+            case 'category':
+                icon = 'fa-folder';
+                label = `${value}`;
+                break;
+            case 'tag':
+                icon = 'fa-tag';
+                label = `${value}`;
+                break;
+        }
+        
+        filterTag.innerHTML = `
+            <i class="fas ${icon}"></i>
+            ${label}
+            <button class="remove-filter" data-type="${type}" data-value="${value}">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        
+        activeFiltersDiv.appendChild(filterTag);
+        
+        // Ajouter l'événement pour supprimer le filtre
+        filterTag.querySelector('.remove-filter').addEventListener('click', function() {
+            const filterType = this.dataset.type;
+            
+            switch (filterType) {
+                case 'category':
+                    if (categoryFilter) categoryFilter.value = '';
+                    break;
+            }
+            
+            applyFilters();
+        });
+    }
+    
+    // Fonction pour trier les posts
+    function sortPosts(sortValue) {
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        if (posts.length <= 1) return;
+        
+        posts.sort((a, b) => {
+            const postA = a.querySelector('.post-preview-news');
+            const postB = b.querySelector('.post-preview-news');
+            
+            if (!postA || !postB) return 0;
+            
+            switch (sortValue) {
+                case 'date-desc':
+                    const dateA = postA.getAttribute('data-date') || '0';
+                    const dateB = postB.getAttribute('data-date') || '0';
+                    return parseInt(dateB) - parseInt(dateA);
+                case 'date-asc':
+                    const dateAsc1 = postA.getAttribute('data-date') || '0';
+                    const dateAsc2 = postB.getAttribute('data-date') || '0';
+                    return parseInt(dateAsc1) - parseInt(dateAsc2);
+                case 'title':
+                    const titleElemA = a.querySelector('.post-news-title');
+                    const titleElemB = b.querySelector('.post-news-title');
+                    const titleA = titleElemA ? titleElemA.textContent : '';
+                    const titleB = titleElemB ? titleElemB.textContent : '';
+                    return titleA.localeCompare(titleB);
+                case 'reading-time':
+                    const readTimeA = parseInt(postA.getAttribute('data-read-time') || '0');
+                    const readTimeB = parseInt(postB.getAttribute('data-read-time') || '0');
+                    return readTimeA - readTimeB;
+                default:
+                    return 0;
+            }
+        });
+        
+        // Réorganiser les posts dans le DOM
+        posts.forEach(post => postsContainer.appendChild(post));
+    }
+    
+    // Événements pour les filtres principaux
+    if (categoryFilter) categoryFilter.addEventListener('change', applyFilters);
+    if (sortFilter) sortFilter.addEventListener('change', applyFilters);
+    
+    
+    // Événement pour réinitialiser les filtres
+    if (resetFiltersBtn) resetFiltersBtn.addEventListener('click', function() {
+        if (categoryFilter) categoryFilter.value = '';
+        applyFilters();
+    });
+    
+    // Événements pour les catégories dans la sidebar
+    if (categorySidebarLinks) {
+        categorySidebarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.dataset.category;
+                if (categoryFilter) {
+                    categoryFilter.value = category;
+                    applyFilters();
+                }
+            });
+        });
+    }
+    
+    
+    // Basculer entre la vue liste et la vue grille
+    const viewListBtn = document.getElementById('view-list');
+    const viewGridBtn = document.getElementById('view-grid');
+    
+    if (viewListBtn) {
+        viewListBtn.addEventListener('click', function() {
+            postsContainer.classList.remove('grid-view');
+            viewListBtn.classList.add('active');
+            viewGridBtn.classList.remove('active');
+            
+            // Appliquer des styles spécifiques pour le mode liste
+            applyListStyles();
+        });
+    }
+    
+    if (viewGridBtn) {
+        viewGridBtn.addEventListener('click', function() {
+            postsContainer.classList.add('grid-view');
+            viewGridBtn.classList.add('active');
+            viewListBtn.classList.remove('active');
+            
+            // Réinitialiser les styles spécifiques au mode liste
+            const wrappers = postsContainer.querySelectorAll('.post-preview-wrapper');
+            wrappers.forEach(wrapper => {
+                wrapper.style.borderBottom = '';
+            });
+        });
+    }
+    
+    // Vérifier si des posts sont visibles
+    function checkVisiblePosts() {
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        const visiblePosts = posts.filter(post => post.style.display !== 'none');
+        
+        if (visiblePosts.length === 0 && posts.length > 0) {
+            // Aucun post visible mais il y a des posts, réinitialiser les filtres
+            if (categoryFilter) categoryFilter.value = '';
+            applyFilters();
+        }
+    }
+    
+    // Exécuter un filtrage initial et vérifier les résultats
+    setTimeout(applyFilters, 300);
+    setTimeout(checkVisiblePosts, 1000);
+});
+</script>
 
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>

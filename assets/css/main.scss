@@ -11,9 +11,9 @@
 @import "_under-construction";
 @import "layout";
 @import "navigation";
-@import "blog-modern";
 @import "modern-components";
 @import "animations";
 @import "code-highlighting";
 @import "skills-circular";
-@import "blog-news";
+@import "blog-modern";
+@import "blog-news"; // Importé en dernier pour éviter les conflits

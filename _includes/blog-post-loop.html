@@ -33,11 +33,7 @@ html.admin-preview-active .future-post-item {
 </style>
 
 {% for post in posts_to_show limit: post_limit %}
-    <div class="post-preview-wrapper {% if post.date > site.time %}future-post-item{% endif %}" 
-         data-post-date="{{ post.date | date: '%Y-%m-%d' }}"
-         data-current-date="{{ site.time | date: '%Y-%m-%d' }}"
-         data-is-future="{% if post.date > site.time %}true{% else %}false{% endif %}">
-        
+    <div class="post-preview-wrapper {% if post.date > site.time %}future-post-item{% endif %}">
         {% include post-preview-news.html post=post %}
         
         {% if post.date > site.time %}

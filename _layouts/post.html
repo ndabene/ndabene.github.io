@@ -95,7 +95,7 @@ layout: default
             </p>
             <div class="post-categories-tags">
                 {% for category in page.categories %}
-                    <span class="badge badge--category">{{ category }}</span>
+                    <span class="badge badge--category" data-category="{{ category | slugify }}">{{ category }}</span>
                 {% endfor %}
                 {% for tag in page.tags %}
                     <span class="badge badge--tag">{{ tag }}</span>
@@ -122,6 +122,7 @@ layout: default
 
                 <div class="post-content">
                     {{ content }}
+                    
                 </div>
                 
                 <!-- Helper LinkedIn pour les futurs posts -->
