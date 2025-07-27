@@ -3,8 +3,8 @@ layout: post
 title: "PrestaShop : De projet étudiant à leader européen de l'e-commerce - L'épopée complète (2005-2025)"
 date: 2025-07-24
 author: Nicolas Dabène
-categories: [e-commerce, entrepreneuriat, success-story]
-tags: [PrestaShop, startup, e-commerce, entrepreneuriat, plateforme, open-source, success-story, Bruno-Levesque, Epitech]
+categories: [Ecommerce, Entrepreneuriat, Success Story]
+tags: [PrestaShop, startup, ecommerce, entrepreneuriat, plateforme, open source, success story, Bruno Levesque, Epitech]
 excerpt: "PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success story de 20 ans illustre parfaitement la capacité d'innovation française face aux géants américains du secteur."
 image: /assets/images/blog/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
 featured: true

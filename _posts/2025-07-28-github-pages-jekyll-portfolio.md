@@ -3,7 +3,7 @@ layout: post
 title: "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll"
 date: 2025-07-28
 author: Nicolas Dabène
-categories: [Development, Tutorial]
+categories: [Développement, Tutoriel]
 tags: [GitHub Pages, Jekyll, portfolio, site statique, git, développement web]
 excerpt: "Découvrez comment créer gratuitement un portfolio professionnel en ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs."
 image: /assets/images/blog/2025-07-28-github-pages-jekyll-portfolio.jpg
@@ -15,19 +15,6 @@ estimated_reading_time: "12 minutes"
 
 # Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
 
-## 📋 Résumé Exécutif
-
-**Points clés à retenir de cet article :**
-
-- **Solution gratuite et professionnelle** : GitHub Pages + Jekyll permettent de créer un portfolio sans coût d'hébergement
-- **Simplicité de déploiement** : Un simple `git push` suffit pour publier vos modifications
-- **Performance et sécurité** : Les sites statiques sont rapides et moins vulnérables aux attaques
-- **Contrôle total** : Maîtrisez votre code source et votre contenu avec Git
-- **Recommandation principale** : Commencez avec un thème existant avant de personnaliser
-
-**Temps de lecture :** 12 minutes | **Niveau :** Débutant | **Technologies :** GitHub Pages, Jekyll, Git, Markdown
-
----
 
 ## Introduction
 
@@ -231,7 +218,7 @@ Pour ajouter vos projets, créez des fichiers dans le dossier `_posts` en respec
 layout: post
 title: "Application E-commerce Moderne"
 date: 2025-01-15
-categories: [projet, e-commerce]
+categories: [Projet, Ecommerce]
 tags: [PHP, JavaScript, MySQL]
 image: /assets/images/ecommerce-project.jpg
 demo_url: "https://demo-ecommerce.com"

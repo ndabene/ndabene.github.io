@@ -3,7 +3,7 @@ layout: post
 title: "Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel"
 date: 2025-06-15
 author: Nicolas Dabène
-categories: [AI, Development, Best Practices]
+categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
 tags: [IA générative, développement logiciel, qualité du code, sécurité, prompt engineering]
 excerpt: "Exploration de deux approches du développement assisté par IA : le Vibe Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques, bénéfices et bonnes pratiques pour une génération de code responsable."
 image: /assets/images/blog/vibe-coding-prompt-driven.jpg
@@ -12,19 +12,6 @@ featured: true
 
 # Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel, sécurité et qualité du code
 
-## 📋 Résumé Exécutif
-
-**Points clés à retenir de cet article :**
-
-- **Deux approches opposées** : Le Vibe Coding (rapide mais risqué) vs Prompt-Driven Development (structuré et sécurisé)
-- **Risques majeurs du Vibe Coding** : Vulnérabilités de sécurité, code non maintenable, absence de gestion d'erreurs
-- **Avantages du PDD** : Sécurité intégrée, architecture solide, tests automatisés, documentation complète
-- **Recommandation** : Utiliser le Prompt-Driven Development pour les projets de production
-- **ROI** : Investissement initial plus élevé mais maintenance et évolutivité optimisées
-
-**Temps de lecture :** 12 minutes | **Niveau :** Intermédiaire-Avancé | **Technologies :** IA générative, PHP, JavaScript, Python
-
----
 
 L'avènement des intelligences artificielles génératives comme ChatGPT, Claude, et GitHub Copilot a révolutionné la façon dont nous concevons et écrivons du code. Cette transformation a donné naissance à deux approches distinctes du développement assisté par IA : le **Vibe Coding** et le **Prompt-Driven Development**.
 

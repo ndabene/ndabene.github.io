@@ -25,7 +25,8 @@
       "Bash(mv:*)",
       "Bash(npm run build:*)",
       "Bash(chmod:*)",
-      "Bash(./force-css-update.sh:*)"
+      "Bash(./force-css-update.sh:*)",
+      "Bash(bundle --version)"
     ],
     "deny": []
   }

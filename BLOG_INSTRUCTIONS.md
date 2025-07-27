@@ -50,16 +50,22 @@ estimated_reading_time: "8 minutes"
 ---
 ```
 
-### 🏷️ Catégories autorisées
-- `Development` (développement général)
+### 🏷️ Catégories autorisées (toujours en français, sans tirets)
+- `Développement` (développement général)
 - `PHP` (spécifique PHP)
 - `PrestaShop` (e-commerce PrestaShop)
-- `AI` (intelligence artificielle)
+- `Intelligence Artificielle` (IA et machine learning)
 - `Performance` (optimisation)
 - `Architecture` (conception logicielle)
-- `Security` (sécurité)
-- `Best Practices` (bonnes pratiques)
-- `Tutorial` (tutoriels pratiques)
+- `Sécurité` (sécurité informatique)
+- `Bonnes Pratiques` (méthodologies et standards)
+- `Tutoriel` (guides pratiques)
+- `Ecommerce` (commerce électronique)
+- `Entrepreneuriat` (business et startup)
+- `Success Story` (cas de réussite)
+- `Commerce` (commerce traditionnel et digital)
+- `Analyse Marché` (études de marché)
+- `Projet` (retours d'expérience projets)
 
 ### 🔖 Tags suggestions
 **PHP :** `PHP 8`, `Symfony`, `Laravel`, `Composer`, `PHPUnit`, `OOP`  
