@@ -1,260 +1,280 @@
-# PHP & Backend
-- name: PHP
+# 🚀 PHP & Backend - 15 ans d'expertise
+- name: PHP Expert
   level: 95
   category: php-backend
   years_experience: 15
-  description: "Maîtrise avancée du développement back-end, création d'applications web robustes et évolutives."
+  description: "Approche polyvalente pragmatique : PHP natif (75k+ installations), Symfony sous PrestaShop, architecture Laravel SaaS complète."
+  achievements: "75 000+ installations actives"
+  impact: "Maintenance et évolution de modules legacy critiques"
 
 - name: Symfony
   level: 90
   category: php-backend
   years_experience: 10
-  description: "Framework PHP pour applications web modernes avec architecture MVC."
+  description: "Développement modules PrestaShop modernes nouvelle génération avec architecture Symfony intégrée."
+  achievements: "Modules certifiés 'Built for PrestaShop'"
+  impact: "Transition modules legacy vers architecture moderne"
 
-- name: Microservices
-  level: 85
+- name: Architecture Web
+  level: 88
   category: php-backend
-  years_experience: 7
-  description: "Architecture distribuée pour applications scalables et modulaires."
+  years_experience: 12
+  description: "Monolithes bien structurés avec API REST. Approche pragmatique : simplicité et fiabilité avant complexité."
+  achievements: "30 modules architecturés et maintenus"
+  impact: "Stabilité prouvée sur installations critiques"
 
 - name: Laravel
   level: 80
   category: php-backend
   years_experience: 5
-  description: "Développement d'applications web robustes et évolutives avec le framework PHP Laravel."
+  description: "Architecture SaaS complète : Google Shopping Actions avec gestion abonnements, espace client, synchronisation multi-boutiques."
+  achievements: "Plateforme SaaS production"
+  impact: "Gain productivité et scalabilité e-commerce"
 
 - name: MySQL
   level: 88
   category: php-backend
   years_experience: 12
-  description: "Conception et optimisation de bases de données relationnelles, requêtes complexes et gestion des données."
+  description: "Optimisation bases de données e-commerce haute charge. Performance et intégrité sur systèmes critiques."
+  achievements: "DB optimisées pour 75k+ installations"
+  impact: "Performance garantie sur systèmes de production"
 
-# E-commerce
-- name: PrestaShop
+# 🏆 PrestaShop - Expert Elite (12 ans)
+- name: PrestaShop Expert
   level: 95
   category: ecommerce
   years_experience: 12
-  description: "Expertise dans le développement et la personnalisation de boutiques en ligne avec PrestaShop."
+  description: "Expert reconnu avec 5 PrestaShop Awards (2011-2020) et position TOP marketplace officielle."
+  achievements: "5 PrestaShop Awards + 4 Coups de Coeur"
+  impact: "150 000+ installations actives cumulées"
 
-- name: E-commerce Architecture
+- name: Développement Modules
+  level: 95
+  category: ecommerce
+  years_experience: 12
+  description: "30 modules développés chez BusinessTech. Google Merchant Center et Facebook Ads : 75k+ téléchargements chacun."
+  achievements: "30 modules portfolio + support technique"
+  impact: "TOP 3 éditeurs français marketplace PrestaShop"
+
+- name: E-commerce Innovation
   level: 90
   category: ecommerce
   years_experience: 10
-  description: "Conception d'architectures e-commerce scalables et performantes."
+  description: "BusinessTech : Une des plus anciennes entreprises éditrices de modules en France. Leadership marché prouvé."
+  achievements: "Geo Suits : 1000+ téléchargements en 3 mois"
+  impact: "Innovation continue et validation marché rapide"
 
-- name: Outils PrestaShop
-  level: 90
+- name: Support & Community
+  level: 88
   category: ecommerce
-  years_experience: 10
-  description: "Maîtrise des outils PrestaShop pour le développement de modules et thèmes certifiés 'Built for PrestaShop'."
+  years_experience: 12
+  description: "Support technique personnel sur tous les modules. Contribution open source et aide communautaire."
+  achievements: "Support 24/7 personnalisé"
+  impact: "Satisfaction client et fidélisation prouvées"
 
-- name: Gestion de produit digital
+# 🤖 Intelligence Artificielle - Innovation & Efficacité
+- name: Développement Assisté IA
   level: 85
-  category: ecommerce
-  years_experience: 8
-  description: "Expertise en analyse, conception et développement de produits digitaux, de l'idéation à la livraison."
-
-# Intelligence Artificielle
-- name: Intelligence Artificielle
-  level: 80
   category: ai
   years_experience: 2
-  description: "Compréhension et application des concepts d'IA, développement de solutions basées sur le machine learning."
+  description: "Transformation des méthodes de travail : gain productivité 4x (1 mois → 1 semaine pour projets similaires)."
+  achievements: "Formation équipes + apprenti en IA"
+  impact: "Multiplication efficacité développement par 4"
 
-- name: Agentic Orchestration
+- name: Orchestration Agents IA
   level: 80
   category: ai
   years_experience: 1
-  description: "Orchestration d'agents IA pour automatiser des processus complexes."
+  description: "Management d'agents IA : Claude Code, Perplexity, NotebookLM, gamme GPT. Workflows automatisés."
+  achievements: "MCP PrestaShop développé en interne"
+  impact: "Nouvelle forme de leadership technique"
 
-- name: Rédaction de contenu
-  level: 80
+- name: IA Business Applications
+  level: 75
   category: ai
   years_experience: 1
-  description: "Génération automatisée de contenu avec assistance IA."
+  description: "Collaboration technique-marketing pour processus IA business. Vision transversale applications IA."
+  achievements: "Plateforme businesstech.fr/landing avec IA"
+  impact: "Pont entre technique et business IA"
 
-# Frontend & Design
-- name: HTML5
-  level: 95
+# 🎨 Frontend & UX - Spécialisation E-commerce
+- name: UX E-commerce
+  level: 88
+  category: frontend
+  years_experience: 12
+  description: "Philosophy UX-Centric : optimisation interfaces back-office pour fluidité expérience marchant."
+  achievements: "Interfaces modules optimisées"
+  impact: "Productivité et fiabilité avant esthétique"
+
+- name: HTML5/CSS3
+  level: 90
   category: frontend
   years_experience: 15
-  description: "Maîtrise complète du HTML5 et des standards web modernes."
+  description: "Maîtrise complète standards web modernes. Architecture responsive multi-devices pour e-commerce."
+  achievements: "Sites personnels + modules PrestaShop"
+  impact: "Expérience utilisateur optimisée"
 
-- name: SCSS/CSS
+- name: JavaScript/jQuery
+  level: 82
+  category: frontend
+  years_experience: 10
+  description: "Développement dynamique pour PrestaShop. Focus interactivité et performance sur interfaces e-commerce."
+  achievements: "30 modules avec JS optimisé"
+  impact: "Interfaces fluides et réactives"
+
+- name: Responsive Design
   level: 85
   category: frontend
   years_experience: 10
-  description: "Styles CSS avancés et préprocesseurs pour interfaces modernes."
+  description: "Adaptation multi-devices pour écosystème PrestaShop. Compréhension enjeux opérationnels e-commerce."
+  achievements: "Design mobile-first systématique"
+  impact: "Accessibilité maximale solutions e-commerce"
 
-- name: JavaScript
-  level: 80
-  category: frontend
-  years_experience: 10
-  description: "Développement front-end dynamique et interactif, manipulation du DOM et utilisation d'APIs modernes."
-
-- name: React
-  level: 70
-  category: frontend
-  years_experience: 4
-  description: "Développement d'interfaces utilisateur modernes avec React."
-
-- name: jQuery
-  level: 85
-  category: frontend
-  years_experience: 10
-  description: "Utilisation avancée de jQuery pour améliorer l'interactivité des boutiques PrestaShop."
-
-- name: Tailwind CSS
-  level: 75
-  category: frontend
-  years_experience: 3
-  description: "Création de designs responsifs et personnalisés pour PrestaShop avec Tailwind CSS."
-
-- name: Bootstrap
-  level: 80
-  category: frontend
-  years_experience: 8
-  description: "Développement rapide d'interfaces utilisables pour PrestaShop avec Bootstrap."
-
-- name: UX/UI Design
-  level: 75
-  category: frontend
-  years_experience: 6
-  description: "Conception d'interfaces utilisateur intuitives et esthétiques."
-
-# DevOps & Tools
-- name: Git
+# ⚙️ DevOps & Tools - Autonomie Technique
+- name: Git Expert
   level: 90
   category: devops
   years_experience: 10
-  description: "Maîtrise du contrôle de version et de la collaboration avec Git."
+  description: "Maîtrise avancée contrôle de version. Gestion repositories complexes et collaboration équipes."
+  achievements: "30 projets modules sous Git"
+  impact: "Traçabilité et collaboration optimales"
 
-- name: DevOps
-  level: 70
+- name: Déploiement Production
+  level: 82
   category: devops
-  years_experience: 5
-  description: "Pratiques DevOps pour déploiement et maintenance d'applications."
+  years_experience: 8
+  description: "Déploiement modules PrestaShop sur 75k+ installations. Processus fiables et monitoring."
+  achievements: "Zéro défaillance critique production"
+  impact: "Stabilité systèmes clients garantie"
 
-- name: GitHub Actions
+- name: Jekyll/GitHub Pages
+  level: 85
+  category: devops
+  years_experience: 3
+  description: "Sites statiques performants : nicolas-dabene.fr, businesstech.fr/landing. SEO et performance optimisés."
+  achievements: "Sites personnels + business"
+  impact: "Présence web professionnelle moderne"
+
+- name: Workflow Automation
   level: 75
   category: devops
   years_experience: 3
-  description: "Automatisation des workflows de développement avec GitHub Actions."
+  description: "GitHub Actions et automatisation déploiements. Intégration processus IA dans workflows."
+  achievements: "Pipelines CI/CD modules"
+  impact: "Efficiency et qualité développement"
 
-- name: AWS
-  level: 65
-  category: devops
-  years_experience: 3
-  description: "Services cloud Amazon pour hébergement et scaling d'applications."
+# 🔗 Intégrations & Problem Solving
+- name: API Integrations Expert
+  level: 90
+  category: integrations
+  years_experience: 8
+  description: "Intégrations complexes : OpenAI, Google (Merchant Center, Ads), Facebook. 75k+ installations production."
+  achievements: "APIs critiques Google/Facebook intégrées"
+  impact: "Connectivité e-commerce maximale"
 
-- name: Jekyll
-  level: 80
-  category: devops
-  years_experience: 3
-  description: "Générateur de sites statiques pour blogs et documentation."
-
-# Intégrations & APIs
-- name: Intégration API
+- name: Code Review Expert
   level: 88
   category: integrations
   years_experience: 8
-  description: "Maîtrise de l'intégration des API OpenAI, Google et Facebook dans les projets PrestaShop."
+  description: "Revue code systématique, identification problèmes, optimisations PrestaShop/PHP. Qualité garantie."
+  achievements: "Support technique personnalisé"
+  impact: "Stabilité et performance modules"
 
-- name: Review de code
-  level: 85
-  category: integrations
-  years_experience: 8
-  description: "Expertise en revue de code, identification des problèmes potentiels et suggestions d'améliorations pour PrestaShop et PHP."
-
-- name: Résolution de problèmes complexes
-  level: 90
+- name: Complex Problem Solver
+  level: 92
   category: integrations
   years_experience: 12
-  description: "Capacité à analyser et résoudre des problèmes techniques complexes."
+  description: "Résolution problèmes techniques complexes. 12 ans d'expérience debugging systèmes critiques."
+  achievements: "Zéro problème non résolu"
+  impact: "Fiabilité et confiance clients"
 
-# Leadership & Management
+# 👑 Leadership & Autonomie
 - name: Technical Leadership
-  level: 90
+  level: 92
   category: leadership
   years_experience: 8
-  description: "Direction d'équipes techniques et prise de décisions architecturales."
+  description: "Chef de projet autonome sur tous modules BusinessTech. Auto-gestion complète objectifs techniques et business."
+  achievements: "30 projets menés en autonomie"
+  impact: "Responsabilité produit end-to-end"
+
+- name: Team Development
+  level: 85
+  category: leadership
+  years_experience: 5
+  description: "Formation équipes IA, management apprenti développement assisté. Nouvelle forme leadership technique."
+  achievements: "Formation méthodologies IA internes"
+  impact: "Montée compétences équipes"
 
 - name: Product Management
-  level: 85
-  category: leadership
-  years_experience: 5
-  description: "Gestion de produits digitaux de la conception à la livraison."
-
-- name: Gestion de projet
-  level: 85
-  category: leadership
-  years_experience: 7
-  description: "Maîtrise des méthodologies agiles, planification et suivi de projets, coordination d'équipes."
-
-- name: Pédagogie
   level: 88
   category: leadership
-  years_experience: 10
-  description: "Capacité à transmettre des connaissances techniques complexes de manière claire et accessible."
+  years_experience: 8
+  description: "Gestion produits digitaux conception à succès commercial. Modules PrestaShop de l'idée au TOP marketplace."
+  achievements: "5 PrestaShop Awards + TOP marketplace"
+  impact: "Vision stratégique vers succès commercial"
 
-- name: Force de proposition
-  level: 85
+- name: Knowledge Transfer
+  level: 90
   category: leadership
-  years_experience: 8
-  description: "Aptitude à générer des idées innovantes et à proposer des solutions créatives aux défis techniques."
+  years_experience: 10
+  description: "Transmission expertise technique/non-technique. Articles, formation entreprise, contenu BusinessTech."
+  achievements: "Contenu pédagogique régulier"
+  impact: "Partage intelligent et accessible"
 
-# Soft Skills & Communication
-- name: Communication interculturelle
-  level: 80
+# 💎 Excellence Relationnelle
+- name: Communication Adaptative
+  level: 88
   category: soft-skills
-  years_experience: 8
-  description: "Capacité à communiquer efficacement dans un environnement multiculturel."
+  years_experience: 12
+  description: "Interface naturelle CTOs ↔ Dirigeants business. Communication technique et non-technique selon audiences."
+  achievements: "Support client personnalisé 24/7"
+  impact: "Pont efficace technique-business"
 
-- name: Anglais technique
+- name: Anglais Professionnel
   level: 85
   category: soft-skills
   years_experience: 15
-  description: "Maîtrise de l'anglais technique pour la communication professionnelle et la documentation dans le domaine du développement web."
+  description: "Documentation technique, communication internationale. PrestaShop marketplace mondiale."
+  achievements: "Support international anglophone"
+  impact: "Rayonnement professionnel global"
 
-- name: Savoir-être
+- name: Excellence Relationnelle
   level: 90
   category: soft-skills
   years_experience: 12
-  description: "Capacité à adopter un comportement professionnel et éthique dans toutes les situations."
+  description: "Rigueur technique + curiosité transversale + savoir-être. Respect confidentialité client absolu."
+  achievements: "Reconnaissance Awards et communauté"
+  impact: "Confiance et fidélisation clients"
 
-- name: Écoute active
-  level: 88
-  category: soft-skills
-  years_experience: 10
-  description: "Aptitude à écouter attentivement, à comprendre et à répondre de manière appropriée aux besoins des autres."
-
-- name: Empathie
-  level: 85
+- name: Autonomie Totale
+  level: 92
   category: soft-skills
   years_experience: 12
-  description: "Capacité à comprendre et à prendre en compte les besoins et les perspectives des autres."
+  description: "Responsabilité complète produit conception à succès commercial. Auto-gestion objectives sans supervision."
+  achievements: "30 projets autonomes réussis"
+  impact: "Fiabilité et indépendance prouvées"
 
-- name: Autonomie
-  level: 90
-  category: soft-skills
-  years_experience: 12
-  description: "Capacité à travailler de manière indépendante, à résoudre des problèmes et à prendre des initiatives."
-
-# Apprentissage & Adaptabilité
-- name: Veille technologique
-  level: 90
+# 🔮 Innovation & Adaptabilité
+- name: Veille & Innovation
+  level: 92
   category: learning
   years_experience: 10
-  description: "Suivi constant des nouvelles technologies et des tendances du secteur."
+  description: "Adoption précoce IA avec résultats mesurables. Veille technologique et non-technique (Leonardo AI, design)."
+  achievements: "Premier à implémenter IA productive"
+  impact: "Avantage concurrentiel innovation"
 
-- name: Apprentissage rapide
-  level: 88
+- name: Adaptabilité Technique
+  level: 90
   category: learning
   years_experience: 12
-  description: "Capacité à assimiler rapidement de nouvelles connaissances et compétences."
+  description: "Expertise entièrement autodidacte. Capacité d'adaptation technique et relationnelle selon contextes."
+  achievements: "Transition PHP natif → Frameworks modernes"
+  impact: "Flexibilité maximale projets"
 
-- name: Agilité et adaptabilité
+- name: Vision Prospective
   level: 85
   category: learning
-  years_experience: 10
-  description: "Flexibilité face aux changements et capacité à s'adapter rapidement à de nouvelles situations."
+  years_experience: 8
+  description: "Développeur-orchestrateur : transition codage pur vers orchestration intelligente. Accompagnement transformation."
+  achievements: "Positionnement évolutif IA"
+  impact: "Leadership transformation digitale"

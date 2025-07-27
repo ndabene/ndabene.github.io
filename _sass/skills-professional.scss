@@ -1,0 +1,736 @@
+// Skills Professional - Design 2025 Moderne et Impactant
+// Nouvelle approche axée résultats business et reconnaissance professionnelle
+
+//================================================
+// VARIABLES PROFESSIONNELLES
+//================================================
+
+$skills-pro-primary: #0f172a; // Marine professionnel
+$skills-pro-secondary: #1e293b; // Anthracite élégant
+$skills-pro-accent: #059669; // Vert succès (preserved from original)
+$skills-pro-accent-light: #10b981; // Vert plus clair
+$skills-pro-gold: #f59e0b; // Or pour awards/achievements
+$skills-pro-blue: #3b82f6; // Bleu pour innovation
+$skills-pro-purple: #8b5cf6; // Violet pour leadership
+$skills-pro-orange: #f97316; // Orange pour impact
+
+$skills-pro-text: #111827; // Noir professionnel
+$skills-pro-text-light: #6b7280; // Gris lecture
+$skills-pro-background: #fafafa; // Fond subtil
+$skills-pro-card-bg: #ffffff; // Fond cartes
+$skills-pro-border: #e5e7eb; // Bordures discrètes
+$skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
+
+//================================================
+// HERO SECTION MODERNISÉE
+//================================================
+
+.skills-hero-modern {
+  background: linear-gradient(135deg, $skills-pro-background 0%, #f3f4f6 100%);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e5e7eb" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 2rem;
+    
+    a {
+      color: $skills-pro-text-light;
+      text-decoration: none;
+      font-size: 0.9rem;
+      
+      &:hover {
+        color: $skills-pro-accent;
+      }
+    }
+    
+    span {
+      color: $skills-pro-primary;
+      font-weight: 600;
+      
+      &::before {
+        content: ' / ';
+        color: $skills-pro-text-light;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+// Signature Professionnelle
+.hero-signature {
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: $skills-pro-primary;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .signature-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    blockquote {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: $skills-pro-text;
+      font-style: italic;
+      margin: 0 0 1rem 0;
+      position: relative;
+      padding: 0 2rem;
+      
+      &::before,
+      &::after {
+        content: '"';
+        font-size: 2rem;
+        color: $skills-pro-accent;
+        font-weight: bold;
+        position: absolute;
+        top: -0.5rem;
+      }
+      
+      &::before {
+        left: 0;
+      }
+      
+      &::after {
+        right: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+      }
+    }
+    
+    cite {
+      font-size: 1rem;
+      color: $skills-pro-text-light;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+}
+
+// Trilogie de Valeur
+.value-trilogy {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  
+  .value-card {
+    background: $skills-pro-card-bg;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px $skills-pro-shadow;
+    border: 1px solid $skills-pro-border;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, $skills-pro-accent 0%, $skills-pro-accent-light 100%);
+    }
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba($skills-pro-accent, 0.15);
+    }
+    
+    .value-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $skills-pro-primary;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: $skills-pro-text-light;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Métriques Clés
+.key-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  
+  .metric {
+    text-align: center;
+    
+    .metric-number {
+      font-size: 3rem;
+      font-weight: 900;
+      color: $skills-pro-accent;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .metric-label {
+      font-size: 0.9rem;
+      color: $skills-pro-text-light;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+//================================================
+// SECTION EXPERTISE PRINCIPALE
+//================================================
+
+.skills-page-pro {
+  background: $skills-pro-background;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+// Navigation Expertise
+.expertise-navigation {
+  margin-bottom: 4rem;
+  
+  .nav-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $skills-pro-primary;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: $skills-pro-text-light;
+      font-size: 1.1rem;
+    }
+  }
+  
+  .expertise-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+    .expertise-filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem;
+      background: $skills-pro-card-bg;
+      border: 2px solid $skills-pro-border;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      min-width: 160px;
+      
+      .filter-icon {
+        font-size: 1.5rem;
+      }
+      
+      .filter-text {
+        font-weight: 600;
+        color: $skills-pro-text;
+        font-size: 0.95rem;
+      }
+      
+      .filter-meta {
+        font-size: 0.8rem;
+        color: $skills-pro-text-light;
+        font-weight: 500;
+      }
+      
+      &:hover {
+        border-color: $skills-pro-accent;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba($skills-pro-accent, 0.15);
+      }
+      
+      &.active {
+        background: $skills-pro-accent;
+        border-color: $skills-pro-accent;
+        color: white;
+        
+        .filter-text,
+        .filter-meta {
+          color: white;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        min-width: 140px;
+        padding: 0.75rem 1rem;
+        
+        .filter-text {
+          font-size: 0.85rem;
+        }
+        
+        .filter-meta {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// CATÉGORIES D'EXPERTISE
+//================================================
+
+.expertise-category-pro {
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease-out;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .category-header-pro {
+    margin-bottom: 3rem;
+    
+    .category-title-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      
+      .category-icon {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, $skills-pro-accent 0%, $skills-pro-accent-light 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .category-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $skills-pro-primary;
+        margin: 0;
+        line-height: 1.2;
+        
+        @media (max-width: 768px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    
+    .category-description-pro {
+      font-size: 1.1rem;
+      color: $skills-pro-text-light;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: 4rem;
+      
+      @media (max-width: 768px) {
+        margin-left: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//================================================
+// GRILLE COMPÉTENCES PROFESSIONNELLE
+//================================================
+
+.skills-grid-pro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.skill-card-pro {
+  background: $skills-pro-card-bg;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px $skills-pro-shadow;
+  border: 1px solid $skills-pro-border;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, $skills-pro-accent 0%, $skills-pro-accent-light 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba($skills-pro-primary, 0.1);
+    border-color: $skills-pro-accent;
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    .level-circle {
+      transform: scale(1.1);
+    }
+  }
+  
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    
+    .skill-level-indicator {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      .level-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, $skills-pro-accent 0%, $skills-pro-accent var(--level-deg), $skills-pro-border var(--level-deg), $skills-pro-border 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: transform 0.3s ease;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          width: 46px;
+          height: 46px;
+          background: $skills-pro-card-bg;
+          border-radius: 50%;
+        }
+        
+        .level-percentage {
+          position: relative;
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: $skills-pro-primary;
+          z-index: 1;
+        }
+        
+        &[data-level] {
+          --level-deg: calc(var(--level, 0) * 3.6deg);
+        }
+      }
+      
+      .experience-badge {
+        background: linear-gradient(135deg, $skills-pro-gold 0%, #f59e0b 100%);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+        min-width: 60px;
+      }
+    }
+  }
+  
+  .skill-content {
+    .skill-name-pro {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $skills-pro-primary;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    .skill-description-pro {
+      color: $skills-pro-text-light;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .skill-achievements,
+    .skill-impact {
+      margin-bottom: 1rem;
+      
+      .achievement-item,
+      .impact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        
+        .achievement-icon,
+        .impact-icon {
+          font-size: 1.1rem;
+          margin-top: 0.1rem;
+          flex-shrink: 0;
+        }
+        
+        .achievement-text,
+        .impact-text {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+        
+        .achievement-text {
+          color: $skills-pro-gold;
+          font-weight: 600;
+        }
+        
+        .impact-text {
+          color: $skills-pro-accent;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// CALL-TO-ACTION SECTION
+//================================================
+
+.skills-cta-section {
+  background: linear-gradient(135deg, $skills-pro-primary 0%, $skills-pro-secondary 100%);
+  padding: 4rem 0;
+  margin-top: 4rem;
+  
+  .cta-content {
+    text-align: center;
+    color: white;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      .btn-primary,
+      .btn-secondary {
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        
+        @media (max-width: 768px) {
+          padding: 0.875rem 1.5rem;
+          font-size: 0.95rem;
+        }
+      }
+      
+      .btn-primary {
+        background: $skills-pro-accent;
+        color: white;
+        border: 2px solid $skills-pro-accent;
+        
+        &:hover {
+          background: $skills-pro-accent-light;
+          border-color: $skills-pro-accent-light;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba($skills-pro-accent, 0.3);
+        }
+      }
+      
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+        
+        &:hover {
+          background: white;
+          color: $skills-pro-primary;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// ANIMATIONS & INTERACTIONS
+//================================================
+
+// Animation d'apparition progressive
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card-pro {
+  animation: slideInUp 0.6s ease-out;
+  
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+// Responsive amélioré
+@media (max-width: 480px) {
+  .skills-hero-modern {
+    padding: 2rem 0;
+  }
+  
+  .value-trilogy {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .key-metrics {
+    grid-template-columns: repeat(2, 1fr);
+    
+    .metric-number {
+      font-size: 2rem;
+    }
+  }
+  
+  .expertise-filters {
+    .expertise-filter-btn {
+      min-width: 120px;
+      padding: 0.6rem 0.8rem;
+      
+      .filter-icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  .category-header-pro {
+    .category-title-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      
+      .category-icon {
+        font-size: 2rem;
+      }
+      
+      .category-title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  .skills-grid-pro {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-card-pro {
+    padding: 1.5rem;
+  }
+}
+
+//================================================
+// JAVASCRIPT HOOKS POUR INTERACTIONS
+//================================================
+
+// Classes pour les états JavaScript
+.expertise-category-pro {
+  &.filtered-out {
+    display: none;
+  }
+  
+  &.filtered-in {
+    display: block;
+    animation: slideInUp 0.5s ease-out;
+  }
+}
+
+// Niveau dynamique pour les cercles
+.level-circle {
+  &[data-level="95"] { --level: 95; }
+  &[data-level="90"] { --level: 90; }
+  &[data-level="88"] { --level: 88; }
+  &[data-level="85"] { --level: 85; }
+  &[data-level="82"] { --level: 82; }
+  &[data-level="80"] { --level: 80; }
+  &[data-level="75"] { --level: 75; }
+  &[data-level="70"] { --level: 70; }
+}
