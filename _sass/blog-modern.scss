@@ -1,5 +1,10 @@
 // Blog moderne harmonisé avec le design du site
 
+// Article principal
+.post-page {
+  // Reset styles pour éviter conflits
+}
+
 // Variables héritées du design principal
 $blog-card-shadow: $shadow-md;
 $blog-card-hover-shadow: $shadow-xl;
@@ -719,6 +724,16 @@ $blog-content-bg: $white;
   overflow: hidden;
   margin: 0;
   z-index: 1;
+  
+  // Compensation navbar sticky en mobile  
+  @media (max-width: 768px) {
+    margin-top: 60px; // Hauteur navbar mobile optimisée
+    
+    // Sur très petits écrans
+    @media (max-width: 480px) {
+      margin-top: 55px;
+    }
+  }
   
   // Responsive heights
   @media (max-width: 1200px) {

@@ -73,23 +73,21 @@ estimated_reading_time: "8 minutes"
 **IA :** `machine learning`, `AI integration`, `prompt engineering`, `automation`  
 **Tech :** `JavaScript`, `MySQL`, `Docker`, `Git`, `performance`, `security`
 
-## 📖 Structure d'Article OBLIGATOIRE
+## 📖 Structure d'Article MISE À JOUR (Post UX/UI Rework 2025)
+
+⚠️ **IMPORTANT : Le bloc "Résumé Exécutif" a été supprimé pour améliorer l'UX**
 
 ```markdown
 # Titre H1 (identique au title du front matter)
 
-## 📋 Résumé Exécutif
+**NOUVEAU :** Le titre s'affiche automatiquement sur la bannière avec :
+- Design moderne avec overlay opacifié
+- Breadcrumb navigation intégrée
+- Meta-données (date, auteur, temps de lecture, technologies)
+- Table des matières repliable et sticky
 
-**Points clés à retenir de cet article :**
-
-- **Point clé 1** : Explication concise
-- **Point clé 2** : Bénéfice pratique  
-- **Point clé 3** : Résultat mesurable
-- **Recommandation principale** : Action à retenir
-
-**Temps de lecture :** X minutes | **Niveau :** [Niveau] | **Technologies :** [Liste]
-
----
+**SUPPRIMÉ :** 
+~~## 📋 Résumé Exécutif~~ ❌ (Retiré pour optimiser l'expérience utilisateur)
 
 ## Introduction
 
@@ -98,11 +96,18 @@ Paragraphe d'accroche qui :
 - Explique pourquoi c'est important
 - Annonce ce que va apprendre le lecteur
 
+**NOUVEAU :** Table des matières générée automatiquement
+- ✅ Génération automatique des H2 et H3
+- ✅ Navigation sticky sur desktop et mobile
+- ✅ Highlight de la section courante
+- ✅ Scroll offset intelligent (évite la navbar)
+- ✅ Repliable pour économiser l'espace
+
 ## [Section Principale 1]
 
 Contenu structuré avec :
-- Sous-titres H3 si nécessaire
-- Exemples de code avec coloration syntaxique
+- Sous-titres H3 si nécessaire  
+- Exemples de code avec coloration syntaxique ET bouton copier
 - Captures d'écran si pertinent
 
 ### Exemple de code
@@ -138,12 +143,12 @@ class ExempleService
 - [Lien vers article connexe 2]
 ```
 
-## ✨ Optimisations GEO (IA Génératives)
+## ✨ Optimisations GEO (IA Génératives) - MISE À JOUR
 
-### Résumé Exécutif
-- **OBLIGATOIRE** en début d'article
-- Format bullet points avec **gras**
-- Métadonnées techniques (temps, niveau, techno)
+### ~~Résumé Exécutif~~ ❌ SUPPRIMÉ 
+- ~~OBLIGATOIRE en début d'article~~ → **Retiré pour améliorer l'UX**
+- ~~Format bullet points avec gras~~ → **Métadonnées dans banner**
+- ~~Métadonnées techniques~~ → **Automatique dans front matter**
 
 ### Phrases d'autorité
 Inclure des phrases comme :
@@ -194,13 +199,13 @@ Inclure des sections FAQ quand pertinent :
 - **Commentaires** : Code toujours commenté
 - **Fonctionnel** : Code testable et utilisable
 
-## 🎨 Ton et Style
+## 🎨 Ton et Style - MODERNISÉ
 
-### Personnalité
-- **Professionnel** mais accessible
-- **Expertise** sans jargon excessif
-- **Pratique** avec exemples concrets
-- **Pédagogique** avec explications claires
+### Personnalité (Post-rework 2025)
+- **Professionnel** mais accessible avec design moderne
+- **Expertise** mise en valeur par le nouveau layout
+- **Pratique** avec exemples concrets + boutons copier
+- **Pédagogique** avec TOC navigation facilitée
 
 ### Audience cible
 - Développeurs PHP/JavaScript
@@ -214,17 +219,20 @@ Inclure des sections FAQ quand pertinent :
 - Exemples non-fonctionnels
 - Contenu trop généraliste
 
-## ✅ Checklist Avant Publication
+## ✅ Checklist Avant Publication - MISE À JOUR 2025
 
 - [ ] Nom de fichier correct (YYYY-MM-DD-kebab-case.md)
 - [ ] Front matter complet et valide
-- [ ] Résumé exécutif présent
-- [ ] Structure H2/H3 respectée
-- [ ] Au moins 1 exemple de code
-- [ ] Images avec alt text
+- [ ] ~~Résumé exécutif présent~~ ❌ **SUPPRIMÉ** 
+- [ ] Structure H2/H3 respectée (génère TOC automatique)
+- [ ] Au moins 1 exemple de code (avec bouton copier auto)
+- [ ] Images avec alt text et tailles optimisées
+- [ ] Banner image en JPG (1200x630px recommandé)
 - [ ] Liens internes vers autres articles
 - [ ] Conclusion avec récapitulatif
 - [ ] Orthographe et grammaire vérifiées
+- [ ] Catégories en français sans tirets
+- [ ] Test responsive sur mobile (TOC, banner, navigation)
 
 ## 🚀 Après Publication
 
@@ -236,5 +244,28 @@ Le système automatique se charge de :
 
 ---
 
+## 🆕 Nouvelles Fonctionnalités 2025 (Post UX/UI Rework)
+
+### ✨ Améliorations Visuelles
+- **Banner moderne** : Design épuré avec overlay opacifié pour lisibilité
+- **TOC intégrée** : Table des matières repliable et sticky 
+- **Boutons copier** : Sur tous les blocs de code automatiquement
+- **Typography** : Inter + Poppins pour un rendu professionnel
+- **Responsive** : Optimisé mobile avec navigation intelligente
+
+### ⚡ Fonctionnalités Techniques  
+- **Auto-génération TOC** : H2/H3 → navigation automatique
+- **Scroll offset** : Navigation qui évite la navbar
+- **Progress bar** : Barre de lecture en cours d'article  
+- **Breadcrumb** : Navigation contextuelle intégrée
+- **Transitions** : Animations fluides et professionnelles
+
+### 🚫 Éléments Supprimés
+- ❌ **Résumé Exécutif** : Remplacé par métadonnées banner
+- ❌ **Sidebar** : Remplacée par TOC intégrée
+- ❌ **Catégories avec tirets** : Harmonisées en français
+
+---
+
 **Contact pour questions :** Nicolas Dabène - ndabene2807@gmail.com  
-**Dernière mise à jour :** Janvier 2025
+**Dernière mise à jour :** Juillet 2025 (Post UX/UI Rework)
