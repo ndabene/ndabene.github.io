@@ -188,29 +188,48 @@ layout: default
                 
                     <!-- Social Sharing Section -->
                     <div class="social-sharing-section">
-                        <h3 class="sharing-title">Partager cet article</h3>
+                        <h3 class="sharing-title">
+                            <i class="fas fa-share-alt"></i>
+                            Partager cet article
+                        </h3>
                         <div class="social-sharing-buttons">
                             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" 
-                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--linkedin" aria-label="Partager sur LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--linkedin" aria-label="Partager sur LinkedIn" title="Partager sur LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                             
-                            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&via=ndabene" 
-                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--twitter" aria-label="Partager sur Twitter">
+                            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&hashtags=développement,php,prestashop&via=ndabene" 
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--twitter" aria-label="Partager sur X/Twitter" title="Partager sur X/Twitter">
                                 <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
                             </a>
                             
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
-                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--facebook" aria-label="Partager sur Facebook">
-                                <i class="fab fa-facebook"></i>
-                                <span>Facebook</span>
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--facebook" aria-label="Partager sur Facebook" title="Partager sur Facebook">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                             
-                            <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="social-btn social-btn--copy" aria-label="Copier le lien">
+                            <a href="https://reddit.com/submit?url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}" 
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--reddit" aria-label="Partager sur Reddit" title="Partager sur Reddit">
+                                <i class="fab fa-reddit-alien"></i>
+                            </a>
+                            
+                            <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" 
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--whatsapp" aria-label="Partager sur WhatsApp" title="Partager sur WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            
+                            <a href="https://t.me/share/url?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}" 
+                               target="_blank" rel="noopener noreferrer" class="social-btn social-btn--telegram" aria-label="Partager sur Telegram" title="Partager sur Telegram">
+                                <i class="fab fa-telegram"></i>
+                            </a>
+                            
+                            <a href="mailto:?subject={{ page.title | url_encode }}&body=Découvrez cet article : {{ page.title | url_encode }}%0A%0A{{ page.url | absolute_url }}" 
+                               class="social-btn social-btn--email" aria-label="Partager par email" title="Partager par email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            
+                            <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="social-btn social-btn--copy" aria-label="Copier le lien" title="Copier le lien">
                                 <i class="fas fa-link"></i>
-                                <span>Copier</span>
                             </button>
                         </div>
                     </div>

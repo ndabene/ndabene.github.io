@@ -84,6 +84,39 @@
     padding-top: 80px;
   }
   
+  /* Ajustements mobile pour compensation navbar */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 75px; /* Hauteur ajustée sur mobile */
+    }
+    
+    .header-container {
+      height: 70px; /* Hauteur réduite sur mobile */
+      padding: 0 1rem; /* Padding réduit sur mobile */
+    }
+    
+    /* Compensation spécifique pour banner article mobile */
+    .post-banner {
+      margin-top: -5px; /* Léger ajustement pour coller parfaitement */
+    }
+  }
+  
+  /* Très petits écrans */
+  @media (max-width: 480px) {
+    body {
+      padding-top: 70px;
+    }
+    
+    .header-container {
+      height: 65px;
+      padding: 0 0.75rem;
+    }
+    
+    .post-banner {
+      margin-top: -3px;
+    }
+  }
+  
   /* Compensation supplémentaire pour les articles */
   .post-page {
     margin-top: 0 !important;

@@ -725,15 +725,7 @@ $blog-content-bg: $white;
   margin: 0;
   z-index: 1;
   
-  // Compensation navbar sticky en mobile  
-  @media (max-width: 768px) {
-    margin-top: 60px; // Hauteur navbar mobile optimisée
-    
-    // Sur très petits écrans
-    @media (max-width: 480px) {
-      margin-top: 55px;
-    }
-  }
+  // Styles de base - compensation navbar gérée par header-modern.html
   
   // Responsive heights
   @media (max-width: 1200px) {
@@ -1214,81 +1206,7 @@ $blog-content-bg: $white;
   }
 }
 
-// Social sharing amélioré
-.social-sharing-section {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-top: 3rem;
-  border: 1px solid #e2e8f0;
-  
-  .sharing-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .social-sharing-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    .social-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-      
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-      
-      &--linkedin {
-        background: #0077b5;
-        color: white;
-      }
-      
-      &--twitter {
-        background: #1da1f2;
-        color: white;
-      }
-      
-      &--facebook {
-        background: #1877f2;
-        color: white;
-      }
-      
-      &--copy {
-        background: #64748b;
-        color: white;
-      }
-      
-      i {
-        font-size: 1.1rem;
-      }
-      
-      @media (max-width: 768px) {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.85rem;
-        
-        span {
-          display: none;
-        }
-      }
-    }
-  }
-}
+// SUPPRIMÉ - section replacée plus bas
 
 // Table des matières repliable intégrée - Design moderne cohérent
 .table-of-contents-inline {
@@ -1983,28 +1901,40 @@ $blog-content-bg: $white;
 }
 
 //================================================
-// BOUTONS DE PARTAGE SOCIAL MODERNES
+// BOUTONS DE PARTAGE SOCIAL MODERNES - VERSION UNIFIÉE
 //================================================
 
 .social-sharing-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
   margin: 3rem 0;
-  padding: 2rem 0;
-  border-top: 1px solid #e2e8f0;
-  text-align: center;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   
   .sharing-title {
-    font-size: 1.2rem;
-    color: #1e293b;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    
+    i {
+      color: #3b82f6;
+      font-size: 1.2rem;
+    }
   }
 }
 
 .social-sharing-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -2117,6 +2047,17 @@ $blog-content-bg: $white;
   &:hover {
     background: #1da851;
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+}
+
+.social-btn--email {
+  background: #ea4335;
+  color: white;
+  box-shadow: 0 4px 15px rgba(234, 67, 53, 0.3);
+  
+  &:hover {
+    background: #d33b2c;
+    box-shadow: 0 8px 25px rgba(234, 67, 53, 0.4);
   }
 }
 
