@@ -48,9 +48,9 @@ body_class: "page-skills"
             <div class="value-card">
                 <div class="value-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M23 4a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3z"/>
-                        <path d="M10.5 21a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/>
-                        <path d="M8 5a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/>
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
                     </svg>
                 </div>
                 <h3>Capacité d'adaptation</h3>
@@ -79,7 +79,8 @@ body_class: "page-skills"
             </div>
         </div>
 
-        <!-- Navigation Expertise -->
+        <!-- Navigation Expertise - TEMPORAIREMENT DÉSACTIVÉE -->
+        {% comment %}
         <div class="skills-filters-modern">
             <div class="filters-header">
                 <h2>Domaines d'Expertise</h2>
@@ -154,6 +155,7 @@ body_class: "page-skills"
                 {% endfor %}
             </div>
         </div>
+        {% endcomment %}
 
         <!-- Grille de Compétences -->
         <div class="skills-grid-modern">
@@ -249,36 +251,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Gestion du filtrage
-    const filterBtns = document.querySelectorAll('.filter-btn-modern');
-    const categories = document.querySelectorAll('.skills-category-modern');
-    
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            
-            // Masquer toutes les catégories d'abord
-            categories.forEach(category => {
-                category.classList.remove('visible');
-                setTimeout(() => category.style.display = 'none', 10);
-            });
-            
-            // Afficher les catégories filtrées après un délai
-            setTimeout(() => {
-                categories.forEach(category => {
-                    if (filter === 'all' || category.getAttribute('data-category') === filter) {
-                        category.style.display = 'block';
-                        setTimeout(() => category.classList.add('visible'), 10);
-                    }
-                });
-            }, 150);
-            
-            setTimeout(animateSkillLevels, 400);
-        });
-    });
+    // Système de filtrage désactivé temporairement
+    // Le filtrage sera réimplémenté dans une prochaine version
     
     // Animation des métriques
     function animateMetrics() {
