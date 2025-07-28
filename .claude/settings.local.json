@@ -29,6 +29,16 @@
       "Bash(bundle --version)",
       "Bash(git push:*)",
       "Bash(jekyll serve:*)",
+      "Bash(if exist \"_site\\assets\\css\\style.css\" del \"_site\\assets\\css\\style.css\")",
+      "Bash(./force-update.cmd)",
+      "Bash(if exist \"_site\\nul\" del \"_site\\nul\")",
+      "Bash(if exist \"_site\" rmdir /s /q \"_site\")",
+      "Bash(cmd:*)",
+      "Bash(gem env:*)",
+      "Bash(/c/Ruby34-x64/bin/bundle exec jekyll build)",
+      "Bash(gem install:*)",
+      "Bash(bundle clean:*)",
+      "Bash(cat:*)"
       "Bash(git add:*)",
       "Bash(git commit:*)"
     ],

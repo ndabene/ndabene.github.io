@@ -252,13 +252,15 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
     }
   }
   
-  .expertise-filters {
+  .expertise-filters,
+  .filter-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     
-    .expertise-filter-btn {
+    .expertise-filter-btn,
+    .filter-btn-modern {
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -273,6 +275,11 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
       
       .filter-icon {
         font-size: 1.5rem;
+        
+        svg {
+          width: 1em;
+          height: 1em;
+        }
       }
       
       .filter-text {
@@ -285,6 +292,13 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
         font-size: 0.8rem;
         color: $skills-pro-text-light;
         font-weight: 500;
+      }
+      
+      // Style pour les boutons modernes sans .filter-text wrapper
+      &.filter-btn-modern {
+        font-weight: 600;
+        color: $skills-pro-text;
+        font-size: 0.95rem;
       }
       
       &:hover {
@@ -324,58 +338,68 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
 // CATÉGORIES D'EXPERTISE
 //================================================
 
-.expertise-category-pro {
-  margin-bottom: 5rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.5s ease-out;
+.expertise-category-pro,
+.skills-category-modern {
+  margin-bottom: 3rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-out;
   
   &.visible {
     opacity: 1;
     transform: translateY(0);
   }
   
-  .category-header-pro {
-    margin-bottom: 3rem;
+  &.filtered-out {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+.category-header-pro {
+  margin-bottom: 3rem;
+  
+  .category-title-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
     
-    .category-title-group {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      
-      .category-icon {
-        font-size: 2.5rem;
-        background: linear-gradient(135deg, $skills-pro-accent 0%, $skills-pro-accent-light 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      
-      .category-title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: $skills-pro-primary;
-        margin: 0;
-        line-height: 1.2;
-        
-        @media (max-width: 768px) {
-          font-size: 1.8rem;
-        }
-      }
+    .category-icon {
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, $skills-pro-accent 0%, $skills-pro-accent-light 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     
-    .category-description-pro {
-      font-size: 1.1rem;
-      color: $skills-pro-text-light;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: 4rem;
+    .category-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: $skills-pro-primary;
+      margin: 0;
+      line-height: 1.2;
       
       @media (max-width: 768px) {
-        margin-left: 0;
-        font-size: 1rem;
+        font-size: 1.8rem;
       }
+    }
+  }
+  
+  .category-description-pro {
+    font-size: 1.1rem;
+    color: $skills-pro-text-light;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: 4rem;
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+      font-size: 1rem;
     }
   }
 }
@@ -384,10 +408,12 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
 // GRILLE COMPÉTENCES PROFESSIONNELLE
 //================================================
 
-.skills-grid-pro {
+.skills-grid-pro,
+.skills-grid-modern {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  margin-top: 1rem;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -395,7 +421,8 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
   }
 }
 
-.skill-card-pro {
+.skill-card-pro,
+.skill-card-modern {
   background: $skills-pro-card-bg;
   border-radius: 16px;
   padding: 2rem;
@@ -712,14 +739,34 @@ $skills-pro-shadow: rgba(0, 0, 0, 0.05); // Ombres subtiles
 //================================================
 
 // Classes pour les états JavaScript
-.expertise-category-pro {
+.expertise-category-pro,
+.skills-category-modern {
   &.filtered-out {
-    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
   }
   
-  &.filtered-in {
-    display: block;
+  &.filtered-in,
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease-out;
+    pointer-events: auto;
     animation: slideInUp 0.5s ease-out;
+  }
+  
+  // État initial
+  &.skills-category-modern {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.4s ease-out;
+    
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 

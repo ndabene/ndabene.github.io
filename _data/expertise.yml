@@ -1,13 +1,13 @@
 - id: prestashop
-  name: Expert PrestaShop & PHP Moderne
-  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-  description: "Plus de 15 ans d'expertise en développement e-commerce PrestaShop avec une évolution continue vers les technologies modernes. Spécialiste de l'analyse approfondie des besoins clients pour créer 50+ modules à forte valeur ajoutée."
+  name: Expert PrestaShop Elite - 5 Awards
+  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+  description: "Expert PrestaShop reconnu avec 5 Awards officiels (2011-2020) et 30 modules développés totalisant 100k+ installations actives. Développeur au sein de BusinessTech, une des plus anciennes entreprises éditrices de modules PrestaShop en France."
   skills:
-    - "50+ modules PrestaShop développés (évolution native → Symfony)"
-    - "Analyse approfondie des besoins clients et enjeux business"
-    - "Développement de modules à forte valeur ajoutée"
-    - "Intégration progressive des composants Symfony"
-    - "Architecture moderne avec services containers et DI"
+    - "5 PrestaShop Awards + 4 'coups de cœur' du jury"
+    - "30 modules PrestaShop avec 100k+ installations actives"
+    - "Top marketplace PrestaShop France chez BusinessTech"
+    - "Évolution native PrestaShop vers architecture Symfony moderne"
+    - "Expertise approfondie besoins e-commerce et enjeux business"
 
 - id: ecommerce
   name: Architecture E-commerce Complexe
@@ -32,15 +32,15 @@
     - "Optimisation des conversions et UX e-commerce"
 
 - id: ai
-  name: Orchestration IA & Automation
-  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6"/><path d="m12 1 3 3-3 3-3-3 3-3Z"/></svg>
-  description: "Spécialiste de l'intégration d'intelligence artificielle pour optimiser les workflows de développement. Expert de l'automation intelligente des processus métier et de l'accélération de la livraison de projets e-commerce."
+  name: Pionnier IA E-commerce - Gain 4x
+  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
+  description: "Pionnier de l'intégration d'intelligence artificielle dans le développement e-commerce avec un gain d'efficacité de 4x. Spécialiste de l'orchestration d'agents IA pour révolutionner les workflows de développement et l'automatisation des processus métier."
   skills:
-    - "Workflows de développement assistés par IA"
-    - "Génération automatique de code optimisé"
-    - "Analyse prédictive pour e-commerce"
-    - "Chatbots et assistants virtuels intelligents"
-    - "Optimisation continue basée sur l'IA"
+    - "Orchestration d'agents IA pour développement (gain 4x efficacité)"
+    - "Prompt-Driven Development et méthodologies IA"
+    - "Automation intelligente des processus e-commerce"
+    - "Formation d'équipes aux méthodologies IA assistées"
+    - "Intégration seamless IA dans architectures existantes"
 
 - id: fullstack
   name: Développement FullStack & APIs

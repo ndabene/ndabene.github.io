@@ -48,9 +48,9 @@ body_class: "page-skills"
             <div class="value-card">
                 <div class="value-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M23 4a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3z"/>
-                        <path d="M10.5 21a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/>
-                        <path d="M8 5a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/>
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
                     </svg>
                 </div>
                 <h3>Capacité d'adaptation</h3>
@@ -166,23 +166,23 @@ body_class: "page-skills"
                     {% comment %} Récupération du titre depuis le fichier YAML {% endcomment %}
                     {% assign category_title = '' %}
                     {% if category.name == 'php-backend' %}
-                        {% assign category_title = 'PHP & Backend - 15 ans d\'expertise' %}
+                        {% assign category_title = "PHP & Backend - 15 ans d'expertise" %}
                     {% elsif category.name == 'ecommerce' %}
-                        {% assign category_title = 'PrestaShop - Expert Elite (12 ans)' %}
+                        {% assign category_title = "PrestaShop - Expert Elite (12 ans)" %}
                     {% elsif category.name == 'ai' %}
-                        {% assign category_title = 'Intelligence Artificielle - Innovation & Efficacité' %}
+                        {% assign category_title = "Intelligence Artificielle - Innovation & Efficacité" %}
                     {% elsif category.name == 'frontend' %}
-                        {% assign category_title = 'Frontend & UX - Spécialisation E-commerce' %}
+                        {% assign category_title = "Frontend & UX - Spécialisation E-commerce" %}
                     {% elsif category.name == 'devops' %}
-                        {% assign category_title = 'DevOps & Tools - Autonomie Technique' %}
+                        {% assign category_title = "DevOps & Tools - Autonomie Technique" %}
                     {% elsif category.name == 'integrations' %}
-                        {% assign category_title = 'Intégrations & Problem Solving' %}
+                        {% assign category_title = "Intégrations & Problem Solving" %}
                     {% elsif category.name == 'leadership' %}
-                        {% assign category_title = 'Leadership & Autonomie' %}
+                        {% assign category_title = "Leadership & Autonomie" %}
                     {% elsif category.name == 'soft-skills' %}
-                        {% assign category_title = 'Excellence Relationnelle' %}
+                        {% assign category_title = "Excellence Relationnelle" %}
                     {% elsif category.name == 'learning' %}
-                        {% assign category_title = 'Innovation & Adaptabilité' %}
+                        {% assign category_title = "Innovation & Adaptabilité" %}
                     {% endif %}
                     <h2>{{ category_title }}</h2>
                 </div>
@@ -251,36 +251,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Gestion du filtrage
-    const filterBtns = document.querySelectorAll('.filter-btn-modern');
-    const categories = document.querySelectorAll('.skills-category-modern');
-    
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            
-            // Masquer toutes les catégories d'abord
-            categories.forEach(category => {
-                category.classList.remove('visible');
-                setTimeout(() => category.style.display = 'none', 10);
-            });
-            
-            // Afficher les catégories filtrées après un délai
-            setTimeout(() => {
-                categories.forEach(category => {
-                    if (filter === 'all' || category.getAttribute('data-category') === filter) {
-                        category.style.display = 'block';
-                        setTimeout(() => category.classList.add('visible'), 10);
-                    }
-                });
-            }, 150);
-            
-            setTimeout(animateSkillLevels, 400);
-        });
-    });
+    // Système de filtrage désactivé temporairement
+    // Le filtrage sera réimplémenté dans une prochaine version
     
     // Animation des métriques
     function animateMetrics() {

@@ -1,0 +1,445 @@
+//================================================
+// HOMEPAGE ENHANCED - NOUVELLES SECTIONS
+//================================================
+
+//================================================
+// HERO CTA SECTION
+//================================================
+
+.hero-cta-section {
+  margin-top: $space-xl;
+  text-align: center;
+  
+  .hero-cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: $white;
+    text-decoration: none;
+    border-radius: $rounded-full;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+    transition: $transition-normal;
+    box-shadow: $shadow-lg;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-xl;
+      text-decoration: none;
+      color: $white;
+    }
+    
+    svg {
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover svg {
+      transform: translateX(2px);
+    }
+  }
+}
+
+//================================================
+// TRILOGIE DE VALEUR SECTION
+//================================================
+
+.value-trilogy-section {
+  background: linear-gradient(135deg, rgba($primary-color, 0.02) 0%, rgba($secondary-color, 0.01) 100%);
+  
+  .value-trilogy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $space-xl;
+    margin-top: $space-2xl;
+  }
+  
+  .value-card-modern {
+    background: $white;
+    border-radius: $rounded-xl;
+    padding: $space-2xl;
+    text-align: center;
+    box-shadow: $shadow-md;
+    border: 1px solid rgba($primary-color, 0.08);
+    transition: $transition-normal;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, $accent-color-2 0%, $success-color 100%);
+      border-radius: $rounded-xl $rounded-xl 0 0;
+    }
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-xl;
+      border-color: rgba($primary-color, 0.15);
+    }
+    
+    .value-icon-modern {
+      width: 4rem;
+      height: 4rem;
+      margin: 0 auto $space-lg;
+      color: $accent-color-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($accent-color-2, 0.1);
+      border-radius: 50%;
+      overflow: visible;
+      padding: $space-sm;
+      
+      svg {
+        width: 100%;
+        height: 100%;
+        max-width: 28px;
+        max-height: 28px;
+      }
+    }
+    
+    .value-title-modern {
+      font-family: $font-family-headings;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+      margin-bottom: $space-md;
+    }
+    
+    .value-description-modern {
+      font-family: $font-family-primary;
+      color: $text-color-light;
+      line-height: $line-height-base;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+//================================================
+// ACHIEVEMENTS SECTION
+//================================================
+
+.section.achievements-section {
+  background: $white;
+  
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: $space-2xl;
+    margin-top: $space-2xl;
+    
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+    }
+  }
+  
+  .achievement-block {
+    background: $white !important;
+    border-radius: $rounded-xl;
+    padding: $space-2xl;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    transition: $transition-normal;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: $space-lg;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(135deg, $accent-color-1 0%, $accent-color-2 100%);
+    }
+    
+    &.prestashop-excellence::before {
+      background: linear-gradient(135deg, $accent-color-1 0%, #b8941f 100%);
+    }
+    
+    &.ai-innovation::before {
+      background: linear-gradient(135deg, $accent-color-2 0%, $success-color 100%);
+    }
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12) !important;
+    }
+    
+    .achievement-header {
+      display: flex;
+      align-items: center;
+      gap: $space-lg;
+      margin-bottom: $space-lg;
+      
+      .achievement-icon {
+        width: 3rem;
+        height: 3rem;
+        color: $accent-color-2;
+        flex-shrink: 0;
+      }
+      
+      .achievement-title {
+        font-family: $font-family-headings;
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        color: $primary-color;
+        margin: 0;
+      }
+    }
+    
+    .achievement-content {
+      .achievement-description {
+        font-family: $font-family-primary;
+        color: $text-color-light;
+        line-height: $line-height-base;
+        margin-bottom: $space-xl;
+        font-size: $font-size-lg;
+      }
+      
+      .achievement-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space-lg;
+        
+        @media (max-width: $mobile) {
+          grid-template-columns: 1fr;
+          gap: $space-md;
+        }
+        
+        .metric-item {
+          text-align: center;
+          padding: $space-lg;
+          background: rgba($primary-color, 0.02);
+          border-radius: $rounded-lg;
+          border: 1px solid rgba($primary-color, 0.08);
+          transition: $transition-normal;
+          
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-sm;
+            border-color: rgba($primary-color, 0.15);
+          }
+          
+          .metric-number {
+            display: block;
+            font-family: $font-family-headings;
+            font-size: 1.75rem;
+            font-weight: $font-weight-black;
+            color: $accent-color-2;
+            margin-bottom: $space-xs;
+            
+            @media (max-width: $mobile) {
+              font-size: 1.5rem;
+            }
+          }
+          
+          .metric-label {
+            font-family: $font-family-primary;
+            font-size: $font-size-sm;
+            color: $text-color-light;
+            font-weight: $font-weight-medium;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+  }
+  
+  .awards-timeline {
+    margin-top: $space-3xl;
+    padding: $space-2xl;
+    background: linear-gradient(135deg, rgba($primary-color, 0.02) 0%, rgba($secondary-color, 0.01) 100%);
+    border-radius: $rounded-xl;
+    border: 1px solid rgba($primary-color, 0.08);
+    
+    .timeline-title {
+      font-family: $font-family-headings;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: $space-xl;
+    }
+    
+    .timeline-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: $space-lg;
+      
+      .timeline-item {
+        text-align: center;
+        padding: $space-lg;
+        background: $white;
+        border-radius: $rounded-lg;
+        box-shadow: $shadow-sm;
+        transition: $transition-normal;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: $shadow-md;
+        }
+        
+        .timeline-year {
+          display: block;
+          font-family: $font-family-headings;
+          font-size: $font-size-lg;
+          font-weight: $font-weight-bold;
+          color: $accent-color-2;
+          margin-bottom: $space-sm;
+        }
+        
+        .timeline-event {
+          font-family: $font-family-primary;
+          font-size: $font-size-sm;
+          color: $text-color-light;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+//================================================
+// APPROACH SECTION
+//================================================
+
+.approach-section {
+  background: linear-gradient(135deg, rgba($secondary-color, 0.02) 0%, rgba($primary-color, 0.01) 100%);
+  
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-xl;
+    margin-top: $space-2xl;
+  }
+  
+  .approach-card {
+    background: $white;
+    border-radius: $rounded-xl;
+    padding: $space-2xl;
+    text-align: center;
+    box-shadow: $shadow-md;
+    border: 1px solid rgba($secondary-color, 0.08);
+    transition: $transition-normal;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
+      border-radius: $rounded-xl $rounded-xl 0 0;
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: $shadow-xl;
+      border-color: rgba($secondary-color, 0.15);
+      
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+    
+    .approach-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 0 auto $space-lg;
+      color: $secondary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($secondary-color, 0.1);
+      border-radius: 50%;
+    }
+    
+    .approach-title {
+      font-family: $font-family-headings;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+      margin-bottom: $space-md;
+    }
+    
+    .approach-description {
+      font-family: $font-family-primary;
+      color: $text-color-light;
+      line-height: $line-height-base;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+//================================================
+// RESPONSIVE
+//================================================
+
+@media (max-width: $tablet) {
+  .value-trilogy-grid,
+  .achievements-grid,
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: $space-lg;
+  }
+  
+  .achievement-block {
+    padding: $space-lg;
+    
+    .achievement-header {
+      flex-direction: column;
+      text-align: center;
+      gap: $space-md;
+      
+      .achievement-title {
+        font-size: $font-size-xl;
+      }
+    }
+    
+    .achievement-metrics {
+      grid-template-columns: 1fr;
+      gap: $space-md;
+    }
+  }
+  
+  .awards-timeline {
+    padding: $space-lg;
+    
+    .timeline-items {
+      grid-template-columns: 1fr;
+      gap: $space-md;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .value-card-modern,
+  .approach-card {
+    padding: $space-lg;
+  }
+  
+  .hero-cta-primary {
+    padding: $space-md $space-lg;
+    font-size: $font-size-sm;
+  }
+  
+  .achievement-block {
+    .achievement-content {
+      .achievement-description {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
