@@ -28,7 +28,9 @@
       "Bash(./force-css-update.sh:*)",
       "Bash(bundle --version)",
       "Bash(git push:*)",
-      "Bash(jekyll serve:*)"
+      "Bash(jekyll serve:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }

@@ -79,7 +79,8 @@ body_class: "page-skills"
             </div>
         </div>
 
-        <!-- Navigation Expertise -->
+        <!-- Navigation Expertise - TEMPORAIREMENT DÉSACTIVÉE -->
+        {% comment %}
         <div class="skills-filters-modern">
             <div class="filters-header">
                 <h2>Domaines d'Expertise</h2>
@@ -154,6 +155,7 @@ body_class: "page-skills"
                 {% endfor %}
             </div>
         </div>
+        {% endcomment %}
 
         <!-- Grille de Compétences -->
         <div class="skills-grid-modern">
