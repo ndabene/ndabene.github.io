@@ -164,23 +164,23 @@ body_class: "page-skills"
                     {% comment %} Récupération du titre depuis le fichier YAML {% endcomment %}
                     {% assign category_title = '' %}
                     {% if category.name == 'php-backend' %}
-                        {% assign category_title = 'PHP & Backend - 15 ans d\'expertise' %}
+                        {% assign category_title = "PHP & Backend - 15 ans d'expertise" %}
                     {% elsif category.name == 'ecommerce' %}
-                        {% assign category_title = 'PrestaShop - Expert Elite (12 ans)' %}
+                        {% assign category_title = "PrestaShop - Expert Elite (12 ans)" %}
                     {% elsif category.name == 'ai' %}
-                        {% assign category_title = 'Intelligence Artificielle - Innovation & Efficacité' %}
+                        {% assign category_title = "Intelligence Artificielle - Innovation & Efficacité" %}
                     {% elsif category.name == 'frontend' %}
-                        {% assign category_title = 'Frontend & UX - Spécialisation E-commerce' %}
+                        {% assign category_title = "Frontend & UX - Spécialisation E-commerce" %}
                     {% elsif category.name == 'devops' %}
-                        {% assign category_title = 'DevOps & Tools - Autonomie Technique' %}
+                        {% assign category_title = "DevOps & Tools - Autonomie Technique" %}
                     {% elsif category.name == 'integrations' %}
-                        {% assign category_title = 'Intégrations & Problem Solving' %}
+                        {% assign category_title = "Intégrations & Problem Solving" %}
                     {% elsif category.name == 'leadership' %}
-                        {% assign category_title = 'Leadership & Autonomie' %}
+                        {% assign category_title = "Leadership & Autonomie" %}
                     {% elsif category.name == 'soft-skills' %}
-                        {% assign category_title = 'Excellence Relationnelle' %}
+                        {% assign category_title = "Excellence Relationnelle" %}
                     {% elsif category.name == 'learning' %}
-                        {% assign category_title = 'Innovation & Adaptabilité' %}
+                        {% assign category_title = "Innovation & Adaptabilité" %}
                     {% endif %}
                     <h2>{{ category_title }}</h2>
                 </div>
