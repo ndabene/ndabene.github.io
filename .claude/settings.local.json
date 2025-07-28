@@ -39,6 +39,8 @@
       "Bash(gem install:*)",
       "Bash(bundle clean:*)",
       "Bash(cat:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
