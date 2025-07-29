@@ -1,13 +1,11 @@
-// Correctif différences de couleurs PC/Mac/Android
-// Force sRGB pour tous les éléments
+// Correctif différences de couleurs PC/Mac/Android/iOS
+// Approche MINIMALISTE pour préserver le design original
+
+// Base : Force sRGB et désactive les ajustements automatiques UNIQUEMENT
 :root {
   color-profile: sRGB;
   -webkit-color-profile: sRGB;
-}
-
-* {
-  color-profile: sRGB !important;
-  -webkit-color-profile: sRGB !important;
+  color-scheme: light;
 }
 
 html {
@@ -16,6 +14,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-color-adjust: exact;
+  color-adjust: exact;
 }
 
 body {
@@ -23,6 +23,16 @@ body {
   -webkit-color-profile: sRGB;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-color-adjust: exact;
+  color-adjust: exact;
+}
+
+// Désactiver les ajustements automatiques sur TOUS les éléments
+// MAIS sans forcer de couleurs spécifiques
+* {
+  -webkit-color-adjust: exact !important;
+  color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 // Force sRGB pour tous les écrans P3/wide-gamut
@@ -30,6 +40,8 @@ body {
   :root, *, html, body {
     color-profile: sRGB !important;
     -webkit-color-profile: sRGB !important;
+    -webkit-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 }
 
@@ -37,20 +49,51 @@ body {
   :root, *, html, body {
     color-profile: sRGB !important;
     -webkit-color-profile: sRGB !important;
+    -webkit-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 }
 
-// Correction spécifique Android
+// Correction spécifique Android/Chrome Mobile
 @media screen and (-webkit-min-device-pixel-ratio: 1) {
+  * {
+    color-profile: sRGB !important;
+    -webkit-color-profile: sRGB !important;
+    -webkit-color-adjust: exact !important;
+  }
+}
+
+// Corrections iOS Safari et WebKit
+@supports (-webkit-appearance: none) {
+  html {
+    -webkit-color-profile: sRGB;
+    -webkit-color-adjust: exact;
+  }
+  
+  // Force les couleurs sur iOS
+  body {
+    -webkit-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+// Correction spécifique pour Windows Chrome/Edge
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   * {
     color-profile: sRGB !important;
     -webkit-color-profile: sRGB !important;
   }
 }
 
-// Meta viewport pour Android
-@supports (-webkit-appearance: none) {
-  html {
-    -webkit-color-profile: sRGB;
+// Media query pour désactiver les ajustements automatiques sur tous les OS
+@media (prefers-color-scheme: light) {
+  * {
+    -webkit-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-} 
+}
+
+// AUCUNE règle de couleur forcée - on laisse les styles originaux fonctionner
+// Le but est UNIQUEMENT de forcer la cohérence d'interprétation des couleurs
+// entre les différents systèmes d'exploitation et navigateurs
