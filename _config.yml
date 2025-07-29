@@ -24,11 +24,13 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sass-converter
 
 # Sass/SCSS settings
 sass:
   sass_dir: _sass
   style: compressed
+  precision: 10
   sourcemap: never
 
 # Collections

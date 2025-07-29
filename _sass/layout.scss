@@ -1,15 +1,5 @@
 // Layout styles
 
-body {
-  font-family: $font-primary;
-  font-size: $body-size;
-  line-height: $line-height-normal;
-  color: $black;
-  background-color: $white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
