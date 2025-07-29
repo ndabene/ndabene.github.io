@@ -1,20 +1,11 @@
 
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
+/*
+ * ATTENTION : Ce fichier n'est PAS lu par Jekyll !
+ * Jekyll utilise style.scss comme fichier principal.
+ * Ce fichier est conservé pour référence mais n'a aucun effet.
+ * 
+ * TOUS LES IMPORTS SONT MAINTENANT DANS style.scss
+ */
 
-@import "variables";
-@import "_color-fix";
-@import "base";  
-@import "components";
-@import "badges";
-@import "_under-construction";
-@import "layout";
-@import "navigation";
-@import "modern-components";
-@import "animations";
-@import "code-highlighting";
-@import "skills-circular";
-@import "skills-professional"; // Nouveau design skills 2025
-@import "blog-modern";
-@import "blog-news"; // Importé en dernier pour éviter les conflits
+// Ce fichier est MORT - Jekyll ne le lit pas !
+// Voir assets/css/style.scss pour les vrais imports

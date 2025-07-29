@@ -371,73 +371,50 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 {% include future-posts-data.html %}
 
 <!-- PUBLICATIONS SECTION MODERNE -->
-<section class="section publications-section-modern">
+<section class="section publications-section">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
             <h2 class="section-title-clean">Mes Publications</h2>
-            <p class="section-subtitle-clean">Articles techniques et retours d'expérience sur le développement e-commerce</p>
+            <p class="section-subtitle-clean">Sélection de mes derniers articles techniques</p>
         </div>
         
-        <div id="publications-home-container" class="post-grid-home homepage-publications stagger-animation">
-            {% for publication in site.data.publications %}
-            <div class="home-article-card animate-item">
-                <article class="home-article">
-                    <div class="home-article-content">
-                        <!-- Vignette compacte -->
-                        {% if publication.image %}
-                            <div class="post-news-thumb">
-                                <img src="{{ publication.image }}" alt="{{ publication.title }}" loading="lazy">
-                                <span class="post-category-mini">Article</span>
-                            </div>
-                        {% endif %}
-                        
-                        <!-- Contenu principal -->
-                        <div class="post-news-text">
-                            <!-- Méta-données compactes -->
-                            <div class="post-news-meta">
-                                <span class="publication-type-beautiful">Article technique</span>
-                                <span class="reading-time">5 min de lecture</span>
-                            </div>
-                            
-                            <!-- Titre -->
-                            <h3 class="post-news-title">
-                                <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
-                            </h3>
-                            
-                            <!-- Extrait -->
-                            <p class="post-news-excerpt">
-                                {{ publication.description }}
-                            </p>
-                            
-                            <!-- Tags compacts -->
-                            <div class="post-news-tags">
-                                <span class="tag-mini">PrestaShop</span>
-                                <span class="tag-mini">Développement</span>
-                                {% if publication.category and publication.category != '' %}
-                                <span class="tag-mini">{{ publication.category }}</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        
-                        <!-- Actions -->
-                        <div class="post-news-actions">
-                            <a href="{{ publication.link }}" class="view-btn" target="_blank">
-                                <span class="btn-text">Lire l'article</span>
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+        <div class="approach-grid stagger-animation">
+            {% assign shuffled_publications = site.data.publications | shuffle %}
+            {% for publication in shuffled_publications limit: 3 %}
+            <div class="approach-card animate-item publication-approach-card">
+                <div class="approach-icon publication-approach-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10,9 9,9 8,9"/>
+                    </svg>
+                </div>
+                <h3 class="approach-title publication-approach-title">{{ publication.title | truncate: 60 }}</h3>
+                <p class="approach-description">{{ publication.description | truncate: 180 | default: 'Article technique publié sur Business Tech couvrant les dernières innovations en développement PrestaShop et e-commerce.' }}</p>
+                
+                <div class="publication-approach-meta">
+                    <span class="publication-approach-category">{{ publication.category | default: 'Article technique' }}</span>
+                    <span class="publication-approach-external">Externe</span>
+                </div>
+                
+                <div class="publication-approach-footer">
+                    <a href="{{ publication.link }}" class="publication-approach-link" target="_blank">
+                        <span>Lire l'article</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
             {% endfor %}
         </div>
         
-        <div class="view-all-section">
-            <a href="https://www.businesstech.fr/landing/articles/index.html" class="view-all-btn" target="_blank">
+        <div class="hero-cta-section">
+            <a href="/blog/" class="hero-cta-primary">
                 <span class="btn-text">Découvrir tous mes articles</span>
-                <svg viewBox="0 0 24 24" fill="currentColor">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                 </svg>
             </a>

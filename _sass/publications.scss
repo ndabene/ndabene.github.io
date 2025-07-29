@@ -1,0 +1,904 @@
+//================================================
+// PUBLICATIONS STYLES - DESIGN UNIFIÉ
+//================================================
+
+//================================================
+// BLOG PAGE - Publications externes cards
+//================================================
+
+// Section publications externes dans le blog
+.external-publications-blog-section {
+    margin-top: $space-2xl;
+    padding-top: $space-2xl;
+    border-top: 1px solid $gray-light;
+}
+
+// Grid pour les cards de publications externes - STYLES COMPLETS
+.external-publications-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $space-xl;
+    margin-top: $space-lg;
+    
+    @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-lg;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        gap: $space-md;
+    }
+}
+
+//================================================
+// STYLES DE FALLBACK ET FINALISATIONS
+//================================================
+
+// Styles de fallback pour s'assurer que tout fonctionne
+.publication-section,
+.publications-section {
+    // Section générale pour toutes les publications
+    .section-header-clean {
+        text-align: center;
+        margin-bottom: $space-2xl;
+    }
+    
+    .section-title-clean {
+        font-size: 2rem;
+        font-weight: $font-weight-bold;
+        color: $text-color;
+        margin-bottom: $space-md;
+    }
+    
+    .section-subtitle-clean {
+        color: $text-color-light;
+        font-size: $font-size-lg;
+        line-height: $line-height-base;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+// Styles pour s'assurer que les animations fonctionnent
+.scroll-reveal {
+    opacity: 1;
+}
+
+// Forcer l'affichage des icônes si problème
+.publication-icon,
+.approach-icon svg,
+.publication-icon-blog svg {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+// Debug : colorer les éléments pour vérifier qu'ils sont bien là
+.approach-card {
+    border: 1px solid $gray-light !important;
+}
+
+.external-publication-card {
+    border: 1px solid $gray-light !important;
+}
+
+// Card pour publication externe dans le blog
+.external-publication-card {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: $space-lg;
+    transition: $transition-base;
+    border: 1px solid $gray-light;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        transform: translateY(-2px);
+    }
+}
+
+.external-publication-card-header {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    margin-bottom: $space-md;
+    padding-bottom: $space-sm;
+    border-bottom: 1px solid $gray-light;
+}
+
+.publication-icon-blog {
+    width: 40px;
+    height: 40px;
+    background: $tech-api-bg;
+    border-radius: $rounded;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $tech-api-text;
+    flex-shrink: 0;
+    transition: $transition-base;
+    
+    svg {
+        width: 20px;
+        height: 20px;
+        opacity: 0.9;
+    }
+    
+    &:hover {
+        background: $tech-prestashop-bg;
+        color: $tech-prestashop-text;
+    }
+}
+
+.external-publication-meta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+}
+
+.publication-category-blog {
+    background: $tech-prestashop-bg;
+    color: $tech-prestashop-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    width: fit-content;
+}
+
+.external-badge {
+    background: $tech-integration-bg;
+    color: $tech-integration-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    width: fit-content;
+}
+
+.external-publication-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.external-publication-title {
+    margin-bottom: $space-md;
+    
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-headings;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.external-publication-description {
+    color: $text-color-light;
+    margin-bottom: $space-lg;
+    flex: 1;
+    line-height: $line-height-base;
+}
+
+.external-publication-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    margin-bottom: $space-lg;
+}
+
+.tag-card {
+    background: $gray-light;
+    color: $text-color-light;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+.external-publication-footer {
+    margin-top: auto;
+}
+
+.view-btn-card {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    padding: $space-sm $space-md;
+    background: $primary-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    transition: $transition-base;
+    
+    &:hover {
+        background: $primary-color-dark;
+        transform: translateY(-1px);
+        color: $white;
+        text-decoration: none;
+    }
+    
+    svg {
+        width: 16px;
+        height: 16px;
+        transition: $transition-base;
+    }
+    
+    &:hover svg {
+        transform: translateX(2px);
+    }
+}
+
+// Publications externes utilisent le même style que les articles
+.external-publication-item {
+    // Hérite de tous les styles de .post-preview-wrapper
+    .external-publication-preview {
+        // Hérite de tous les styles de .post-preview-news
+    }
+}
+
+// Indicateur spécifique pour les publications externes
+.external-indicator {
+    background: $tech-integration-bg;
+    color: $tech-integration-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    margin-left: $space-xs;
+}
+
+.publication-type-blog {
+    background: $tech-api-bg;
+    color: $tech-api-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+// Tag spécial pour les publications externes
+.tag-external {
+    background: $tech-integration-bg !important;
+    color: $tech-integration-text !important;
+}
+
+// Info badge dans le header
+.info-badge {
+    background: $gray-light;
+    color: $text-color-light;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+// Lien externe avec icône
+.external-link {
+    position: relative;
+    
+    &::after {
+        content: '↗';
+        margin-left: $space-xs;
+        font-size: $font-size-xs;
+        opacity: 0.7;
+    }
+}
+
+// View all publications dans le blog
+.view-all-publications-blog {
+    text-align: center;
+    margin-top: $space-xl;
+    padding-top: $space-lg;
+    border-top: 1px solid $gray-light;
+}
+
+//================================================
+// PUBLICATIONS PAGE - Design complet
+//================================================
+
+.publications-page-section {
+    .publications-category-section {
+        margin-bottom: $space-4xl;
+        
+        &:last-child {
+            margin-bottom: $space-2xl;
+        }
+    }
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: $space-xl;
+    padding: $space-lg 0;
+    background: $gray-ultra-light;
+    border-radius: $border-radius;
+    border: 1px solid $gray-light;
+    
+    .category-title {
+        font-size: 1.75rem;
+        font-weight: $font-weight-bold;
+        color: $text-color;
+        margin: 0 0 $space-sm 0;
+    }
+    
+    .category-count {
+        background: $primary-color;
+        color: $white;
+        padding: $space-xs $space-lg;
+        border-radius: $rounded-full;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        min-width: 100px;
+        text-align: center;
+    }
+}
+
+.publications-external-link {
+    margin-top: $space-4xl;
+    padding-top: $space-xl;
+    border-top: 1px solid $gray-light;
+}
+
+//================================================
+// HOMEPAGE - Publications avec design "Mon Approche"
+//================================================
+
+// Grid pour les publications style "Approche"
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-2xl;
+    
+    @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-xl;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        gap: $space-lg;
+    }
+}
+
+// Card de base pour le style "Approche"
+.approach-card {
+    background: $white;
+    padding: $space-2xl;
+    border-radius: $rounded-lg;
+    box-shadow: $shadow-md;
+    border: 1px solid $gray-light;
+    transition: $transition-normal;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    &:hover {
+        box-shadow: $shadow-lg;
+        transform: translateY(-4px);
+        border-color: $primary-color;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+        padding: $space-xl;
+    }
+}
+
+// Icône pour les cards "Approche"
+.approach-icon {
+    width: 80px;
+    height: 80px;
+    background: $tech-api-bg;
+    border-radius: $rounded-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto $space-lg;
+    color: $tech-api-text;
+    transition: $transition-normal;
+    
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+// Titre pour les cards "Approche"
+.approach-title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    margin-bottom: $space-md;
+    line-height: $line-height-headings;
+}
+
+// Description pour les cards "Approche"
+.approach-description {
+    color: $text-color-light;
+    line-height: $line-height-base;
+    flex: 1;
+    margin-bottom: $space-lg;
+}
+
+// Publications avec design approach-card
+.publication-approach-card {
+    // Hérite du style approach-card ci-dessus
+    position: relative;
+    
+    &:hover .publication-approach-icon {
+        background: $tech-prestashop-bg;
+        color: $tech-prestashop-text;
+    }
+}
+
+.publication-approach-icon {
+    // Style spécifique pour l'icône publication - hérite de .approach-icon
+    background: $tech-api-bg !important;
+    color: $tech-api-text !important;
+    
+    svg {
+        opacity: 0.9;
+        width: 32px !important;
+        height: 32px !important;
+    }
+}
+
+.publication-approach-title {
+    // Style spécifique pour les titres de publications
+    font-size: $font-size-lg;
+    line-height: $line-height-headings;
+}
+
+.publication-approach-meta {
+    display: flex;
+    gap: $space-xs;
+    margin-top: $space-md;
+    margin-bottom: $space-md;
+    flex-wrap: wrap;
+}
+
+.publication-approach-category {
+    background: $tech-prestashop-bg;
+    color: $tech-prestashop-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+.publication-approach-external {
+    background: $tech-integration-bg;
+    color: $tech-integration-text;
+    padding: $space-xs $space-sm;
+    border-radius: $rounded-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+}
+
+.publication-approach-footer {
+    margin-top: auto;
+    padding-top: $space-md;
+    border-top: 1px solid $gray-light;
+}
+
+.publication-approach-link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    transition: $transition-base;
+    
+    &:hover {
+        color: $primary-color-dark;
+        text-decoration: none;
+        
+        svg {
+            transform: translateX(2px);
+        }
+    }
+    
+    svg {
+        transition: $transition-base;
+    }
+}
+
+// Styles spécifiques pour les publications sur homepage (ancienne version conservée)
+.publication-image-placeholder {
+    background: $tech-api-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .publication-icon {
+        color: $tech-api-text;
+        opacity: 0.8;
+    }
+}
+
+// Tags colorés pour les publications
+.tag-simple--externe {
+    background: $tech-prestashop-bg !important;
+    color: $tech-prestashop-text !important;
+}
+
+.tag-simple--prestashop {
+    background: $tech-ecommerce-bg !important;
+    color: $tech-ecommerce-text !important;
+}
+
+.tag-simple--external {
+    background: $tech-integration-bg !important;
+    color: $tech-integration-text !important;
+}
+
+.tag-simple--category {
+    background: $tech-api-bg !important;
+    color: $tech-api-text !important;
+}
+
+//================================================
+// ANIMATIONS ET EFFETS VISUELS
+//================================================
+
+// Animation pour les cards qui apparaissent
+.animate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Animation stagger pour les grids
+.stagger-animation {
+    .animate-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+}
+
+// Effets hover pour les cards
+.approach-card:hover .approach-icon,
+.external-publication-card:hover .publication-icon-blog {
+    transform: scale(1.1) rotate(5deg);
+}
+
+// Pulse effect pour les badges "Externe"
+.external-badge,
+.publication-approach-external {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+//================================================
+// RESPONSIVE DESIGN
+//================================================
+
+@media (max-width: $breakpoint-md) {
+    .category-header {
+        // Reste centré même sur mobile
+        padding: $space-md 0;
+        
+        .category-title {
+            font-size: $font-size-xl;
+        }
+        
+        .category-count {
+            margin-top: $space-xs;
+        }
+    }
+    
+    .external-publications-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .external-publication-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        
+        .publication-icon-blog {
+            align-self: center;
+        }
+    }
+}
+
+// Homepage Publications (simple cards)
+.publication-card-simple {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: $space-lg;
+    transition: $transition-base;
+    border: 1px solid $gray-light;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        transform: translateY(-2px);
+    }
+}
+
+.publication-content-simple {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-meta-simple {
+    display: flex;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+    
+    .publication-type-simple {
+        background: $tech-prestashop-bg;
+        color: $tech-prestashop-text;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-sm;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+    
+    .reading-time-simple {
+        color: $text-color-light;
+        font-size: $font-size-xs;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.publication-title-simple {
+    margin-bottom: $space-md;
+    
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-headings;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.publication-description-simple {
+    color: $text-color-light;
+    margin-bottom: $space-lg;
+    flex: 1;
+    line-height: $line-height-base;
+}
+
+.publication-tags-simple {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+    margin-bottom: $space-lg;
+    
+    .tag-simple {
+        background: $gray-light;
+        color: $text-color-light;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-sm;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.publication-footer-simple {
+    margin-top: auto;
+}
+
+// Blog Page Publications (unified cards)
+.publication-card-unified {
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: $space-lg;
+    transition: $transition-base;
+    border: 1px solid $gray-light;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+        box-shadow: $box-shadow-hover;
+        transform: translateY(-2px);
+    }
+}
+
+.publication-content-unified {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.publication-meta-unified {
+    display: flex;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+    
+    .publication-category-unified {
+        background: $tech-api-bg;
+        color: $tech-api-text;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-sm;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+    
+    .publication-external-unified {
+        background: $tech-integration-bg;
+        color: $tech-integration-text;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-sm;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.publication-title-unified {
+    margin-bottom: $space-md;
+    
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-headings;
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.publication-description-unified {
+    color: $text-color-light;
+    margin-bottom: $space-lg;
+    flex: 1;
+    line-height: $line-height-base;
+}
+
+.publication-footer-unified {
+    margin-top: auto;
+}
+
+// Common View Button Style (used by both)
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    padding: $space-sm $space-md;
+    background: $primary-color;
+    color: $white;
+    text-decoration: none;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    transition: $transition-base;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+        background: $primary-color-dark;
+        transform: translateY(-1px);
+        color: $white;
+        text-decoration: none;
+    }
+    
+    svg {
+        width: 16px;
+        height: 16px;
+        transition: $transition-base;
+    }
+    
+    &:hover svg {
+        transform: translateX(2px);
+    }
+}
+
+// View All Section
+.view-all-section {
+    text-align: center;
+    margin-top: $space-2xl;
+    
+    .view-all-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-sm;
+        padding: $space-md $space-xl;
+        background: transparent;
+        color: $primary-color;
+        text-decoration: none;
+        border: 2px solid $primary-color;
+        border-radius: $border-radius;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        transition: $transition-base;
+        
+        &:hover {
+            background: $primary-color;
+            color: $white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        svg {
+            width: 18px;
+            height: 18px;
+            transition: $transition-base;
+        }
+        
+        &:hover svg {
+            transform: translateX(3px);
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: $breakpoint-md) {
+    .publication-card-simple,
+    .publication-card-unified {
+        padding: $space-md;
+    }
+    
+    .publication-title-simple a,
+    .publication-title-unified a {
+        font-size: $font-size-base;
+    }
+    
+    .view-all-section .view-all-btn {
+        padding: $space-sm $space-lg;
+        font-size: $font-size-sm;
+    }
+}
+
+// Grid layouts using existing grid-unified
+.grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-xl;
+    
+    @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+        gap: $space-lg;
+    }
+}

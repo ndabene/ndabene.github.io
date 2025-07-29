@@ -2,13 +2,101 @@
   link: "https://www.businesstech.fr/landing/articles/optimiser-donnees-structurees-geo-prestashop.html"
   image: "assets/images/publications/optimiser-donnees-structurees-geo-prestashop.jpg"
   description: "Découvrez comment utiliser les données structurées pour améliorer le référencement local et international de votre boutique PrestaShop."
+  category: "Améliorer sa boutique"
 
 - title: "Tutoriel : Créer un module Symfony pour PrestaShop"
   link: "https://www.businesstech.fr/landing/articles/tutoriel-module-symfony-prestashop.html"
   image: "assets/images/publications/tutoriel-module-symfony-prestashop.jpg"
   description: "Guide pratique pour développer un module PrestaShop moderne en utilisant les composants Symfony et les bonnes pratiques de développement."
+  category: "Technique"
 
 - title: "PrestaShop & Symfony : Le guide de développement BDD"
   link: "https://www.businesstech.fr/landing/articles/prestashop-symfony-database-development-guide.html"
   image: "assets/images/publications/prestashop-symfony-database-development-guide.jpg"
   description: "Apprenez à maîtriser les interactions avec la base de données dans PrestaShop en utilisant l'approche Symfony et l'ORM Doctrine."
+  category: "Technique"
+
+- title: "Google Shopping PrestaShop : Guide Complet 2025"
+  link: "https://www.businesstech.fr/landing/articles/google-shopping-prestashop-guide-complet-2025.html"
+  description: "Article externe sur Google Shopping pour PrestaShop."
+  category: "Marketing"
+
+- title: "Pack PrestaShop"
+  link: "https://www.businesstech.fr/landing/articles/pack-prestashop.html"
+  description: "Article externe sur les packs PrestaShop."
+  category: "Marketing"
+
+- title: "Optimiser Google Shopping PrestaShop : Étude de Cas"
+  link: "https://www.businesstech.fr/landing/articles/optimiser-google-shopping-prestashop-etude-cas.html"
+  description: "Article externe sur l'optimisation de Google Shopping pour PrestaShop."
+  category: "Marketing"
+
+- title: "ChatGPT Shopping vs Google Search"
+  link: "https://www.businesstech.fr/landing/articles/chatgpt-shopping-vs-google-search.html"
+  description: "Article externe comparant ChatGPT Shopping et Google Search."
+  category: "Marketing"
+
+- title: "Energy Label Smartphone 2025"
+  link: "https://www.businesstech.fr/landing/articles/energy-label-smartphone-2025.html"
+  description: "Article externe sur les labels énergétiques pour smartphones en 2025."
+  category: "Marketing"
+
+- title: "Modules PrestaShop Made in France : Qualité, Expertise, Support"
+  link: "https://www.businesstech.fr/landing/articles/modules-prestashop-made-in-france-qualite-expertise-support.html"
+  description: "Article externe sur les modules PrestaShop made in France."
+  category: "Communauté"
+
+- title: "Friend of Presta Day 2025"
+  link: "https://www.businesstech.fr/landing/articles/friend-of-presta-day-2025.html"
+  description: "Article externe sur Friend of Presta Day 2025."
+  category: "Communauté"
+
+- title: "PrestaShop Symfony Form Development Guide"
+  link: "https://www.businesstech.fr/landing/articles/prestashop-symfony-form-development-guide.html"
+  description: "Guide de développement de formulaires avec Symfony pour PrestaShop."
+  category: "Technique"
+
+- title: "PrestaShop 9 Tools Stripslashes Removal Guide"
+  link: "https://www.businesstech.fr/landing/articles/prestashop9-tools-stripslashes-removal-guide.html"
+  description: "Guide sur la suppression de stripslashes dans PrestaShop 9."
+  category: "Technique"
+
+- title: "Éviter Erreur Hook Validate Order"
+  link: "https://www.businesstech.fr/landing/articles/eviter-erreur-hook-validate-order.html"
+  description: "Article externe sur l'évitement d'erreurs dans le hook validate order."
+  category: "Technique"
+
+- title: "PrestaShop Tools PHP PrestaShop 9"
+  link: "https://www.businesstech.fr/landing/articles/prestashop-tools-php-prestashop-9.html"
+  description: "Article externe sur les tools PHP pour PrestaShop 9."
+  category: "Technique"
+
+- title: "Requêtes N+1 PrestaShop Performance Optimisation"
+  link: "https://www.businesstech.fr/landing/articles/requetes-n-plus-1-prestashop-performance-optimisation.html"
+  description: "Article externe sur l'optimisation des requêtes N+1 dans PrestaShop."
+  category: "Technique"
+
+- title: "Google Shopping Geo Friendly"
+  link: "https://www.businesstech.fr/landing/articles/google-shoppping-geo-friendly.html"
+  description: "Article externe sur Google Shopping geo-friendly."
+  category: "Améliorer sa boutique"
+
+- title: "AI Powered Product Pages PrestaShop Modules Development"
+  link: "https://www.businesstech.fr/landing/articles/ai-powered-product-pages-prestashop-modules-development.html"
+  description: "Article externe sur le développement de modules PrestaShop avec pages produits alimentées par IA."
+  category: "IA"
+
+- title: "Geo Generative Engine Optimization PrestaShop"
+  link: "https://www.businesstech.fr/landing/articles/geo-generative-engine-optimization-prestashop.html"
+  description: "Article externe sur l'optimisation géo-générative pour PrestaShop."
+  category: "IA"
+
+- title: "LLMs TXT for PrestaShop"
+  link: "https://www.businesstech.fr/landing/articles/llms-txt-for-prestashop.html"
+  description: "Article externe sur LLMs TXT pour PrestaShop."
+  category: "IA"
+
+- title: "Vibe Coding vs Prompt Driven Development"
+  link: "https://www.businesstech.fr/landing/articles/vibe-coding-vs-prompt-driven-development.html"
+  description: "Article externe comparant vibe coding et prompt driven development."
+  category: "IA"

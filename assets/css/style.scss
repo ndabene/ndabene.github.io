@@ -15,7 +15,6 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-@import "_color-fix";
 @import "variables";
 @import "base";
 @import "components";
@@ -30,7 +29,11 @@ html, body {
 @import "modern-components";
 @import "series";
 @import "animations";
+@import "code-highlighting"; // Manquait - needed pour syntax highlighting
+@import "skills-circular"; // Manquait - needed pour skills
+@import "skills-professional"; // Manquait - nouveau design skills 2025
 @import "skills-site-design";
 @import "homepage-enhanced";
+@import "publications"; // STYLES PUBLICATIONS - CRITIQUE POUR HOMEPAGE ET BLOG
 
-/* Force rebuild */ 
+/* Force rebuild - Publications CSS fix 29-07-2025 14:30 */ 
