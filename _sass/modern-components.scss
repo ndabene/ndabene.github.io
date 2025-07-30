@@ -175,6 +175,8 @@
     border-radius: $rounded-full;
     font-weight: $font-weight-semibold;
     font-size: $font-size-xs;
+    background-color: $primary-color;
+    color: $white;
 
     .badge-icon {
       font-size: 1.2rem;
