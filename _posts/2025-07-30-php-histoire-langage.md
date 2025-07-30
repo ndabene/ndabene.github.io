@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "PHP : L'Histoire d'un Langage Incontournable, de ses Débuts à 2025"
-date: 2025-08-21
+date: 2025-07-30
 author: Nicolas Dabène
 categories: [PHP, Développement]
 tags: [PHP 8, histoire tech, Facebook, WordPress, PrestaShop, WooCommerce, évolution]
 excerpt: "Découvrez l'histoire paradoxale de PHP : mal-aimé mais incontournable, ce langage propulse encore Facebook, WordPress et des millions de sites en 2025."
-image: /assets/images/blog/2025-08-21-php-histoire-langage.jpg
+image: /assets/images/blog/2025-07-30-php-histoire-langage.jpg
 featured: true
 difficulty: "Intermédiaire"
 technologies: ["PHP", "Web Development", "Facebook", "WordPress"]
