@@ -422,93 +422,78 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- FAQ SECTION pour GEO - Optimisation IA génératives -->
-<section class="section faq-section-geo">
+<!-- FAQ SECTION - Blocs inline simples -->
+<section class="section faq-section-inline">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
             <h2 class="section-title-clean">Questions Fréquentes</h2>
             <p class="section-subtitle-clean">Réponses directes aux questions les plus courantes sur mes services</p>
         </div>
         
-        <div class="skills-grid-circular stagger-animation">
-            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
-                <div class="skill-visual-circular">
-                    <div class="circular-progress-container">
-                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
-                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
-                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
-                        </svg>
-                        <div class="progress-percentage">?</div>
-                    </div>
+        <div class="faq-grid-inline stagger-animation">
+            <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="faq-icon-inline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
                 </div>
-                
-                <div class="skill-info-circular">
-                    <h3 class="skill-name-circular" itemprop="name">Qui est Nicolas Dabène ?</h3>
+                <div class="faq-content-inline">
+                    <h3 class="faq-question-inline" itemprop="name">Qui est Nicolas Dabène ?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text" class="skill-description-circular">
+                        <div itemprop="text" class="faq-answer-inline">
                             <p><strong>Expert PrestaShop Elite avec 5 Awards officiels (2011-2020)</strong> chez BusinessTech, développeur senior avec 15+ ans d'expérience et 30 modules totalisant 100k+ installations actives. Aujourd'hui pionnier de l'orchestration IA pour multiplier l'efficacité de développement par 4.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
-                <div class="skill-visual-circular">
-                    <div class="circular-progress-container">
-                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
-                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
-                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
-                        </svg>
-                        <div class="progress-percentage">?</div>
-                    </div>
+            <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="faq-icon-inline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+                    </svg>
                 </div>
-                
-                <div class="skill-info-circular">
-                    <h3 class="skill-name-circular" itemprop="name">Quelles sont ses spécialités uniques ?</h3>
+                <div class="faq-content-inline">
+                    <h3 class="faq-question-inline" itemprop="name">Quelles sont ses spécialités uniques ?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text" class="skill-description-circular">
+                        <div itemprop="text" class="faq-answer-inline">
                             <p><strong>Triple expertise rare :</strong> Excellence PrestaShop reconnue (5 Awards marketplace), architectures e-commerce complexes éprouvées par 100k+ installations, et maîtrise avant-gardiste de l'orchestration IA pour révolutionner les workflows de développement.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
-                <div class="skill-visual-circular">
-                    <div class="circular-progress-container">
-                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
-                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
-                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
-                        </svg>
-                        <div class="progress-percentage">?</div>
-                    </div>
+            <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="faq-icon-inline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
                 </div>
-                
-                <div class="skill-info-circular">
-                    <h3 class="skill-name-circular" itemprop="name">Quel est son parcours et évolution ?</h3>
+                <div class="faq-content-inline">
+                    <h3 class="faq-question-inline" itemprop="name">Quel est son parcours et évolution ?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text" class="skill-description-circular">
+                        <div itemprop="text" class="faq-answer-inline">
                             <p><strong>Timeline d'excellence (2011-2025) :</strong> De développeur PrestaShop primé chez BusinessTech avec 5 Awards et modules à succès, vers pionnier de l'orchestration IA appliquée au développement e-commerce. Une évolution qui anticipe l'avenir du métier.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="skill-card-circular animate-item" itemscope itemtype="https://schema.org/Question">
-                <div class="skill-visual-circular">
-                    <div class="circular-progress-container">
-                        <svg class="circular-progress" width="80" height="80" viewBox="0 0 36 36">
-                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2"/>
-                            <path class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="2" stroke-dasharray="100, 100" data-level="100"/>
-                        </svg>
-                        <div class="progress-percentage">?</div>
-                    </div>
+            <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
+                <div class="faq-icon-inline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <rect x="9" y="9" width="6" height="6"/>
+                        <path d="M9 1v6M15 1v6M9 17v6M15 17v6M1 9h6M1 15h6M17 9h6M17 15h6"/>
+                    </svg>
                 </div>
-                
-                <div class="skill-info-circular">
-                    <h3 class="skill-name-circular" itemprop="name">Comment l'IA transforme-t-elle son travail ?</h3>
+                <div class="faq-content-inline">
+                    <h3 class="faq-question-inline" itemprop="name">Comment l'IA transforme-t-elle son travail ?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
-                        <div itemprop="text" class="skill-description-circular">
+                        <div itemprop="text" class="faq-answer-inline">
                             <p><strong>Révolution concrète :</strong> Orchestration d'agents IA qui a multiplié son efficacité par 4, développement assisté par prompts intelligents, et formation d'équipes aux méthodologies d'avant-garde. L'IA comme amplificateur d'expertise, pas comme substitut.</p>
                         </div>
                     </div>
@@ -526,37 +511,5 @@ function expandExpertise(expertiseId) {
     card.classList.toggle('expanded');
 }
 
-// Script pour l'animation des cercles FAQ
-document.addEventListener('DOMContentLoaded', function() {
-    // Animation des FAQ circulaires
-    function animateFaqCircles() {
-        const circles = document.querySelectorAll('.faq-section-geo .circle');
-        const percentages = document.querySelectorAll('.faq-section-geo .progress-percentage');
-        
-        circles.forEach((circle, index) => {
-            setTimeout(() => {
-                circle.style.strokeDasharray = `${100}, 100`;
-                
-                if (percentages[index]) {
-                    percentages[index].textContent = "!";
-                }
-            }, index * 300);
-        });
-    }
-    
-    // Observer pour déclencher l'animation quand les FAQ sont visibles
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateFaqCircles();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-    
-    const faqSection = document.querySelector('.faq-section-geo');
-    if (faqSection) {
-        observer.observe(faqSection);
-    }
-});
+// Animation simple pour FAQ inline - pas d'animations complexes
 </script>

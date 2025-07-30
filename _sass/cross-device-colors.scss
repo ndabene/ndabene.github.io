@@ -1,0 +1,192 @@
+//================================================
+// CROSS-DEVICE COLORS 2025 - ARCHITECTURE MODERNE
+//================================================
+
+// Ce fichier complète le CSS critique inline pour les éléments
+// non-critiques avec une approche moderne sans !important abusifs
+
+//================================================
+// CUSTOM PROPERTIES HÉRITÉES DU CSS CRITIQUE
+//================================================
+
+:root {
+  // Couleurs supplémentaires pour composants non-critiques
+  --color-success: #059669;
+  --color-warning: #d4af37;
+  --color-error: #dc2626;
+  --color-accent-1: #d4af37;
+  --color-accent-2: #059669;
+  
+  // Backgrounds avec alpha pour depth
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-overlay: rgba(15, 23, 42, 0.1);
+  --bg-hover: rgba(15, 23, 42, 0.05);
+  
+  // Shadows modernes
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+//================================================
+// COMPOSANTS SPÉCIALISÉS
+//================================================
+
+// Badges et tags avec couleurs thématiques
+.publication-approach-category {
+  background-color: rgba(223, 49, 99, 0.1);
+  color: #df3163;
+  border: 1px solid rgba(223, 49, 99, 0.2);
+}
+
+.publication-approach-external,
+.external-badge {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-accent-2);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.tag-card,
+.tag-simple {
+  background-color: var(--color-gray-light);
+  color: var(--color-text-light);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+// Icônes avec backgrounds colorés
+.approach-icon,
+.publication-approach-icon {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.approach-icon:hover,
+.publication-approach-icon:hover {
+  background-color: rgba(59, 130, 246, 0.15);
+  transform: scale(1.05);
+}
+
+//================================================
+// ÉTATS INTERACTIFS AVANCÉS
+//================================================
+
+// Hover states sans !important
+.approach-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.external-publication-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+// Focus states pour accessibilité
+.hero-cta-primary:focus,
+.view-all-btn:focus,
+.view-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+//================================================
+// RESPONSIVE ADAPTATIONS
+//================================================
+
+// Adaptations spécifiques mobile
+@media (max-width: 768px) {
+  :root {
+    // Ajustements pour petits écrans
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .approach-card,
+  .external-publication-card {
+    padding: 1.5rem;
+  }
+  
+  .approach-icon,
+  .publication-approach-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+//================================================
+// MODERN CSS FEATURES 2025
+//================================================
+
+// Container queries si supportées
+@container (min-width: 400px) {
+  .approach-card {
+    padding: 2rem;
+  }
+}
+
+// Color-gamut pour écrans wide gamut
+@media (color-gamut: p3) {
+  .publication-approach-category {
+    color: color(display-p3 0.874 0.192 0.388);
+  }
+  
+  .publication-approach-external {
+    color: color(display-p3 0.000 0.600 0.412);
+  }
+}
+
+// Prefers-reduced-motion
+@media (prefers-reduced-motion: reduce) {
+  .approach-card,
+  .external-publication-card,
+  .approach-icon,
+  .publication-approach-icon {
+    transition: none;
+    transform: none;
+  }
+}
+
+//================================================
+// WEBKIT/MOZ COMPATIBILITY
+//================================================
+
+// WebKit spécifique sans forçage
+@supports (-webkit-appearance: none) {
+  .approach-card,
+  .external-publication-card {
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+  }
+}
+
+// Firefox spécifique
+@-moz-document url-prefix() {
+  .approach-icon,
+  .publication-approach-icon {
+    background-clip: padding-box;
+  }
+}
+
+//================================================
+// PRINT STYLES
+//================================================
+
+@media print {
+  .approach-card,
+  .external-publication-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--color-gray-light);
+  }
+  
+  .hero-cta-primary,
+  .view-all-btn,
+  .view-btn {
+    color: var(--color-primary);
+    background: transparent;
+    border: 1px solid var(--color-primary);
+  }
+}

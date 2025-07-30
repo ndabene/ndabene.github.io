@@ -1,9 +1,33 @@
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- CROSS-DEVICE COLOR CONSISTENCY 2025 - Standards modernes -->
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+
+<!-- Theme Colors - Tous devices -->
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff">
+
+<!-- Mobile Web App - Android/Chrome -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="default">
+
+<!-- Microsoft/Edge -->
 <meta name="msapplication-navbutton-color" content="#ffffff">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-config" content="none">
+
+<!-- Apple/iOS/Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="light-content">
+<meta name="apple-mobile-web-app-title" content="Nicolas Dabène">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Color Profile Forcing - sRGB standard -->
+<meta name="color-profile" content="sRGB">
+<meta name="color-rendering" content="optimizeQuality">
 <title>{{ site.title }} | {{ page.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
@@ -27,8 +51,15 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
-<!-- Styles -->
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<!-- Manifest pour contrôle total mobile -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- CRITICAL CSS INLINE - Charge immédiatement -->
+{% include critical-css.html %}
+
+<!-- Styles principaux - Charge en arrière-plan -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,0 +1,34 @@
+{
+  "name": "Nicolas Dabène - Senior PHP Developer & AI Orchestrator",
+  "short_name": "Nicolas Dabène",
+  "description": "Portfolio professionnel de Nicolas Dabène, expert PrestaShop et développeur PHP senior spécialisé en intelligence artificielle",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "any",
+  "categories": ["business", "productivity", "education"],
+  "lang": "fr-FR",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "prefer_related_applications": false,
+  "screenshots": [],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "url": "shared-url"
+    }
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "navigate-new"]
+  }
+}

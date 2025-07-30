@@ -1,0 +1,180 @@
+<!-- CRITICAL CSS INLINE - Couleurs cross-device garanties -->
+<style>
+/* CRITICAL PATH CSS - COULEURS ABSOLUES 2025 */
+
+/* Variables CSS modernes - pas de conversion SCSS */
+:root {
+  --color-white: #ffffff;
+  --color-black: #111827;
+  --color-primary: #0f172a;
+  --color-gray-light: #e2e8f0;
+  --color-text: #111827;
+  --color-text-light: #374151;
+  
+  /* Force sRGB sur tous appareils */
+  color-scheme: light only;
+  -webkit-color-profile: sRGB;
+  color-profile: sRGB;
+}
+
+/* Reset et base */
+*, *::before, *::after {
+  -webkit-color-profile: sRGB;
+  color-profile: sRGB;
+  -webkit-color-adjust: exact;
+  color-adjust: exact;
+  forced-color-adjust: none;
+}
+
+html, body {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  /* Force light mode */
+  color-scheme: light only;
+  -webkit-color-scheme: light;
+}
+
+/* Headers critiques */
+.header-container,
+.header-modern {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+/* Navigation */
+.header-logo a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.header-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Sections principales */
+.hero-section,
+.hero-section-modern,
+.section {
+  background-color: var(--color-white);
+}
+
+/* Boutons critiques - styles corrects garantis */
+.btn--primary,
+.hero-cta-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  text-decoration: none;
+}
+
+.btn--primary:hover,
+.hero-cta-primary:hover {
+  background-color: #020617;
+  color: var(--color-white);
+}
+
+/* Tous les textes dans boutons primaires */
+.btn--primary,
+.btn--primary *,
+.hero-cta-primary,
+.hero-cta-primary * {
+  color: var(--color-white);
+}
+
+/* Boutons outline */
+.view-all-btn {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  text-decoration: none;
+}
+
+.view-all-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.view-all-btn:hover * {
+  color: var(--color-white);
+}
+
+/* Boutons de cards */
+.view-btn,
+.view-btn-card {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.view-btn *,
+.view-btn-card * {
+  color: var(--color-white);
+}
+
+/* Cards de base */
+.card,
+.approach-card,
+.external-publication-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+}
+
+/* Footer */
+.footer,
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.footer *,
+.site-footer * {
+  color: var(--color-white);
+}
+
+.footer a,
+.site-footer a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.footer a:hover,
+.site-footer a:hover {
+  color: var(--color-gray-light);
+}
+
+/* Media queries pour wide gamut si supporté */
+@media (color-gamut: p3) {
+  :root {
+    --color-primary: color(display-p3 0.059 0.090 0.165);
+  }
+}
+
+/* Forçage pour mobile WebKit */
+@supports (-webkit-appearance: none) {
+  * {
+    -webkit-color-profile: sRGB;
+    -webkit-text-fill-color: inherit;
+  }
+}
+
+/* Android Chrome spécifique */
+@media screen and (-webkit-min-device-pixel-ratio: 1) {
+  body {
+    -webkit-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+/* Print et high DPI */
+@media print, (-webkit-min-device-pixel-ratio: 2) {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+</style>

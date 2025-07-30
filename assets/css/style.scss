@@ -2,13 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-// Force le profil sRGB pour tous les éléments
-* {
-  -webkit-color-profile: sRGB;
-  color-profile: sRGB;
-}
+// CROSS-DEVICE BASE 2025 - Approche moderne et légère
+// Les couleurs critiques sont maintenant dans critical-css inline
 
-// Optimisation du rendu des polices
+// Base font rendering - pas de forçage agressif
 html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,6 +13,7 @@ html, body {
 }
 
 @import "variables";
+@import "cross-device-colors"; // SOLUTION CROSS-DEVICE - À CHARGER EN PREMIER
 @import "base";
 @import "components";
 @import "badges";
@@ -32,8 +30,10 @@ html, body {
 @import "code-highlighting"; // Manquait - needed pour syntax highlighting
 @import "skills-circular"; // Manquait - needed pour skills
 @import "skills-professional"; // Manquait - nouveau design skills 2025
+@import "skills-sections"; // NOUVEAU - Skills avec sections séparées
 @import "skills-site-design";
+@import "faq-inline"; // NOUVEAU - FAQ en blocs inline
 @import "homepage-enhanced";
 @import "publications"; // STYLES PUBLICATIONS - CRITIQUE POUR HOMEPAGE ET BLOG
 
-/* Force rebuild - Publications CSS fix 29-07-2025 14:30 */ 
+/* FAQ UNE PAR LIGNE - Rebuild 30-07-2025 21:05 - Layout vertical FAQ */ 
