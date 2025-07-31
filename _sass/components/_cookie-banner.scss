@@ -64,7 +64,7 @@
     p {
         margin: 0;
         font-size: $font-size-sm;
-        color: $text-color-light;
+        color: $text-color;
         line-height: $line-height-base;
     }
 }
@@ -137,7 +137,7 @@
 .cookie-banner .btn-outline {
     background: transparent;
     color: $gray-medium;
-    border: 1px solid $gray-medium;
+    border: 1px solid $white;
     
     &:hover {
         background: $gray-medium;
@@ -349,12 +349,12 @@
         }
         
         .btn-outline {
-            color: $dark-text-muted;
+            color: $white;
             border-color: $dark-text-muted;
             
             &:hover {
                 background: $dark-text-muted;
-                color: $dark-surface;
+                color: $white;
             }
         }
     }
