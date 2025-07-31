@@ -1299,6 +1299,28 @@ $tag-hover-text: #fff;
     }
   }
   
+  .draft-post-badge-compact {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0.75rem;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+    
+    i {
+      margin-right: 0.3rem;
+      
+      &.fa-lock {
+        margin-left: 0.3rem;
+        margin-right: 0;
+        opacity: 0.9;
+      }
+    }
+  }
+  
   //================================================
   // SECTION TITRE ARTICLES RÉCENTS 
   //================================================

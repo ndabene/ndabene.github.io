@@ -33,6 +33,14 @@ Ce fichier définit les conventions et règles pour maintenir la cohérence du d
 - **Langue** : Français pour le contenu, Anglais pour les variables techniques
 - **Encoding** : UTF-8
 
+### Système de Publication
+- **published: true/false** : Contrôle la publication (défaut: true)
+- **draft: true/false** : Mode brouillon visible uniquement en preview
+- **preview_key: "xxx"** : Clé d'accès sécurisé pour drafts sensibles
+- **Preview URLs** : 
+  - `?preview=true` : Tous les drafts publics
+  - `?preview_key=xxx` : Drafts avec clé spécifique
+
 ### CSS/SCSS
 - **Architecture** : SCSS modulaire dans `_sass/`
 - **Naming** : BEM methodology
@@ -74,16 +82,24 @@ Ce fichier définit les conventions et règles pour maintenir la cohérence du d
 
 ### Scripts Disponibles
 ```bash
-npm run build        # Build Jekyll
-npm run serve        # Serveur local port 4000
-npm run new-post     # Créer nouvel article
+npm run build          # Build Jekyll
+npm run serve          # Serveur local port 4000
+npm run new-post       # Créer nouvel article
 npm run update-sitemap # Mettre à jour le sitemap
+npm run preview        # Mode admin preview (articles futurs)
+npm run preview-stop   # Arrêter le mode preview
+
+# Création d'articles avec options
+npm run new-draft --title="Mon Draft"              # Draft non publié  
+npm run new-future --title="Article" --date="2025-12-25"  # Article futur
+./scripts/new-post.sh "Titre" --draft --preview-key="secret123"  # Draft sécurisé
 ```
 
 ### Déploiement
-- **Auto** : Push sur `main` → déploiement GitHub Pages
+- **Auto** : Push sur `main` → déploiement GitHub Pages + build quotidien à 6h UTC
 - **Test local** : `bundle exec jekyll serve` avant push
 - **Vérifications** : Links checker, responsive test
+- **Articles futurs** : Publication automatique via GitHub Actions quotidiennes
 
 ## 🎨 Identité Visuelle
 

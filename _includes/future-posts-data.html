@@ -1,55 +1,33 @@
 {% comment %}
-Données des futurs posts générées côté serveur
-Même si future: false, on peut accéder aux données des futurs posts
+Données des futurs posts générées dynamiquement côté serveur
+Ce fichier est utilisé par future-posts-renderer.js en mode admin_preview
 {% endcomment %}
+{% assign future_posts = "" | split: "," %}
+{% for post in site.posts %}
+  {% if post.is_future %}
+    {% assign future_posts = future_posts | push: post %}
+  {% endif %}
+{% endfor %}
 
 <script id="future-posts-data" type="application/json">
 [
-  {
-    "title": "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll",
-    "url": "/articles/2025/07/28/github-pages-jekyll-portfolio/",
-    "date": "2025-07-28",
-    "date_formatted": "28 juillet 2025",
-    "author": "Nicolas Dabène",
-    "categories": ["Development", "Tutorial"],
-    "tags": ["GitHub Pages", "Jekyll", "portfolio", "site statique", "git", "développement web"],
-    "excerpt": "Découvrez comment créer gratuitement un portfolio professionnel en ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.",
-    "image": "/assets/images/blog/2025-07-28-github-pages-jekyll-portfolio.jpg",
-    "difficulty": "Débutant",
-    "estimated_reading_time": "12 minutes",
-    "is_future": true
-  },
-  {
-    "title": "Test Série - Partie 1 : Introduction",
-    "url": "/articles/2025/08/15/test-serie-exemple/",
-    "date": "2025-08-15",
-    "date_formatted": "15 août 2025",
-    "author": "Nicolas Dabène",
-    "categories": ["Test", "E-commerce"],
-    "tags": ["PrestaShop", "PHP", "série", "test"],
-    "excerpt": "Premier article d'une série de test pour valider le système de séries avec preview admin.",
-    "image": "/assets/images/blog/default-blog.jpg",
-    "difficulty": "Débutant",
-    "estimated_reading_time": "5 minutes",
-    "series": "Test Série PrestaShop",
-    "series_part": 1,
-    "is_future": true
-  },
-  {
-    "title": "Test Série - Partie 2 : Configuration Avancée",
-    "url": "/articles/2025/08/22/test-serie-partie-2/",
-    "date": "2025-08-22",
-    "date_formatted": "22 août 2025",
-    "author": "Nicolas Dabène",
-    "categories": ["Test", "E-commerce"],
-    "tags": ["PrestaShop", "PHP", "configuration", "série"],
-    "excerpt": "Deuxième article de la série test - Configuration avancée des modules PrestaShop.",
-    "image": "/assets/images/blog/default-blog.jpg",
-    "difficulty": "Intermédiaire",
-    "estimated_reading_time": "7 minutes",
-    "series": "Test Série PrestaShop",
-    "series_part": 2,
-    "is_future": true
-  }
+  {% for post in future_posts %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }},
+      "date": "{{ post.date | date: '%Y-%m-%d' }}",
+      "date_formatted": "{% include date-fr.html date=post.date %}",
+      "author": {{ post.author | default: site.author | jsonify }},
+      "categories": {{ post.categories | jsonify }},
+      "tags": {{ post.tags | jsonify }},
+      "excerpt": {{ post.excerpt | strip_html | normalize_whitespace | jsonify }},
+      "image": "{{ post.image | default: '/assets/images/blog/default-blog.jpg' | relative_url }}",
+      "difficulty": {{ post.difficulty | jsonify }},
+      "estimated_reading_time": {{ post.estimated_reading_time | jsonify }},
+      "series": {{ post.series | jsonify }},
+      "series_part": {{ post.series_part | jsonify }},
+      "is_future": true
+    }{{ unless forloop.last }},{{ "" }}
+  {% endfor %}
 ]
 </script>

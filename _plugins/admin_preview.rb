@@ -2,24 +2,27 @@
 # Permet de voir les articles futurs si on est admin
 
 Jekyll::Hooks.register :site, :pre_render do |site|
-  # Récupération de l'IP du visiteur (pour les environnements locaux)
-  # En production, vous devrez adapter ce système selon votre serveur
-  
   # Vérifier si nous sommes en mode preview admin
-  if ENV['JEKYLL_ADMIN_PREVIEW'] == 'true' || 
-     site.config['admin_preview'] == true
-    
+  admin_preview_active = ENV['JEKYLL_ADMIN_PREVIEW'] == 'true' || 
+                         site.config['admin_preview'] == true ||
+                         ENV['JEKYLL_ENV'] == 'preview'
+  
+  if admin_preview_active
     # Modifier temporairement la configuration pour afficher les futurs posts
     site.config['future'] = true
+    site.config['show_drafts'] = true
     
     # Marquer les posts futurs comme preview admin
     site.posts.docs.each do |post|
       if post.date > site.time
         post.data['admin_preview'] = true
+        post.data['is_future'] = true
       end
     end
     
-    puts "🔮 Mode Admin Preview activé - Futurs posts visibles"
+    puts "🔮 Mode Admin Preview activé - Futurs posts visibles (#{site.posts.docs.select { |p| p.date > site.time }.count} articles futurs)"
+  else
+    puts "👥 Mode public - Articles futurs masqués"
   end
 end
 

@@ -1,0 +1,99 @@
+name: Daily Build - Publication automatique des articles futurs
+
+# Déclencheurs
+on:
+  # Build quotidien à 6h UTC (8h Paris)
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Déclenchement manuel via GitHub UI
+  workflow_dispatch:
+    inputs:
+      force_build:
+        description: 'Forcer le build même sans changements'
+        required: false
+        default: 'false'
+        type: boolean
+
+# Permissions nécessaires pour GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul job à la fois pour éviter les conflits
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Historique complet pour Jekyll
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Check for future posts
+        id: check_posts
+        run: |
+          # Vérifier s'il y a des articles futurs qui peuvent maintenant être publiés
+          current_date=$(date -u +"%Y-%m-%d")
+          future_posts=$(find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null | wc -l)
+          
+          echo "Articles potentiellement publiables: $future_posts"
+          echo "current_date=$current_date" >> $GITHUB_OUTPUT
+          echo "future_posts=$future_posts" >> $GITHUB_OUTPUT
+          
+          # Lister les articles concernés pour debug
+          echo "=== Articles avec dates récentes ==="
+          find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null || echo "Aucun article trouvé"
+      
+      - name: Build with Jekyll
+        run: |
+          echo "🏗️ Building Jekyll site with future posts enabled..."
+          echo "Date actuelle: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
+          
+          # Build avec les articles futurs activés
+          JEKYLL_ENV=production bundle exec jekyll build --future --verbose
+          
+          echo "✅ Build terminé"
+          ls -la _site/
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      - name: Summary
+        run: |
+          echo "## 📊 Résumé du build quotidien" >> $GITHUB_STEP_SUMMARY
+          echo "- **Date**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
+          echo "- **Articles futurs détectés**: ${{ steps.check_posts.outputs.future_posts }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL du site**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ✅ Déployé avec succès" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ steps.check_posts.outputs.future_posts }}" -gt "0" ]; then
+            echo "- **🎉 Nouveaux articles publiés automatiquement !**" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **ℹ️ Aucun nouvel article à publier aujourd'hui**" >> $GITHUB_STEP_SUMMARY
+          fi
