@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba($white, 0.95);
+    background: $dark-bg;
     backdrop-filter: $backdrop-blur;
     border-top: 2px solid $primary-color;
     box-shadow: $shadow-xl;
@@ -16,6 +16,11 @@
     transform: translateY(100%);
     transition: $transition-normal;
     font-family: $font-family-primary;
+    color: $white;
+
+    h3 {
+        color: $white !important;
+    }
     
     &.show {
         transform: translateY(0);
@@ -38,6 +43,7 @@
     align-items: center;
     justify-content: space-between;
     gap: $space-lg;
+    color: $white;
     
     @media (max-width: $breakpoint-md) {
         flex-direction: column;
@@ -104,6 +110,7 @@
     text-decoration: none;
     display: inline-block;
     font-family: $font-family-primary;
+    color: $white !important;
     
     @media (max-width: $breakpoint-md) {
         padding: $space-md $space-lg;
@@ -112,25 +119,29 @@
 }
 
 .cookie-banner .btn-primary {
-    background: $primary-color;
+    background: $success-color;
     color: $white;
     box-shadow: $shadow-md;
+    border: 1px solid $success-color !important;
     
     &:hover {
-        background: $primary-color-dark;
+        background: darken($success-color, 10%);
         transform: translateY(-2px);
         box-shadow: $shadow-lg;
+        border-color: darken($success-color, 10%);
     }
 }
 
 .cookie-banner .btn-secondary {
-    background: $gray-ultra-light;
-    color: $text-color;
+    background: $dark-bg;
+    color: $white !important;
     border: 1px solid $gray-light;
     
     &:hover {
-        background: $gray-light;
+        background: lighten($dark-bg, 10%);
         border-color: $gray-medium;
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
     }
 }
 
@@ -138,16 +149,20 @@
     background: transparent;
     color: $gray-medium;
     border: 1px solid $white;
+    color: $white !important;
     
     &:hover {
         background: $gray-medium;
         color: $white;
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+        border-color: $gray-medium;
     }
 }
 
 // Panel de paramètres avancés - Style moderne
 .cookie-settings-panel {
-    background: $gray-ultra-light;
+    background: $dark-bg;
     border-top: 1px solid $gray-light;
     padding: $space-lg;
     margin-top: $space-md;
@@ -157,13 +172,13 @@
         margin: 0 0 $space-md 0;
         font-size: $font-size-base;
         font-weight: $font-weight-semibold;
-        color: $text-color;
+        color: $white;
         font-family: $font-family-headings;
     }
 }
 
 .cookie-category {
-    background: $white;
+    background: $dark-bg;
     border: 1px solid $gray-light;
     border-radius: $rounded-lg;
     padding: $space-md;
@@ -185,7 +200,7 @@
         margin: 0;
         font-size: $font-size-sm;
         font-weight: $font-weight-semibold;
-        color: $text-color;
+        color: $white;
         font-family: $font-family-headings;
     }
     
