@@ -107,74 +107,42 @@ body_class: "page-blog"
                     {% endif %}
 
                     <!-- PUBLICATIONS EXTERNES - Intégrées dans le layout principal -->
-                    <div class="external-publications-blog-section">
-                        <div class="blog-filters-container">
-                            <div class="blog-filters-header">
-                                <h2 class="section-title">Publications Externes</h2>
-                                <div class="publications-info">
-                                    <span class="info-badge">Articles techniques publiés</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="external-publications-cards-grid">
-                            {% assign shuffled_external_publications = site.data.publications | shuffle %}
-                            {% for publication in shuffled_external_publications limit: 8 %}
-                            <div class="external-publication-card">
-                                <div class="external-publication-card-header">
-                                    <div class="publication-icon-blog">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                            <polyline points="14,2 14,8 20,8"/>
-                                            <line x1="16" y1="13" x2="8" y2="13"/>
-                                            <line x1="16" y1="17" x2="8" y2="17"/>
-                                        </svg>
+                    <section class="external-publications-section">
+                        <div class="container">
+                            <h2 class="section-title">Publications Externes</h2>
+                            <div class="external-publications-grid">
+                                {% assign shuffled_external_publications = site.data.publications | shuffle %}
+                                {% for publication in shuffled_external_publications limit: 8 %}
+                                <div class="external-publication-card">
+                                    <div class="publication-card-header">
+                                        <div class="publication-icon">
+                                            <i class="fas fa-newspaper"></i>
+                                        </div>
+                                        <div class="publication-meta">
+                                            <span>{{ publication.category | default: 'Article technique' }}</span>
+                                        </div>
                                     </div>
-                                    <div class="external-publication-meta">
-                                        <span class="publication-category-blog">{{ publication.category | default: 'Article technique' }}</span>
-                                        <span class="external-badge">Externe</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="external-publication-content">
-                                    <h3 class="external-publication-title">
-                                        <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
-                                    </h3>
-                                    
-                                    {% if publication.description %}
-                                    <p class="external-publication-description">{{ publication.description | truncate: 120 }}</p>
-                                    {% endif %}
-                                    
-                                    <div class="external-publication-tags">
-                                        <span class="tag-card">PrestaShop</span>
-                                        <span class="tag-card">Développement</span>
-                                        {% if publication.category %}
-                                        <span class="tag-card">{{ publication.category }}</span>
+                                    <div class="publication-card-content">
+                                        <h3 class="publication-title">
+                                            <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
+                                        </h3>
+                                        {% if publication.description %}
+                                        <p class="publication-description">{{ publication.description | truncate: 120 }}</p>
                                         {% endif %}
                                     </div>
+                                    <div class="publication-card-footer">
+                                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Lire l'article</a>
+                                    </div>
                                 </div>
-                                
-                                <div class="external-publication-footer">
-                                    <a href="{{ publication.link }}" class="view-btn-card external-link" target="_blank">
-                                        <span class="btn-text">Lire l'article</span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                                        </svg>
-                                    </a>
-                                </div>
+                                {% endfor %}
                             </div>
-                            {% endfor %}
+                            <div class="view-all-section" style="text-align: center; margin-top: 2rem;">
+                                <a href="/publications/" class="btn btn--primary">
+                                    Voir toutes les publications
+                                </a>
+                            </div>
                         </div>
-                        
-                        <div class="view-all-section">
-                            <a href="/publications/" class="view-all-btn">
-                                <span class="btn-text">Voir toutes les publications</span>
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                    </section>
                 </div>
 
                 <!-- Sidebar -->

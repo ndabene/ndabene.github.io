@@ -18,7 +18,7 @@ description: "Retrouvez une sélection de mes articles techniques, tutoriels et 
     </div>
 </section>
 
-<section class="section publications-page-section">
+<section class="section publications-page-section external-publications-section">
     <div class="container">
         {% assign grouped_publications = site.data.publications | group_by: "category" %}
         {% for group in grouped_publications %}
@@ -28,33 +28,27 @@ description: "Retrouvez une sélection de mes articles techniques, tutoriels et 
                 <span class="category-count">{{ group.items.size }} articles</span>
             </div>
             
-            <div class="approach-grid stagger-animation">
+            <div class="external-publications-grid">
                 {% for publication in group.items %}
-                <div class="approach-card animate-item publication-approach-card">
-                    <div class="approach-icon publication-approach-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                            <polyline points="10,9 9,9 8,9"/>
-                        </svg>
+                <div class="external-publication-card">
+                    <div class="publication-card-header">
+                        <div class="publication-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="publication-meta">
+                            <span>{{ group.name }}</span>
+                        </div>
                     </div>
-                    <h3 class="approach-title publication-approach-title">{{ publication.title | truncate: 60 }}</h3>
-                    <p class="approach-description">{{ publication.description | truncate: 180 | default: 'Article technique publié sur Business Tech couvrant les dernières innovations en développement PrestaShop et e-commerce.' }}</p>
-                    
-                    <div class="publication-approach-meta">
-                        <span class="publication-approach-category">{{ group.name }}</span>
-                        <span class="publication-approach-external">Externe</span>
+                    <div class="publication-card-content">
+                        <h3 class="publication-title">
+                            <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
+                        </h3>
+                        {% if publication.description %}
+                        <p class="publication-description">{{ publication.description | truncate: 120 }}</p>
+                        {% endif %}
                     </div>
-                    
-                    <div class="publication-approach-footer">
-                        <a href="{{ publication.link }}" class="publication-approach-link" target="_blank">
-                            <span>Lire l'article</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                            </svg>
-                        </a>
+                    <div class="publication-card-footer">
+                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Lire l'article</a>
                     </div>
                 </div>
                 {% endfor %}

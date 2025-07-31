@@ -1,0 +1,105 @@
+
+// _sass/components/_external-publications.scss
+
+.external-publications-section {
+    padding: 2rem 0;
+    background-color: #f9fafb;
+    border-top: 1px solid #e2e8f0;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1e293b;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .external-publications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .external-publication-card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-card-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .publication-icon {
+                font-size: 1.5rem;
+                color: #3b82f6;
+            }
+
+            .publication-meta {
+                font-size: 0.8rem;
+                color: #64748b;
+            }
+        }
+
+        .publication-card-content {
+            padding: 1rem;
+            flex-grow: 1;
+
+            .publication-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin: 0 0 0.5rem 0;
+
+                a {
+                    color: #1e293b;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #3b82f6;
+                    }
+                }
+            }
+
+            .publication-description {
+                font-size: 0.9rem;
+                color: #475569;
+                margin: 0;
+            }
+        }
+
+        .publication-card-footer {
+            padding: 1rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: flex-end;
+
+            .read-more-btn {
+                color: #3b82f6;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
