@@ -7,61 +7,25 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
 
 <section class="projects-list-section">
     <div class="container">
-        <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
-            <div style="flex-shrink: 0;">
-                <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène" style="width: 120px; height: 120px; border-radius: 12px; object-fit: cover; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);">
-            </div>
-            <div style="flex: 1;">
-                <h1>{{ page.title }}</h1>
-                <p class="section-description" style="margin: 0;">My portfolio showcases a range of enterprise-level projects, highlighting my expertise in complex architecture, innovative solutions, and delivering tangible business impact. Each project reflects a commitment to technical excellence and strategic problem-solving.</p>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1>{{ page.title }}</h1>
+            <p class="section-description" style="max-width: 700px; margin: 0.5rem auto 0;">{{ page.description }}</p>
+        </div>
+
+        <div class="project-filters-redesign" id="project-filters">
+            <div class="filters-container">
+                <button class="filter-button active" data-filter="all">Toutes les catégories</button>
+                <button class="filter-button" data-filter="prestashop">PrestaShop</button>
+                <button class="filter-button" data-filter="ai">Intelligence Artificielle</button>
+                <button class="filter-button" data-filter="dev-tools">Outils de dev</button>
+                <button class="filter-button" data-filter="open-source">Open Source</button>
             </div>
         </div>
 
-        <div class="project-filters">
-            <div class="filter-group">
-                <label for="category-filter">Filter by Category:</label>
-                <select id="category-filter" multiple>
-                    <option value="all">All Categories</option>
-                    <option value="e-commerce">E-commerce</option>
-                    <option value="ai-integration">AI Integration</option>
-                    <option value="custom-platforms">Custom Platforms</option>
-                    <option value="apis">APIs & Integrations</option>
-                    <option value="performance-optimization">Performance Optimization</option>
-                    <option value="technical-leadership">Technical Leadership</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="tech-filter">Filter by Technology:</label>
-                <select id="tech-filter" multiple>
-                    <option value="all">All Technologies</option>
-                    {% assign all_tags = site.data.projects | map: 'tags' | compact %}
-                    {% assign unique_techs = '' | split: '' %}
-                    {% for tag_list in all_tags %}
-                        {% for tag in tag_list %}
-                            {% unless unique_techs contains tag.tech %}
-                                {% assign unique_techs = unique_techs | push: tag.tech %}
-                            {% endunless %}
-                        {% endfor %}
-                    {% endfor %}
-                    {% assign unique_techs = unique_techs | sort %}
-                    {% for tech in unique_techs %}
-                        <option value="{{ tech | slugify }}">{{ tech }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="sort-by">Sort By:</label>
-                <select id="sort-by">
-                    <option value="date-desc">Date (Newest First)</option>
-                    <option value="date-asc">Date (Oldest First)</option>
-                    <option value="impact-desc">Business Impact (High to Low)</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="projects-grid" id="projects-container">
-            {% for project in site.data.projects %}
-                {% include project-card.html project=project %}
+        <div class="projects-grid-redesign" id="projects-container">
+            {% assign sorted_projects = site.data.projects | sort: 'date' | reverse %}
+            {% for project in sorted_projects %}
+                {% include project-card-modern.html project=project %}
             {% endfor %}
         </div>
 
@@ -70,3 +34,31 @@ keywords: "php projects, e-commerce development, prestashop projects, ai integra
         {% endif %}
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectsContainer = document.getElementById('projects-container');
+    const projectCards = Array.from(projectsContainer.children);
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Toggle active class on buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const categories = card.getAttribute('data-categories').split(' ');
+                
+                if (filter === 'all' || categories.includes(filter)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
