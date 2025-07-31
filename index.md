@@ -71,8 +71,8 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <span class="metric-label">modules créés</span>
                     </div>
                     <div class="metric-inline animate-item">
-                        <span class="metric-value">100k+</span>
-                        <span class="metric-label">installations</span>
+                        <span class="metric-value">100 000 +</span>
+                        <span class="metric-label">cafés</span>
                     </div>
                 </div>
                 
