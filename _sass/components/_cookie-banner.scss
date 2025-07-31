@@ -64,7 +64,7 @@
     p {
         margin: 0;
         font-size: $font-size-sm;
-        color: $white;
+        color: $white !important;
         line-height: $line-height-base;
     }
 }
@@ -202,7 +202,7 @@
 .cookie-category p {
     margin: 0;
     font-size: $font-size-xs;
-    color: $white;
+    color: $white !important;
     line-height: $line-height-base;
 }
 
