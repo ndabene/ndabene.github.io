@@ -1,0 +1,387 @@
+/**
+ * Banner de consentement RGPD
+ * Design harmonisé avec la charte graphique du site
+ */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($white, 0.95);
+    backdrop-filter: $backdrop-blur;
+    border-top: 2px solid $primary-color;
+    box-shadow: $shadow-xl;
+    z-index: $z-modal;
+    transform: translateY(100%);
+    transition: $transition-normal;
+    font-family: $font-family-primary;
+    
+    &.show {
+        transform: translateY(0);
+    }
+    
+    @media (max-width: 768px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+.cookie-banner-content {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: $space-lg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-lg;
+    
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: $space-md;
+        padding: $space-md;
+    }
+}
+
+.cookie-banner-info {
+    flex: 1;
+    
+    h3 {
+        margin: 0 0 $space-sm 0;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-semibold;
+        color: $text-color;
+        font-family: $font-family-headings;
+        display: flex;
+        align-items: center;
+        gap: $space-sm;
+    }
+    
+    p {
+        margin: 0;
+        font-size: $font-size-sm;
+        color: $text-color-light;
+        line-height: $line-height-base;
+    }
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: $space-sm;
+    flex-shrink: 0;
+    
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        gap: $space-sm;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        button {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+}
+
+// Boutons du banner - Style moderne harmonisé
+.cookie-banner .btn-primary,
+.cookie-banner .btn-secondary,
+.cookie-banner .btn-outline {
+    padding: $space-sm $space-lg;
+    border-radius: $rounded-lg;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    border: none;
+    cursor: pointer;
+    transition: $transition-normal;
+    text-decoration: none;
+    display: inline-block;
+    font-family: $font-family-primary;
+    
+    @media (max-width: $breakpoint-md) {
+        padding: $space-md $space-lg;
+        font-size: $font-size-xs;
+    }
+}
+
+.cookie-banner .btn-primary {
+    background: $primary-color;
+    color: $white;
+    box-shadow: $shadow-md;
+    
+    &:hover {
+        background: $primary-color-dark;
+        transform: translateY(-2px);
+        box-shadow: $shadow-lg;
+    }
+}
+
+.cookie-banner .btn-secondary {
+    background: $gray-ultra-light;
+    color: $text-color;
+    border: 1px solid $gray-light;
+    
+    &:hover {
+        background: $gray-light;
+        border-color: $gray-medium;
+    }
+}
+
+.cookie-banner .btn-outline {
+    background: transparent;
+    color: $gray-medium;
+    border: 1px solid $gray-medium;
+    
+    &:hover {
+        background: $gray-medium;
+        color: $white;
+    }
+}
+
+// Panel de paramètres avancés - Style moderne
+.cookie-settings-panel {
+    background: $gray-ultra-light;
+    border-top: 1px solid $gray-light;
+    padding: $space-lg;
+    margin-top: $space-md;
+    border-radius: $rounded-lg;
+    
+    h4 {
+        margin: 0 0 $space-md 0;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        color: $text-color;
+        font-family: $font-family-headings;
+    }
+}
+
+.cookie-category {
+    background: $white;
+    border: 1px solid $gray-light;
+    border-radius: $rounded-lg;
+    padding: $space-md;
+    margin-bottom: $space-sm;
+    box-shadow: $shadow-sm;
+    
+    &:last-child {
+        margin-bottom: $space-md;
+    }
+}
+
+.cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $space-sm;
+    
+    h5 {
+        margin: 0;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        color: $text-color;
+        font-family: $font-family-headings;
+    }
+    
+    .required {
+        background: $success-color;
+        color: $white;
+        padding: $space-xs $space-sm;
+        border-radius: $rounded-full;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+    }
+}
+
+.cookie-category p {
+    margin: 0;
+    font-size: $font-size-xs;
+    color: $text-color-light;
+    line-height: $line-height-base;
+}
+
+// Toggle switch - Style moderne
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        
+        &:checked + .toggle-slider {
+            background-color: $primary-color;
+            
+            &:before {
+                transform: translateX(22px);
+            }
+        }
+        
+        &:focus + .toggle-slider {
+            box-shadow: 0 0 4px rgba($primary-color, 0.3);
+        }
+    }
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $gray-light;
+    transition: $transition-normal;
+    border-radius: $rounded-full;
+    
+    &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: $white;
+        transition: $transition-normal;
+        border-radius: $rounded-full;
+        box-shadow: $shadow-sm;
+    }
+}
+
+.cookie-settings-actions {
+    display: flex;
+    gap: $space-sm;
+    justify-content: flex-end;
+    
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+    }
+}
+
+// Notification temporaire - Style moderne
+.cookie-notification {
+    position: fixed;
+    top: $space-lg;
+    right: $space-lg;
+    background: $success-color;
+    color: $white;
+    padding: $space-md $space-lg;
+    border-radius: $rounded-lg;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    z-index: $z-tooltip;
+    transform: translateX(100%);
+    transition: $transition-normal;
+    box-shadow: $shadow-lg;
+    font-family: $font-family-primary;
+    
+    &.show {
+        transform: translateX(0);
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        left: $space-lg;
+        right: $space-lg;
+        transform: translateY(-100%);
+        
+        &.show {
+            transform: translateY(0);
+        }
+    }
+}
+
+// Lien dans le footer pour modifier les préférences
+.cookie-preferences-link {
+    color: $gray-medium;
+    text-decoration: none;
+    font-size: $font-size-xs;
+    transition: $transition-fast;
+    
+    &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+    }
+}
+
+// Animations et accessibilité
+@media (prefers-reduced-motion: reduce) {
+    .cookie-banner,
+    .cookie-notification,
+    .toggle-slider,
+    .toggle-slider:before {
+        transition: none;
+    }
+}
+
+// Mode sombre - Harmonisé avec la charte
+@media (prefers-color-scheme: dark) {
+    .cookie-banner {
+        background: rgba($dark-surface, 0.95);
+        border-top-color: $primary-color;
+        
+        .cookie-banner-info {
+            h3 {
+                color: $white;
+            }
+            
+            p {
+                color: $dark-text-muted;
+            }
+        }
+        
+        .btn-secondary {
+            background: $dark-card;
+            color: $white;
+            border-color: $gray-medium;
+            
+            &:hover {
+                background: $dark-surface;
+            }
+        }
+        
+        .btn-outline {
+            color: $dark-text-muted;
+            border-color: $dark-text-muted;
+            
+            &:hover {
+                background: $dark-text-muted;
+                color: $dark-surface;
+            }
+        }
+    }
+    
+    .cookie-settings-panel {
+        background: $dark-bg;
+        border-color: $dark-card;
+        
+        h4 {
+            color: $white;
+        }
+    }
+    
+    .cookie-category {
+        background: $dark-surface;
+        border-color: $dark-card;
+        
+        h5 {
+            color: $white;
+        }
+        
+        p {
+            color: $dark-text-muted;
+        }
+    }
+    
+    .toggle-slider {
+        background-color: $dark-card;
+    }
+}
