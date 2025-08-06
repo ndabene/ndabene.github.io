@@ -58,6 +58,7 @@ exclude:
   - update-sitemap.sh
   - package.json
   - node_modules/
+  - vendor/
 
 # Fichiers à inclure explicitement
 include:
