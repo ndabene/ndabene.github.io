@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "ChatGPT + Shopify : le futur de l’e-commerce"
-date: 2025-05-08
+date: 2025-08-08
 author: Nicolas Dabène
 categories: [Ecommerce, Intelligence Artificielle]
 tags: [Shopify, ChatGPT, commerce conversationnel, AI integration, e-commerce]
 excerpt: "L’intégration native de ChatGPT et Shopify permet un parcours d’achat fluide dans la conversation, redéfinissant l’expérience e-commerce et les modèles."
-image: /assets/images/blog/2025-05-08-chatgpt-shopify.jpg
+image: /assets/images/blog/2025-08-08-chatgpt-shopify.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["AI", "ChatGPT", "Shopify"]
@@ -30,15 +30,6 @@ Cet article examine, de façon neutre et pragmatique, ce que cette synergie sign
 Des chaînes de code comme `buy_now`, `price`, `shipping`, `star_rating` ou `shopify_checkout_url` sont apparues dans le bundle web public de ChatGPT, indiquant qu’OpenAI câble un parcours d’achat complet – du catalogage produit au paiement – en s’appuyant sur l’infrastructure checkout de Shopify.  
 
 Un prototype fonctionnel a déjà été présenté à plusieurs marques ; OpenAI percevrait une commission sur chaque vente réalisée via cette interface.
-
-```mermaid
-flowchart LR
-  A[Intent utilisateur<br/>« Je cherche des sneakers »] --> B[ChatGPT<br/>→ Recherche produits]
-  B --> C[Cartes produit<br/>prix • stock • avis]
-  C --> D[buy_now]
-  D --> E[Shopify Checkout<br/>(paiement sécurisé)]
-  E --> F[Confirmation<br/>via ChatGPT]
-```
 
 **Points clés techniques :**
 
