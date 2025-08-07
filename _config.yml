@@ -124,3 +124,9 @@ defaults:
       sitemap:
         changefreq: "yearly"
         priority: 0.8
+  - scope:
+      path: "index.md"
+    values:
+      sitemap:
+        changefreq: "weekly"
+        priority: 1.0
