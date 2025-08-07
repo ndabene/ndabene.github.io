@@ -6,7 +6,8 @@
       "Bash(dir)",
       "Bash(ruby --version)",
       "Bash(bundle --version)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(find:*)"
     ],
     "deny": []
   }
