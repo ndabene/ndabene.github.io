@@ -1,45 +1,45 @@
 ---
 layout: page
-title: Me Contacter
+title: Contact Me
 translation_id: contact
-description: "Contactez Nicolas Dabène pour vos projets, collaborations ou consultations techniques."
-keywords: "contact développeur php, expert prestashop, consultant ai orchestrator, consultation technique, développeur freelance"
-permalink: /contact/
+permalink: /en/contact/
+description: "Contact Nicolas Dabène for your projects, collaborations, or technical consultations."
+keywords: "contact php developer, prestashop expert, ai orchestrator consultant, technical consultation, freelance developer"
 ---
 
 <section class="contact-section">
     <div class="container">
         <h1>{{ page.title }}</h1>
-        <p class="section-description">Que vous ayez un projet en tête, un défi technique à discuter, ou simplement envie d'échanger, j'aimerais avoir de vos nouvelles. Remplissez le formulaire ci-dessous ou contactez-moi directement.</p>
+        <p class="section-description">Whether you have a project in mind, a technical challenge to discuss, or just want to connect, I'd love to hear from you. Fill out the form below or contact me directly.</p>
 
         <div class="contact-form-wrapper">
             <div class="contact-form-container card">
                 <form action="https://formspree.io/f/meozazzl" method="POST" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Nom :</label>
+                        <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email :</label>
+                        <label for="email">Email:</label>
                         <input type="email" id="email" name="_replyto" required>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Sujet :</label>
+                        <label for="subject">Subject:</label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message :</label>
+                        <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
-                    
+
                     <!-- Anti-spam honeypot field (hidden) -->
                     <input type="text" name="_gotcha" style="display:none;">
-                    
+
                     <!-- Formspree settings -->
-                    <input type="hidden" name="_next" value="https://ndabene.github.io/contact?sent=true">
-                    <input type="hidden" name="_subject" value="Nouveau message depuis ndabene.github.io">
-                    
-                    <button type="submit" class="btn btn--primary">Envoyer le message</button>
+                    <input type="hidden" name="_next" value="https://nicolas-dabene.fr/en/contact?sent=true">
+                    <input type="hidden" name="_subject" value="New message from nicolas-dabene.fr">
+
+                    <button type="submit" class="btn btn--primary">Send Message</button>
                 </form>
                 <div id="form-messages" style="display:none;" class="form-messages"></div>
             </div>

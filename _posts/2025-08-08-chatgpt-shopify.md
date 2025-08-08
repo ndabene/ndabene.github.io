@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ChatGPT + Shopify : le futur de l’e-commerce"
+translation_id: blog-chatgpt-shopify-2025-08-08
 date: 2025-08-08
 author: Nicolas Dabène
 categories: [Ecommerce, Intelligence Artificielle]

@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Nicolas Dabène - Senior PHP Developer & AI Orchestrator | Expert PrestaShop"
+title: "Nicolas Dabène - Senior PHP Developer & AI Orchestrator | PrestaShop Expert"
 translation_id: home
-description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, AI-assisted development."
+description: "15+ years of experience in e-commerce development. PrestaShop modules, e-commerce architecture, AI-assisted development."
 keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack"
 ---
 
-<!-- HERO SECTION MODERNE -->
+<!-- MODERN HERO SECTION -->
 <section class="hero-section-modern">
     <div class="hero-background-pattern"></div>
     <div class="container">
         <div class="hero-layout">
-            <!-- Profile Visual avec effets modernes -->
+            <!-- Profile Visual with modern effects -->
             <div class="hero-visual scroll-reveal">
                 <div class="profile-container-modern glass-card">
-                    <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP FullStack Developer & AI Orchestrator, expert PrestaShop avec 15+ ans d'expérience en développement e-commerce et intégration d'intelligence artificielle" class="profile-image-modern">
+                    <img src="/assets/images/hero/profile-hero.jpg" alt="Nicolas Dabène - Senior PHP FullStack Developer & AI Orchestrator, PrestaShop expert with 15+ years of experience in e-commerce development and artificial intelligence integration" class="profile-image-modern">
                     </div>
             </div>
-            
-            <!-- Hero Content avec animations -->
+
+            <!-- Hero Content with animations -->
             <div class="hero-content">
                 <div class="hero-header scroll-reveal">
                     <h1 class="hero-title text-gradient-animated">Nicolas Dabène</h1>
-                    <p class="hero-subtitle typing-effect">Développeur Senior Full-Stack | Expert PrestaShop Reconnu | Pionnier IA E-commerce</p>
-                    
+                    <p class="hero-subtitle typing-effect">Senior Full-Stack Developer | Recognized PrestaShop Expert | E-commerce AI Pioneer</p>
+
                     <div class="hero-badges-modern stagger-animation">
                         <div class="animate-item glass-card badge-modern">
                             <span class="badge-icon">
@@ -43,7 +43,7 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                                     <line x1="3" y1="10" x2="21" y2="10"/>
                                 </svg>
                             </span>
-                            <span class="badge-text">15+ ans d'expérience</span>
+                            <span class="badge-text">15+ years of experience</span>
                         </div>
                         <div class="animate-item glass-card badge-modern">
                             <span class="badge-icon">
@@ -57,30 +57,30 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="hero-description scroll-reveal">
-                    <p class="hero-text-highlight"><strong>15 ans d'expertise technique, 5 PrestaShop Awards, et aujourd'hui l'orchestration d'agents IA pour multiplier l'efficacité de développement.</strong> Je transforme les défis e-commerce en solutions techniques durables, alliant excellence reconnue et innovation d'avant-garde.</p>
+                    <p class="hero-text-highlight"><strong>15 years of technical expertise, 5 PrestaShop Awards, and now orchestrating AI agents to multiply development efficiency.</strong> I transform e-commerce challenges into sustainable technical solutions, combining recognized excellence and cutting-edge innovation.</p>
                 </div>
 
                 <div class="hero-metrics-compact stagger-animation">
                     <div class="metric-inline animate-item">
                         <span class="metric-value">15</span>
-                        <span class="metric-label">ans d'expérience</span>
+                        <span class="metric-label">years of experience</span>
                     </div>
                     <div class="metric-inline animate-item">
                         <span class="metric-value">30</span>
-                        <span class="metric-label">modules créés</span>
+                        <span class="metric-label">modules created</span>
                     </div>
                     <div class="metric-inline animate-item">
-                        <span class="metric-value">100 000 +</span>
-                        <span class="metric-label">cafés</span>
+                        <span class="metric-value">100,000+</span>
+                        <span class="metric-label">coffees</span>
                     </div>
                 </div>
-                
-                <!-- Call to Action Principal -->
+
+                <!-- Main Call to Action -->
                 <div class="hero-cta-section scroll-reveal">
-                    <a href="/skills/" class="hero-cta-primary">
-                        <span class="btn-text">Découvrir mon expertise</span>
+                    <a href="/en/skills/" class="hero-cta-primary">
+                        <span class="btn-text">Discover my expertise</span>
                         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                         </svg>
@@ -91,14 +91,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- TRILOGIE DE VALEUR SECTION -->
+<!-- VALUE TRILOGY SECTION -->
 <section class="section value-trilogy-section">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Ma Trilogie de Valeur</h2>
-            <p class="section-subtitle-clean">Après quinze années à développer des solutions PrestaShop utilisées par des milliers d'e-commerçants, j'accompagne aujourd'hui la transformation du développement web vers l'intelligence artificielle</p>
+            <h2 class="section-title-clean">My Value Trilogy</h2>
+            <p class="section-subtitle-clean">After fifteen years developing PrestaShop solutions used by thousands of e-merchants, I now support the transformation of web development towards artificial intelligence.</p>
         </div>
-        
+
         <div class="value-trilogy-grid stagger-animation">
             <div class="value-card-modern animate-item">
                 <div class="value-icon-modern">
@@ -108,10 +108,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <path d="M2 12l10 5 10-5"/>
                     </svg>
                 </div>
-                <h3 class="value-title-modern">Capacité d'Adaptation</h3>
-                <p class="value-description-modern">Flexibilité technique et relationnelle qui me permet de naviguer aussi naturellement avec des CTOs qu'avec des dirigeants business, en choisissant toujours l'approche optimale selon le contexte.</p>
+                <h3 class="value-title-modern">Adaptability</h3>
+                <p class="value-description-modern">Technical and relational flexibility that allows me to navigate as naturally with CTOs as with business leaders, always choosing the optimal approach according to the context.</p>
             </div>
-            
+
             <div class="value-card-modern animate-item">
                 <div class="value-icon-modern">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -121,31 +121,31 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3 class="value-title-modern">Partage Intelligent</h3>
-                <p class="value-description-modern">Transmission d'expertise qui enrichit l'écosystème. De la formation de mon apprenti au développement assisté par IA jusqu'aux articles techniques, je cultive une approche collaborative qui démultiplie l'impact.</p>
+                <h3 class="value-title-modern">Intelligent Sharing</h3>
+                <p class="value-description-modern">Knowledge transfer that enriches the ecosystem. From training my apprentice in AI-assisted development to technical articles, I cultivate a collaborative approach that multiplies impact.</p>
             </div>
-            
+
             <div class="value-card-modern animate-item">
                 <div class="value-icon-modern">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
                     </svg>
                 </div>
-                <h3 class="value-title-modern">Codage Intelligent</h3>
-                <p class="value-description-modern">Orchestration d'agents IA qui a multiplié par quatre mon efficacité de développement. Je ne code plus seulement, j'orchestre l'intelligence artificielle pour créer plus de valeur en moins de temps.</p>
+                <h3 class="value-title-modern">Intelligent Coding</h3>
+                <p class="value-description-modern">Orchestration of AI agents that has quadrupled my development efficiency. I no longer just code, I orchestrate artificial intelligence to create more value in less time.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- EXPERTISE SECTION MODERNE -->
+<!-- MODERN EXPERTISE SECTION -->
 <section class="section expertise-section-clean">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Mes Compétences</h2>
-            <p class="section-subtitle-clean">Ma force : traduire l'innovation technique en résultats business mesurables, en alliant expertise PrestaShop reconnue et maîtrise des technologies émergentes</p>
+            <h2 class="section-title-clean">My Skills</h2>
+            <p class="section-subtitle-clean">My strength: translating technical innovation into measurable business results, combining recognized PrestaShop expertise and mastery of emerging technologies.</p>
         </div>
-        
+
         <div class="grid-unified stagger-animation">
             {% for expertise in site.data.expertise limit:4 %}
             <div class="expertise-card-beautiful animate-item" data-id="{{ expertise.id }}">
@@ -172,16 +172,16 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- RÉALISATIONS & CRÉDIBILITÉ SECTION -->
+<!-- ACHIEVEMENTS & CREDIBILITY SECTION -->
 <section class="section achievements-section">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Excellence Reconnue & Innovation</h2>
-            <p class="section-subtitle-clean">Une expertise PrestaShop d'élite reconnue par l'industrie, qui évolue aujourd'hui vers l'orchestration d'intelligence artificielle</p>
+            <h2 class="section-title-clean">Recognized Excellence & Innovation</h2>
+            <p class="section-subtitle-clean">An elite PrestaShop expertise recognized by the industry, now evolving towards the orchestration of artificial intelligence.</p>
         </div>
-        
+
         <div class="achievements-grid stagger-animation">
-            <!-- Bloc PrestaShop Excellence -->
+            <!-- PrestaShop Excellence Block -->
             <div class="achievement-block prestashop-excellence animate-item">
                 <div class="achievement-header">
                     <div class="achievement-icon">
@@ -190,10 +190,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                             <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
                         </svg>
                     </div>
-                    <h3 class="achievement-title">Expertise PrestaShop Elite</h3>
+                    <h3 class="achievement-title">Elite PrestaShop Expertise</h3>
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">Développeur au sein de BusinessTech, l'une des plus anciennes entreprises éditrices de modules PrestaShop en France, j'ai créé 30 modules dont certains comptent plus de 100 000 installations actives.</p>
+                    <p class="achievement-description">As a developer at BusinessTech, one of the oldest PrestaShop module editor companies in France, I have created 30 modules, some of which have more than 100,000 active installations.</p>
                     <div class="achievement-metrics">
                         <div class="metric-item">
                             <span class="metric-number">5</span>
@@ -201,17 +201,17 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         </div>
                         <div class="metric-item">
                             <span class="metric-number">4</span>
-                            <span class="metric-label">Coups de cœur jury</span>
+                            <span class="metric-label">Jury's Favorites</span>
                         </div>
                         <div class="metric-item">
                             <span class="metric-number">100k+</span>
-                            <span class="metric-label">Installations actives</span>
+                            <span class="metric-label">Active Installations</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Bloc Innovation IA -->
+
+            <!-- AI Innovation Block -->
             <div class="achievement-block ai-innovation animate-item">
                 <div class="achievement-header">
                     <div class="achievement-icon">
@@ -219,61 +219,61 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                             <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
                         </svg>
                     </div>
-                    <h3 class="achievement-title">Innovation IA Appliquée</h3>
+                    <h3 class="achievement-title">Applied AI Innovation</h3>
                 </div>
                 <div class="achievement-content">
-                    <p class="achievement-description">Ma curiosité technique m'a conduit vers l'intelligence artificielle appliquée au développement. Aujourd'hui, j'orchestre des agents IA pour multiplier mon efficacité tout en formant les équipes aux nouvelles méthodologies.</p>
+                    <p class="achievement-description">My technical curiosity led me to artificial intelligence applied to development. Today, I orchestrate AI agents to multiply my efficiency while training teams on new methodologies.</p>
                     <div class="achievement-metrics">
                         <div class="metric-item">
                             <span class="metric-number">4x</span>
-                            <span class="metric-label">Gain efficacité</span>
+                            <span class="metric-label">Efficiency Gain</span>
                         </div>
                         <div class="metric-item">
                             <span class="metric-number">∞</span>
-                            <span class="metric-label">Possibilités IA</span>
+                            <span class="metric-label">AI Possibilities</span>
                         </div>
                         <div class="metric-item">
                             <span class="metric-number">2025</span>
-                            <span class="metric-label">Vision future</span>
+                            <span class="metric-label">Future Vision</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Timeline des récompenses -->
+
+        <!-- Awards Timeline -->
         <div class="awards-timeline scroll-reveal">
-            <h4 class="timeline-title">Timeline des Récompenses PrestaShop</h4>
+            <h4 class="timeline-title">PrestaShop Awards Timeline</h4>
             <div class="timeline-items">
                 <div class="timeline-item">
                     <span class="timeline-year">2011-2015</span>
-                    <span class="timeline-event">Premiers Awards & reconnaissance communauté</span>
+                    <span class="timeline-event">First Awards & community recognition</span>
                 </div>
                 <div class="timeline-item">
                     <span class="timeline-year">2016-2018</span>
-                    <span class="timeline-event">Coups de cœur du jury & modules populaires</span>
+                    <span class="timeline-event">Jury's favorites & popular modules</span>
                 </div>
                 <div class="timeline-item">
                     <span class="timeline-year">2019-2020</span>
-                    <span class="timeline-event">Consolidation expertise & évolution Symfony</span>
+                    <span class="timeline-event">Expertise consolidation & Symfony evolution</span>
                 </div>
                 <div class="timeline-item">
                     <span class="timeline-year">2021-2025</span>
-                    <span class="timeline-event">Transition vers orchestration IA</span>
+                    <span class="timeline-event">Transition to AI orchestration</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- MODULES SECTION MODERNE -->
+<!-- MODERN MODULES SECTION -->
 <section class="section modules-section-modern">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Modules PrestaShop</h2>
-            <p class="section-subtitle-clean">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
+            <h2 class="section-title-clean">PrestaShop Modules</h2>
+            <p class="section-subtitle-clean">Selection of modules developed to meet the specific needs of e-merchants</p>
         </div>
-        
+
         <div class="grid-unified stagger-animation">
             {% for module in site.data.modules %}
             <div class="module-card-simple animate-item">
@@ -284,22 +284,22 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                 {% else %}
                 <div class="module-image-simple"></div>
                 {% endif %}
-                
+
                 <div class="module-content-simple">
                     <h3 class="module-title-simple">{{ module.title }}</h3>
-                    
+
                     <div class="module-tags-simple">
                         {% for tag in module.tags %}
                         <span class="tag-simple tag-simple--{{ tag.category | downcase }}">{{ tag.tech }}</span>
                         {% endfor %}
                     </div>
-                    
+
                     <p class="module-description-simple">{{ module.description }}</p>
                 </div>
-                
+
                 <div class="module-footer-simple">
                     <a href="{{ module.link }}" class="view-btn" target="_blank">
-                        <span class="btn-text">Découvrir</span>
+                        <span class="btn-text">Discover</span>
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                         </svg>
@@ -308,10 +308,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             </div>
             {% endfor %}
         </div>
-        
+
         <div class="view-all-section">
-            <a href="/projects" class="view-all-btn">
-                <span class="btn-text">Découvrir tous mes projets</span>
+            <a href="/en/projects" class="view-all-btn">
+                <span class="btn-text">Discover all my projects</span>
                 <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                 </svg>
@@ -320,14 +320,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- APPROCHE - PHILOSOPHIE TECHNIQUE SECTION -->
+<!-- APPROACH - TECHNICAL PHILOSOPHY SECTION -->
 <section class="section approach-section">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Mon Approche Technique</h2>
-            <p class="section-subtitle-clean">Une philosophie technique qui privilégie l'impact business, fondée sur 15 ans d'expérience e-commerce et une vision avant-gardiste de l'innovation responsable</p>
+            <h2 class="section-title-clean">My Technical Approach</h2>
+            <p class="section-subtitle-clean">A technical philosophy that prioritizes business impact, based on 15 years of e-commerce experience and a forward-thinking vision of responsible innovation.</p>
         </div>
-        
+
         <div class="approach-grid stagger-animation">
             <div class="approach-card animate-item">
                 <div class="approach-icon">
@@ -337,10 +337,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <circle cx="12" cy="11" r="2"/>
                     </svg>
                 </div>
-                <h3 class="approach-title">Pragmatisme Architectural</h3>
-                <p class="approach-description">Je privilégie les architectures robustes et maintenables aux solutions sur-complexes. Mes 100 000+ installations actives témoignent de cette approche : la simplicité technique bien exécutée génère plus de valeur que la complexité impressionnante mais fragile.</p>
+                <h3 class="approach-title">Architectural Pragmatism</h3>
+                <p class="approach-description">I favor robust and maintainable architectures over over-complex solutions. My 100,000+ active installations bear witness to this approach: well-executed technical simplicity generates more value than impressive but fragile complexity.</p>
             </div>
-            
+
             <div class="approach-card animate-item">
                 <div class="approach-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -350,10 +350,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <path d="M7 13h10"/>
                     </svg>
                 </div>
-                <h3 class="approach-title">Excellence UX E-commerce</h3>
-                <p class="approach-description">Ma spécialisation dans l'optimisation des interfaces back-office PrestaShop révèle ma compréhension profonde des enjeux opérationnels e-commerce. Chaque détail d'ergonomie influence directement la productivité quotidienne des marchands.</p>
+                <h3 class="approach-title">E-commerce UX Excellence</h3>
+                <p class="approach-description">My specialization in optimizing PrestaShop back-office interfaces reveals my deep understanding of e-commerce operational issues. Every ergonomic detail directly influences the daily productivity of merchants.</p>
             </div>
-            
+
             <div class="approach-card animate-item">
                 <div class="approach-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -362,8 +362,8 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                         <path d="M2 12l10 5 10-5"/>
                     </svg>
                 </div>
-                <h3 class="approach-title">Innovation IA Avancée</h3>
-                <p class="approach-description">Mon évolution vers l'orchestration d'intelligence artificielle révolutionne ma manière de développer. Comment intégrer efficacement les agents IA dans les workflows e-commerce ? Cette expertise de pointe guide mes choix d'architecture et mes méthodologies de développement modernes.</p>
+                <h3 class="approach-title">Advanced AI Innovation</h3>
+                <p class="approach-description">My evolution towards the orchestration of artificial intelligence is revolutionizing the way I develop. How to effectively integrate AI agents into e-commerce workflows? This cutting-edge expertise guides my architectural choices and modern development methodologies.</p>
             </div>
         </div>
     </div>
@@ -371,14 +371,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
 
 {% include future-posts-data.html %}
 
-<!-- PUBLICATIONS SECTION MODERNE -->
+<!-- MODERN PUBLICATIONS SECTION -->
 <section class="section publications-section">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Mes Publications</h2>
-            <p class="section-subtitle-clean">Sélection de mes derniers articles techniques</p>
+            <h2 class="section-title-clean">My Publications</h2>
+            <p class="section-subtitle-clean">Selection of my latest technical articles</p>
         </div>
-        
+
         <div class="approach-grid stagger-animation">
             {% assign shuffled_publications = site.data.publications | shuffle %}
             {% for publication in shuffled_publications limit: 3 %}
@@ -393,16 +393,16 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </svg>
                 </div>
                 <h3 class="approach-title publication-approach-title">{{ publication.title | truncate: 60 }}</h3>
-                <p class="approach-description">{{ publication.description | truncate: 180 | default: 'Article technique publié sur Business Tech couvrant les dernières innovations en développement PrestaShop et e-commerce.' }}</p>
-                
+                <p class="approach-description">{{ publication.description | truncate: 180 | default: 'Technical article published on Business Tech covering the latest innovations in PrestaShop and e-commerce development.' }}</p>
+
                 <div class="publication-approach-meta">
-                    <span class="publication-approach-category">{{ publication.category | default: 'Article technique' }}</span>
-                    <span class="publication-approach-external">Externe</span>
+                    <span class="publication-approach-category">{{ publication.category | default: 'Technical article' }}</span>
+                    <span class="publication-approach-external">External</span>
                 </div>
-                
+
                 <div class="publication-approach-footer">
                     <a href="{{ publication.link }}" class="publication-approach-link" target="_blank">
-                        <span>Lire l'article</span>
+                        <span>Read article</span>
                         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                         </svg>
@@ -411,10 +411,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
             </div>
             {% endfor %}
         </div>
-        
+
         <div class="hero-cta-section">
-            <a href="/blog/" class="hero-cta-primary">
-                <span class="btn-text">Découvrir tous mes articles</span>
+            <a href="/en/blog/" class="hero-cta-primary">
+                <span class="btn-text">Discover all my articles</span>
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                 </svg>
@@ -423,14 +423,14 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- FAQ SECTION - Blocs inline simples -->
+<!-- FAQ SECTION - Simple inline blocks -->
 <section class="section faq-section-inline">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
-            <h2 class="section-title-clean">Questions Fréquentes</h2>
-            <p class="section-subtitle-clean">Réponses directes aux questions les plus courantes sur mes services</p>
+            <h2 class="section-title-clean">Frequently Asked Questions</h2>
+            <p class="section-subtitle-clean">Direct answers to the most common questions about my services</p>
         </div>
-        
+
         <div class="faq-grid-inline stagger-animation">
             <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
                 <div class="faq-icon-inline">
@@ -440,10 +440,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </svg>
                 </div>
                 <div class="faq-content-inline">
-                    <h3 class="faq-question-inline" itemprop="name">Qui est Nicolas Dabène ?</h3>
+                    <h3 class="faq-question-inline" itemprop="name">Who is Nicolas Dabène?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
                         <div itemprop="text" class="faq-answer-inline">
-                            <p><strong>Expert PrestaShop Elite avec 5 Awards officiels (2011-2020)</strong> chez BusinessTech, développeur senior avec 15+ ans d'expérience et 30 modules totalisant 100k+ installations actives. Aujourd'hui pionnier de l'orchestration IA pour multiplier l'efficacité de développement par 4.</p>
+                            <p><strong>Elite PrestaShop Expert with 5 official Awards (2011-2020)</strong> at BusinessTech, senior developer with 15+ years of experience and 30 modules totaling 100k+ active installations. Today, a pioneer in AI orchestration to multiply development efficiency by 4.</p>
                         </div>
                     </div>
                 </div>
@@ -456,10 +456,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </svg>
                 </div>
                 <div class="faq-content-inline">
-                    <h3 class="faq-question-inline" itemprop="name">Quelles sont ses spécialités uniques ?</h3>
+                    <h3 class="faq-question-inline" itemprop="name">What are his unique specialties?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
                         <div itemprop="text" class="faq-answer-inline">
-                            <p><strong>Triple expertise rare :</strong> Excellence PrestaShop reconnue (5 Awards marketplace), architectures e-commerce complexes éprouvées par 100k+ installations, et maîtrise avant-gardiste de l'orchestration IA pour révolutionner les workflows de développement.</p>
+                            <p><strong>Rare triple expertise:</strong> Recognized PrestaShop excellence (5 marketplace Awards), complex e-commerce architectures proven by 100k+ installations, and cutting-edge mastery of AI orchestration to revolutionize development workflows.</p>
                         </div>
                     </div>
                 </div>
@@ -474,15 +474,15 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </svg>
                 </div>
                 <div class="faq-content-inline">
-                    <h3 class="faq-question-inline" itemprop="name">Quel est son parcours et évolution ?</h3>
+                    <h3 class="faq-question-inline" itemprop="name">What is his background and evolution?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
                         <div itemprop="text" class="faq-answer-inline">
-                            <p><strong>Timeline d'excellence (2011-2025) :</strong> De développeur PrestaShop primé chez BusinessTech avec 5 Awards et modules à succès, vers pionnier de l'orchestration IA appliquée au développement e-commerce. Une évolution qui anticipe l'avenir du métier.</p>
+                            <p><strong>Timeline of excellence (2011-2025):</strong> From an award-winning PrestaShop developer at BusinessTech with 5 Awards and successful modules, to a pioneer of AI orchestration applied to e-commerce development. An evolution that anticipates the future of the profession.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item-inline animate-item" itemscope itemtype="https://schema.org/Question">
                 <div class="faq-icon-inline">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -492,10 +492,10 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
                     </svg>
                 </div>
                 <div class="faq-content-inline">
-                    <h3 class="faq-question-inline" itemprop="name">Comment l'IA transforme-t-elle son travail ?</h3>
+                    <h3 class="faq-question-inline" itemprop="name">How does AI transform his work?</h3>
                     <div itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
                         <div itemprop="text" class="faq-answer-inline">
-                            <p><strong>Révolution concrète :</strong> Orchestration d'agents IA qui a multiplié son efficacité par 4, développement assisté par prompts intelligents, et formation d'équipes aux méthodologies d'avant-garde. L'IA comme amplificateur d'expertise, pas comme substitut.</p>
+                            <p><strong>Concrete revolution:</strong> Orchestration of AI agents that has multiplied his efficiency by 4, development assisted by intelligent prompts, and training teams in cutting-edge methodologies. AI as an amplifier of expertise, not a substitute.</p>
                         </div>
                     </div>
                 </div>
@@ -504,13 +504,13 @@ keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-
     </div>
 </section>
 
-<!-- SCRIPTS SPÉCIFIQUES -->
+<!-- SPECIFIC SCRIPTS -->
 <script>
-// Script pour l'expansion des cartes d'expertise
+// Script for expanding expertise cards
 function expandExpertise(expertiseId) {
     const card = document.querySelector(`[data-id="${expertiseId}"]`);
     card.classList.toggle('expanded');
 }
 
-// Animation simple pour FAQ inline - pas d'animations complexes
+// Simple animation for inline FAQ - no complex animations
 </script>

@@ -1,0 +1,37 @@
+{%- comment -%}
+  Language switcher logic
+  Finds the alternate version of a page using page.translation_id
+{%- endcomment -%}
+
+{%- assign current_lang = page.lang | default: 'fr' -%}
+{%- assign translation_id = page.translation_id -%}
+{%- assign alternate_page = nil -%}
+
+{%- if translation_id -%}
+  {%- if current_lang == 'en' -%}
+    {%- assign target_lang = 'fr' -%}
+  {%- else -%}
+    {%- assign target_lang = 'en' -%}
+  {%- endif -%}
+
+  {%- for p in site.documents -%}
+    {%- if p.translation_id == translation_id and p.lang == target_lang -%}
+      {%- assign alternate_page = p -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if alternate_page -%}
+  <div class="language-switcher">
+    {%- if current_lang == 'en' -%}
+      <a href="{{ alternate_page.url | relative_url }}" lang="fr" hreflang="fr" class="lang-link">Français</a>
+      <span class="lang-current">English</span>
+    {%- else -%}
+      <span class="lang-current">Français</span>
+      <a href="{{ alternate_page.url | relative_url }}" lang="en" hreflang="en" class="lang-link">English</a>
+    {%- endif -%}
+  </div>
+{%- else -%}
+  <!-- No alternate page found for {{ page.url }} -->
+{%- endif -%}

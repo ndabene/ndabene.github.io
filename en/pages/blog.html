@@ -1,0 +1,227 @@
+---
+layout: default
+title: Blog
+translation_id: blog
+permalink: /en/blog/
+description: "Articles and analysis on PHP, AI, e-commerce, and software engineering by Nicolas Dabène."
+keywords: "php blog, ai blog, e-commerce blog, software engineering, technical articles, prestashop"
+body_class: "page-blog"
+---
+
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/en/">Home</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>Tech & E-commerce Blog</h1>
+            <p class="section-description">Sharing knowledge, experience, and technical articles on PHP, e-commerce, AI, and best practices in software engineering.</p>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content-section">
+    <div class="container">
+        {% if site.posts.size > 0 %}
+            <div class="blog-grid-news">
+                <div class="main-blog-content-news">
+                    <!-- Filtres et tri -->
+                    <div class="blog-filters-container">
+                        <div class="blog-filters-header">
+                            <h2 class="section-title">Blog Posts</h2>
+                            <div class="view-toggle">
+                                <button id="view-list" class="view-btn active" title="List view">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <button id="view-grid" class="view-btn" title="Grid view">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="blog-filters-compact" style="display: flex !important; justify-content: center !important;">
+                            <div class="filters-center" style="display: flex !important; justify-content: center !important; gap: 1rem;">
+                                <div class="filter-group">
+                                    <label><i class="fas fa-folder"></i> Category</label>
+                                    <select id="category-filter">
+                                        <option value="">All categories</option>
+                                        {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                                        {% for category in all_categories %}
+                                            <option value="{{ category }}">{{ category }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label><i class="fas fa-sort"></i> Sort</label>
+                                    <select id="sort-filter">
+                                        <option value="date-desc">Newest</option>
+                                        <option value="date-asc">Oldest</option>
+                                        <option value="title">Title A-Z</option>
+                                        <option value="reading-time">Reading time</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-results-info" id="filter-results-info">
+                            <span class="results-count">All posts <span id="filtered-count">({{ site.posts.size }})</span></span>
+                            <div class="active-filters" id="active-filters"></div>
+                        </div>
+
+                        <!-- Bouton admin pour voir les futurs posts -->
+                        <div id="admin-toggle-section" style="display: none;">
+                            <button onclick="enableAdminPreview()" class="btn btn-admin-toggle">
+                                <i class="fas fa-eye"></i> Admin Mode (see future posts)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post-list-news" id="blog-posts-container">
+                        {% include blog-post-loop.html posts=site.posts limit=15 %}
+                    </div>
+
+                    <!-- Message quand aucun résultat -->
+                    <div class="no-results" id="no-results">
+                        <div class="no-results-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>No articles found</h3>
+                        <p>No articles match your search criteria.</p>
+                        <button id="reset-filters" class="btn btn--primary">Reset filters</button>
+                    </div>
+
+                    <!-- Données des futurs posts pour le mode admin -->
+                    {% include future-posts-data.html %}
+
+                    <!-- Pagination -->
+                    {% assign posts_per_page = 12 %}
+                    {% if site.posts.size > posts_per_page %}
+                        <div class="pagination-container">
+                            <div class="pagination">
+                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Previous</button>
+                                <div class="pagination-numbers" id="pagination-numbers"></div>
+                                <button id="next-page" class="pagination-btn">Next &raquo;</button>
+                            </div>
+                            <p class="pagination-info">Showing <span id="showing-range">1-{{ posts_per_page }}</span> of <span id="total-posts">{{ site.posts.size }}</span> posts</p>
+                        </div>
+                    {% endif %}
+
+                    <!-- PUBLICATIONS EXTERNES - Intégrées dans le layout principal -->
+                    <section class="external-publications-section">
+                        <div class="container">
+                            <h2 class="section-title">External Publications</h2>
+                            <div class="external-publications-grid">
+                                {% assign shuffled_external_publications = site.data.publications | shuffle %}
+                                {% for publication in shuffled_external_publications limit: 8 %}
+                                <div class="external-publication-card">
+                                    <div class="publication-card-header">
+                                        <div class="publication-icon">
+                                            <i class="fas fa-newspaper"></i>
+                                        </div>
+                                        <div class="publication-meta">
+                                            <span>{{ publication.category | default: 'Technical Article' }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="publication-card-content">
+                                        <h3 class="publication-title">
+                                            <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
+                                        </h3>
+                                        {% if publication.description %}
+                                        <p class="publication-description">{{ publication.description | truncate: 120 }}</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="publication-card-footer">
+                                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Read article</a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="view-all-section" style="text-align: center; margin-top: 2rem;">
+                                <a href="/en/publications/" class="btn btn--primary">
+                                    View all publications
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar-news">
+                    <div class="sidebar-widget-compact">
+                        <h4>Recent Posts</h4>
+                        <div class="recent-posts-compact">
+                            {% for post in site.posts limit: 5 %}
+                                <article class="recent-post-compact">
+                                    {% if post.image %}
+                                        <div class="recent-thumb-mini">
+                                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                                        </div>
+                                    {% endif %}
+                                    <div class="recent-content-mini">
+                                        <h5><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a></h5>
+                                        <time>{% include date-fr.html date=post.date %}</time>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget-compact">
+                        <h4>Categories</h4>
+                        <div class="categories-compact">
+                            {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                            {% for category in all_categories %}
+                                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                                <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
+                                    {{ category }} <span>({{ category_posts.size }})</span>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+                    {% if site.data.series %}
+                        {% assign has_series_with_posts = false %}
+                        {% for series in site.data.series %}
+                            {% assign series_posts = site.posts | where: "series", series[0] %}
+                            {% if series_posts.size > 0 %}
+                                {% assign has_series_with_posts = true %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if has_series_with_posts %}
+                        <div class="sidebar-widget-compact">
+                            <h4>Article Series</h4>
+                            <div class="series-compact">
+                                {% for series_entry in site.data.series %}
+                                    {% assign series_key = series_entry[0] %}
+                                    {% assign series_data = series_entry[1] %}
+                                    {% assign series_posts = site.posts | where: "series", series_key %}
+                                    {% if series_posts.size > 0 %}
+                                        <a href="/series/{{ series_key | slugify }}.html" class="series-link-compact">
+                                            {{ series_key }} <span>({{ series_posts.size }})</span>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                </aside>
+            </div>
+
+        {% else %}
+            <div class="no-posts-container">
+                <span class="no-posts-icon">📝</span>
+                <h2>The blog is being written</h2>
+                <p>New technical articles on PHP, PrestaShop and AI will be available soon. Check back later to discover my publications!</p>
+                <a href="/en/" class="btn btn--primary">Back to home</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>

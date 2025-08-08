@@ -9,7 +9,9 @@
     
     <nav class="header-nav main-navigation">
       <ul class="nav-links">
-        {% for item in site.data.navigation %}
+        {% assign nav_file = page.nav_file | default: "navigation.yml" %}
+        {% assign nav_data = site.data[nav_file] %}
+        {% for item in nav_data %}
           <li class="nav-item">
             <a href="{{ item.link | relative_url }}" 
                class="nav-link {% if page.url == item.link %}active{% endif %}">
@@ -21,12 +23,13 @@
     </nav>
 
     <div class="header-actions nav-actions">
+      {% include language-switcher.html %}
       <a href="{{ "/contact" | relative_url }}" class="btn btn--primary ripple-effect">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
           <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
         </svg>
-        Me contacter
+        {{ page.t.contact_me | default: "Me contacter" }}
       </a>
       
       <button class="mobile-menu-btn" id="mobile-menu-toggle">
@@ -40,14 +43,16 @@
   <!-- Mobile Navigation - Version simple -->
   <div class="mobile-nav" id="mobile-nav-panel">
     <ul>
-      {% for item in site.data.navigation %}
+      {% assign nav_file = page.nav_file | default: "navigation.yml" %}
+      {% assign nav_data = site.data[nav_file] %}
+      {% for item in nav_data %}
         <li>
           <a href="{{ item.link | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}">
             {{ item.name }}
           </a>
         </li>
       {% endfor %}
-      <li><a href="{{ "/contact" | relative_url }}" class="btn btn--primary">Discutons de votre projet</a></li>
+      <li><a href="{{ "/contact" | relative_url }}" class="btn btn--primary">{{ page.t.contact_me | default: "Discutons de votre projet" }}</a></li>
     </ul>
   </div>
 </header>

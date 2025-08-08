@@ -1,20 +1,20 @@
 ---
 layout: page
-title: "Politique de Cookies"
+title: "Cookie Policy"
 translation_id: cookie-policy
-permalink: /politique-cookies/
-description: "Information détaillée sur l'utilisation des cookies sur le site de Nicolas Dabène, développeur PHP et architecte logiciel."
+permalink: /en/cookie-policy/
+description: "Detailed information about the use of cookies on the website of Nicolas Dabène, PHP developer and software architect."
 body_class: "cookie-policy-page"
 ---
 
 <div class="cookie-intro-section">
     <div class="card-modern intro-card">
         <div class="card-body">
-            <h2>Qu'est-ce qu'un cookie ?</h2>
-            <p>Un cookie est un petit fichier texte stocké sur votre appareil lors de votre visite sur un site web. Les cookies permettent au site de reconnaître votre appareil et de mémoriser certaines informations concernant votre visite.</p>
+            <h2>What is a cookie?</h2>
+            <p>A cookie is a small text file stored on your device when you visit a website. Cookies allow the site to recognize your device and remember certain information about your visit.</p>
             <div class="update-info">
                 <span class="update-date">
-                    Dernière mise à jour : {{ "now" | date: "%d/%m/%Y" }}
+                    Last updated: {{ "now" | date: "%Y-%m-%d" }}
                 </span>
             </div>
         </div>
@@ -22,7 +22,7 @@ body_class: "cookie-policy-page"
 </div>
 
 <div class="cookies-section">
-    <h2>Cookies utilisés sur ce site</h2>
+    <h2>Cookies used on this site</h2>
 
 <div class="cookie-categories">
     <div class="card-modern cookie-category-card">
@@ -35,23 +35,23 @@ body_class: "cookie-policy-page"
                     </svg>
                 </div>
                 <div>
-                    <h3>Cookies essentiels</h3>
-                    <span class="category-status required">Obligatoire</span>
+                    <h3>Essential Cookies</h3>
+                    <span class="category-status required">Required</span>
                 </div>
             </div>
         </div>
         <div class="card-body">
-            <p>Ces cookies sont nécessaires au fonctionnement du site et ne peuvent pas être désactivés.</p>
+            <p>These cookies are necessary for the site to function and cannot be disabled.</p>
             <div class="cookie-table">
                 <div class="cookie-row header">
                     <span>Cookie</span>
-                    <span>Durée</span>
-                    <span>Finalité</span>
+                    <span>Duration</span>
+                    <span>Purpose</span>
                 </div>
                 <div class="cookie-row">
                     <code>ndabene_cookie_consent</code>
-                    <span>1 an</span>
-                    <span>Mémorisation de vos préférences de cookies</span>
+                    <span>1 year</span>
+                    <span>Stores your cookie preferences</span>
                 </div>
             </div>
         </div>
@@ -67,36 +67,36 @@ body_class: "cookie-policy-page"
                     </svg>
                 </div>
                 <div>
-                    <h3>Cookies d'analyse</h3>
-                    <span class="category-status optional">Optionnel</span>
+                    <h3>Analytics Cookies</h3>
+                    <span class="category-status optional">Optional</span>
                 </div>
             </div>
         </div>
         <div class="card-body">
-            <p>Ces cookies nous aident à comprendre comment vous utilisez le site pour l'améliorer.</p>
+            <p>These cookies help us understand how you use the site to improve it.</p>
             <div class="cookie-table">
                 <div class="cookie-row header">
                     <span>Cookie</span>
-                    <span>Durée</span>
-                    <span>Finalité</span>
-                    <span>Fournisseur</span>
+                    <span>Duration</span>
+                    <span>Purpose</span>
+                    <span>Provider</span>
                 </div>
                 <div class="cookie-row">
                     <code>_ga</code>
-                    <span>2 ans</span>
-                    <span>Identifier les utilisateurs uniques</span>
+                    <span>2 years</span>
+                    <span>Identify unique users</span>
                     <span>Google Analytics</span>
                 </div>
                 <div class="cookie-row">
                     <code>_ga_*</code>
-                    <span>2 ans</span>
-                    <span>Identifier les sessions</span>
+                    <span>2 years</span>
+                    <span>Identify sessions</span>
                     <span>Google Analytics</span>
                 </div>
                 <div class="cookie-row">
                     <code>_gid</code>
-                    <span>24 heures</span>
-                    <span>Identifier les utilisateurs uniques</span>
+                    <span>24 hours</span>
+                    <span>Identify unique users</span>
                     <span>Google Analytics</span>
                 </div>
             </div>
@@ -107,7 +107,7 @@ body_class: "cookie-policy-page"
 </div>
 
 <div class="privacy-section-header">
-    <h2>Respect de votre vie privée</h2>
+    <h2>Respect for your privacy</h2>
 </div>
 
 <div class="privacy-section">
@@ -118,36 +118,36 @@ body_class: "cookie-policy-page"
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
             </div>
-            <h3>Configuration respectueuse de Google Analytics</h3>
+            <h3>Respectful Google Analytics Configuration</h3>
         </div>
         <div class="card-body">
             <div class="privacy-features">
                 <div class="privacy-feature">
                     <span class="feature-icon">🛡️</span>
                     <div>
-                        <strong>Anonymisation IP</strong>
-                        <p>Votre adresse IP est anonymisée</p>
+                        <strong>IP Anonymization</strong>
+                        <p>Your IP address is anonymized</p>
                     </div>
                 </div>
                 <div class="privacy-feature">
                     <span class="feature-icon">🚫</span>
                     <div>
-                        <strong>Pas de remarketing</strong>
-                        <p>Aucune publicité ciblée</p>
+                        <strong>No Remarketing</strong>
+                        <p>No targeted advertising</p>
                     </div>
                 </div>
                 <div class="privacy-feature">
                     <span class="feature-icon">🔐</span>
                     <div>
-                        <strong>Pas de signaux Google</strong>
-                        <p>Vos données ne sont pas partagées avec Google Ads</p>
+                        <strong>No Google Signals</strong>
+                        <p>Your data is not shared with Google Ads</p>
                     </div>
                 </div>
                 <div class="privacy-feature">
                     <span class="feature-icon">⏰</span>
                     <div>
-                        <strong>Stockage limité</strong>
-                        <p>Conservation des données limitée à 26 mois</p>
+                        <strong>Limited Storage</strong>
+                        <p>Data retention limited to 26 months</p>
                     </div>
                 </div>
             </div>
@@ -162,36 +162,36 @@ body_class: "cookie-policy-page"
                     <circle cx="8.5" cy="7" r="4"></circle>
                 </svg>
             </div>
-            <h3>Vos droits</h3>
+            <h3>Your Rights</h3>
         </div>
         <div class="card-body">
             <div class="rights-list">
                 <div class="right-item">
                     <span class="right-icon">✅</span>
                     <div>
-                        <strong>Consentement libre</strong>
-                        <p>Vous pouvez refuser les cookies d'analyse</p>
+                        <strong>Free Consent</strong>
+                        <p>You can refuse analytics cookies</p>
                     </div>
                 </div>
                 <div class="right-item">
                     <span class="right-icon">⚙️</span>
                     <div>
                         <strong>Modification</strong>
-                        <p>Changez vos préférences à tout moment</p>
+                        <p>Change your preferences at any time</p>
                     </div>
                 </div>
                 <div class="right-item">
                     <span class="right-icon">🗑️</span>
                     <div>
-                        <strong>Suppression</strong>
-                        <p>Supprimez vos cookies via votre navigateur</p>
+                        <strong>Deletion</strong>
+                        <p>Delete your cookies via your browser</p>
                     </div>
                 </div>
                 <div class="right-item">
                     <span class="right-icon">ℹ️</span>
                     <div>
                         <strong>Information</strong>
-                        <p>Vous êtes informé de chaque utilisation</p>
+                        <p>You are informed of each use</p>
                     </div>
                 </div>
             </div>
@@ -200,26 +200,26 @@ body_class: "cookie-policy-page"
 </div>
 
 <div class="preferences-section-header">
-    <h2>Gestion de vos préférences</h2>
+    <h2>Manage your preferences</h2>
 </div>
 
 <div class="preferences-section">
     <div class="card-modern preferences-card">
         <div class="card-body">
-            <h3>Modifier vos préférences</h3>
-            <p>Vous pouvez modifier vos préférences de cookies à tout moment :</p>
+            <h3>Change your preferences</h3>
+            <p>You can change your cookie preferences at any time:</p>
             <ul>
-                <li>Cliquez sur le lien <strong>"Préférences cookies"</strong> en bas de page</li>
-                <li>Ou utilisez le bouton ci-dessous</li>
+                <li>Click on the <strong>"Cookie Preferences"</strong> link at the bottom of the page</li>
+                <li>Or use the button below</li>
             </ul>
-            
+
             <div class="preferences-actions">
                 <button onclick="if(window.cookieConsent) { window.cookieConsent.showBanner(); window.cookieConsent.showSettings(); }" class="btn-primary preferences-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="3"></circle>
                         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                     </svg>
-                    Modifier mes préférences
+                    Change my preferences
                 </button>
             </div>
         </div>
@@ -237,44 +237,44 @@ body_class: "cookie-policy-page"
                     <line x1="14" y1="11" x2="14" y2="17"></line>
                 </svg>
             </div>
-            <h3>Supprimer les cookies manuellement</h3>
+            <h3>Delete cookies manually</h3>
         </div>
         <div class="card-body">
-            <p>Vous pouvez supprimer les cookies via votre navigateur :</p>
+            <p>You can delete cookies via your browser:</p>
             <div class="browser-instructions">
                 <div class="browser-item">
                     <span class="browser-icon">🌐</span>
                     <div>
                         <strong>Chrome/Edge</strong>
-                        <p>Paramètres > Confidentialité > Effacer les données de navigation</p>
+                        <p>Settings > Privacy > Clear browsing data</p>
                     </div>
                 </div>
                 <div class="browser-item">
                     <span class="browser-icon">🦊</span>
                     <div>
                         <strong>Firefox</strong>
-                        <p>Paramètres > Vie privée > Gérer les données</p>
+                        <p>Settings > Privacy & Security > Manage Data</p>
                     </div>
                 </div>
                 <div class="browser-item">
                     <span class="browser-icon">🧭</span>
                     <div>
                         <strong>Safari</strong>
-                        <p>Préférences > Confidentialité > Gérer les données</p>
+                        <p>Preferences > Privacy > Manage Website Data</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="ga-disable-section">
-                <h4>Désactiver Google Analytics</h4>
-                <p>Pour désactiver complètement Google Analytics sur tous les sites :</p>
+                <h4>Disable Google Analytics</h4>
+                <p>To completely disable Google Analytics on all sites:</p>
                 <a href="https://tools.google.com/dlpage/gaoptout" class="btn-outline ga-disable-btn" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                         <polyline points="15,3 21,3 21,9"></polyline>
                         <line x1="10" y1="14" x2="21" y2="3"></line>
                     </svg>
-                    Désactiver Google Analytics
+                    Disable Google Analytics
                 </a>
             </div>
         </div>
@@ -291,19 +291,19 @@ body_class: "cookie-policy-page"
                     <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
             </div>
-            <h3>Cookies sur différents appareils</h3>
+            <h3>Cookies on different devices</h3>
         </div>
         <div class="card-body">
-            <p>Ce site utilise une approche responsive. Les mêmes cookies sont utilisés sur :</p>
+            <p>This site uses a responsive approach. The same cookies are used on:</p>
             <div class="devices-grid">
                 <div class="device-item">
                     <span class="device-icon">🖥️</span>
-                    <strong>Ordinateurs</strong>
+                    <strong>Computers</strong>
                     <p>Windows, Mac, Linux</p>
                 </div>
                 <div class="device-item">
                     <span class="device-icon">📱</span>
-                    <strong>Tablettes</strong>
+                    <strong>Tablets</strong>
                     <p>iPad, Android</p>
                 </div>
                 <div class="device-item">
@@ -324,35 +324,35 @@ body_class: "cookie-policy-page"
                     <path d="M8 13h6"></path>
                 </svg>
             </div>
-            <h3>Conformité légale</h3>
+            <h3>Legal Compliance</h3>
         </div>
         <div class="card-body">
             <div class="legal-items">
                 <div class="legal-item">
                     <div class="legal-flag">🇪🇺</div>
                     <div>
-                        <strong>RGPD (Europe)</strong>
-                        <p>Ce site respecte le Règlement Général sur la Protection des Données :</p>
+                        <strong>GDPR (Europe)</strong>
+                        <p>This site complies with the General Data Protection Regulation:</p>
                         <ul>
-                            <li>Consentement préalable et explicite</li>
-                            <li>Information claire et accessible</li>
-                            <li>Droit de retrait du consentement</li>
-                            <li>Minimisation des données collectées</li>
+                            <li>Prior and explicit consent</li>
+                            <li>Clear and accessible information</li>
+                            <li>Right to withdraw consent</li>
+                            <li>Minimization of collected data</li>
                         </ul>
                     </div>
                 </div>
                 <div class="legal-item">
                     <div class="legal-flag">🇺🇸</div>
                     <div>
-                        <strong>CCPA (Californie)</strong>
-                        <p>Conformité avec le California Consumer Privacy Act pour les visiteurs californiens.</p>
+                        <strong>CCPA (California)</strong>
+                        <p>Compliance with the California Consumer Privacy Act for Californian visitors.</p>
                     </div>
                 </div>
                 <div class="legal-item">
                     <div class="legal-flag">🇬🇧</div>
                     <div>
                         <strong>Cookies Law (UK)</strong>
-                        <p>Respect de la réglementation britannique sur les cookies.</p>
+                        <p>Respect for UK cookie regulations.</p>
                     </div>
                 </div>
             </div>
@@ -369,36 +369,36 @@ body_class: "cookie-policy-page"
                     <polyline points="8 6 2 12 8 18"></polyline>
                 </svg>
             </div>
-            <h3>Détails techniques</h3>
+            <h3>Technical Details</h3>
         </div>
         <div class="card-body">
             <div class="technical-grid">
                 <div class="tech-feature">
                     <div class="tech-icon">🔒</div>
                     <div>
-                        <strong>Cookies first-party uniquement</strong>
-                        <p>Ce site n'utilise que des cookies "first-party" (domaine nicolas-dabene.fr), pas de cookies tiers intrusifs.</p>
+                        <strong>First-party cookies only</strong>
+                        <p>This site only uses "first-party" cookies (nicolas-dabene.fr domain), no intrusive third-party cookies.</p>
                     </div>
                 </div>
                 <div class="tech-feature">
                     <div class="tech-icon">🛡️</div>
                     <div>
-                        <strong>Sécurité</strong>
+                        <strong>Security</strong>
                         <ul>
-                            <li><strong>SameSite=Strict</strong> : Protection contre CSRF</li>
-                            <li><strong>Secure</strong> : Transmission chiffrée uniquement</li>
-                            <li><strong>HttpOnly</strong> : Protection contre XSS (pour les cookies essentiels)</li>
+                            <li><strong>SameSite=Strict</strong>: Protection against CSRF</li>
+                            <li><strong>Secure</strong>: Encrypted transmission only</li>
+                            <li><strong>HttpOnly</strong>: Protection against XSS (for essential cookies)</li>
                         </ul>
                     </div>
                 </div>
                 <div class="tech-feature">
                     <div class="tech-icon">⏱️</div>
                     <div>
-                        <strong>Conservation des données</strong>
+                        <strong>Data Retention</strong>
                         <ul>
-                            <li><strong>Cookies d'analyse</strong> : 26 mois maximum</li>
-                            <li><strong>Préférences cookies</strong> : 1 an</li>
-                            <li><strong>Données Analytics</strong> : Suppression automatique après 26 mois</li>
+                            <li><strong>Analytics cookies</strong>: 26 months maximum</li>
+                            <li><strong>Cookie preferences</strong>: 1 year</li>
+                            <li><strong>Analytics data</strong>: Automatic deletion after 26 months</li>
                         </ul>
                     </div>
                 </div>
@@ -419,27 +419,27 @@ body_class: "cookie-policy-page"
             <h3>Contact</h3>
         </div>
         <div class="card-body">
-            <p>Pour toute question concernant cette politique de cookies :</p>
+            <p>For any questions regarding this cookie policy:</p>
             <div class="contact-info">
                 <div class="contact-item">
                     <strong>Nicolas Dabène</strong>
-                    <p>Développeur PHP Senior & Architecte IA</p>
+                    <p>Senior PHP Developer & AI Architect</p>
                 </div>
                 <div class="contact-links">
-                    <a href="/contact/" class="contact-link">
+                    <a href="/en/contact/" class="contact-link">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        Formulaire de contact
+                        Contact Form
                     </a>
-                    <a href="https://nicolas-dabene.fr" class="contact-link">
+                    <a href="https://nicolas-dabene.fr/en/" class="contact-link">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="2" y1="12" x2="22" y2="12"></line>
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10 15.3 15.3 0 0 1 4-10z"></path>
                         </svg>
-                        Retour au site
+                        Back to site
                     </a>
                 </div>
             </div>
@@ -459,7 +459,7 @@ body_class: "cookie-policy-page"
                     <polyline points="10,9 9,9 8,9"></polyline>
                 </svg>
             </div>
-            <h3>Historique des modifications</h3>
+            <h3>Change History</h3>
         </div>
         <div class="card-body">
             <div class="changelog-table">
@@ -468,8 +468,8 @@ body_class: "cookie-policy-page"
                     <span>Modification</span>
                 </div>
                 <div class="changelog-row">
-                    <span>31/07/2025</span>
-                    <span>Création de la politique de cookies RGPD</span>
+                    <span>2025-07-31</span>
+                    <span>Creation of the GDPR cookie policy</span>
                 </div>
             </div>
         </div>
@@ -477,5 +477,5 @@ body_class: "cookie-policy-page"
 </div>
 
 <div class="footer-note">
-    <p><em>Cette politique peut être mise à jour pour refléter les changements dans nos pratiques ou pour des raisons légales. Nous vous encourageons à la consulter régulièrement.</em></p>
+    <p><em>This policy may be updated to reflect changes in our practices or for legal reasons. We encourage you to consult it regularly.</em></p>
 </div>

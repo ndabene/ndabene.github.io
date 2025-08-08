@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Mes Publications
+title: My Publications
 translation_id: publications
-permalink: /publications/
-description: "Retrouvez une sélection de mes articles techniques, tutoriels et analyses approfondies sur le développement web, l'e-commerce et l'intelligence artificielle, publiés sur le blog de Business Tech."
+permalink: /en/publications/
+description: "Find a selection of my technical articles, tutorials, and in-depth analysis on web development, e-commerce, and artificial intelligence, published on the Business Tech blog."
 ---
 
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">
-            <a href="/">Accueil</a>
+            <a href="/en/">Home</a>
             <span>{{ page.title }}</span>
         </nav>
         <div class="hero-content">
@@ -28,7 +28,7 @@ description: "Retrouvez une sélection de mes articles techniques, tutoriels et 
                 <h2 class="category-title">{{ group.name }}</h2>
                 <span class="category-count">{{ group.items.size }} articles</span>
             </div>
-            
+
             <div class="external-publications-grid">
                 {% for publication in group.items %}
                 <div class="external-publication-card">
@@ -49,17 +49,17 @@ description: "Retrouvez une sélection de mes articles techniques, tutoriels et 
                         {% endif %}
                     </div>
                     <div class="publication-card-footer">
-                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Lire l'article</a>
+                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Read article</a>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
         {% endfor %}
-        
+
         <div class="view-all-section publications-external-link">
             <a href="https://www.businesstech.fr/landing/articles/index.html" class="view-all-btn" target="_blank">
-                <span class="btn-text">Voir tous mes articles sur Business Tech</span>
+                <span class="btn-text">See all my articles on Business Tech</span>
                 <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                 </svg>

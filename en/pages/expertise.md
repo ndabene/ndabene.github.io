@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Mon Expertise
+title: My Expertise
 translation_id: expertise
-permalink: /expertise/
-description: "Découvrez l'expertise technique approfondie de Nicolas Dabène en PHP, E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 15 ans d'expérience et d'apprentissage continu."
-keywords: "expert php, consultant prestashop, orchestrateur ia, développeur fullstack, leadership technique, expertise logicielle, modules prestashop"
+permalink: /en/expertise/
+description: "Discover the in-depth technical expertise of Nicolas Dabène in PHP, PrestaShop E-commerce, AI, and FullStack development, the result of over 15 years of experience and continuous learning."
+keywords: "php expert, prestashop consultant, ai orchestrator, fullstack developer, technical leadership, software expertise, prestashop modules"
 show_sidebar: false
 ---
 
 <div class="container">
     <div class="page-header">
         <h1>{{ page.title }}</h1>
-        <p class="section-description">Mon approche du développement logiciel s'appuie sur un mélange de maîtrise technique approfondie, de réflexion stratégique et d'engagement à créer une valeur business tangible. J'évolue continuellement pour rester à la pointe de la technologie, garantissant que les solutions que je conçois sont robustes, évolutives, innovantes et pérennes.</p>
+        <p class="section-description">My approach to software development is based on a blend of deep technical mastery, strategic thinking, and a commitment to creating tangible business value. I continuously evolve to stay at the forefront of technology, ensuring that the solutions I design are robust, scalable, innovative, and future-proof.</p>
     </div>
 
     <div class="expertise-grid">
@@ -25,9 +25,9 @@ show_sidebar: false
                 {% endif %}
             </div>
             <p class="expertise-item-description">{{ expertise.description }}</p>
-            
+
             <div class="expertise-item-skills">
-                <h4>Compétences clés</h4>
+                <h4>Key Skills</h4>
                 <ul>
                     {% for skill in expertise.skills %}
                     <li>{{ skill }}</li>
@@ -37,10 +37,10 @@ show_sidebar: false
         </div>
         {% endfor %}
     </div>
-    
+
     <div class="expertise-contact">
-        <h2>Besoin d'un expert pour votre projet ?</h2>
-        <p>Je serais ravi d'échanger sur vos besoins et de vous proposer des solutions adaptées à votre contexte.</p>
-        <a href="/contact/" class="btn btn--primary">Me contacter</a>
+        <h2>Need an expert for your project?</h2>
+        <p>I would be delighted to discuss your needs and offer solutions tailored to your context.</p>
+        <a href="/en/contact/" class="btn btn--primary">Contact Me</a>
     </div>
 </div>

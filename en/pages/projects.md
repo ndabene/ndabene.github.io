@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Mes Projets
+title: My Projects
 translation_id: projects
-permalink: /projects/
-description: "Découvrez une sélection de mes projets, incluant des modules PrestaShop sur mesure, des frameworks internes et des solutions innovantes développées chez BusinessTech."
+permalink: /en/projects/
+description: "Discover a selection of my projects, including custom PrestaShop modules, internal frameworks, and innovative solutions developed at BusinessTech."
 body_class: "page-projects"
 ---
 
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">
-            <a href="/">Accueil</a>
+            <a href="/en/">Home</a>
             <span>{{ page.title }}</span>
         </nav>
         <div class="hero-content">
@@ -24,10 +24,10 @@ body_class: "page-projects"
     <div class="container">
         <div class="projects-filters-modern">
             <div class="filters-header">
-                <h2>Explorer mes projets</h2>
-                <p>Filtrez par catégorie pour découvrir les projets qui vous intéressent</p>
+                <h2>Explore my projects</h2>
+                <p>Filter by category to discover the projects that interest you</p>
             </div>
-            
+
             <div class="filter-buttons">
                 <button class="filter-btn-modern active" data-filter="all">
                     <span class="filter-icon">
@@ -36,7 +36,7 @@ body_class: "page-projects"
                             <path d="m21 21-5.2-5.2"/>
                         </svg>
                     </span>
-                    Tous les projets
+                    All projects
                 </button>
                 <button class="filter-btn-modern" data-filter="prestashop">
                     <span class="filter-icon">
@@ -56,7 +56,7 @@ body_class: "page-projects"
                             <path d="m12 1 3 3-3 3-3-3 3-3Z"/>
                         </svg>
                     </span>
-                    Intelligence Artificielle
+                    Artificial Intelligence
                 </button>
                 <button class="filter-btn-modern" data-filter="opensource">
                     <span class="filter-icon">
@@ -73,7 +73,7 @@ body_class: "page-projects"
                             <line x1="1" y1="10" x2="23" y2="10"/>
                         </svg>
                     </span>
-                    Paiement
+                    Payment
                 </button>
                 <button class="filter-btn-modern" data-filter="marketing">
                     <span class="filter-icon">
@@ -98,11 +98,11 @@ body_class: "page-projects"
                                 {% for category in project.categories limit:1 %}
                                     {% case category %}
                                         {% when 'prestashop' %}PrestaShop
-                                        {% when 'ai' %}Intelligence Artificielle
+                                        {% when 'ai' %}Artificial Intelligence
                                         {% when 'opensource' %}Open Source
-                                        {% when 'payment' %}Paiement
+                                        {% when 'payment' %}Payment
                                         {% when 'marketing' %}Marketing
-                                        {% when 'dev-tools' %}Outils Développement
+                                        {% when 'dev-tools' %}Dev Tools
                                         {% else %}{{ category | capitalize }}
                                     {% endcase %}
                                 {% endfor %}
@@ -119,15 +119,15 @@ body_class: "page-projects"
                                 <span class="project-role">{{ project.role }}</span>
                             </div>
                         </div>
-                        
+
                         <p class="project-description">{{ project.description }}</p>
-                        
+
                         {% if project.tagline %}
                         <div class="project-tagline">
                             <em>{{ project.tagline }}</em>
                         </div>
                         {% endif %}
-                        
+
                         <div class="project-technologies">
                             {% for tag in project.tags limit:4 %}
                             <span class="tech-tag-modern tech-tag--{{ tag.category }}">{{ tag.tech }}</span>
@@ -149,8 +149,8 @@ body_class: "page-projects"
                         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
                     </svg>
                 </div>
-                <h3>Aucun projet trouvé</h3>
-                <p>Les projets seront bientôt disponibles. Revenez nous voir prochainement !</p>
+                <h3>No projects found</h3>
+                <p>Projects will be available soon. Check back later!</p>
             </div>
         </div>
         {% endif %}
@@ -159,33 +159,33 @@ body_class: "page-projects"
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Gestion des filtres de projets
+    // Project filter management
     const filterBtns = document.querySelectorAll('.filter-btn-modern');
     const projectCards = document.querySelectorAll('.project-card-modern');
     const projectsGrid = document.querySelector('.projects-grid-modern');
 
-    // Ajouter la classe visible à tous les projets initialement
+    // Add visible class to all projects initially
     projectCards.forEach(card => {
         card.classList.add('visible');
     });
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Mise à jour du bouton actif
+            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
+
             const filter = this.getAttribute('data-filter');
-            
-            // Filtrage des projets
+
+            // Filter projects
             if (filter === 'all') {
-                // Afficher tous les projets
+                // Show all projects
                 projectCards.forEach(card => {
                     card.style.display = '';
                     card.classList.add('visible');
                 });
             } else {
-                // Filtrer par catégorie
+                // Filter by category
                 projectCards.forEach(card => {
                     const categories = card.getAttribute('data-categories');
                     if (categories && categories.includes(filter)) {
@@ -201,12 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
-            
-            // Force le réarrangement du layout
+
+            // Force layout reflow
             setTimeout(() => {
-                // Trick pour forcer un reflow
+                // Trick to force a reflow
                 projectsGrid.style.display = 'none';
-                void projectsGrid.offsetHeight; // Force un reflow
+                void projectsGrid.offsetHeight; // Force a reflow
                 projectsGrid.style.display = '';
             }, 350);
         });
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
-/* Styles pour l'animation des projets */
+/* Styles for project animation */
 .project-card-modern {
     opacity: 0;
     transform: translateY(20px);
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     transform: translateY(0);
 }
 
-/* Animation pour les boutons de filtre */
+/* Animation for filter buttons */
 .filter-btn-modern {
     transition: all 0.3s ease;
 }
@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
 }
 
-/* Correction pour la grille des projets */
+/* Correction for projects grid */
 .projects-grid-modern {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

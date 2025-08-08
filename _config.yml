@@ -9,7 +9,6 @@ url: "https://nicolas-dabene.fr" # le domaine de votre site
 baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la racine.
 
 # Build settings
-lang: fr
 future: true  # Ne pas publier les posts avec une date future
 
 # Admin IP pour preview des futurs posts
@@ -95,6 +94,23 @@ sitemap:
   
 # Defaults pour les priorités sitemap
 defaults:
+  # Language defaults
+  -
+    scope:
+      path: "en"
+    values:
+      lang: "en"
+      locale: "en_US"
+      nav_file: "navigation_en.yml"
+      t: site.data.locales.en
+  -
+    scope:
+      path: "" # Root path for French
+    values:
+      lang: "fr"
+      locale: "fr_FR"
+      nav_file: "navigation.yml"
+      t: site.data.locales.fr
   - scope:
       path: ""
       type: "posts"

@@ -1,0 +1,8 @@
+- name: Home
+  link: /en/
+- name: Projects
+  link: /en/projects/
+- name: Blog
+  link: /en/blog/
+- name: Skills
+  link: /en/skills/

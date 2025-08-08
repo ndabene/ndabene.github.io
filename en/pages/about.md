@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 translation_id: about
-permalink: /about/
+permalink: /en/about/
 description: "Discover the professional journey and expertise of Nicolas Dabène, a Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience."
 keywords: "senior php developer, prestashop expert, ai orchestrator, php architect, technical leadership, software architecture, fullstack development, certifications"
 show_sidebar: true
