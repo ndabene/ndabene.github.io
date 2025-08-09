@@ -1,0 +1,13 @@
+- nom: "Module Google Merchant Center Pro"
+  description: "Optimisez vos flux produits pour Google Shopping et maximisez votre visibilité. Synchronisation automatique et support des promotions."
+  image: "assets/images/produits/google-merchant-center-pro.jpg"
+  lien_paiement: "https://lemonsqueezy.com/buy/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  categorie: "Modules PrestaShop"
+  prix: "79.99€"
+
+- nom: "Module Social Login (Facebook, Google)"
+  description: "Permettez à vos clients de se connecter en un clic avec leurs comptes sociaux. Simplifiez l'inscription et augmentez les conversions."
+  image: "assets/images/produits/social-login-prestashop.jpg"
+  lien_paiement: "https://lemonsqueezy.com/buy/yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+  categorie: "Modules PrestaShop"
+  prix: "49.99€"
