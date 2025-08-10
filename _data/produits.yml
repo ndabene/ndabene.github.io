@@ -11,6 +11,10 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  micro_extraits:
+    - "Vous apprendrez à distinguer clairement IA, Machine Learning, Deep Learning et IA générative — sans jargon."
+    - "Vous comprendrez le rôle du Transformer (2017) et saurez choisir l’outil adapté au besoin."
+    - "Vous saurez cadrer vos demandes avec des prompts simples et vérifier les limites (hallucinations, biais, confidentialité)."
 
 - nom: "Starter Pack IA 4-en-1 : Comprendre • Agir • Impacter • Prompter"
   description: |
@@ -33,6 +37,10 @@
     - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
   lemon_variant_id: 
   lien_paiement: ""
+  micro_extraits:
+    - "Vous apprendrez les bases solides de l’IA et poserez des usages concrets pro/perso dès la première semaine."
+    - "Vous saurez réduire l’empreinte de vos workflows IA sans perdre en qualité ni en vitesse."
+    - "Vous maîtriserez la méthode C.L.A.I.R et les prompts qui transforment une réponse moyenne en livrable actionnable."
 
 - nom: "Devenez Acteur de l'IA - Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
   description: "Une présentation sur les enjeux environnementaux et sociaux liés à l'utilisation croissante de l'IA dans notre société, et les solutions pour adopter une approche \"Green AI\"."
@@ -45,6 +53,10 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  micro_extraits:
+    - "Vous apprendrez à évaluer l’empreinte de l’IA (énergie, eau, matériel) sur tout le cycle de vie."
+    - "Vous saurez mettre en place un plan « Green AI » : right-sizing des modèles, prompts sobres, cache, batch."
+    - "Vous cadrerez les risques sociétaux (emploi, biais, désinfo) via une gouvernance pratico-pratique et des KPIs."
 
 - nom: "Devenez Acteur de l'IA - Chapitre 3 : L'Art du Prompt - Dialoguer avec l'IA"
   description: "Dans ce cours, vous découvrirez comment maîtriser l'art du prompt engineering pour communiquer efficacement avec n'importe quelle intelligence artificielle. À la fin de ce module, vous obtiendrez des résultats précis et exploitables en formulant des instructions claires et structurées."
@@ -57,3 +69,7 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  micro_extraits:
+    - "Vous apprendrez à structurer vos demandes avec la méthode C.L.A.I.R pour obtenir des résultats exploitables du premier coup."
+    - "Vous saurez choisir parmi les 7 types de prompts (création, analyse, résumé, résolution…) selon l’objectif."
+    - "Vous maîtriserez les techniques avancées (rôle, format imposé, itération, contraintes créatives) avec des cas du quotidien."

@@ -289,6 +289,16 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                         <div class="pack-content">
                             <h3 class="product-title">{{ product.nom }}</h3>
                             <p class="product-description">{{ product.description | truncate: 220 }}</p>
+                        {% if product.micro_extraits %}
+                            <ul class="micro-extraits">
+                                {% for it in product.micro_extraits limit:3 %}
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>{{ it }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                         {% if product.inclus %}
                             <div class="pack-includes-label">Inclus&nbsp;:</div>
                             <ul class="pack-checklist">
@@ -365,6 +375,16 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                         </div>
                         <h3 class="product-title">{{ product.nom }}</h3>
                         <p class="product-description">{{ product.description | truncate: 160 }}</p>
+                        {% if product.micro_extraits %}
+                        <ul class="micro-extraits">
+                            {% for it in product.micro_extraits limit:3 %}
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>{{ it }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
                         <div class="product-meta-line">
                             {% if product.niveau %}<span class="meta-chip">Niveau: {{ product.niveau }}</span>{% endif %}
                             {% if product.duree %}<span class="meta-chip">Durée: {{ product.duree }}</span>{% endif %}

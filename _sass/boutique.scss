@@ -277,6 +277,27 @@
                 font-weight: 600;
             }
         }
+
+        // Micro-highlights (3 bullets "Vous apprendrez…")
+        .micro-extraits {
+            list-style: none;
+            padding: 0;
+            margin: 0.6rem 0 0.2rem;
+            display: grid;
+            gap: 0.35rem;
+        }
+        .micro-extraits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.45rem;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 0.35rem 0.55rem;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+        .micro-extraits li svg { width: 18px; height: 18px; color: #0ea5e9; margin-top: 2px; }
     }
 
     .product-title {
@@ -412,6 +433,32 @@
             gap: 0.5rem;
             color: #065f46;
             font-weight: 800;
+        }
+
+        // Micro-highlights inside pack content
+        .pack-content .micro-extraits {
+            list-style: none;
+            padding: 0;
+            margin: 0.6rem 0 0.2rem;
+            display: grid;
+            gap: 0.35rem;
+        }
+        .pack-content .micro-extraits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.45rem;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 0.35rem 0.55rem;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+        .pack-content .micro-extraits li svg {
+            width: 16px;
+            height: 16px;
+            color: #10b981;
+            margin-top: 2px;
         }
 
         .pack-checklist {
