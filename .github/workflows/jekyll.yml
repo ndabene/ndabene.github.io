@@ -27,6 +27,8 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+      
+      # Validation steps disabled temporarily
           
       - name: Setup Pages
         id: pages

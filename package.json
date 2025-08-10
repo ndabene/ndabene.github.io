@@ -13,7 +13,8 @@
     "preview": "bash scripts/admin-preview.sh start",
     "preview-stop": "bash scripts/admin-preview.sh stop",
     "test-sitemap": "bash scripts/test-sitemap.sh",
-    "deploy": "bash scripts/deploy.sh"
+    "deploy": "bash scripts/deploy.sh",
+    "validate:produits": "ruby scripts/validate_produits.rb"
   },
   "repository": {
     "type": "git",

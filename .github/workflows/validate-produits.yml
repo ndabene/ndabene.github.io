@@ -1,0 +1,22 @@
+name: Validate produits.yml (disabled)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
+      - name: Skip validation (temporarily disabled)
+        run: echo "Validation disabled tonight"
+
+

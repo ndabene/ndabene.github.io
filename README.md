@@ -5,6 +5,8 @@
 ![Portfolio Banner](https://img.shields.io/badge/Portfolio-Nicolas%20Dabène-2563EB?style=for-the-badge&logo=github&logoColor=white)
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-22863a?style=for-the-badge&logo=github&logoColor=white)](https://ndabene.github.io)
+[![Validate produits.yml](https://github.com/ndabene/ndabene.github.io/actions/workflows/validate-produits.yml/badge.svg)](https://github.com/ndabene/ndabene.github.io/actions/workflows/validate-produits.yml)
+[![Build & Deploy Jekyll](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 **Portfolio personnel de Nicolas Dabène**  
@@ -283,6 +285,49 @@ Votre contenu...
 3. **Preview** : `npm run serve`
 4. **Publier** : `git add . && git commit -m "Nouvel article" && git push`
 5. **Sitemap** : Mise à jour automatique lors du build
+
+## 🛒 Mini‑boutique (produits + packs)
+
+- **Fichiers clés**
+  - Données: `_data/produits.yml`
+  - Page: `pages/boutique.md`
+  - Styles: `_sass/boutique.scss`
+  - Logique UI: `assets/js/boutique-filters.js`
+
+- **Ce qui est inclus**
+  - Section bénéfices en têtes de page (3 cartes).
+  - Navigation rapide: filtres par `univers` et `categorie`, recherche instantanée.
+  - Pagination client (24 items/lot), bouton “Charger plus”.
+  - Cartes produits + bloc Pack avec prise en charge des `micro_extraits` (3 puces).
+
+- **Schéma de données (extrait)**
+
+```yaml
+- nom: "Titre du produit"
+  description: "Résumé court"
+  image: "assets/images/produits/visuel.png"
+  categorie: "Formation IA pour tous"   # ou "Pack", etc.
+  prix: "49€ / HT"
+  type: "ebook"                          # ebook | formation | pack
+  format: "PDF"
+  file_format: "pdf"
+  univers: "IA"
+  micro_extraits:                         # optionnel — 3 puces max affichées
+    - "Vous apprendrez …"
+    - "Vous saurez …"
+    - "Vous maîtriserez …"
+```
+
+- **Notes d’implémentation**
+  - Les `micro_extraits` s’affichent automatiquement sur les cartes produits et dans le bloc Pack lorsqu’ils sont présents dans les données.
+  - Les icônes des puces du Pack sont réduites via:
+
+```scss
+.pack-content .micro-extraits li svg { width: 16px; height: 16px; }
+```
+
+  - Pour activer les CTA d’achat, le code vérifie `site.shop_enabled` dans la config.
+  - Après modification des données ou styles, relancer le build/serveur.
 
 ## 🚀 Déploiement et SEO
 

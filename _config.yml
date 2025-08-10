@@ -26,6 +26,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sass-converter
 
+# Boutique (achat en ligne)
+# Mettre à true quand Lemon Squeezy est validé
+shop_enabled: false
+
 # Sass/SCSS settings - Optimisé mobile 2025
 sass:
   sass_dir: _sass
@@ -130,3 +134,10 @@ defaults:
       sitemap:
         changefreq: "weekly"
         priority: 1.0
+  - scope:
+      path: "pages/boutique.md"
+      type: "pages"
+    values:
+      sitemap:
+        changefreq: "weekly"
+        priority: 0.9

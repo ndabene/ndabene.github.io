@@ -1,0 +1,514 @@
+---
+layout: default
+title: E‑books et Formations (IA, PrestaShop, Développement)
+permalink: /boutique/
+description: "E‑books PDF pragmatiques et formations complémentaires pour progresser en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et actionnables pour monter en compétence pas à pas."
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for product in site.data.produits %}
+      {
+        "@type": "Product",
+        "name": "{{ product.nom | escape }}",
+        "description": "{{ product.description | escape }}",
+        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+        },
+        "brand": {
+          "@type": "Brand",
+          "name": "Presta Module"
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+{% comment %}
+  JSON-LD pour les E-books (PDF)
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% assign ebooks_by_type = site.data.produits | where: 'type', 'ebook' %}
+    {% assign ebooks_by_ff = site.data.produits | where: 'file_format', 'pdf' %}
+    {% assign ebooks_by_format = site.data.produits | where: 'format', 'PDF' %}
+    {% assign ebooks_tmp = ebooks_by_type | concat: ebooks_by_ff %}
+    {% assign ebooks = ebooks_tmp | concat: ebooks_by_format | uniq %}
+    {% for product in ebooks %}
+      {
+        "@type": "Book",
+        "name": "{{ product.nom | escape }}",
+        "description": "{{ product.description | escape }}",
+        {% if product.author %}"author": { "@type": "Person", "name": "{{ product.author | escape }}" },{% endif %}
+        "bookFormat": "EBook",
+        {% if product.file_format %}"fileFormat": "application/{{ product.file_format | downcase }}",{% else %}"fileFormat": "application/pdf",{% endif %}
+        {% if product.langue %}"inLanguage": "{{ product.langue }}",{% endif %}
+        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+{% comment %}
+  JSON-LD spécifique pour les Formations (Course)
+  Généré séparément pour garder un JSON valide sans gérer les virgules complexes.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% assign courses_by_type = site.data.produits | where: 'type', 'formation' %}
+    {% assign courses_by_cat = site.data.produits | where: 'categorie', 'Formation en ligne' %}
+    {% assign courses = courses_by_type | concat: courses_by_cat | uniq %}
+    {% for product in courses %}
+      {
+        "@type": "Course",
+        "name": "{{ product.nom | escape }}",
+        "description": "{{ product.description | escape }}",
+        "provider": {
+          "@type": "Organization",
+          "name": "{{ site.title | escape }}",
+          "url": "{{ site.url }}"
+        },
+        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        "isAccessibleForFree": false,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+{%- comment -%} GEO/SEO: Collection overview for assistants {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "hasPart": [
+    {% for product in site.data.produits %}
+      {
+        "@type": "ListItem",
+        "name": "{{ product.nom | escape }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/">Accueil</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>{{ page.title }}</h1>
+            <p class="section-description">{{ page.description }}</p>
+            {% assign total_products = site.data.produits | size %}
+            {% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
+            <p class="section-description" style="margin-top:.5rem;color:#475569;">
+                Choisissez un univers (IA, e‑commerce PrestaShop, développement…) et explorez des ressources structurées par niveaux et thématiques. Objectif&nbsp;: apprendre vite, appliquer tout de suite.
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+<section class="section boutique-page-section">
+    <div class="container">
+        <section class="benefits-row" aria-label="Pourquoi ces e‑books et formations ?">
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20l9-16H3l9 16z"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Actionnables tout de suite</h3>
+                    <p>E‑books PDF et supports clairs, orientés résultats, avec méthodes, check‑lists et exemples prêts à l’emploi.</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Progresser par étapes</h3>
+                    <p>Parcours simple: bases solides, impacts & bonnes pratiques, puis maîtrise des prompts et cas concrets.</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Support & mises à jour</h3>
+                    <p>Mises à jour régulières et support efficace pour rester utiles (IA, PrestaShop, patterns de dev).</p>
+                </div>
+            </div>
+        </section>
+        {%- comment -%} Menu rapide dynamique (Univers / Catégories) {%- endcomment -%}
+        {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
+        {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
+        <nav class="boutique-quick-nav" aria-label="Navigation rapide">
+            {% if univers_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-univers">
+                <span class="label">Univers</span>
+                <button class="nav-chip filter-btn-modern active" data-univers="all">Tous</button>
+                {% for u in univers_list %}
+                  <button class="nav-chip filter-btn-modern" data-univers="{{ u }}">{{ u }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if categories_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-categorie">
+                <span class="label">Catégories</span>
+                <button class="nav-chip filter-btn-modern" data-categorie="all">Toutes</button>
+                {% for c in categories_list %}
+                  <button class="nav-chip filter-btn-modern" data-categorie="{{ c }}">{{ c }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="quick-search">
+                <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
+            </div>
+        </nav>
+        
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quand l’achat en ligne sera-t-il disponible ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La boutique est en cours d’activation. Les achats seront ouverts dès la validation du prestataire de paiement. Vous pouvez déjà consulter les fiches et le programme des contenus."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels univers sont couverts ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le catalogue s’organise par univers (IA, e‑commerce PrestaShop, développement, …). Chaque produit indique son univers et son niveau pour vous orienter rapidement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment les contenus sont-ils mis à jour ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les formations et e‑books sont maintenus et enrichis régulièrement afin de rester utiles et applicables. Le journal de mise à jour est mentionné sur chaque fiche."
+              }
+            }
+          ]
+        }
+        </script>
+        {% unless site.shop_enabled %}
+        <div class="notice info" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1rem;margin-bottom:1rem;">
+            <strong>Achat bientôt disponible.</strong>
+            La boutique est en cours d’activation. Les formations et e‑books seront achetables prochainement. D’autres contenus sont en cours de rédaction.
+        </div>
+        {% endunless %}
+
+        
+        {% assign grouped_products = site.data.produits | group_by: "categorie" %}
+
+        {%- comment -%} Section packs {%- endcomment -%}
+        {% assign packs_by_type = site.data.produits | where: 'type', 'pack' %}
+        {% assign packs_by_cat = site.data.produits | where: 'categorie', 'Pack' %}
+        {% assign packs_tmp = packs_by_type | concat: packs_by_cat %}
+        {% assign packs = packs_tmp | uniq %}
+
+        {% if packs.size > 0 %}
+        <div class="product-category-section" id="packs">
+            <div class="product-grid">
+                {% for product in packs %}
+                {% assign is_pack = true %}
+                <div class="product-card" data-type="pack" data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
+                    <div class="pack-inner">
+                        {% if product.image %}
+                        <div class="pack-media">
+                            {% if product.univers %}
+                              <span class="univers-badge badge-overlay">{{ product.univers }}</span>
+                            {% endif %}
+                            <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
+                        </div>
+                        {% endif %}
+                        <div class="pack-content">
+                            <h3 class="product-title">{{ product.nom }}</h3>
+                            <p class="product-description">{{ product.description | truncate: 220 }}</p>
+                        {% if product.micro_extraits %}
+                            <ul class="micro-extraits">
+                                {% for it in product.micro_extraits limit:3 %}
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>{{ it }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if product.inclus %}
+                            <div class="pack-includes-label">Inclus&nbsp;:</div>
+                            <ul class="pack-checklist">
+                                {% for it in product.inclus %}
+                                  <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>{{ it }}</span>
+                                  </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <span class="product-price">{{ product.prix }}</span>
+                        {% if site.shop_enabled %}
+                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
+                        {% else %}
+                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
+                        {% endif %}
+                    </div>
+                    <div class="pack-ribbon">Pack</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        
+        {% for group in grouped_products %}
+        <div class="product-category-section" id="{{ group.name | slugify }}">
+            <div class="category-header">
+                <h2 class="category-title">{{ group.name }}</h2>
+                <span class="category-count">{{ group.items.size }} produit{% if group.items.size > 1 %}s{% endif %}</span>
+            </div>
+
+            <div class="product-grid">
+                {% for product in group.items %}
+                {% if product.type == 'pack' or product.categorie == 'Pack' %}
+                  {% continue %}
+                {% endif %}
+                {% assign is_course = false %}
+                {% assign is_ebook = false %}
+                {% assign is_pack = false %}
+                {% if product.type == 'formation' %}
+                  {% assign is_course = true %}
+                {% endif %}
+                {% if product.categorie == 'Formation en ligne' %}
+                  {% assign is_course = true %}
+                {% endif %}
+                {% if product.type == 'ebook' %}
+                  {% assign is_ebook = true %}
+                {% endif %}
+                {% if product.file_format == 'pdf' %}
+                  {% assign is_ebook = true %}
+                {% endif %}
+                {% if product.format == 'PDF' %}
+                  {% assign is_ebook = true %}
+                {% endif %}
+                {% if product.type == 'pack' or product.categorie == 'Pack' %}
+                  {% assign is_pack = true %}
+                {% endif %}
+                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} {% if is_pack %}data-type="pack"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
+                    {% if product.image %}
+                    <div class="product-card-image">
+                        <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
+                    </div>
+                    {% endif %}
+                    <div class="product-card-content">
+                        <div class="product-header-row">
+                            {% if product.univers %}
+                              <span class="univers-badge">{{ product.univers }}</span>
+                            {% endif %}
+                        </div>
+                        <h3 class="product-title">{{ product.nom }}</h3>
+                        <p class="product-description">{{ product.description | truncate: 160 }}</p>
+                        {% if product.micro_extraits %}
+                        <ul class="micro-extraits">
+                            {% for it in product.micro_extraits limit:3 %}
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span>{{ it }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <div class="product-meta-line">
+                            {% if product.niveau %}<span class="meta-chip">Niveau: {{ product.niveau }}</span>{% endif %}
+                            {% if product.duree %}<span class="meta-chip">Durée: {{ product.duree }}</span>{% endif %}
+                            {% if product.format %}<span class="meta-chip">Format: {{ product.format }}</span>{% endif %}
+                            {% if product.pages %}<span class="meta-chip">Pages: {{ product.pages }}</span>{% endif %}
+                        </div>
+
+                        {% if is_course %}
+                        <ul class="course-meta">
+                            {% if product.niveau %}<li class="badge">Niveau: {{ product.niveau }}</li>{% endif %}
+                            {% if product.duree %}<li class="badge">Durée: {{ product.duree }}</li>{% endif %}
+                            {% if product.format %}<li class="badge">Format: {{ product.format }}</li>{% endif %}
+                            {% if product.langue %}<li class="badge">Langue: {{ product.langue }}</li>{% endif %}
+                        </ul>
+                        {% if product.programme_url %}
+                        <div class="course-actions">
+                            <a href="{{ product.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+                        {% if is_ebook %}
+                        <ul class="ebook-meta">
+                            {% if product.author %}<li class="badge">Auteur: {{ product.author }}</li>{% endif %}
+                            <li class="badge">Format: {{ product.format | default: 'PDF' }}</li>
+                            {% if product.pages %}<li class="badge">Pages: {{ product.pages }}</li>{% endif %}
+                            {% if product.langue %}<li class="badge">Langue: {{ product.langue }}</li>{% endif %}
+                        </ul>
+                        {% endif %}
+
+                        {% if is_pack %}
+                        <div class="pack-ribbon">Pack</div>
+                        {% if product.inclus %}
+                        <ul class="pack-items">
+                            {% assign max_items = 3 %}
+                            {% for it in product.inclus limit:max_items %}
+                              <li class="pack-item">{{ it }}</li>
+                            {% endfor %}
+                            {% if product.inclus.size > max_items %}
+                              <li class="pack-item more">+{{ product.inclus.size | minus: max_items }} contenus</li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                        {% if product.avantage %}
+                          <div class="pack-advantage">{{ product.avantage }}</div>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="product-card-footer">
+                        <span class="product-price">{{ product.prix }}</span>
+                        {% if site.shop_enabled %}
+                          {% if is_course %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
+                          {% elsif is_ebook %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+                          {% elsif is_pack %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
+                          {% else %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
+                          {% endif %}
+                        {% else %}
+                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div id="no-results" class="no-results" style="display:none;">Aucun produit ne correspond à vos filtres.</div>
+
+        <div style="text-align:center; margin-top:1rem;">
+            <button id="load-more" class="facet-button filter-btn-modern" style="display:none;">Charger plus</button>
+        </div>
+    </div>
+</section>
+
+<script src="{{ '/assets/js/boutique-filters.js' | relative_url }}" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}{{ site.baseurl }}/"},
+    {"@type": "ListItem", "position": 2, "name": "Boutique", "item": "{{ site.url }}{{ site.baseurl }}/boutique/"}
+  ]
+}
+</script>
+
+<section class="faq-section-inline" aria-label="FAQ Boutique">
+  <div class="container">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-grid-inline">
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18v-6h6v6"></path><path d="M9 9V5h6v4"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Comment accéder à votre e‑book ou formation après l’achat&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Vous recevez immédiatement un e‑mail de confirmation contenant le lien d’accès et/ou de téléchargement. Conservez cet e‑mail pour retrouver vos contenus ultérieurement. En cas de difficulté, contactez le support via le <a href="/contact/">formulaire</a>.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Quels univers sont couverts&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Le catalogue s’organise par univers (IA, e‑commerce PrestaShop, développement, …). Chaque produit indique son univers et son niveau pour vous orienter rapidement.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3z"></path><path d="M7 7v14"></path><path d="M17 7v14"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Comment les contenus sont-ils mis à jour&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Les formations et e‑books sont maintenus et enrichis régulièrement afin de rester utiles et applicables. Le journal de mise à jour est mentionné sur chaque fiche.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
