@@ -22,8 +22,21 @@ layout: default
   <div class="container">
     <article class="product-detail">
       <div class="product-media">
-        {% if p.image %}
-        <img src="{{ '/' | append: p.image | replace: '//', '/' | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        {% assign gallery = p.images | default: nil %}
+        {% if gallery and gallery.size > 0 %}
+        <div class="media-slider" data-slider>
+          <div class="media-track" data-track>
+            {% for img in gallery %}
+              <img src="{{ '/' | append: img | replace: '//', '/' | relative_url }}" alt="{{ page.title }} - image {{ forloop.index }}" loading="lazy">
+            {% endfor %}
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" data-prev aria-label="Image précédente">‹</button>
+            <button class="slider-btn" data-next aria-label="Image suivante">›</button>
+          </div>
+        </div>
+        {% elsif p.image %}
+          <img src="{{ '/' | append: p.image | replace: '//', '/' | relative_url }}" alt="{{ page.title }}" loading="lazy">
         {% endif %}
       </div>
       <div class="product-info">
@@ -91,5 +104,7 @@ layout: default
   }
 }
 </script>
+
+<script src="{{ '/assets/js/boutique-slider.js' | relative_url }}" defer></script>
 
 

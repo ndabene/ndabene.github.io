@@ -2,7 +2,7 @@
 layout: default
 title: Boutique
 permalink: /boutique/
-description: "Découvrez nos modules et outils pour PrestaShop. Des solutions conçues pour optimiser votre boutique, améliorer l'expérience client et booster vos ventes."
+description: "Formations et e-books pour progresser en continu (IA, PrestaShop, développement…). Des contenus clairs, pragmatiques et tenus à jour pour monter en compétence pas à pas."
 ---
 
 <script type="application/ld+json">
@@ -109,19 +109,47 @@ description: "Découvrez nos modules et outils pour PrestaShop. Des solutions co
         <div class="hero-content">
             <h1>{{ page.title }}</h1>
             <p class="section-description">{{ page.description }}</p>
+            {% assign total_products = site.data.produits | size %}
+            {% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
+            <p class="section-description" style="margin-top:.5rem;color:#475569;">
+                Choisissez un univers (IA, e‑commerce PrestaShop, développement…) et explorez des ressources structurées par niveaux et thématiques. Objectif&nbsp;: apprendre vite, appliquer tout de suite.
+            </p>
+            
         </div>
     </div>
 </section>
 
 <section class="section boutique-page-section">
     <div class="container">
-        {% assign grouped_products = site.data.produits | group_by: "categorie" %}
-        {% for group in grouped_products %}
-        <div class="product-category-section">
-            <div class="category-header">
-                <h2 class="category-title">{{ group.name }}</h2>
-                <span class="category-count">{{ group.items.size }} produits</span>
+        <div class="boutique-filters" id="boutique-filters" aria-label="Filtres boutique">
+            <div class="facets">
+                {% assign categories = site.data.produits | map: 'categorie' | compact | uniq | sort %}
+                {% if categories.size > 0 %}
+                <div class="facet-group" data-facet="categorie">
+                    <span class="facet-label">Catégorie:</span>
+                    <button class="facet-button filter-btn-modern active" data-value="all">Toutes</button>
+                    {% for c in categories %}
+                    <button class="facet-button filter-btn-modern" data-value="{{ c | escape }}">{{ c }}</button>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
+            <input type="search" id="facet-search" class="facet-search" placeholder="Rechercher un produit (titre, mots-clés)" aria-label="Rechercher">
+        </div>
+        {% assign grouped_products = site.data.produits | group_by: "categorie" %}
+
+        {% if grouped_products.size > 0 %}
+        <nav class="boutique-filters" aria-label="Navigation catégories">
+            <div class="facet-group">
+                <span class="facet-label">Par catégorie:</span>
+                {% for group in grouped_products %}
+                <a class="facet-button filter-btn-modern" href="#{{ group.name | slugify }}">{{ group.name }}</a>
+                {% endfor %}
+            </div>
+        </nav>
+        {% endif %}
+        {% for group in grouped_products %}
+        <div class="product-category-section" id="{{ group.name | slugify }}">
 
             <div class="product-grid">
                 {% for product in group.items %}
@@ -142,7 +170,7 @@ description: "Découvrez nos modules et outils pour PrestaShop. Des solutions co
                 {% if product.format == 'PDF' %}
                   {% assign is_ebook = true %}
                 {% endif %}
-                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %}>
+                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
                     {% if product.image %}
                     <div class="product-card-image">
                         <a href="/boutique/{{ product.nom | slugify }}/">
@@ -192,5 +220,24 @@ description: "Découvrez nos modules et outils pour PrestaShop. Des solutions co
             </div>
         </div>
         {% endfor %}
+
+        <div id="no-results" class="no-results" style="display:none;">Aucun produit ne correspond à vos filtres.</div>
+
+        <div style="text-align:center; margin-top:1rem;">
+            <button id="load-more" class="facet-button filter-btn-modern" style="display:none;">Charger plus</button>
+        </div>
     </div>
 </section>
+
+<script src="{{ '/assets/js/boutique-filters.js' | relative_url }}" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ site.url }}{{ site.baseurl }}/"},
+    {"@type": "ListItem", "position": 2, "name": "Boutique", "item": "{{ site.url }}{{ site.baseurl }}/boutique/"}
+  ]
+}
+</script>

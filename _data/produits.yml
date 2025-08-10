@@ -10,6 +10,7 @@
   type: "ebook"
   format: "PDF"
   file_format: "pdf"
+  univers: "IA"
 
 - nom: "Devenez Acteur de l'IA - Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
   description: "Une présentation sur les enjeux environnementaux et sociaux liés à l'utilisation croissante de l'IA dans notre société, et les solutions pour adopter une approche \"Green AI\"."
@@ -21,6 +22,7 @@
   type: "ebook"
   format: "PDF"
   file_format: "pdf"
+  univers: "IA"
 
 - nom: "Devenez Acteur de l'IA - Chapitre 3 : L'Art du Prompt - Dialoguer avec l'IA"
   description: "Dans ce cours, vous découvrirez comment maîtriser l'art du prompt engineering pour communiquer efficacement avec n'importe quelle intelligence artificielle. À la fin de ce module, vous obtiendrez des résultats précis et exploitables en formulant des instructions claires et structurées."
@@ -32,3 +34,4 @@
   type: "ebook"
   format: "PDF"
   file_format: "pdf"
+  univers: "IA"
