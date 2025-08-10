@@ -185,6 +185,58 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         </div>
         {% assign grouped_products = site.data.produits | group_by: "categorie" %}
 
+        {%- comment -%} Section packs {%- endcomment -%}
+        {% assign packs_by_type = site.data.produits | where: 'type', 'pack' %}
+        {% assign packs_by_cat = site.data.produits | where: 'categorie', 'Pack' %}
+        {% assign packs_tmp = packs_by_type | concat: packs_by_cat %}
+        {% assign packs = packs_tmp | uniq %}
+
+        {% if packs.size > 0 %}
+        <div class="product-category-section" id="packs">
+            <div class="product-grid">
+                {% for product in packs %}
+                {% assign is_pack = true %}
+                <div class="product-card" data-type="pack" data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
+                    <div class="pack-inner">
+                        {% if product.image %}
+                        <div class="pack-media">
+                            {% if product.univers %}
+                              <span class="univers-badge badge-overlay">{{ product.univers }}</span>
+                            {% endif %}
+                            <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
+                        </div>
+                        {% endif %}
+                        <div class="pack-content">
+                            <h3 class="product-title">{{ product.nom }}</h3>
+                            <p class="product-description">{{ product.description | truncate: 220 }}</p>
+                        {% if product.inclus %}
+                            <div class="pack-includes-label">Inclus&nbsp;:</div>
+                            <ul class="pack-checklist">
+                                {% for it in product.inclus %}
+                                  <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span>{{ it }}</span>
+                                  </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </div>
+                    </div>
+                    <div class="product-card-footer">
+                        <span class="product-price">{{ product.prix }}</span>
+                        {% if site.shop_enabled %}
+                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
+                        {% else %}
+                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
+                        {% endif %}
+                    </div>
+                    <div class="pack-ribbon">Pack</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
         {% if grouped_products.size > 0 %}
         <nav class="boutique-filters" aria-label="Navigation catégories">
             <div class="facet-group">
@@ -200,8 +252,12 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
 
             <div class="product-grid">
                 {% for product in group.items %}
+                {% if product.type == 'pack' or product.categorie == 'Pack' %}
+                  {% continue %}
+                {% endif %}
                 {% assign is_course = false %}
                 {% assign is_ebook = false %}
+                {% assign is_pack = false %}
                 {% if product.type == 'formation' %}
                   {% assign is_course = true %}
                 {% endif %}
@@ -217,7 +273,10 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
                 {% if product.format == 'PDF' %}
                   {% assign is_ebook = true %}
                 {% endif %}
-                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
+                {% if product.type == 'pack' or product.categorie == 'Pack' %}
+                  {% assign is_pack = true %}
+                {% endif %}
+                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} {% if is_pack %}data-type="pack"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
                     {% if product.image %}
                     <div class="product-card-image">
                         <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
@@ -260,6 +319,24 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
                             {% if product.langue %}<li class="badge">Langue: {{ product.langue }}</li>{% endif %}
                         </ul>
                         {% endif %}
+
+                        {% if is_pack %}
+                        <div class="pack-ribbon">Pack</div>
+                        {% if product.inclus %}
+                        <ul class="pack-items">
+                            {% assign max_items = 3 %}
+                            {% for it in product.inclus limit:max_items %}
+                              <li class="pack-item">{{ it }}</li>
+                            {% endfor %}
+                            {% if product.inclus.size > max_items %}
+                              <li class="pack-item more">+{{ product.inclus.size | minus: max_items }} contenus</li>
+                            {% endif %}
+                        </ul>
+                        {% endif %}
+                        {% if product.avantage %}
+                          <div class="pack-advantage">{{ product.avantage }}</div>
+                        {% endif %}
+                        {% endif %}
                     </div>
                     <div class="product-card-footer">
                         <span class="product-price">{{ product.prix }}</span>
@@ -268,6 +345,8 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
                             <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
                           {% elsif is_ebook %}
                             <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+                          {% elsif is_pack %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
                           {% else %}
                             <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
                           {% endif %}

@@ -12,6 +12,28 @@
   file_format: "pdf"
   univers: "IA"
 
+- nom: "Starter Pack IA 4-en-1 : Comprendre • Agir • Impacter • Prompter"
+  description: |
+    Le parcours idéal pour passer de 0 à opérationnel en IA, sans jargon. En 4 modules, vous posez des fondations solides (IA/ML/DL/GenAI, Transformer, outils & cas d’usage),
+    comprenez les impacts et adoptez une démarche « Green AI » actionnable, puis maîtrisez l’art du prompt avec une méthode claire (C.L.A.I.R), 7 types de prompts et des
+    exercices corrigés. Objectif: apprendre vite, appliquer dès demain sur vos projets pro/perso.
+  image: "assets/images/produits/pack-ia.jpg"
+  images:
+    - "assets/images/produits/pack-ia.jpg"
+    - "assets/images/produits/ia-pack-fondamentaux-banner-1600x1200.png"
+  categorie: "Pack"
+  prix: "99€ / HT"
+  type: "pack"
+  univers: "IA"
+  avantages: "Prix réduit de 28€"
+  inclus:
+    - "Module 0: Devenez Acteur de l'IA"
+    - "Module 1: L'Intelligence Artificielle pour Débutants"
+    - "Module 2: Impact Écologique et Sociétal de l'IA"
+    - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
+  lemon_variant_id: 
+  lien_paiement: ""
+
 - nom: "Devenez Acteur de l'IA - Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
   description: "Une présentation sur les enjeux environnementaux et sociaux liés à l'utilisation croissante de l'IA dans notre société, et les solutions pour adopter une approche \"Green AI\"."
   image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
