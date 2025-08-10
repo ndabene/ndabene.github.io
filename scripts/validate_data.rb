@@ -3,6 +3,7 @@
 # Lightweight validators for other YAML data files
 
 require 'yaml'
+require 'date'
 
 ROOT = File.expand_path('..', __dir__)
 

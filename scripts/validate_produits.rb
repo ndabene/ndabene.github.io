@@ -4,6 +4,7 @@
 
 require 'yaml'
 require 'json'
+require 'date'
 
 ROOT = File.expand_path('..', __dir__)
 DATA_FILE = File.join(ROOT, '_data', 'produits.yml')
