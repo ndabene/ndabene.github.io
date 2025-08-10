@@ -26,6 +26,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sass-converter
 
+# Boutique (achat en ligne)
+# Mettre à true quand Lemon Squeezy est validé
+shop_enabled: false
+
 # Sass/SCSS settings - Optimisé mobile 2025
 sass:
   sass_dir: _sass

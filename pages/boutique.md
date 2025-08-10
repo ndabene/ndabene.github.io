@@ -121,6 +121,13 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
 
 <section class="section boutique-page-section">
     <div class="container">
+        {% unless site.shop_enabled %}
+        <div class="notice info" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1rem;margin-bottom:1rem;">
+            <strong>Achat bientôt disponible.</strong>
+            La boutique est en cours d’activation. Les formations et e‑books seront achetables prochainement. D’autres contenus sont en cours de rédaction.
+        </div>
+        {% endunless %}
+
         <div class="boutique-filters" id="boutique-filters" aria-label="Filtres boutique">
             <div class="facets">
                 {% assign categories = site.data.produits | map: 'categorie' | compact | uniq | sort %}
@@ -207,12 +214,16 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
                     </div>
                     <div class="product-card-footer">
                         <span class="product-price">{{ product.prix }}</span>
-                        {% if is_course %}
-                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
-                        {% elsif is_ebook %}
-                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+                        {% if site.shop_enabled %}
+                          {% if is_course %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
+                          {% elsif is_ebook %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+                          {% else %}
+                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
+                          {% endif %}
                         {% else %}
-                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
+                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
                         {% endif %}
                     </div>
                 </div>
