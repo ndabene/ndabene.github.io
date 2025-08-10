@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Formations et E‑books (IA, PrestaShop, Développement)
+title: E‑books et Formations (IA, PrestaShop, Développement)
 permalink: /boutique/
-description: "Catalogue de formations et e‑books pour progresser en IA, PrestaShop et développement. Des contenus clairs, pragmatiques et à jour pour monter en compétence pas à pas."
+description: "E‑books PDF pragmatiques et formations complémentaires pour progresser en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et actionnables pour monter en compétence pas à pas."
 ---
 
 <script type="application/ld+json">
@@ -19,7 +19,13 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
-          "price": "{{ product.prix | remove: '€' | strip }}",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
           "url": "{{ product.lien_paiement }}",
           "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         },
@@ -59,7 +65,13 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
-          "price": "{{ product.prix | remove: '€' | strip }}",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
           "url": "{{ product.lien_paiement }}",
           "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
@@ -96,10 +108,35 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
-          "price": "{{ product.prix | remove: '€' | strip }}",
+          "price": "{{ product.prix
+            | replace: '€ / HT',''
+            | replace: '/ HT',''
+            | replace: '€ HT',''
+            | replace: '€',''
+            | replace: 'HT',''
+            | strip }}",
           "url": "{{ product.lien_paiement }}",
           "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+{%- comment -%} GEO/SEO: Collection overview for assistants {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "hasPart": [
+    {% for product in site.data.produits %}
+      {
+        "@type": "ListItem",
+        "name": "{{ product.nom | escape }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/"
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
@@ -127,6 +164,63 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
 
 <section class="section boutique-page-section">
     <div class="container">
+        <section class="benefits-row" aria-label="Pourquoi ces e‑books et formations ?">
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20l9-16H3l9 16z"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Actionnables tout de suite</h3>
+                    <p>E‑books PDF et supports clairs, orientés résultats, avec méthodes, check‑lists et exemples prêts à l’emploi.</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Progresser par étapes</h3>
+                    <p>Parcours simple: bases solides, impacts & bonnes pratiques, puis maîtrise des prompts et cas concrets.</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon-circle">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="benefit-body">
+                    <h3>Support & mises à jour</h3>
+                    <p>Mises à jour régulières et support efficace pour rester utiles (IA, PrestaShop, patterns de dev).</p>
+                </div>
+            </div>
+        </section>
+        {%- comment -%} Menu rapide dynamique (Univers / Catégories) {%- endcomment -%}
+        {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
+        {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
+        <nav class="boutique-quick-nav" aria-label="Navigation rapide">
+            {% if univers_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-univers">
+                <span class="label">Univers</span>
+                <button class="nav-chip filter-btn-modern active" data-univers="all">Tous</button>
+                {% for u in univers_list %}
+                  <button class="nav-chip filter-btn-modern" data-univers="{{ u }}">{{ u }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if categories_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-categorie">
+                <span class="label">Catégories</span>
+                <button class="nav-chip filter-btn-modern" data-categorie="all">Toutes</button>
+                {% for c in categories_list %}
+                  <button class="nav-chip filter-btn-modern" data-categorie="{{ c }}">{{ c }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="quick-search">
+                <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
+            </div>
+        </nav>
         
 
         <script type="application/ld+json">
@@ -168,21 +262,7 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         </div>
         {% endunless %}
 
-        <div class="boutique-filters" id="boutique-filters" aria-label="Filtres boutique">
-            <div class="facets">
-                {% assign categories = site.data.produits | map: 'categorie' | compact | uniq | sort %}
-                {% if categories.size > 0 %}
-                <div class="facet-group" data-facet="categorie">
-                    <span class="facet-label">Catégorie:</span>
-                    <button class="facet-button filter-btn-modern active" data-value="all">Toutes</button>
-                    {% for c in categories %}
-                    <button class="facet-button filter-btn-modern" data-value="{{ c | escape }}">{{ c }}</button>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-            <input type="search" id="facet-search" class="facet-search" placeholder="Rechercher un produit (titre, mots-clés)" aria-label="Rechercher">
-        </div>
+        
         {% assign grouped_products = site.data.produits | group_by: "categorie" %}
 
         {%- comment -%} Section packs {%- endcomment -%}
@@ -237,18 +317,13 @@ description: "Catalogue de formations et e‑books pour progresser en IA, Presta
         </div>
         {% endif %}
 
-        {% if grouped_products.size > 0 %}
-        <nav class="boutique-filters" aria-label="Navigation catégories">
-            <div class="facet-group">
-                <span class="facet-label">Par catégorie:</span>
-                {% for group in grouped_products %}
-                <a class="facet-button filter-btn-modern" href="#{{ group.name | slugify }}">{{ group.name }}</a>
-                {% endfor %}
-            </div>
-        </nav>
-        {% endif %}
+        
         {% for group in grouped_products %}
         <div class="product-category-section" id="{{ group.name | slugify }}">
+            <div class="category-header">
+                <h2 class="category-title">{{ group.name }}</h2>
+                <span class="category-count">{{ group.items.size }} produit{% if group.items.size > 1 %}s{% endif %}</span>
+            </div>
 
             <div class="product-grid">
                 {% for product in group.items %}
