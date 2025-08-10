@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+{% assign p = page.product %}
+
+<section class="page-hero-section">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Accueil</a>
+      <a href="/boutique/">Boutique</a>
+      <span>{{ page.title }}</span>
+    </nav>
+    <div class="hero-content">
+      <h1>{{ page.title }}</h1>
+      {% if p.description %}<p class="section-description">{{ p.description }}</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section boutique-product-detail">
+  <div class="container">
+    <article class="product-detail">
+      <div class="product-media">
+        {% if p.image %}
+        <img src="{{ '/' | append: p.image | replace: '//', '/' | relative_url }}" alt="{{ page.title }}" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="product-info">
+        {% if p.categorie %}
+        <div class="badge">{{ p.categorie }}</div>
+        {% endif %}
+
+        <div class="price-and-cta">
+          {% if p.prix %}<div class="price">{{ p.prix }}</div>{% endif %}
+          {% if p.lien_paiement %}
+            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="buy-btn">Acheter</a>
+          {% endif %}
+        </div>
+
+        <ul class="meta-list">
+          {% if p.niveau %}<li><strong>Niveau:</strong> {{ p.niveau }}</li>{% endif %}
+          {% if p.duree %}<li><strong>Durée:</strong> {{ p.duree }}</li>{% endif %}
+          {% if p.format %}<li><strong>Format:</strong> {{ p.format }}</li>{% endif %}
+          {% if p.langue %}<li><strong>Langue:</strong> {{ p.langue }}</li>{% endif %}
+          {% if p.pages %}<li><strong>Pages:</strong> {{ p.pages }}</li>{% endif %}
+          {% if p.author %}<li><strong>Auteur:</strong> {{ p.author }}</li>{% endif %}
+        </ul>
+
+        <div class="legal-links">
+          <a href="/cgu-boutique/">CGU Boutique</a>
+        </div>
+      </div>
+    </article>
+
+    {% if p.faq and p.faq.size > 0 %}
+    <section class="product-faq">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        {% for f in p.faq %}
+          <details>
+            <summary>{{ f.q }}</summary>
+            <div class="answer">{{ f.a }}</div>
+          </details>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  {% if p.type == 'ebook' or p.file_format == 'pdf' or p.format == 'PDF' %}
+  "@type": "Book",
+  "name": "{{ page.title | escape }}",
+  "bookFormat": "EBook",
+  "image": "{{ site.url }}{{ site.baseurl }}/{{ p.image }}",
+  {% if p.author %}"author": {"@type": "Person", "name": "{{ p.author | escape }}"}, {% endif %}
+  {% else %}
+  "@type": "Product",
+  "name": "{{ page.title | escape }}",
+  "image": "{{ site.url }}{{ site.baseurl }}/{{ p.image }}",
+  {% endif %}
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "{{ p.prix | remove: '€' | strip }}",
+    "url": "{{ p.lien_paiement }}"
+  }
+}
+</script>
+
+
