@@ -134,3 +134,10 @@ defaults:
       sitemap:
         changefreq: "weekly"
         priority: 1.0
+  - scope:
+      path: "pages/boutique.md"
+      type: "pages"
+    values:
+      sitemap:
+        changefreq: "weekly"
+        priority: 0.9

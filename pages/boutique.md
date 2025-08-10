@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Boutique
+title: Formations et E‑books (IA, PrestaShop, Développement)
 permalink: /boutique/
-description: "Formations et e-books pour progresser en continu (IA, PrestaShop, développement…). Des contenus clairs, pragmatiques et tenus à jour pour monter en compétence pas à pas."
+description: "Catalogue de formations et e‑books pour progresser en IA, PrestaShop et développement. Des contenus clairs, pragmatiques et à jour pour monter en compétence pas à pas."
 ---
 
 <script type="application/ld+json">
@@ -15,11 +15,13 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
         "name": "{{ product.nom | escape }}",
         "description": "{{ product.description | escape }}",
         "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
           "price": "{{ product.prix | remove: '€' | strip }}",
-          "url": "{{ product.lien_paiement }}"
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         },
         "brand": {
           "@type": "Brand",
@@ -53,11 +55,13 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
         {% if product.file_format %}"fileFormat": "application/{{ product.file_format | downcase }}",{% else %}"fileFormat": "application/pdf",{% endif %}
         {% if product.langue %}"inLanguage": "{{ product.langue }}",{% endif %}
         "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
           "price": "{{ product.prix | remove: '€' | strip }}",
-          "url": "{{ product.lien_paiement }}"
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -87,12 +91,14 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
           "url": "{{ site.url }}"
         },
         "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
         "isAccessibleForFree": false,
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
           "price": "{{ product.prix | remove: '€' | strip }}",
-          "url": "{{ product.lien_paiement }}"
+          "url": "{{ product.lien_paiement }}",
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
@@ -121,6 +127,40 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
 
 <section class="section boutique-page-section">
     <div class="container">
+        
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quand l’achat en ligne sera-t-il disponible ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La boutique est en cours d’activation. Les achats seront ouverts dès la validation du prestataire de paiement. Vous pouvez déjà consulter les fiches et le programme des contenus."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels univers sont couverts ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le catalogue s’organise par univers (IA, e‑commerce PrestaShop, développement, …). Chaque produit indique son univers et son niveau pour vous orienter rapidement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment les contenus sont-ils mis à jour ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les formations et e‑books sont maintenus et enrichis régulièrement afin de rester utiles et applicables. Le journal de mise à jour est mentionné sur chaque fiche."
+              }
+            }
+          ]
+        }
+        </script>
         {% unless site.shop_enabled %}
         <div class="notice info" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1rem;margin-bottom:1rem;">
             <strong>Achat bientôt disponible.</strong>
@@ -180,14 +220,23 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
                 <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
                     {% if product.image %}
                     <div class="product-card-image">
-                        <a href="/boutique/{{ product.nom | slugify }}/">
-                            <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
-                        </a>
+                        <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
                     </div>
                     {% endif %}
                     <div class="product-card-content">
-                        <h3 class="product-title"><a href="/boutique/{{ product.nom | slugify }}/">{{ product.nom }}</a></h3>
-                        <p class="product-description">{{ product.description | truncate: 120 }}</p>
+                        <div class="product-header-row">
+                            {% if product.univers %}
+                              <span class="univers-badge">{{ product.univers }}</span>
+                            {% endif %}
+                        </div>
+                        <h3 class="product-title">{{ product.nom }}</h3>
+                        <p class="product-description">{{ product.description | truncate: 160 }}</p>
+                        <div class="product-meta-line">
+                            {% if product.niveau %}<span class="meta-chip">Niveau: {{ product.niveau }}</span>{% endif %}
+                            {% if product.duree %}<span class="meta-chip">Durée: {{ product.duree }}</span>{% endif %}
+                            {% if product.format %}<span class="meta-chip">Format: {{ product.format }}</span>{% endif %}
+                            {% if product.pages %}<span class="meta-chip">Pages: {{ product.pages }}</span>{% endif %}
+                        </div>
 
                         {% if is_course %}
                         <ul class="course-meta">
@@ -252,3 +301,40 @@ description: "Formations et e-books pour progresser en continu (IA, PrestaShop, 
   ]
 }
 </script>
+
+<section class="faq-section-inline" aria-label="FAQ Boutique">
+  <div class="container">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-grid-inline">
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18v-6h6v6"></path><path d="M9 9V5h6v4"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Comment accéder à votre e‑book ou formation après l’achat&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Vous recevez immédiatement un e‑mail de confirmation contenant le lien d’accès et/ou de téléchargement. Conservez cet e‑mail pour retrouver vos contenus ultérieurement. En cas de difficulté, contactez le support via le <a href="/contact/">formulaire</a>.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Quels univers sont couverts&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Le catalogue s’organise par univers (IA, e‑commerce PrestaShop, développement, …). Chaque produit indique son univers et son niveau pour vous orienter rapidement.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3z"></path><path d="M7 7v14"></path><path d="M17 7v14"></path></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Comment les contenus sont-ils mis à jour&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Les formations et e‑books sont maintenus et enrichis régulièrement afin de rester utiles et applicables. Le journal de mise à jour est mentionné sur chaque fiche.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
