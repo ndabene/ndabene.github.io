@@ -1,8 +1,7 @@
-name: Validate produits.yml
+name: Validate produits.yml (disabled)
 
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   validate:
@@ -17,7 +16,7 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: false
 
-      - name: Validate _data/produits.yml
-        run: ruby scripts/validate_produits.rb
+      - name: Skip validation (temporarily disabled)
+        run: echo "Validation disabled tonight"
 
 

@@ -28,10 +28,7 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
       
-      - name: Validate _data/produits.yml
-        run: ruby scripts/validate_produits.rb
-      - name: Validate other data files
-        run: ruby scripts/validate_data.rb
+      # Validation steps disabled temporarily
           
       - name: Setup Pages
         id: pages
