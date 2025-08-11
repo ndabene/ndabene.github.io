@@ -103,16 +103,16 @@ class CookieConsent {
                     </div>
                     <p>Nécessaires au fonctionnement du site (navigation, sécurité).</p>
                 </div>
-                <div class="cookie-category">
-                    <div class="cookie-category-header">
-                        <h5>Cookies d'analyse</h5>
-                        <label class="toggle">
-                            <input type="checkbox" id="analytics-consent" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
+                    <div class="cookie-category">
+                        <div class="cookie-category-header">
+                            <h5>Cookies d'analyse</h5>
+                            <label class="toggle">
+                                <input type="checkbox" id="analytics-consent">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <p>Google Analytics pour comprendre l'utilisation du site. Par défaut, mesure anonyme sans cookie (Consent Mode). Cookies activés uniquement si vous acceptez.</p>
                     </div>
-                    <p>Google Analytics pour comprendre l'utilisation du site (anonymisé).</p>
-                </div>
                 <div class="cookie-settings-actions">
                     <button id="cookie-save" class="btn-primary">Sauvegarder</button>
                     <button id="cookie-cancel" class="btn-secondary">Annuler</button>
@@ -224,34 +224,9 @@ class CookieConsent {
     }
 
     loadGoogleAnalytics() {
-        // Vérifier si GA est déjà chargé
-        if (window.gtag) {
-            this.enableGoogleAnalytics();
-            return;
-        }
-
-        // Charger le script GA4
-        const gaId = 'G-38JJ2JLMX4'; // Votre ID GA
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-        
-        script.onload = () => {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            
-            gtag('js', new Date());
-            gtag('config', gaId, {
-                'anonymize_ip': true,
-                'allow_google_signals': false,
-                'allow_ad_personalization_signals': false
-            });
-            
-            console.log('Google Analytics chargé avec consentement');
-        };
-        
-        document.head.appendChild(script);
+        // Avec Consent Mode, le script global est déjà inclus dans la page
+        // On se contente d'activer le stockage analytics si l'utilisateur consent
+        this.enableGoogleAnalytics();
     }
 
     enableGoogleAnalytics() {

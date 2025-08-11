@@ -1,23 +1,19 @@
 {% if site.google_analytics %}
-<!-- Google Analytics - Conditionné au consentement RGPD -->
+<!-- Google Analytics 4 avec Google Consent Mode v2 -->
 <script>
-  // Configuration Google Analytics avec respect RGPD
+  // Définir d'abord le consentement par défaut avant de charger gtag.js
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  
-  // Configuration du consentement par défaut (refusé)
+  function gtag(){dataLayer.push(arguments);} 
   gtag('consent', 'default', {
     'analytics_storage': 'denied',
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
     'ad_personalization': 'denied'
   });
-  
-  // Chargement conditionnel du script GA
-  // Le script sera chargé dynamiquement par cookie-consent.js
-  // seulement si l'utilisateur consent aux cookies d'analyse
-  
-  // Configuration de base pour GA4
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  // Configuration de base GA4 (pings sans cookies tant que refusé)
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics }}', {
     'anonymize_ip': true,
@@ -25,8 +21,6 @@
     'allow_ad_personalization_signals': false,
     'cookie_flags': 'SameSite=Strict;Secure'
   });
+  window.GA_MEASUREMENT_ID = '{{ site.google_analytics }}';
 </script>
-
-<!-- Le script GA sera chargé dynamiquement par cookie-consent.js -->
-<!-- seulement après consentement explicite de l'utilisateur -->
 {% endif %}
