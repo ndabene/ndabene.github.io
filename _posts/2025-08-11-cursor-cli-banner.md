@@ -1,12 +1,17 @@
 ---
-
-## layout: post title: "Cursor CLI : guide complet + commandes /help" date: 2025-08-11 author: Nicolas Dabène categories: \[Développement, Tutoriel, Intelligence Artificielle] tags: \[Cursor, CLI, terminal, MCP, automation] excerpt: "Installez, configurez et maîtrisez Cursor CLI depuis le terminal. Inclus : toutes les commandes disponibles via /help, modes interactif et non-interactif, auth, règles et MCP." image: /assets/images/blog/2025-08-11-cursor-cli-banner.jpg featured: false difficulty: "Intermédiaire" technologies: \["JavaScript", "PHP", "Bash", "MCP"] estimated\_reading\_time: "12 minutes"
+layout: post
+title: "Cursor CLI : guide complet + commandes /help"
+date: 2025-08-11
+author: Nicolas Dabène
+categories: [Développement, Tutoriel, Intelligence Artificielle]
+tags: [Cursor, CLI, terminal, AI, automation, PrestaShop, Symfony, GPT]
+---
 
 # Cursor CLI : guide complet + commandes /help
 
 ## Introduction
 
-Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées, reprendre des sessions, et automatiser en CI. L’outil est **actuellement en bêta** : utilisez-le dans des environnements de confiance.
+Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées, reprendre des sessions, et automatiser des workflows.
 
 ---
 
@@ -88,7 +93,7 @@ Pratique pour conserver le contexte d’une itération à l’autre.
 
 ## Paramètres & options globales (essentiel)
 
-Les options globales et commandes de base incluent : `--version`, `--api-key`, `-p/--print`, `--output-format {text|json|stream-json}`, `--resume`, `--model`, `--fullscreen`, `--force`, `--help`, ainsi que `login/logout/status`, `update|upgrade`, `ls`, `resume`. Tous les détails et syntaxes sont centralisés dans la référence *Parameters*.
+Les options globales et commandes de base incluent : `--version`, `--api-key`, `-p/--print`, `--output-format {text|json|stream-json}`, `--resume`, `--model`, `--fullscreen`, `--force`, `--help`, ainsi que beaucoup d’autres flags.
 
 Exemples :
 
@@ -186,7 +191,7 @@ Ajoute un Admin Controller moderne ConfigurationController (hérite de Framework
 
 ```text
 # Étape 3 — services Symfony
-Déclare dans config/services.yml un service psfb.badge_provider (classe src/Service/BadgeProvider.php) injectant TranslatorInterface et Configuration. Méthode getBadgeForProduct($idProduct) qui renvoie le texte configuré (fallback par défaut).
+Déclare dans config/services.yml un service psfb.badge_provider (classe src/Service/BadgeProvider.php) injectant TranslatorInterface et Configuration. Méthode getBadgeForProduct($idProduct) qui renvoie le texte du badge.
 ```
 
 ```text
@@ -219,7 +224,7 @@ Accès : /admin-dev/modules/ps_feature_badges/configure
 ### 3) CI non‑interactif : audit et tests
 
 ```bash
-cursor-agent -p "Audit le module ps_feature_badges : respect PSR-12, structure PrestaShop, controllers Symfony, services, routes, formulaire de config, hooks. Propose des correctifs et le diff patch." --output-format json --model gpt-5
+cursor-agent -p "Audit le module ps_feature_badges : respect PSR-12, structure PrestaShop, controllers Symfony, services, routes, formulaire de config, hooks. Propose des correctifs et le diff patch."
 ```
 
 ```bash
@@ -227,14 +232,14 @@ cursor-agent -p "Plan détaillé pour finir ps_feature_badges (services, formula
 ```
 
 ```bash
-cursor-agent -p "Relis hookDisplayProductAdditionalInfo de ps_feature_badges : sécurité, compatibilité thèmes (displayProductExtraContent), accessibilité ARIA et performance. Suggère un snippet Twig minimal." --output-format text
+cursor-agent -p "Relis hookDisplayProductAdditionalInfo de ps_feature_badges : sécurité, compatibilité thèmes (displayProductExtraContent), accessibilité ARIA et performance. Suggère un snippet HTML optimal."
 ```
 
 ---
 
 ## Sécurité & limitations
 
-Le CLI peut **lire/écrire/supprimer des fichiers** et **exécuter des commandes shell** (avec approbation en mode interactif). En non-interactif, la prudence s’impose : isolez en sandbox/CI, versionnez, révisez les diffs. Le projet est en **bêta** et les garde-fous évoluent.
+Le CLI peut **lire/écrire/supprimer des fichiers** et **exécuter des commandes shell** (avec approbation en mode interactif). En non-interactif, la prudence s’impose : isolez en sandbox/CI, versionnez vos scripts, surveillez les permissions.
 
 ---
 
@@ -256,13 +261,8 @@ Utilisez `cursor-agent help [commande]` pour la CLI, et `/help [commande]` en se
 
 ## Conclusion
 
-Cursor CLI apporte l’agent Cursor **là où vous travaillez déjà** : le terminal et la CI. En combinant **modes interactif/non-interactif**, **règles**, **MCP** et **slash commands** (ci-dessus), vous pouvez passer du plan à l’exécution de manière fiable et traçable.
+Cursor CLI apporte l’agent Cursor **là où vous travaillez déjà** : le terminal et la CI. En combinant **modes interactif/non-interactif**, **règles**, **MCP** et **slash commands** (ci-dessus), vous automatisez vos workflows IA sans quitter le shell.
 
 ---
 
 *Article publié le 11 août 2025 par Nicolas Dabène — Expert PHP & PrestaShop avec 15+ ans d'expérience*
-
-**À lire aussi :**
-
-* [Composer un ](/blog/agent-md-bonnes-pratiques)[`AGENT.md`](/blog/agent-md-bonnes-pratiques)[ efficace](/blog/agent-md-bonnes-pratiques)
-* [MCP : connecter vos outils à l’agent](/blog/model-context-protocol-introduction)
