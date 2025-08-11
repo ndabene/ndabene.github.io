@@ -5,7 +5,6 @@
 ![Portfolio Banner](https://img.shields.io/badge/Portfolio-Nicolas%20Dabène-2563EB?style=for-the-badge&logo=github&logoColor=white)
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-22863a?style=for-the-badge&logo=github&logoColor=white)](https://ndabene.github.io)
-[![Validate produits.yml](https://github.com/ndabene/ndabene.github.io/actions/workflows/validate-produits.yml/badge.svg)](https://github.com/ndabene/ndabene.github.io/actions/workflows/validate-produits.yml)
 [![Build & Deploy Jekyll](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
