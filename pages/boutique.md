@@ -230,9 +230,9 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% if univers_list.size > 0 %}
             <div class="quick-nav-block quick-nav-univers">
                 <span class="label">Univers</span>
-                <button class="nav-chip filter-btn-modern active" data-univers="all">Tous</button>
+                <button class="nav-chip active" data-univers="all">Tous</button>
                 {% for u in univers_list %}
-                  <button class="nav-chip filter-btn-modern" data-univers="{{ u }}">{{ u }}</button>
+                  <button class="nav-chip" data-univers="{{ u }}">{{ u }}</button>
                 {% endfor %}
             </div>
             {% endif %}
@@ -240,9 +240,9 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% if categories_list.size > 0 %}
             <div class="quick-nav-block quick-nav-categorie">
                 <span class="label">Catégories</span>
-                <button class="nav-chip filter-btn-modern" data-categorie="all">Toutes</button>
+                <button class="nav-chip" data-categorie="all">Toutes</button>
                 {% for c in categories_list %}
-                  <button class="nav-chip filter-btn-modern" data-categorie="{{ c }}">{{ c }}</button>
+                  <button class="nav-chip" data-categorie="{{ c }}">{{ c }}</button>
                 {% endfor %}
             </div>
             {% endif %}
@@ -250,9 +250,9 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% if niveaux_list.size > 0 %}
             <div class="quick-nav-block quick-nav-niveau">
                 <span class="label">Niveaux</span>
-                <button class="nav-chip filter-btn-modern" data-niveau="all">Tous</button>
+                <button class="nav-chip" data-niveau="all">Tous</button>
                 {% for n in niveaux_list %}
-                  <button class="nav-chip filter-btn-modern" data-niveau="{{ n }}">{{ n }}</button>
+                  <button class="nav-chip" data-niveau="{{ n }}">{{ n }}</button>
                 {% endfor %}
             </div>
             {% endif %}
@@ -260,17 +260,19 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% if formats_list.size > 0 %}
             <div class="quick-nav-block quick-nav-format">
                 <span class="label">Formats</span>
-                <button class="nav-chip filter-btn-modern" data-format="all">Tous</button>
+                <button class="nav-chip" data-format="all">Tous</button>
                 {% for f in formats_list %}
-                  <button class="nav-chip filter-btn-modern" data-format="{{ f }}">{{ f | upcase }}</button>
+                  <button class="nav-chip" data-format="{{ f }}">{{ f | upcase }}</button>
                 {% endfor %}
             </div>
             {% endif %}
 
             <div class="quick-search">
+                <button id="clear-filters" class="nav-chip reset" type="button" title="Réinitialiser">Réinitialiser</button>
                 <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
             </div>
         </nav>
+        <div class="active-filters" id="active-filters" aria-live="polite"></div>
         
 
         <script type="application/ld+json">
@@ -306,7 +308,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
         }
         </script>
         {% unless site.shop_enabled %}
-        <div class="notice info" style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1rem;margin-bottom:1rem;">
+        <div class="notice info" style="margin-top:1rem;border:1px solid #e5e7eb;border-radius:10px;padding:1rem;margin-bottom:1rem;">
             <strong>Achat bientôt disponible.</strong>
             La boutique est en cours d’activation. Les formations et e‑books seront achetables prochainement. D’autres contenus sont en cours de rédaction.
         </div>

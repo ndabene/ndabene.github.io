@@ -17,13 +17,32 @@
         backdrop-filter: saturate(180%) blur(6px);
         box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
 
-        .quick-nav-block { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+        .quick-nav-block { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
         .label { color: #64748b; font-size: .9rem; margin-right: .25rem; }
-        .nav-chip { @extend .filter-btn-modern; }
-        .nav-chip.active { background: linear-gradient(135deg, #0f172a 0%, #0f172a 100%); color:#fff; border-color: #0f172a; box-shadow: 0 6px 14px rgba(15,23,42,.25); }
+        // Chips compacts (remplace l'ancien extend trop volumineux)
+        .nav-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: .35rem;
+            padding: .32rem .65rem;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 999px;
+            font-size: .9rem;
+            font-weight: 700;
+            color: #0f172a;
+            box-shadow: none;
+            cursor: pointer;
+            transition: background .15s ease, border-color .15s ease, color .15s ease;
+        }
+        .nav-chip:hover { background:#0f172a; border-color:#0f172a; color:#fff; }
+        .nav-chip.active { background:#0f172a; color:#fff; border-color:#0f172a; box-shadow: 0 4px 12px rgba(15,23,42,.18); }
+
+        // Nettoyage styles menus (retours aux chips)
+        .quick-menu, .menu-button, .menu-list { display: none; }
 
         .quick-search {
-            margin-left: auto;
+            margin-left: auto; display: flex; gap: .5rem; align-items: center;
         }
         .quick-search input {
             min-width: 260px;
@@ -32,6 +51,8 @@
             padding: 0.45rem 0.6rem;
             border-radius: 8px;
         }
+        .quick-search .reset { background:#f8fafc; border:1px solid #d1d9e0; padding:.28rem .6rem; border-radius:999px; font-size:.85rem; font-weight:700; color:#475569; box-shadow:none; }
+        .quick-search .reset:hover { background:#eef2f7; border-color:#cbd5e1; }
 
         .quick-sort { display: flex; align-items: center; gap: .5rem; }
         .quick-sort select { border:1px solid #e5e7eb; background:#fff; border-radius:8px; padding:.4rem .6rem; }
@@ -537,6 +558,11 @@
         }
     }
 }
+
+.active-filters { display:none; margin: .6rem 0 0; padding: .35rem .5rem; display:flex; flex-wrap:wrap; gap:.5rem; background:#f8fafc; border:1px solid #e5e7eb; border-radius:10px; }
+.active-filters .active-chip { border:1px solid rgba(14,165,233,.35); background: rgba(14,165,233,.10); color:#0f172a; border-radius:999px; padding:.28rem .6rem; display:inline-flex; align-items:center; gap:.4rem; cursor:pointer; font-weight:700; }
+.active-filters .active-chip:hover { background: rgba(14,165,233,.16); border-color: rgba(14,165,233,.5); }
+.active-filters .active-chip span { font-weight:800; font-size: 1rem; line-height: 1; }
 
 // Hero banner slider
 .boutique-hero-slider {

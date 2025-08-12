@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const facetBar = document.getElementById('boutique-filters');
   const quickNav = document.querySelector('.boutique-quick-nav');
   const quickSearch = document.getElementById('quick-search');
+  const clearBtn = document.getElementById('clear-filters');
+  const activeFiltersBar = document.getElementById('active-filters');
   const cards = Array.from(container.querySelectorAll('.product-card'));
   const searchInput = document.getElementById('facet-search');
   const noResults = document.getElementById('no-results');
@@ -99,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     noResults.style.display = totalMatches === 0 ? '' : 'none';
 
+    updateActiveFiltersBar();
+
     // Compteur de résultats retiré avec l'UI de tri
   }
 
@@ -118,6 +122,30 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/(^-|-$)/g, '');
   }
 
+  function updateActiveFiltersBar() {
+    if (!activeFiltersBar) return;
+    const chips = [];
+    if (state.univers !== 'all') chips.push({ key: 'univers', label: `Univers: ${state.univers}` });
+    if (state.categorie !== 'all') chips.push({ key: 'categorie', label: `Catégorie: ${state.categorie}` });
+    if (state.niveau !== 'all') chips.push({ key: 'niveau', label: `Niveau: ${state.niveau}` });
+    if (state.format !== 'all') chips.push({ key: 'format', label: `Format: ${state.format.toUpperCase()}` });
+    if (state.search) chips.push({ key: 'search', label: `Recherche: ${state.search}` });
+
+    if (chips.length === 0) {
+      activeFiltersBar.innerHTML = '';
+      activeFiltersBar.style.display = 'none';
+      return;
+    }
+
+    activeFiltersBar.style.display = '';
+    activeFiltersBar.innerHTML = chips.map((c) => `
+      <button class="active-chip" data-remove="${c.key}" aria-label="Retirer ${c.label}">
+        ${c.label}
+        <span aria-hidden="true">×</span>
+      </button>
+    `).join('');
+  }
+
   // Init events facets (bar)
   // Deprecated facet bar removed on page
 
@@ -130,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   shown = Math.min(PAGE_SIZE, cards.length);
   applyFilters();
 
-  // Quick-nav → synchronise avec les mêmes filtres (univers / catégorie)
+  // Quick-nav (chips) → synchronise filtres (univers / catégories / niveaux / formats)
   quickNav?.addEventListener('click', (e) => {
     const btn = e.target.closest('.nav-chip');
     if (!btn) return;
@@ -138,53 +166,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const c = btn.getAttribute('data-categorie');
     const level = btn.getAttribute('data-niveau');
     const fmt = btn.getAttribute('data-format');
-
     if (u) {
       state.univers = u;
       shown = PAGE_SIZE;
-      // UI active
       quickNav.querySelectorAll('[data-univers]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      applyFilters();
+      if (u !== 'all') {
+        const secs = Array.from(container.querySelectorAll('.product-category-section'));
+        const firstVisible = secs.find(s => s.style.display !== 'none');
+        if (firstVisible) {
+          firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          firstVisible.classList.add('category-highlight');
+          setTimeout(() => firstVisible.classList.remove('category-highlight'), 1200);
+        }
+      }
     }
     if (c) {
       state.categorie = c;
       shown = PAGE_SIZE;
       quickNav.querySelectorAll('[data-categorie]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      applyFilters();
+      if (c !== 'all') {
+        const id = slugify(c);
+        const sec = container.querySelector(`.product-category-section#${id}`);
+        if (sec) {
+          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          sec.classList.add('category-highlight');
+          setTimeout(() => sec.classList.remove('category-highlight'), 1200);
+        }
+      }
     }
     if (level) {
       state.niveau = level;
       shown = PAGE_SIZE;
       quickNav.querySelectorAll('[data-niveau]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      applyFilters();
     }
     if (fmt) {
       state.format = fmt;
       shown = PAGE_SIZE;
       quickNav.querySelectorAll('[data-format]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-    }
-    applyFilters();
-
-    // Smooth scroll to target section for categories
-    if (c && c !== 'all') {
-      const id = slugify(c);
-      const sec = container.querySelector(`.product-category-section#${id}`);
-      if (sec) {
-        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        sec.classList.add('category-highlight');
-        setTimeout(() => sec.classList.remove('category-highlight'), 1200);
-      }
-    }
-    // For univers, scroll to first visible section
-    if (u && u !== 'all') {
-      const secs = Array.from(container.querySelectorAll('.product-category-section'));
-      const firstVisible = secs.find(s => s.style.display !== 'none');
-      if (firstVisible) {
-        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        firstVisible.classList.add('category-highlight');
-        setTimeout(() => firstVisible.classList.remove('category-highlight'), 1200);
-      }
+      applyFilters();
     }
   });
 
@@ -193,6 +219,39 @@ document.addEventListener('DOMContentLoaded', () => {
     state.search = (e.target.value || '').trim().toLowerCase();
     shown = PAGE_SIZE;
     applyFilters();
+  });
+
+  // Retirer un filtre depuis la barre d'état
+  activeFiltersBar?.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-remove]');
+    if (!btn) return;
+    const key = btn.getAttribute('data-remove');
+    switch (key) {
+      case 'univers': state.univers = 'all'; quickNav.querySelectorAll('[data-univers]').forEach(b => b.classList.remove('active')); break;
+      case 'categorie': state.categorie = 'all'; quickNav.querySelectorAll('[data-categorie]').forEach(b => b.classList.remove('active')); break;
+      case 'niveau': state.niveau = 'all'; quickNav.querySelectorAll('[data-niveau]').forEach(b => b.classList.remove('active')); break;
+      case 'format': state.format = 'all'; quickNav.querySelectorAll('[data-format]').forEach(b => b.classList.remove('active')); break;
+      case 'search': state.search = ''; if (quickSearch) quickSearch.value = ''; break;
+      default: break;
+    }
+    shown = PAGE_SIZE;
+    applyFilters();
+  });
+
+  // Bouton réinitialiser
+  clearBtn?.addEventListener('click', () => {
+    state.univers = 'all';
+    state.categorie = 'all';
+    state.niveau = 'all';
+    state.format = 'all';
+    state.search = '';
+    quickNav.querySelectorAll('.nav-chip').forEach(b => b.classList.remove('active'));
+    const universAll = quickNav.querySelector('[data-univers="all"]');
+    universAll?.classList.add('active');
+    if (quickSearch) quickSearch.value = '';
+    shown = PAGE_SIZE;
+    applyFilters();
+    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
   // Tri désactivé
