@@ -1,6 +1,6 @@
-
-- nom: "Devenez Acteur de l'IA - Chapitre 1 : L'Intelligence Artificielle pour Débutants"
-  description: "Bienvenue dans ce voyage d'exploration au cœur de l'intelligence artificielle. Ce cours vous permettra de comprendre clairement ce qu'est l'IA, comment elle fonctionne et comment elle peut transformer votre quotidien, sans connaissances techniques préalables."
+-
+  nom: "Chapitre 1 : L'Intelligence Artificielle pour Débutants"
+  description: "Posez des bases solides en IA sans jargon ni prérequis techniques. Comprenez ce qu'est l'IA, comment elle fonctionne (dont le rôle des Transformers) et comment l'appliquer concrètement dans votre quotidien pro/perso."
   image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/6658860a-70ad-484a-82ac-1f8e16577051"
   categorie: "Formation IA pour tous"
@@ -14,21 +14,22 @@
   active: true
   mots_cles: ["ia", "débutant", "transformer", "prompt"]
   resultats:
-    - "Comprendre clairement IA, ML, DL et IA générative sans jargon"
-    - "Identifier les cas d’usage pertinents au quotidien"
-    - "Poser des prompts simples et fiables pour éviter les hallucinations"
-  support: "Email sous 48h"
+    - "Distinguer simplement IA, ML, DL et IA générative, sans jargon"
+    - "Repérer des cas d’usage concrets à fort impact dans votre quotidien"
+    - "Rédiger des prompts fiables qui limitent hallucinations et biais"
+  support: "Support email sous 48h"
   last_update: "2025-08-12"
   micro_extraits:
-    - "Vous apprendrez à distinguer clairement IA, Machine Learning, Deep Learning et IA générative — sans jargon."
-    - "Vous comprendrez le rôle du Transformer (2017) et saurez choisir l’outil adapté au besoin."
-    - "Vous saurez cadrer vos demandes avec des prompts simples et vérifier les limites (hallucinations, biais, confidentialité)."
+    - "Explications claires et illustrées pour lever la confusion entre IA, ML, DL et GenAI."
+    - "Compréhension du principe des Transformers (2017) pour mieux choisir vos outils."
+    - "Méthode simple pour cadrer vos demandes et éviter les pièges (hallucinations, biais, confidentialité)."
 
-- nom: "Starter Pack IA 4-en-1 : Comprendre • Agir • Impacter • Prompter"
+-
+  nom: "Starter Pack IA 4-en-1 : Comprendre • Agir • Impacter • Prompter"
   description: |
-    Le parcours idéal pour passer de 0 à opérationnel en IA, sans jargon. En 4 modules, vous posez des fondations solides (IA/ML/DL/GenAI, Transformer, outils & cas d’usage),
-    comprenez les impacts et adoptez une démarche « Green AI » actionnable, puis maîtrisez l’art du prompt avec une méthode claire (C.L.A.I.R), 7 types de prompts et des
-    exercices corrigés. Objectif: apprendre vite, appliquer dès demain sur vos projets pro/perso.
+    Le parcours idéal pour passer de 0 à opérationnel en IA, sans jargon. En 4 modules, vous consolidez les fondamentaux (IA/ML/DL/GenAI, Transformers, outils & cas d’usage),
+    comprenez les impacts et mettez en place une démarche « Green AI » pragmatique, puis maîtrisez l’art du prompt avec une méthode claire (C.L.A.I.R), 7 types de prompts et
+    des exercices corrigés. Objectif : apprendre vite et appliquer immédiatement sur vos projets pro/perso.
   image: "assets/images/produits/pack-ia.jpg"
   images:
     - "assets/images/produits/pack-ia.jpg"
@@ -37,22 +38,24 @@
   prix: "99€ / HT"
   type: "pack"
   univers: "IA"
-  avantages: "Prix réduit de 28€"
+  avantages: "Économisez 28€"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d01dbc06-935f-4f44-a95d-df7b527deec0"
   active: true
+  last_update: "2025-08-12"
   inclus:
     - "Module 0: Devenez Acteur de l'IA"
     - "Module 1: L'Intelligence Artificielle pour Débutants"
     - "Module 2: Impact Écologique et Sociétal de l'IA"
     - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
-  lemon_variant_id: 
+  lemon_variant_id:
   micro_extraits:
-    - "Vous apprendrez les bases solides de l’IA et poserez des usages concrets pro/perso dès la première semaine."
-    - "Vous saurez réduire l’empreinte de vos workflows IA sans perdre en qualité ni en vitesse."
-    - "Vous maîtriserez la méthode C.L.A.I.R et les prompts qui transforment une réponse moyenne en livrable actionnable."
+    - "Parcours guidé du niveau débutant à l’autonomie avec mise en pratique rapide."
+    - "Réduction de l’empreinte de vos workflows IA sans sacrifier la qualité ni la vitesse."
+    - "Méthode C.L.A.I.R et canevas de prompts pour passer d’une réponse brute à un livrable actionnable."
 
-- nom: "Devenez Acteur de l'IA - Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
-  description: "Une présentation sur les enjeux environnementaux et sociaux liés à l'utilisation croissante de l'IA dans notre société, et les solutions pour adopter une approche \"Green AI\"."
+-
+  nom: "Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
+  description: "Comprenez les impacts réels de l’IA sur l’environnement et la société, puis adoptez une démarche « Green AI » concrète et mesurable pour des usages plus responsables."
   image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/0b81d9f2-5cbc-4f09-b2f1-b86504e9b7c1"
   categorie: "Formation IA pour tous"
@@ -64,21 +67,22 @@
   active: true
   last_update: "2025-08-12"
   resultats:
-    - "Comprendre l'impact de l'IA sur l'environnement et la société"
-    - "Mettre en place un plan « Green AI »"
-    - "Cadrer les risques sociétaux (emploi, biais, désinfo)"
+    - "Mesurer l’empreinte (énergie, eau, matériel) d’un usage IA sur tout le cycle de vie"
+    - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
+    - "Anticiper les risques sociétaux (emploi, biais, désinformation) avec des garde-fous clairs"
   micro_extraits:
-    - "Vous apprendrez à évaluer l’empreinte de l’IA (énergie, eau, matériel) sur tout le cycle de vie."
-    - "Vous saurez mettre en place un plan « Green AI » : right-sizing des modèles, prompts sobres, cache, batch."
-    - "Vous cadrerez les risques sociétaux (emploi, biais, désinfo) via une gouvernance pratico-pratique et des KPIs."
+    - "Méthodes d’évaluation de l’empreinte environnementale adaptées à vos cas d’usage."
+    - "Plan d’action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
+    - "Gouvernance pratico-pratique et indicateurs pour suivre l’impact et gérer les risques."
 
-- nom: "Devenez Acteur de l'IA - Chapitre 3 : L'Art du Prompt - Dialoguer avec l'IA"
-  description: "Dans ce cours, vous découvrirez comment maîtriser l'art du prompt engineering pour communiquer efficacement avec n'importe quelle intelligence artificielle. À la fin de ce module, vous obtiendrez des résultats précis et exploitables en formulant des instructions claires et structurées."
+-
+  nom: "Chapitre 3 : L'Art du Prompt - Dialoguer avec l'IA"
+  description: "Apprenez à concevoir des prompts clairs et efficaces pour obtenir des réponses précises, utiles et réutilisables. Méthode, types de prompts et bonnes pratiques pour dialoguer efficacement avec n’importe quelle IA."
   image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/35c244d8-e607-4917-ac65-932e79dbb5e7"
   categorie: "Formation IA pour tous"
   prix: "49€ / HT"
-  lemon_variant_id: 
+  lemon_variant_id:
   type: "ebook"
   format: "PDF & Podcast"
   univers: "IA"
@@ -88,11 +92,11 @@
   last_update: "2025-08-12"
   mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
   resultats:
-    - "Structurer des instructions efficaces avec la méthode C.L.A.I.R"
-    - "Choisir le bon type de prompt selon l’objectif (création, analyse, résumé, etc.)"
-    - "Itérer pour obtenir des livrables exploitables"
+    - "Structurer des instructions claires et efficaces avec la méthode C.L.A.I.R"
+    - "Sélectionner le bon type de prompt selon l’objectif (création, analyse, résumé, résolution, etc.)"
+    - "Itérer pour transformer une réponse brute en livrable prêt à l’emploi"
   support: "Mises à jour incluses"
   micro_extraits:
-    - "Vous apprendrez à structurer vos demandes avec la méthode C.L.A.I.R pour obtenir des résultats exploitables du premier coup."
-    - "Vous saurez choisir parmi les 7 types de prompts (création, analyse, résumé, résolution…) selon l’objectif."
-    - "Vous maîtriserez les techniques avancées (rôle, format imposé, itération, contraintes créatives) avec des cas du quotidien."
+    - "Canevas prêts à l’emploi pour 7 types de prompts et leurs usages."
+    - "Techniques avancées : rôle, format imposé, itération, contraintes créatives."
+    - "Cas concrets du quotidien pour passer de la théorie à l’action."

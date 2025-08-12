@@ -43,6 +43,12 @@
     {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
     <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}">
     {% if is_pack %}<span class="card-ribbon">Pack</span>{% endif %}
+    {% if p.last_update %}
+      <span class="card-tag update" aria-label="Mis à jour le {{ p.last_update | date: '%d/%m/%Y' }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <span class="date">{{ p.last_update | date: "%d/%m/%Y" }}</span>
+      </span>
+    {% endif %}
   </div>
   {% endif %}
 
@@ -50,18 +56,25 @@
     <div class="product-header-row">
       <ul class="meta-badges">
         {% if p.niveau %}<li class="badge">Niveau: {{ p.niveau }}</li>{% endif %}
-        {% if p.duree %}<li class="badge">Durée: {{ p.duree }}</li>{% endif %}
         {% if fmt %}<li class="badge">Format: {{ fmt | upcase }}</li>{% endif %}
         {% if p.inclus %}<li class="badge">Pack: {{ p.inclus | size }} contenus</li>{% endif %}
-        {% if p.last_update %}<li class="badge muted">MàJ: {{ p.last_update | date: "%d/%m/%Y" }}</li>{% endif %}
       </ul>
       {% if p.featured or p.bestseller %}
         <span class="univers-badge" style="margin-left:auto;background:rgba(234,179,8,.12);border-color:rgba(234,179,8,.35);color:#92400e;">{% if p.bestseller %}Meilleur vendeur{% else %}Recommandé{% endif %}</span>
       {% endif %}
     </div>
     <h3 class="product-title">{{ p.nom }}</h3>
-    <p class="product-description">{{ p.description | truncate: 160 }}</p>
-    <div class="hover-hint">Survolez la carte pour voir le détail et le programme</div>
+    <p class="product-description">{{ p.description }}</p>
+    {% if features %}
+    <ul class="micro-extraits">
+      {% for it in features limit:3 %}
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>{{ it }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
     <template class="quick-view-content">
       <div class="qv-title">{{ p.nom }}</div>
@@ -70,7 +83,6 @@
       {% endif %}
       <ul class="meta-badges">
         {% if p.niveau %}<li class="badge">Niveau: {{ p.niveau }}</li>{% endif %}
-        {% if p.duree %}<li class="badge">Durée: {{ p.duree }}</li>{% endif %}
         {% if fmt %}<li class="badge">Format: {{ fmt | upcase }}</li>{% endif %}
       </ul>
       {% if p.programme_url %}<a class="qv-program" href="{{ p.programme_url }}" target="_blank" rel="noopener">Programme détaillé</a>{% endif %}

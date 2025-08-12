@@ -168,13 +168,16 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
 {% assign packs_hero_tmp = packs_hero_by_type | concat: packs_hero_by_cat %}
 {% assign pack_featured = packs_hero_tmp | uniq | first %}
 {% if pack_featured %}
-<section class="boutique-hero" aria-label="Mise en avant pack">
+<section class="boutique-hero split" aria-label="Mise en avant pack">
   <div class="container">
-    <div class="hero-banner">
-      <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
-      <div class="hero-caption">
-        <h2>{{ pack_featured.nom }}</h2>
-        <p>{{ pack_featured.description | truncate: 160 }}</p>
+    <div class="hero-split">
+      <div class="hero-col content">
+        <h2 class="hero-title">{{ pack_featured.nom }}</h2>
+        <p class="hero-subtitle">{{ pack_featured.description }}</p>
+        <ul class="hero-bullets">
+          <li>Actionnables tout de suite</li>
+          <li>Progresser par étapes</li>
+        </ul>
         {% assign has_payment = false %}
         {% if pack_featured.lien_paiement and pack_featured.lien_paiement != '' %}
           {% assign has_payment = true %}
@@ -195,29 +198,23 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
           {% endif %}
           <span class="price-chip">{{ pack_featured.prix }}</span>
         </div>
+        <div class="guarantee-strip" aria-label="Garanties">
+          <div class="guarantee-item" role="text">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Mises à jour incluses</span>
+          </div>
+          <div class="guarantee-item" role="text">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
+            <span>Support 48h</span>
+          </div>
+          <div class="guarantee-item" role="text">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+            <span>Paiement sécurisé</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="guarantee-strip" aria-label="Garanties">
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-        <span>Mises à jour incluses</span>
-      </div>
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
-        <span>Support 48h</span>
-      </div>
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-        <span>Paiement sécurisé</span>
-      </div>
-      <!-- Ajouts: bénéfices compactés au format réassurance -->
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20l9-16H3l9 16z"/></svg>
-        <span>Actionnables tout de suite</span>
-      </div>
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg>
-        <span>Progresser par étapes</span>
+      <div class="hero-col media">
+        <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
       </div>
     </div>
   </div>
@@ -231,13 +228,13 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
             {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
             {% assign niveaux_list = site.data.produits | map: 'niveau' | compact | uniq | sort %}
-            {%- comment -%}
-              Normalise les formats en minuscules pour éviter les doublons (ex: "PDF" et "pdf")
-            {%- endcomment -%}
-            {% assign formats_from_format = site.data.produits | map: 'format' | compact | join: '|' | downcase | split: '|' %}
-            {% assign formats_from_file = site.data.produits | map: 'file_format' | compact | join: '|' | downcase | split: '|' %}
-            {% assign formats_list_tmp = formats_from_format | concat: formats_from_file %}
-            {% assign formats_list = formats_list_tmp | uniq | sort %}
+            {%- comment -%} Construire la liste des formats sans utiliser map (évite erreurs si un item est invalide) {%- endcomment -%}
+            {% assign formats_concat = '' %}
+            {% for pr in site.data.produits %}
+              {% if pr.format %}{% assign formats_concat = formats_concat | append: pr.format | append: '|' %}{% endif %}
+              {% if pr.file_format %}{% assign formats_concat = formats_concat | append: pr.file_format | append: '|' %}{% endif %}
+            {% endfor %}
+            {% assign formats_list = formats_concat | downcase | split: '|' | uniq | sort %}
         <nav class="boutique-quick-nav" aria-label="Navigation rapide">
             {% if univers_list.size > 0 %}
             <div class="quick-nav-block quick-nav-univers">
