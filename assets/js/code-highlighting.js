@@ -6,9 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Améliorer la présentation des blocs de code
     enhanceCodeBlocks();
-    
-    // Ajouter la numérotation des lignes si nécessaire
-    addLineNumbers();
+    // Numérotation des lignes désactivée
     
 });
 

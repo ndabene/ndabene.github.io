@@ -331,6 +331,49 @@ p code, li code, td code {
 }
 
 //================================================
+// LINE NUMBERS GUTTER FOR CODE BLOCKS
+//================================================
+// JS adds the class `line-numbers` on the `pre` element and injects
+// a `.line-numbers-container` with multiple `.line-number` spans.
+// Without these styles, the numbers render inline ("123456").
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.75rem; // extra breathing room between gutter and code
+}
+
+pre.line-numbers .line-numbers-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.25rem;
+  padding: 1.5rem 0.5rem; // match `pre` vertical padding
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0; // exact stacking per line
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.12) 0%, rgba(15, 23, 42, 0.06) 100%);
+  border-right: 1px solid rgba(148, 163, 184, 0.25);
+  pointer-events: none; // avoid blocking text selection
+  user-select: none;
+}
+
+pre.line-numbers .line-number {
+  display: block;
+  text-align: right;
+  color: #94a3b8; // slate-400
+  font-size: 0.75rem;
+  line-height: 1.6; // aligns with code line-height
+  height: 1.6em;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  pre.line-numbers { padding-left: 3rem; }
+  pre.line-numbers .line-numbers-container { width: 2.75rem; }
+}
+
+//================================================
 // PRINT STYLES
 //================================================
 @media print {
