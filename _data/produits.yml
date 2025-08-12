@@ -63,6 +63,10 @@
   file_format: "pdf"
   univers: "IA"
   last_update: "2025-08-12"
+  resultats:
+    - "Comprendre l'impact de l'IA sur l'environnement et la société"
+    - "Mettre en place un plan « Green AI »"
+    - "Cadrer les risques sociétaux (emploi, biais, désinfo)"
   micro_extraits:
     - "Vous apprendrez à évaluer l’empreinte de l’IA (énergie, eau, matériel) sur tout le cycle de vie."
     - "Vous saurez mettre en place un plan « Green AI » : right-sizing des modèles, prompts sobres, cache, batch."

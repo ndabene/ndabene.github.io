@@ -165,8 +165,30 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
             .product-card-image .hover-details { transform: translateY(0); }
+            .card-reveal { max-height: 1200px; opacity: 1; }
         }
     }
+
+    // Ensure feature bullets look correct anywhere inside a product card (content or reveal)
+    .product-card .micro-extraits {
+        list-style: none;
+        padding: 0;
+        margin: 0.6rem 0 0.2rem;
+        display: grid;
+        gap: 0.35rem;
+    }
+    .product-card .micro-extraits li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.45rem;
+        background: #f8fafc;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 0.35rem 0.55rem;
+        font-size: 0.9rem;
+        color: #334155;
+    }
+    .product-card .micro-extraits li svg { width: 18px; height: 18px; color: #0ea5e9; margin-top: 2px; flex-shrink: 0; }
 
     // Mise en avant: packs en pleine largeur
     .product-category-section#packs .product-grid {
@@ -204,12 +226,16 @@
             transition: transform .25s ease;
         }
         .hover-details ul { margin: 0; padding-left: 1.1rem; }
-        .hover-details li { margin: .15rem 0; }
+        .hover-details li { margin: .15rem 0; list-style: none; }
+        .hover-details li::before { content: '›'; margin-right: .35rem; }
     }
 
     .product-card-content {
         padding: 1.5rem;
         flex-grow: 1;
+        max-height: 220px;
+        overflow: hidden;
+        position: relative;
 
         .course-meta {
             list-style: none;
@@ -281,22 +307,9 @@
             color: #7c2d12;
         }
 
-        .product-meta-line {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.4rem;
-
-            .meta-chip {
-                background: #eef2f7;
-                border: 1px solid #dbe2ea;
-                color: #0f172a;
-                border-radius: 8px;
-                padding: 0.22rem 0.55rem;
-                font-size: 0.78rem;
-                font-weight: 700;
-            }
-        }
+        .meta-badges { list-style:none; display:flex; flex-wrap:wrap; gap:.4rem; margin:.25rem 0 0; padding:0; }
+        .meta-badges .badge { background:#eef2f7; border:1px solid #dbe2ea; color:#0f172a; border-radius:999px; padding:.18rem .55rem; font-size:.75rem; font-weight:700; }
+        .meta-badges .badge.muted { background:#f5f7fa; color:#64748b; }
 
         // Micro-highlights (3 bullets "Vous apprendrez…")
         .micro-extraits {
@@ -332,12 +345,14 @@
         color: #666;
         line-height: 1.5;
     }
+.hover-hint { font-size: .8rem; color:#64748b; margin-top: .35rem; }
 
+    .card-reveal { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .35s ease, opacity .25s ease; padding: 0 1.5rem 1rem; }
     .product-card-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 1rem 0;
         background-color: #f9f9f9;
         border-top: 1px solid #eee;
     }
