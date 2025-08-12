@@ -162,39 +162,44 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
     </div>
 </section>
 
-{%- comment -%} Banner slider en haut de boutique — toutes les formations {%- endcomment -%}
-{% assign courses_by_type = site.data.produits | where: 'type', 'formation' %}
-{% assign courses_by_cat = site.data.produits | where: 'categorie', 'Formation en ligne' %}
-{% assign courses_by_cat2 = site.data.produits | where: 'categorie', 'Formation IA pour tous' %}
-{% assign courses_tmp = courses_by_type | concat: courses_by_cat | concat: courses_by_cat2 %}
-{% assign courses = courses_tmp | uniq %}
-{% if courses and courses.size > 0 %}
-<section class="boutique-hero-slider" data-slider>
+{%- comment -%} Hero unique focalisé sur le pack (objectif: Voir le programme) {%- endcomment -%}
+{% assign packs_hero_by_type = site.data.produits | where: 'type', 'pack' %}
+{% assign packs_hero_by_cat = site.data.produits | where: 'categorie', 'Pack' %}
+{% assign packs_hero_tmp = packs_hero_by_type | concat: packs_hero_by_cat %}
+{% assign pack_featured = packs_hero_tmp | uniq | first %}
+{% if pack_featured %}
+<section class="boutique-hero" aria-label="Mise en avant pack">
   <div class="container">
-    <div class="media-track" data-track>
-      {% for p in courses %}
-      <div class="banner-slide">
-        <a href="/boutique/{{ p.nom | slugify }}/">
-          <img src="{{ '/' | append: p.image | replace: '//' , '/' | relative_url }}" alt="{{ p.nom }}" loading="lazy">
-          <div class="banner-caption">
-            <h3>{{ p.nom }}</h3>
-            <p>{{ p.description | truncate: 120 }}</p>
-            <div class="banner-actions">
-              <span class="price-chip">{{ p.prix }}</span>
-              <span class="meta-chip">{{ p.niveau | default: 'Tous niveaux' }}</span>
-              {% if p.duree %}<span class="meta-chip">{{ p.duree }}</span>{% endif %}
-            </div>
-          </div>
-        </a>
+    <div class="hero-banner">
+      <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
+      <div class="hero-caption">
+        <h2>{{ pack_featured.nom }}</h2>
+        <p>{{ pack_featured.description | truncate: 160 }}</p>
+        <div class="hero-actions">
+          {% if site.shop_enabled and pack_featured.programme_url %}
+            <a class="btn-primary" href="{{ pack_featured.programme_url }}" target="_blank" rel="noopener">Voir le programme</a>
+          {% else %}
+            <span class="btn-primary disabled" aria-disabled="true">Programme bientôt</span>
+          {% endif %}
+          <span class="price-chip">{{ pack_featured.prix }}</span>
+        </div>
       </div>
-      {% endfor %}
     </div>
-    <div class="slider-controls">
-      <button class="slider-btn" data-prev aria-label="Slide précédent">‹</button>
-      <button class="slider-btn" data-next aria-label="Slide suivant">›</button>
+    <div class="guarantee-strip" aria-label="Garanties">
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>Mises à jour incluses</span>
+      </div>
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
+        <span>Support 48h</span>
+      </div>
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+        <span>Paiement sécurisé</span>
+      </div>
     </div>
   </div>
-  <script src="{{ '/assets/js/boutique-slider.js' | relative_url }}" defer></script>
 </section>
 {% endif %}
 

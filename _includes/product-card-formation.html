@@ -26,6 +26,8 @@
      data-format="{{ fmt }}"
      data-price="{{ price_num }}"
      data-duration="{{ p.duree | default: '' }}"
+     {% if p.last_update %}data-updated="{{ p.last_update }}"{% endif %}
+     {% if p.bestseller %}data-popularity="2"{% else %}data-popularity="0"{% endif %}
      data-name="{{ p.nom | downcase }}">
 
   {% if p.image %}
@@ -62,9 +64,13 @@
       {% if fmt %}<span class="meta-chip">Format: {{ fmt | upcase }}</span>{% endif %}
     </div>
 
-    {% if is_course and p.programme_url %}
+    {% if is_course %}
     <div class="course-actions">
-      <a href="{{ p.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+      {% if site.shop_enabled and p.programme_url %}
+        <a href="{{ p.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+      {% else %}
+        <span class="btn-outline disabled" aria-disabled="true">Programme bientôt</span>
+      {% endif %}
       <button class="btn-outline quick-view-btn" type="button" data-quickview>Quick‑view</button>
     </div>
     {% endif %}
