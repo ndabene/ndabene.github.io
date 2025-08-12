@@ -162,6 +162,42 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
     </div>
 </section>
 
+{%- comment -%} Banner slider en haut de boutique — toutes les formations {%- endcomment -%}
+{% assign courses_by_type = site.data.produits | where: 'type', 'formation' %}
+{% assign courses_by_cat = site.data.produits | where: 'categorie', 'Formation en ligne' %}
+{% assign courses_by_cat2 = site.data.produits | where: 'categorie', 'Formation IA pour tous' %}
+{% assign courses_tmp = courses_by_type | concat: courses_by_cat | concat: courses_by_cat2 %}
+{% assign courses = courses_tmp | uniq %}
+{% if courses and courses.size > 0 %}
+<section class="boutique-hero-slider" data-slider>
+  <div class="container">
+    <div class="media-track" data-track>
+      {% for p in courses %}
+      <div class="banner-slide">
+        <a href="/boutique/{{ p.nom | slugify }}/">
+          <img src="{{ '/' | append: p.image | replace: '//' , '/' | relative_url }}" alt="{{ p.nom }}" loading="lazy">
+          <div class="banner-caption">
+            <h3>{{ p.nom }}</h3>
+            <p>{{ p.description | truncate: 120 }}</p>
+            <div class="banner-actions">
+              <span class="price-chip">{{ p.prix }}</span>
+              <span class="meta-chip">{{ p.niveau | default: 'Tous niveaux' }}</span>
+              {% if p.duree %}<span class="meta-chip">{{ p.duree }}</span>{% endif %}
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" data-prev aria-label="Slide précédent">‹</button>
+      <button class="slider-btn" data-next aria-label="Slide suivant">›</button>
+    </div>
+  </div>
+  <script src="{{ '/assets/js/boutique-slider.js' | relative_url }}" defer></script>
+</section>
+{% endif %}
+
 <section class="section boutique-page-section">
     <div class="container">
         <section class="benefits-row" aria-label="Pourquoi ces e‑books et formations ?">
@@ -393,95 +429,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                 {% if product.type == 'pack' or product.categorie == 'Pack' %}
                   {% assign is_pack = true %}
                 {% endif %}
-                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} {% if is_pack %}data-type="pack"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-niveau="{{ product.niveau | default: '' }}" data-format="{{ product.format | default: product.file_format | default: '' }}" data-name="{{ product.nom | downcase }}">
-                    {% if product.image %}
-                    <div class="product-card-image">
-                        <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
-                    </div>
-                    {% endif %}
-                    <div class="product-card-content">
-                        <div class="product-header-row">
-                            {% if product.univers %}
-                              <span class="univers-badge">{{ product.univers }}</span>
-                            {% endif %}
-                        </div>
-                        <h3 class="product-title">{{ product.nom }}</h3>
-                        <p class="product-description">{{ product.description | truncate: 160 }}</p>
-                        {% if product.micro_extraits %}
-                        <ul class="micro-extraits">
-                            {% for it in product.micro_extraits limit:3 %}
-                            <li>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span>{{ it }}</span>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        <div class="product-meta-line">
-                            {% if product.niveau %}<span class="meta-chip">Niveau: {{ product.niveau }}</span>{% endif %}
-                            {% if product.duree %}<span class="meta-chip">Durée: {{ product.duree }}</span>{% endif %}
-                            {% if product.format %}<span class="meta-chip">Format: {{ product.format }}</span>{% endif %}
-                            {% if product.pages %}<span class="meta-chip">Pages: {{ product.pages }}</span>{% endif %}
-                        </div>
-
-                        {% if is_course %}
-                        <ul class="course-meta">
-                            {% if product.niveau %}<li class="badge">Niveau: {{ product.niveau }}</li>{% endif %}
-                            {% if product.duree %}<li class="badge">Durée: {{ product.duree }}</li>{% endif %}
-                            {% if product.format %}<li class="badge">Format: {{ product.format }}</li>{% endif %}
-                            {% if product.langue %}<li class="badge">Langue: {{ product.langue }}</li>{% endif %}
-                        </ul>
-                        {% if product.programme_url %}
-                        <div class="course-actions">
-                            <a href="{{ product.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
-                        </div>
-                        {% endif %}
-                        {% endif %}
-
-                        {% if is_ebook %}
-                        <ul class="ebook-meta">
-                            {% if product.author %}<li class="badge">Auteur: {{ product.author }}</li>{% endif %}
-                            <li class="badge">Format: {{ product.format | default: 'PDF' }}</li>
-                            {% if product.pages %}<li class="badge">Pages: {{ product.pages }}</li>{% endif %}
-                            {% if product.langue %}<li class="badge">Langue: {{ product.langue }}</li>{% endif %}
-                        </ul>
-                        {% endif %}
-
-                        {% if is_pack %}
-                        <div class="pack-ribbon">Pack</div>
-                        {% if product.inclus %}
-                        <ul class="pack-items">
-                            {% assign max_items = 3 %}
-                            {% for it in product.inclus limit:max_items %}
-                              <li class="pack-item">{{ it }}</li>
-                            {% endfor %}
-                            {% if product.inclus.size > max_items %}
-                              <li class="pack-item more">+{{ product.inclus.size | minus: max_items }} contenus</li>
-                            {% endif %}
-                        </ul>
-                        {% endif %}
-                        {% if product.avantage %}
-                          <div class="pack-advantage">{{ product.avantage }}</div>
-                        {% endif %}
-                        {% endif %}
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="product-price">{{ product.prix }}</span>
-                        {% if site.shop_enabled %}
-                          {% if is_course %}
-                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
-                          {% elsif is_ebook %}
-                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
-                          {% elsif is_pack %}
-                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
-                          {% else %}
-                            <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
-                          {% endif %}
-                        {% else %}
-                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
-                        {% endif %}
-                    </div>
-                </div>
+                {% include product-card-formation.html product=product %}
                 {% endfor %}
             </div>
         </div>
@@ -496,6 +444,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
 </section>
 
 <script src="{{ '/assets/js/boutique-filters.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/boutique-modal.js' | relative_url }}" defer></script>
 
 <script type="application/ld+json">
 {

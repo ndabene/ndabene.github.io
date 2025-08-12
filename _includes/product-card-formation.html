@@ -1,0 +1,104 @@
+{% assign p = include.product %}
+{% assign is_course = false %}
+{% assign is_ebook = false %}
+{% assign is_pack = false %}
+{% if p.type == 'formation' or p.categorie == 'Formation en ligne' %}
+  {% assign is_course = true %}
+{% endif %}
+{% if p.type == 'ebook' or p.file_format == 'pdf' or p.format == 'PDF' %}
+  {% assign is_ebook = true %}
+{% endif %}
+{% if p.type == 'pack' or p.categorie == 'Pack' %}
+  {% assign is_pack = true %}
+{% endif %}
+
+{% comment %} Utilitaires prix et format {% endcomment %}
+{% capture price_num %}{{ p.prix | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | strip }}{% endcapture %}
+{% capture fmt %}{{ p.format | default: p.file_format | default: '' }}{% endcapture %}
+
+<div class="product-card"
+     {% if is_course %}data-type="formation"{% endif %}
+     {% if is_ebook %}data-type="ebook"{% endif %}
+     {% if is_pack %}data-type="pack"{% endif %}
+     data-univers="{{ p.univers | default: '' }}"
+     data-categorie="{{ p.categorie | default: '' }}"
+     data-niveau="{{ p.niveau | default: '' }}"
+     data-format="{{ fmt }}"
+     data-price="{{ price_num }}"
+     data-duration="{{ p.duree | default: '' }}"
+     data-name="{{ p.nom | downcase }}">
+
+  {% if p.image %}
+  <div class="product-card-image">
+    {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
+    <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}">
+  </div>
+  {% endif %}
+
+  <div class="product-card-content">
+    <div class="product-header-row">
+      {% if p.univers %}<span class="univers-badge">{{ p.univers }}</span>{% endif %}
+      {% if p.featured or p.bestseller %}
+        <span class="univers-badge" style="margin-left:.4rem;background:rgba(234,179,8,.12);border-color:rgba(234,179,8,.35);color:#92400e;">{% if p.bestseller %}Meilleur vendeur{% else %}Recommandé{% endif %}</span>
+      {% endif %}
+    </div>
+    <h3 class="product-title">{{ p.nom }}</h3>
+    <p class="product-description">{{ p.description | truncate: 160 }}</p>
+
+    {% if p.resultats %}
+    <ul class="micro-extraits">
+      {% for it in p.resultats limit:3 %}
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>{{ it }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="product-meta-line">
+      {% if p.niveau %}<span class="meta-chip">Niveau: {{ p.niveau }}</span>{% endif %}
+      {% if p.duree %}<span class="meta-chip">Durée: {{ p.duree }}</span>{% endif %}
+      {% if fmt %}<span class="meta-chip">Format: {{ fmt | upcase }}</span>{% endif %}
+    </div>
+
+    {% if is_course and p.programme_url %}
+    <div class="course-actions">
+      <a href="{{ p.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+      <button class="btn-outline quick-view-btn" type="button" data-quickview>Quick‑view</button>
+    </div>
+    {% endif %}
+
+    <template class="quick-view-content">
+      <div class="qv-title">{{ p.nom }}</div>
+      {% if p.resultats %}
+        <ul class="qv-results">{% for it in p.resultats %}<li>{{ it }}</li>{% endfor %}</ul>
+      {% endif %}
+      <div class="qv-meta">
+        {% if p.niveau %}<span>Niveau: {{ p.niveau }}</span>{% endif %}
+        {% if p.duree %}<span>Durée: {{ p.duree }}</span>{% endif %}
+        {% if fmt %}<span>Format: {{ fmt | upcase }}</span>{% endif %}
+      </div>
+      {% if p.programme_url %}<a class="qv-program" href="{{ p.programme_url }}" target="_blank" rel="noopener">Programme détaillé</a>{% endif %}
+    </template>
+  </div>
+
+  <div class="product-card-footer">
+    <span class="product-price">{{ p.prix }}</span>
+    {% if site.shop_enabled and p.lien_paiement %}
+      {% if is_course %}
+        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
+      {% elsif is_ebook %}
+        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+      {% elsif is_pack %}
+        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
+      {% else %}
+        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
+      {% endif %}
+    {% else %}
+      <a href="/boutique/{{ p.nom | slugify }}/" class="btn-outline">Voir la fiche</a>
+    {% endif %}
+  </div>
+</div>
+
+
