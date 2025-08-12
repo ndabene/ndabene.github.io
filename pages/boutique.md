@@ -175,11 +175,23 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
       <div class="hero-caption">
         <h2>{{ pack_featured.nom }}</h2>
         <p>{{ pack_featured.description | truncate: 160 }}</p>
+        {% assign has_payment = false %}
+        {% if pack_featured.lien_paiement and pack_featured.lien_paiement != '' %}
+          {% assign has_payment = true %}
+        {% endif %}
+        {% assign override_inactive = false %}
+        {% if pack_featured.actif == false or pack_featured.active == false or pack_featured.enabled == false or pack_featured.status == 'inactive' %}
+          {% assign override_inactive = true %}
+        {% endif %}
+        {% assign is_active = false %}
+        {% if site.shop_enabled and has_payment and override_inactive == false %}
+          {% assign is_active = true %}
+        {% endif %}
         <div class="hero-actions">
-          {% if site.shop_enabled and pack_featured.programme_url %}
-            <a class="btn-primary" href="{{ pack_featured.programme_url }}" target="_blank" rel="noopener">Voir le programme</a>
+          {% if is_active %}
+            <a class="btn-primary" href="{{ pack_featured.lien_paiement }}" target="_blank" rel="noopener">Commencer</a>
           {% else %}
-            <span class="btn-primary disabled" aria-disabled="true">Programme bientôt</span>
+            <span class="btn-primary disabled" aria-disabled="true">Bientôt disponible</span>
           {% endif %}
           <span class="price-chip">{{ pack_featured.prix }}</span>
         </div>
@@ -398,7 +410,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
         </div>
         <div class="faq-content-inline">
           <div class="faq-question-inline">Comment accéder à votre e‑book ou formation après l’achat&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Vous recevez immédiatement un e‑mail de confirmation contenant le lien d’accès et/ou de téléchargement. Conservez cet e‑mail pour retrouver vos contenus ultérieurement. En cas de difficulté, contactez le support via le <a href="/contact/">formulaire</a>.</p></div>
+          <div class="faq-answer-inline"><p>Après paiement sécurisé, vous recevez immédiatement un e‑mail de confirmation avec votre lien d’accès/téléchargement. Conservez‑le, il reste actif. Besoin d’aide&nbsp;? <strong>Réponse sous 48h</strong> via le <a href="/contact/">formulaire</a>.</p></div>
         </div>
       </div>
 
@@ -408,7 +420,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
         </div>
         <div class="faq-content-inline">
           <div class="faq-question-inline">Quels univers sont couverts&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Le catalogue s’organise par univers (IA, e‑commerce PrestaShop, développement, …). Chaque produit indique son univers et son niveau pour vous orienter rapidement.</p></div>
+          <div class="faq-answer-inline"><p>Nos contenus sont organisés par univers (IA, PrestaShop, développement). Chaque fiche affiche <strong>univers, niveau, durée et format</strong> pour vous orienter rapidement.</p></div>
         </div>
       </div>
 
@@ -417,10 +429,21 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3z"></path><path d="M7 7v14"></path><path d="M17 7v14"></path></svg>
         </div>
         <div class="faq-content-inline">
-          <div class="faq-question-inline">Comment les contenus sont-ils mis à jour&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Les formations et e‑books sont maintenus et enrichis régulièrement afin de rester utiles et applicables. Le journal de mise à jour est mentionné sur chaque fiche.</p></div>
+          <div class="faq-question-inline">Comment les contenus sont‑ils mis à jour&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Nous publions des mises à jour régulières pour rester utiles et applicables. La <strong>date de mise à jour</strong> est visible sur chaque fiche.</p></div>
         </div>
       </div>
+
+      <div class="faq-item-inline animate-item">
+        <div class="faq-icon-inline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l9-16H3l9 16z"/></svg>
+        </div>
+        <div class="faq-content-inline">
+          <div class="faq-question-inline">Puis‑je commencer tout de suite&nbsp;?</div>
+          <div class="faq-answer-inline"><p>Oui. Les contenus sont <strong>actionnables immédiatement</strong> : supports clairs, méthodes et check‑lists prêtes à l’emploi pour progresser pas à pas.</p></div>
+        </div>
+      </div>
+    
     </div>
   </div>
 </section>

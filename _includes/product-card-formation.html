@@ -17,6 +17,12 @@
 {% capture fmt %}{{ p.format | default: p.file_format | default: '' }}{% endcapture %}
 {% comment %} Liste de features: priorise resultats, sinon inclus (pack) {% endcomment %}
 {% assign features = p.resultats | default: p.inclus %}
+{% comment %} CTA label & activation logic {% endcomment %}
+{% assign cta_label = 'Commencer' %}
+{% assign has_payment = p.lien_paiement and p.lien_paiement != '' %}
+{% assign override_inactive = false %}
+{% if p.actif == false or p.active == false or p.enabled == false or p.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+{% assign is_active = site.shop_enabled and has_payment and override_inactive == false %}
 
 <div class="product-card"
      {% if is_course %}data-type="formation"{% endif %}
@@ -87,10 +93,10 @@
 
     {% if is_course %}
     <div class="course-actions">
-      {% if site.shop_enabled and p.programme_url %}
-        <a href="{{ p.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+      {% if is_active %}
+        <a href="{{ p.lien_paiement }}" class="btn-outline" target="_blank" rel="noopener">{{ cta_label }}</a>
       {% else %}
-        <span class="btn-outline disabled" aria-disabled="true">Programme bientôt</span>
+        <span class="btn-outline disabled" aria-disabled="true">En cours d'activation</span>
       {% endif %}
       <button class="btn-outline quick-view-btn" type="button" data-quickview>Quick‑view</button>
     </div>
@@ -100,10 +106,10 @@
 
   <div class="product-card-footer">
     <span class="product-price">{{ p.prix }}</span>
-    {% if site.shop_enabled and p.lien_paiement %}
-      <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">Voir le programme</a>
+    {% if is_active %}
+      <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">{{ cta_label }}</a>
     {% else %}
-      <span class="btn-primary disabled" aria-disabled="true">Programme bientôt</span>
+      <span class="btn-primary disabled" aria-disabled="true">Bientôt disponible</span>
     {% endif %}
   </div>
 </div>

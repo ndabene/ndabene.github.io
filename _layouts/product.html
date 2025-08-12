@@ -44,10 +44,16 @@ layout: default
         <div class="badge">{{ p.categorie }}</div>
         {% endif %}
 
+        {% assign has_payment = p.lien_paiement and p.lien_paiement != '' %}
+        {% assign override_inactive = false %}
+        {% if p.actif == false or p.active == false or p.enabled == false or p.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+        {% assign is_active = site.shop_enabled and has_payment and override_inactive == false %}
         <div class="price-and-cta">
           {% if p.prix %}<div class="price">{{ p.prix }}</div>{% endif %}
-          {% if p.lien_paiement %}
-            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="buy-btn">Acheter</a>
+          {% if is_active %}
+            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="buy-btn">Commencer</a>
+          {% else %}
+            <span class="buy-btn" style="opacity:.6;pointer-events:none;">Bientôt disponible</span>
           {% endif %}
         </div>
 

@@ -28,7 +28,7 @@ plugins:
 
 # Boutique (achat en ligne)
 # Mettre à true quand Lemon Squeezy est validé
-shop_enabled: false
+shop_enabled: true
 
 # Sass/SCSS settings - Optimisé mobile 2025
 sass:
