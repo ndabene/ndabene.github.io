@@ -238,8 +238,11 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
             {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
             {% assign niveaux_list = site.data.produits | map: 'niveau' | compact | uniq | sort %}
-            {% assign formats_from_format = site.data.produits | map: 'format' | compact %}
-            {% assign formats_from_file = site.data.produits | map: 'file_format' | compact %}
+            {%- comment -%}
+              Normalise les formats en minuscules pour éviter les doublons (ex: "PDF" et "pdf")
+            {%- endcomment -%}
+            {% assign formats_from_format = site.data.produits | map: 'format' | compact | join: '|' | downcase | split: '|' %}
+            {% assign formats_from_file = site.data.produits | map: 'file_format' | compact | join: '|' | downcase | split: '|' %}
             {% assign formats_list_tmp = formats_from_format | concat: formats_from_file %}
             {% assign formats_list = formats_list_tmp | uniq | sort %}
         <nav class="boutique-quick-nav" aria-label="Navigation rapide">
@@ -285,18 +288,6 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
 
             <div class="quick-search">
                 <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
-            </div>
-
-            <div class="quick-sort">
-                <label for="sort-by" class="label">Trier</label>
-                <select id="sort-by" aria-label="Trier les résultats">
-                    <option value="relevance" selected>Pertinence</option>
-                    <option value="new">Nouveautés</option>
-                    <option value="price-asc">Prix ↑</option>
-                    <option value="price-desc">Prix ↓</option>
-                    <option value="popularity">Popularité</option>
-                </select>
-                <span id="results-count" class="results-count" aria-live="polite"></span>
             </div>
         </nav>
         
@@ -344,66 +335,10 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
         {% assign grouped_products = site.data.produits | group_by: "categorie" %}
 
         {%- comment -%} Section packs {%- endcomment -%}
-        {% assign packs_by_type = site.data.produits | where: 'type', 'pack' %}
-        {% assign packs_by_cat = site.data.produits | where: 'categorie', 'Pack' %}
-        {% assign packs_tmp = packs_by_type | concat: packs_by_cat %}
-        {% assign packs = packs_tmp | uniq %}
-
-        {% if packs.size > 0 %}
-        <div class="product-category-section" id="packs">
-            <div class="product-grid">
-                {% for product in packs %}
-                {% assign is_pack = true %}
-                <div class="product-card" data-type="pack" data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
-                    <div class="pack-inner">
-                        {% if product.image %}
-                        <div class="pack-media">
-                            {% if product.univers %}
-                              <span class="univers-badge badge-overlay">{{ product.univers }}</span>
-                            {% endif %}
-                            <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">
-                        </div>
-                        {% endif %}
-                        <div class="pack-content">
-                            <h3 class="product-title">{{ product.nom }}</h3>
-                            <p class="product-description">{{ product.description | truncate: 220 }}</p>
-                        {% if product.micro_extraits %}
-                            <ul class="micro-extraits">
-                                {% for it in product.micro_extraits limit:3 %}
-                                <li>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-                                    <span>{{ it }}</span>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                        {% if product.inclus %}
-                            <div class="pack-includes-label">Inclus&nbsp;:</div>
-                            <ul class="pack-checklist">
-                                {% for it in product.inclus %}
-                                  <li>
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-                                    <span>{{ it }}</span>
-                                  </li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                        </div>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="product-price">{{ product.prix }}</span>
-                        {% if site.shop_enabled %}
-                          <a href="{{ product.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
-                        {% else %}
-                          <span style="font-size:0.9rem;color:#64748b;">Achat bientôt disponible</span>
-                        {% endif %}
-                    </div>
-                    <div class="pack-ribbon">Pack</div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
+{%- comment -%}
+  Section packs dédiée retirée pour harmoniser l’affichage:
+  les packs apparaissent maintenant dans la grille générale via les cartes standard.
+{%- endcomment -%}
 
         
         {% for group in grouped_products %}
@@ -413,18 +348,14 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                 <span class="category-count">{{ group.items.size }} produit{% if group.items.size > 1 %}s{% endif %}</span>
             </div>
 
-            {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
-            {% if cat_meta and cat_meta.description %}
-            <div class="category-description">
-                {{ cat_meta.description }}
-            </div>
-            {% endif %}
-
             <div class="product-grid">
-                {% for product in group.items %}
-                {% if product.type == 'pack' or product.categorie == 'Pack' %}
-                  {% continue %}
+                {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
+                {% if cat_meta and cat_meta.description %}
+                <div class="category-description">
+                    {{ cat_meta.description }}
+                </div>
                 {% endif %}
+                {% for product in group.items %}
                 {% assign is_course = false %}
                 {% assign is_ebook = false %}
                 {% assign is_pack = false %}

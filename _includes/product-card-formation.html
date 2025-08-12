@@ -36,6 +36,7 @@
   <div class="product-card-image">
     {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
     <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}">
+    {% if is_pack %}<span class="card-ribbon">Pack</span>{% endif %}
   </div>
   {% endif %}
 

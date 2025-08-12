@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('facet-search');
   const noResults = document.getElementById('no-results');
   const loadMoreBtn = document.getElementById('load-more');
-  const sortSelect = document.getElementById('sort-by');
-  const resultsCount = document.getElementById('results-count');
+  const sortSelect = null; // tri désactivé côté UI
+  const resultsCount = null; // compteur lié au tri supprimé
 
   // Pagination client-side simple
   const PAGE_SIZE = 24;
@@ -99,10 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     noResults.style.display = totalMatches === 0 ? '' : 'none';
 
-    // Update results count
-    if (resultsCount) {
-      resultsCount.textContent = `${Math.min(visible, totalMatches)} / ${totalMatches}`;
-    }
+    // Compteur de résultats retiré avec l'UI de tri
   }
 
   function setActive(button, groupSelector) {
@@ -198,11 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFilters();
   });
 
-  // Sorting change
-  sortSelect?.addEventListener('change', () => {
-    shown = PAGE_SIZE;
-    applyFilters();
-  });
+  // Tri désactivé
 });
 
 

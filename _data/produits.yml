@@ -8,8 +8,8 @@
   prix: "49€ / HT"
   lemon_variant_id: 937957
   type: "ebook"
-  format: "PDF"
-  file_format: "pdf"
+  format: "PDF & Podcast"
+
   univers: "IA"
   niveau: "Débutant"
   duree: "2h30"
@@ -59,8 +59,8 @@
   prix: "29€ / HT"
   lemon_variant_id: 937978
   type: "ebook"
-  format: "PDF"
-  file_format: "pdf"
+  format: "PDF & Podcast"
+
   univers: "IA"
   last_update: "2025-08-12"
   resultats:
@@ -80,8 +80,8 @@
   prix: "49€ / HT"
   lemon_variant_id: 
   type: "ebook"
-  format: "PDF"
-  file_format: "pdf"
+  format: "PDF & Podcast"
+
   univers: "IA"
   niveau: "Intermédiaire"
   duree: "3h"

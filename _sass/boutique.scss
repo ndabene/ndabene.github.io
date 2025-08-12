@@ -162,10 +162,10 @@
         position: relative; // ensure absolutely-positioned children (e.g., pack ribbon) stick to the card
 
         &:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-            .product-card-image .hover-details { transform: translateY(0); }
-            .card-reveal { max-height: 1200px; opacity: 1; }
+            .product-card-image .hover-details { transform: translateY(0); transition-duration: .4s; }
+            .card-reveal { max-height: 1200px; opacity: 1; transition-duration: .5s; }
         }
     }
 
@@ -214,6 +214,20 @@
             z-index: 2;
         }
 
+        .card-ribbon {
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            transform: rotate(45deg);
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.7rem;
+            padding: 0.25rem 2rem;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+            z-index: 2;
+        }
+
         // Hover reveal for quick details (sales copy/SEO-friendly snippets)
         .hover-details {
             position: absolute;
@@ -233,7 +247,7 @@
     .product-card-content {
         padding: 1.5rem;
         flex-grow: 1;
-        max-height: 220px;
+        max-height: 260px;
         overflow: hidden;
         position: relative;
 
@@ -347,12 +361,12 @@
     }
 .hover-hint { font-size: .8rem; color:#64748b; margin-top: .35rem; }
 
-    .card-reveal { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .35s ease, opacity .25s ease; padding: 0 1.5rem 1rem; }
+    .card-reveal { max-height: 0; opacity: 0; overflow: hidden; transition: max-height .5s ease, opacity .35s ease; padding: .25rem 1.5rem 1rem; }
     .product-card-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 0;
+        padding: 1rem 1.25rem;
         background-color: #f9f9f9;
         border-top: 1px solid #eee;
     }
@@ -651,6 +665,18 @@
   margin-bottom: .75rem;
   color: #334155;
   line-height: 1.55;
+  grid-column: 1 / -1; /* span full width of grid */
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
+}
+
+/* Ensure full-width spanning when inside the grid container */
+.product-category-section .product-grid > .category-description {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  justify-self: stretch;
 }
 
 // Highlight on scroll target
