@@ -34,6 +34,17 @@
   <div class="product-card-image">
     {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
     <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}">
+    <div class="hover-details">
+      {% if p.resultats %}
+        <ul>
+          {% for it in p.resultats limit:2 %}
+            <li>{{ it }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>{{ p.description | truncate: 120 }}</p>
+      {% endif %}
+    </div>
   </div>
   {% endif %}
 
@@ -93,16 +104,16 @@
     <span class="product-price">{{ p.prix }}</span>
     {% if site.shop_enabled and p.lien_paiement %}
       {% if is_course %}
-        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">S'inscrire</a>
+        <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">S'inscrire</a>
       {% elsif is_ebook %}
-        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le PDF</a>
+        <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">Acheter le PDF</a>
       {% elsif is_pack %}
-        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter le pack</a>
+        <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">Acheter le pack</a>
       {% else %}
-        <a href="{{ p.lien_paiement }}" class="buy-btn" target="_blank" rel="noopener">Acheter</a>
+        <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">Acheter</a>
       {% endif %}
     {% else %}
-      <a href="/boutique/{{ p.nom | slugify }}/" class="btn-outline">Voir la fiche</a>
+      <span class="btn-primary disabled" aria-disabled="true">Achat bientôt</span>
     {% endif %}
   </div>
 </div>

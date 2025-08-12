@@ -286,6 +286,18 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             <div class="quick-search">
                 <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
             </div>
+
+            <div class="quick-sort">
+                <label for="sort-by" class="label">Trier</label>
+                <select id="sort-by" aria-label="Trier les résultats">
+                    <option value="relevance" selected>Pertinence</option>
+                    <option value="new">Nouveautés</option>
+                    <option value="price-asc">Prix ↑</option>
+                    <option value="price-desc">Prix ↓</option>
+                    <option value="popularity">Popularité</option>
+                </select>
+                <span id="results-count" class="results-count" aria-live="polite"></span>
+            </div>
         </nav>
         
 

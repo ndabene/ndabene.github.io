@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('facet-search');
   const noResults = document.getElementById('no-results');
   const loadMoreBtn = document.getElementById('load-more');
+  const sortSelect = document.getElementById('sort-by');
+  const resultsCount = document.getElementById('results-count');
 
   // Pagination client-side simple
   const PAGE_SIZE = 24;
@@ -27,7 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset sections visibility to avoid residual headers
     const sections = container.querySelectorAll('.product-category-section');
     sections.forEach(sec => sec.style.display = 'none');
-    cards.forEach((card, idx) => {
+    // Working array for sorting
+    const sortedCards = [...cards];
+
+    // Apply sorting
+    if (sortSelect) {
+      switch ((sortSelect.value || 'relevance')) {
+        case 'price-asc':
+          sortedCards.sort((a,b) => (parseFloat(a.dataset.price||'0')||0) - (parseFloat(b.dataset.price||'0')||0));
+          break;
+        case 'price-desc':
+          sortedCards.sort((a,b) => (parseFloat(b.dataset.price||'0')||0) - (parseFloat(a.dataset.price||'0')||0));
+          break;
+        case 'new':
+          sortedCards.sort((a,b) => new Date(b.dataset.updated||0) - new Date(a.dataset.updated||0));
+          break;
+        case 'popularity':
+          sortedCards.sort((a,b) => (parseInt(b.dataset.popularity||'0',10)||0) - (parseInt(a.dataset.popularity||'0',10)||0));
+          break;
+        case 'relevance':
+        default:
+          // keep original order
+          break;
+      }
+    }
+
+    sortedCards.forEach((card, idx) => {
       const u = (card.dataset.univers || '').toLowerCase();
       const c = (card.dataset.categorie || '').toLowerCase();
       const level = (card.dataset.niveau || '').toLowerCase();
@@ -71,6 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     noResults.style.display = totalMatches === 0 ? '' : 'none';
+
+    // Update results count
+    if (resultsCount) {
+      resultsCount.textContent = `${Math.min(visible, totalMatches)} / ${totalMatches}`;
+    }
   }
 
   function setActive(button, groupSelector) {
@@ -162,6 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Quick search in top nav
   quickSearch?.addEventListener('input', (e) => {
     state.search = (e.target.value || '').trim().toLowerCase();
+    shown = PAGE_SIZE;
+    applyFilters();
+  });
+
+  // Sorting change
+  sortSelect?.addEventListener('change', () => {
     shown = PAGE_SIZE;
     applyFilters();
   });

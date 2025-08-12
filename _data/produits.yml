@@ -19,6 +19,7 @@
     - "Identifier les cas d’usage pertinents au quotidien"
     - "Poser des prompts simples et fiables pour éviter les hallucinations"
   support: "Email sous 48h"
+  last_update: "2025-08-12"
   micro_extraits:
     - "Vous apprendrez à distinguer clairement IA, Machine Learning, Deep Learning et IA générative — sans jargon."
     - "Vous comprendrez le rôle du Transformer (2017) et saurez choisir l’outil adapté au besoin."
@@ -61,6 +62,7 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  last_update: "2025-08-12"
   micro_extraits:
     - "Vous apprendrez à évaluer l’empreinte de l’IA (énergie, eau, matériel) sur tout le cycle de vie."
     - "Vous saurez mettre en place un plan « Green AI » : right-sizing des modèles, prompts sobres, cache, batch."
@@ -79,6 +81,7 @@
   univers: "IA"
   niveau: "Intermédiaire"
   duree: "3h"
+  last_update: "2025-08-12"
   mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
   resultats:
     - "Structurer des instructions efficaces avec la méthode C.L.A.I.R"
