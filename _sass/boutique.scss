@@ -528,6 +528,17 @@
   font-size: .85rem;
 }
 
+// Description optionnelle de catégorie (preuve par les supports fournis)
+.product-category-section .category-description {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: .85rem 1rem;
+  margin-bottom: .75rem;
+  color: #334155;
+  line-height: 1.55;
+}
+
 // Highlight on scroll target
 .product-category-section.category-highlight {
   animation: highlightPulse 1.2s ease;
@@ -718,5 +729,17 @@
     }
     summary { cursor: pointer; font-weight: 600; }
     .answer { margin-top: 0.5rem; color: #475569; }
+  }
+
+  // Outcomes section
+  .product-outcomes {
+    margin-top: 2rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    h2 { margin: 0 0 .75rem; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li { margin: .3rem 0; color: #334155; }
   }
 }

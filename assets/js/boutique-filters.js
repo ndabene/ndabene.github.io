@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const state = {
     univers: 'all',
     categorie: 'all',
+    niveau: 'all',
+    format: 'all',
     search: ''
   };
 
@@ -28,13 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card, idx) => {
       const u = (card.dataset.univers || '').toLowerCase();
       const c = (card.dataset.categorie || '').toLowerCase();
+      const level = (card.dataset.niveau || '').toLowerCase();
+      const fmt = (card.dataset.format || '').toLowerCase();
       const n = (card.dataset.name || '').toLowerCase();
 
       const matchUnivers = state.univers === 'all' || u === state.univers.toLowerCase();
       const matchCat = state.categorie === 'all' || c === state.categorie.toLowerCase();
+      const matchNiveau = state.niveau === 'all' || level === state.niveau.toLowerCase();
+      const matchFormat = state.format === 'all' || fmt === state.format.toLowerCase();
       const matchSearch = !state.search || n.includes(state.search);
 
-      const match = matchUnivers && matchCat && matchSearch;
+      const match = matchUnivers && matchCat && matchNiveau && matchFormat && matchSearch;
       if (match && visible < shown) {
         card.style.display = '';
         visible++;
@@ -48,9 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalMatches = cards.filter(card => {
       const u = (card.dataset.univers || '').toLowerCase();
       const c = (card.dataset.categorie || '').toLowerCase();
+      const level = (card.dataset.niveau || '').toLowerCase();
+      const fmt = (card.dataset.format || '').toLowerCase();
       const n = (card.dataset.name || '').toLowerCase();
       return (state.univers === 'all' || u === state.univers.toLowerCase()) &&
              (state.categorie === 'all' || c === state.categorie.toLowerCase()) &&
+             (state.niveau === 'all' || level === state.niveau.toLowerCase()) &&
+             (state.format === 'all' || fmt === state.format.toLowerCase()) &&
              (!state.search || n.includes(state.search));
     }).length;
 
@@ -97,6 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!btn) return;
     const u = btn.getAttribute('data-univers');
     const c = btn.getAttribute('data-categorie');
+    const level = btn.getAttribute('data-niveau');
+    const fmt = btn.getAttribute('data-format');
 
     if (u) {
       state.univers = u;
@@ -109,6 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
       state.categorie = c;
       shown = PAGE_SIZE;
       quickNav.querySelectorAll('[data-categorie]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    if (level) {
+      state.niveau = level;
+      shown = PAGE_SIZE;
+      quickNav.querySelectorAll('[data-niveau]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    if (fmt) {
+      state.format = fmt;
+      shown = PAGE_SIZE;
+      quickNav.querySelectorAll('[data-format]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
     }
     applyFilters();

@@ -58,6 +58,7 @@ layout: default
           {% if p.langue %}<li><strong>Langue:</strong> {{ p.langue }}</li>{% endif %}
           {% if p.pages %}<li><strong>Pages:</strong> {{ p.pages }}</li>{% endif %}
           {% if p.author %}<li><strong>Auteur:</strong> {{ p.author }}</li>{% endif %}
+          {% if p.support %}<li><strong>Support:</strong> {{ p.support }}</li>{% endif %}
         </ul>
 
         <div class="legal-links">
@@ -65,6 +66,17 @@ layout: default
         </div>
       </div>
     </article>
+
+    {% if p.resultats and p.resultats.size > 0 %}
+    <section class="product-outcomes">
+      <h2>Ce que vous saurez faire</h2>
+      <ul>
+        {% for r in p.resultats %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
 
     {% if p.faq and p.faq.size > 0 %}
     <section class="product-faq">

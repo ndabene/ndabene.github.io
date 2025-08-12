@@ -194,8 +194,13 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
             </div>
         </section>
         {%- comment -%} Menu rapide dynamique (Univers / Catégories) {%- endcomment -%}
-        {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
-        {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
+            {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
+            {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
+            {% assign niveaux_list = site.data.produits | map: 'niveau' | compact | uniq | sort %}
+            {% assign formats_from_format = site.data.produits | map: 'format' | compact %}
+            {% assign formats_from_file = site.data.produits | map: 'file_format' | compact %}
+            {% assign formats_list_tmp = formats_from_format | concat: formats_from_file %}
+            {% assign formats_list = formats_list_tmp | uniq | sort %}
         <nav class="boutique-quick-nav" aria-label="Navigation rapide">
             {% if univers_list.size > 0 %}
             <div class="quick-nav-block quick-nav-univers">
@@ -213,6 +218,26 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                 <button class="nav-chip filter-btn-modern" data-categorie="all">Toutes</button>
                 {% for c in categories_list %}
                   <button class="nav-chip filter-btn-modern" data-categorie="{{ c }}">{{ c }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if niveaux_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-niveau">
+                <span class="label">Niveaux</span>
+                <button class="nav-chip filter-btn-modern" data-niveau="all">Tous</button>
+                {% for n in niveaux_list %}
+                  <button class="nav-chip filter-btn-modern" data-niveau="{{ n }}">{{ n }}</button>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if formats_list.size > 0 %}
+            <div class="quick-nav-block quick-nav-format">
+                <span class="label">Formats</span>
+                <button class="nav-chip filter-btn-modern" data-format="all">Tous</button>
+                {% for f in formats_list %}
+                  <button class="nav-chip filter-btn-modern" data-format="{{ f }}">{{ f | upcase }}</button>
                 {% endfor %}
             </div>
             {% endif %}
@@ -335,6 +360,13 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                 <span class="category-count">{{ group.items.size }} produit{% if group.items.size > 1 %}s{% endif %}</span>
             </div>
 
+            {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
+            {% if cat_meta and cat_meta.description %}
+            <div class="category-description">
+                {{ cat_meta.description }}
+            </div>
+            {% endif %}
+
             <div class="product-grid">
                 {% for product in group.items %}
                 {% if product.type == 'pack' or product.categorie == 'Pack' %}
@@ -361,7 +393,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
                 {% if product.type == 'pack' or product.categorie == 'Pack' %}
                   {% assign is_pack = true %}
                 {% endif %}
-                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} {% if is_pack %}data-type="pack"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-name="{{ product.nom | downcase }}">
+                <div class="product-card" {% if is_course %}data-type="formation"{% endif %} {% if is_ebook %}data-type="ebook"{% endif %} {% if is_pack %}data-type="pack"{% endif %} data-univers="{{ product.univers | default: '' }}" data-categorie="{{ product.categorie | default: '' }}" data-niveau="{{ product.niveau | default: '' }}" data-format="{{ product.format | default: product.file_format | default: '' }}" data-name="{{ product.nom | downcase }}">
                     {% if product.image %}
                     <div class="product-card-image">
                         <img src="{{ site.baseurl }}/{{ product.image }}" alt="Image pour {{ product.nom }}">

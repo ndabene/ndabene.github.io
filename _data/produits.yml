@@ -11,6 +11,14 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  niveau: "Débutant"
+  duree: "2h30"
+  mots_cles: ["ia", "débutant", "transformer", "prompt"]
+  resultats:
+    - "Comprendre clairement IA, ML, DL et IA générative sans jargon"
+    - "Identifier les cas d’usage pertinents au quotidien"
+    - "Poser des prompts simples et fiables pour éviter les hallucinations"
+  support: "Email sous 48h"
   micro_extraits:
     - "Vous apprendrez à distinguer clairement IA, Machine Learning, Deep Learning et IA générative — sans jargon."
     - "Vous comprendrez le rôle du Transformer (2017) et saurez choisir l’outil adapté au besoin."
@@ -69,6 +77,14 @@
   format: "PDF"
   file_format: "pdf"
   univers: "IA"
+  niveau: "Intermédiaire"
+  duree: "3h"
+  mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
+  resultats:
+    - "Structurer des instructions efficaces avec la méthode C.L.A.I.R"
+    - "Choisir le bon type de prompt selon l’objectif (création, analyse, résumé, etc.)"
+    - "Itérer pour obtenir des livrables exploitables"
+  support: "Mises à jour incluses"
   micro_extraits:
     - "Vous apprendrez à structurer vos demandes avec la méthode C.L.A.I.R pour obtenir des résultats exploitables du premier coup."
     - "Vous saurez choisir parmi les 7 types de prompts (création, analyse, résumé, résolution…) selon l’objectif."
