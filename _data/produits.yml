@@ -1,5 +1,4 @@
 
-
 - nom: "Devenez Acteur de l'IA - Chapitre 1 : L'Intelligence Artificielle pour Débutants"
   description: "Bienvenue dans ce voyage d'exploration au cœur de l'intelligence artificielle. Ce cours vous permettra de comprendre clairement ce qu'est l'IA, comment elle fonctionne et comment elle peut transformer votre quotidien, sans connaissances techniques préalables."
   image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
@@ -9,7 +8,6 @@
   lemon_variant_id: 937957
   type: "ebook"
   format: "PDF & Podcast"
-
   univers: "IA"
   niveau: "Débutant"
   duree: "2h30"
@@ -60,7 +58,6 @@
   lemon_variant_id: 937978
   type: "ebook"
   format: "PDF & Podcast"
-
   univers: "IA"
   last_update: "2025-08-12"
   resultats:
@@ -81,7 +78,6 @@
   lemon_variant_id: 
   type: "ebook"
   format: "PDF & Podcast"
-
   univers: "IA"
   niveau: "Intermédiaire"
   duree: "3h"

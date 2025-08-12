@@ -198,6 +198,15 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
         <span>Paiement sécurisé</span>
       </div>
+      <!-- Ajouts: bénéfices compactés au format réassurance -->
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20l9-16H3l9 16z"/></svg>
+        <span>Actionnables tout de suite</span>
+      </div>
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg>
+        <span>Progresser par étapes</span>
+      </div>
     </div>
   </div>
 </section>
@@ -205,35 +214,7 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
 
 <section class="section boutique-page-section">
     <div class="container">
-        <section class="benefits-row" aria-label="Pourquoi ces e‑books et formations ?">
-            <div class="benefit-box">
-                <div class="benefit-icon-circle">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20l9-16H3l9 16z"/></svg>
-                </div>
-                <div class="benefit-body">
-                    <h3>Actionnables tout de suite</h3>
-                    <p>E‑books PDF et supports clairs, orientés résultats, avec méthodes, check‑lists et exemples prêts à l’emploi.</p>
-                </div>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-icon-circle">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg>
-                </div>
-                <div class="benefit-body">
-                    <h3>Progresser par étapes</h3>
-                    <p>Parcours simple: bases solides, impacts & bonnes pratiques, puis maîtrise des prompts et cas concrets.</p>
-                </div>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-icon-circle">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                </div>
-                <div class="benefit-body">
-                    <h3>Support & mises à jour</h3>
-                    <p>Mises à jour régulières et support efficace pour rester utiles (IA, PrestaShop, patterns de dev).</p>
-                </div>
-            </div>
-        </section>
+        <!-- Section bénéfices retirée: contenu déplacé en haut -->
         {%- comment -%} Menu rapide dynamique (Univers / Catégories) {%- endcomment -%}
             {% assign univers_list = site.data.produits | map: 'univers' | compact | uniq | sort %}
             {% assign categories_list = site.data.produits | map: 'categorie' | compact | uniq | sort %}
