@@ -1,6 +1,9 @@
 // _sass/boutique.scss
 
 .boutique-page-section {
+    /* Subtle page background to avoid all-white feel */
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+    
     // Quick navigation
     .boutique-quick-nav {
         display: flex;
@@ -637,9 +640,19 @@
 
 // Hero unique pour pack
 .boutique-hero {
+  /* Keep hero on card-like surface contrasting the new page bg */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2,6,23,.06);
+  padding: .75rem 0 0;
+  /* Overlap the page header slightly to mask the seam */
+  margin-top: -12px;
+  position: relative;
+  z-index: 2;
   &.split {
-    /* Add comfortable spacing from the top header */
-    margin-top: clamp(.5rem, 2vw, 1.5rem);
+    /* Align snugly under the page hero */
+    margin-top: 0;
     .hero-split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 1.25rem; align-items: center; }
     .hero-col.media img { width: 100%; height: clamp(220px, 42vw, 440px); object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
     .hero-title { margin: 0 0 .5rem; font-size: clamp(1.4rem, 3.2vw, 2rem); }
