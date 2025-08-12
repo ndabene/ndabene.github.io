@@ -1,0 +1,16 @@
+# Descriptions optionnelles des catégories de la boutique
+# Utilisées pour présenter la valeur et le format de chaque catégorie
+
+- name: "Formation IA pour tous"
+  description: >-
+    Les éléments fournis (PDF, audio/podcast, modèles et check‑lists) mettent en pratique
+    exactement les méthodes enseignées dans la formation. Vous voyez l’approche en action
+    et pouvez l’appliquer immédiatement sur vos projets, ce qui constitue une preuve
+    concrète de l’efficacité du contenu.
+
+- name: "Pack"
+  description: >-
+    Sélection de contenus complémentaires réunis à tarif réduit pour accélérer votre
+    progression (plusieurs modules et supports regroupés).
+
+

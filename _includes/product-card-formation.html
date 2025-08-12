@@ -1,0 +1,111 @@
+{% assign p = include.product %}
+{% assign is_course = false %}
+{% assign is_ebook = false %}
+{% assign is_pack = false %}
+{% if p.type == 'formation' or p.categorie == 'Formation en ligne' %}
+  {% assign is_course = true %}
+{% endif %}
+{% if p.type == 'ebook' or p.file_format == 'pdf' or p.format == 'PDF' %}
+  {% assign is_ebook = true %}
+{% endif %}
+{% if p.type == 'pack' or p.categorie == 'Pack' %}
+  {% assign is_pack = true %}
+{% endif %}
+
+{% comment %} Utilitaires prix et format {% endcomment %}
+{% capture price_num %}{{ p.prix | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | strip }}{% endcapture %}
+{% capture fmt %}{{ p.format | default: p.file_format | default: '' }}{% endcapture %}
+{% comment %} Liste de features: priorise resultats, sinon inclus (pack) {% endcomment %}
+{% assign features = p.resultats | default: p.inclus %}
+
+<div class="product-card"
+     {% if is_course %}data-type="formation"{% endif %}
+     {% if is_ebook %}data-type="ebook"{% endif %}
+     {% if is_pack %}data-type="pack"{% endif %}
+     data-univers="{{ p.univers | default: '' }}"
+     data-categorie="{{ p.categorie | default: '' }}"
+     data-niveau="{{ p.niveau | default: '' }}"
+     data-format="{{ fmt }}"
+     data-price="{{ price_num }}"
+     data-duration="{{ p.duree | default: '' }}"
+     {% if p.last_update %}data-updated="{{ p.last_update }}"{% endif %}
+     {% if p.bestseller %}data-popularity="2"{% else %}data-popularity="0"{% endif %}
+     data-name="{{ p.nom | downcase }}">
+
+  {% if p.image %}
+  <div class="product-card-image">
+    {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
+    <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}">
+    {% if is_pack %}<span class="card-ribbon">Pack</span>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="product-card-content">
+    <div class="product-header-row">
+      <ul class="meta-badges">
+        {% if p.niveau %}<li class="badge">Niveau: {{ p.niveau }}</li>{% endif %}
+        {% if p.duree %}<li class="badge">Durée: {{ p.duree }}</li>{% endif %}
+        {% if fmt %}<li class="badge">Format: {{ fmt | upcase }}</li>{% endif %}
+        {% if p.inclus %}<li class="badge">Pack: {{ p.inclus | size }} contenus</li>{% endif %}
+        {% if p.last_update %}<li class="badge muted">MàJ: {{ p.last_update | date: "%d/%m/%Y" }}</li>{% endif %}
+      </ul>
+      {% if p.featured or p.bestseller %}
+        <span class="univers-badge" style="margin-left:auto;background:rgba(234,179,8,.12);border-color:rgba(234,179,8,.35);color:#92400e;">{% if p.bestseller %}Meilleur vendeur{% else %}Recommandé{% endif %}</span>
+      {% endif %}
+    </div>
+    <h3 class="product-title">{{ p.nom }}</h3>
+    <p class="product-description">{{ p.description | truncate: 160 }}</p>
+    <div class="hover-hint">Survolez la carte pour voir le détail et le programme</div>
+
+    <template class="quick-view-content">
+      <div class="qv-title">{{ p.nom }}</div>
+      {% if features %}
+        <ul class="qv-results">{% for it in features %}<li>{{ it }}</li>{% endfor %}</ul>
+      {% endif %}
+      <ul class="meta-badges">
+        {% if p.niveau %}<li class="badge">Niveau: {{ p.niveau }}</li>{% endif %}
+        {% if p.duree %}<li class="badge">Durée: {{ p.duree }}</li>{% endif %}
+        {% if fmt %}<li class="badge">Format: {{ fmt | upcase }}</li>{% endif %}
+      </ul>
+      {% if p.programme_url %}<a class="qv-program" href="{{ p.programme_url }}" target="_blank" rel="noopener">Programme détaillé</a>{% endif %}
+    </template>
+  </div>
+
+  <div class="card-reveal">
+    {% if features %}
+    <ul class="micro-extraits">
+      {% for it in features limit:3 %}
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>{{ it }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    
+
+    {% if is_course %}
+    <div class="course-actions">
+      {% if site.shop_enabled and p.programme_url %}
+        <a href="{{ p.programme_url }}" class="btn-outline" target="_blank" rel="noopener">Voir le programme</a>
+      {% else %}
+        <span class="btn-outline disabled" aria-disabled="true">Programme bientôt</span>
+      {% endif %}
+      <button class="btn-outline quick-view-btn" type="button" data-quickview>Quick‑view</button>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div class="product-card-footer">
+    <span class="product-price">{{ p.prix }}</span>
+    {% if site.shop_enabled and p.lien_paiement %}
+      <a href="{{ p.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">Voir le programme</a>
+    {% else %}
+      <span class="btn-primary disabled" aria-disabled="true">Programme bientôt</span>
+    {% endif %}
+  </div>
+</div>
+
+
