@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Boutique PrestaShop bloquée ? Guide pratique entre pros"
+title: "Boutique PrestaShop bloquée ? Guide pratique"
 date: 2025-08-07
 author: Nicolas Dabène
 categories: [PrestaShop, Bonnes Pratiques]
