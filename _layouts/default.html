@@ -225,18 +225,19 @@
     {% include maintenance-check.html %}
 </head>
 <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
-    <!-- Animation de fond légère -->
-    <div class="gradient-background"></div>
-    <div class="animated-background">
-        <div class="floating-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-    </div>
+    {% unless page.no_bg %}
+      <div class="gradient-background"></div>
+      <div class="animated-background">
+          <div class="floating-particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+          </div>
+      </div>
+    {% endunless %}
     
     {% if site.under_construction %}
     <div class="under-construction-banner">
@@ -245,7 +246,7 @@
     {% endif %}
     {% include header-modern.html %}
 
-    <main class="content">
+    <main class="content" style="margin-top:0;">
         {{ content }}
     </main>
 

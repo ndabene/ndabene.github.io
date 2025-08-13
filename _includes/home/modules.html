@@ -1,0 +1,56 @@
+<!-- MODULES SECTION MODERNE -->
+<section class="section modules-section-modern">
+    <div class="container">
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Modules PrestaShop</h2>
+            <p class="section-subtitle-clean">Sélection de modules développés pour répondre aux besoins spécifiques des e-commerçants</p>
+        </div>
+        
+        <div class="grid-unified stagger-animation">
+            {% assign modules_limit = site.data.home.limits.modules | default: 6 %}
+            {% assign selected_modules = site.data.modules %}
+            {% for module in selected_modules limit: modules_limit %}
+            <div class="module-card-simple animate-item">
+                {% if module.image %}
+                <div class="module-image-simple">
+                    <img src="{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                </div>
+                {% else %}
+                <div class="module-image-simple"></div>
+                {% endif %}
+                
+                <div class="module-content-simple">
+                    <h3 class="module-title-simple">{{ module.title }}</h3>
+                    
+                    <div class="module-tags-simple">
+                        {% for tag in module.tags %}
+                        <span class="tag-simple tag-simple--{{ tag.category | downcase }}">{{ tag.tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <p class="module-description-simple">{{ module.description }}</p>
+                </div>
+                
+                <div class="module-footer-simple">
+                    <a href="{{ module.link }}" class="view-btn" target="_blank">
+                        <span class="btn-text">Découvrir</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="view-all-section">
+            <a href="/projects" class="view-all-btn">
+                <span class="btn-text">Découvrir tous mes projets</span>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+

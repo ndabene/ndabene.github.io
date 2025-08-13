@@ -1,0 +1,31 @@
+<!-- CASE STUDIES SECTION (optionnelle, utilise la collection _case_studies) -->
+<section class="section case-studies-section">
+    <div class="container">
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Études de cas</h2>
+            <p class="section-subtitle-clean">Exemples concrets d'impact technique et business</p>
+        </div>
+        
+        <div class="approach-grid stagger-animation">
+            {% assign cs_limit = site.data.home.limits.case_studies | default: 3 %}
+            {% assign cases = site.case_studies | default: site.collections.case_studies.docs %}
+            {% for cs in cases limit: cs_limit %}
+            <div class="approach-card animate-item">
+                <h3 class="approach-title"><a href="{{ cs.url | relative_url }}">{{ cs.title }}</a></h3>
+                {% if cs.excerpt %}
+                <p class="approach-description">{{ cs.excerpt | strip_html | truncate: 160 }}</p>
+                {% endif %}
+                <div class="publication-approach-footer">
+                    <a class="publication-approach-link" href="{{ cs.url | relative_url }}">
+                        <span>Lire l'étude</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
