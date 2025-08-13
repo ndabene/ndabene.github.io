@@ -725,7 +725,7 @@
     .hero-split {
       display: grid;
       grid-template-columns: 1.15fr .85fr;
-      gap: 1.25rem;
+      gap: 1rem;
       align-items: center;
       position: relative;
       /* Plus de padding interne + légère bordure pour structurer le bloc */
@@ -826,13 +826,13 @@
 }
 
 /* Guarantee row: one line under hero, centered with light visual effect */
-.guarantee-row { margin: .35rem 0 1rem; position: relative; z-index: 3; }
+.guarantee-row { margin: .2rem 0 .2rem; position: relative; z-index: 3; }
 .guarantee-row .guarantee-row-inner {
   display:flex; justify-content:center; align-items:center; gap: .75rem 1rem; flex-wrap:wrap;
   background: linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
   border: 1px solid #e5e7eb;
   border-radius: 999px;
-  padding: .6rem 1.1rem; /* padding interne accru */
+  padding: .5rem 1rem; /* padding interne ajusté */
   box-shadow: 0 10px 30px rgba(2,6,23,.06);
 }
 .guarantee-row .guarantee-item { display:inline-flex; align-items:center; gap:.45rem; color:#0f172a; font-weight:800; }

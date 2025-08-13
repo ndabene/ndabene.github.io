@@ -49,6 +49,9 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Ensure config flags
+        run: |
+          printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
       
       - name: Check for future posts
         id: check_posts

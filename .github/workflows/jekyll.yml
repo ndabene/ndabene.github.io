@@ -36,8 +36,7 @@ jobs:
         
       - name: Enable future posts for preview
         run: |
-          echo "future: true" >> _config.yml
-          echo "admin_preview: true" >> _config.yml
+          printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
 
       - name: Build with Jekyll
         run: |
