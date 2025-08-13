@@ -177,17 +177,16 @@
 
     .product-card {
         background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: $rounded-xl;
+        border: 1px solid #e5e7eb;
+        box-shadow: $shadow-md;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: $transition-normal;
         position: relative; // ensure absolutely-positioned children (e.g., pack ribbon) stick to the card
 
-        &:hover {
-            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
-        }
+        &:hover { box-shadow: $shadow-lg; transform: translateY(-4px); }
     }
 
     // Ensure feature bullets look correct anywhere inside a product card (content or reveal)
@@ -198,7 +197,7 @@
         display: grid;
         gap: 0.35rem;
     }
-    .product-card .micro-extraits li {
+        .product-card .micro-extraits li {
         display: flex;
         align-items: flex-start;
         gap: 0.45rem;
@@ -412,7 +411,7 @@
     }
 
     // Unified primary CTA used on cards and hero (shop-enabled aware)
-    .btn-primary { background: #0ea5e9; color:#fff; padding:.55rem .9rem; border-radius:10px; text-decoration:none; font-weight:800; display:inline-block; }
+    .btn-primary { background: #0ea5e9; color:#fff; padding:.55rem .9rem; border-radius:10px; text-decoration:none; font-weight:800; display:inline-block; border:none; }
     .btn-primary.disabled { opacity:.6; pointer-events:none; }
 
     // Accentuer légèrement les formations

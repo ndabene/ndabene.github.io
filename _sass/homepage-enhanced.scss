@@ -8,6 +8,163 @@
   padding-bottom: $space-md;
 }
 
+// Background moderne unifié pour la homepage
+body.homepage-modern {
+  background:
+    radial-gradient(60vw 40vh at -10% -20%, rgba(59,130,246,.06), transparent 60%),
+    radial-gradient(50vw 35vh at 110% -10%, rgba(147,51,234,.05), transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+// Sticky jump vers Formations (mobile)
+.sticky-jump {
+  position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+  z-index: 1100; display: none;
+}
+@media (max-width: 768px) {
+  .sticky-jump { display: block; }
+}
+
+// Harmonisation des sections (espaces et header)
+.section {
+  padding: clamp($space-xl, 4vw, $space-3xl) 0;
+}
+
+.section-header-clean {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto $space-xl;
+  padding-bottom: $space-md;
+  position: relative;
+}
+
+.section-header-clean::after {
+  content: '';
+  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 88px; height: 3px; border-radius: 6px;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+}
+
+.section-title-clean {
+  font-family: $font-family-headings;
+  font-weight: $font-weight-black;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  color: $primary-color;
+}
+
+.section-subtitle-clean {
+  color: $text-color-light;
+}
+
+// Harmonisation des cartes
+// Unification VISUELLE des cartes sur la home
+body.homepage-modern {
+  .value-card-modern,
+  .expertise-card-beautiful,
+  .module-card-simple,
+  .approach-card,
+  .publication-approach-card,
+  .achievement-block,
+  .product-card,
+  .home-formation-item,
+  .project-card-v2 {
+    border-radius: $rounded-xl;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: $shadow-md;
+    transition: $transition-normal;
+  }
+
+  .value-card-modern:hover,
+  .expertise-card-beautiful:hover,
+  .module-card-simple:hover,
+  .approach-card:hover,
+  .publication-approach-card:hover,
+  .achievement-block:hover,
+  .product-card:hover,
+  .home-formation-item:hover,
+  .project-card-v2:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+
+  // Titres harmonisés dans les cartes
+  .module-title-simple,
+  .project-title,
+  .publication-approach-title,
+  .expertise-title-beautiful,
+  .value-title-modern,
+  .approach-title {
+    font-family: $font-family-headings;
+    font-weight: $font-weight-bold;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    color: $primary-color;
+    margin: 0 0 $space-sm;
+  }
+
+  // Images de tête harmonisées
+  .module-image-simple img,
+  .project-image,
+  .product-card-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: $rounded-xl;
+    border-top-right-radius: $rounded-xl;
+  }
+
+  // Métadonnées/badges (look unifié)
+  .tag-simple,
+  .hf-badge,
+  .meta-badges .badge {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    color: #0f172a;
+    border-radius: 999px;
+    padding: .22rem .55rem;
+    font-size: .78rem;
+    font-weight: 700;
+  }
+
+  // Paddings internes des cartes (unifiés)
+  .module-card-simple .module-content-simple,
+  .publication-approach-card,
+  .approach-card,
+  .achievement-block,
+  .product-card-content,
+  .home-formation-item { padding: $space-xl; }
+
+  // Cards blog compactes au même style
+  .post-preview-news,
+  .post-preview {
+    background: #fff;
+    border-radius: $rounded-xl;
+    border: 1px solid #e5e7eb;
+    box-shadow: $shadow-md;
+    transition: $transition-normal;
+  }
+  .post-preview-news:hover,
+  .post-preview:hover { transform: translateY(-4px); box-shadow: $shadow-lg; }
+
+  // CTA "Voir toutes" unifié
+  .view-all-section .view-all-btn {
+    display: inline-flex; align-items: center; gap: $space-sm;
+    padding: $space-md $space-xl;
+    background: transparent; color: $primary-color; text-decoration: none;
+    border: 2px solid $primary-color; border-radius: $rounded-xl;
+    font-weight: $font-weight-semibold; transition: $transition-normal;
+  }
+  .view-all-section .view-all-btn:hover { background: $primary-color; color: #fff; transform: translateY(-2px); text-decoration: none; }
+
+  // Metrics hero (pills cohérents)
+  .hero-metrics-compact .metric-inline {
+    display: inline-flex; align-items: baseline; gap: .35rem;
+    background: #f8fafc; border: 1px solid #e5e7eb;
+    border-radius: 10px; padding: .35rem .6rem;
+  }
+}
+
+
 .section {
   padding-top: clamp($space-lg, 4vw, $space-2xl);
   padding-bottom: clamp($space-lg, 4vw, $space-2xl);
@@ -196,6 +353,11 @@
       transform: translateX(2px);
     }
   }
+
+  // Buttons unifiés
+  .btn-primary { background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%); color:#fff; border:none; border-radius:$rounded-full; padding:$space-md $space-xl; font-weight:$font-weight-semibold; text-decoration:none; box-shadow:$shadow-lg; }
+  .btn-secondary { display:inline-flex; align-items:center; gap:$space-sm; padding:$space-md $space-xl; border:2px solid $primary-color; border-radius:$rounded-full; color:$primary-color; text-decoration:none; transition:$transition-normal; }
+  .btn-secondary:hover { background:$primary-color; color:#fff; transform: translateY(-2px); }
 }
 
 //================================================

@@ -377,11 +377,11 @@
 
 // Card de base pour le style "Approche"
 .approach-card {
-    background: $white;
+    background: #fff;
     padding: $space-2xl;
-    border-radius: $rounded-lg;
+    border-radius: $rounded-xl;
     box-shadow: $shadow-md;
-    border: 1px solid $gray-light;
+    border: 1px solid #e5e7eb;
     transition: $transition-normal;
     height: 100%;
     display: flex;

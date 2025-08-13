@@ -195,7 +195,7 @@ body_class: page-boutique
           {% if is_active %}
             <a class="btn-primary" href="{{ pack_featured.lien_paiement }}" target="_blank" rel="noopener">Commencer</a>
           {% else %}
-            <span class="btn-primary disabled" aria-disabled="true">Bientôt disponible</span>
+            <span class="btn-secondary" aria-disabled="true">Bientôt disponible</span>
           {% endif %}
           <span class="price-chip">{{ pack_featured.prix }}</span>
         </div>

@@ -1,9 +1,9 @@
 <!-- FORMATIONS SECTION (Block Card) -->
-<section class="section home-formations-section">
+<section class="section home-formations-section" id="formations">
   <div class="container">
     <div class="section-header-clean scroll-reveal">
       <h2 class="section-title-clean">Formations</h2>
-      <p class="section-subtitle-clean">3 formations affichées aléatoirement à chaque chargement</p>
+      <p class="section-subtitle-clean">Formations IA et PrestaShop pour accélérer le développement e‑commerce&nbsp;: méthodes concrètes, bonnes pratiques et mises en œuvre rapides.</p>
     </div>
     <div class="block-card-content">
       <div id="home-formations-list" class="home-formation-list stagger-animation">
@@ -40,7 +40,7 @@
               {% if is_active %}
                 <a href="{{ product.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">{{ cta_label }}</a>
               {% else %}
-                <span class="btn-primary disabled" aria-disabled="true">Bientôt disponible</span>
+                <span class="btn-secondary" aria-disabled="true" style="pointer-events:none;opacity:.6;">Bientôt disponible</span>
               {% endif %}
             </div>
           </div>

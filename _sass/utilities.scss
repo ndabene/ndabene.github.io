@@ -47,3 +47,89 @@
     display: none !important;
   }
 }
+
+// ==================================================
+// CTA GLOBALS (uniformisation boutons)
+// ==================================================
+
+.btn-primary,
+.btn--primary,
+a.btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-xl;
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-blue 100%);
+  color: #fff !important;
+  border: none;
+  border-radius: 9999px;
+  font-weight: $font-medium;
+  text-decoration: none;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+  transition: $transition-base;
+}
+
+.btn-primary.disabled,
+.btn--primary.disabled,
+.btn-primary[aria-disabled="true"],
+.btn--primary[aria-disabled="true"] {
+  opacity: .6;
+  pointer-events: none;
+}
+
+.btn-primary:hover,
+.btn--primary:hover,
+a.btn--primary:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.btn-secondary,
+.btn--secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-xl;
+  border: 2px solid $primary-navy;
+  border-radius: 9999px;
+  color: $primary-navy;
+  text-decoration: none;
+  transition: $transition-base;
+}
+
+.btn-secondary.disabled,
+.btn--secondary.disabled,
+.btn-secondary[aria-disabled="true"],
+.btn--secondary[aria-disabled="true"] {
+  opacity: .6;
+  pointer-events: none;
+}
+
+.btn-secondary:hover,
+.btn--secondary:hover {
+  background: $primary-navy;
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md $spacing-xl;
+  background: transparent;
+  color: $primary-navy;
+  text-decoration: none;
+  border: 2px solid $primary-navy;
+  border-radius: 12px;
+  font-weight: $font-medium;
+  transition: $transition-base;
+}
+
+.view-all-btn:hover {
+  background: $primary-navy;
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}

@@ -51,9 +51,9 @@ layout: default
         <div class="price-and-cta">
           {% if p.prix %}<div class="price">{{ p.prix }}</div>{% endif %}
           {% if is_active %}
-            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="buy-btn">Commencer</a>
+            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="btn-primary">Commencer</a>
           {% else %}
-            <span class="buy-btn" style="opacity:.6;pointer-events:none;">Bientôt disponible</span>
+            <span class="btn-secondary" aria-disabled="true">Bientôt disponible</span>
           {% endif %}
         </div>
 
