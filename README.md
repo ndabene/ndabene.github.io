@@ -155,10 +155,10 @@ bundle exec jekyll serve
 bundle exec jekyll serve --livereload
 
 # Build pour production
-bundle exec jekyll build
+bundle exec jekyll build --config _config.yml,_config_github.yml
 
 # Build avec environnement de production
-JEKYLL_ENV=production bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_github.yml
 
 # Vérifier la configuration
 bundle exec jekyll doctor

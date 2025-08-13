@@ -45,6 +45,6 @@ if [ -f "$SITEMAP_FILE" ]; then
     
 else
     echo "❌ Erreur : Sitemap non trouvé à $SITEMAP_FILE"
-    echo "💡 Générez d'abord le site avec : bundle exec jekyll build"
+    echo "💡 Générez d'abord le site avec : bundle exec jekyll build --config _config.yml,_config_github.yml"
     exit 1
 fi

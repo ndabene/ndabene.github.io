@@ -47,6 +47,7 @@ jobs:
           bundler-cache: true
       
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
       
       - name: Check for future posts
@@ -68,12 +69,16 @@ jobs:
         run: |
           echo "🏗️ Building Jekyll site with future posts enabled..."
           echo "Date actuelle: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
-          
-          # Build avec les articles futurs activés
-          JEKYLL_ENV=production bundle exec jekyll build --future --verbose
-          
+          BASE_PATH="${{ steps.pages.outputs.base_path }}"
+          if [ -n "$BASE_PATH" ]; then
+            bundle exec jekyll build --config _config.yml,_config_github.yml --future --verbose --baseurl "$BASE_PATH"
+          else
+            bundle exec jekyll build --config _config.yml,_config_github.yml --future --verbose
+          fi
           echo "✅ Build terminé"
           ls -la _site/
+        env:
+          JEKYLL_ENV: production
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

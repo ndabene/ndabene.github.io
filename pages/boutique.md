@@ -176,12 +176,33 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
   <div class="container">
     <div class="hero-split">
       <div class="hero-col content">
+        <div class="hero-eyebrow">
+          {% if pack_featured.categorie %}<span class="eyebrow-badge">{{ pack_featured.categorie }}</span>{% endif %}
+          {% if pack_featured.univers %}<span class="eyebrow-badge alt">{{ pack_featured.univers }}</span>{% endif %}
+          {% if pack_featured.avantages %}<span class="advantage-chip">{{ pack_featured.avantages }}</span>{% endif %}
+        </div>
         <h2 class="hero-title">{{ pack_featured.nom }}</h2>
         <p class="hero-subtitle">{{ pack_featured.description }}</p>
-        <ul class="hero-bullets">
-          <li>Actionnables tout de suite</li>
-          <li>Progresser par étapes</li>
+
+        {% if pack_featured.micro_extraits and pack_featured.micro_extraits.size > 0 %}
+        <ul class="hero-micro" aria-label="Points clés">
+          {% for it in pack_featured.micro_extraits %}
+          <li>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>{{ it }}</span>
+          </li>
+          {% endfor %}
         </ul>
+        {% endif %}
+
+        {% if pack_featured.inclus and pack_featured.inclus.size > 0 %}
+        <div class="hero-includes" aria-label="Inclus dans le pack">
+          {% for it in pack_featured.inclus %}
+            <span class="include-chip">{{ it }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
         {% assign has_payment = false %}
         {% if pack_featured.lien_paiement and pack_featured.lien_paiement != '' %}
           {% assign has_payment = true %}
@@ -202,23 +223,31 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
           {% endif %}
           <span class="price-chip">{{ pack_featured.prix }}</span>
         </div>
-        <div class="guarantee-strip" aria-label="Garanties">
-          <div class="guarantee-item" role="text">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span>Mises à jour incluses</span>
-          </div>
-          <div class="guarantee-item" role="text">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
-            <span>Support 48h</span>
-          </div>
-          <div class="guarantee-item" role="text">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-            <span>Paiement sécurisé</span>
-          </div>
-        </div>
+
       </div>
       <div class="hero-col media">
-        <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
+        <div class="media-wrap">
+          {% if pack_featured.univers %}<span class="badge-overlay">{{ pack_featured.univers }}</span>{% endif %}
+          <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="guarantee-row" aria-label="Garanties">
+  <div class="container">
+    <div class="guarantee-row-inner">
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>Mises à jour incluses</span>
+      </div>
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
+        <span>Support 48h</span>
+      </div>
+      <div class="guarantee-item" role="text">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+        <span>Paiement sécurisé</span>
       </div>
     </div>
   </div>

@@ -9,7 +9,7 @@ echo ✅ Cache supprimé
 
 rem Recompile le site
 echo 🔨 Recompilation...
-call bundle exec jekyll build
+call bundle exec jekyll build --config _config.yml,_config_github.yml
 
 echo ✅ Site recompilé !
 echo.

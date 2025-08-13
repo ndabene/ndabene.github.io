@@ -5,7 +5,7 @@ echo "🔍 Test de génération du sitemap..."
 
 # Build Jekyll
 echo "📦 Build Jekyll..."
-bundle exec jekyll build
+bundle exec jekyll build --config _config.yml,_config_github.yml
 
 # Vérifier que le sitemap existe
 if [ -f "_site/sitemap.xml" ]; then
@@ -44,6 +44,6 @@ if [ -f "_site/sitemap.xml" ]; then
 else
     echo "❌ Erreur : Sitemap non généré"
     echo "🔍 Vérifiez les erreurs Jekyll :"
-    bundle exec jekyll build --verbose
+    bundle exec jekyll build --config _config.yml,_config_github.yml --verbose
     exit 1
 fi

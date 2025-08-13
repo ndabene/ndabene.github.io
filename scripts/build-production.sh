@@ -8,7 +8,7 @@ export JEKYLL_ENV=production
 
 # Build Jekyll en mode production
 echo "📦 Build Jekyll en mode production..."
-if bundle exec jekyll build --config _config.yml; then
+if bundle exec jekyll build --config _config.yml,_config_github.yml; then
     echo "✅ Build Jekyll réussi !"
     
     # Vérifier le sitemap généré

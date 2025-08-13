@@ -6,7 +6,7 @@
 echo "🔄 Mise à jour du sitemap en cours..."
 
 # Rebuild Jekyll pour regénérer le sitemap
-bundle exec jekyll build
+bundle exec jekyll build --config _config.yml,_config_github.yml
 
 # Vérification que le sitemap a été généré
 if [ -f "_site/sitemap.xml" ]; then
