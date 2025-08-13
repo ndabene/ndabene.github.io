@@ -763,6 +763,9 @@
   scroll-margin-top: 90px; // keeps section visible below sticky quick-nav when scrolled into view
 }
 
+/* Remove the very first top divider under the hero to avoid the visible line */
+.product-category-section:first-of-type { border-top: 0; }
+
 .product-category-section .category-header {
   display: flex;
   justify-content: space-between;
