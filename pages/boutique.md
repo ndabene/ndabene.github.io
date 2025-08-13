@@ -300,24 +300,7 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
                 </select>
             </div>
         </div>
-        <div class="trust-strip" aria-label="Garanties et preuves">
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-                <span>Mises à jour incluses</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-                <span>Paiement sécurisé</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                <span>Support 48h</span>
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg>
-                <span>Garantie 14 jours</span>
-            </div>
-        </div>
+        
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         
 

@@ -17,8 +17,9 @@
         border: 1px solid #e5e7eb;
         border-radius: 12px;
         margin-bottom: 1rem;
+        margin-top: .5rem;
         position: sticky;
-        top: 0; // stick under the site header
+        top: 12px; // offset from very top so it feels less "collé"
         z-index: 30;
         backdrop-filter: saturate(180%) blur(6px);
         box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
@@ -669,11 +670,12 @@
   /* Keep hero on card-like surface contrasting the new page bg */
   background: #ffffff;
   border: 1px solid #e5e7eb;
+  border-top: none; /* remove thin seam under page hero */
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(2,6,23,.06);
   padding: .75rem 0 0;
   /* Overlap the page header slightly to mask the seam */
-  margin-top: -12px;
+  margin-top: 0;
   position: relative;
   z-index: 2;
   &.split {
@@ -746,6 +748,11 @@
     .hero-caption { left: .9rem; right: .9rem; bottom: .9rem; }
     .btn-primary { padding: .5rem .8rem; }
   }
+}
+
+/* Boutique-specific hero spacing: make the hero area less collé en haut */
+.page-boutique .page-hero-section {
+  padding: 2rem 0 1rem;
 }
 
 // Démarcation entre catégories
