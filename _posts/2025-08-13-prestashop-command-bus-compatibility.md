@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories: [PrestaShop, Architecture, Développement]
 tags: [PrestaShop 8, PrestaShop 9, Command Bus, Symfony, Tactician, Messenger, migration, compatibilité]
 excerpt: "Guide pratique pour développer des modules PrestaShop compatibles versions 8 et 9 malgré la migration Tactician vers Symfony Messenger."
-image: /assets/images/blog/2025-01-23-prestashop-command-bus-compatibility.jpg
+image: /assets/images/blog/2025-08-18-prestashop-command-bus-compatibility.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["PrestaShop", "PHP", "Symfony", "Command Bus"]
