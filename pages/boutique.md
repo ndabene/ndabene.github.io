@@ -4,6 +4,9 @@ title: E‑books et Formations (IA, PrestaShop, Développement)
 permalink: /boutique/
 description: "E‑books PDF pragmatiques et formations complémentaires pour progresser en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et actionnables pour monter en compétence pas à pas."
 body_class: page-boutique
+ai_intent: discover_and_purchase_training
+ai_primary_action: buy_training
+ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
 ---
 
 <script type="application/ld+json">
@@ -282,6 +285,39 @@ body_class: page-boutique
                 <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
             </div>
         </nav>
+        <div class="results-toolbar" aria-live="polite">
+            <div class="results-left">
+                <span id="results-count" class="results-count">0 résultat</span>
+            </div>
+            <div class="results-right">
+                <label for="sort-select" class="sr-only">Trier par</label>
+                <select id="sort-select" class="sort-select" aria-label="Trier par">
+                    <option value="relevance">Pertinence</option>
+                    <option value="price-asc">Prix croissant</option>
+                    <option value="price-desc">Prix décroissant</option>
+                    <option value="new">Nouveautés</option>
+                    <option value="popularity">Populaires</option>
+                </select>
+            </div>
+        </div>
+        <div class="trust-strip" aria-label="Garanties et preuves">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Mises à jour incluses</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                <span>Paiement sécurisé</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <span>Support 48h</span>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg>
+                <span>Garantie 14 jours</span>
+            </div>
+        </div>
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         
 
@@ -348,7 +384,21 @@ body_class: page-boutique
                     {{ cat_meta.description }}
                 </div>
                 {% endif %}
-                {% for product in group.items %}
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "AggregateOffer",
+                  "priceCurrency": "EUR",
+                  "lowPrice": "{{ group.items | map: 'prix' | join: '|' | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | split: '|' | sort | first | strip }}",
+                  "highPrice": "{{ group.items | map: 'prix' | join: '|' | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | split: '|' | sort | last | strip }}",
+                  "offerCount": "{{ group.items.size }}"
+                }
+                </script>
+                {% comment %}Recommended for you: push bestsellers (bestseller:true) and same-univers first{% endcomment %}
+                {% assign same_univers = group.items | where: 'univers', univers_list.first %}
+                {% assign bestsellers = group.items | where: 'bestseller', true %}
+                {% assign ordered_items = bestsellers | concat: same_univers | concat: group.items | uniq %}
+                {% for product in ordered_items %}
                 {% assign is_course = false %}
                 {% assign is_ebook = false %}
                 {% assign is_pack = false %}
@@ -383,6 +433,21 @@ body_class: page-boutique
         </div>
     </div>
 </section>
+
+<!-- Barre collante mobile pour un accès rapide aux filtres -->
+<div class="sticky-shopbar show-on-mobile" role="navigation" aria-label="Accès rapide boutique">
+  <a href="#" class="btn-secondary" id="jump-to-filters">Filtres</a>
+  <a href="#top" class="btn-primary" id="jump-to-top">Haut</a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var toFilters = document.getElementById('jump-to-filters');
+      var toTop = document.getElementById('jump-to-top');
+      var quickNav = document.querySelector('.boutique-quick-nav');
+      toFilters && toFilters.addEventListener('click', function(e){ e.preventDefault(); quickNav && quickNav.scrollIntoView({behavior:'smooth', block:'start'}); });
+      toTop && toTop.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
+    });
+  </script>
+</div>
 
 <script src="{{ '/assets/js/boutique-filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/boutique-modal.js' | relative_url }}" defer></script>

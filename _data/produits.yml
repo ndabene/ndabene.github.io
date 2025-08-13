@@ -11,6 +11,7 @@
   univers: "IA"
   niveau: "Débutant"
   duree: "2h30"
+  garantie: "14 jours"
   active: true
   mots_cles: ["ia", "débutant", "transformer", "prompt"]
   resultats:
@@ -19,6 +20,12 @@
     - "Rédiger des prompts fiables qui limitent hallucinations et biais"
   support: "Support email sous 48h"
   last_update: "2025-08-12"
+  programme:
+    - "Distinguer simplement IA, ML, DL et IA générative, sans jargon"
+    - "Repérer des cas d’usage concrets à fort impact dans votre quotidien"
+    - "Rédiger des prompts fiables qui limitent hallucinations et biais"
+    - "Explications claires et illustrées pour lever la confusion entre IA, ML, DL et GenAI."
+    - "Compréhension du principe des Transformers (2017) pour mieux choisir vos outils."
   micro_extraits:
     - "Explications claires et illustrées pour lever la confusion entre IA, ML, DL et GenAI."
     - "Compréhension du principe des Transformers (2017) pour mieux choisir vos outils."
@@ -41,6 +48,7 @@
   avantages: "Économisez 28€"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d01dbc06-935f-4f44-a95d-df7b527deec0"
   active: true
+  garantie: "14 jours"
   last_update: "2025-08-12"
   inclus:
     - "Module 0: Devenez Acteur de l'IA"
@@ -52,6 +60,11 @@
     - "Parcours guidé du niveau débutant à l’autonomie avec mise en pratique rapide."
     - "Réduction de l’empreinte de vos workflows IA sans sacrifier la qualité ni la vitesse."
     - "Méthode C.L.A.I.R et canevas de prompts pour passer d’une réponse brute à un livrable actionnable."
+  programme:
+    - "Module 0: Devenez Acteur de l'IA"
+    - "Module 1: L'Intelligence Artificielle pour Débutants"
+    - "Module 2: Impact Écologique et Sociétal de l'IA"
+    - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
 
 -
   nom: "Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
@@ -66,6 +79,12 @@
   univers: "IA"
   active: true
   last_update: "2025-08-12"
+  programme:
+    - "Mesurer l’empreinte (énergie, eau, matériel) d’un usage IA sur tout le cycle de vie"
+    - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
+    - "Anticiper les risques sociétaux (emploi, biais, désinformation) avec des garde-fous clairs"
+    - "Méthodes d’évaluation de l’empreinte environnementale adaptées à vos cas d’usage."
+    - "Plan d’action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
   resultats:
     - "Mesurer l’empreinte (énergie, eau, matériel) d’un usage IA sur tout le cycle de vie"
     - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
@@ -89,6 +108,7 @@
   niveau: "Intermédiaire"
   active: true
   duree: "3h"
+  garantie: "14 jours"
   last_update: "2025-08-12"
   mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
   resultats:
@@ -99,4 +119,10 @@
   micro_extraits:
     - "Canevas prêts à l’emploi pour 7 types de prompts et leurs usages."
     - "Techniques avancées : rôle, format imposé, itération, contraintes créatives."
+    - "Cas concrets du quotidien pour passer de la théorie à l’action."
+  programme:
+    - "Structurer des instructions claires et efficaces avec la méthode C.L.A.I.R"
+    - "Sélectionner le bon type de prompt selon l’objectif (création, analyse, résumé, résolution, etc.)"
+    - "Itérer pour transformer une réponse brute en livrable prêt à l’emploi"
+    - "Canevas prêts à l’emploi pour 7 types de prompts et leurs usages."
     - "Cas concrets du quotidien pour passer de la théorie à l’action."
