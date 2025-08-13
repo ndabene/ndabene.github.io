@@ -162,6 +162,7 @@
     gap: $space-xs;
     margin-bottom: $space-sm;
     flex-wrap: wrap;
+    min-width: 0;
 
     @media (max-width: 968px) {
       justify-content: center;
@@ -178,6 +179,10 @@
     font-size: $font-size-xs;
     background-color: $primary-color;
     color: $white;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     .badge-icon {
       font-size: 1.2rem;
@@ -191,6 +196,7 @@
     margin: $space-sm 0;
     flex-wrap: wrap;
     justify-content: flex-start;
+    min-width: 0;
 
     @media (max-width: 968px) {
       justify-content: center;
@@ -205,6 +211,7 @@
     display: flex;
     align-items: baseline;
     gap: $space-xs;
+    min-width: 0;
 
     .metric-value {
       font-size: 1.5rem;

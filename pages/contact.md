@@ -12,7 +12,7 @@ permalink: /contact/
         <p class="section-description">Que vous ayez un projet en tête, un défi technique à discuter, ou simplement envie d'échanger, j'aimerais avoir de vos nouvelles. Remplissez le formulaire ci-dessous ou contactez-moi directement.</p>
 
         <div class="contact-form-wrapper">
-            <div class="contact-form-container card">
+            <div class="contact-form-container card" style="min-width:0;">
                 <form action="https://formspree.io/f/meozazzl" method="POST" class="contact-form">
                     <div class="form-group">
                         <label for="name">Nom :</label>

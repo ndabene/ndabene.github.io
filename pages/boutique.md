@@ -418,7 +418,7 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
 </section>
 
 <!-- Barre collante mobile pour un accès rapide aux filtres -->
-<div class="sticky-shopbar show-on-mobile" role="navigation" aria-label="Accès rapide boutique">
+<div class="sticky-shopbar show-on-mobile is-hidden" role="navigation" aria-label="Accès rapide boutique" id="shopbar">
   <a href="#" class="btn-secondary" id="jump-to-filters">Filtres</a>
   <a href="#top" class="btn-primary" id="jump-to-top">Haut</a>
   <script>
@@ -426,8 +426,20 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
       var toFilters = document.getElementById('jump-to-filters');
       var toTop = document.getElementById('jump-to-top');
       var quickNav = document.querySelector('.boutique-quick-nav');
+      var bar = document.getElementById('shopbar');
       toFilters && toFilters.addEventListener('click', function(e){ e.preventDefault(); quickNav && quickNav.scrollIntoView({behavior:'smooth', block:'start'}); });
       toTop && toTop.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); });
+      // Reveal after some scroll to avoid overlapping first cards/filters
+      document.addEventListener('scroll', function(){
+        if (!bar) return;
+        if (window.scrollY < 300) {
+          bar.classList.add('is-hidden');
+          document.body.classList.remove('shopbar-visible');
+        } else {
+          bar.classList.remove('is-hidden');
+          document.body.classList.add('shopbar-visible');
+        }
+      });
     });
   </script>
 </div>

@@ -689,7 +689,7 @@ $blog-content-bg: $white;
     
     // Padding plus adapté sur mobile
     @media (max-width: 768px) {
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 8px;
     }
     margin-bottom: 2rem;
@@ -718,27 +718,21 @@ $blog-content-bg: $white;
 }
 
 // Banner d'article - REFONTE COMPLÈTE
-.post-banner {
+.page-blog .post-banner,
+.post-page .post-banner {
   position: relative;
-  height: 400px;
+  height: 400px; // restore solid desktop height
   overflow: hidden;
   margin: 0;
   z-index: 1;
+  margin-top: calc(var(--nav-offset, 0px)); // avoid header overlap on mobile
   
   // Styles de base - compensation navbar gérée par header-modern.html
   
   // Responsive heights
-  @media (max-width: 1200px) {
-    height: 350px;
-  }
-  
-  @media (max-width: 768px) {
-    height: 280px;
-  }
-  
-  @media (max-width: 480px) {
-    height: 220px;
-  }
+  @media (max-width: 1200px) { height: 350px; }
+  @media (max-width: 768px) { height: 280px; }
+  @media (max-width: 480px) { height: 220px; }
   
   .post-banner-image {
     width: 100%;
@@ -784,7 +778,7 @@ $blog-content-bg: $white;
       rgba(0, 0, 0, 0.8) 100%
     );
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: clamp(1rem, 3.5vw, 2.5rem);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 
@@ -812,7 +806,7 @@ $blog-content-bg: $white;
     }
     
     @media (max-width: 768px) {
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 16px;
       
       &::before {
@@ -883,18 +877,9 @@ $blog-content-bg: $white;
       // Contour subtil pour encore plus de lisibilité
       -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.3);
       
-      @media (max-width: 1200px) {
-        font-size: 2.5rem;
-      }
-      
-      @media (max-width: 768px) {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-      
-      @media (max-width: 480px) {
-        font-size: 1.75rem;
-      }
+      @media (max-width: 1200px) { font-size: 2.5rem; }
+      @media (max-width: 768px) { font-size: 2rem; margin-bottom: 1rem; }
+      @media (max-width: 480px) { font-size: 1.75rem; }
     }
     
     .post-meta {
@@ -989,13 +974,14 @@ $blog-content-bg: $white;
         
         @media (max-width: 768px) {
           .tech-badge,
-          .tech-more {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.6rem;
-          }
+          .tech-more { display: none; }
         }
       }
     }
+  }
+  // Hide primary banner meta badges fully on small mobile to avoid overlap
+  @media (max-width: 600px) {
+    .post-banner-content .post-meta .meta-primary > span { display: none; }
   }
     
 }
