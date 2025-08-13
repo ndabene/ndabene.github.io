@@ -7,7 +7,8 @@
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
     <meta name="author" content="{{ site.author.name }}">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
     
     <!-- Métadonnées optimisées pour IA génératives (GEO) -->
     <meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% else %}professional-profile{% endif %}">
@@ -16,6 +17,9 @@
     <meta name="target-audience" content="developers, software architects, cto, technical leaders">
     <meta name="reading-time" content="{% if page.layout == 'post' %}{{ content | number_of_words | divided_by: 200 | ceil }} minutes{% else %}2 minutes{% endif %}">
     <meta name="content-freshness" content="{{ page.date | default: site.time | date_to_xmlschema }}">
+    {% if page.ai_intent %}<meta name="ai-intent" content="{{ page.ai_intent }}">{% endif %}
+    {% if page.ai_primary_action %}<meta name="ai-primary-action" content="{{ page.ai_primary_action }}">{% endif %}
+    {% if page.ai_topics %}<meta name="ai-topics" content="{% if page.ai_topics.size %}{{ page.ai_topics | join: ', ' }}{% else %}{{ page.ai_topics }}{% endif %}">{% endif %}
     
     {% if page.layout == 'post' %}
     <!-- Métadonnées spécifiques aux articles techniques -->
@@ -35,11 +39,22 @@
     <meta name="fact-check-worthy" content="true">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    {% if page.layout == 'product' and page.product %}
+      {% assign _og_image = page.product.image | prepend: site.baseurl | prepend: '/' | replace: '//' , '/' | absolute_url %}
+    {% elsif page.image %}
+      {% assign _og_image = page.image | prepend: site.baseurl | prepend: '/' | replace: '//' , '/' | absolute_url %}
+    {% else %}
+      {% assign _og_image = site.url | append: '/assets/images/social-share.jpg' %}
+    {% endif %}
+    <meta property="og:type" content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
     <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/social-share.jpg">
+    <meta property="og:image" content="{{ _og_image }}">
+    {% if page.layout == 'product' and page.product and page.product.prix %}
+      <meta property="product:price:amount" content="{{ page.product.prix | remove: '€' | strip }}">
+      <meta property="product:price:currency" content="EUR">
+    {% endif %}
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -225,18 +240,19 @@
     {% include maintenance-check.html %}
 </head>
 <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
-    <!-- Animation de fond légère -->
-    <div class="gradient-background"></div>
-    <div class="animated-background">
-        <div class="floating-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-    </div>
+    {% unless page.no_bg %}
+      <div class="gradient-background"></div>
+      <div class="animated-background">
+          <div class="floating-particles">
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+              <div class="particle"></div>
+          </div>
+      </div>
+    {% endunless %}
     
     {% if site.under_construction %}
     <div class="under-construction-banner">
@@ -245,7 +261,7 @@
     {% endif %}
     {% include header-modern.html %}
 
-    <main class="content">
+    <main class="content" style="margin-top:0;">
         {{ content }}
     </main>
 

@@ -382,7 +382,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (ModernAnimations.supportsAnimations()) {
         const animations = new ModernAnimations();
         animations.initPerformanceOptimizations();
-        
+        // Réduire le saut visuel initial sous la nav fixe
+        document.documentElement.style.setProperty('--nav-offset-applied', 'true');
         // Initialiser les notifications toast
         window.toastNotifications = new ToastNotifications();
     }

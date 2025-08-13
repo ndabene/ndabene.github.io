@@ -1,0 +1,35 @@
+<!-- EXPERTISE SECTION MODERNE -->
+<section class="section expertise-section-clean">
+    <div class="container">
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">Mes Compétences</h2>
+            <p class="section-subtitle-clean">Ma force : traduire l'innovation technique en résultats business mesurables, en alliant expertise PrestaShop reconnue et maîtrise des technologies émergentes</p>
+        </div>
+        
+        <div class="grid-unified stagger-animation">
+            {% assign expertise_limit = site.data.home.limits.expertise | default: 4 %}
+            {% for expertise in site.data.expertise limit:expertise_limit %}
+            <div class="expertise-card-beautiful animate-item" data-id="{{ expertise.id }}">
+                <div class="expertise-card-inner">
+                    <div class="expertise-visual">
+                        <div class="expertise-icon-beautiful">{{ expertise.icon }}</div>
+                        {% if expertise.id == 'prestashop' or expertise.id == 'ai' %}
+                        <div class="expertise-badge-beautiful">Expert</div>
+                        {% endif %}
+                    </div>
+                    <div class="expertise-content-beautiful">
+                        <h3 class="expertise-title-beautiful">{{ expertise.name }}</h3>
+                        <p class="expertise-description-beautiful">{{ expertise.description }}</p>
+                        <div class="expertise-skills-beautiful">
+                            {% for skill in expertise.skills limit:4 %}
+                            <span class="skill-beautiful">{{ skill }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

@@ -43,6 +43,13 @@ layout: default
         {% if p.categorie %}
         <div class="badge">{{ p.categorie }}</div>
         {% endif %}
+        {% if p.niveau or p.format or p.duree %}
+        <ul class="meta-badges" style="margin:.25rem 0 0; display:flex; flex-wrap:wrap; gap:.35rem;">
+          {% if p.niveau %}<li class="badge" style="background:#eef2f7;color:#0f172a;border:1px solid #dbe2ea;">Niveau: {{ p.niveau }}</li>{% endif %}
+          {% if p.format %}<li class="badge" style="background:#eef2f7;color:#0f172a;border:1px solid #dbe2ea;">Format: {{ p.format }}</li>{% endif %}
+          {% if p.duree %}<li class="badge" style="background:#eef2f7;color:#0f172a;border:1px solid #dbe2ea;">Durée: {{ p.duree }}</li>{% endif %}
+        </ul>
+        {% endif %}
 
         {% assign has_payment = p.lien_paiement and p.lien_paiement != '' %}
         {% assign override_inactive = false %}
@@ -51,10 +58,16 @@ layout: default
         <div class="price-and-cta">
           {% if p.prix %}<div class="price">{{ p.prix }}</div>{% endif %}
           {% if is_active %}
-            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="buy-btn">Commencer</a>
+            <a href="{{ p.lien_paiement }}" target="_blank" rel="noopener" class="btn-primary">Commencer</a>
           {% else %}
-            <span class="buy-btn" style="opacity:.6;pointer-events:none;">Bientôt disponible</span>
+            <span class="btn-secondary" aria-disabled="true">Bientôt disponible</span>
           {% endif %}
+        </div>
+        <div class="trust-badges" style="display:flex; gap:.5rem; flex-wrap:wrap; margin:.35rem 0 1rem;">
+          <span class="badge" style="background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;">Mises à jour incluses</span>
+          <span class="badge" style="background:#f0f9ff;color:#075985;border:1px solid #bae6fd;">Support 48h</span>
+          <span class="badge" style="background:#fef3c7;color:#92400e;border:1px solid #fde68a;">Paiement sécurisé</span>
+          {% if p.garantie %}<span class="badge" style="background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;">Garantie {{ p.garantie }}</span>{% endif %}
         </div>
 
         <ul class="meta-list">
@@ -78,6 +91,17 @@ layout: default
       <h2>Ce que vous saurez faire</h2>
       <ul>
         {% for r in p.resultats %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if p.programme and p.programme.size > 0 %}
+    <section class="product-outcomes">
+      <h2>Programme</h2>
+      <ul>
+        {% for r in p.programme %}
           <li>{{ r }}</li>
         {% endfor %}
       </ul>
@@ -110,7 +134,7 @@ layout: default
   "image": "{{ site.url }}{{ site.baseurl }}/{{ p.image }}",
   {% if p.author %}"author": {"@type": "Person", "name": "{{ p.author | escape }}"}, {% endif %}
   {% else %}
-  "@type": "Product",
+  "@type": ["Product", "Course"],
   "name": "{{ page.title | escape }}",
   "image": "{{ site.url }}{{ site.baseurl }}/{{ p.image }}",
   {% endif %}

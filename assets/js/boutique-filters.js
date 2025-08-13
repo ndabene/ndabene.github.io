@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('facet-search');
   const noResults = document.getElementById('no-results');
   const loadMoreBtn = document.getElementById('load-more');
-  const sortSelect = null; // tri désactivé côté UI
-  const resultsCount = null; // compteur lié au tri supprimé
+  const sortSelect = document.getElementById('sort-select');
+  const resultsCount = document.getElementById('results-count');
 
   // Pagination client-side simple
   const PAGE_SIZE = 24;
@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
              (!state.search || n.includes(state.search));
     }).length;
 
+    if (resultsCount) {
+      const label = totalMatches <= 1 ? 'résultat' : 'résultats';
+      resultsCount.textContent = `${totalMatches} ${label}`;
+    }
+
     if (totalMatches > shown) {
       loadMoreBtn.style.display = '';
     } else {
@@ -149,7 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init events facets (bar)
   // Deprecated facet bar removed on page
 
-  loadMoreBtn?.addEventListener('click', () => {
+  loadMoreBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
     shown += PAGE_SIZE;
     applyFilters();
   });
@@ -254,7 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
     container.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  // Tri désactivé
+  sortSelect?.addEventListener('change', () => {
+    shown = Math.min(PAGE_SIZE, cards.length);
+    applyFilters();
+  });
 });
 
 

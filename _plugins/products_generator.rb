@@ -24,6 +24,10 @@ module Jekyll
         page.data['title'] = name
         page.data['product'] = product
         page.data['permalink'] = "/boutique/#{slug}/"
+        # GEO meta for product pages
+        page.data['ai_intent'] = 'view_and_purchase_training'
+        page.data['ai_primary_action'] = 'buy_training'
+        page.data['ai_topics'] = [product['univers'], product['categorie'], product['format']].compact
 
         site.pages << page
       end

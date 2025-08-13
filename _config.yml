@@ -136,7 +136,6 @@ defaults:
         priority: 1.0
   - scope:
       path: "pages/boutique.md"
-      type: "pages"
     values:
       sitemap:
         changefreq: "weekly"

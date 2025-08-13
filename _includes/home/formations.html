@@ -1,0 +1,78 @@
+<!-- FORMATIONS SECTION (Block Card) -->
+<section class="section home-formations-section" id="formations">
+  <div class="container">
+    <div class="section-header-clean scroll-reveal">
+      <h2 class="section-title-clean">Formations</h2>
+      <p class="section-subtitle-clean">Formations IA et PrestaShop pour accélérer le développement e‑commerce&nbsp;: méthodes concrètes, bonnes pratiques et mises en œuvre rapides.</p>
+    </div>
+    <div class="block-card-content">
+      <div id="home-formations-list" class="home-formation-list stagger-animation">
+        {% assign courses_type = site.data.produits | where: 'type', 'formation' %}
+        {% assign courses_cat1 = site.data.produits | where: 'categorie', 'Formation en ligne' %}
+        {% assign courses_cat2 = site.data.produits | where: 'categorie', 'Formation IA pour tous' %}
+        {% assign courses = courses_type | concat: courses_cat1 | concat: courses_cat2 | uniq %}
+        {% if courses.size == 0 %}
+          {% assign courses = site.data.produits %}
+        {% endif %}
+        {% for product in courses %}
+          {% capture fmt %}{{ product.format | default: product.file_format | default: '' }}{% endcapture %}
+          {% assign has_payment = product.lien_paiement and product.lien_paiement != '' %}
+          {% assign override_inactive = false %}
+          {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+          {% assign is_active = site.shop_enabled and has_payment and override_inactive == false %}
+          {% assign cta_label = 'Commencer' %}
+          <div class="home-formation-item" style="display:none;">
+            <div class="home-formation-thumb">
+              {% if product.image %}
+                <img src="{{ site.baseurl }}/{{ product.image }}" alt="{{ product.nom }}">
+              {% endif %}
+            </div>
+            <div class="home-formation-content">
+              <h3 class="home-formation-title">{{ product.nom }}</h3>
+              <div class="hf-badges">
+                {% if product.niveau %}<span class="hf-badge">Niveau: {{ product.niveau }}</span>{% endif %}
+                {% if fmt %}<span class="hf-badge">Format: {{ fmt | upcase }}</span>{% endif %}
+              </div>
+              <p class="home-formation-desc">{{ product.description }}</p>
+            </div>
+            <div class="home-formation-actions">
+              <span class="home-formation-price">{{ product.prix }}</span>
+              {% if is_active %}
+                <a href="{{ product.lien_paiement }}" class="btn-primary" target="_blank" rel="noopener">{{ cta_label }}</a>
+              {% else %}
+                <span class="btn-secondary" aria-disabled="true" style="pointer-events:none;opacity:.6;">Bientôt disponible</span>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="view-all-section">
+      <a class="view-all-btn" href="/boutique/">
+        <span class="btn-text">Voir toutes les formations</span>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var container = document.getElementById('home-formations-list');
+    if (!container) return;
+    var rows = Array.from(container.querySelectorAll('.home-formation-item'));
+    if (!rows.length) return;
+    var limit = parseInt('{{ site.data.home.limits.formations | default: 3 }}', 10) || 3;
+    rows.forEach(function(r) { r.style.display = 'none'; });
+    for (var i = rows.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = rows[i]; rows[i] = rows[j]; rows[j] = tmp;
+    }
+    rows.slice(0, limit).forEach(function(r, idx) {
+      r.style.display = '';
+      setTimeout(function(){ r.classList.add('animate-in'); }, 80 * idx);
+    });
+  });
+  </script>
+</section>
+
