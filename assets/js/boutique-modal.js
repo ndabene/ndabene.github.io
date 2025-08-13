@@ -36,22 +36,41 @@ document.addEventListener('DOMContentLoaded', () => {
       document.removeEventListener('keydown', onKeydown);
     }
 
-    const closeBtn = document.createElement('button');
-    closeBtn.className = 'qv-close';
-    closeBtn.setAttribute('aria-label', 'Fermer');
-    closeBtn.textContent = '×';
-    closeBtn.addEventListener('click', close);
-
-    modal.prepend(closeBtn);
+    // Add close button only if not provided by template
+    if (!modal.querySelector('.qv-close')) {
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'qv-close';
+      closeBtn.setAttribute('aria-label', 'Fermer');
+      closeBtn.type = 'button';
+      closeBtn.innerHTML = '&times;';
+      closeBtn.addEventListener('click', close);
+      modal.prepend(closeBtn);
+    } else {
+      modal.querySelector('.qv-close').addEventListener('click', close);
+    }
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
     document.body.classList.add('qv-open');
     document.body.style.overflow = 'hidden';
 
     // Accessibility: close on ESC and set initial focus to overlay without scrolling content
-    function onKeydown(ev){ if (ev.key === 'Escape') close(); }
+    function onKeydown(ev){
+      if (ev.key === 'Escape') { close(); return; }
+      if (ev.key === 'Tab') {
+        // Focus trap
+        const focusables = modal.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (ev.shiftKey && document.activeElement === first) { last.focus(); ev.preventDefault(); }
+        else if (!ev.shiftKey && document.activeElement === last) { first.focus(); ev.preventDefault(); }
+      }
+    }
     document.addEventListener('keydown', onKeydown);
     try { overlay.focus({ preventScroll: true }); } catch(_){}
+    // Ensure focus moves inside
+    const firstFocusable = modal.querySelector('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (firstFocusable) { try { firstFocusable.focus({ preventScroll: true }); } catch(_){} }
   }
 
   container.addEventListener('click', (e) => {
