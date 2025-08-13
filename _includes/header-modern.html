@@ -60,10 +60,14 @@
     const themeToggle = document.getElementById('theme-toggle');
     function updateBodyOffset() {
       if (!nav) return;
-      // Coller le contenu sous la nav sans espace additionnel
-      document.documentElement.style.setProperty('--nav-offset', '0px');
-      document.documentElement.style.scrollPaddingTop = '0px';
-      document.body.style.paddingTop = '0px';
+      const isMobile = window.innerWidth <= 768;
+      const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+      const navHeight = nav.offsetHeight || 72;
+      // Publier uniquement via variable CSS + scroll-padding
+      const offset = (isMobile || isTablet) ? navHeight : 0;
+      document.documentElement.style.setProperty('--nav-offset', offset + 'px');
+      document.documentElement.style.scrollPaddingTop = offset + 'px';
+      document.body.style.paddingTop = '';
     }
     
     // Scroll effect
@@ -74,9 +78,15 @@
         nav?.classList.remove('scrolled');
       }
     });
-    // Set initial offset and on resize
+    // Set initial offset and on resize/load
     requestAnimationFrame(updateBodyOffset);
+    window.addEventListener('load', updateBodyOffset);
     window.addEventListener('resize', updateBodyOffset);
+    // Observe nav size changes (fonts, dynamic content)
+    try {
+      const ro = new ResizeObserver(updateBodyOffset);
+      nav && ro.observe(nav);
+    } catch(_) {}
 
     // Mobile menu toggle - Fixed with debug
     const mobileToggle = document.getElementById('mobile-menu-toggle');

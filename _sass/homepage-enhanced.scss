@@ -18,12 +18,34 @@ body.homepage-modern {
 
 // Sticky jump vers Formations (mobile)
 .sticky-jump {
-  position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
-  z-index: 1100; display: none;
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  right: max(12px, env(safe-area-inset-right));
+  left: auto;
+  transform: none;
+  z-index: 1100;
+  display: none;
+  gap: $space-sm;
+  align-items: center;
 }
 @media (max-width: 768px) {
-  .sticky-jump { display: block; }
+  .sticky-jump { display: flex; }
 }
+
+// Compact buttons in sticky-jump
+.sticky-jump .btn-primary,
+.sticky-jump .btn-secondary {
+  padding: $space-sm $space-lg;
+  border-radius: $rounded-full;
+  font-size: $font-size-sm;
+  box-shadow: $shadow-lg;
+}
+
+.sticky-jump .btn-secondary { background: #fff; border-width: 2px; }
+.sticky-jump .btn-primary { color: #fff; }
+
+// Hide sticky when hero is visible to avoid covering metrics
+.sticky-jump.is-hidden { opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; transform: translateY(6px); }
 
 // Harmonisation des sections (espaces et header)
 .section {
@@ -296,13 +318,15 @@ body.homepage-modern {
     border-radius: 12px;
     padding: $space-md;
     box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    min-width: 0; // prevent horizontal overflow on small screens
   }
   .home-formation-thumb img { width: 120px; height: 80px; object-fit: cover; border-radius: 8px; display: block; }
-  .home-formation-title { margin: 0 0 .25rem; font-size: 1.05rem; color: #0f172a; }
-  .home-formation-desc { margin: 0; color: #475569; font-size: .95rem; }
+  .home-formation-content { min-width: 0; }
+  .home-formation-title { margin: 0 0 .25rem; font-size: clamp(1rem, 3.6vw, 1.05rem); color: #0f172a; text-wrap: balance; overflow-wrap: anywhere; }
+  .home-formation-desc { margin: 0; color: #475569; font-size: .95rem; overflow-wrap: anywhere; }
   .hf-badges { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0 0 .25rem; }
   .hf-badge { background:#eef2f7; border:1px solid #dbe2ea; color:#0f172a; border-radius:999px; padding:.12rem .5rem; font-size:.75rem; font-weight:700; }
-  .home-formation-actions { display:flex; flex-direction: column; align-items: flex-end; gap:.4rem; }
+  .home-formation-actions { display:flex; flex-direction: column; align-items: flex-end; gap:.4rem; min-width: 0; }
   .home-formation-price { font-weight: 800; color: #0f172a; }
   .home-formation-actions .btn-primary { padding: .45rem .8rem; border-radius: 10px; }
 

@@ -9,9 +9,9 @@ body_class: homepage-modern
 
 {% include home/hero.html %}
 
-<div class="sticky-jump show-on-mobile">
+<div class="sticky-jump show-on-mobile" id="sticky-jump">
   <a href="#formations" class="btn-primary">Formations</a>
-  <a href="#hero-ctas" class="btn-secondary" style="margin-left:.5rem">Haut</a>
+  <a href="#hero-ctas" class="btn-secondary">Haut</a>
 </div>
 
 {% include home/formations.html %}
@@ -40,5 +40,12 @@ function expandExpertise(expertiseId) {
     card.classList.toggle('expanded');
 }
 
+// Hide sticky jump near top to avoid overlapping important hero content
+document.addEventListener('scroll', function(){
+  var el = document.getElementById('sticky-jump');
+  if(!el) return;
+  if (window.scrollY < 250) el.classList.add('is-hidden');
+  else el.classList.remove('is-hidden');
+});
 // Animation simple pour FAQ inline - pas d'animations complexes
 </script>

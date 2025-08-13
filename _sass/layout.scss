@@ -1160,6 +1160,7 @@ body.dark-mode {
     .contact-form-container {
       width: 100%;
       max-width: 600px;
+      min-width: 0; // prevent container overflow on narrow screens
     }
   }
 
