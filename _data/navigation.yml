@@ -1,16 +1,29 @@
+- name: Prestations
+  subitems:
+    - name: Services
+      link: /services/
+    - name: Formations
+      link: /formations/
+    - name: Boutique
+      link: /boutique/
 - name: Projets
   link: /projects/
 - name: Blog
   link: /blog/
-- name: Boutique
-  link: /boutique/
-- name: Compétences
-  link: /skills/
-- name: Services
-  link: /services/
-- name: Formations
-  link: /formations/
 - name: Expertise
   link: /expertise/
+  subitems:
+    - name: E-commerce
+      link: /expertise/ecommerce/
+    - name: PrestaShop
+      link: /expertise/prestashop/
+    - name: IA
+      link: /expertise/ia/
+    - name: Fullstack
+      link: /expertise/fullstack/
+    - name: Innovation
+      link: /expertise/innovation/
+    - name: Compétences
+      link: /skills/
 - name: FAQ
   link: /faq/
