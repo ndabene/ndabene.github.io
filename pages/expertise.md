@@ -8,16 +8,11 @@ show_sidebar: false
 ---
 
 <div class="container">
-    <div class="page-header">
-        <h1>{{ page.title }}</h1>
-        <p class="section-description">Mon approche du développement logiciel s'appuie sur un mélange de maîtrise technique approfondie, de réflexion stratégique et d'engagement à créer une valeur business tangible. J'évolue continuellement pour rester à la pointe de la technologie, garantissant que les solutions que je conçois sont robustes, évolutives, innovantes et pérennes.</p>
-    </div>
-
     <div class="expertise-grid">
         {% for expertise in site.data.expertise %}
         <div class="expertise-item" data-id="{{ expertise.id }}">
             <div class="expertise-item-header">
-                <span class="badge badge--{{ expertise.icon }}">{{ expertise.icon }}</span>
+                <span class="badge expertise-icon">{{ expertise.icon }}</span>
                 <h3>{{ expertise.name }}</h3>
                 {% if expertise.id == 'prestashop' or expertise.id == 'ai' or expertise.id == 'ecommerce' %}
                 <div class="expertise-level-badge">Expert</div>
@@ -33,6 +28,7 @@ show_sidebar: false
                     {% endfor %}
                 </ul>
             </div>
+            <p><a class="btn btn--secondary" href="/expertise/{{ expertise.id | downcase }}/">Voir en détail</a></p>
         </div>
         {% endfor %}
     </div>

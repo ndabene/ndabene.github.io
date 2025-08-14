@@ -19,7 +19,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://ndabene.github.io/sitemap.xml
+Sitemap: https://nicolas-dabene.fr/sitemap.xml
 
 # Priorités de contenu pour extraction IA
 # Articles techniques haute valeur
@@ -42,4 +42,4 @@ Disallow: /node_modules/
 # Primary-Expertise: PHP Development, PrestaShop E-commerce, AI Integration
 # Content-Language: fr-FR
 # Authority-Level: Expert (15+ years)
-# Last-Updated: 2025-01-23
+# Last-Updated: 2025-08-14

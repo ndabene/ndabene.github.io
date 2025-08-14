@@ -4,7 +4,7 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- Page d'accueil -->
+  <!-- Page d'accueil (exclue des pages loop pour éviter duplication) -->
   <url>
     <loc>{{ site.url }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
@@ -14,7 +14,7 @@ layout: null
   
   <!-- Pages statiques -->
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" or page.name contains ".sh" or page.name contains "robots" %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
       {% if page.date %}

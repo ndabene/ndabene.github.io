@@ -1,0 +1,38 @@
+{% comment %}
+  Renders related content for an expertise domain based on YAML mapping
+  Usage: {% include expertise-related.html expertise_id='prestashop' %}
+  Data source: _data/expertise_map.yml
+{% endcomment %}
+
+{% assign map = site.data.expertise_map[include.expertise_id] %}
+{% if map %}
+  {% assign related = '' | split: '' %}
+
+  {% if map.categories %}
+    {% for cat in map.categories %}
+      {% assign found_cat = site.posts | where_exp: 'p', 'p.categories contains cat' %}
+      {% assign related = related | concat: found_cat %}
+    {% endfor %}
+  {% endif %}
+
+  {% if map.tags %}
+    {% for tg in map.tags %}
+      {% assign found_tag = site.posts | where_exp: 'p', 'p.tags contains tg' %}
+      {% assign related = related | concat: found_tag %}
+    {% endfor %}
+  {% endif %}
+
+  {% assign related = related | uniq %}
+
+  {% if related and related.size > 0 %}
+    <h3>Articles liés</h3>
+    <ul>
+      {% for post in related limit: 8 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucun article disponible pour le moment.</p>
+  {% endif %}
+{% endif %}
+

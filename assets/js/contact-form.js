@@ -58,11 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateForm() {
         const name = form.querySelector('#name').value.trim();
         const email = form.querySelector('#email').value.trim();
+        const contactType = form.querySelector('#contact-type') ? form.querySelector('#contact-type').value.trim() : '';
         const subject = form.querySelector('#subject').value.trim();
         const message = form.querySelector('#message').value.trim();
         
         // Basic validation
-        if (!name || !email || !subject || !message) {
+        if (!name || !email || !subject || !message || (form.querySelector('#contact-type') && !contactType)) {
             showMessage('error', 'Veuillez remplir tous les champs obligatoires.');
             return false;
         }

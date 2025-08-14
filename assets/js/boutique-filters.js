@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const facetBar = document.getElementById('boutique-filters');
   const quickNav = document.querySelector('.boutique-quick-nav');
-  const quickSearch = document.getElementById('quick-search');
+  const quickSearch = null; // recherche désactivée
   const clearBtn = document.getElementById('clear-filters');
   const activeFiltersBar = document.getElementById('active-filters');
   const cards = Array.from(container.querySelectorAll('.product-card'));
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchCat = state.categorie === 'all' || c === state.categorie.toLowerCase();
       const matchNiveau = state.niveau === 'all' || level === state.niveau.toLowerCase();
       const matchFormat = state.format === 'all' || fmt === state.format.toLowerCase();
-      const matchSearch = !state.search || n.includes(state.search);
+      const matchSearch = true; // recherche désactivée
 
       const match = matchUnivers && matchCat && matchNiveau && matchFormat && matchSearch;
       if (match && visible < shown) {
@@ -89,8 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return (state.univers === 'all' || u === state.univers.toLowerCase()) &&
              (state.categorie === 'all' || c === state.categorie.toLowerCase()) &&
              (state.niveau === 'all' || level === state.niveau.toLowerCase()) &&
-             (state.format === 'all' || fmt === state.format.toLowerCase()) &&
-             (!state.search || n.includes(state.search));
+              (state.format === 'all' || fmt === state.format.toLowerCase());
     }).length;
 
     if (resultsCount) {
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (state.categorie !== 'all') chips.push({ key: 'categorie', label: `Catégorie: ${state.categorie}` });
     if (state.niveau !== 'all') chips.push({ key: 'niveau', label: `Niveau: ${state.niveau}` });
     if (state.format !== 'all') chips.push({ key: 'format', label: `Format: ${state.format.toUpperCase()}` });
-    if (state.search) chips.push({ key: 'search', label: `Recherche: ${state.search}` });
+    // recherche désactivée
 
     if (chips.length === 0) {
       activeFiltersBar.innerHTML = '';
@@ -194,14 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
       quickNav.querySelectorAll('[data-categorie]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyFilters();
-      if (c !== 'all') {
-        const id = slugify(c);
-        const sec = container.querySelector(`.product-category-section#${id}`);
-        if (sec) {
-          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          sec.classList.add('category-highlight');
-          setTimeout(() => sec.classList.remove('category-highlight'), 1200);
-        }
+      // Nouveau layout: une seule section de grille. On remonte simplement au catalogue.
+      const sec = container.querySelector('.product-category-section');
+      if (sec) {
+        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sec.classList.add('category-highlight');
+        setTimeout(() => sec.classList.remove('category-highlight'), 1200);
       }
     }
     if (level) {
@@ -220,12 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Quick search in top nav
-  quickSearch?.addEventListener('input', (e) => {
-    state.search = (e.target.value || '').trim().toLowerCase();
-    shown = PAGE_SIZE;
-    applyFilters();
-  });
+  // recherche désactivée
 
   // Retirer un filtre depuis la barre d'état
   activeFiltersBar?.addEventListener('click', (e) => {
@@ -237,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'categorie': state.categorie = 'all'; quickNav.querySelectorAll('[data-categorie]').forEach(b => b.classList.remove('active')); break;
       case 'niveau': state.niveau = 'all'; quickNav.querySelectorAll('[data-niveau]').forEach(b => b.classList.remove('active')); break;
       case 'format': state.format = 'all'; quickNav.querySelectorAll('[data-format]').forEach(b => b.classList.remove('active')); break;
-      case 'search': state.search = ''; if (quickSearch) quickSearch.value = ''; break;
+      // recherche désactivée
       default: break;
     }
     shown = PAGE_SIZE;

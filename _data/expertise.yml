@@ -42,16 +42,6 @@
     - "Formation d'équipes aux méthodologies IA assistées"
     - "Intégration seamless IA dans architectures existantes"
 
-- id: fullstack
-  name: Développement FullStack & APIs
-  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-  description: "Expertise complète en développement web moderne, de l'architecture backend aux interfaces utilisateur. Maîtrise de PHP 8+ et des technologies émergentes pour créer des APIs performantes et des expériences utilisateur exceptionnelles."
-  skills:
-    - "PHP 8+ avec features avancées (Attributes, Enums, etc.)"
-    - "APIs REST pour intégrations e-commerce complexes"
-    - "Vue.js/Nuxt.js pour interfaces dynamiques"
-    - "Tests automatisés (PHPUnit, Behat)"
-    - "Progressive Web Apps (PWA) et optimisation mobile"
 
 - id: innovation
   name: Innovation & Leadership Technique

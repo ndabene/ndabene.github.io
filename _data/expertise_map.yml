@@ -1,0 +1,16 @@
+prestashop:
+  categories: [PrestaShop]
+  tags: []
+ai:
+  categories: [Intelligence Artificielle]
+  tags: []
+ecommerce:
+  categories: [Ecommerce]
+  tags: []
+fullstack:
+  categories: [Développement, PHP]
+  tags: []
+innovation:
+  categories: [Architecture, Bonnes Pratiques]
+  tags: []
+

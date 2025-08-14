@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Nicolas Dabene - Formateur IA & Développeur PrestaShop | Antibes Sophia Antipolis
 permalink: /about/
 description: "Discover the professional journey and expertise of Nicolas Dabène, a Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience."
 keywords: "senior php developer, prestashop expert, ai orchestrator, php architect, technical leadership, software architecture, fullstack development, certifications"
@@ -13,6 +13,16 @@ show_sidebar: true
             <div class="about-content">
                 <h2>Executive Summary: Driving Business Value Through Technology</h2>
                 <p class="lead-paragraph">As a senior professional with over 15 years of hands-on experience since 2010, I am a seasoned PHP FullStack Developer and AI Orchestrator dedicated to transforming complex business challenges into robust, scalable, and innovative software solutions. My career spans nearly two decades of technical leadership, marked by a consistent track record of delivering high-impact projects, optimizing performance, and leading cross-functional teams to success. I specialize in architecting resilient systems that not only meet current demands but also anticipate future growth, ensuring long-term ROI for my clients.</p>
+
+                <h3>Positionnement local & services clés</h3>
+                <ul>
+                    <li><strong>Formateur IA spécialisé pour développeurs</strong> | Antibes – Sophia Antipolis</li>
+                    <li><strong>Expert PrestaShop freelance</strong> – Côte d'Azur & télétravail</li>
+                    <li><strong>Accompagnement entreprises</strong> dans l'intégration de l'IA</li>
+                    <li><strong>Zone d'intervention</strong> : Alpes-Maritimes, PACA, France entière en remote</li>
+                    <li><strong>Basé à Antibes</strong>, intervention sur l'écosystème Sophia Antipolis</li>
+                    <li><strong>Spécialité</strong> : formation IA pratique pour équipes de développement</li>
+                </ul>
 
                 <h3>My Professional Journey: Growth, Leadership & Innovation</h3>
                 <p>My path in software engineering has been a continuous evolution, starting from foundational PHP development to mastering complex architectural patterns, e-commerce ecosystems like PrestaShop, and integrating cutting-edge AI/ML capabilities. I thrive in environments that demand both deep technical expertise and strategic vision, consistently pushing the boundaries of what's possible.</p>
