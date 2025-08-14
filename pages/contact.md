@@ -10,6 +10,7 @@ permalink: /contact/
     <div class="container">
         <h1>{{ page.title }}</h1>
         <p class="section-description">Que vous ayez un projet en tête, un défi technique à discuter, ou simplement envie d'échanger, j'aimerais avoir de vos nouvelles. Remplissez le formulaire ci-dessous ou contactez-moi directement.</p>
+        <p class="section-note" aria-live="polite" style="margin:0.5rem 0 1.25rem; color:#555;">Délai de réponse : sous 24h ouvrées.</p>
 
         <div class="contact-form-wrapper">
             <div class="contact-ctas" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:1rem;">

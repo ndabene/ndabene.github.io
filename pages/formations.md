@@ -54,3 +54,14 @@ description: "Formations IA pour développeurs : programmes pratiques, présenti
   </div>
 </section>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Formation IA pour développeurs",
+  "description": {{ page.description | jsonify }},
+  "provider": { "@type": "Person", "name": "Nicolas Dabène" },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>

@@ -44,3 +44,14 @@ description: "Formation IA pour équipes dev, accompagnement entreprises, dével
   </div>
 </section>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Services IA & Développement (Sophia Antipolis / Antibes)",
+  "provider": { "@type": "Person", "name": "Nicolas Dabène" },
+  "areaServed": "Alpes-Maritimes",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
