@@ -4,7 +4,7 @@ layout: default
 
 <div class="page-header">
     <div class="container">
-        <h1>{{ page.title }}</h1>
+        <h1>{{ page.heading | default: page.title }}</h1>
         {% if page.hero_image %}
             <img src="{{ page.hero_image }}" alt="{{ page.hero_title | default: page.title }}" class="hero-image">
         {% endif %}

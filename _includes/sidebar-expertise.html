@@ -1,0 +1,20 @@
+{% assign current_id = page.url | split: '/' | last | default: '' %}
+{% if current_id == '' %}
+  {% assign parts = page.url | split: '/' %}
+  {% assign current_id = parts | last %}
+{% endif %}
+
+<div class="sidebar-card">
+  <h3>Domaines d'expertise</h3>
+  <ul class="sidebar-list">
+    {% for ex in site.data.expertise %}
+      <li><a href="/expertise/{{ ex.id | downcase }}/" class="{% if page.url contains ex.id %}active{% endif %}">{{ ex.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="sidebar-card">
+  <h3>Contenus liés</h3>
+  {% include expertise-related.html expertise_id=current_id %}
+</div>
+

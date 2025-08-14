@@ -12,6 +12,11 @@ permalink: /contact/
         <p class="section-description">Que vous ayez un projet en tête, un défi technique à discuter, ou simplement envie d'échanger, j'aimerais avoir de vos nouvelles. Remplissez le formulaire ci-dessous ou contactez-moi directement.</p>
 
         <div class="contact-form-wrapper">
+            <div class="contact-ctas" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:1rem;">
+                <a class="btn btn--secondary" href="#contact-type" onclick="document.getElementById('contact-type').focus()">Mission freelance</a>
+                <a class="btn btn--secondary" href="#contact-type" onclick="document.getElementById('contact-type').focus()">Formation</a>
+                <a class="btn btn--secondary" href="#contact-type" onclick="document.getElementById('contact-type').focus()">Conseil</a>
+            </div>
             <div class="contact-form-container card" style="min-width:0;">
                 <form action="https://formspree.io/f/meozazzl" method="POST" class="contact-form">
                     <div class="form-group">
@@ -23,12 +28,25 @@ permalink: /contact/
                         <input type="email" id="email" name="_replyto" required>
                     </div>
                     <div class="form-group">
+                        <label for="contact-type">Type de demande :</label>
+                        <select id="contact-type" name="contact_type" required>
+                            <option value="" disabled selected>Choisir...</option>
+                            <option>Mission freelance</option>
+                            <option>Formation</option>
+                            <option>Conseil</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="subject">Sujet :</label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message :</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="availability">Disponibilités souhaitées :</label>
+                        <input type="text" id="availability" name="availability" placeholder="Ex: Sous 24h, semaine prochaine, dates…">
                     </div>
                     
                     <!-- Anti-spam honeypot field (hidden) -->

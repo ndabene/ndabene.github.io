@@ -60,11 +60,9 @@
     const themeToggle = document.getElementById('theme-toggle');
     function updateBodyOffset() {
       if (!nav) return;
-      const isMobile = window.innerWidth <= 768;
-      const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
       const navHeight = nav.offsetHeight || 72;
-      // Publier uniquement via variable CSS + scroll-padding
-      const offset = (isMobile || isTablet) ? navHeight : 0;
+      // Publier via variable CSS + scroll-padding, toujours la hauteur réelle
+      const offset = navHeight;
       document.documentElement.style.setProperty('--nav-offset', offset + 'px');
       document.documentElement.style.scrollPaddingTop = offset + 'px';
       document.body.style.paddingTop = '';

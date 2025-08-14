@@ -166,93 +166,7 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
     </div>
 </section>
 
-{%- comment -%} Hero unique focalisé sur le pack (objectif: Voir le programme) {%- endcomment -%}
-{% assign packs_hero_by_type = site.data.produits | where: 'type', 'pack' %}
-{% assign packs_hero_by_cat = site.data.produits | where: 'categorie', 'Pack' %}
-{% assign packs_hero_tmp = packs_hero_by_type | concat: packs_hero_by_cat %}
-{% assign pack_featured = packs_hero_tmp | uniq | first %}
-{% if pack_featured %}
-<section class="boutique-hero split" aria-label="Mise en avant pack">
-  <div class="container">
-    <div class="hero-split">
-      <div class="hero-col content">
-        <div class="hero-eyebrow">
-          {% if pack_featured.categorie %}<span class="eyebrow-badge">{{ pack_featured.categorie }}</span>{% endif %}
-          {% if pack_featured.univers %}<span class="eyebrow-badge alt">{{ pack_featured.univers }}</span>{% endif %}
-          {% if pack_featured.avantages %}<span class="advantage-chip">{{ pack_featured.avantages }}</span>{% endif %}
-        </div>
-        <h2 class="hero-title">{{ pack_featured.nom }}</h2>
-        <p class="hero-subtitle">{{ pack_featured.description }}</p>
-
-        {% if pack_featured.micro_extraits and pack_featured.micro_extraits.size > 0 %}
-        <ul class="hero-micro" aria-label="Points clés">
-          {% for it in pack_featured.micro_extraits %}
-          <li>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span>{{ it }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-
-        {% if pack_featured.inclus and pack_featured.inclus.size > 0 %}
-        <div class="hero-includes" aria-label="Inclus dans le pack">
-          {% for it in pack_featured.inclus %}
-            <span class="include-chip">{{ it }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-        {% assign has_payment = false %}
-        {% if pack_featured.lien_paiement and pack_featured.lien_paiement != '' %}
-          {% assign has_payment = true %}
-        {% endif %}
-        {% assign override_inactive = false %}
-        {% if pack_featured.actif == false or pack_featured.active == false or pack_featured.enabled == false or pack_featured.status == 'inactive' %}
-          {% assign override_inactive = true %}
-        {% endif %}
-        {% assign is_active = false %}
-        {% if site.shop_enabled and has_payment and override_inactive == false %}
-          {% assign is_active = true %}
-        {% endif %}
-        <div class="hero-actions">
-          {% if is_active %}
-            <a class="btn-primary" href="{{ pack_featured.lien_paiement }}" target="_blank" rel="noopener">Commencer</a>
-          {% else %}
-            <span class="btn-secondary" aria-disabled="true">Bientôt disponible</span>
-          {% endif %}
-          <span class="price-chip">{{ pack_featured.prix }}</span>
-        </div>
-
-      </div>
-      <div class="hero-col media">
-        <div class="media-wrap">
-          {% if pack_featured.univers %}<span class="badge-overlay">{{ pack_featured.univers }}</span>{% endif %}
-          <img src="{{ '/' | append: pack_featured.image | replace: '//' , '/' | relative_url }}" alt="{{ pack_featured.nom }}">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="guarantee-row" aria-label="Garanties">
-  <div class="container">
-    <div class="guarantee-row-inner">
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-        <span>Mises à jour incluses</span>
-      </div>
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 1l7 4v6c0 5-3.5 9-7 11-3.5-2-7-6-7-11V5l7-4z"/></svg>
-        <span>Support 48h</span>
-      </div>
-      <div class="guarantee-item" role="text">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-        <span>Paiement sécurisé</span>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
+{%- comment -%} Hero pack retiré pour alléger la page boutique {%- endcomment -%}
 
 <section class="section boutique-page-section">
     <div class="container">
@@ -268,7 +182,9 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
               {% if pr.file_format %}{% assign formats_concat = formats_concat | append: pr.file_format | append: '|' %}{% endif %}
             {% endfor %}
             {% assign formats_list = formats_concat | downcase | split: '|' | uniq | sort %}
-        <nav class="boutique-quick-nav" aria-label="Navigation rapide">
+        <div class="shop-layout">
+          <aside class="shop-sidebar">
+            <nav class="boutique-quick-nav" aria-label="Filtres">
             {% if univers_list.size > 0 %}
             <div class="quick-nav-block quick-nav-univers">
                 <span class="label">Univers</span>
@@ -311,24 +227,13 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
 
             <div class="quick-search">
                 <button id="clear-filters" class="nav-chip reset" type="button" title="Réinitialiser">Réinitialiser</button>
-                <input id="quick-search" type="search" placeholder="Rechercher (titre, mots‑clés)" aria-label="Rechercher" />
             </div>
-        </nav>
-        <div class="results-toolbar" aria-live="polite">
-            <div class="results-left">
-                <span id="results-count" class="results-count">0 résultat</span>
+            </nav>
+          </aside>
+          <main class="shop-main">
+            <div class="results-summary">
+              <span id="results-count" class="results-count">0 résultat</span>
             </div>
-            <div class="results-right">
-                <label for="sort-select" class="sr-only">Trier par</label>
-                <select id="sort-select" class="sort-select" aria-label="Trier par">
-                    <option value="relevance">Pertinence</option>
-                    <option value="price-asc">Prix croissant</option>
-                    <option value="price-desc">Prix décroissant</option>
-                    <option value="new">Nouveautés</option>
-                    <option value="popularity">Populaires</option>
-                </select>
-            </div>
-        </div>
         
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         
@@ -384,10 +289,7 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
         
         {% for group in grouped_products %}
         <div class="product-category-section" id="{{ group.name | slugify }}">
-            <div class="category-header">
-                <h2 class="category-title">{{ group.name }}</h2>
-                <span class="category-count">{{ group.items.size }} produit{% if group.items.size > 1 %}s{% endif %}</span>
-            </div>
+
 
             <div class="product-grid">
                 {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
@@ -437,6 +339,8 @@ ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
             </div>
         </div>
         {% endfor %}
+          </main>
+        </div>
 
         <div id="no-results" class="no-results" style="display:none;">Aucun produit ne correspond à vos filtres.</div>
 

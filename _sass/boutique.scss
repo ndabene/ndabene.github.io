@@ -8,6 +8,12 @@
         radial-gradient(50vw 35vh at 110% -10%, rgba(147,51,234,.05), transparent 60%),
         linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
     
+    // Layout: sidebar + main
+    .shop-layout { display: grid; grid-template-columns: 300px 1fr; gap: 1rem; align-items: start; }
+    .shop-sidebar { position: relative; }
+    .shop-main { min-width: 0; }
+    @media (max-width: 1024px) { .shop-layout { grid-template-columns: 1fr; } }
+
     // Quick navigation
     .boutique-quick-nav {
         display: flex;
@@ -52,13 +58,7 @@
         .quick-search {
             margin-left: auto; display: flex; gap: .5rem; align-items: center;
         }
-        .quick-search input {
-            min-width: 260px;
-            border: 1px solid #e5e7eb;
-            background: #fff;
-            padding: 0.45rem 0.6rem;
-            border-radius: 8px;
-        }
+        .quick-search input { display:none; }
         .quick-search .reset { background:#f8fafc; border:1px solid #d1d9e0; padding:.28rem .6rem; border-radius:999px; font-size:.85rem; font-weight:700; color:#475569; box-shadow:none; }
         .quick-search .reset:hover { background:#eef2f7; border-color:#cbd5e1; }
 
@@ -66,6 +66,14 @@
         .quick-sort select { border:1px solid #e5e7eb; background:#fff; border-radius:8px; padding:.4rem .6rem; }
         .results-count { color:#64748b; font-weight:700; margin-left:.25rem; }
     }
+
+    /* Sidebar-specific overrides to prevent overflow */
+    .shop-sidebar .boutique-quick-nav { position: sticky; top: 12px; }
+    .shop-sidebar .boutique-quick-nav .quick-search { margin-left: 0; width: 100%; }
+    .shop-sidebar .boutique-quick-nav .quick-search input { width: 100%; min-width: 0; }
+
+    // Summary line above grid (replaces old toolbar)
+    .results-summary { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:.5rem .75rem; margin: 0 0 1rem; box-shadow: 0 8px 20px rgba(15,23,42,.05); }
 
     // Benefits row (3 boxes)
     .benefits-row {

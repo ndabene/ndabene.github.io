@@ -58,6 +58,10 @@ exclude:
   - Gemfile.lock
   - README.md
   - PLAN.md
+  - CLAUDE.md
+  - GEMINI.md
+  - BLOG_INSTRUCTIONS.md
+  - todo.md
   - scripts/
   - update-sitemap.sh
   - package.json
