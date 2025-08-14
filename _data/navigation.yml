@@ -1,13 +1,12 @@
+- name: Boutique
+  link: /boutique/
 - name: Prestations
+  hidden: true
   subitems:
     - name: Services
       link: /services/
     - name: Formations
       link: /formations/
-    - name: Boutique
-      link: /boutique/
-- name: Projets
-  link: /projects/
 - name: Blog
   link: /blog/
 - name: Expertise
@@ -25,5 +24,7 @@
       link: /expertise/innovation/
     - name: Compétences
       link: /skills/
+    - name: Projets
+      link: /projects/
 - name: FAQ
   link: /faq/

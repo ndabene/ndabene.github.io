@@ -272,3 +272,12 @@ Cursor CLI apporte l’agent Cursor **là où vous travaillez déjà** : le term
 ---
 
 *Article publié le 11 août 2025 par Nicolas Dabène — Expert PHP & PrestaShop avec 15+ ans d'expérience*
+
+---
+
+### Ressources liées
+
+- [Services IA & e-commerce](/services/)
+- [Formations IA pour développeurs](/formations/)
+- [Expertise Fullstack](/expertise/fullstack/)
+- [Expertise IA](/expertise/ia/)

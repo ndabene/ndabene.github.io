@@ -298,3 +298,12 @@ Finalement, PHP nous rappelle qu'en technologie comme ailleurs, la longévité n
 ---
 
 *Article publié le 21 août 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience*
+
+---
+
+### Ressources liées
+
+- [Compétences](/skills/)
+- [Expertise Fullstack](/expertise/fullstack/)
+- [Services](/services/)
+- [Formations](/formations/)

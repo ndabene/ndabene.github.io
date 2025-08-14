@@ -9,6 +9,7 @@
     <nav class="header-nav main-navigation">
       <ul class="nav-links" role="menubar" aria-label="Navigation principale">
         {% for item in site.data.navigation %}
+          {% unless item.hidden %}
           <li class="nav-item{% if item.subitems %} has-submenu{% endif %}" role="none">
             <a href="{{ item.link | default: '#' | relative_url }}" 
                class="nav-link {% if page.url == item.link %}active{% endif %}" role="menuitem" aria-haspopup="{% if item.subitems %}true{% else %}false{% endif %}" aria-expanded="false">
@@ -24,6 +25,7 @@
               </ul>
             {% endif %}
           </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </nav>
@@ -149,6 +151,7 @@
   <div class="mobile-nav" id="mobile-nav-panel">
     <ul>
       {% for item in site.data.navigation %}
+        {% unless item.hidden %}
         <li class="mobile-item{% if item.subitems %} has-submenu{% endif %}">
           <a href="{{ item.link | default: '#' | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}" aria-expanded="false">
             {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
@@ -161,6 +164,7 @@
             </ul>
           {% endif %}
         </li>
+        {% endunless %}
       {% endfor %}
       <li><a href="{{ "/contact" | relative_url }}" class="btn btn--primary">Discutons de votre projet</a></li>
     </ul>

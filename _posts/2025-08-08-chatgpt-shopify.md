@@ -104,3 +104,12 @@ Bien que cette évolution bouscule les modèles établis, elle ouvre d’immense
 ---
 
 *Article publié le 8 août 2025 par Nicolas Dabène – Expert PHP & PrestaShop avec 15 + ans d’expérience*
+
+---
+
+### Ressources liées
+
+- [Services IA & e-commerce](/services/)
+- [Formations IA pour développeurs](/formations/)
+- [Expertise E-commerce](/expertise/ecommerce/)
+- [Boutique](/boutique/)

@@ -429,3 +429,12 @@ Cette solution vous permet de préserver votre investissement en développement 
 ---
 
 *Article publié le 13 août 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience*
+
+---
+
+### Ressources liées
+
+- [Services IA & e-commerce](/services/)
+- [Formations IA pour développeurs](/formations/)
+- [Expertise PrestaShop](/expertise/prestashop/)
+- [Expertise IA](/expertise/ia/)
