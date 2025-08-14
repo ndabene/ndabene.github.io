@@ -195,6 +195,16 @@ layout: default
                     </article>
                 
                     <!-- Social Sharing Section -->
+                    <div class="post-related-links">
+                        <h3>Ressources liées</h3>
+                        <ul class="post-related-list">
+                            <li><a href="/services/">Services IA & e-commerce</a></li>
+                            <li><a href="/formations/">Formations IA pour développeurs</a></li>
+                            <li><a href="/expertise/prestashop/">Expertise PrestaShop</a></li>
+                            <li><a href="/expertise/ia/">Expertise IA</a></li>
+                        </ul>
+                    </div>
+
                     <div class="social-sharing-section">
                         <h3 class="sharing-title">
                             <i class="fas fa-share-alt"></i>
@@ -441,6 +451,33 @@ layout: default
                     }
                 });
             });
+        }
+    });
+    
+    // Inline "Ressources liées" handling: style inline list and avoid duplicate footer
+    document.addEventListener('DOMContentLoaded', function() {
+        const postContentEl = document.querySelector('.post-content');
+        const footerRelatedEl = document.querySelector('.post-related-links');
+        if (!postContentEl) return;
+        
+        const headings = postContentEl.querySelectorAll('h2, h3, h4');
+        let relatedHeading = null;
+        headings.forEach(function(h) {
+            const text = (h.textContent || '').trim().toLowerCase();
+            if (text.includes('ressources liées')) {
+                relatedHeading = h;
+            }
+        });
+        
+        if (relatedHeading) {
+            postContentEl.classList.add('has-inline-related');
+            const nextEl = relatedHeading.nextElementSibling;
+            if (nextEl && nextEl.tagName && nextEl.tagName.toLowerCase() === 'ul') {
+                nextEl.classList.add('post-related-inline');
+            }
+            if (footerRelatedEl) {
+                footerRelatedEl.style.display = 'none';
+            }
         }
     });
     </script>
