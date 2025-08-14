@@ -1,3 +1,4 @@
+---
 layout: page
 title: Formations
 heading: Formations IA pour Développeurs

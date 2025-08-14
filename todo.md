@@ -21,7 +21,6 @@
 
 ## 🚀 NOUVELLES PAGES À CRÉER (Semaine 3-4)
 
-✓ Pages `Services` et `Formations` créées et publiées.
 
 ### 3. Page Expertise approfondie (/expertise/prestashop/, /expertise/ia/, etc.)
 - [ ] Créer des sous-pages par technologie maîtrisée

@@ -1,6 +1,6 @@
 /* Ensure consistent top spacing under fixed header */
 .page-header {
-  margin-top: calc(var(--nav-offset, 72px) + 12px);
+  margin-top: 12px;
 }
 .page-content {
   padding-top: 12px;
