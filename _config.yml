@@ -96,6 +96,7 @@ force_light_mode: true
 # Mobile-specific settings
 mobile_optimized: true
 critical_css_inline: true
+cache_busting: true
 
 # Sitemap configuration
 sitemap:
