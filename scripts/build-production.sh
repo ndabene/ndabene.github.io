@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Script de build production pour générer le sitemap avec les bonnes URLs
 echo "🚀 Build de production en cours..."

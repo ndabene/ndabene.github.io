@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Script pour créer un nouvel article de blog
 # Usage: ./scripts/new-post.sh "Titre de l'article" [options]
