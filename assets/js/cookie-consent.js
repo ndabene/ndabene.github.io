@@ -286,8 +286,8 @@ class CookieConsent {
             if (cookieName.includes('*')) {
                 // Gérer les cookies avec patterns
                 const pattern = cookieName.replace('*', '');
-                Object.keys(document.cookie.split(';')).forEach(key => {
-                    const cookieKey = key.trim().split('=')[0];
+                document.cookie.split(';').forEach(cookie => {
+                    const cookieKey = cookie.trim().split('=')[0];
                     if (cookieKey.startsWith(pattern)) {
                         this.deleteCookie(cookieKey);
                     }
