@@ -2,7 +2,8 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Page d'accueil (exclue des pages loop pour éviter duplication) -->
   <url>
@@ -32,6 +33,11 @@ layout: null
       {% else %}
         <priority>0.8</priority>
       {% endif %}
+      {% if page.image %}
+        <image:image>
+          <image:loc>{{ page.image | prepend: site.url }}</image:loc>
+        </image:image>
+      {% endif %}
     </url>
     {% endunless %}
   {% endfor %}
@@ -41,9 +47,14 @@ layout: null
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
-    </url>
+        <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+        <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
+        {% if post.image %}
+          <image:image>
+            <image:loc>{{ post.image | prepend: site.url }}</image:loc>
+          </image:image>
+        {% endif %}
+      </url>
   {% endfor %}
   
   <!-- Projets -->
@@ -56,8 +67,14 @@ layout: null
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
       <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.8{% endif %}</priority>
-    </url>
+        <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+      {% assign project_image = project.image | default: project.hero_image %}
+      {% if project_image %}
+        <image:image>
+          <image:loc>{{ project_image | prepend: site.url }}</image:loc>
+        </image:image>
+      {% endif %}
+      </url>
   {% endfor %}
   
   <!-- Études de cas -->
@@ -70,8 +87,14 @@ layout: null
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
       <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.8{% endif %}</priority>
-    </url>
+        <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+      {% assign cs_image = case_study.image | default: case_study.hero_image %}
+      {% if cs_image %}
+        <image:image>
+          <image:loc>{{ cs_image | prepend: site.url }}</image:loc>
+        </image:image>
+      {% endif %}
+      </url>
   {% endfor %}
   
 </urlset>
