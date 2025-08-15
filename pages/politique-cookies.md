@@ -2,10 +2,13 @@
 layout: page
 title: "Politique de Cookies"
 permalink: /politique-cookies/
-description: "Information détaillée sur l'utilisation des cookies sur le site de Nicolas Dabène, développeur PHP et architecte logiciel."
+description: "Information détaillée sur l'utilisation des cookies sur le site de Nicolas
+  Dabène, développeur PHP et architecte logiciel."
 body_class: "cookie-policy-page"
+llm_summary: Information détaillée sur l'utilisation des cookies sur le site de 
+  Nicolas Dabène, développeur PHP et architecte logiciel.
+llm_topics: [cookies, politique]
 ---
-
 <div class="cookie-intro-section">
     <div class="card-modern intro-card">
         <div class="card-body">

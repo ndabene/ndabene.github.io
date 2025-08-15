@@ -3,9 +3,12 @@ layout: page
 title: "Services"
 heading: Expertise & Services
 permalink: /services/
-description: "Formation IA pour équipes dev, accompagnement entreprises, développement PrestaShop freelance. Expert basé Antibes, rayonnement PACA."
+description: "Formation IA pour équipes dev, accompagnement entreprises, développement
+  PrestaShop freelance. Expert basé Antibes, rayonnement PACA."
+llm_summary: Formation IA pour équipes dev, accompagnement entreprises, 
+  développement PrestaShop freelance. Expert basé Antibes, rayonnement PACA.
+llm_topics: [services, formation ia, prestashop]
 ---
-
 <section class="services-section">
   <div class="container">
     <p class="section-description">Prestations alignées avec l’esthétique du site, structure en sections claires et typographies cohérentes.</p>

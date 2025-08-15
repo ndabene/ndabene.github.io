@@ -1,12 +1,26 @@
 ---
 layout: page
-title: Nicolas Dabene - Formateur IA & Développeur PrestaShop | Antibes Sophia Antipolis
+title: Nicolas Dabene - Formateur IA & Développeur PrestaShop | Antibes Sophia 
+  Antipolis
 permalink: /about/
-description: "Discover the professional journey and expertise of Nicolas Dabène, a Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience."
-keywords: "senior php developer, prestashop expert, ai orchestrator, php architect, technical leadership, software architecture, fullstack development, certifications"
+description: "Discover the professional journey and expertise of Nicolas Dabène, a
+  Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience."
+keywords: "senior php developer, prestashop expert, ai orchestrator, php architect,
+  technical leadership, software architecture, fullstack development, certifications"
 show_sidebar: true
+llm_summary: Discover the professional journey and expertise of Nicolas Dabène, 
+  a Senior PHP FullStack Developer & AI Orchestrator with 15+ years of 
+  experience.
+llm_topics:
+- senior php developer
+- prestashop expert
+- ai orchestrator
+- php architect
+- technical leadership
+- software architecture
+- fullstack development
+- certifications
 ---
-
 <section class="about-section light-gray-bg">
     <div class="container">
         <div class="about-grid">

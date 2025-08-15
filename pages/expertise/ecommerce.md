@@ -3,8 +3,9 @@ layout: page
 title: Expertise E‑commerce
 permalink: /expertise/ecommerce/
 show_sidebar: false
+llm_summary: "Expertise en solutions e-commerce et optimisation de boutiques en ligne."
+llm_topics: [ecommerce, solutions digitales]
 ---
-
 {% assign exp = site.data.expertise | where: 'id', 'ecommerce' | first %}
 <section class="expertise-detail">
   <div class="container">

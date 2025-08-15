@@ -3,8 +3,9 @@ layout: page
 title: Expertise Développement FullStack
 permalink: /expertise/fullstack/
 show_sidebar: false
+llm_summary: "Présentation de l'expertise en développement FullStack de Nicolas Dabène."
+llm_topics: [fullstack, developpement]
 ---
-
 {% assign exp = site.data.expertise | where: 'id', 'fullstack' | first %}
 <section class="expertise-detail">
   <div class="container">

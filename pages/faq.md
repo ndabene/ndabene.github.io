@@ -2,9 +2,12 @@
 layout: page
 title: FAQ
 permalink: /faq/
-description: "Questions fréquentes sur la formation IA, l'IA en entreprise et les prestations PrestaShop."
+description: "Questions fréquentes sur la formation IA, l'IA en entreprise et les
+  prestations PrestaShop."
+llm_summary: Questions fréquentes sur la formation IA, l'IA en entreprise et les
+  prestations PrestaShop.
+llm_topics: [faq, formation ia, prestashop]
 ---
-
 <section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
   <div class="container">
     <h1>{{ page.title }}</h1>

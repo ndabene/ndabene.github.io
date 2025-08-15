@@ -2,10 +2,13 @@
 layout: default
 title: "Conditions Générales d’Utilisation et de Vente"
 permalink: /cgu-boutique/
-description: "Conditions générales applicables à la boutique (formations et produits numériques)."
+description: "Conditions générales applicables à la boutique (formations et produits
+  numériques)."
 body_class: "page-cgu"
+llm_summary: Conditions générales applicables à la boutique (formations et 
+  produits numériques).
+llm_topics: [conditions, boutique]
 ---
-
 <section class="page-hero-section">
   <div class="container">
     <nav class="breadcrumb">

@@ -5,14 +5,19 @@ date: 2025-08-11
 author: Nicolas Dabène
 categories: [Développement, Tutoriel, Intelligence Artificielle]
 tags: [Cursor, CLI, terminal, AI, automation, PrestaShop, Symfony, GPT]
-excerpt: "Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées, reprendre des sessions, et automatiser des workflows"
+excerpt: "Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis
+  le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées,
+  reprendre des sessions, et automatiser des workflows"
 image: /assets/images/blog/2025-08-11-cursor-cli-banner.jpg
 featured: true
-difficulty: "Intermédiaire" 
+difficulty: "Intermédiaire"
 technologies: ["JavaScript", "PHP", "Bash", "MCP"]
 estimated_reading_time: "12 minutes"
+llm_summary: 'Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis
+  le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées,
+  reprendre des sessions, et automatiser des workflows'
+llm_topics: [Cursor, CLI, terminal, AI, automation, PrestaShop, Symfony, GPT]
 ---
-
 # Cursor CLI : guide complet + commandes /help
 
 ## Introduction

@@ -3,8 +3,9 @@ layout: page
 title: Expertise PrestaShop
 permalink: /expertise/prestashop/
 show_sidebar: false
+llm_summary: "Expertise avancée sur la plateforme e-commerce PrestaShop."
+llm_topics: [prestashop, ecommerce]
 ---
-
 {% assign exp = site.data.expertise | where: 'id', 'prestashop' | first %}
 <section class="expertise-detail">
   <div class="container">

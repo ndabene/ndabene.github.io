@@ -4,12 +4,19 @@ title: "Vibe Coding vs Prompt-Driven Development: IA générative et développem
 date: 2025-06-15
 author: Nicolas Dabène
 categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
-tags: [IA générative, développement logiciel, qualité du code, sécurité, prompt engineering]
-excerpt: "Exploration de deux approches du développement assisté par IA : le Vibe Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques, bénéfices et bonnes pratiques pour une génération de code responsable."
+tags: [IA générative, développement logiciel, qualité du code, sécurité, prompt 
+    engineering]
+excerpt: "Exploration de deux approches du développement assisté par IA : le Vibe
+  Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques,
+  bénéfices et bonnes pratiques pour une génération de code responsable."
 image: /assets/images/blog/vibe-coding-prompt-driven.jpg
 featured: true
+llm_summary: 'Exploration de deux approches du développement assisté par IA : le Vibe
+  Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques,
+  bénéfices et bonnes pratiques pour une génération de code responsable.'
+llm_topics: [IA générative, développement logiciel, qualité du code, sécurité, 
+    prompt engineering]
 ---
-
 # Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel, sécurité et qualité du code
 
 
