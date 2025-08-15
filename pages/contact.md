@@ -1,11 +1,20 @@
 ---
 layout: page
 title: Me Contacter
-description: "Contactez Nicolas Dabène pour vos projets, collaborations ou consultations techniques."
-keywords: "contact développeur php, expert prestashop, consultant ai orchestrator, consultation technique, développeur freelance"
+description: "Contactez Nicolas Dabène pour vos projets, collaborations ou consultations
+  techniques."
+keywords: "contact développeur php, expert prestashop, consultant ai orchestrator,
+  consultation technique, développeur freelance"
 permalink: /contact/
+llm_summary: Contactez Nicolas Dabène pour vos projets, collaborations ou 
+  consultations techniques.
+llm_topics:
+- contact développeur php
+- expert prestashop
+- consultant ai orchestrator
+- consultation technique
+- développeur freelance
 ---
-
 <section class="contact-section">
     <div class="container">
         <h1>{{ page.title }}</h1>

@@ -1,11 +1,13 @@
 ---
 layout: case-study
 title: E-commerce Enterprise PrestaShop Transformation
-tagline: Architecting and optimizing a multi-store PrestaShop platform for a Fortune 500 retail client.
+tagline: Architecting and optimizing a multi-store PrestaShop platform for a 
+  Fortune 500 retail client.
 client: Fortune 500 Retail
 duration: 10 months
 team_size: 8 developers (cross-functional)
-technologies: ["PrestaShop", "PHP", "Symfony", "MySQL", "Redis", "Varnish", "AWS", "Docker", "Microservices"]
+technologies: ["PrestaShop", "PHP", "Symfony", "MySQL", "Redis", "Varnish", "AWS",
+  "Docker", "Microservices"]
 business_impact_score: 9
 executive_summary: |
   Led the complete re-architecture and performance optimization of a complex B2B multi-store PrestaShop platform for a Fortune 500 retail client. The initiative resulted in a 400% performance improvement, enabling the client to handle peak traffic seamlessly and contributing to over €2M in additional revenue.
@@ -40,10 +42,10 @@ results_metrics: |
   - **Enhanced Scalability:** The platform successfully handled a 5x increase in concurrent users without performance degradation.
   - **Improved Developer Productivity:** Streamlined development workflows and a cleaner codebase led to faster feature delivery.
 metrics_charts:
-  - image: /assets/images/case-studies/ecommerce-perf-chart.png
-    alt: "Performance Improvement Chart"
-  - image: /assets/images/case-studies/ecommerce-revenue-chart.png
-    alt: "Revenue Increase Chart"
+- image: /assets/images/case-studies/ecommerce-perf-chart.png
+  alt: "Performance Improvement Chart"
+- image: /assets/images/case-studies/ecommerce-revenue-chart.png
+  alt: "Revenue Increase Chart"
 team_leadership: |
   As the technical lead, I was responsible for:
   - Defining the overall technical architecture and roadmap.
@@ -56,10 +58,13 @@ key_learnings: |
   - **Team Empowerment:** Empowering developers with clear goals and the right tools leads to higher quality and faster delivery.
   - **Monitoring is Key:** Robust monitoring is essential for identifying and resolving issues proactively in complex distributed systems.
 screenshots:
-  - image: /assets/images/case-studies/ecommerce-cs-1.jpg
-    alt: "PrestaShop Multi-store Dashboard"
-  - image: /assets/images/case-studies/ecommerce-cs-2.jpg
-    alt: "Optimized Product Page"
+- image: /assets/images/case-studies/ecommerce-cs-1.jpg
+  alt: "PrestaShop Multi-store Dashboard"
+- image: /assets/images/case-studies/ecommerce-cs-2.jpg
+  alt: "Optimized Product Page"
+llm_summary: Architecting and optimizing a multi-store PrestaShop platform for a
+  Fortune 500 retail client.
+llm_topics: ["PrestaShop", "PHP", "Symfony", "MySQL", "Redis", "Varnish", "AWS", "Docker",
+  "Microservices"]
 ---
-
 This project stands as a testament to the power of strategic technical leadership and meticulous execution in transforming critical business infrastructure. The successful overhaul of the PrestaShop platform not only resolved immediate operational challenges but also positioned the client for sustained growth and innovation in the highly competitive retail landscape.

@@ -2,13 +2,18 @@
 layout: default
 title: E‑books et Formations (IA, PrestaShop, Développement)
 permalink: /boutique/
-description: "E‑books PDF pragmatiques et formations complémentaires pour progresser en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et actionnables pour monter en compétence pas à pas."
+description: "E‑books PDF pragmatiques et formations complémentaires pour progresser
+  en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et
+  actionnables pour monter en compétence pas à pas."
 body_class: page-boutique
 ai_intent: discover_and_purchase_training
 ai_primary_action: buy_training
 ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
+llm_summary: E‑books PDF pragmatiques et formations complémentaires pour 
+  progresser en IA, PrestaShop et développement. Téléchargement immédiat, 
+  contenus clairs et actionnables pour monter en compétence pas à pas.
+llm_topics: [ebooks, formations, ia, prestashop]
 ---
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
