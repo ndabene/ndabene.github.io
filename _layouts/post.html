@@ -194,16 +194,8 @@ layout: default
                         </div>
                     </article>
                 
-                    <!-- Social Sharing Section -->
-                    <div class="post-related-links">
-                        <h3>Ressources liées</h3>
-                        <ul class="post-related-list">
-                            <li><a href="/services/">Services IA & e-commerce</a></li>
-                            <li><a href="/formations/">Formations IA pour développeurs</a></li>
-                            <li><a href="/expertise/prestashop/">Expertise PrestaShop</a></li>
-                            <li><a href="/expertise/ia/">Expertise IA</a></li>
-                        </ul>
-                    </div>
+                    <!-- Related Resources Section -->
+                    {% include post-related-resources.html %}
 
                     <div class="social-sharing-section">
                         <h3 class="sharing-title">
@@ -457,7 +449,7 @@ layout: default
     // Inline "Ressources liées" handling: style inline list and avoid duplicate footer
     document.addEventListener('DOMContentLoaded', function() {
         const postContentEl = document.querySelector('.post-content');
-        const footerRelatedEl = document.querySelector('.post-related-links');
+        const footerRelatedEl = document.querySelector('.related-resources');
         if (!postContentEl) return;
         
         const headings = postContentEl.querySelectorAll('h2, h3, h4');
@@ -473,8 +465,41 @@ layout: default
             postContentEl.classList.add('has-inline-related');
             const nextEl = relatedHeading.nextElementSibling;
             if (nextEl && nextEl.tagName && nextEl.tagName.toLowerCase() === 'ul') {
-                nextEl.classList.add('post-related-inline');
+                // Create a resources wrapper
+                const wrapper = document.createElement('div');
+                wrapper.className = 'related-resources inline-resources';
+                
+                // Move the list into this wrapper
+                const clone = nextEl.cloneNode(true);
+                const gridDiv = document.createElement('div');
+                gridDiv.className = 'resources-grid';
+                
+                // Convert li elements to resource-links
+                const items = clone.querySelectorAll('li');
+                items.forEach(function(item) {
+                    const link = item.querySelector('a');
+                    if (link) {
+                        const resourceLink = document.createElement('a');
+                        resourceLink.className = 'resource-link';
+                        resourceLink.href = link.href;
+                        
+                        const icon = document.createElement('span');
+                        icon.className = 'icon';
+                        icon.textContent = '→';
+                        
+                        resourceLink.appendChild(icon);
+                        resourceLink.appendChild(document.createTextNode(link.textContent));
+                        gridDiv.appendChild(resourceLink);
+                    }
+                });
+                
+                wrapper.appendChild(gridDiv);
+                
+                // Replace the original list with our enhanced version
+                nextEl.parentNode.replaceChild(wrapper, nextEl);
+                relatedHeading.style.display = 'none'; // Hide the original heading
             }
+            
             if (footerRelatedEl) {
                 footerRelatedEl.style.display = 'none';
             }

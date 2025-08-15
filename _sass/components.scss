@@ -1,5 +1,7 @@
 // _sass/components.scss - Styles fonctionnels
 
+@import "components/related-resources";
+
 //================================================
 // PROFILE IMAGE STYLES
 //================================================
@@ -1011,86 +1013,16 @@
 //================================================
 // RELATED LINKS (post footer)
 //================================================
-.post-related-links {
-  margin: 2rem 0 1rem;
-  padding: 1.25rem 1.25rem 0.75rem;
-  background: #fff;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(15,23,42,0.06);
-}
-.post-related-links h3 {
-  margin: 0 0 .75rem 0;
-  font-size: 1.1rem;
-  color: #0f172a;
-}
-.post-related-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .5rem 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.post-related-list a { color: #1d4ed8; text-decoration: none; }
-.post-related-list a:hover { text-decoration: underline; }
-@media (max-width: 640px) { .post-related-list { grid-template-columns: 1fr; } }
+// Styles moved to components/_related-resources.scss
 
-// If the article contains an inline "Ressources liées" section, make its list pretty
+// For backward compatibility with inline content
 .post-content.has-inline-related h2 + ul,
 .post-content.has-inline-related h3 + ul,
 .post-content.has-inline-related h4 + ul { margin-top: .5rem; }
 
-.post-related-inline {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: .75rem 1rem;
-  list-style: none;
-  padding: .75rem;
-  margin: .25rem 0 1.25rem 0;
-  background: #fff;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(15,23,42,0.06);
-}
-
-.post-related-inline li { margin: 0; }
-.post-related-inline a {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  color: #1d4ed8;
-  text-decoration: none;
-  padding: .625rem .75rem;
-  border-radius: 10px;
-  border: 1px solid #E5E7EB;
-  background: #ffffff;
-  box-shadow: 0 1px 2px rgba(15,23,42,0.02);
-  transition: all .2s ease;
-}
-.post-related-inline a:before {
-  content: '›';
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  background: #EFF6FF;
-  color: #1d4ed8;
-  font-weight: 700;
-  line-height: 1;
-}
-.post-related-inline a:hover {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
-  box-shadow: 0 6px 14px rgba(15,23,42,0.06);
-  transform: translateY(-1px);
-  text-decoration: none;
-}
-
-@media (max-width: 640px) {
-  .post-related-inline { grid-template-columns: 1fr; }
+// Special styling for the inline resources component
+.inline-resources {
+  margin: 1.5rem 0 2rem;
 }
 
 // Reduce CTA spacing when inline related block is present

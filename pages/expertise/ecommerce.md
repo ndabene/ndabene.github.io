@@ -35,6 +35,7 @@ show_sidebar: false
           </ul>
         </div>
         {% include expertise-related.html expertise_id='ecommerce' %}
+        {% include expertise-related-resources.html expertise_id='ecommerce' %}
       </aside>
     </div>
   </div>

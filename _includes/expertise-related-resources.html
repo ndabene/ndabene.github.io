@@ -1,0 +1,48 @@
+{% comment %}
+  Renders related resources for an expertise domain
+  Usage: {% include expertise-related-resources.html expertise_id='prestashop' %}
+  Data source: _data/expertise_map.yml
+{% endcomment %}
+
+<div class="related-resources">
+  <h3>Ressources liées</h3>
+  
+  <div class="resources-grid">
+    {% if include.expertise_id == 'ecommerce' or include.expertise_id == 'prestashop' %}
+      <a href="{{ '/expertise/prestashop/' | relative_url }}" class="resource-link">
+        <span class="icon">→</span>
+        Expertise PrestaShop
+      </a>
+    {% endif %}
+    
+    {% if include.expertise_id == 'ai' or include.expertise_id == 'ia' or include.expertise_id == 'ecommerce' %}
+      <a href="{{ '/expertise/ia/' | relative_url }}" class="resource-link">
+        <span class="icon">→</span>
+        Expertise IA
+      </a>
+    {% endif %}
+    
+    {% if include.expertise_id == 'ai' or include.expertise_id == 'ia' or include.expertise_id == 'ecommerce' %}
+      <a href="{{ '/services/#ia-ecommerce' | relative_url }}" class="resource-link">
+        <span class="icon">→</span>
+        Services IA & e-commerce
+      </a>
+    {% endif %}
+    
+    {% if include.expertise_id == 'ai' or include.expertise_id == 'ia' %}
+      <a href="{{ '/formations/#ia-dev' | relative_url }}" class="resource-link">
+        <span class="icon">→</span>
+        Formations IA pour développeurs
+      </a>
+    {% endif %}
+  </div>
+  
+  <div class="resources-buttons">
+    <a href="{{ '/formations/' | relative_url }}" class="btn btn--primary">
+      <span class="icon">📝</span> Formation IA pour développeurs
+    </a>
+    <a href="{{ '/services/' | relative_url }}" class="btn btn--secondary">
+      <span class="icon">🛠️</span> Services & Accompagnement
+    </a>
+  </div>
+</div>
