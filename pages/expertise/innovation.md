@@ -3,8 +3,9 @@ layout: page
 title: Innovation & Leadership Technique
 permalink: /expertise/innovation/
 show_sidebar: false
+llm_summary: "Présentation de l'expertise en innovation numérique de Nicolas Dabène."
+llm_topics: [innovation, strategie]
 ---
-
 {% assign exp = site.data.expertise | where: 'id', 'innovation' | first %}
 <section class="expertise-detail">
   <div class="container">

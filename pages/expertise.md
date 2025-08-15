@@ -2,11 +2,24 @@
 layout: page
 title: Mon Expertise
 permalink: /expertise/
-description: "Découvrez l'expertise technique approfondie de Nicolas Dabène en PHP, E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 15 ans d'expérience et d'apprentissage continu."
-keywords: "expert php, consultant prestashop, orchestrateur ia, développeur fullstack, leadership technique, expertise logicielle, modules prestashop"
+description: "Découvrez l'expertise technique approfondie de Nicolas Dabène en PHP,
+  E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 15 ans d'expérience
+  et d'apprentissage continu."
+keywords: "expert php, consultant prestashop, orchestrateur ia, développeur fullstack,
+  leadership technique, expertise logicielle, modules prestashop"
 show_sidebar: false
+llm_summary: Découvrez l'expertise technique approfondie de Nicolas Dabène en 
+  PHP, E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 
+  15 ans d'expérience et d'apprentissage continu.
+llm_topics:
+- expert php
+- consultant prestashop
+- orchestrateur ia
+- développeur fullstack
+- leadership technique
+- expertise logicielle
+- modules prestashop
 ---
-
 <div class="container">
     <div class="expertise-grid">
         {% for expertise in site.data.expertise %}

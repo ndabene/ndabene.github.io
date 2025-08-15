@@ -2,12 +2,24 @@
 layout: default
 title: Expertise & Réalisations
 permalink: /skills/
-description: "Expert PrestaShop reconnu avec 5 Awards officiels, 150k+ installations actives et expertise IA révolutionnaire. Développeur autonome spécialisé e-commerce."
-keywords: "expert prestashop, prestashop awards, développeur php senior, ia orchestration, nicolas dabène, businesstech, modules prestashop"
+description: "Expert PrestaShop reconnu avec 5 Awards officiels, 150k+ installations
+  actives et expertise IA révolutionnaire. Développeur autonome spécialisé e-commerce."
+keywords: "expert prestashop, prestashop awards, développeur php senior, ia orchestration,
+  nicolas dabène, businesstech, modules prestashop"
 show_sidebar: false
 body_class: "page-skills"
+llm_summary: Expert PrestaShop reconnu avec 5 Awards officiels, 150k+ 
+  installations actives et expertise IA révolutionnaire. Développeur autonome 
+  spécialisé e-commerce.
+llm_topics:
+- expert prestashop
+- prestashop awards
+- développeur php senior
+- ia orchestration
+- nicolas dabène
+- businesstech
+- modules prestashop
 ---
-
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">

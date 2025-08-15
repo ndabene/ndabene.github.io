@@ -34,8 +34,16 @@
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="fr_FR">
 <!-- Generative Engine Optimisation (GEO) helpers -->
+{% if page.llm_summary %}
+<meta name="llm:summary" content="{{ page.llm_summary | escape }}">
+{% else %}
 <meta name="llm:summary" content="{{ page.description | default: site.description }}">
+{% endif %}
+{% if page.llm_topics %}
+<meta name="llm:topics" content="{{ page.llm_topics | join: ', ' | escape }}">
+{% else %}
 <meta name="llm:topics" content="formations, e‑books, IA, PrestaShop, développement, prompts, bonnes pratiques">
+{% endif %}
 <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
 <meta name="author" content="{{ site.author.name }}">
 <meta name="ai-content-type" content="catalog-page">

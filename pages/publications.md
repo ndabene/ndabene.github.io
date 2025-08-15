@@ -2,9 +2,14 @@
 layout: default
 title: Mes Publications
 permalink: /publications/
-description: "Retrouvez une sélection de mes articles techniques, tutoriels et analyses approfondies sur le développement web, l'e-commerce et l'intelligence artificielle, publiés sur le blog de Business Tech."
+description: "Retrouvez une sélection de mes articles techniques, tutoriels et analyses
+  approfondies sur le développement web, l'e-commerce et l'intelligence artificielle,
+  publiés sur le blog de Business Tech."
+llm_summary: Retrouvez une sélection de mes articles techniques, tutoriels et 
+  analyses approfondies sur le développement web, l'e-commerce et l'intelligence
+  artificielle, publiés sur le blog de Business Tech.
+llm_topics: [publications, articles, technologie]
 ---
-
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">

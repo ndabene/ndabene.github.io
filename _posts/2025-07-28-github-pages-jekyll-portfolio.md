@@ -1,18 +1,24 @@
 ---
 layout: post
-title: "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll"
+title: "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
+  Jekyll"
 date: 2025-07-28
 author: Nicolas Dabène
 categories: [Développement, Tutoriel]
 tags: [GitHub Pages, Jekyll, portfolio, site statique, git, développement web]
-excerpt: "Découvrez comment créer gratuitement un portfolio professionnel en ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs."
+excerpt: "Découvrez comment créer gratuitement un portfolio professionnel en ligne
+  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs."
 image: /assets/images/blog/2025-07-28-github-pages-jekyll-portfolio.jpg
 featured: false
 difficulty: "Débutant"
 technologies: ["GitHub Pages", "Jekyll", "Git", "Markdown", "HTML", "CSS"]
 estimated_reading_time: "12 minutes"
+llm_summary: Découvrez comment créer gratuitement un portfolio professionnel en 
+  ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et 
+  créatifs.
+llm_topics: [GitHub Pages, Jekyll, portfolio, site statique, git, développement 
+    web]
 ---
-
 # Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
 
 
