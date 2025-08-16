@@ -15,7 +15,7 @@ layout: null
   
   <!-- Pages statiques -->
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".json" or page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
       {% if page.date %}
