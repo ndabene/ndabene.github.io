@@ -1,30 +1,8 @@
-- name: Boutique
-  link: /boutique/
-- name: Prestations
-  hidden: true
-  subitems:
-    - name: Services
-      link: /services/
-    - name: Formations
-      link: /formations/
-- name: Blog
+- name: "Compétences"
+  link: /skills/
+- name: "Formations"
+  link: /formations/
+- name: "Blog"
   link: /blog/
-- name: Expertise
-  link: /expertise/
-  subitems:
-    - name: E-commerce
-      link: /expertise/ecommerce/
-    - name: PrestaShop
-      link: /expertise/prestashop/
-    - name: IA
-      link: /expertise/ia/
-    - name: Fullstack
-      link: /expertise/fullstack/
-    - name: Innovation
-      link: /expertise/innovation/
-    - name: Compétences
-      link: /skills/
-    - name: Projets
-      link: /projects/
-- name: FAQ
-  link: /faq/
+- name: "Contact"
+  link: /contact/
