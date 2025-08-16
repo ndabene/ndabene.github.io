@@ -25,6 +25,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sass-converter
+  - jekyll-last-modified-at
 
 # Boutique (achat en ligne)
 # Mettre à true quand Lemon Squeezy est validé
