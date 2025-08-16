@@ -367,7 +367,7 @@ npm run update-sitemap  # Google, Bing notifiés automatiquement
 ```yaml
 # _config.yml - Optimisations pour IA
 sitemap:
-  file: "/sitemap.xml"
+  file: "/sitemap_index.xml"
   
 defaults:
   - scope:

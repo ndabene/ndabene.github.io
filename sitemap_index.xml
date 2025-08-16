@@ -14,14 +14,11 @@ layout: null
     <loc>{{ site.url }}/sitemap_pages.xml</loc>
     <lastmod>{{ pages_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
-  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
-  {% for year in years %}
   {% assign last = posts_sitemap.last_modified_at | default: posts_sitemap.date | default: site.time %}
   <sitemap>
-    <loc>{{ site.url }}/sitemap_posts.xml</loc>
+    <loc>{{ site.url }}/sitemap_posts_2025.xml</loc>
     <lastmod>{{ posts_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
-  {% endfor %}
   {% assign last = projects_sitemap.last_modified_at | default: projects_sitemap.date | default: site.time %}
   <sitemap>
     <loc>{{ site.url }}/sitemap_projects.xml</loc>
