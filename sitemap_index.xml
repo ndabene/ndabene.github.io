@@ -19,4 +19,8 @@ layout: null
     <loc>{{ site.url }}/sitemap_case_studies.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>{{ site.url }}/sitemap_images.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
 </sitemapindex>

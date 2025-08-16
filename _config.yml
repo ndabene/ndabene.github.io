@@ -76,6 +76,7 @@ include:
   - sitemap_posts.xml
   - sitemap_projects.xml
   - sitemap_case_studies.xml
+  - sitemap_images.xml
   - robots.txt
 
 # Google Analytics
