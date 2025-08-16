@@ -117,7 +117,7 @@ defaults:
     values:
       layout: post
       sitemap:
-        changefreq: "monthly"
+        changefreq: "weekly"
         priority: 0.7
   - scope:
       path: ""
@@ -132,14 +132,14 @@ defaults:
     values:
       sitemap:
         changefreq: "yearly"
-        priority: 0.8
+        priority: 0.6
   - scope:
       path: ""
       type: "case_studies"
     values:
       sitemap:
         changefreq: "yearly"
-        priority: 0.8
+        priority: 0.5
   - scope:
       path: "index.md"
     values:

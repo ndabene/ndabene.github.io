@@ -12,8 +12,8 @@ layout: null
       {% else %}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
-      <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+        <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+        <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.5{% endif %}</priority>
       {% assign cs_image = case_study.image | default: case_study.hero_image %}
       {% if cs_image %}
         <image:image>
