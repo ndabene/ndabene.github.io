@@ -7,9 +7,10 @@ layout: null
   {% assign pillar_pages = "/services/,/expertise/,/formations/,/projects/,/skills/,/boutique/,/about/,/contact/,/publications/,/case-studies.html,/blog/" | split: "," %}
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
+    {% assign last = page.last_modified_at | default: page.date | default: site.time %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
-      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+      <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
       {% assign page_priority = 0.8 %}
       {% if page.url == "/" %}
