@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # Project: Modernization of the Projects Page
 
 ## Goal

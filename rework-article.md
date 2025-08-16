@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # 🎨 Rework Articles de Blog - Plan d'Amélioration UX/UI
 
 ## 📋 Objectif

@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # 📝 Instructions pour la Génération d'Articles de Blog
 
 **Contexte :** Site Jekyll portfolio de Nicolas Dabène - Senior PHP Developer & AI Orchestrator  

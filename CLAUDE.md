@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # CLAUDE.md - Règles de Développement
 
 Ce fichier définit les conventions et règles pour maintenir la cohérence du développement du portfolio de Nicolas Dabène.
