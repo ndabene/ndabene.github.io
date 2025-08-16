@@ -6,6 +6,48 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
     const messagesDiv = document.getElementById('form-messages');
     const submitButton = form.querySelector('button[type="submit"]');
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    // Service cards interaction
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Get the heading text which is our service type
+            const serviceType = this.querySelector('h3').textContent;
+            
+            // Remove active class from all cards
+            serviceCards.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked card
+            this.classList.add('active');
+            
+            // Find the contact type select and set its value
+            const contactTypeSelect = document.getElementById('contact-type');
+            if (contactTypeSelect) {
+                // Set the select value
+                for (let i = 0; i < contactTypeSelect.options.length; i++) {
+                    if (contactTypeSelect.options[i].text === serviceType) {
+                        contactTypeSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+                
+                // Visual feedback
+                contactTypeSelect.focus();
+                contactTypeSelect.classList.add('highlight-selection');
+                setTimeout(() => {
+                    contactTypeSelect.classList.remove('highlight-selection');
+                }, 1500);
+                
+                // Smooth scroll to form on mobile
+                if (window.innerWidth < 992) {
+                    const formContainer = document.querySelector('.contact-form-container');
+                    if (formContainer) {
+                        formContainer.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+    });
     
     // Check for success parameter in URL
     const urlParams = new URLSearchParams(window.location.search);
