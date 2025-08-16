@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
+    <url>
+      <loc>{{ page.url | prepend: site.url }}</loc>
+      {% if page.date %}
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+      {% if page.image %}
+        <image:image>
+          <image:loc>{{ page.image | prepend: site.url }}</image:loc>
+        </image:image>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+</urlset>
