@@ -58,6 +58,8 @@ llm_topics: [formation, ia, developpeurs]
 </section>
 
 
+<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="/contact/">Contactez-moi pour échanger</a>.</p>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
