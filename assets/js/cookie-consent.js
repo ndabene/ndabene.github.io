@@ -7,6 +7,9 @@ class CookieConsent {
     constructor() {
         this.cookieName = 'ndabene_cookie_consent';
         this.consentData = this.getConsentData();
+        this.analyticsConsentGranted = this.consentData &&
+            this.consentData.preferences &&
+            this.consentData.preferences.analytics === true;
         this.init();
     }
 
@@ -231,9 +234,17 @@ class CookieConsent {
 
     enableGoogleAnalytics() {
         if (window.gtag) {
+            const wasGranted = this.analyticsConsentGranted;
             window.gtag('consent', 'update', {
                 'analytics_storage': 'granted'
             });
+            if (!wasGranted) {
+                window.gtag('event', 'page_view', {
+                    page_location: location.href,
+                    page_title: document.title
+                });
+            }
+            this.analyticsConsentGranted = true;
         }
     }
 
@@ -243,6 +254,7 @@ class CookieConsent {
                 'analytics_storage': 'denied'
             });
         }
+        this.analyticsConsentGranted = false;
     }
 
     showNotification(message) {
