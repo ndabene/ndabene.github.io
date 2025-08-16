@@ -12,8 +12,8 @@ layout: null
       {% else %}
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
-      <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+        <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
+        <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.6{% endif %}</priority>
       {% assign project_image = project.image | default: project.hero_image %}
       {% if project_image %}
         <image:image>
