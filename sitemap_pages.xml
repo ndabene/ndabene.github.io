@@ -4,17 +4,22 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {% assign pillar_pages = "/services/,/expertise/,/formations/,/projects/,/skills/,/boutique/,/about/,/contact/,/publications/,/case-studies.html,/blog/" | split: "," %}
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
+    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
-      {% if page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
-      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+      {% assign page_priority = 0.8 %}
+      {% if page.url == "/" %}
+        {% assign page_priority = 1.0 %}
+      {% elsif pillar_pages contains page.url %}
+        {% assign page_priority = 0.9 %}
+      {% elsif page.url == "/faq/" %}
+        {% assign page_priority = 0.7 %}
+      {% endif %}
+      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}{{ page_priority }}{% endif %}</priority>
       {% if page.image %}
         <image:image>
           <image:loc>{{ page.image | prepend: site.url }}</image:loc>
@@ -23,4 +28,4 @@ layout: null
     </url>
     {% endunless %}
   {% endfor %}
-</urlset>
+  </urlset>
