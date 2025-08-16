@@ -1,0 +1,260 @@
+# Organisation des compétences par catégorie
+# Format optimal pour le système de gestion de compétences
+
+# PHP & Backend
+php-backend:
+  title: "PHP & Backend"
+  description: "15 ans d'expertise en développement backend, architectures modernes et performance"
+  icon: "🚀"
+  skills:
+    - name: PHP Expert
+      level: 95
+      description: "Approche polyvalente pragmatique : PHP natif (75k+ installations), Symfony sous PrestaShop, architecture Laravel SaaS complète."
+      achievements: "75 000+ installations actives"
+      impact: "Maintenance et évolution de modules legacy critiques"
+      
+    - name: Symfony
+      level: 90
+      description: "Développement modules PrestaShop modernes nouvelle génération avec architecture Symfony intégrée."
+      achievements: "Modules certifiés 'Built for PrestaShop'"
+      impact: "Transition modules legacy vers architecture moderne"
+      
+    - name: Architecture Web
+      level: 88
+      description: "Monolithes bien structurés avec API REST. Approche pragmatique : simplicité et fiabilité avant complexité."
+      achievements: "30 modules architecturés et maintenus"
+      impact: "Stabilité prouvée sur installations critiques"
+      
+    - name: Laravel
+      level: 80
+      description: "Architecture SaaS complète : Google Shopping Actions avec gestion abonnements, espace client, synchronisation multi-boutiques."
+      achievements: "Plateforme SaaS production"
+      impact: "Gain productivité et scalabilité e-commerce"
+      
+    - name: MySQL
+      level: 88
+      description: "Optimisation bases de données e-commerce haute charge. Performance et intégrité sur systèmes critiques."
+      achievements: "DB optimisées pour 75k+ installations"
+      impact: "Performance garantie sur systèmes de production"
+
+# E-commerce
+ecommerce:
+  title: "E-commerce & PrestaShop"
+  description: "Expert Elite PrestaShop avec 12 ans d'expérience et 150 000+ installations"
+  icon: "🏆"
+  skills:
+    - name: PrestaShop Expert
+      level: 95
+      description: "Expert reconnu avec 5 PrestaShop Awards (2011-2020) et position TOP marketplace officielle."
+      achievements: "5 PrestaShop Awards + 4 Coups de Coeur"
+      impact: "150 000+ installations actives cumulées"
+      
+    - name: Développement Modules
+      level: 95
+      description: "30 modules développés chez BusinessTech. Google Merchant Center et Facebook Ads : 75k+ téléchargements chacun."
+      achievements: "30 modules portfolio + support technique"
+      impact: "TOP 3 éditeurs français marketplace PrestaShop"
+      
+    - name: E-commerce Innovation
+      level: 90
+      description: "BusinessTech : Une des plus anciennes entreprises éditrices de modules en France. Leadership marché prouvé."
+      achievements: "Geo Suits : 1000+ téléchargements en 3 mois"
+      impact: "Innovation continue et validation marché rapide"
+      
+    - name: Support & Community
+      level: 88
+      description: "Support technique personnel sur tous les modules. Contribution open source et aide communautaire."
+      achievements: "Support 24/7 personnalisé"
+      impact: "Satisfaction client et fidélisation prouvées"
+
+# Intelligence Artificielle
+ai:
+  title: "Intelligence Artificielle"
+  description: "Innovation et efficacité via l'intégration IA dans les workflows de développement"
+  icon: "🤖"
+  skills:
+    - name: Développement Assisté IA
+      level: 85
+      description: "Transformation des méthodes de travail : gain productivité 4x (1 mois → 1 semaine pour projets similaires)."
+      achievements: "Formation équipes + apprenti en IA"
+      impact: "Multiplication efficacité développement par 4"
+      
+    - name: Orchestration Agents IA
+      level: 80
+      description: "Management d'agents IA : Claude Code, Perplexity, NotebookLM, gamme GPT. Workflows automatisés."
+      achievements: "MCP PrestaShop développé en interne"
+      impact: "Nouvelle forme de leadership technique"
+      
+    - name: IA Business Applications
+      level: 75
+      description: "Collaboration technique-marketing pour processus IA business. Vision transversale applications IA."
+      achievements: "Plateforme businesstech.fr/landing avec IA"
+      impact: "Pont entre technique et business IA"
+
+# Frontend & UX
+frontend:
+  title: "Frontend & UX"
+  description: "Spécialisation e-commerce et interfaces performantes centrées utilisateur"
+  icon: "🎨"
+  skills:
+    - name: UX E-commerce
+      level: 88
+      description: "Philosophy UX-Centric : optimisation interfaces back-office pour fluidité expérience marchant."
+      achievements: "Interfaces modules optimisées"
+      impact: "Productivité et fiabilité avant esthétique"
+      
+    - name: HTML5/CSS3
+      level: 90
+      description: "Maîtrise complète standards web modernes. Architecture responsive multi-devices pour e-commerce."
+      achievements: "Sites personnels + modules PrestaShop"
+      impact: "Expérience utilisateur optimisée"
+      
+    - name: JavaScript/jQuery
+      level: 82
+      description: "Développement dynamique pour PrestaShop. Focus interactivité et performance sur interfaces e-commerce."
+      achievements: "30 modules avec JS optimisé"
+      impact: "Interfaces fluides et réactives"
+      
+    - name: Responsive Design
+      level: 85
+      description: "Adaptation multi-devices pour écosystème PrestaShop. Compréhension enjeux opérationnels e-commerce."
+      achievements: "Design mobile-first systématique"
+      impact: "Accessibilité maximale solutions e-commerce"
+
+# DevOps & Tools
+devops:
+  title: "DevOps & Tools"
+  description: "Autonomie technique complète et environnements optimisés"
+  icon: "⚙️"
+  skills:
+    - name: Git Expert
+      level: 90
+      description: "Maîtrise avancée contrôle de version. Gestion repositories complexes et collaboration équipes."
+      achievements: "30 projets modules sous Git"
+      impact: "Traçabilité et collaboration optimales"
+      
+    - name: Déploiement Production
+      level: 82
+      description: "Déploiement modules PrestaShop sur 75k+ installations. Processus fiables et monitoring."
+      achievements: "Zéro défaillance critique production"
+      impact: "Stabilité systèmes clients garantie"
+      
+    - name: Jekyll/GitHub Pages
+      level: 85
+      description: "Sites statiques performants : nicolas-dabene.fr, businesstech.fr/landing. SEO et performance optimisés."
+      achievements: "Sites personnels + business"
+      impact: "Présence web professionnelle moderne"
+      
+    - name: Workflow Automation
+      level: 75
+      description: "GitHub Actions et automatisation déploiements. Intégration processus IA dans workflows."
+      achievements: "Pipelines CI/CD modules"
+      impact: "Efficiency et qualité développement"
+
+# Intégrations & Problem Solving
+integrations:
+  title: "Intégrations & Problem Solving"
+  description: "Expert en résolution de problèmes complexes et intégrations API"
+  icon: "🔗"
+  skills:
+    - name: API Integrations Expert
+      level: 90
+      description: "Intégrations complexes : OpenAI, Google (Merchant Center, Ads), Facebook. 75k+ installations production."
+      achievements: "APIs critiques Google/Facebook intégrées"
+      impact: "Connectivité e-commerce maximale"
+      
+    - name: Code Review Expert
+      level: 88
+      description: "Revue code systématique, identification problèmes, optimisations PrestaShop/PHP. Qualité garantie."
+      achievements: "Support technique personnalisé"
+      impact: "Stabilité et performance modules"
+      
+    - name: Complex Problem Solver
+      level: 92
+      description: "Résolution problèmes techniques complexes. 12 ans d'expérience debugging systèmes critiques."
+      achievements: "Zéro problème non résolu"
+      impact: "Fiabilité et confiance clients"
+
+# Leadership & Autonomie
+leadership:
+  title: "Leadership & Autonomie"
+  description: "Leadership technique et gestion de projets autonome"
+  icon: "👑"
+  skills:
+    - name: Technical Leadership
+      level: 92
+      description: "Chef de projet autonome sur tous modules BusinessTech. Auto-gestion complète objectifs techniques et business."
+      achievements: "30 projets menés en autonomie"
+      impact: "Responsabilité produit end-to-end"
+      
+    - name: Team Development
+      level: 85
+      description: "Formation équipes IA, management apprenti développement assisté. Nouvelle forme leadership technique."
+      achievements: "Formation méthodologies IA internes"
+      impact: "Montée compétences équipes"
+      
+    - name: Product Management
+      level: 88
+      description: "Gestion produits digitaux conception à succès commercial. Modules PrestaShop de l'idée au TOP marketplace."
+      achievements: "5 PrestaShop Awards + TOP marketplace"
+      impact: "Vision stratégique vers succès commercial"
+      
+    - name: Knowledge Transfer
+      level: 90
+      description: "Transmission expertise technique/non-technique. Articles, formation entreprise, contenu BusinessTech."
+      achievements: "Contenu pédagogique régulier"
+      impact: "Partage intelligent et accessible"
+
+# Soft Skills
+soft-skills:
+  title: "Excellence Relationnelle"
+  description: "Communication adaptative et polyvalence entre technique et business"
+  icon: "💎"
+  skills:
+    - name: Communication Adaptative
+      level: 88
+      description: "Interface naturelle CTOs ↔ Dirigeants business. Communication technique et non-technique selon audiences."
+      achievements: "Support client personnalisé 24/7"
+      impact: "Pont efficace technique-business"
+      
+    - name: Anglais Professionnel
+      level: 85
+      description: "Documentation technique, communication internationale. PrestaShop marketplace mondiale."
+      achievements: "Support international anglophone"
+      impact: "Rayonnement professionnel global"
+      
+    - name: Excellence Relationnelle
+      level: 90
+      description: "Rigueur technique + curiosité transversale + savoir-être. Respect confidentialité client absolu."
+      achievements: "Reconnaissance Awards et communauté"
+      impact: "Confiance et fidélisation clients"
+      
+    - name: Autonomie Totale
+      level: 92
+      description: "Responsabilité complète produit conception à succès commercial. Auto-gestion objectives sans supervision."
+      achievements: "30 projets autonomes réussis"
+      impact: "Fiabilité et indépendance prouvées"
+
+# Innovation & Adaptabilité
+learning:
+  title: "Innovation & Adaptabilité"
+  description: "Veille technologique et évolution constante des compétences"
+  icon: "🔮"
+  skills:
+    - name: Veille & Innovation
+      level: 92
+      description: "Adoption précoce IA avec résultats mesurables. Veille technologique et non-technique (Leonardo AI, design)."
+      achievements: "Premier à implémenter IA productive"
+      impact: "Avantage concurrentiel innovation"
+      
+    - name: Adaptabilité Technique
+      level: 90
+      description: "Expertise entièrement autodidacte. Capacité d'adaptation technique et relationnelle selon contextes."
+      achievements: "Transition PHP natif → Frameworks modernes"
+      impact: "Flexibilité maximale projets"
+      
+    - name: Vision Prospective
+      level: 85
+      description: "Développeur-orchestrateur : transition codage pur vers orchestration intelligente. Accompagnement transformation."
+      achievements: "Positionnement évolutif IA"
+      impact: "Leadership transformation digitale"

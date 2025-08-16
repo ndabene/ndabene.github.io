@@ -9,15 +9,19 @@ permalink: /skills/
     <h1>Compétences techniques</h1>
     <p class="section-intro">Plus de 15 ans d'expérience en développement web, e-commerce et intégration IA.</p>
 
-    {% for category in site.data.skills %}
+    {% for category_hash in site.data.skills_by_category %}
+      {% assign category_key = category_hash[0] %}
+      {% assign category = category_hash[1] %}
       <div class="skill-category-section">
-        <h2 class="category-title-section">{{ category.category }}</h2>
+        <h2 class="category-title-section">{{ category.icon }} {{ category.title }}</h2>
+        <p class="category-description">{{ category.description }}</p>
+        
         <div class="skills-grid-section">
           {% for skill in category.skills %}
             <div class="skill-card-section">
               <div class="skill-level-section" data-level="{{ skill.level }}">
                 <div class="level-circle" data-level="{{ skill.level }}"></div>
-                <span class="level-text-section">{{ skill.level }}/10</span>
+                <span class="level-text-section">{{ skill.level }}/100</span>
               </div>
               
               <div class="skill-content-section">
@@ -27,7 +31,7 @@ permalink: /skills/
                 {% if skill.achievements %}
                   <div class="skill-achievements-section">
                     <div class="achievement-item-section">
-                      <svg class="achievement-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <svg class="achievement-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
                         <circle cx="12" cy="8" r="7"/>
                         <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
                       </svg>
@@ -39,7 +43,7 @@ permalink: /skills/
                 {% if skill.impact %}
                   <div class="skill-impact-section">
                     <div class="impact-item-section">
-                      <svg class="impact-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <svg class="impact-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2">
                         <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
                       </svg>
                       <span class="impact-text-section">{{ skill.impact }}</span>
@@ -62,9 +66,9 @@ permalink: /skills/
       <div class="resources-column">
         <h3>Articles de blog</h3>
         <ul>
-          <li><a href="{{ '/2025/08/06/prestashop-growth-hacking-mindset/' | relative_url }}">Quand l'édition de modules PrestaShop rencontre le growth hacking</a></li>
-          <li><a href="{{ '/2025/08/03/mcp-protocol-guide/' | relative_url }}">Model Context Protocol : Le Pont Révolutionnaire entre l'IA et vos Systèmes</a></li>
-          <li><a href="{{ '/2025/07/28/github-pages-jekyll-portfolio/' | relative_url }}">Créez Votre Portfolio Tech en Ligne avec GitHub Pages et Jekyll</a></li>
+          <li><a href="{{ '/articles/2025/08/06/prestashop-growth-hacking-mindset/' | relative_url }}">Quand l'édition de modules PrestaShop rencontre le growth hacking</a></li>
+          <li><a href="{{ '/articles/2025/08/03/mcp-protocol-guide/' | relative_url }}">Model Context Protocol : Le Pont Révolutionnaire entre l'IA et vos Systèmes</a></li>
+          <li><a href="{{ '/articles/2025/07/28/github-pages-jekyll-portfolio/' | relative_url }}">Créez Votre Portfolio Tech en Ligne avec GitHub Pages et Jekyll</a></li>
         </ul>
       </div>
       <div class="resources-column">
@@ -78,7 +82,7 @@ permalink: /skills/
   </div>
 </section>
 
-<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="/contact/">Contactez-moi pour échanger</a>.</p>
+<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="{{ '/formations/' | relative_url }}">formations</a>, parcourez mes <a href="{{ '/blog/' | relative_url }}">articles</a> ou <a href="{{ '/contact/' | relative_url }}">contactez-moi pour échanger</a>.</p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

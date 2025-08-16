@@ -1,3 +1,5 @@
+- name: "À propos"
+  link: /
 - name: "Compétences"
   link: /skills/
 - name: "Formations"
