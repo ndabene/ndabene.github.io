@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-{% assign filtered_pages = site.pages | where_exp: "page", "page.name != 'redirect.html' and page.name != 'redirects.json'" %}
+{% assign filtered_pages = site.pages | where_exp: "p", "p.name != 'redirect.html'" | where_exp: "p", "p.name != 'redirects.json'" %}
 {% assign pages_last = filtered_pages | map: "last_modified_at" | compact | sort | last | default: site.time %}
 {% assign posts_last = site.posts | map: "last_modified_at" | compact | sort | last | default: site.time %}
 {% assign projects_last = site.projects | map: "last_modified_at" | compact | sort | last | default: site.time %}
