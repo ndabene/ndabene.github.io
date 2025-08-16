@@ -27,6 +27,9 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
       
       # Validation steps disabled temporarily
           
@@ -42,9 +45,9 @@ jobs:
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
           if [ -n "$BASE_PATH" ] && [ "$BASE_PATH" != "/" ]; then
-            bundle exec jekyll build --config _config.yml,_config_github.yml --baseurl "$BASE_PATH"
+            bundle exec jekyll build --trace --config _config.yml,_config_github.yml --baseurl "$BASE_PATH"
           else
-            bundle exec jekyll build --config _config.yml,_config_github.yml
+            bundle exec jekyll build --trace --config _config.yml,_config_github.yml
           fi
         env:
           JEKYLL_ENV: production
