@@ -73,7 +73,7 @@ exclude:
 include:
   - sitemap_index.xml
   - sitemap_pages.xml
-  - sitemap_posts.xml
+  - sitemap_posts_2025.xml
   - sitemap_projects.xml
   - sitemap_case_studies.xml
   - robots.txt

@@ -7,10 +7,13 @@ layout: null
     <loc>{{ site.url }}/sitemap_pages.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </sitemap>
+  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+  {% for year in years %}
   <sitemap>
-    <loc>{{ site.url }}/sitemap_posts.xml</loc>
+    <loc>{{ site.url }}/sitemap_posts_{{ year.name }}.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </sitemap>
+  {% endfor %}
   <sitemap>
     <loc>{{ site.url }}/sitemap_projects.xml</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
