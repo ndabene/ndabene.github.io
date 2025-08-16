@@ -71,7 +71,11 @@ exclude:
 
 # Fichiers à inclure explicitement
 include:
-  - sitemap.xml
+  - sitemap_index.xml
+  - sitemap_pages.xml
+  - sitemap_posts.xml
+  - sitemap_projects.xml
+  - sitemap_case_studies.xml
   - robots.txt
 
 # Google Analytics
@@ -101,7 +105,7 @@ cache_busting: true
 
 # Sitemap configuration
 sitemap:
-  file: "/sitemap.xml"
+  file: "/sitemap_index.xml"
   
 # Defaults pour les priorités sitemap
 defaults:
