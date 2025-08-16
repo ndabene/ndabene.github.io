@@ -9,11 +9,7 @@ layout: null
     {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
-      {% if page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
       {% assign page_priority = 0.8 %}
       {% if page.url == "/" %}

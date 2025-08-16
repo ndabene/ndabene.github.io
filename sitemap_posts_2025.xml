@@ -10,8 +10,8 @@ year: '2025'
     {% if post_year == page.year %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}weekly{% endif %}</changefreq>
+      <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
       <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
       {% if post.image %}
         <image:image>
