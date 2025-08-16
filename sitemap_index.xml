@@ -2,32 +2,34 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-{% assign pages_sitemap = site.pages | where: "name", "sitemap_pages.xml" | first %}
-{% assign posts_sitemap = site.pages | where: "name", "sitemap_posts.xml" | first %}
-{% assign projects_sitemap = site.pages | where: "name", "sitemap_projects.xml" | first %}
-{% assign case_studies_sitemap = site.pages | where: "name", "sitemap_case_studies.xml" | first %}
+{% assign filtered_pages = site.pages | reject: "name", "redirect.html" | reject: "name", "redirects.json" %}
+{% assign pages_last = filtered_pages | map: "last_modified_at" | compact | sort | last | default: site.time %}
+{% assign posts_last = site.posts | map: "last_modified_at" | compact | sort | last | default: site.time %}
+{% assign projects_last = site.projects | map: "last_modified_at" | compact | sort | last | default: site.time %}
+{% assign case_studies_last = site.case_studies | map: "last_modified_at" | compact | sort | last | default: site.time %}
+{% assign images_last = site.posts | concat: site.case_studies | concat: site.projects | concat: filtered_pages | map: "last_modified_at" | compact | sort | last | default: site.time %}
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>{{ site.url }}/sitemap_pages.xml</loc>
-    <lastmod>{{ pages_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ pages_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
   {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
   {% for year in years %}
   <sitemap>
     <loc>{{ site.url }}/sitemap_posts.xml</loc>
-    <lastmod>{{ posts_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ posts_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
   {% endfor %}
   <sitemap>
     <loc>{{ site.url }}/sitemap_projects.xml</loc>
-    <lastmod>{{ projects_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ projects_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
   <sitemap>
     <loc>{{ site.url }}/sitemap_case_studies.xml</loc>
-    <lastmod>{{ case_studies_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ case_studies_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
   <sitemap>
     <loc>{{ site.url }}/sitemap_images.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ images_last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
   </sitemap>
 </sitemapindex>
