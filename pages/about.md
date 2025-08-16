@@ -26,6 +26,7 @@ llm_topics:
         <div class="about-grid">
             <div class="about-content">
                 <h2>Executive Summary: Driving Business Value Through Technology</h2>
+                <p>Spécialiste PHP/PrestaShop, intelligence artificielle et formation, je mets mon expertise au service de projets innovants. Ma mission : partager mes connaissances via mon blog et mes interventions professionnelles.</p>
                 <p class="lead-paragraph">As a senior professional with over 15 years of hands-on experience since 2010, I am a seasoned PHP FullStack Developer and AI Orchestrator dedicated to transforming complex business challenges into robust, scalable, and innovative software solutions. My career spans nearly two decades of technical leadership, marked by a consistent track record of delivering high-impact projects, optimizing performance, and leading cross-functional teams to success. I specialize in architecting resilient systems that not only meet current demands but also anticipate future growth, ensuring long-term ROI for my clients.</p>
 
                 <h3>Positionnement local & services clés</h3>
@@ -98,5 +99,17 @@ llm_topics:
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+
+<section class="continue-discovery">
+    <div class="container">
+        <h2>Continuer la découverte</h2>
+        <ul>
+            <li><a href="/skills/">Compétences</a></li>
+            <li><a href="/formations/">Formations</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
     </div>
 </section>
