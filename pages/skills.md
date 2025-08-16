@@ -38,7 +38,7 @@ llm_topics:
         <!-- Métriques Clés -->
         <div class="skills-metrics">
             <div class="metric-card">
-                <div class="metric-number">100k+</div>
+                <div class="metric-number">150k+</div>
                 <div class="metric-label">Boutiques Équipées</div>
             </div>
             <div class="metric-card">
@@ -46,16 +46,12 @@ llm_topics:
                 <div class="metric-label">PrestaShop Awards</div>
             </div>
             <div class="metric-card">
-                <div class="metric-number">30</div>
-                <div class="metric-label">Modules Développés</div>
-            </div>
-            <div class="metric-card">
                 <div class="metric-number">4x</div>
                 <div class="metric-label">Gain Productivité IA</div>
             </div>
         </div>
 
-        <!-- Trilogie de Valeur -->
+        <!-- Atouts majeurs -->
         <div class="value-trilogy">
             <div class="value-card">
                 <div class="value-icon">
@@ -254,6 +250,29 @@ llm_topics:
         </section>
         
         {% endfor %}
+    </div>
+</section>
+
+<section class="share-resources-section">
+    <div class="container">
+        <h2>Partage & ressources</h2>
+        <div class="resources-columns">
+            <div class="resources-column">
+                <h3>Articles de blog</h3>
+                <ul>
+                    <li><a href="{{ '/2025/08/06/prestashop-growth-hacking-mindset/' | relative_url }}">Quand l'édition de modules PrestaShop rencontre le growth hacking</a></li>
+                    <li><a href="{{ '/2025/08/03/mcp-protocol-guide/' | relative_url }}">Model Context Protocol : Le Pont Révolutionnaire entre l'IA et vos Systèmes</a></li>
+                    <li><a href="{{ '/2025/07/28/github-pages-jekyll-portfolio/' | relative_url }}">Créez Votre Portfolio Tech en Ligne avec GitHub Pages et Jekyll</a></li>
+                </ul>
+            </div>
+            <div class="resources-column">
+                <h3>Formations</h3>
+                <ul>
+                    <li><a href="{{ '/formations/#formation-ia-pour-developpeurs-programme-phare' | relative_url }}">Formation "IA pour Développeurs"</a></li>
+                    <li><a href="{{ '/formations/#formation-entreprise-transformation-ia' | relative_url }}">Formation Entreprise "Transformation IA"</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
