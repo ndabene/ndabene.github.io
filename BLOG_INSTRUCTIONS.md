@@ -5,7 +5,7 @@ sitemap: { exclude: yes }
 # 📝 Instructions pour la Génération d'Articles de Blog
 
 **Contexte :** Site Jekyll portfolio de Nicolas Dabène - Senior PHP Developer & AI Orchestrator  
-**URL :** https://ndabene.github.io  
+**URL :** https://nicolas-dabene.fr  
 **Optimisé pour :** SEO classique + GEO (Generative Engine Optimization)
 
 ## 🎯 Objectif

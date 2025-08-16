@@ -2,7 +2,7 @@
 # Ce fichier remplace certains paramètres de _config.yml pour le déploiement
 
 # URL GitHub Pages
-url: "https://ndabene.github.io"  # Remplacez par votre nom d'utilisateur GitHub
+url: "https://nicolas-dabene.fr"  # Remplacez par votre nom d'utilisateur GitHub
 baseurl: ""
 
 # Environnement de production
