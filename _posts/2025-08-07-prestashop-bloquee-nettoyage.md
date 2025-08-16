@@ -1,19 +1,22 @@
 ---
-
 layout: post
 title: "Boutique PrestaShop bloquée ? Guide pratique"
 date: 2025-08-07
 author: Nicolas Dabène
 categories: [PrestaShop, Bonnes Pratiques]
 tags: [base de données, phpmyadmin, statsdata, nettoyage, performance]
-excerpt: "Votre boutique PrestaShop est bloquée ? Voici un guide simple entre pros pour nettoyer la base de données, éviter les surcharges et reprendre le contrôle."
+excerpt: "Votre boutique PrestaShop est bloquée ? Voici un guide simple entre pros
+  pour nettoyer la base de données, éviter les surcharges et reprendre le contrôle."
 image: /assets/images/blog/2025-08-07-prestashop-bloquee-nettoyage.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["PHP", "PrestaShop", "MySQL"]
 estimated_reading_time: "7 minutes"
+llm_summary: Votre boutique PrestaShop est bloquée ? Voici un guide simple entre
+  pros pour nettoyer la base de données, éviter les surcharges et reprendre le 
+  contrôle.
+llm_topics: [base de données, phpmyadmin, statsdata, nettoyage, performance]
 ---
-
 # Boutique PrestaShop bloquée ? Guide pratique entre pros
 
 Quand une boutique PrestaShop devient inaccessible à cause d’un module de statistiques trop gourmand, il faut agir vite, sans tout casser.

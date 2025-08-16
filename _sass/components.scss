@@ -1,5 +1,7 @@
 // _sass/components.scss - Styles fonctionnels
 
+@import "components/related-resources";
+
 //================================================
 // PROFILE IMAGE STYLES
 //================================================
@@ -536,6 +538,45 @@
   font-weight: 700;
 }
 
+// Detail pages
+.expertise-detail .expertise-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .expertise-detail .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.expertise-card {
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1rem;
+  box-shadow: 0 6px 14px rgba(15,23,42,0.06);
+}
+
+.expertise-card h3 { margin-top: 0; }
+
+.expertise-list-compact {
+  list-style: none;
+  margin: 0 0 .5rem 0;
+  padding: 0;
+}
+
+.expertise-list-compact li {
+  padding: .4rem 0;
+  border-bottom: 1px dashed #E5E7EB;
+}
+
+.expertise-list-compact li:last-child { border-bottom: 0; }
+
+.expertise-cta { margin-top: .75rem; display: flex; }
+
+
 //================================================
 // MODULE CARDS
 //================================================
@@ -968,6 +1009,24 @@
   padding: 3rem 0;
   background-color: $gray-ultra-light;
 }
+
+//================================================
+// RELATED LINKS (post footer)
+//================================================
+// Styles moved to components/_related-resources.scss
+
+// For backward compatibility with inline content
+.post-content.has-inline-related h2 + ul,
+.post-content.has-inline-related h3 + ul,
+.post-content.has-inline-related h4 + ul { margin-top: .5rem; }
+
+// Special styling for the inline resources component
+.inline-resources {
+  margin: 1.5rem 0 2rem;
+}
+
+// Reduce CTA spacing when inline related block is present
+.post-content.has-inline-related .post-cta { margin-top: 1rem; }
 
 .blog-content-section {
   padding: 3rem 0;

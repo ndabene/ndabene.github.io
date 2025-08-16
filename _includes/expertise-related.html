@@ -23,14 +23,20 @@
   {% endif %}
 
   {% assign related = related | uniq %}
+  {% assign related = related | sort: 'date' | reverse %}
 
   {% if related and related.size > 0 %}
-    <h3>Articles liés</h3>
-    <ul>
-      {% for post in related limit: 8 %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+    <div class="expertise-card">
+      <h3>Articles liés</h3>
+      <ul class="expertise-list-compact">
+        {% for post in related limit: 6 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="expertise-cta">
+        <a class="btn btn--secondary" href="/blog/">Tous les articles</a>
+      </div>
+    </div>
   {% else %}
     <p>Aucun article disponible pour le moment.</p>
   {% endif %}

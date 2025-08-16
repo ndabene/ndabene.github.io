@@ -1,0 +1,36 @@
+{% comment %}
+  Renders related resources for blog posts
+  Usage: {% include post-related-resources.html %}
+{% endcomment %}
+
+<div class="related-resources">
+  <h3>Ressources liées</h3>
+  
+  <div class="resources-grid">
+    <a href="{{ '/services/#ia-ecommerce' | relative_url }}" class="resource-link">
+      <span class="icon">→</span>
+      Services IA & e-commerce
+    </a>
+    <a href="{{ '/formations/#ia-dev' | relative_url }}" class="resource-link">
+      <span class="icon">→</span>
+      Formations IA pour développeurs
+    </a>
+    <a href="{{ '/expertise/prestashop/' | relative_url }}" class="resource-link">
+      <span class="icon">→</span>
+      Expertise PrestaShop
+    </a>
+    <a href="{{ '/expertise/ia/' | relative_url }}" class="resource-link">
+      <span class="icon">→</span>
+      Expertise IA
+    </a>
+  </div>
+  
+  <div class="resources-buttons">
+    <a href="{{ '/formations/' | relative_url }}" class="btn btn--primary">
+      <span class="icon">📝</span> Formation IA pour développeurs
+    </a>
+    <a href="{{ '/services/' | relative_url }}" class="btn btn--secondary">
+      <span class="icon">🛠️</span> Services & Accompagnement
+    </a>
+  </div>
+</div>

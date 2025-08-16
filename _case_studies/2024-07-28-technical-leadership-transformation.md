@@ -1,11 +1,13 @@
 ---
 layout: case-study
 title: Technical Leadership & Agile Transformation
-tagline: Leading a comprehensive refactoring of engineering culture, processes, and team structure.
+tagline: Leading a comprehensive refactoring of engineering culture, processes, 
+  and team structure.
 client: Mid-sized Tech Company
 duration: 8 months
 team_size: 1 (as lead, influencing 2 development teams of 8-10 engineers each)
-technologies: ["Agile Methodologies", "Scrum", "Kanban", "Jira", "Confluence", "GitLab CI", "Code Review Best Practices", "Mentorship"]
+technologies: ["Agile Methodologies", "Scrum", "Kanban", "Jira", "Confluence", "GitLab
+    CI", "Code Review Best Practices", "Mentorship"]
 business_impact_score: 8
 executive_summary: |
   Spearheaded a transformative initiative to refactor the engineering culture and processes for a mid-sized tech company. This led to a 50% faster delivery cycle, significant improvements in code quality, and an 80% increase in team satisfaction, directly impacting product roadmap execution and overall business agility.
@@ -41,10 +43,10 @@ results_metrics: |
   - **Enhanced Code Quality:** Static analysis reports showed a 40% reduction in code complexity and an increase in test coverage.
   - **Improved Collaboration:** Cross-team dependencies and communication breakdowns were significantly reduced.
 metrics_charts:
-  - image: /assets/images/case-studies/leadership-delivery-speed.png
-    alt: "Delivery Speed Improvement Chart"
-  - image: /assets/images/case-studies/leadership-team-satisfaction.png
-    alt: "Team Satisfaction Increase Chart"
+- image: /assets/images/case-studies/leadership-delivery-speed.png
+  alt: "Delivery Speed Improvement Chart"
+- image: /assets/images/case-studies/leadership-team-satisfaction.png
+  alt: "Team Satisfaction Increase Chart"
 team_leadership: |
   As the technical lead for this transformation, my responsibilities included:
   - Defining the vision and strategy for the engineering transformation.
@@ -59,10 +61,13 @@ key_learnings: |
   - **Empowerment:** Empowering teams to own their processes and solutions leads to greater engagement and better outcomes.
   - **Patience & Persistence:** Significant organizational change takes time and requires consistent effort and reinforcement.
 screenshots:
-  - image: /assets/images/case-studies/leadership-agile-board.jpg
-    alt: "Agile Team Board"
-  - image: /assets/images/case-studies/leadership-code-review.jpg
-    alt: "Code Review Session"
+- image: /assets/images/case-studies/leadership-agile-board.jpg
+  alt: "Agile Team Board"
+- image: /assets/images/case-studies/leadership-code-review.jpg
+  alt: "Code Review Session"
+llm_summary: Leading a comprehensive refactoring of engineering culture, 
+  processes, and team structure.
+llm_topics: ["Agile Methodologies", "Scrum", "Kanban", "Jira", "Confluence", "GitLab
+    CI", "Code Review Best Practices", "Mentorship"]
 ---
-
 This case study exemplifies my ability to not only drive technical excellence but also to lead and inspire teams through significant organizational change. By focusing on both process and people, we successfully transformed the client's engineering capabilities, setting a new standard for agility and quality.

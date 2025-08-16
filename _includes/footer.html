@@ -11,6 +11,8 @@
                     {% for item in site.data.navigation %}
                     <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
                     {% endfor %}
+                    <li><a href="{{ '/boutique/' | relative_url }}">Boutique</a></li>
+                    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -25,10 +27,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="footer-summary">
+            <p>
+                <a href="{{ '/skills/' | relative_url }}">Découvrir mes compétences</a> |
+                <a href="{{ '/blog/' | relative_url }}">Lire mes articles</a> |
+                <a href="{{ '/formations/' | relative_url }}">Suivre une formation</a>
+            </p>
+        </div>
+
         <div class="footer-bottom">
-            <p>&copy; {{ site.time | date: "%Y" }} Nicolas Dabène. Tous droits réservés. | 
-               <a href="/politique-cookies/" class="cookie-preferences-link">Politique de cookies</a> | 
-               <a href="#cookie-preferences" class="cookie-preferences-link">Préférences cookies</a> | 
+            <p>&copy; {{ site.time | date: "%Y" }} Nicolas Dabène. Tous droits réservés. |
+               <a href="/politique-cookies/" class="cookie-preferences-link">Politique de cookies</a> |
+               <a href="#cookie-preferences" class="cookie-preferences-link">Préférences cookies</a> |
                <a href="/cgu-boutique/">CGU Boutique</a>
             </p>
         </div>

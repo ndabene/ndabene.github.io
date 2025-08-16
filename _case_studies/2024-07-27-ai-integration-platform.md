@@ -1,11 +1,13 @@
 ---
 layout: case-study
 title: AI Integration Platform for SaaS Startup
-tagline: Seamlessly integrating machine learning capabilities into an existing PHP SaaS application.
+tagline: Seamlessly integrating machine learning capabilities into an existing 
+  PHP SaaS application.
 client: SaaS Startup
 duration: 7 months
 team_size: 6 developers (3 PHP, 2 Python/ML, 1 DevOps)
-technologies: ["Python", "TensorFlow", "PyTorch", "PHP", "Symfony", "RESTful APIs", "AWS Lambda", "Kubernetes", "Kafka", "Natural Language Processing", "Computer Vision"]
+technologies: ["Python", "TensorFlow", "PyTorch", "PHP", "Symfony", "RESTful APIs",
+  "AWS Lambda", "Kubernetes", "Kafka", "Natural Language Processing", "Computer Vision"]
 business_impact_score: 8
 executive_summary: |
   Designed and implemented an AI integration platform for a SaaS startup, embedding advanced machine learning functionalities into their core PHP application. This led to 90% automation of previously manual processes and a 60% reduction in operational costs, significantly enhancing product value and efficiency.
@@ -39,10 +41,10 @@ results_metrics: |
   - **30% Faster Feature Delivery:** Streamlined data processing enabled quicker development and deployment of new AI-powered features.
   - **Enhanced Product Value:** Improved accuracy and speed of automated services led to higher customer satisfaction and retention.
 metrics_charts:
-  - image: /assets/images/case-studies/ai-automation-chart.png
-    alt: "Automation Rate Increase Chart"
-  - image: /assets/images/case-studies/ai-cost-reduction-chart.png
-    alt: "Operational Cost Reduction Chart"
+- image: /assets/images/case-studies/ai-automation-chart.png
+  alt: "Automation Rate Increase Chart"
+- image: /assets/images/case-studies/ai-cost-reduction-chart.png
+  alt: "Operational Cost Reduction Chart"
 team_leadership: |
   My role involved:
   - Architecting the overall AI integration strategy and technical roadmap.
@@ -55,10 +57,13 @@ key_learnings: |
   - **Cross-functional Collaboration:** Close collaboration between backend, ML, and DevOps teams is crucial for seamless integration.
   - **Observability:** Comprehensive monitoring of AI models in production is essential for performance, bias detection, and continuous improvement.
 screenshots:
-  - image: /assets/images/case-studies/ai-platform-cs-1.jpg
-    alt: "AI-powered content moderation dashboard"
-  - image: /assets/images/case-studies/ai-platform-cs-2.jpg
-    alt: "Data processing pipeline visualization"
+- image: /assets/images/case-studies/ai-platform-cs-1.jpg
+  alt: "AI-powered content moderation dashboard"
+- image: /assets/images/case-studies/ai-platform-cs-2.jpg
+  alt: "Data processing pipeline visualization"
+llm_summary: Seamlessly integrating machine learning capabilities into an 
+  existing PHP SaaS application.
+llm_topics: ["Python", "TensorFlow", "PyTorch", "PHP", "Symfony", "RESTful APIs",
+  "AWS Lambda", "Kubernetes", "Kafka", "Natural Language Processing", "Computer Vision"]
 ---
-
 This project showcased the transformative power of AI when strategically integrated into core business operations. By automating key processes, we not only reduced costs but also enabled the client to deliver a more intelligent and efficient SaaS product to their users.

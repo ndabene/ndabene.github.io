@@ -1,0 +1,22 @@
+# Configuration spécifique de développement
+# Utilisé avec --config _config.yml,_config_dev.yml
+
+# Désactiver le cache busting en dev
+cache_busting: false
+
+# Activer le mode développement
+environment: development
+
+# Optimisations à désactiver en dev
+compress_html:
+  enabled: false
+
+# Désactiver Google Analytics en dev
+google_analytics: ""
+
+# Boost perf en dev
+future: true
+limit_posts: 20
+
+# LiveReload
+livereload: true

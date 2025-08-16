@@ -14,7 +14,7 @@
             <div class="hero-content">
                 <div class="hero-header scroll-reveal">
                     <h1 class="hero-title text-gradient-animated">Nicolas Dabène</h1>
-                    <p class="hero-subtitle typing-effect">Développeur Senior Full-Stack | Expert PrestaShop Reconnu | Pionnier IA E-commerce</p>
+                    <p class="hero-subtitle typing-effect">Développeur PHP Senior & Formateur IA, passionné de partage</p>
                     
                     <div class="hero-badges-modern stagger-animation">
                         <div class="animate-item glass-card badge-modern">
@@ -71,14 +71,24 @@
                 
                 <!-- Call to Action Principal -->
                 <div class="hero-cta-section scroll-reveal" id="hero-ctas">
-                    {% assign home_cta = site.data.home.primary_cta %}
-                    <a href="{{ home_cta.link | default: '/boutique/' }}" class="hero-cta-primary btn-primary">
-                        <span class="btn-text">{{ home_cta.label | default: 'Voir les formations' }}</span>
+                    <a href="#expertise" class="hero-cta-primary btn-primary">
+                        <span class="btn-text">Voir mes compétences</span>
                         <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
                             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
                         </svg>
                     </a>
-                    <a href="/contact/" class="btn-secondary" style="margin-left:.5rem">Me contacter</a>
+                    <a href="#formations" class="btn-secondary" style="margin-left:.5rem">
+                        <span class="btn-text">Découvrir les formations</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
+                    <a href="#publications" class="btn-secondary" style="margin-left:.5rem">
+                        <span class="btn-text">Lire le blog</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>

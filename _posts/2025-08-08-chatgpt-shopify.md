@@ -5,14 +5,19 @@ date: 2025-08-08
 author: Nicolas Dabène
 categories: [Ecommerce, Intelligence Artificielle]
 tags: [Shopify, ChatGPT, commerce conversationnel, AI integration, e-commerce]
-excerpt: "L’intégration native de ChatGPT et Shopify permet un parcours d’achat fluide dans la conversation, redéfinissant l’expérience e-commerce et les modèles."
+excerpt: "L’intégration native de ChatGPT et Shopify permet un parcours d’achat fluide
+  dans la conversation, redéfinissant l’expérience e-commerce et les modèles."
 image: /assets/images/blog/2025-08-08-chatgpt-shopify.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["AI", "ChatGPT", "Shopify"]
 estimated_reading_time: "10 minutes"
+llm_summary: L’intégration native de ChatGPT et Shopify permet un parcours 
+  d’achat fluide dans la conversation, redéfinissant l’expérience e-commerce et 
+  les modèles.
+llm_topics: [Shopify, ChatGPT, commerce conversationnel, AI integration, 
+    e-commerce]
 ---
-
 # ChatGPT + Shopify : le futur de l’e-commerce
 
 > *« Nicolas Dabène, expert PrestaShop certifié avec 15 + ans d’expérience, décrypte comment les agents conversationnels redessinent nos parcours d’achat. »*
@@ -104,3 +109,12 @@ Bien que cette évolution bouscule les modèles établis, elle ouvre d’immense
 ---
 
 *Article publié le 8 août 2025 par Nicolas Dabène – Expert PHP & PrestaShop avec 15 + ans d’expérience*
+
+---
+
+### Ressources liées
+
+- [Services IA & e-commerce](/services/)
+- [Formations IA pour développeurs](/formations/)
+- [Expertise E-commerce](/expertise/ecommerce/)
+- [Boutique](/boutique/)

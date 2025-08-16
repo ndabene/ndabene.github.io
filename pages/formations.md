@@ -3,9 +3,12 @@ layout: page
 title: Formations
 heading: Formations IA pour Développeurs
 permalink: /formations/
-description: "Formations IA pour développeurs : programmes pratiques, présentiel Sophia Antipolis, distanciel et intra-entreprise."
+description: "Formations IA pour développeurs : programmes pratiques, présentiel Sophia
+  Antipolis, distanciel et intra-entreprise."
+llm_summary: 'Formations IA pour développeurs : programmes pratiques, présentiel Sophia
+  Antipolis, distanciel et intra-entreprise.'
+llm_topics: [formation, ia, developpeurs]
 ---
-
 <section class="formations-section" id="formations">
   <div class="container">
     <p class="section-description">Programmes structurés, design homogène, et liste des modules en style site.</p>
@@ -54,3 +57,16 @@ description: "Formations IA pour développeurs : programmes pratiques, présenti
   </div>
 </section>
 
+
+<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="/contact/">Contactez-moi pour échanger</a>.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Formation IA pour développeurs",
+  "description": {{ page.description | jsonify }},
+  "provider": { "@type": "Person", "name": "Nicolas Dabène" },
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>

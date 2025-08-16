@@ -2,10 +2,15 @@
 layout: default
 title: Mes Projets
 permalink: /projects/
-description: "Découvrez une sélection de mes projets, incluant des modules PrestaShop sur mesure, des frameworks internes et des solutions innovantes développées chez BusinessTech."
+description: "Découvrez une sélection de mes projets, incluant des modules PrestaShop
+  sur mesure, des frameworks internes et des solutions innovantes développées chez
+  BusinessTech."
 body_class: "page-projects"
+llm_summary: Découvrez une sélection de mes projets, incluant des modules 
+  PrestaShop sur mesure, des frameworks internes et des solutions innovantes 
+  développées chez BusinessTech.
+llm_topics: [projets, prestashop, innovation]
 ---
-
 <section class="page-hero-section">
     <div class="container">
         <nav class="breadcrumb">

@@ -725,7 +725,7 @@ $blog-content-bg: $white;
   overflow: hidden;
   margin: 0;
   z-index: 1;
-  margin-top: calc(var(--nav-offset, 0px)); // avoid header overlap on mobile
+  margin-top: 0; // Supprimé le margin-top qui causait l'espace blanc
   
   // Styles de base - compensation navbar gérée par header-modern.html
   

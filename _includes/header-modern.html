@@ -7,14 +7,25 @@
     </div>
     
     <nav class="header-nav main-navigation">
-      <ul class="nav-links">
+      <ul class="nav-links" role="menubar" aria-label="Navigation principale">
         {% for item in site.data.navigation %}
-          <li class="nav-item">
-            <a href="{{ item.link | relative_url }}" 
-               class="nav-link {% if page.url == item.link %}active{% endif %}">
-              {{ item.name }}
+          {% unless item.hidden %}
+          <li class="nav-item{% if item.subitems %} has-submenu{% endif %}" role="none">
+            <a href="{{ item.link | default: '#' | relative_url }}" 
+               class="nav-link {% if page.url == item.link %}active{% endif %}" role="menuitem" aria-haspopup="{% if item.subitems %}true{% else %}false{% endif %}" aria-expanded="false">
+              {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
             </a>
+            {% if item.subitems %}
+              <ul class="submenu" role="menu">
+                {% for sub in item.subitems %}
+                  <li class="submenu-item" role="none">
+                    <a class="submenu-link" href="{{ sub.link | relative_url }}" role="menuitem">{{ sub.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </nav>
@@ -36,15 +47,124 @@
     </div>
   </div>
 
-  <!-- Mobile Navigation - Version simple -->
+  <script>
+  // Improve submenu toggle on focus/hover for accessibility and touch
+  document.addEventListener('DOMContentLoaded', function() {
+    const itemsWithSubmenu = document.querySelectorAll('.nav-item.has-submenu');
+    const closeAll = () => {
+      itemsWithSubmenu.forEach(sib => {
+        sib.classList.remove('open');
+        const sibLink = sib.querySelector('.nav-link');
+        sibLink && sibLink.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    // Ensure default state is closed
+    closeAll();
+    itemsWithSubmenu.forEach(item => {
+      const link = item.querySelector('.nav-link');
+      const submenu = item.querySelector('.submenu');
+      if (!link || !submenu) return;
+
+      // Hover (desktop)
+      item.addEventListener('mouseenter', () => {
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        if (!hasHover) return;
+        itemsWithSubmenu.forEach(sib => {
+          if (sib !== item) {
+            sib.classList.remove('open');
+            const sibLink = sib.querySelector('.nav-link');
+            sibLink && sibLink.setAttribute('aria-expanded', 'false');
+          }
+        });
+        item.classList.add('open');
+        link.setAttribute('aria-expanded', 'true');
+      });
+      item.addEventListener('mouseleave', (e) => {
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        if (!hasHover) return;
+        // Keep open if moving into submenu (handled by :hover gap blocker via ::before)
+        item.classList.remove('open');
+        link.setAttribute('aria-expanded', 'false');
+      });
+
+      // Focus within (keyboard)
+      item.addEventListener('focusin', () => {
+        itemsWithSubmenu.forEach(sib => {
+          if (sib !== item) {
+            sib.classList.remove('open');
+            const sibLink = sib.querySelector('.nav-link');
+            sibLink && sibLink.setAttribute('aria-expanded', 'false');
+          }
+        });
+        item.classList.add('open');
+        link.setAttribute('aria-expanded', 'true');
+      });
+      item.addEventListener('focusout', (e) => {
+        if (!item.contains(e.relatedTarget)) {
+          link.setAttribute('aria-expanded', 'false');
+          item.classList.remove('open');
+        }
+      });
+
+      // Tap toggle (touch)
+      let tappedOnce = false;
+      link.addEventListener('click', function(e) {
+        const hasHover = window.matchMedia('(hover: hover)').matches;
+        if (hasHover) return; // default on desktop
+        if (!tappedOnce) {
+          e.preventDefault();
+          tappedOnce = true;
+          // Close siblings then open this
+          itemsWithSubmenu.forEach(sib => {
+            if (sib !== item) {
+              sib.classList.remove('open');
+              const sibLink = sib.querySelector('.nav-link');
+              sibLink && sibLink.setAttribute('aria-expanded', 'false');
+            }
+          });
+          item.classList.add('open');
+          link.setAttribute('aria-expanded', 'true');
+          setTimeout(() => tappedOnce = false, 700);
+        }
+      });
+
+      // Close on Escape
+      item.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Escape') {
+          closeAll();
+          link.focus();
+        }
+      });
+    });
+
+    // Close on scroll or click outside
+    window.addEventListener('scroll', () => closeAll(), { passive: true });
+    document.addEventListener('click', (e) => {
+      const within = Array.from(itemsWithSubmenu).some(el => el.contains(e.target));
+      if (!within) closeAll();
+    });
+  });
+  </script>
+
+  <!-- Mobile Navigation - Collapsible submenus -->
   <div class="mobile-nav" id="mobile-nav-panel">
     <ul>
       {% for item in site.data.navigation %}
-        <li>
-          <a href="{{ item.link | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}">
-            {{ item.name }}
+        {% unless item.hidden %}
+        <li class="mobile-item{% if item.subitems %} has-submenu{% endif %}">
+          <a href="{{ item.link | default: '#' | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}" aria-expanded="false">
+            {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
           </a>
+          {% if item.subitems %}
+            <ul class="mobile-submenu">
+              {% for sub in item.subitems %}
+                <li><a class="mobile-nav-link mobile-submenu-link" href="{{ sub.link | relative_url }}">{{ sub.name }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </li>
+        {% endunless %}
       {% endfor %}
       <li><a href="{{ "/contact" | relative_url }}" class="btn btn--primary">Discutons de votre projet</a></li>
     </ul>
@@ -117,10 +237,15 @@
         console.log('Menu state after toggle:', mobileNav.classList.contains('open'));
       });
       
-      // Close mobile nav when clicking on links
+      // Close mobile nav when clicking on links (but NOT when opening a submenu)
       const mobileLinks = mobileNav.querySelectorAll('a');
       mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (ev) => {
+          const parentItem = link.closest('.mobile-item.has-submenu');
+          if (parentItem && !parentItem.classList.contains('open')) {
+            // This click will be used to OPEN the submenu (handled below). Do not close panel.
+            return;
+          }
           mobileNav.classList.remove('open');
           mobileToggle.classList.remove('active');
           document.body.style.overflow = '';
@@ -134,6 +259,29 @@
           mobileToggle.classList.remove('active');
           document.body.style.overflow = '';
         }
+      });
+      // Mobile submenu toggle (collapsible)
+      const mobileItems = mobileNav.querySelectorAll('.mobile-item.has-submenu');
+      mobileItems.forEach(item => {
+        const link = item.querySelector('.mobile-nav-link');
+        const submenu = item.querySelector('.mobile-submenu');
+        if (!link || !submenu) return;
+
+        link.addEventListener('click', function(e){
+          const isOpen = item.classList.contains('open');
+          if (!isOpen) {
+            e.preventDefault();
+            mobileItems.forEach(sib => {
+              if (sib !== item) {
+                sib.classList.remove('open');
+                const sLink = sib.querySelector('.mobile-nav-link');
+                sLink && sLink.setAttribute('aria-expanded', 'false');
+              }
+            });
+            item.classList.add('open');
+            link.setAttribute('aria-expanded', 'true');
+          }
+        });
       });
     }
 

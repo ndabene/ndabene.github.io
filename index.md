@@ -1,12 +1,19 @@
 ---
 layout: default
-title: "Nicolas Dabène - Senior PHP Developer & AI Orchestrator | Expert PrestaShop"
-description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, AI-assisted development."
+title: "Nicolas Dabène - Développeur PHP Senior & Formateur IA, passionné de partage"
+description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, formation IA et partage de connaissances."
 keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack"
 no_bg: true
 body_class: homepage-modern
+llm_summary: 15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, formation IA et partage de connaissances.
+llm_topics:
+- senior php developer
+- prestashop expert
+- ai orchestrator
+- symfony
+- e-commerce architecture
+- php fullstack
 ---
-
 {% include home/hero.html %}
 
 <div class="sticky-jump show-on-mobile" id="sticky-jump">
