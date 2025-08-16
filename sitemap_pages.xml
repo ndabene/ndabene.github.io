@@ -8,11 +8,7 @@ layout: null
     {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "index.md" or page.name == "index.html" %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
-      {% if page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+      <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
       <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.8{% endif %}</priority>
       {% if page.image %}

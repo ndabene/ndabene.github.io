@@ -2,21 +2,25 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+{% assign pages_sitemap = site.pages | where: "name", "sitemap_pages.xml" | first %}
+{% assign posts_sitemap = site.pages | where: "name", "sitemap_posts.xml" | first %}
+{% assign projects_sitemap = site.pages | where: "name", "sitemap_projects.xml" | first %}
+{% assign case_studies_sitemap = site.pages | where: "name", "sitemap_case_studies.xml" | first %}
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>{{ site.url }}/sitemap_pages.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ pages_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
   </sitemap>
   <sitemap>
     <loc>{{ site.url }}/sitemap_posts.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ posts_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
   </sitemap>
   <sitemap>
     <loc>{{ site.url }}/sitemap_projects.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ projects_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
   </sitemap>
   <sitemap>
     <loc>{{ site.url }}/sitemap_case_studies.xml</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ case_studies_sitemap.last_modified_at | date_to_xmlschema }}</lastmod>
   </sitemap>
 </sitemapindex>
