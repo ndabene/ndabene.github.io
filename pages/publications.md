@@ -25,6 +25,10 @@ llm_topics: [publications, articles, technologie]
 
 <section class="section publications-page-section external-publications-section">
     <div class="container">
+        <p class="intro">
+            Mon objectif pédagogique est de partager des ressources techniques et stratégiques pour aider votre boutique en ligne à progresser.
+            Pour approfondir ces thèmes, rendez-vous sur la page <a href="/formations/">Formations</a>.
+        </p>
         {% assign grouped_publications = site.data.publications | group_by: "category" %}
         {% for group in grouped_publications %}
         <div class="publications-category-section">
