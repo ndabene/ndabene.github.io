@@ -3,7 +3,7 @@
 # Script pour corriger les URLs du sitemap après génération en mode développement
 echo "🔧 Correction des URLs du sitemap..."
 
-SITEMAP_FILE="_site/sitemap.xml"
+SITEMAP_FILE="_site/sitemap_index.xml"
 
 if [ -f "$SITEMAP_FILE" ]; then
     echo "📍 Sitemap trouvé : $SITEMAP_FILE"
@@ -41,7 +41,7 @@ if [ -f "$SITEMAP_FILE" ]; then
     
     echo ""
     echo "✅ Correction du sitemap terminée !"
-    echo "🌐 Sitemap accessible à : https://nicolas-dabene.fr/sitemap.xml"
+    echo "🌐 Sitemap accessible à : https://nicolas-dabene.fr/sitemap_index.xml"
     
 else
     echo "❌ Erreur : Sitemap non trouvé à $SITEMAP_FILE"

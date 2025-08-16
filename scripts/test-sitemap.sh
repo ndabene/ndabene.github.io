@@ -8,21 +8,21 @@ echo "📦 Build Jekyll..."
 bundle exec jekyll build --config _config.yml,_config_github.yml
 
 # Vérifier que le sitemap existe
-if [ -f "_site/sitemap.xml" ]; then
+if [ -f "_site/sitemap_index.xml" ]; then
     echo "✅ Sitemap généré avec succès !"
     
     # Afficher quelques statistiques
     echo ""
     echo "📊 Statistiques du sitemap :"
-    echo "- Taille du fichier : $(wc -c < _site/sitemap.xml) bytes"
-    echo "- Nombre d'URLs : $(grep -c '<url>' _site/sitemap.xml)"
-    echo "- Dernière modification : $(grep -o '<lastmod>[^<]*</lastmod>' _site/sitemap.xml | head -1)"
+    echo "- Taille du fichier : $(wc -c < _site/sitemap_index.xml) bytes"
+    echo "- Nombre d'URLs : $(grep -c '<url>' _site/sitemap_index.xml)"
+    echo "- Dernière modification : $(grep -o '<lastmod>[^<]*</lastmod>' _site/sitemap_index.xml | head -1)"
     
     # Vérifier que le sitemap est valide XML
     echo ""
     echo "🔍 Validation XML..."
     if command -v xmllint >/dev/null 2>&1; then
-        if xmllint --noout _site/sitemap.xml; then
+        if xmllint --noout _site/sitemap_index.xml; then
             echo "✅ XML valide"
         else
             echo "❌ XML invalide"
@@ -35,11 +35,11 @@ if [ -f "_site/sitemap.xml" ]; then
     # Afficher les premiers éléments pour vérification
     echo ""
     echo "🔍 Premiers éléments du sitemap :"
-    head -20 _site/sitemap.xml
+    head -20 _site/sitemap_index.xml
     
     echo ""
     echo "✅ Test du sitemap réussi !"
-    echo "🌐 Sitemap accessible à : http://localhost:4000/sitemap.xml"
+    echo "🌐 Sitemap accessible à : http://localhost:4000/sitemap_index.xml"
     
 else
     echo "❌ Erreur : Sitemap non généré"

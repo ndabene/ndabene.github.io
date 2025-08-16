@@ -241,7 +241,7 @@ Inclure des sections FAQ quand pertinent :
 ## 🚀 Après Publication
 
 Le système automatique se charge de :
-- ✅ Mise à jour du sitemap.xml
+- ✅ Mise à jour du sitemap_index.xml
 - ✅ Notification des moteurs de recherche
 - ✅ Optimisation pour IA génératives
 - ✅ Indexation SEO
