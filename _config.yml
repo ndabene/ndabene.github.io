@@ -26,6 +26,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sass-converter
   - jekyll-last-modified-at
+  - jekyll-redirect-from
 
 # Boutique (achat en ligne)
 # Mettre à true quand Lemon Squeezy est validé
@@ -73,9 +74,10 @@ exclude:
 include:
   - sitemap_index.xml
   - sitemap_pages.xml
-  - sitemap_posts.xml
+  - sitemap_posts_2025.xml
   - sitemap_projects.xml
   - sitemap_case_studies.xml
+  - sitemap_images.xml
   - robots.txt
 
 # Google Analytics
@@ -115,7 +117,7 @@ defaults:
     values:
       layout: post
       sitemap:
-        changefreq: "monthly"
+        changefreq: "weekly"
         priority: 0.7
   - scope:
       path: ""
@@ -130,14 +132,14 @@ defaults:
     values:
       sitemap:
         changefreq: "yearly"
-        priority: 0.8
+        priority: 0.6
   - scope:
       path: ""
       type: "case_studies"
     values:
       sitemap:
         changefreq: "yearly"
-        priority: 0.8
+        priority: 0.5
   - scope:
       path: "index.md"
     values:
