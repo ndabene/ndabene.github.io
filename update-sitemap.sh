@@ -21,7 +21,7 @@ if [ -f "_site/sitemap_index.xml" ]; then
     # Affichage des stats
     echo "📊 Statistiques du sitemap :"
     total_urls=0
-    for file in sitemap_pages.xml sitemap_posts_*.xml sitemap_projects.xml sitemap_case_studies.xml; do
+    for file in sitemap_pages.xml sitemap_posts.xml sitemap_projects.xml sitemap_case_studies.xml sitemap_images.xml; do
         if [ -f "_site/$file" ]; then
             count=$(grep -c '<url>' "_site/$file")
             total_urls=$((total_urls + count))
