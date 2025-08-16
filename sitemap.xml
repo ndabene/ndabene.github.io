@@ -6,9 +6,10 @@ layout: null
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Page d'accueil (exclue des pages loop pour éviter duplication) -->
+  {% assign home = site.pages | where: "url", "/" | first %}
   <url>
     <loc>{{ site.url }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <lastmod>{{ home.last_modified_at | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,9 +21,9 @@ layout: null
       <loc>{{ page.url | prepend: site.url }}</loc>
       {% if page.date %}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+        {% else %}
+          <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% endif %}
       {% if page.sitemap.changefreq %}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
       {% else %}
@@ -67,9 +68,9 @@ layout: null
       <loc>{{ project.url | prepend: site.url }}</loc>
       {% if project.date %}
         <lastmod>{{ project.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+        {% else %}
+          <lastmod>{{ project.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% endif %}
       <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
         <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.8{% endif %}</priority>
       {% assign project_image = project.image | default: project.hero_image %}
@@ -87,9 +88,9 @@ layout: null
       <loc>{{ case_study.url | prepend: site.url }}</loc>
       {% if case_study.date %}
         <lastmod>{{ case_study.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
+        {% else %}
+          <lastmod>{{ case_study.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% endif %}
       <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
         <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.8{% endif %}</priority>
       {% assign cs_image = case_study.image | default: case_study.hero_image %}
