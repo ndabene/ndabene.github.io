@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # Plan d'action SEO & GEO pour nicolas-dabene.fr
 
 ## 🎯 Objectifs repositionnés

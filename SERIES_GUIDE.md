@@ -1,3 +1,7 @@
+---
+sitemap: { exclude: yes }
+---
+
 # Guide d'utilisation du système de séries
 
 Ce guide explique comment utiliser le système de séries d'articles que j'ai mis en place pour votre blog Jekyll.
