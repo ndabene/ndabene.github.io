@@ -4,14 +4,14 @@
 
 ![Portfolio Banner](https://img.shields.io/badge/Portfolio-Nicolas%20Dabène-2563EB?style=for-the-badge&logo=github&logoColor=white)
 [![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-22863a?style=for-the-badge&logo=github&logoColor=white)](https://ndabene.github.io)
-[![Build & Deploy Jekyll](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ndabene/ndabene.github.io/actions/workflows/jekyll.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-22863a?style=for-the-badge&logo=github&logoColor=white)](https://nicolas-dabene.fr)
+[![Build & Deploy Jekyll](https://github.com/ndabene/nicolas-dabene.fr/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ndabene/nicolas-dabene.fr/actions/workflows/jekyll.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 **Portfolio personnel de Nicolas Dabène**  
 *Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience*
 
-[🌐 Voir le site](https://ndabene.github.io) • [📧 Contact](mailto:contact@ndabene.fr) • [💼 LinkedIn](https://linkedin.com/in/nicolasdabene)
+[🌐 Voir le site](https://nicolas-dabene.fr) • [📧 Contact](mailto:contact@ndabene.fr) • [💼 LinkedIn](https://linkedin.com/in/nicolasdabene)
 
 </div>
 
@@ -136,8 +136,8 @@ Ce portfolio présente le parcours professionnel de Nicolas Dabène, développeu
 
 ```bash
 # Cloner le repository
-git clone https://github.com/ndabene/ndabene.github.io.git
-cd ndabene.github.io
+git clone https://github.com/ndabene/nicolas-dabene.fr.git
+cd nicolas-dabene.fr
 
 # Installer les dépendances Ruby
 bundle install
@@ -336,7 +336,7 @@ Le site est automatiquement déployé sur GitHub Pages via GitHub Actions :
 
 1. **Push sur `main`** déclenche le build automatique
 2. **Jekyll build** génère les fichiers statiques
-3. **Déploiement** sur `https://ndabene.github.io`
+3. **Déploiement** sur `https://nicolas-dabene.fr`
 4. **Sitemap** automatiquement mis à jour et indexé
 
 ### 🔍 Optimisation GEO (Generative Engine Optimization)
@@ -382,8 +382,8 @@ defaults:
 
 Ce projet étant un portfolio personnel, les contributions externes ne sont pas acceptées. Cependant, vous pouvez :
 
-- 🐛 [Signaler des bugs](https://github.com/ndabene/ndabene.github.io/issues)
-- 💡 [Suggérer des améliorations](https://github.com/ndabene/ndabene.github.io/issues)
+- 🐛 [Signaler des bugs](https://github.com/ndabene/nicolas-dabene.fr/issues)
+- 💡 [Suggérer des améliorations](https://github.com/ndabene/nicolas-dabene.fr/issues)
 - ⭐ Mettre une étoile si le projet vous inspire !
 
 ### Guidelines pour les issues

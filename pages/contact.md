@@ -73,8 +73,8 @@ llm_topics:
                     <input type="text" name="_gotcha" style="display:none;">
                     
                     <!-- Formspree settings -->
-                    <input type="hidden" name="_next" value="https://ndabene.github.io/contact?sent=true">
-                    <input type="hidden" name="_subject" value="Nouveau message depuis ndabene.github.io">
+                    <input type="hidden" name="_next" value="https://nicolas-dabene.fr/contact?sent=true">
+                    <input type="hidden" name="_subject" value="Nouveau message depuis nicolas-dabene.fr">
                     
                     <button type="submit" class="btn btn--primary">Envoyer le message</button>
                 </form>

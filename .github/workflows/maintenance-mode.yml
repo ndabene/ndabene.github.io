@@ -119,8 +119,8 @@ jobs:
         fi
         
         echo ""
-        echo "🔗 Site URL: https://ndabene.github.io"
-        echo "🔗 Maintenance page: https://ndabene.github.io/maintenance/"
+        echo "🔗 Site URL: https://nicolas-dabene.fr"
+        echo "🔗 Maintenance page: https://nicolas-dabene.fr/maintenance/"
         
     - name: Create deployment summary
       run: |
@@ -144,8 +144,8 @@ jobs:
         if [ "${{ github.event.inputs.maintenance_mode }}" = "true" ]; then
           echo "- ✅ **Authorized IP:** 109.210.10.225 (full site access)" >> $GITHUB_STEP_SUMMARY
           echo "- 🚧 **Other visitors:** Redirected to maintenance page" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔗 **Maintenance page:** https://ndabene.github.io/maintenance/" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 **Maintenance page:** https://nicolas-dabene.fr/maintenance/" >> $GITHUB_STEP_SUMMARY
         else
           echo "- ✅ **All visitors:** Full site access" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔗 **Site URL:** https://ndabene.github.io" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔗 **Site URL:** https://nicolas-dabene.fr" >> $GITHUB_STEP_SUMMARY
         fi
