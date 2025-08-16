@@ -23,6 +23,7 @@ llm_topics: [publications, articles, technologie]
     </div>
 </section>
 
+
 <section class="section publications-page-section external-publications-section">
     <div class="container">
         {% assign grouped_publications = site.data.publications | group_by: "category" %}
@@ -71,3 +72,4 @@ llm_topics: [publications, articles, technologie]
         </div>
     </div>
 </section>
+<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="/contact/">Contactez-moi pour échanger</a>.</p>
