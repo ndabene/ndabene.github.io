@@ -1,115 +1,66 @@
----
-layout: page
-title: Nicolas Dabene - Formateur IA & Développeur PrestaShop | Antibes Sophia 
-  Antipolis
-permalink: /about/
-description: "Discover the professional journey and expertise of Nicolas Dabène, a
-  Senior PHP FullStack Developer & AI Orchestrator with 15+ years of experience."
-keywords: "senior php developer, prestashop expert, ai orchestrator, php architect,
-  technical leadership, software architecture, fullstack development, certifications"
-show_sidebar: true
-llm_summary: Discover the professional journey and expertise of Nicolas Dabène, 
-  a Senior PHP FullStack Developer & AI Orchestrator with 15+ years of 
-  experience.
-llm_topics:
-- senior php developer
-- prestashop expert
-- ai orchestrator
-- php architect
-- technical leadership
-- software architecture
-- fullstack development
-- certifications
----
-<section class="about-section light-gray-bg">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-content">
-                <h2>Executive Summary: Driving Business Value Through Technology</h2>
-                <p>Spécialiste PHP/PrestaShop, intelligence artificielle et formation, je mets mon expertise au service de projets innovants. Ma mission : partager mes connaissances via mon blog et mes interventions professionnelles.</p>
-                <p class="lead-paragraph">As a senior professional with over 15 years of hands-on experience since 2010, I am a seasoned PHP FullStack Developer and AI Orchestrator dedicated to transforming complex business challenges into robust, scalable, and innovative software solutions. My career spans nearly two decades of technical leadership, marked by a consistent track record of delivering high-impact projects, optimizing performance, and leading cross-functional teams to success. I specialize in architecting resilient systems that not only meet current demands but also anticipate future growth, ensuring long-term ROI for my clients.</p>
-
-                <h3>Positionnement local & services clés</h3>
-                <ul>
-                    <li><strong>Formateur IA spécialisé pour développeurs</strong> | Antibes – Sophia Antipolis</li>
-                    <li><strong>Expert PrestaShop freelance</strong> – Côte d'Azur & télétravail</li>
-                    <li><strong>Accompagnement entreprises</strong> dans l'intégration de l'IA</li>
-                    <li><strong>Zone d'intervention</strong> : Alpes-Maritimes, PACA, France entière en remote</li>
-                    <li><strong>Basé à Antibes</strong>, intervention sur l'écosystème Sophia Antipolis</li>
-                    <li><strong>Spécialité</strong> : formation IA pratique pour équipes de développement</li>
-                </ul>
-
-                <h3>My Professional Journey: Growth, Leadership & Innovation</h3>
-                <p>My path in software engineering has been a continuous evolution, starting from foundational PHP development to mastering complex architectural patterns, e-commerce ecosystems like PrestaShop, and integrating cutting-edge AI/ML capabilities. I thrive in environments that demand both deep technical expertise and strategic vision, consistently pushing the boundaries of what's possible.</p>
-
-                <div class="career-timeline">
-                    <h3>Career Milestones</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-date">2010 - 2015</div>
-                            <div class="timeline-content">
-                                <h4>Early Career & PHP Foundations</h4>
-                                <p>Developed and maintained web applications for various industries, solidifying expertise in PHP, MySQL, and front-end technologies. Focused on clean code and efficient database design.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2015 - 2020</div>
-                            <div class="timeline-content">
-                                <h4>E-commerce Specialization & PrestaShop Expert</h4>
-                                <p>Led the development of multiple high-traffic e-commerce platforms, specializing in PrestaShop customization, performance optimization, and third-party integrations. Achieved PrestaShop certification.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2020 - Present</div>
-                            <div class="timeline-content">
-                                <h4>AI Orchestration & Technical Leadership</h4>
-                                <p>Transitioned into architecting AI-driven solutions, focusing on integrating machine learning models into existing business workflows. Took on senior leadership roles, mentoring teams and defining technical roadmaps for complex projects.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3>Certifications & Continuous Learning</h3>
-                <p>I believe in continuous learning and staying at the forefront of technological advancements. My certifications include:</p>
-                <ul>
-                    <li><strong>PrestaShop Certified Developer</strong></li>
-                    <li>AWS Certified Solutions Architect - Associate</li>
-                    <li>Google Cloud Professional Machine Learning Engineer (in progress)</li>
-                </ul>
-
-                <h3>Tech Passions & Future Outlook</h3>
-                <p>Beyond my professional work, I am passionate about open-source contributions, exploring new AI paradigms, and optimizing system performance to its limits. I actively follow trends in serverless architectures, quantum computing, and ethical AI development, always seeking opportunities to apply cutting-edge solutions to real-world problems.</p>
-            </div>
-
-            <div class="about-sidebar">
-                <div class="metrics-summary card">
-                    <h3>My Impact in Numbers</h3>
-                    <ul>
-                        <li><strong>Years of Experience:</strong> 15+</li>
-                        <li><strong>Projects Completed:</strong> 50+</li>
-                        <li><strong>Team Leadership:</strong> Managed 20+ developers</li>
-                        <li><strong>Technologies Mastered:</strong> 25+</li>
-                        <li><strong>Certifications:</strong> PrestaShop, AWS, etc.</li>
-                    </ul>
-                </div>
-
-                <div class="skills-summary card">
-                    <h3>Technical Skills</h3>
-                    {% include skills-chart.html %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="continue-discovery">
-    <div class="container">
-        <h2>Continuer la découverte</h2>
-        <ul>
-            <li><a href="/skills/">Compétences</a></li>
-            <li><a href="/formations/">Formations</a></li>
-            <li><a href="/blog/">Blog</a></li>
-        </ul>
-    </div>
-</section>
+58
+ <h4>E-commerce Specialization &amp; PrestaShop Expert</h4>
+59
+ <p>Led the development of multiple high-traffic e-commerce platforms, specializing in PrestaShop customization, performance optimization, and third-party integrations. Achieved PrestaShop certification.</p>
+60 </div>
+61                        
+62 <div class="timeline-item">
+63 <div class="timeline-date">2020 - Present</div>
+64 <div class="timeline-content">
+65 <h4>AI Orchestration &amp; Technical Leadership</h4>
+66 <p>Transitioned into architecting AI-driven solutions, focusing on integrating machine learning models into existing business workflows. Took on senior leadership roles, mentoring teams and defining technical roadmaps for complex projects.</p>
+67 </div>
+68 </div>
+69                    
+70                
+71
+72 <h3>Certifications &amp; Continuous Learning</h3>
+73 <p>I believe in continuous learning and staying at the forefront of technological advancements. My certifications include:</p>
+74 <ul>
+75 <li><strong>PrestaShop Certified Developer</strong></li>
+76 <li>AWS Certified Solutions Architect - Associate</li>
+77 <li>Google Cloud Professional Machine Learning Engineer (in progress)</li>
+78 </ul>
+79
+80 <h3>Tech Passions &amp; Future Outlook</h3>
+81 <p>Beyond my professional work, I am passionate about open-source contributions, exploring new AI paradigms, and optimizing system performance to its limits. I actively follow trends in serverless architectures, quantum computing, and ethical AI development, always seeking opportunities to apply cutting-edge solutions to real-world problems.</p>
+82            
+83
+84 <div class="about-sidebar">
+85 <div class="metrics-summary card">
+86 <h3>My Impact in Numbers</h3>
+87 <ul>
+88 <li><strong>Years of Experience:</strong> 15+</li>
+89 <li><strong>Projects Completed:</strong> 50+</li>
+90 <li><strong>Team Leadership:</strong> Managed 20+ developers</li>
+91 <li><strong>Technologies Mastered:</strong> 25+</li>
+92 <li><strong>Certifications:</strong> PrestaShop, AWS, etc.</li>
+93 </ul>
+94 </div>
+95
+96 <div class="skills-summary card">
+97 <h3>Technical Skills</h3>
+98                    {% include skills-chart.html %}
+99 </div>
+100 </div>
+101        
+102    
+103
+104
+105
+106 
+107 <section class="continue-discovery">
+108  <div class="container">
+109  <h2>Continuer la découverte</h2>
+110  <ul>
+111  <li><a href="/skills/">Compétences</a></li>
+112  <li><a href="/formations/">Formations</a></li>
+113  <li><a href="/blog/">Blog</a></li>
+114  </ul>
+115  </div>
+116 </section>
+117 
+118 <p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="/contact/">Contactez-moi pour échanger</a>.</p>
+119 
+120 
+121</main>
