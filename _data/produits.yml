@@ -161,3 +161,48 @@
     - "Mode d'emploi immédiat pour générer des images et les intégrer à vos contenus"
     - "Fiches outils détaillées : IA à connaître, astuces, limites, comparatifs"
     - "Méthode claire pour obtenir à coup sûr un résultat visuel cohérent, impactant et réutilisable"
+
+-
+  nom: "EduPack IA"
+  tagline: "Pourquoi choisir EduPack IA ?"
+  description: "Vous êtes enseignant(e) au primaire, collège ou lycée et vous manquez de temps pour préparer vos cours ? EduPack IA est une boîte à outils complète qui transforme l’IA en alliée pédagogique fiable et conforme."
+  active: true
+  image: "assets/images/produits/JfS4iDaLZfc17ZJsUusaH.png"
+  lien_paiement: "https://ndabene.lemonsqueezy.com/buy/eac3a9e6-dd71-43b2-bdc5-2938a00d5dcd"
+  univers: "IA & Pédagogie"
+  categorie: "Formation IA pour enseignants"
+  prix: "49€ / HT"
+  lemon_variant_id: 
+  type: "ebook"
+  format: "PDF, Podcast & Fiches Outils"
+  univers: "IA"
+  niveau: "Débutant à intermédiaire"
+  active: true
+  duree: "2h"
+  garantie: "14 jours"
+  last_update: "2025-08-17"
+  mots_cles: ["IA", "Pédagogie", "Primaire", "Collège", "Lycée", "Guides pratiques", "Fiches outils", "Packs de prompts", "Grilles d'évaluation", "Protocoles opérationnels"]
+  resultats:
+    - "Gagnez du temps : séquences prêtes en moins de 20 minutes"
+    - "Restez serein(e) : conformité RGPD intégrée, zéro données élèves"
+    - "Valorisez vos cours : supports visuels accessibles (normes WCAG 2.2)"
+    - "Enseignez en confiance : sources vérifiées, prompts éprouvés"
+    - "Différenciez vos élèves : parcours Soutien / Standard / Avancé inclus"
+  pour_qui:
+    - "Instituteurs et institutrices du primaire"
+    - "Professeurs du collège et du lycée"
+    - "Enseignants qui veulent moderniser leur pédagogie sans perdre de temps"
+  resume:
+    - "moins de temps passé à préparer vos cours,"
+    - "plus d’énergie pour accompagner vos élèves,"
+    - "la certitude d’être conforme, efficace et innovant."
+  programme:
+    - "Introduction : objectifs, principes et potentiel de l'IA générative pour la création visuelle"
+    - "Choisir le bon outil IA selon vos besoins : Canva, DALL-E, Midjourney, PowerPoint CoPilot…"
+    - "Rédiger des prompts visuels efficaces et contourner les limites des générateurs"
+    - "Créer des présentations stylées : structure, mise en page, astuces d'automatisation"
+    - "Cas pratiques : génération d'images sur-mesure pour vos projets réels"
+  micro_extraits:
+    - "Mode d'emploi immédiat pour générer des images et les intégrer à vos contenus"
+    - "Fiches outils détaillées : IA à connaître, astuces, limites, comparatifs"
+    - "Méthode claire pour obtenir à coup sûr un résultat visuel cohérent, impactant et réutilisable"
