@@ -294,15 +294,15 @@ llm_topics: [ebooks, formations, ia, prestashop]
         
         {% for group in grouped_products %}
         <div class="product-category-section" id="{{ group.name | slugify }}">
+    <h2 class="category-title">{{ group.name }}</h2>
 
-
-            <div class="product-grid">
-                {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
-                {% if cat_meta and cat_meta.description %}
-                <div class="category-description">
-                    {{ cat_meta.description }}
-                </div>
-                {% endif %}
+    <div class="product-grid">
+        {%- assign cat_meta = site.data.boutique_categories | where: 'name', group.name | first -%}
+        {% if cat_meta and cat_meta.description %}
+        <div class="category-description">
+            {{ cat_meta.description }}
+        </div>
+        {% endif %}
                 <script type="application/ld+json">
                 {
                   "@context": "https://schema.org",
