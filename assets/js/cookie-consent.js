@@ -154,11 +154,16 @@ class CookieConsent {
     }
 
     acceptAll() {
-        this.setConsentData({
+        const preferences = {
             essential: true,
-            analytics: true
-        });
-        this.loadServices();
+            analytics: true,
+            ad: true,
+            adUserData: true,
+            adPersonalization: true
+        };
+
+        this.setConsentData(preferences);
+        this.enableGoogleAnalytics(preferences);
         this.hideBanner();
         this.showNotification('Préférences cookies sauvegardées.');
     }
@@ -166,9 +171,12 @@ class CookieConsent {
     refuseAll() {
         this.setConsentData({
             essential: true,
-            analytics: false
+            analytics: false,
+            ad: false,
+            adUserData: false,
+            adPersonalization: false
         });
-        this.loadServices();
+        this.disableGoogleAnalytics();
         this.hideBanner();
         this.showNotification('Seuls les cookies essentiels sont activés.');
     }
@@ -184,6 +192,21 @@ class CookieConsent {
                 if (analyticsCheckbox) {
                     analyticsCheckbox.checked = this.consentData.preferences.analytics || false;
                 }
+
+                const adCheckbox = document.getElementById('ad-consent');
+                if (adCheckbox) {
+                    adCheckbox.checked = this.consentData.preferences.ad || false;
+                }
+
+                const adUserDataCheckbox = document.getElementById('ad-user-data-consent');
+                if (adUserDataCheckbox) {
+                    adUserDataCheckbox.checked = this.consentData.preferences.adUserData || false;
+                }
+
+                const adPersonalizationCheckbox = document.getElementById('ad-personalization-consent');
+                if (adPersonalizationCheckbox) {
+                    adPersonalizationCheckbox.checked = this.consentData.preferences.adPersonalization || false;
+                }
             }
         }
     }
@@ -197,13 +220,31 @@ class CookieConsent {
 
     savePreferences() {
         const analyticsCheckbox = document.getElementById('analytics-consent');
+        const adCheckbox = document.getElementById('ad-consent');
+        const adUserDataCheckbox = document.getElementById('ad-user-data-consent');
+        const adPersonalizationCheckbox = document.getElementById('ad-personalization-consent');
+
         const preferences = {
             essential: true,
-            analytics: analyticsCheckbox ? analyticsCheckbox.checked : false
+            analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
+            ad: adCheckbox ? adCheckbox.checked : false,
+            adUserData: adUserDataCheckbox ? adUserDataCheckbox.checked : false,
+            adPersonalization: adPersonalizationCheckbox ? adPersonalizationCheckbox.checked : false
         };
-        
+
         this.setConsentData(preferences);
-        this.loadServices();
+
+        const anyConsent = preferences.analytics ||
+            preferences.ad ||
+            preferences.adUserData ||
+            preferences.adPersonalization;
+
+        if (anyConsent) {
+            this.enableGoogleAnalytics(preferences);
+        } else {
+            this.disableGoogleAnalytics();
+        }
+
         this.hideBanner();
         this.showNotification('Préférences cookies mises à jour.');
     }
@@ -211,43 +252,55 @@ class CookieConsent {
     loadServices() {
         if (!this.consentData || !this.consentData.preferences) return;
 
-        const { analytics } = this.consentData.preferences;
+        const preferences = this.consentData.preferences;
+        const anyConsent = preferences.analytics ||
+            preferences.ad ||
+            preferences.adUserData ||
+            preferences.adPersonalization;
 
-        // Charger Google Analytics si consenti
-        if (analytics && window.gtag) {
-            // GA déjà chargé, activer le tracking
-            this.enableGoogleAnalytics();
-        } else if (analytics) {
-            // Charger GA dynamiquement
-            this.loadGoogleAnalytics();
+        if (anyConsent) {
+            if (window.gtag) {
+                this.enableGoogleAnalytics(preferences);
+            } else {
+                this.loadGoogleAnalytics(preferences);
+            }
         } else {
-            // Désactiver GA si refusé
             this.disableGoogleAnalytics();
         }
     }
 
-    loadGoogleAnalytics() {
+    loadGoogleAnalytics(preferences) {
         // Avec Consent Mode, le script global est déjà inclus dans la page
-        // On se contente d'activer le stockage analytics si l'utilisateur consent
-        this.enableGoogleAnalytics();
+        // On se contente d'activer les stockages consentis si l'utilisateur consent
+        this.enableGoogleAnalytics(preferences);
     }
 
-    enableGoogleAnalytics() {
+    enableGoogleAnalytics(preferences = {}) {
         if (window.gtag) {
             const wasGranted = this.analyticsConsentGranted;
-            window.gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted'
-            });
-            if (!wasGranted) {
+            const update = {};
+
+            if (preferences.analytics) {
+                update.analytics_storage = 'granted';
+            }
+            if (preferences.ad) {
+                update.ad_storage = 'granted';
+            }
+            if (preferences.adUserData) {
+                update.ad_user_data = 'granted';
+            }
+            if (preferences.adPersonalization) {
+                update.ad_personalization = 'granted';
+            }
+
+            window.gtag('consent', 'update', update);
+            if (preferences.analytics && !wasGranted) {
                 window.gtag('event', 'page_view', {
                     page_location: location.href,
                     page_title: document.title
                 });
             }
-            this.analyticsConsentGranted = true;
+            this.analyticsConsentGranted = preferences.analytics === true;
         }
     }
 
