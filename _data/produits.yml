@@ -16,13 +16,13 @@
   mots_cles: ["ia", "débutant", "transformer", "prompt"]
   resultats:
     - "Distinguer simplement IA, ML, DL et IA générative, sans jargon"
-    - "Repérer des cas d’usage concrets à fort impact dans votre quotidien"
+    - "Repérer des cas d'usage concrets à fort impact dans votre quotidien"
     - "Rédiger des prompts fiables qui limitent hallucinations et biais"
   support: "Support email sous 48h"
   last_update: "2025-08-12"
   programme:
     - "Distinguer simplement IA, ML, DL et IA générative, sans jargon"
-    - "Repérer des cas d’usage concrets à fort impact dans votre quotidien"
+    - "Repérer des cas d'usage concrets à fort impact dans votre quotidien"
     - "Rédiger des prompts fiables qui limitent hallucinations et biais"
     - "Explications claires et illustrées pour lever la confusion entre IA, ML, DL et GenAI."
     - "Compréhension du principe des Transformers (2017) pour mieux choisir vos outils."
@@ -34,15 +34,15 @@
 -
   nom: "Starter Pack IA 4-en-1 : Comprendre • Agir • Impacter • Prompter"
   description: |
-    Le parcours idéal pour passer de 0 à opérationnel en IA, sans jargon. En 4 modules, vous consolidez les fondamentaux (IA/ML/DL/GenAI, Transformers, outils & cas d’usage),
-    comprenez les impacts et mettez en place une démarche « Green AI » pragmatique, puis maîtrisez l’art du prompt avec une méthode claire (C.L.A.I.R), 7 types de prompts et
+    Le parcours idéal pour passer de 0 à opérationnel en IA, sans jargon. En 4 modules, vous consolidez les fondamentaux (IA/ML/DL/GenAI, Transformers, outils & cas d'usage),
+    comprenez les impacts et mettez en place une démarche « Green AI » pragmatique, puis maîtrisez l'art du prompt avec une méthode claire (C.L.A.I.R), 7 types de prompts et
     des exercices corrigés. Objectif : apprendre vite et appliquer immédiatement sur vos projets pro/perso.
   image: "assets/images/produits/pack-ia.jpg"
   images:
     - "assets/images/produits/pack-ia.jpg"
     - "assets/images/produits/ia-pack-fondamentaux-banner-1600x1200.png"
   categorie: "Pack"
-  prix: "99€ / HT"
+  prix: "119€ / HT"
   type: "pack"
   univers: "IA"
   avantages: "Économisez 28€"
@@ -55,20 +55,22 @@
     - "Module 1: L'Intelligence Artificielle pour Débutants"
     - "Module 2: Impact Écologique et Sociétal de l'IA"
     - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
+    - "Module 4: L'IA pour créer du contenu visuel : présentations et images"
   lemon_variant_id:
   micro_extraits:
-    - "Parcours guidé du niveau débutant à l’autonomie avec mise en pratique rapide."
-    - "Réduction de l’empreinte de vos workflows IA sans sacrifier la qualité ni la vitesse."
-    - "Méthode C.L.A.I.R et canevas de prompts pour passer d’une réponse brute à un livrable actionnable."
+    - "Parcours guidé du niveau débutant à l'autonomie avec mise en pratique rapide."
+    - "Réduction de l'empreinte de vos workflows IA sans sacrifier la qualité ni la vitesse."
+    - "Méthode C.L.A.I.R et canevas de prompts pour passer d'une réponse brute à un livrable actionnable."
   programme:
     - "Module 0: Devenez Acteur de l'IA"
     - "Module 1: L'Intelligence Artificielle pour Débutants"
     - "Module 2: Impact Écologique et Sociétal de l'IA"
     - "Module 3: L'Art du Prompt — Dialoguer avec l'IA"
+    - "Module 4: L'IA pour créer du contenu visuel : présentations et images"
 
 -
   nom: "Chapitre 2 : L'Impact Écologique et Sociétal de l'Intelligence Artificielle"
-  description: "Comprenez les impacts réels de l’IA sur l’environnement et la société, puis adoptez une démarche « Green AI » concrète et mesurable pour des usages plus responsables."
+  description: "Comprenez les impacts réels de l'IA sur l'environnement et la société, puis adoptez une démarche « Green AI » concrète et mesurable pour des usages plus responsables."
   image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/0b81d9f2-5cbc-4f09-b2f1-b86504e9b7c1"
   categorie: "Formation IA pour tous"
@@ -80,23 +82,23 @@
   active: true
   last_update: "2025-08-12"
   programme:
-    - "Mesurer l’empreinte (énergie, eau, matériel) d’un usage IA sur tout le cycle de vie"
+    - "Mesurer l'empreinte (énergie, eau, matériel) d'un usage IA sur tout le cycle de vie"
     - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
     - "Anticiper les risques sociétaux (emploi, biais, désinformation) avec des garde-fous clairs"
-    - "Méthodes d’évaluation de l’empreinte environnementale adaptées à vos cas d’usage."
-    - "Plan d’action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
+    - "Méthodes d'évaluation de l'empreinte environnementale adaptées à vos cas d'usage."
+    - "Plan d'action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
   resultats:
-    - "Mesurer l’empreinte (énergie, eau, matériel) d’un usage IA sur tout le cycle de vie"
+    - "Mesurer l'empreinte (énergie, eau, matériel) d'un usage IA sur tout le cycle de vie"
     - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
     - "Anticiper les risques sociétaux (emploi, biais, désinformation) avec des garde-fous clairs"
   micro_extraits:
-    - "Méthodes d’évaluation de l’empreinte environnementale adaptées à vos cas d’usage."
-    - "Plan d’action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
-    - "Gouvernance pratico-pratique et indicateurs pour suivre l’impact et gérer les risques."
+    - "Méthodes d'évaluation de l'empreinte environnementale adaptées à vos cas d'usage."
+    - "Plan d'action « Green AI » immédiatement activable (right-sizing, sobriété, cache, batch)."
+    - "Gouvernance pratico-pratique et indicateurs pour suivre l'impact et gérer les risques."
 
 -
   nom: "Chapitre 3 : L'Art du Prompt - Dialoguer avec l'IA"
-  description: "Apprenez à concevoir des prompts clairs et efficaces pour obtenir des réponses précises, utiles et réutilisables. Méthode, types de prompts et bonnes pratiques pour dialoguer efficacement avec n’importe quelle IA."
+  description: "Apprenez à concevoir des prompts clairs et efficaces pour obtenir des réponses précises, utiles et réutilisables. Méthode, types de prompts et bonnes pratiques pour dialoguer efficacement avec n'importe quelle IA."
   image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/35c244d8-e607-4917-ac65-932e79dbb5e7"
   categorie: "Formation IA pour tous"
@@ -113,16 +115,49 @@
   mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
   resultats:
     - "Structurer des instructions claires et efficaces avec la méthode C.L.A.I.R"
-    - "Sélectionner le bon type de prompt selon l’objectif (création, analyse, résumé, résolution, etc.)"
-    - "Itérer pour transformer une réponse brute en livrable prêt à l’emploi"
+    - "Sélectionner le bon type de prompt selon l'objectif (création, analyse, résumé, résolution, etc.)"
+    - "Itérer pour transformer une réponse brute en livrable prêt à l'emploi"
   support: "Mises à jour incluses"
   micro_extraits:
-    - "Canevas prêts à l’emploi pour 7 types de prompts et leurs usages."
+    - "Canevas prêts à l'emploi pour 7 types de prompts et leurs usages."
     - "Techniques avancées : rôle, format imposé, itération, contraintes créatives."
-    - "Cas concrets du quotidien pour passer de la théorie à l’action."
+    - "Cas concrets du quotidien pour passer de la théorie à l'action."
   programme:
     - "Structurer des instructions claires et efficaces avec la méthode C.L.A.I.R"
-    - "Sélectionner le bon type de prompt selon l’objectif (création, analyse, résumé, résolution, etc.)"
-    - "Itérer pour transformer une réponse brute en livrable prêt à l’emploi"
-    - "Canevas prêts à l’emploi pour 7 types de prompts et leurs usages."
-    - "Cas concrets du quotidien pour passer de la théorie à l’action."
+    - "Sélectionner le bon type de prompt selon l'objectif (création, analyse, résumé, résolution, etc.)"
+    - "Itérer pour transformer une réponse brute en livrable prêt à l'emploi"
+    - "Canevas prêts à l'emploi pour 7 types de prompts et leurs usages."
+    - "Cas concrets du quotidien pour passer de la théorie à l'action."
+
+-
+  nom: "Chapitre 4 : L'IA pour créer du contenu visuel : présentations et images"
+  description: "Découvrez comment exploiter l'IA pour créer des présentations captivantes et générer facilement des images percutantes, même sans expérience technique. Apprenez à choisir les meilleurs outils, paramétrer vos générateurs et intégrer vos créations directement dans vos supports professionnels ou personnels."
+  image: "assets/images/produits/4kmhX2GxNSEZpzqJDzzkX.png"
+  lien_paiement: "https://ndabene.lemonsqueezy.com/buy/f2b82876-4300-47eb-bbeb-c81fe5e1f464"
+  categorie: "Formation IA pour tous"
+  prix: "49€ / HT"
+  lemon_variant_id: 
+  type: "ebook"
+  format: "PDF, Podcast & Fiches Outils"
+  univers: "IA"
+  niveau: "Débutant à intermédiaire"
+  active: true
+  duree: "2h"
+  garantie: "14 jours"
+  last_update: "2025-08-12"
+  mots_cles: ["contenu visuel", "générateur d'images IA", "présentation", "PowerPoint", "Midjourney", "DALL-E", "Canva", "créativité", "mise en page"]
+  resultats:
+    - "Créer des présentations professionnelles et attractives en quelques minutes grâce à l'IA"
+    - "Générer des images originales et adaptées à votre secteur ou à vos projets personnels"
+    - "Optimiser la qualité, la pertinence et la cohérence de vos visuels avec des astuces concrètes pour chaque outil"
+  support: "Support email sous 48h"
+  programme:
+    - "Introduction : objectifs, principes et potentiel de l'IA générative pour la création visuelle"
+    - "Choisir le bon outil IA selon vos besoins : Canva, DALL-E, Midjourney, PowerPoint CoPilot…"
+    - "Rédiger des prompts visuels efficaces et contourner les limites des générateurs"
+    - "Créer des présentations stylées : structure, mise en page, astuces d'automatisation"
+    - "Cas pratiques : génération d'images sur-mesure pour vos projets réels"
+  micro_extraits:
+    - "Mode d'emploi immédiat pour générer des images et les intégrer à vos contenus"
+    - "Fiches outils détaillées : IA à connaître, astuces, limites, comparatifs"
+    - "Méthode claire pour obtenir à coup sûr un résultat visuel cohérent, impactant et réutilisable"
