@@ -115,17 +115,11 @@
 {% include critical-css.html %}
 
 <!-- Styles -->
-{% if jekyll.environment == "production" and site.cache_busting %}
+{% if site.cache_busting %}
   {% assign cache_buster = site.time | date: '%s' %}
-  <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}?v={{ cache_buster }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ cache_buster }}"></noscript>
-  <link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v={{ cache_buster }}">
-{% else %}
-  {% assign random_nocache = 'now' | date: '%s%N' %}
-  <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}?v={{ random_nocache }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ random_nocache }}"></noscript>
-  <link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v={{ random_nocache }}">
 {% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
