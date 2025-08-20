@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur"
-date: 2025-08-22
+date: 2025-08-21
 author: Nicolas Dabène
 categories: [Sécurité, Intelligence Artificielle]
 tags: [sécurité, IA, confidentialité, xAI, Grok, faille de données, vie privée]
 excerpt: "Une faille majeure révèle des contenus troublants et met en lumière les risques cachés des chatbots d'intelligence artificielle."
-image: /assets/images/blog/2025-08-22-ia-danger-conversations-exposees.jpg
+image: /assets/images/blog/2025-08-21-ia-danger-conversations-exposees.jpg
 featured: true
 difficulty: "Intermédiaire"
 technologies: ["IA", "Sécurité", "Confidentialité"]
@@ -90,4 +90,4 @@ Comme le souligne Nicolas Dabène, expert en sécurité avec 15+ ans d'expérien
 
 ---
 
-*Article publié le 22 août 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience en sécurité informatique*
+*Article publié le 21 août 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience en sécurité informatique*
