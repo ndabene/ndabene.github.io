@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin"
-date: 2025-01-27
+date: 2025-08-27
 author: Nicolas Dabène
 categories: [Intelligence Artificielle, Innovation, Design]
 tags: [Gemini AI, génération images, Google AI, créativité, Adobe Firefly, API, design automation]
 excerpt: "Google lance Gemini 2.5 Flash Image : édition visuelle par simple conversation, fusion intelligente d'images et créativité décuplée pour développeurs et créateurs."
-image: /assets/images/blog/2025-01-27-gemini-flash-image-revolution.jpg
+image: /assets/images/blog/2025-08-27-gemini-flash-image-revolution.jpg
 featured: true
 difficulty: "Intermédiaire"
 technologies: ["Gemini AI", "Google Cloud", "Adobe Firefly", "API REST"]
@@ -199,4 +199,4 @@ L'avenir appartient à ceux qui sauront combiner créativité humaine et intelli
 
 ---
 
-*Article publié le 27 janvier 2025 par Nicolas Dabène - Expert IA & Innovation avec 15+ ans d'expérience dans l'intégration de technologies émergentes*
+*Article publié le 27 Aout 2025 par Nicolas Dabène - Expert IA & Innovation avec 15+ ans d'expérience dans l'intégration de technologies émergentes*
