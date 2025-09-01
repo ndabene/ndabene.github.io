@@ -1,0 +1,18 @@
+.ai-summary {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ai-summary__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.ai-summary__icon {
+  width: 1em;
+  height: 1em;
+}
