@@ -140,8 +140,3 @@ L'avenir du commerce en ligne se dessine aujourd'hui. Les marchands visionnaires
 ---
 
 *Article publié le 18 septembre 2025 par Nicolas Dabène - Expert PrestaShop & IA avec 15+ ans d'expérience dans l'optimisation e-commerce*
-
-**À lire aussi :**
-- [Optimisation PrestaShop pour Google Shopping : Guide complet 2025]
-- [IA générative et e-commerce : Préparer votre business au futur]
-- [Module Google Shopping : ROI et métriques de performance]
