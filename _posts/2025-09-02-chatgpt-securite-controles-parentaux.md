@@ -21,7 +21,7 @@ Imaginez un instant : vous confieriez-vous vos préoccupations les plus intimes 
 
 Cette réalité a pris une tournure dramatique ces derniers mois, avec des cas tragiques où des adolescents en détresse ont utilisé ChatGPT lors de crises aiguës, parfois avec des conséquences fatales. Face à cette responsabilité immense, OpenAI vient d'annoncer le 2 septembre 2025 un plan de sécurité révolutionnaire : un déploiement sur 120 jours de mesures inédites pour protéger les utilisateurs les plus vulnérables.
 
-Dans ma pratique d'expert en intelligence artificielle depuis plus de 15 ans, j'ai vu l'évolution des technologies et leurs impacts sociétaux. Mais jamais une technologie n'avait soulevé des questions aussi fondamentales sur la sécurité émotionnelle et psychologique. Aujourd'hui, nous explorons ensemble comment OpenAI compte transformer ChatGPT pour mieux protéger ses 700 millions d'utilisateurs hebdomadaires.
+Dans ma pratique d'expert depuis plus de 15 ans, j'ai vu l'évolution des technologies et leurs impacts sociétaux. Mais jamais une technologie n'avait soulevé des questions aussi fondamentales sur la sécurité émotionnelle et psychologique. Aujourd'hui, nous explorons ensemble comment OpenAI compte transformer ChatGPT pour mieux protéger ses 700 millions d'utilisateurs hebdomadaires.
 
 ## Le contexte : quand l'IA rencontre la vulnérabilité humaine
 
