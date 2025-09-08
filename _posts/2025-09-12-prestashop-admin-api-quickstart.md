@@ -15,6 +15,8 @@ estimated_reading_time: 12 minutes
 
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9
 
+![Carte mentale des 8 concepts essentiels pour l’Admin API PrestaShop 9](/assets/images/blog/article_content/2025-09-12-carte-mental.png)
+
 Contribuer au **nouvel Admin API de PrestaShop 9** peut sembler intimidant.
 On lit des mots comme **CQRS**, **API Platform**, **OAuth2**… et beaucoup de développeurs pensent :
 
