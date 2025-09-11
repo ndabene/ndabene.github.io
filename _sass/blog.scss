@@ -55,7 +55,7 @@
     margin-bottom: $spacing-md;
     line-height: 1.8;
     color: #374151;
-    font-size: 1.05rem;
+    font-size: clamp(1rem, calc(1rem + 1.5vw), 1.25rem);
   }
   
   // Améliorer l'espacement et la lisibilité
