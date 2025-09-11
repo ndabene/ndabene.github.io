@@ -864,7 +864,7 @@ $blog-content-bg: $white;
     }
     
     .post-title {
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 6vw, 2.5rem);
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 1rem;
@@ -892,9 +892,7 @@ $blog-content-bg: $white;
           0 8px 24px rgba(0, 0, 0, 0.6);
       }
 
-      @media (max-width: 1200px) { font-size: 2.2rem; }
       @media (max-width: 768px) {
-        font-size: 1.8rem;
         margin-bottom: 0.8rem;
 
         &::before {
@@ -902,8 +900,6 @@ $blog-content-bg: $white;
         }
       }
       @media (max-width: 480px) {
-        font-size: 1.6rem;
-
         &::before {
           border-radius: 6px;
         }
