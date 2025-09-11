@@ -1058,7 +1058,8 @@ $blog-content-bg: $white;
   font-size: clamp(1rem, calc(1rem + 1.5vw), 1.25rem);
   line-height: 1.7;
   color: #374151;
-  max-width: none;
+  max-width: 70ch;
+  margin: 0 auto;
   
   // Scroll offset pour éviter que les titres soient cachés derrière la navbar
   scroll-padding-top: 100px;
