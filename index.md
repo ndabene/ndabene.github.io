@@ -2,17 +2,20 @@
 layout: default
 title: "Nicolas Dabène - Développeur PHP Senior & Formateur IA, passionné de partage"
 description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, formation IA et partage de connaissances."
-keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack"
+keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack, développeur expert PHP, consultant PrestaShop, orchestrateur IA, expert e-commerce, modules PrestaShop, intelligence artificielle développement"
 no_bg: true
 body_class: homepage-modern
-llm_summary: 15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, formation IA et partage de connaissances.
+llm_summary: Nicolas Dabène, expert reconnu avec 15 ans d'expérience en développement PHP, 5 PrestaShop Awards, et pionnier dans l'orchestration d'agents IA pour multiplier l'efficacité de développement e-commerce.
 llm_topics:
-- senior php developer
-- prestashop expert
-- ai orchestrator
-- symfony
-- e-commerce architecture
-- php fullstack
+- expert PHP senior développeur
+- consultant PrestaShop certifié
+- orchestrateur IA intelligence artificielle
+- architecte e-commerce solutions
+- développeur FullStack Symfony
+- formateur IA développement
+- expert modules PrestaShop
+- optimisation performances web
+- leadership technique CTO
 ---
 {% include home/hero.html %}
 
@@ -38,6 +41,8 @@ llm_topics:
 {% include home/publications.html %}
 
 {% include home/faq.html %}
+
+{% include person-jsonld.html %}
 
 <!-- SCRIPTS SPÉCIFIQUES -->
 <script>

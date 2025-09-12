@@ -22,7 +22,7 @@
 {% if page.llm_topics %}
 <meta name="llm:topics" content="{{ page.llm_topics | join: ', ' | escape }}">
 {% else %}
-<meta name="llm:topics" content="formations, e‑books, IA, PrestaShop, développement, prompts, bonnes pratiques">
+<meta name="llm:topics" content="formations, e‑books, IA, PrestaShop, développement, prompts, bonnes pratiques, expert PHP, développeur FullStack, architecture e-commerce, modules PrestaShop, intelligence artificielle, orchestration IA">
 {% endif %}
 <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
 <meta name="author" content="{{ site.author.name }}">
@@ -55,6 +55,11 @@
 <meta name="author-expertise" content="15+ years PHP development, PrestaShop expert, AI integration specialist">
 <meta name="content-authority" content="primary-source">
 <meta name="fact-check-worthy" content="true">
+<meta name="llm:intent" content="{% if page.layout == 'post' %}educational{% elsif page.layout == 'project' %}portfolio-showcase{% elsif page.layout == 'product' %}purchase-consideration{% else %}professional-discovery{% endif %}">
+<meta name="llm:audience" content="developers, CTOs, business leaders, e-commerce professionals">
+<meta name="llm:content-depth" content="{% if page.layout == 'post' %}expert{% else %}overview{% endif %}">
+<meta name="llm:industry-focus" content="e-commerce, PHP development, AI integration">
+<meta name="llm:geographic-focus" content="France, Europe, international e-commerce">
 
 <!-- Open Graph / Facebook -->
 {% if page.layout == 'product' and page.product %}

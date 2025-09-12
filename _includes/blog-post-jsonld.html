@@ -1,0 +1,114 @@
+{% comment %}
+  Données structurées Article pour optimiser SEO/GEO des posts de blog
+{% endcomment %}
+
+{% if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.excerpt | default: page.description | strip_html | escape }}",
+  "image": [
+    "{{ page.image | default: site.url | append: '/assets/images/social-share.jpg' | absolute_url }}"
+    {% if page.featured_image %}
+    ,"{{ page.featured_image | absolute_url }}"
+    {% endif %}
+  ],
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "{{ site.url }}",
+      "https://github.com/ndabene"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "wordCount": {{ content | number_of_words }},
+  "timeRequired": "PT{{ content | number_of_words | divided_by: 200 | ceil }}M",
+  "articleSection": "{{ page.categories | first | default: 'Blog' }}",
+  "keywords": [
+    {% for tag in page.tags %}
+    "{{ tag | escape }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    {% if page.technologies %}
+    {% for tech in page.technologies %}
+    ,"{{ tech | escape }}"
+    {% endfor %}
+    {% endif %}
+  ],
+  "about": [
+    {% if page.categories contains 'Intelligence Artificielle' %}
+    {
+      "@type": "Thing",
+      "name": "Intelligence Artificielle",
+      "description": "Technologies d'intelligence artificielle et apprentissage automatique"
+    },
+    {% endif %}
+    {% if page.categories contains 'Ecommerce' %}
+    {
+      "@type": "Thing",
+      "name": "E-commerce",
+      "description": "Commerce électronique et solutions de vente en ligne"
+    },
+    {% endif %}
+    {% if page.categories contains 'PrestaShop' %}
+    {
+      "@type": "Thing",
+      "name": "PrestaShop",
+      "description": "Plateforme e-commerce open-source"
+    },
+    {% endif %}
+    {
+      "@type": "Person",
+      "name": "Nicolas Dabène",
+      "jobTitle": "Senior PHP Developer & AI Orchestrator",
+      "knowsAbout": ["PHP", "PrestaShop", "AI", "E-commerce"]
+    }
+  ],
+  "mentions": [
+    {% if page.tags contains 'PrestaShop' %}
+    {
+      "@type": "SoftwareApplication",
+      "name": "PrestaShop",
+      "applicationCategory": "E-commerce Platform"
+    },
+    {% endif %}
+    {% if page.tags contains 'PHP' %}
+    {
+      "@type": "ComputerLanguage",
+      "name": "PHP",
+      "url": "https://www.php.net/"
+    },
+    {% endif %}
+    {% if page.tags contains 'Symfony' %}
+    {
+      "@type": "SoftwareApplication",
+      "name": "Symfony",
+      "applicationCategory": "Web Framework"
+    }
+    {% endif %}
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".post-content h1", ".post-content h2", ".post-content p"]
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}/blog/"
+  }
+}
+</script>
+{% endif %}

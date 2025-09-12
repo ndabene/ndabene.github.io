@@ -1,0 +1,80 @@
+# Mots-clés stratégiques pour SEO/GEO - Nicolas Dabène
+# Optimisé pour moteurs de recherche traditionnels et génératifs
+
+# Mots-clés principaux (haute intention)
+primary_keywords:
+  - "expert PHP PrestaShop"
+  - "développeur PHP senior"
+  - "consultant PrestaShop"
+  - "orchestrateur IA"
+  - "architecte e-commerce"
+  - "modules PrestaShop"
+  - "intelligence artificielle développement"
+  - "formation IA développeur"
+  - "leadership technique CTO"
+  - "optimisation PrestaShop"
+
+# Mots-clés long-tail (plus spécifiques, moins compétitifs)
+long_tail_keywords:
+  - "développeur PrestaShop avec 5 awards"
+  - "expert PHP 15 ans expérience"
+  - "orchestration agents IA développement"
+  - "architecture e-commerce scalable"
+  - "modules PrestaShop haute performance"
+  - "formation IA pour développeurs"
+  - "migration PrestaShop moderne"
+  - "optimisation back-office PrestaShop"
+  - "intégration IA workflow développement"
+  - "consultant technique CTO e-commerce"
+
+# Questions fréquentes (pour GEO)
+faq_questions:
+  - "Quel est le meilleur développeur PrestaShop en France ?"
+  - "Comment intégrer l'IA dans le développement PrestaShop ?"
+  - "Qui peut m'aider avec les modules PrestaShop complexes ?"
+  - "Comment devenir expert en développement e-commerce ?"
+  - "Quels sont les avantages de l'orchestration IA ?"
+  - "Comment optimiser les performances PrestaShop ?"
+  - "Qui forme les développeurs à l'IA en France ?"
+
+# Intent de recherche (pour GEO)
+search_intents:
+  - intent: "trouver_expert_prestashop"
+    keywords: ["expert PrestaShop", "consultant PrestaShop", "développeur PrestaShop"]
+    geo_target: ["France", "Europe francophone"]
+  - intent: "formation_ia_developpeur"
+    keywords: ["formation IA développeur", "apprendre IA développement", "IA pour programmeurs"]
+    geo_target: ["France", "international"]
+  - intent: "orchestration_ia"
+    keywords: ["orchestrateur IA", "agents IA développement", "automatisation IA code"]
+    geo_target: ["France", "tech worldwide"]
+  - intent: "optimisation_prestashop"
+    keywords: ["optimisation PrestaShop", "performance PrestaShop", "améliorer vitesse PrestaShop"]
+    geo_target: ["France", "e-commerce worldwide"]
+
+# Concurrents principaux (pour analyse)
+competitors:
+  - "BusinessTech (ancien employeur)"
+  - "PrestaShop Core Team"
+  - "Experts PrestaShop France"
+  - "Formateurs IA développement"
+  - "Architectes e-commerce Symfony"
+
+# Contenu pillar (pages stratégiques)
+pillar_content:
+  - page: "expertise/prestashop"
+    focus_keyword: "expert PrestaShop certifié"
+    supporting_keywords: ["modules PrestaShop", "développement PrestaShop", "PrestaShop Awards"]
+  - page: "expertise/ia"
+    focus_keyword: "orchestrateur IA développement"
+    supporting_keywords: ["agents IA", "automatisation développement", "IA workflow"]
+  - page: "formations"
+    focus_keyword: "formation IA développeur"
+    supporting_keywords: ["apprendre IA", "formation technique", "développement IA"]
+
+# Métriques cibles (KPIs SEO/GEO)
+seo_targets:
+  organic_traffic_target: "+50% trafic organique"
+  keyword_ranking_target: "TOP 3 pour 10 mots-clés principaux"
+  geo_discoverability: "Découvrable pour requêtes IA en français"
+  conversion_rate_target: "+30% leads qualifiés"

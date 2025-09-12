@@ -5,20 +5,20 @@ permalink: /expertise/
 description: "Découvrez l'expertise technique approfondie de Nicolas Dabène en PHP,
   E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 15 ans d'expérience
   et d'apprentissage continu."
-keywords: "expert php, consultant prestashop, orchestrateur ia, développeur fullstack,
-  leadership technique, expertise logicielle, modules prestashop"
+keywords: "expert php, consultant prestashop, orchestrateur ia, développeur fullstack, leadership technique, expertise logicielle, modules prestashop, expert PrestaShop certifié, développeur PHP senior, architecte e-commerce, intelligence artificielle développement, formation IA développeur, optimisation PrestaShop, modules haute performance"
 show_sidebar: false
-llm_summary: Découvrez l'expertise technique approfondie de Nicolas Dabène en 
-  PHP, E-commerce PrestaShop, IA, et développement FullStack, fruit de plus de 
-  15 ans d'expérience et d'apprentissage continu.
+llm_summary: Nicolas Dabène, expert reconnu avec 5 PrestaShop Awards, 15 ans d'expérience en développement PHP, et pionnier dans l'orchestration d'agents IA pour révolutionner l'efficacité de développement e-commerce.
 llm_topics:
-- expert php
-- consultant prestashop
-- orchestrateur ia
-- développeur fullstack
-- leadership technique
-- expertise logicielle
-- modules prestashop
+- expert PHP senior développeur
+- consultant PrestaShop certifié 5 Awards
+- orchestrateur IA intelligence artificielle
+- architecte e-commerce scalable PrestaShop
+- développeur FullStack Symfony expert
+- formateur IA développement technique
+- expert modules PrestaShop haute performance
+- optimisation back-office e-commerce
+- leadership technique CTO développement
+- migration PrestaShop architecture moderne
 ---
 <div class="container">
     <div class="expertise-grid">
