@@ -42,4 +42,245 @@ html, body {
 @import "components/_external-publications.scss";
 @import "components/_project-cards-modern.scss";
 
+/* SALES CTA BLOCK - Lemon Squeezy Enhanced Sales Block */
+.sales-cta-block {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dee2e6;
+  position: relative;
+  overflow: hidden;
+
+  .sales-cta-content {
+    position: relative;
+    z-index: 1;
+    color: #212529;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: #495057;
+    }
+  }
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .benefit-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-color: #4CAF50;
+    }
+
+    .benefit-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #4CAF50;
+    }
+  }
+}
+
+.free-notice {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+  .free-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    animation: bounce 2s infinite;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+
+    strong {
+      color: #4CAF50;
+      font-weight: 600;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-5px); }
+  60% { transform: translateY(-3px); }
+}
+
+.sales-stats {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .stat {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #495057;
+
+    &.highlight {
+      color: #4CAF50;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.urgency-banner {
+  background: linear-gradient(90deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
+  50% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5); }
+  100% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
+}
+
+.cta-button-wrapper {
+  margin-bottom: 1rem;
+  text-align: center;
+
+  .lemonsqueezy-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white !important;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+      background: linear-gradient(45deg, #66BB6A, #4CAF50);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .support-text {
+    color: #495057;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
+  }
+}
+
+.guarantee {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+
+  .guarantee-icon {
+    margin-right: 0.5rem;
+  }
+
+  small {
+    color: #495057;
+    font-weight: 500;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sales-cta-block {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem 0;
+
+    .sales-cta-content h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+
+    .benefit-item {
+      padding: 0.75rem;
+    }
+  }
+
+  .free-notice {
+    padding: 1rem;
+
+    .free-badge {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #495057;
+    }
+  }
+
+  .sales-stats {
+    padding: 1rem;
+  }
+
+  .cta-button-wrapper .lemonsqueezy-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .support-text {
+    font-size: 0.8rem;
+    color: #495057;
+  }
+}
+
 /* FAQ UNE PAR LIGNE - Rebuild 30-07-2025 21:05 - Layout vertical FAQ */ 
