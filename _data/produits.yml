@@ -1,4 +1,4 @@
--
+﻿-
   nom: "Chapitre 1 : L'Intelligence Artificielle pour Débutants"
   description: "Posez des bases solides en IA sans jargon ni prérequis techniques. Comprenez ce qu'est l'IA, comment elle fonctionne (dont le rôle des Transformers) et comment l'appliquer concrètement dans votre quotidien pro/perso."
   image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
@@ -206,3 +206,34 @@
     - "Mode d'emploi immédiat pour générer des images et les intégrer à vos contenus"
     - "Fiches outils détaillées : IA à connaître, astuces, limites, comparatifs"
     - "Méthode claire pour obtenir à coup sûr un résultat visuel cohérent, impactant et réutilisable"
+-
+  nom: "Coder à l'Ère des IA : Méthodes de Travail Concrètes pour Développeurs Junior et Senior"
+  description: "L'intelligence artificielle est en train de redéfinir en profondeur la manière dont nous concevons, développons et maintenons des logiciels. Avec 84% des développeurs utilisant ou planifiant d'utiliser des outils d'IA, cette révolution technologique n'est plus une option, mais une réalité qui nécessite une adaptation méthodologique rigoureuse."
+  image: "assets/images/produits/coder-era-ia.jpg"
+  lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d2b0e461-9a47-4f30-819c-621a73db08f8"
+  categorie: "Formation IA pour tous"
+  prix: "0€"
+  type: "formation"
+  format: "PDF & Podcast"
+  univers: "IA"
+  niveau: "Tous niveaux"
+  duree: "3h"
+  garantie: "14 jours"
+  active: true
+  last_update: "2025-09-18"
+  mots_cles: ["ia", "développement", "méthodes", "junior", "senior", "coder", "outils ia"]
+  resultats:
+    - "Maîtriser les méthodes de travail adaptées à l'ère des IA pour développeurs"
+    - "Intégrer efficacement les outils d'IA dans votre workflow quotidien"
+    - "Adapter vos pratiques de développement aux nouvelles réalités technologiques"
+    - "Développer une approche méthodologique rigoureuse face à l'IA"
+  programme:
+    - "L'impact de l'IA sur les pratiques de développement"
+    - "Méthodes concrètes d'intégration des IA dans le workflow développeur"
+    - "Adaptation des processus pour junior et senior"
+    - "Cas pratiques et études de cas réels"
+    - "Perspectives d'évolution et bonnes pratiques"
+  micro_extraits:
+    - "Méthodes de travail éprouvées pour intégrer l'IA dans votre quotidien de développeur"
+    - "Adaptation des pratiques pour tous niveaux d'expérience"
+    - "Approche méthodologique rigoureuse face aux révolutions technologiques"
