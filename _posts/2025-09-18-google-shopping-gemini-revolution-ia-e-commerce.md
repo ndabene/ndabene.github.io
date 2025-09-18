@@ -137,6 +137,10 @@ L'avenir du commerce en ligne se dessine aujourd'hui. Les marchands visionnaires
 
 **Votre boutique PrestaShop est-elle prête pour l'ère Gemini ?** La question n'est plus de savoir si ces technologies arriveront en France, mais quand. Et ce "quand" approche plus vite que prévu.
 
+Vous cherchez à connecter efficacement votre boutique **PrestaShop** à Google Shopping ?  
+Découvrez le [module officiel **Google Merchant Center Pro pour PrestaShop** développé par **BusinessTech**](https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html), 
+une référence incontournable pour booster votre visibilité et vos ventes en ligne.
+
 ---
 
 *Article publié le 18 septembre 2025 par Nicolas Dabène - Expert PrestaShop & IA avec 15+ ans d'expérience dans l'optimisation e-commerce*
