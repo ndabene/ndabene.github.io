@@ -1,7 +1,11 @@
 <ul class="main-nav-list">
     {% for item in site.data.navigation %}
         <li class="main-nav-item">
-            <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+            {% if item.external %}
+                <a href="{{ item.link }}" target="_blank" rel="noopener" class="nav-support-btn">{{ item.name }}</a>
+            {% else %}
+                <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="active"{% endif %}>{{ item.name }}</a>
+            {% endif %}
             {% if item.subitems %}
                 <ul class="sub-nav-list">
                     {% for subitem in item.subitems %}

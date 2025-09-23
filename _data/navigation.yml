@@ -4,9 +4,8 @@
   link: /skills/
 - name: "Formations"
   link: /boutique/
-- name: "Boutique"
-  link: /boutique/
 - name: "Blog"
   link: /blog/
-- name: "Contact"
-  link: /contact/
+- name: "Me soutenir"
+  link: "https://buymeacoffee.com/ndabene"
+  external: true

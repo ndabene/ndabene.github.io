@@ -283,4 +283,186 @@ html, body {
   }
 }
 
-/* FAQ UNE PAR LIGNE - Rebuild 30-07-2025 21:05 - Layout vertical FAQ */ 
+/* FAQ UNE PAR LIGNE - Rebuild 30-07-2025 21:05 - Layout vertical FAQ */
+
+/* Navigation Support Button */
+.nav-support-btn {
+  background: linear-gradient(45deg, #FFDD00, #FFC107) !important;
+  color: #000000 !important;
+  padding: 0.6rem 1.2rem !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(255, 221, 0, 0.3) !important;
+
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(255, 221, 0, 0.4) !important;
+    background: linear-gradient(45deg, #FFC107, #FFDD00) !important;
+  }
+
+  &:active {
+    transform: translateY(0) !important;
+  }
+}
+
+/* ========================================\n   ME SOUTENIR - Section Articles Blog\n   ======================================== */
+.support-section-post {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFDD00, #FFC107, #FFDD00);
+  }
+
+  .support-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+
+    .support-icon {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #FFDD00, #FFC107);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(255, 221, 0, 0.3);
+    }
+
+    .support-text {
+      flex: 1;
+
+      h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #212529;
+        line-height: 1.3;
+      }
+
+      p {
+        margin: 0;
+        color: #6c757d;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+    }
+
+    .support-button {
+      flex-shrink: 0;
+
+      .btn-support-post {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(45deg, #FFDD00, #FFC107);
+        color: #000000 !important;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(255, 221, 0, 0.3);
+        border: 2px solid transparent;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(255, 221, 0, 0.4);
+          background: linear-gradient(45deg, #FFC107, #FFDD00);
+          color: #000000 !important;
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design pour la section Me soutenir */
+@media (max-width: 768px) {
+  .support-section-post {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+
+    .support-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+
+      .support-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+      }
+
+      .support-text {
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+
+      .support-button {
+        .btn-support-post {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .support-section-post {
+    padding: 1rem;
+    margin: 1rem 0;
+
+    .support-content {
+      .support-text {
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+} 

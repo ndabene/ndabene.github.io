@@ -107,6 +107,19 @@ force_light_mode: true
 # Mobile-specific settings
 mobile_optimized: true
 critical_css_inline: true
+
+# Buy Me a Coffee Configuration
+buy_me_a_coffee:
+  enabled: true
+  slug: "ndabene"
+  button_text: "Offrez-moi un café"
+  messages:
+    blog: "Si cet article vous a inspiré ou aidé dans votre réflexion technique, un petit geste est toujours apprécié !"
+    project: "Vous avez apprécié cette expertise technique ? Un café virtuel pour soutenir la création de contenu ?"
+    generic: "Soutenez mon travail avec un café virtuel"
+  display_delay: 45 # secondes avant d'afficher
+  scroll_threshold: 60 # pourcentage de scroll avant d'afficher
+  session_timeout: 120 # minutes avant de pouvoir réafficher d
 cache_busting: true
 
 # Sitemap configuration
