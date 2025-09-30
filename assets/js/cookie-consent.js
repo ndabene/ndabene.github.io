@@ -106,6 +106,57 @@ class CookieConsent {
                     </div>
                     <p>Nécessaires au fonctionnement du site (navigation, sécurité).</p>
                 </div>
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h5>Cookies d'analyse</h5>
+                        <label class="toggle">
+                            <input type="checkbox" id="analytics-consent">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <p>Google Analytics pour comprendre l'utilisation du site. Par défaut, mesure anonyme sans cookie (Consent Mode). Cookies activés uniquement si vous acceptez.</p>
+                </div>
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h5>Cookies publicitaires</h5>
+                        <label class="toggle">
+                            <input type="checkbox" id="ad-consent">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <p>Google AdSense pour afficher des publicités personnalisées et mesurer leur efficacité. Les données sont utilisées pour cibler les annonces selon vos intérêts.</p>
+                    <div class="sub-consent" style="margin-top: 10px; margin-left: 20px;">
+                        <label class="toggle" style="font-size: 0.9em;">
+                            <input type="checkbox" id="ad-user-data-consent">
+                            <span class="toggle-slider"></span>
+                            Partage des données utilisateur
+                        </label>
+                        <p style="font-size: 0.85em; margin: 5px 0 0 0; color: #666;">Autorise le partage des données utilisateur avec des partenaires publicitaires.</p>
+                    </div>
+                    <div class="sub-consent" style="margin-top: 10px; margin-left: 20px;">
+                        <label class="toggle" style="font-size: 0.9em;">
+                            <input type="checkbox" id="ad-personalization-consent">
+                            <span class="toggle-slider"></span>
+                            Personnalisation des annonces
+                        </label>
+                        <p style="font-size: 0.85em; margin: 5px 0 0 0; color: #666;">Permet la personnalisation des annonces basée sur votre navigation.</p>
+                    </div>
+                </div>
+                <div class="cookie-settings-actions">
+                    <button id="cookie-save" class="btn-primary">Sauvegarder</button>
+                    <button id="cookie-cancel" class="btn-secondary">Annuler</button>
+                </div>
+            </div>
+            </div>
+            <div id="cookie-settings-panel" class="cookie-settings-panel" style="display: none;">
+                <h4>Personnaliser les cookies</h4>
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <h5>Cookies essentiels</h5>
+                        <span class="required">Obligatoire</span>
+                    </div>
+                    <p>Nécessaires au fonctionnement du site (navigation, sécurité).</p>
+                </div>
                     <div class="cookie-category">
                         <div class="cookie-category-header">
                             <h5>Cookies d'analyse</h5>
@@ -267,6 +318,9 @@ class CookieConsent {
         } else {
             this.disableGoogleAnalytics();
         }
+
+        // Gestion AdSense
+        this.manageAdSenseConsent(preferences);
     }
 
     loadGoogleAnalytics(preferences) {
@@ -372,6 +426,52 @@ class CookieConsent {
     deleteCookie(name) {
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    }
+
+    manageAdSenseConsent(preferences) {
+        // Vérifier si AdSense est déjà chargé
+        const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
+
+        if (preferences.ad || preferences.adUserData || preferences.adPersonalization) {
+            // Consentement donné pour au moins un type de publicité
+            if (!adSenseScript) {
+                this.loadAdSense();
+            }
+            // Le Consent Mode gère automatiquement l'état via gtag
+        } else {
+            // Pas de consentement publicitaire
+            if (adSenseScript) {
+                // Supprimer le script AdSense si chargé sans consentement
+                adSenseScript.remove();
+                console.log('AdSense script removed due to lack of consent');
+            }
+        }
+    }
+
+    loadAdSense() {
+        // Vérifier si le script n'est pas déjà présent
+        if (document.querySelector('script[src*="pagead2.googlesyndication.com"]')) {
+            return; // Déjà chargé
+        }
+
+        // Créer et insérer le script AdSense
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1445021827447908';
+        script.crossOrigin = 'anonymous';
+
+        // Trouver l'emplacement approprié (dans le head)
+        const head = document.head || document.getElementsByTagName('head')[0];
+        head.appendChild(script);
+
+        console.log('AdSense script loaded with consent');
+
+        // Attendre que AdSense soit chargé puis initialiser
+        script.onload = () => {
+            if (window.adsbygoogle) {
+                console.log('AdSense loaded successfully');
+            }
+        };
     }
 }
 
