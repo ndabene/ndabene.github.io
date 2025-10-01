@@ -32,7 +32,8 @@ llm_topics:
 
 <section class="blog-content-section">
     <div class="container">
-        {% if site.posts.size > 0 %}
+        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+        {% if published_posts.size > 0 %}
             <div class="blog-grid-news">
                 <div class="main-blog-content-news">
                     <!-- Filtres et tri -->
@@ -74,7 +75,8 @@ llm_topics:
                         </div>
                         
                         <div class="filter-results-info" id="filter-results-info">
-                            <span class="results-count">Tous les articles <span id="filtered-count">({{ site.posts.size }})</span></span>
+                            {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
+                            <span class="results-count">Tous les articles <span id="filtered-count">({{ published_posts_count }})</span></span>
                             <div class="active-filters" id="active-filters"></div>
                         </div>
 
@@ -87,7 +89,8 @@ llm_topics:
                     </div>
                     
                     <div class="post-list-news" id="blog-posts-container">
-                        {% include blog-post-loop.html posts=site.posts limit=15 %}
+                        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+                        {% include blog-post-loop.html posts=published_posts limit=15 %}
                     </div>
                     
                     <!-- Message quand aucun résultat -->
@@ -105,14 +108,15 @@ llm_topics:
 
                     <!-- Pagination -->
                     {% assign posts_per_page = 12 %}
-                    {% if site.posts.size > posts_per_page %}
+                    {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
+                    {% if published_posts_count > posts_per_page %}
                         <div class="pagination-container">
                             <div class="pagination">
                                 <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
                                 <div class="pagination-numbers" id="pagination-numbers"></div>
                                 <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
                             </div>
-                            <p class="pagination-info">Affichage <span id="showing-range">1-{{ posts_per_page }}</span> sur <span id="total-posts">{{ site.posts.size }}</span> articles</p>
+                            <p class="pagination-info">Affichage <span id="showing-range">1-{{ posts_per_page }}</span> sur <span id="total-posts">{{ published_posts_count }}</span> articles</p>
                         </div>
                     {% endif %}
 
@@ -160,7 +164,8 @@ llm_topics:
                     <div class="sidebar-widget-compact">
                         <h4>Articles récents</h4>
                         <div class="recent-posts-compact">
-                            {% for post in site.posts limit: 5 %}
+                            {% assign recent_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+                            {% for post in recent_posts limit: 5 %}
                                 <article class="recent-post-compact">
                                     {% if post.image %}
                                         <div class="recent-thumb-mini">
@@ -179,9 +184,10 @@ llm_topics:
                     <div class="sidebar-widget-compact">
                         <h4>Catégories</h4>
                         <div class="categories-compact">
-                            {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+                            {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
-                                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+                                {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
                                 <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
                                     {{ category }} <span>({{ category_posts.size }})</span>
                                 </a>
@@ -189,17 +195,18 @@ llm_topics:
                         </div>
                     </div>
 
-                    
+
                     {% if site.data.series %}
+                        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
                         {% assign has_series_with_posts = false %}
                         {% for series in site.data.series %}
-                            {% assign series_posts = site.posts | where: "series", series[0] %}
+                            {% assign series_posts = published_posts | where: "series", series[0] %}
                             {% if series_posts.size > 0 %}
                                 {% assign has_series_with_posts = true %}
                                 {% break %}
                             {% endif %}
                         {% endfor %}
-                        
+
                         {% if has_series_with_posts %}
                         <div class="sidebar-widget-compact">
                             <h4>Séries d'articles</h4>
@@ -207,7 +214,7 @@ llm_topics:
                                 {% for series_entry in site.data.series %}
                                     {% assign series_key = series_entry[0] %}
                                     {% assign series_data = series_entry[1] %}
-                                    {% assign series_posts = site.posts | where: "series", series_key %}
+                                    {% assign series_posts = published_posts | where: "series", series_key %}
                                     {% if series_posts.size > 0 %}
                                         <a href="/series/{{ series_key | slugify }}.html" class="series-link-compact">
                                             {{ series_key }} <span>({{ series_posts.size }})</span>
