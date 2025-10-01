@@ -25,7 +25,7 @@ llm_topics:
         </nav>
         <div class="hero-content">
             <h1>Blog Technique & E-commerce</h1>
-            <p class="section-description">Partage de connaissances, retours d'expérience et articles techniques sur PHP, l'e-commerce, l'IA et les meilleures pratiques en ingénierie logicielle.</p>
+            <p class="section-description">Explorez des articles techniques approfondis sur PHP, PrestaShop et l'e-commerce, découvrez les dernières innovations en intelligence artificielle, et maîtrisez les meilleures pratiques en ingénierie logicielle pour booster vos projets digitaux.</p>
         </div>
     </div>
 </section>
@@ -72,16 +72,16 @@ llm_topics:
                     <div class="blog-filters-container">
                         <div class="blog-filters-header">
                             <h2 class="section-title">Articles du blog</h2>
-                            <div class="view-toggle">
-                                <button id="view-list" class="view-btn active" title="Vue liste">
-                                    <i class="fas fa-list"></i>
-                                </button>
-                                <button id="view-grid" class="view-btn" title="Vue grille">
-                                    <i class="fas fa-th"></i>
-                                </button>
-                            </div>
+                            <button id="toggle-filters" class="toggle-filters-btn">
+                                <i class="fas fa-filter"></i>
+                                <span>Filtres</span>
+                                <i class="fas fa-chevron-down chevron-icon"></i>
+                            </button>
                         </div>
                         
+                        <!-- Zone des filtres (masquée par défaut) -->
+                        <div id="filters-content" class="filters-content" style="display: none;">
+
                         <!-- Barre de recherche moderne -->
                         <div class="blog-search-bar">
                             <div class="search-input-wrapper">
@@ -98,7 +98,8 @@ llm_topics:
                             <button class="category-pill active" data-category="">
                                 <i class="fas fa-home"></i> Tous les articles
                             </button>
-                            {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                            {% assign published_posts_for_categories = site.posts | where_exp: "post", "post.date <= site.time" %}
+                            {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 <button class="category-pill" data-category="{{ category }}">
                                     {{ category }}
@@ -124,7 +125,9 @@ llm_topics:
                                 </button>
                             </div>
                         </div>
-                        
+
+                        </div><!-- Fin filters-content -->
+
                         <div class="filter-results-info" id="filter-results-info">
                             {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
                             <span class="results-count">Tous les articles <span id="filtered-count">({{ published_posts_count }})</span></span>
@@ -140,8 +143,14 @@ llm_topics:
                     </div>
                     
                     <div class="post-list-news" id="blog-posts-container">
-                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: 4 %}
-                        {% include blog-post-loop.html posts=published_posts_list limit=15 %}
+                        {% comment %}Pagination avec paramètre page{% endcomment %}
+                        {% assign page_param = page.url | split: '?page=' | last | default: '1' %}
+                        {% assign current_page = page_param | times: 1 | default: 1 %}
+                        {% assign posts_per_page = 6 %}
+                        {% assign offset_calc = current_page | minus: 1 | times: posts_per_page | plus: 4 %}
+
+                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: offset_calc %}
+                        {% include blog-post-loop.html posts=published_posts_list limit=6 %}
                     </div>
                     
                     <!-- Message quand aucun résultat -->
@@ -157,57 +166,20 @@ llm_topics:
                     <!-- Données des futurs posts pour le mode admin -->
                     {% include future-posts-data.html %}
 
-                    <!-- Pagination -->
-                    {% assign posts_per_page = 12 %}
+                    <!-- Pagination simplifiée sans JS externe -->
+                    {% assign posts_per_page = 6 %}
                     {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
-                    {% if published_posts_count > posts_per_page %}
+                    {% assign remaining_posts = published_posts_count | minus: 4 %}
+                    {% if remaining_posts > posts_per_page %}
                         <div class="pagination-container">
                             <div class="pagination">
-                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
-                                <div class="pagination-numbers" id="pagination-numbers"></div>
-                                <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
+                                <button id="prev-page-simple" class="pagination-btn" disabled>&laquo; Précédent</button>
+                                <span class="pagination-info">Page <span id="current-page">1</span> / <span id="total-pages">{{ remaining_posts | divided_by: posts_per_page | plus: 1 }}</span></span>
+                                <button id="next-page-simple" class="pagination-btn">Suivant &raquo;</button>
                             </div>
-                            <p class="pagination-info">Affichage <span id="showing-range">1-{{ posts_per_page }}</span> sur <span id="total-posts">{{ published_posts_count }}</span> articles</p>
                         </div>
                     {% endif %}
 
-                    <!-- PUBLICATIONS EXTERNES - Intégrées dans le layout principal -->
-                    <section class="external-publications-section">
-                        <div class="container">
-                            <h2 class="section-title">Publications Externes</h2>
-                            <div class="external-publications-grid">
-                                {% assign shuffled_external_publications = site.data.publications | shuffle %}
-                                {% for publication in shuffled_external_publications limit: 8 %}
-                                <div class="external-publication-card">
-                                    <div class="publication-card-header">
-                                        <div class="publication-icon">
-                                            <i class="fas fa-newspaper"></i>
-                                        </div>
-                                        <div class="publication-meta">
-                                            <span>{{ publication.category | default: 'Article technique' }}</span>
-                                        </div>
-                                    </div>
-                                    <div class="publication-card-content">
-                                        <h3 class="publication-title">
-                                            <a href="{{ publication.link }}" target="_blank">{{ publication.title }}</a>
-                                        </h3>
-                                        {% if publication.description %}
-                                        <p class="publication-description">{{ publication.description | truncate: 120 }}</p>
-                                        {% endif %}
-                                    </div>
-                                    <div class="publication-card-footer">
-                                        <a href="{{ publication.link }}" class="read-more-btn" target="_blank">Lire l'article</a>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                            <div class="view-all-section" style="text-align: center; margin-top: 2rem;">
-                                <a href="/publications/" class="btn btn--primary">
-                                    Voir toutes les publications
-                                </a>
-                            </div>
-                        </div>
-                    </section>
                 </div>
 
                 <!-- Sidebar -->
@@ -361,11 +333,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exécuter au chargement
     renderRandomFeaturedArticles();
 
-// Filtrage des articles et vue liste/grille - Version Portail Presse
-    const postsContainer = document.getElementById('blog-posts-container');
-    if (postsContainer) {
-        postsContainer.classList.remove('grid-view');
+    // Toggle filtres
+    const toggleFiltersBtn = document.getElementById('toggle-filters');
+    const filtersContent = document.getElementById('filters-content');
+
+    if (toggleFiltersBtn && filtersContent) {
+        toggleFiltersBtn.addEventListener('click', function() {
+            const isVisible = filtersContent.style.display !== 'none';
+
+            if (isVisible) {
+                filtersContent.style.display = 'none';
+                this.classList.remove('active');
+            } else {
+                filtersContent.style.display = 'block';
+                this.classList.add('active');
+            }
+        });
     }
+
+// Filtrage des articles - Version Portail Presse (Mode Grille uniquement)
+    const postsContainer = document.getElementById('blog-posts-container');
+    if (!postsContainer) return;
+
+    // Forcer le mode grille
+    postsContainer.classList.add('grid-view');
 
     // Récupération des éléments DOM
     const searchInput = document.getElementById('search-input');
@@ -410,19 +401,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 300);
     
-    // Appliquer des styles spécifiques pour le mode liste
-    function applyListStyles() {
-        const wrappers = postsContainer.querySelectorAll('.post-preview-wrapper');
-        wrappers.forEach((wrapper, index) => {
-            wrapper.style.borderBottom = index < wrappers.length - 1 ? '1px solid #e2e8f0' : 'none';
-        });
-    }
-    
-    // Appliquer les styles de liste dès le chargement
-    setTimeout(applyListStyles, 100);
+    // Mode grille permanent
 
-    // Sélecteurs de catégories dans la sidebar (déjà déclaré plus haut)
-    
     // Fonction pour appliquer les filtres
     function applyFilters() {
         // Récupérer tous les articles
@@ -485,11 +465,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Appliquer le tri
         sortPosts(currentSort);
-
-        // S'assurer que les styles spécifiques au mode liste sont appliqués
-        if (!postsContainer.classList.contains('grid-view')) {
-            applyListStyles();
-        }
     }
     
     // Fonction pour ajouter un filtre actif
@@ -667,30 +642,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewListBtn = document.getElementById('view-list');
     const viewGridBtn = document.getElementById('view-grid');
     
-    if (viewListBtn) {
-        viewListBtn.addEventListener('click', function() {
-            postsContainer.classList.remove('grid-view');
-            viewListBtn.classList.add('active');
-            viewGridBtn.classList.remove('active');
-            
-            // Appliquer des styles spécifiques pour le mode liste
-            applyListStyles();
-        });
-    }
-    
-    if (viewGridBtn) {
-        viewGridBtn.addEventListener('click', function() {
-            postsContainer.classList.add('grid-view');
-            viewGridBtn.classList.add('active');
-            viewListBtn.classList.remove('active');
-            
-            // Réinitialiser les styles spécifiques au mode liste
-            const wrappers = postsContainer.querySelectorAll('.post-preview-wrapper');
-            wrappers.forEach(wrapper => {
-                wrapper.style.borderBottom = '';
-            });
-        });
-    }
+    // Mode grille permanent - boutons supprimés
     
     // Vérifier si des posts sont visibles
     function checkVisiblePosts() {
@@ -710,5 +662,48 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
+<!-- Pagination simple inline -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-page-simple');
+    const nextBtn = document.getElementById('next-page-simple');
+    const currentPageSpan = document.getElementById('current-page');
+    const totalPagesSpan = document.getElementById('total-pages');
+    const blogContent = document.querySelector('.blog-filters-container');
+
+    if (!prevBtn || !nextBtn) return;
+
+    const totalPages = parseInt(totalPagesSpan.textContent);
+
+    // Lire page actuelle depuis URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = parseInt(urlParams.get('page')) || 1;
+
+    // Si on est sur une page > 1, scroller vers "Articles du blog"
+    if (currentPage > 1 && blogContent) {
+        setTimeout(function() {
+            blogContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
+
+    // Mettre à jour l'affichage
+    currentPageSpan.textContent = currentPage;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage >= totalPages;
+
+    // Navigation
+    prevBtn.addEventListener('click', function() {
+        if (currentPage > 1) {
+            window.location.href = '/blog/?page=' + (currentPage - 1);
+        }
+    });
+
+    nextBtn.addEventListener('click', function() {
+        if (currentPage < totalPages) {
+            window.location.href = '/blog/?page=' + (currentPage + 1);
+        }
+    });
+});
+</script>
+
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>

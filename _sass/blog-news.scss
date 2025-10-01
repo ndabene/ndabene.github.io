@@ -650,13 +650,13 @@ $tag-hover-text: #fff;
 
   .blog-grid-news {
     display: grid !important;
-    grid-template-columns: 4fr 1fr !important; // 80% pour contenu, 20% pour sidebar
+    grid-template-columns: repeat(3, 1fr) !important; // 3 colonnes égales (comme les featured)
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    
+
     @media (max-width: 968px) {
       grid-template-columns: 1fr !important;
       gap: 1.5rem;
@@ -667,9 +667,9 @@ $tag-hover-text: #fff;
   .page-blog .blog-grid-news,
   body.page-blog .blog-grid-news {
     display: grid !important;
-    grid-template-columns: 4fr 1fr !important;
+    grid-template-columns: repeat(3, 1fr) !important; // 3 colonnes égales
     gap: 2rem !important;
-    
+
     @media (max-width: 968px) {
       grid-template-columns: 1fr !important;
     }
@@ -905,6 +905,7 @@ $tag-hover-text: #fff;
     overflow: hidden;
     width: 100% !important;
     max-width: none !important;
+    grid-column: span 2; // Prend 2 colonnes sur 3
   }
 
   //================================================
@@ -922,13 +923,53 @@ $tag-hover-text: #fff;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    
+    padding: 1.5rem;
+    background: white;
+    border-bottom: 1px solid $news-border;
+
     .section-title {
       font-size: 1.5rem;
       margin: 0;
       font-weight: 700;
       color: $news-primary;
     }
+
+    .toggle-filters-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+
+      .chevron-icon {
+        transition: transform 0.3s ease;
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+      }
+
+      &.active .chevron-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .filters-content {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0 1.5rem;
   }
 
   .blog-filters-compact {
@@ -1694,7 +1735,8 @@ $tag-hover-text: #fff;
     flex-direction: column;
     gap: 1.5rem;
     width: 100% !important;
-    max-width: 300px !important;
+    max-width: none !important; // Prend 1 colonne = largeur article featured
+    grid-column: span 1;
     
     .sidebar-widget-compact {
       background: white;
@@ -1712,6 +1754,95 @@ $tag-hover-text: #fff;
         letter-spacing: 0.5px;
         padding-bottom: 0.5rem;
         border-bottom: 2px solid $news-accent;
+      }
+    }
+  }
+
+  // Widget Publication Externe
+  .sidebar-publication-widget {
+    .external-publication-card {
+      .external-pub-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .external-pub-thumb {
+        width: 100%;
+        height: 100px;
+        border-radius: 6px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .external-pub-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .external-pub-source {
+        font-size: 0.7rem;
+        color: $news-secondary;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .external-pub-title {
+        margin: 0;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.3;
+
+        a {
+          color: $news-primary;
+          text-decoration: none;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $news-gold;
+          }
+        }
+      }
+
+      .external-pub-description {
+        font-size: 0.75rem;
+        color: $news-secondary;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .external-pub-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 0.7rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid $news-border;
+
+        .external-pub-link {
+          color: $news-accent;
+          text-decoration: none;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: $news-gold;
+          }
+
+          i {
+            font-size: 0.65rem;
+          }
+        }
       }
     }
   }
