@@ -209,13 +209,14 @@
     // Mobile menu toggle - Fixed with debug
     const mobileToggle = document.getElementById('mobile-menu-toggle');
     const mobileNav = document.getElementById('mobile-nav-panel');
-    
-    console.log('Mobile elements found:', {
-      toggle: !!mobileToggle,
-      nav: !!mobileNav,
-      screenWidth: window.innerWidth
-    });
-    
+
+    // Debug logs supprimés pour production
+    // console.log('Mobile elements found:', {
+    //   toggle: !!mobileToggle,
+    //   nav: !!mobileNav,
+    //   screenWidth: window.innerWidth
+    // });
+
     if (mobileToggle && mobileNav) {
       mobileToggle.addEventListener('click', (e) => {
         e.preventDefault();

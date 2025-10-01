@@ -1,0 +1,57 @@
+{% comment %}
+Hero Article - Article principal en format immersif pour portail de presse
+Usage: {% include hero-article.html post=site.posts.first %}
+{% endcomment %}
+
+{% assign hero_post = include.post %}
+
+{% if hero_post %}
+<article class="hero-article">
+    <a href="{{ hero_post.url | relative_url }}" class="hero-article-link">
+        <div class="hero-article-image">
+            {% if hero_post.image %}
+                <img src="{{ hero_post.image }}" alt="{{ hero_post.title }}" loading="eager">
+            {% else %}
+                <img src="/assets/images/default-hero.jpg" alt="{{ hero_post.title }}" loading="eager">
+            {% endif %}
+            <div class="hero-article-overlay"></div>
+        </div>
+
+        <div class="hero-article-content">
+            <div class="hero-article-meta">
+                {% if hero_post.categories.size > 0 %}
+                    <span class="hero-category-badge">{{ hero_post.categories | first }}</span>
+                {% endif %}
+
+                <div class="hero-meta-items">
+                    <time datetime="{{ hero_post.date | date_to_xmlschema }}">
+                        <i class="fas fa-calendar-alt"></i>
+                        {% include date-fr.html date=hero_post.date %}
+                    </time>
+
+                    {% if hero_post.content %}
+                        {% assign words = hero_post.content | strip_html | number_of_words %}
+                        {% assign read_time = words | divided_by: 200 %}
+                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                        <span class="reading-time">
+                            <i class="fas fa-clock"></i>
+                            {{ read_time }} min
+                        </span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <h2 class="hero-article-title">{{ hero_post.title }}</h2>
+
+            {% if hero_post.excerpt %}
+                <p class="hero-article-excerpt">{{ hero_post.excerpt | strip_html | truncate: 180 }}</p>
+            {% endif %}
+
+            <div class="hero-article-cta">
+                <span class="cta-text">Lire l'article</span>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </a>
+</article>
+{% endif %}

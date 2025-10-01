@@ -1,0 +1,43 @@
+{% comment %}
+Widget Random External Publication - Affiche une publication externe aléatoire
+{% endcomment %}
+
+{% if site.data.publications and site.data.publications.size > 0 %}
+    {% assign shuffled_publications = site.data.publications | sample: 1 %}
+    {% assign random_pub = shuffled_publications | first %}
+
+    <div class="sidebar-widget-compact sidebar-publication-widget">
+        <h4><i class="fas fa-external-link-alt"></i> Publication externe</h4>
+        <div class="external-publication-card">
+            <article class="external-pub-item">
+                {% if random_pub.image %}
+                    <div class="external-pub-thumb">
+                        <img src="{{ random_pub.image | relative_url }}" alt="{{ random_pub.title }}" loading="lazy">
+                    </div>
+                {% endif %}
+
+                <div class="external-pub-content">
+                    {% if random_pub.category %}
+                        <span class="external-pub-source">{{ random_pub.category }}</span>
+                    {% endif %}
+
+                    <h5 class="external-pub-title">
+                        <a href="{{ random_pub.link }}" target="_blank" rel="noopener noreferrer">
+                            {{ random_pub.title }}
+                        </a>
+                    </h5>
+
+                    {% if random_pub.description %}
+                        <p class="external-pub-description">{{ random_pub.description | truncate: 100 }}</p>
+                    {% endif %}
+
+                    <div class="external-pub-footer">
+                        <a href="{{ random_pub.link }}" class="external-pub-link" target="_blank" rel="noopener noreferrer">
+                            Lire l'article <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,72 @@
+{% comment %}
+Featured Articles Grid - Grille d'articles secondaires mise en avant
+Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
+{% endcomment %}
+
+{% assign featured_posts = include.posts %}
+{% assign featured_count = include.count | default: 3 %}
+
+{% if featured_posts.size > 0 %}
+<section class="featured-articles-grid">
+    {% for post in featured_posts limit: featured_count %}
+        <article class="featured-article-card">
+            <a href="{{ post.url | relative_url }}" class="featured-card-link">
+                <div class="featured-card-image">
+                    {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                    {% else %}
+                        <img src="/assets/images/default-post.jpg" alt="{{ post.title }}" loading="lazy">
+                    {% endif %}
+
+                    {% if post.categories.size > 0 %}
+                        <span class="featured-category-badge" data-category="{{ post.categories | first | slugify }}">
+                            {{ post.categories | first }}
+                        </span>
+                    {% endif %}
+
+                    <div class="featured-card-overlay"></div>
+                </div>
+
+                <div class="featured-card-content">
+                    <div class="featured-card-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            <i class="fas fa-calendar-alt"></i>
+                            {% include date-fr.html date=post.date %}
+                        </time>
+
+                        {% if post.content %}
+                            {% assign words = post.content | strip_html | number_of_words %}
+                            {% assign read_time = words | divided_by: 200 %}
+                            {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                {{ read_time }} min
+                            </span>
+                        {% endif %}
+                    </div>
+
+                    <h3 class="featured-card-title">{{ post.title }}</h3>
+
+                    {% if post.excerpt %}
+                        <p class="featured-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                    {% endif %}
+
+                    <div class="featured-card-footer">
+                        {% if post.tags.size > 0 %}
+                            <div class="featured-tags">
+                                {% for tag in post.tags limit: 2 %}
+                                    <span class="tag-pill">#{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <span class="featured-read-more">
+                            Lire <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </article>
+    {% endfor %}
+</section>
+{% endif %}

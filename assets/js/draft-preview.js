@@ -204,9 +204,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Debug helper pour les développeurs
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    console.log('🔧 Draft Preview System loaded');
-    console.log('💡 Utilisez ?preview=true pour voir les drafts');
-    console.log('🔑 Utilisez ?preview_key=xxx pour les drafts sécurisés');
-}
+// Debug helper pour les développeurs - logs supprimés pour production
+// if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+//     console.log('🔧 Draft Preview System loaded');
+//     console.log('💡 Utilisez ?preview=true pour voir les drafts');
+//     console.log('🔑 Utilisez ?preview_key=xxx pour les drafts sécurisés');
+// }
