@@ -198,6 +198,7 @@ $linkedin-color: #0077B5;
 
   &:hover {
     background: darken($primary-color, 10%);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba($primary-color, 0.3);
   }
@@ -209,6 +210,7 @@ $linkedin-color: #0077B5;
 
   &:hover {
     background: darken($secondary-color, 10%);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba($secondary-color, 0.3);
   }
@@ -220,6 +222,7 @@ $linkedin-color: #0077B5;
 
   &:hover {
     background: darken($linkedin-color, 10%);
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba($linkedin-color, 0.3);
   }
@@ -320,13 +323,8 @@ $linkedin-color: #0077B5;
   }
 
   &:hover {
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12), 0 10px 30px rgba($primary-color, 0.1);
-    transform: translateY(-8px) scale(1.01);
-    border-color: transparent;
-
-    &::before {
-      opacity: 1;
-    }
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -534,10 +532,10 @@ $linkedin-color: #0077B5;
 
 .competences-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -771,8 +769,9 @@ $linkedin-color: #0077B5;
   }
 
   &:hover {
+    background: $primary-color;
     border-color: $primary-color;
-    color: $primary-color;
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba($primary-color, 0.15);
 

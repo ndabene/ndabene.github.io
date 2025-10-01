@@ -26,29 +26,55 @@ modules_prestashop:
       title: "GEO Suite"
       description: "Optimisez vos données structurées pour le SEO local et international"
       image: "assets/images/modules/geo-generative-engine-optimization.png"
-      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html"
+      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["SEO", "IA"]
+      category: "Module"
     - id: "google-merchant-center-pro"
       title: "Google Merchant Center Pro"
       description: "Intégrez Google Shopping pour augmenter vos ventes"
       image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
-      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
-      tags: ["Google Shopping", "Flux produits"]
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Shopping", "Flux"]
+      category: "Module"
     - id: "google-pay"
       title: "Google Pay"
       description: "Paiement rapide et sécurisé pour améliorer la conversion"
       image: "assets/images/modules/google-pay-for-prestashop.png"
-      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["Paiement", "Conversion"]
-    - id: "facebook-dynamic-ads"
-      title: "Facebook Dynamic Ads + Pixel PRO"
-      description: "Ciblez vos clients avec des publicités dynamiques sur Facebook"
-      image: "assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
-      link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
-      tags: ["Marketing", "Facebook"]
+      category: "Module"
   cta:
     text: "Découvrir tous mes modules"
-    url: "https://www.businesstech.fr/"
+    url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"
+
+formations_ia_featured:
+  title: "Mes Formations IA"
+  subtitle: "Devenez autonome avec l'IA en quelques heures"
+  featured:
+    - id: "starter-pack-ia"
+      title: "Starter Pack IA 4-en-1"
+      description: "Le parcours complet de débutant à autonome : fondamentaux, impact écologique, prompts, création visuelle"
+      image: "assets/images/produits/pack-ia.jpg"
+      link: "/boutique/#starter-pack-ia"
+      tags: ["Pack complet", "4 chapitres"]
+      category: "Formation"
+    - id: "chapitre-1-ia-debutants"
+      title: "Chapitre 1 : IA pour Débutants"
+      description: "Posez des bases solides en IA sans jargon. Comprenez les Transformers et appliquez l'IA au quotidien"
+      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
+      link: "/boutique/#chapitre-1"
+      tags: ["Débutant", "2h30"]
+      category: "Formation"
+    - id: "chapitre-3-art-du-prompt"
+      title: "Chapitre 3 : L'Art du Prompt"
+      description: "Maîtrisez la méthode C.L.A.I.R et 7 types de prompts pour des résultats concrets"
+      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
+      link: "/boutique/#chapitre-3"
+      tags: ["Avancé", "3h"]
+      category: "Formation"
+  cta:
+    text: "Voir toutes mes formations"
+    url: "/boutique/"
 
 formations_ia:
   title: "Mes Formations IA"
@@ -88,18 +114,9 @@ competences:
     - title: "PrestaShop 8/9"
       icon: "fas fa-shopping-cart"
       description: "Modules sur-mesure, optimisation performances, compatibilité long terme"
-    - title: "SEO e-commerce"
-      icon: "fas fa-search"
-      description: "Trafic organique boosté grâce à l'IA (Generative Engine Optimization)"
-    - title: "Flux produits"
-      icon: "fas fa-sync-alt"
-      description: "Intégrations stables pour Google Merchant Center et marketplaces"
     - title: "IA appliquée"
       icon: "fas fa-brain"
       description: "Génération de contenus, automatisation, copilotes e-commerce"
-    - title: "Performance"
-      icon: "fas fa-tachometer-alt"
-      description: "Temps de réponse réduits, bases de données optimisées"
     - title: "Fiabilité"
       icon: "fas fa-shield-alt"
       description: "Code maintenable, tests, monitoring, scalabilité long terme"

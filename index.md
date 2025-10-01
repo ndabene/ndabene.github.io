@@ -19,9 +19,9 @@ llm_topics:
 
 {% include home-commerce/about-short.html %}
 
-{% include home-commerce/modules-prestashop-grid.html %}
+{% include home-commerce/modules-featured.html %}
 
-{% include home-commerce/formations-ia-grid.html %}
+{% include home-commerce/modules-prestashop-grid.html %}
 
 {% include home-commerce/competences-grid.html %}
 
