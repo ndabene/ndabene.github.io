@@ -1,0 +1,58 @@
+<!-- FORMATIONS IA FEATURED -->
+<section class="section-commerce formations-ia-featured" id="formations-ia">
+    <div class="container">
+        <div class="section-header-clean scroll-reveal">
+            <h2 class="section-title-clean">{{ site.data.home-commerce.formations_ia_featured.title }}</h2>
+            <p class="section-subtitle-clean">{{ site.data.home-commerce.formations_ia_featured.subtitle }}</p>
+        </div>
+
+        <div class="featured-articles-grid">
+            {% for formation in site.data.home-commerce.formations_ia_featured.featured %}
+            <article class="featured-article-card">
+                <a href="{{ formation.link }}" class="featured-card-link">
+                    <div class="featured-card-image">
+                        <img src="/{{ formation.image }}" alt="{{ formation.title }}" loading="lazy">
+
+                        {% if formation.category %}
+                            <span class="featured-category-badge">
+                                {{ formation.category }}
+                            </span>
+                        {% endif %}
+
+                        <div class="featured-card-overlay"></div>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3 class="featured-card-title">{{ formation.title }}</h3>
+
+                        <p class="featured-card-excerpt">{{ formation.description }}</p>
+
+                        <div class="featured-card-footer">
+                            {% if formation.tags %}
+                                <div class="featured-tags">
+                                    {% for tag in formation.tags %}
+                                        <span class="tag-pill">#{{ tag }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+
+                            <span class="featured-read-more">
+                                Voir <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+
+        <div class="view-all-section">
+            <a href="{{ site.data.home-commerce.formations_ia_featured.cta.url }}" class="view-all-btn">
+                <span class="btn-text">{{ site.data.home-commerce.formations_ia_featured.cta.text }}</span>
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>

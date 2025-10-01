@@ -1,0 +1,65 @@
+<!-- FORMATIONS IA GRID -->
+<section class="section-commerce formations-ia" id="formations-ia">
+    <div class="container-commerce">
+        <div class="section-header-commerce">
+            <h2 class="section-title-commerce">{{ site.data.home-commerce.formations_ia.title }}</h2>
+            <p class="section-subtitle-commerce">{{ site.data.home-commerce.formations_ia.subtitle }}</p>
+        </div>
+
+        <div class="products-grid products-grid-formations">
+            {% for formation in site.data.home-commerce.formations_ia.featured %}
+            <article class="product-card product-card-formation">
+                <a href="{{ formation.link }}" class="product-card-link">
+                    <!-- Badge optionnel (économie, etc.) -->
+                    {% if formation.badge %}
+                    <div class="product-badge">{{ formation.badge }}</div>
+                    {% endif %}
+
+                    <!-- Image de la formation -->
+                    <div class="product-card-image">
+                        <img src="/{{ formation.image }}" alt="{{ formation.title }}" loading="lazy">
+                    </div>
+
+                    <!-- Contenu -->
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">{{ formation.title }}</h3>
+                        <p class="product-card-description">{{ formation.description }}</p>
+
+                        <!-- Méta-informations formation -->
+                        <div class="formation-meta">
+                            {% if formation.format %}
+                            <span class="formation-meta-item">
+                                <i class="fas fa-file-pdf"></i>
+                                {{ formation.format }}
+                            </span>
+                            {% endif %}
+                            {% if formation.duree %}
+                            <span class="formation-meta-item">
+                                <i class="fas fa-clock"></i>
+                                {{ formation.duree }}
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Footer avec CTA -->
+                    <div class="product-card-footer">
+                        <span class="product-cta">
+                            En savoir plus
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- CTA global -->
+        <div class="section-cta-commerce">
+            <a href="{{ site.data.home-commerce.formations_ia.cta.url }}" class="btn-commerce btn-commerce-outline">
+                {{ site.data.home-commerce.formations_ia.cta.text }}
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>

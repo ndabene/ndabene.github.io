@@ -1,0 +1,20 @@
+<!-- COMPÉTENCES GRID -->
+<section class="section-commerce competences" id="competences">
+    <div class="container-commerce">
+        <div class="section-header-commerce">
+            <h2 class="section-title-commerce">{{ site.data.home-commerce.competences.title }}</h2>
+        </div>
+
+        <div class="competences-grid">
+            {% for competence in site.data.home-commerce.competences.items %}
+            <div class="competence-card">
+                <div class="competence-icon">
+                    <i class="{{ competence.icon }}"></i>
+                </div>
+                <h3 class="competence-title">{{ competence.title }}</h3>
+                <p class="competence-description">{{ competence.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

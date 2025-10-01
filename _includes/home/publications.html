@@ -6,41 +6,68 @@
             <p class="section-subtitle-clean">Sélection de mes derniers articles techniques</p>
         </div>
 
-        <div class="approach-grid stagger-animation">
+        <div class="featured-articles-grid">
             {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
             {% assign random_posts = published_posts | sample: 3 %}
             {% for post in random_posts %}
-            <div class="approach-card animate-item publication-approach-card">
-                <div class="approach-icon publication-approach-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14,2 14,8 20,8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10,9 9,9 8,9"/>
-                    </svg>
-                </div>
-                <h3 class="approach-title publication-approach-title">{{ post.title | truncate: 60 }}</h3>
-                <p class="approach-description">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+            <article class="featured-article-card">
+                <a href="{{ post.url | relative_url }}" class="featured-card-link">
+                    <div class="featured-card-image">
+                        {% if post.image %}
+                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                        {% else %}
+                            <img src="/assets/images/default-post.jpg" alt="{{ post.title }}" loading="lazy">
+                        {% endif %}
 
-                <div class="publication-approach-meta">
-                    {% if post.categories.size > 0 %}
-                        <span class="publication-approach-category">{{ post.categories | first }}</span>
-                    {% endif %}
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        {{ post.date | date: "%d %b %Y" }}
-                    </time>
-                </div>
+                        {% if post.categories.size > 0 %}
+                            <span class="featured-category-badge" data-category="{{ post.categories | first | slugify }}">
+                                {{ post.categories | first }}
+                            </span>
+                        {% endif %}
 
-                <div class="publication-approach-footer">
-                    <a href="{{ post.url | relative_url }}" class="publication-approach-link">
-                        <span>Lire l'article</span>
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                            <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+                        <div class="featured-card-overlay"></div>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <div class="featured-card-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">
+                                <i class="fas fa-calendar-alt"></i>
+                                {% include date-fr.html date=post.date %}
+                            </time>
+
+                            {% if post.content %}
+                                {% assign words = post.content | strip_html | number_of_words %}
+                                {% assign read_time = words | divided_by: 200 %}
+                                {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                                <span class="reading-time">
+                                    <i class="fas fa-clock"></i>
+                                    {{ read_time }} min
+                                </span>
+                            {% endif %}
+                        </div>
+
+                        <h3 class="featured-card-title">{{ post.title }}</h3>
+
+                        {% if post.excerpt %}
+                            <p class="featured-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                        {% endif %}
+
+                        <div class="featured-card-footer">
+                            {% if post.tags.size > 0 %}
+                                <div class="featured-tags">
+                                    {% for tag in post.tags limit: 2 %}
+                                        <span class="tag-pill">#{{ tag }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+
+                            <span class="featured-read-more">
+                                Lire <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
             {% endfor %}
         </div>
 

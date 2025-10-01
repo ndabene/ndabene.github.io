@@ -1,0 +1,37 @@
+<!-- CONTACT SIMPLE -->
+<section class="section-commerce contact-simple" id="contact">
+    <div class="container-commerce">
+        <div class="section-header-commerce">
+            <h2 class="section-title-commerce">{{ site.data.home-commerce.contact.title }}</h2>
+            <p class="contact-location">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ site.data.home-commerce.contact.location }}
+            </p>
+        </div>
+
+        <div class="contact-content">
+            <!-- Liens sociaux -->
+            <div class="contact-links">
+                {% for link in site.data.home-commerce.contact.links %}
+                <a href="{{ link.url }}"
+                   class="contact-link {% if link.primary %}contact-link-primary{% endif %}"
+                   {% if link.platform == 'LinkedIn' or link.platform == 'GitHub' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    <i class="{{ link.icon }}"></i>
+                    <span>{{ link.platform }}</span>
+                </a>
+                {% endfor %}
+            </div>
+
+            <!-- CTA principal -->
+            <div class="contact-cta">
+                <a href="{{ site.data.home-commerce.contact.cta.url }}"
+                   class="btn-commerce btn-commerce-primary btn-commerce-large"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                    {{ site.data.home-commerce.contact.cta.text }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
