@@ -1,126 +1,267 @@
 ---
-layout: page
+layout: default
 title: Compétences techniques
 permalink: /skills/
+description: "15+ ans d'expertise en développement web, e-commerce PrestaShop et intelligence artificielle. 150K+ installations actives, 5 PrestaShop Awards, 30+ modules créés."
+keywords: "compétences techniques, prestashop expert, développeur php, intelligence artificielle, e-commerce, symfony, laravel, mysql"
+body_class: "page-skills-modern"
 ---
 
-<section class="skills-professional-section">
-  <div class="container">
-    <h1>Compétences techniques</h1>
-    <p class="section-intro">Plus de 15 ans d'expérience en développement web, e-commerce et intégration IA.</p>
-
-    {% for category_hash in site.data.skills_by_category %}
-      {% assign category_key = category_hash[0] %}
-      {% assign category = category_hash[1] %}
-      <div class="skill-category-section">
-        <h2 class="category-title-section">{{ category.icon }} {{ category.title }}</h2>
-        <p class="category-description">{{ category.description }}</p>
+<!-- HERO SKILLS -->
+<section class="hero-skills">
+    <div class="container">
+        <h1>Compétences techniques</h1>
+        <p class="lead">Plus de 15 ans d'expérience en développement web, e-commerce et intégration IA</p>
         
-        <div class="skills-grid-section">
-          {% for skill in category.skills %}
-            <div class="skill-card-section">
-              <div class="skill-level-section" data-level="{{ skill.level }}">
-                <div class="level-circle" data-level="{{ skill.level }}"></div>
-                <span class="level-text-section">{{ skill.level }}/100</span>
-              </div>
-              
-              <div class="skill-content-section">
-                <h3 class="skill-name-section">{{ skill.name }}</h3>
-                <p class="skill-description-section">{{ skill.description }}</p>
-                
-                {% if skill.achievements %}
-                  <div class="skill-achievements-section">
-                    <div class="achievement-item-section">
-                      <svg class="achievement-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
-                        <circle cx="12" cy="8" r="7"/>
-                        <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
-                      </svg>
-                      <span class="achievement-text-section">{{ skill.achievements }}</span>
-                    </div>
-                  </div>
-                {% endif %}
-                
-                {% if skill.impact %}
-                  <div class="skill-impact-section">
-                    <div class="impact-item-section">
-                      <svg class="impact-icon-section" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2">
-                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
-                      </svg>
-                      <span class="impact-text-section">{{ skill.impact }}</span>
-                    </div>
-                  </div>
-                {% endif %}
-              </div>
+        <div class="stats-pills">
+            {% for stat in site.data.skills_featured.hero_stats %}
+            <div class="stat-pill">
+                <i class="fas {{ stat.icon }}"></i>
+                <div>
+                    <span class="stat-value">{{ stat.value }}</span>
+                    <span class="stat-label">{{ stat.label }}</span>
+                </div>
             </div>
-          {% endfor %}
+            {% endfor %}
         </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="share-resources-section">
-  <div class="container">
-    <h2>Partage &amp; ressources</h2>
-    <div class="resources-columns">
-      <div class="resources-column">
-        <h3>Articles de blog</h3>
-        <ul>
-          <li><a href="{{ '/articles/2025/08/06/prestashop-growth-hacking-mindset/' | relative_url }}">Quand l'édition de modules PrestaShop rencontre le growth hacking</a></li>
-          <li><a href="{{ '/articles/2025/08/03/mcp-protocol-guide/' | relative_url }}">Model Context Protocol : Le Pont Révolutionnaire entre l'IA et vos Systèmes</a></li>
-          <li><a href="{{ '/articles/2025/07/28/github-pages-jekyll-portfolio/' | relative_url }}">Créez Votre Portfolio Tech en Ligne avec GitHub Pages et Jekyll</a></li>
-        </ul>
-      </div>
-      <div class="resources-column">
-        <h3>Formations</h3>
-        <ul>
-          <li><a href="{{ '/formations/#formation-ia-pour-developpeurs-programme-phare' | relative_url }}">Formation "IA pour Développeurs"</a></li>
-          <li><a href="{{ '/formations/#formation-entreprise-transformation-ia' | relative_url }}">Formation Entreprise "Transformation IA"</a></li>
-        </ul>
-      </div>
     </div>
-  </div>
 </section>
 
-<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="{{ '/formations/' | relative_url }}">formations</a>, parcourez mes <a href="{{ '/blog/' | relative_url }}">articles</a> ou <a href="{{ '/contact/' | relative_url }}">contactez-moi pour échanger</a>.</p>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Animation des niveaux de compétences
-    function animateSkillLevels() {
-        const levelCircles = document.querySelectorAll('.level-circle[data-level]');
+<!-- PRESTASHOP & E-COMMERCE -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.prestashop.icon }}</div>
+            <h2>{{ site.data.skills_featured.prestashop.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.prestashop.subtitle }}</p>
+        </div>
         
-        levelCircles.forEach((circle, index) => {
-            const level = parseInt(circle.dataset.level, 10);
-            
-            // Retarder légèrement chaque animation
-            setTimeout(() => {
-                // Appliquer une classe pour l'animation
-                circle.style.background = `conic-gradient(
-                    var(--skill-fill-color) ${level * 10}%, 
-                    var(--skill-bg-color) 0
-                )`;
-                
-                // Ajouter la classe animée
-                circle.classList.add('animated');
-            }, index * 120);
-        });
-    }
-    
-    // Observer l'intersection pour déclencher l'animation
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateSkillLevels();
-                observer.disconnect(); // Ne déclencher qu'une fois
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    // Observer la section des compétences
-    const skillsSection = document.querySelector('.skills-professional-section');
-    if (skillsSection) {
-        observer.observe(skillsSection);
-    }
-});
-</script>
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.prestashop.skills %}
+            <article class="skill-card-modern prestashop">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- PHP & BACKEND -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.backend.icon }}</div>
+            <h2>{{ site.data.skills_featured.backend.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.backend.subtitle }}</p>
+        </div>
+        
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.backend.skills %}
+            <article class="skill-card-modern backend">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- INTELLIGENCE ARTIFICIELLE -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.ai.icon }}</div>
+            <h2>{{ site.data.skills_featured.ai.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.ai.subtitle }}</p>
+        </div>
+        
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.ai.skills %}
+            <article class="skill-card-modern ai">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- FRONTEND & UX -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.frontend.icon }}</div>
+            <h2>{{ site.data.skills_featured.frontend.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.frontend.subtitle }}</p>
+        </div>
+        
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.frontend.skills %}
+            <article class="skill-card-modern frontend">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- DEVOPS & TOOLS -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.devops.icon }}</div>
+            <h2>{{ site.data.skills_featured.devops.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.devops.subtitle }}</p>
+        </div>
+        
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.devops.skills %}
+            <article class="skill-card-modern devops">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- LEADERSHIP & EXCELLENCE -->
+<section class="skills-category-section">
+    <div class="container">
+        <div class="category-header">
+            <div class="category-icon">{{ site.data.skills_featured.leadership.icon }}</div>
+            <h2>{{ site.data.skills_featured.leadership.title }}</h2>
+            <p class="category-subtitle">{{ site.data.skills_featured.leadership.subtitle }}</p>
+        </div>
+        
+        <div class="skills-grid">
+            {% for skill in site.data.skills_featured.leadership.skills %}
+            <article class="skill-card-modern leadership">
+                <div class="skill-card-header">
+                    <span class="skill-category-badge">{{ skill.category }}</span>
+                    <h3>{{ skill.name }}</h3>
+                </div>
+                <div class="skill-card-content">
+                    <p>{{ skill.description }}</p>
+                    <div class="skill-metric">
+                        <i class="fas fa-chart-line"></i>
+                        <span>{{ skill.metric }}</span>
+                    </div>
+                </div>
+                <div class="skill-card-footer">
+                    <div class="skill-tags">
+                        {% for tag in skill.tags %}
+                        <span class="tag-pill">#{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="skills-cta-section">
+    <div class="container">
+        <h2>Vous souhaitez aller plus loin ?</h2>
+        <p>Découvrez mes formations IA, parcourez mes articles techniques ou contactez-moi pour échanger sur vos projets</p>
+        
+        <div class="cta-buttons">
+            <a href="{{ '/boutique/' | relative_url }}" class="btn-cta btn-primary">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Voir mes formations</span>
+            </a>
+            <a href="{{ '/blog/' | relative_url }}" class="btn-cta btn-secondary">
+                <i class="fas fa-blog"></i>
+                <span>Lire mes articles</span>
+            </a>
+            <a href="{{ '/contact/' | relative_url }}" class="btn-cta btn-secondary">
+                <i class="fas fa-envelope"></i>
+                <span>Me contacter</span>
+            </a>
+        </div>
+    </div>
+</section>

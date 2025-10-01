@@ -1,0 +1,165 @@
+# Compétences techniques - Version simplifiée et moderne
+# Structure optimisée pour featured-article-card
+
+prestashop:
+  title: "PrestaShop & E-commerce"
+  subtitle: "Expert Elite avec 12 ans d'expérience et 150K+ installations"
+  icon: "🏆"
+  color: "prestashop"
+  skills:
+    - name: "Expert PrestaShop"
+      description: "5 PrestaShop Awards (2011-2020), position TOP marketplace officielle"
+      tags: ["Expert Elite", "5 Awards"]
+      category: "Expert"
+      metric: "150K+ installations"
+    
+    - name: "Développement Modules"
+      description: "30 modules développés chez BusinessTech, TOP 3 éditeur français"
+      tags: ["30 modules", "TOP 3"]
+      category: "Développeur"
+      metric: "75K+ téléchargements"
+    
+    - name: "Google & Facebook Ads"
+      description: "Intégrations complexes Google Merchant Center et Facebook Dynamic Ads"
+      tags: ["Google", "Facebook"]
+      category: "Intégration"
+      metric: "Production"
+
+backend:
+  title: "PHP & Backend"
+  subtitle: "15 ans d'expertise en développement backend et architectures modernes"
+  icon: "🚀"
+  color: "backend"
+  skills:
+    - name: "PHP Expert"
+      description: "Approche polyvalente : PHP natif, Symfony sous PrestaShop, Laravel SaaS"
+      tags: ["PHP 8", "Symfony"]
+      category: "Expert"
+      metric: "15+ ans"
+    
+    - name: "Architecture Web"
+      description: "Monolithes structurés avec API REST, approche pragmatique et fiable"
+      tags: ["Architecture", "API"]
+      category: "Architecte"
+      metric: "30 projets"
+    
+    - name: "MySQL Expert"
+      description: "Optimisation bases de données e-commerce haute charge et performance"
+      tags: ["MySQL", "Performance"]
+      category: "Database"
+      metric: "75K+ installations"
+
+ai:
+  title: "Intelligence Artificielle"
+  subtitle: "Innovation et efficacité via l'intégration IA dans les workflows"
+  icon: "🤖"
+  color: "ai"
+  skills:
+    - name: "Développement Assisté IA"
+      description: "Transformation des méthodes : gain productivité 4x sur projets similaires"
+      tags: ["Claude", "GPT"]
+      category: "Innovation"
+      metric: "Productivité x4"
+    
+    - name: "Orchestration Agents IA"
+      description: "Management d'agents IA et workflows automatisés (MCP, Perplexity, NotebookLM)"
+      tags: ["MCP", "Agents"]
+      category: "Orchestration"
+      metric: "Multi-agents"
+    
+    - name: "IA Business Applications"
+      description: "Collaboration technique-marketing pour processus IA business et vision transversale"
+      tags: ["Business", "Stratégie"]
+      category: "Stratégie"
+      metric: "Plateforme prod"
+
+frontend:
+  title: "Frontend & UX"
+  subtitle: "Interfaces e-commerce performantes et centrées utilisateur"
+  icon: "🎨"
+  color: "frontend"
+  skills:
+    - name: "UX E-commerce"
+      description: "Optimisation interfaces back-office pour fluidité et expérience marchands"
+      tags: ["UX", "E-commerce"]
+      category: "Design"
+      metric: "30 interfaces"
+    
+    - name: "HTML5/CSS3 Expert"
+      description: "Maîtrise complète standards web modernes et responsive multi-devices"
+      tags: ["HTML5", "CSS3"]
+      category: "Frontend"
+      metric: "Standards modernes"
+    
+    - name: "JavaScript/jQuery"
+      description: "Développement dynamique PrestaShop, focus interactivité et performance"
+      tags: ["JavaScript", "jQuery"]
+      category: "Interactivité"
+      metric: "30 modules JS"
+
+devops:
+  title: "DevOps & Tools"
+  subtitle: "Autonomie technique complète et environnements optimisés"
+  icon: "⚙️"
+  color: "devops"
+  skills:
+    - name: "Git Expert"
+      description: "Maîtrise avancée contrôle de version et gestion repositories complexes"
+      tags: ["Git", "GitHub"]
+      category: "Version Control"
+      metric: "30 projets Git"
+    
+    - name: "Déploiement Production"
+      description: "Déploiement modules sur 75K+ installations avec zéro défaillance critique"
+      tags: ["Production", "Monitoring"]
+      category: "Déploiement"
+      metric: "Zéro incident"
+    
+    - name: "Jekyll/GitHub Pages"
+      description: "Sites statiques performants optimisés SEO et performance"
+      tags: ["Jekyll", "Static"]
+      category: "JAMstack"
+      metric: "Sites pros"
+
+leadership:
+  title: "Leadership & Excellence"
+  subtitle: "Leadership technique et communication adaptative"
+  icon: "💎"
+  color: "leadership"
+  skills:
+    - name: "Technical Leadership"
+      description: "Chef de projet autonome, auto-gestion complète objectifs techniques et business"
+      tags: ["Leadership", "Autonomie"]
+      category: "Management"
+      metric: "30 projets solo"
+    
+    - name: "Communication Adaptative"
+      description: "Interface naturelle CTOs et dirigeants business, communication multi-audiences"
+      tags: ["Communication", "Business"]
+      category: "Soft Skills"
+      metric: "Multi-audiences"
+    
+    - name: "Veille & Innovation"
+      description: "Adoption précoce IA avec résultats mesurables, avantage concurrentiel"
+      tags: ["Innovation", "Veille"]
+      category: "Prospective"
+      metric: "Early adopter"
+
+# Stats globales pour le hero
+hero_stats:
+  - label: "installations actives"
+    value: "150K+"
+    icon: "fa-download"
+  
+  - label: "PrestaShop Awards"
+    value: "5"
+    icon: "fa-trophy"
+  
+  - label: "modules créés"
+    value: "30+"
+    icon: "fa-cube"
+  
+  - label: "ans d'expérience"
+    value: "15+"
+    icon: "fa-clock"
+
