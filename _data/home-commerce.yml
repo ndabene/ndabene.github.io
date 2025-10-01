@@ -1,0 +1,138 @@
+hero:
+  title: "Développeur PrestaShop & Formateur IA"
+  subtitle: "Modules e-commerce sur-mesure • Formations IA pratiques • Freelance Côte d'Azur"
+  location: "Sophia Antipolis"
+  photo: "assets/images/nicolas-dabene-headshot.jpg"
+  cta:
+    primary:
+      text: "Voir mes modules"
+      url: "#modules-prestashop"
+    secondary:
+      text: "Mes formations IA"
+      url: "#formations-ia"
+    tertiary:
+      text: "LinkedIn"
+      url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
+      external: true
+
+about:
+  content: "Je m'appelle Nicolas, je développe des modules PrestaShop et je forme des pros à l'IA. Basé à Antibes, j'aide les marchands à booster leur e-commerce avec des solutions techniques fiables et j'accompagne les équipes pour qu'elles deviennent autonomes avec l'intelligence artificielle. Pas de jargon, que du concret."
+
+modules_prestashop:
+  title: "Mes Modules PrestaShop"
+  subtitle: "Solutions professionnelles pour votre e-commerce"
+  featured:
+    - id: "geo-suite"
+      title: "GEO Suite"
+      description: "Optimisez vos données structurées pour le SEO local et international"
+      image: "assets/images/modules/geo-generative-engine-optimization.png"
+      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html"
+      tags: ["SEO", "IA"]
+    - id: "google-merchant-center-pro"
+      title: "Google Merchant Center Pro"
+      description: "Intégrez Google Shopping pour augmenter vos ventes"
+      image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
+      tags: ["Google Shopping", "Flux produits"]
+    - id: "google-pay"
+      title: "Google Pay"
+      description: "Paiement rapide et sécurisé pour améliorer la conversion"
+      image: "assets/images/modules/google-pay-for-prestashop.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html"
+      tags: ["Paiement", "Conversion"]
+    - id: "facebook-dynamic-ads"
+      title: "Facebook Dynamic Ads + Pixel PRO"
+      description: "Ciblez vos clients avec des publicités dynamiques sur Facebook"
+      image: "assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
+      tags: ["Marketing", "Facebook"]
+  cta:
+    text: "Découvrir tous mes modules"
+    url: "https://www.businesstech.fr/"
+
+formations_ia:
+  title: "Mes Formations IA"
+  subtitle: "Devenez autonome avec l'IA en quelques heures"
+  featured:
+    - id: "starter-pack-ia"
+      title: "Starter Pack IA 4-en-1"
+      description: "Le parcours complet de débutant à autonome : fondamentaux, impact écologique, prompts, création visuelle"
+      image: "assets/images/produits/pack-ia.jpg"
+      price: "119€ HT"
+      format: "PDF & Podcast"
+      link: "/boutique/#starter-pack-ia"
+      badge: "Économisez 28€"
+    - id: "chapitre-1-ia-debutants"
+      title: "Chapitre 1 : IA pour Débutants"
+      description: "Posez des bases solides en IA sans jargon. Comprenez les Transformers et appliquez l'IA au quotidien"
+      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
+      price: "49€ HT"
+      format: "PDF & Podcast"
+      duree: "2h30"
+      link: "/boutique/#chapitre-1"
+    - id: "chapitre-3-art-du-prompt"
+      title: "Chapitre 3 : L'Art du Prompt"
+      description: "Maîtrisez la méthode C.L.A.I.R et 7 types de prompts pour des résultats concrets"
+      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
+      price: "49€ HT"
+      format: "PDF & Podcast"
+      duree: "3h"
+      link: "/boutique/#chapitre-3"
+  cta:
+    text: "Voir toutes mes formations"
+    url: "/boutique/"
+
+competences:
+  title: "Ce que je maîtrise"
+  items:
+    - title: "PrestaShop 8/9"
+      icon: "fas fa-shopping-cart"
+      description: "Modules sur-mesure, optimisation performances, compatibilité long terme"
+    - title: "SEO e-commerce"
+      icon: "fas fa-search"
+      description: "Trafic organique boosté grâce à l'IA (Generative Engine Optimization)"
+    - title: "Flux produits"
+      icon: "fas fa-sync-alt"
+      description: "Intégrations stables pour Google Merchant Center et marketplaces"
+    - title: "IA appliquée"
+      icon: "fas fa-brain"
+      description: "Génération de contenus, automatisation, copilotes e-commerce"
+    - title: "Performance"
+      icon: "fas fa-tachometer-alt"
+      description: "Temps de réponse réduits, bases de données optimisées"
+    - title: "Fiabilité"
+      icon: "fas fa-shield-alt"
+      description: "Code maintenable, tests, monitoring, scalabilité long terme"
+
+services_freelance:
+  title: "Missions freelance"
+  subtitle: "Projets ciblés sur lesquels je travaille"
+  types:
+    - "Développement ou amélioration de modules PrestaShop 8/9"
+    - "Optimisation SEO et performance e-commerce avec l'IA"
+    - "Gestion de flux produits (Google Merchant, marketplaces)"
+    - "Formation équipes à l'IA appliquée au e-commerce"
+  zone:
+    title: "Zone d'intervention"
+    text: "Basé à Antibes, disponible pour Sophia Antipolis (Valbonne, Biot, Mougins) et la Côte d'Azur (Nice, Cannes, Monaco). Travail à distance possible."
+  cta:
+    text: "Discuter d'un projet sur LinkedIn"
+    url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
+
+contact:
+  title: "Travaillons ensemble"
+  location: "Basé à Antibes, actif sur Sophia Antipolis et la Côte d'Azur"
+  links:
+    - platform: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
+      primary: true
+    - platform: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ndabene"
+    - platform: "Formulaire"
+      icon: "fas fa-envelope"
+      url: "/contact/"
+  cta:
+    text: "Me contacter sur LinkedIn"
+    url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"

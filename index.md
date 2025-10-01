@@ -1,63 +1,34 @@
 ---
 layout: default
-title: "Nicolas Dabène - Développeur PHP Senior & Formateur IA, passionné de partage"
-description: "15+ ans d'expérience en développement e-commerce. Modules PrestaShop, architecture e-commerce, formation IA et partage de connaissances."
-keywords: "senior php developer, prestashop expert, ai orchestrator, symfony, e-commerce architecture, php fullstack, développeur expert PHP, consultant PrestaShop, orchestrateur IA, expert e-commerce, modules PrestaShop, intelligence artificielle développement"
+title: "Nicolas Dabène — Développeur PrestaShop & Formateur IA | Sophia Antipolis"
+description: "Modules PrestaShop professionnels et formations IA pratiques. Freelance e-commerce à Sophia Antipolis — Antibes, Nice, Côte d'Azur."
+keywords: "modules prestashop, formation ia, freelance sophia antipolis, geo suite, google merchant center, développeur prestashop nice, freelance e-commerce antibes"
 no_bg: true
-body_class: homepage-modern
-llm_summary: Nicolas Dabène, expert reconnu avec 15 ans d'expérience en développement PHP, 5 PrestaShop Awards, et pionnier dans l'orchestration d'agents IA pour multiplier l'efficacité de développement e-commerce.
+body_class: homepage-commerce
+llm_summary: Nicolas Dabène, développeur PrestaShop et formateur IA basé à Sophia Antipolis. Créateur de modules e-commerce professionnels (GEO Suite, Google Merchant Center Pro) et formations IA pratiques. Freelance disponible pour la Côte d'Azur.
 llm_topics:
-- expert PHP senior développeur
-- consultant PrestaShop certifié
-- orchestrateur IA intelligence artificielle
-- architecte e-commerce solutions
-- développeur FullStack Symfony
-- formateur IA développement
-- expert modules PrestaShop
-- optimisation performances web
-- leadership technique CTO
+- développeur PrestaShop freelance
+- modules PrestaShop professionnels
+- formateur IA e-commerce
+- freelance Sophia Antipolis
+- GEO Suite SEO
+- Google Merchant Center
+- formations IA pratiques
 ---
-{% include home/hero.html %}
+{% include home-commerce/hero-commerce.html %}
 
-<div class="sticky-jump show-on-mobile" id="sticky-jump">
-  <a href="#formations" class="btn-primary">Formations</a>
-  <a href="#hero-ctas" class="btn-secondary">Haut</a>
-</div>
+{% include home-commerce/about-short.html %}
 
-{% include home/formations.html %}
+{% include home-commerce/modules-prestashop-grid.html %}
 
-{% include home/value_trilogy.html %}
+{% include home-commerce/formations-ia-grid.html %}
 
-{% include home/expertise.html %}
-
-{% include home/achievements.html %}
-
-{% include home/modules.html %}
-
-{% include home/approach.html %}
-
-{% include future-posts-data.html %}
+{% include home-commerce/competences-grid.html %}
 
 {% include home/publications.html %}
 
-{% include home/faq.html %}
+{% include home-commerce/services-freelance.html %}
+
+{% include home-commerce/contact-simple.html %}
 
 {% include person-jsonld.html %}
-
-<!-- SCRIPTS SPÉCIFIQUES -->
-<script>
-// Script pour l'expansion des cartes d'expertise
-function expandExpertise(expertiseId) {
-    const card = document.querySelector(`[data-id="${expertiseId}"]`);
-    card.classList.toggle('expanded');
-}
-
-// Hide sticky jump near top to avoid overlapping important hero content
-document.addEventListener('scroll', function(){
-  var el = document.getElementById('sticky-jump');
-  if(!el) return;
-  if (window.scrollY < 250) el.classList.add('is-hidden');
-  else el.classList.remove('is-hidden');
-});
-// Animation simple pour FAQ inline - pas d'animations complexes
-</script>

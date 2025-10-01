@@ -1,0 +1,56 @@
+<!-- MODULES PRESTASHOP GRID -->
+<section class="section-commerce modules-prestashop" id="modules-prestashop">
+    <div class="container-commerce">
+        <div class="section-header-commerce">
+            <h2 class="section-title-commerce">{{ site.data.home-commerce.modules_prestashop.title }}</h2>
+            <p class="section-subtitle-commerce">{{ site.data.home-commerce.modules_prestashop.subtitle }}</p>
+        </div>
+
+        <div class="products-grid">
+            {% for module in site.data.home-commerce.modules_prestashop.featured %}
+            <article class="product-card">
+                <a href="{{ module.link }}" target="_blank" rel="noopener noreferrer" class="product-card-link">
+                    <!-- Image du module -->
+                    <div class="product-card-image">
+                        <img src="/{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                    </div>
+
+                    <!-- Contenu -->
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">{{ module.title }}</h3>
+                        <p class="product-card-description">{{ module.description }}</p>
+
+                        <!-- Tags -->
+                        {% if module.tags %}
+                        <div class="product-card-tags">
+                            {% for tag in module.tags limit: 2 %}
+                            <span class="product-tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Footer avec CTA -->
+                    <div class="product-card-footer">
+                        <span class="product-cta">
+                            Voir le module
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+
+        <!-- CTA global -->
+        <div class="section-cta-commerce">
+            <a href="{{ site.data.home-commerce.modules_prestashop.cta.url }}"
+               class="btn-commerce btn-commerce-outline"
+               target="_blank"
+               rel="noopener noreferrer">
+                {{ site.data.home-commerce.modules_prestashop.cta.text }}
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+</section>

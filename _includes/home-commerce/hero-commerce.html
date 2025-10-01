@@ -1,0 +1,45 @@
+<!-- HERO COMMERCE - Freelance + Produits -->
+<section class="hero-commerce" id="hero-commerce">
+    <div class="container">
+        <div class="hero-commerce-grid">
+            <!-- Photo professionnelle -->
+            <div class="hero-commerce-visual">
+                <div class="hero-photo-card">
+                    <img src="/assets/images/hero/profile-hero.jpg"
+                         alt="Nicolas Dabène - Développeur PrestaShop & Formateur IA à Sophia Antipolis"
+                         class="hero-photo">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="hero-commerce-content">
+                <div class="hero-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>{{ site.data.home-commerce.hero.location }}</span>
+                </div>
+
+                <h1 class="hero-commerce-title">{{ site.data.home-commerce.hero.title }}</h1>
+                <p class="hero-commerce-subtitle">{{ site.data.home-commerce.hero.subtitle }}</p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-commerce-cta">
+                    <a href="{{ site.data.home-commerce.hero.cta.primary.url }}" class="btn-commerce btn-commerce-primary">
+                        <i class="fas fa-cube"></i>
+                        <span>{{ site.data.home-commerce.hero.cta.primary.text }}</span>
+                    </a>
+                    <a href="{{ site.data.home-commerce.hero.cta.secondary.url }}" class="btn-commerce btn-commerce-secondary">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>{{ site.data.home-commerce.hero.cta.secondary.text }}</span>
+                    </a>
+                    <a href="{{ site.data.home-commerce.hero.cta.tertiary.url }}"
+                       class="btn-commerce btn-commerce-linkedin"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>{{ site.data.home-commerce.hero.cta.tertiary.text }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
