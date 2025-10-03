@@ -4,6 +4,7 @@
     {% include head.html %}
 </head>
 <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+    {% include svg-sprite.html %}
     {% unless page.no_bg %}
       <div class="gradient-background"></div>
       <div class="animated-background">

@@ -1,0 +1,12 @@
+{% comment %}
+Usage: {% include icon.html name="arrow-right" class="icon-inline" %}
+Paramètres:
+  - name: nom de l'icône (sans le préfixe "icon-")
+  - class: classe CSS optionnelle (défaut: "icon")
+  - aria_label: label d'accessibilité optionnel
+{% endcomment %}
+{% assign icon_class = include.class | default: "icon" %}
+<svg class="{{ icon_class }}" aria-hidden="{% if include.aria_label %}false{% else %}true{% endif %}"{% if include.aria_label %} role="img" aria-label="{{ include.aria_label }}"{% endif %}>
+  <use href="#icon-{{ include.name }}"></use>
+</svg>
+
