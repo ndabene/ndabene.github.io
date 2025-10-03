@@ -96,7 +96,7 @@ layout: default
                             </time>
                             {% if page.author %}
                                 <span class="post-author">
-                                    <i class="fas fa-user"></i>
+                                    {% include icon.html name="user" %}
                                     {{ page.author }}
                                 </span>
                             {% endif %}
@@ -173,7 +173,7 @@ layout: default
                             <button class="toc-toggle" id="toc-toggle">
                                 <i class="fas fa-list"></i>
                                 <span>Table des matières</span>
-                                <i class="fas fa-chevron-down toc-arrow"></i>
+                                {% include icon.html name="chevron-down" class="icon toc-arrow" %}
                             </button>
                             <nav class="toc-content" id="toc-content">
                                 <ul class="toc-list" id="toc-nav">
@@ -195,7 +195,7 @@ layout: default
                     <div class="support-section-post">
                         <div class="support-content">
                             <div class="support-icon">
-                                <i class="fas fa-heart"></i>
+                                {% include icon.html name="heart" %}
                             </div>
                             <div class="support-text">
                                 <h3>Ce contenu vous a été utile ?</h3>
@@ -203,7 +203,7 @@ layout: default
                             </div>
                             <div class="support-button">
                                 <a href="https://buymeacoffee.com/ndabene" target="_blank" rel="noopener" class="btn-support-post">
-                                    <i class="fas fa-coffee"></i>
+                                    {% include icon.html name="coffee" %}
                                     Me soutenir
                                 </a>
                             </div>
@@ -213,47 +213,47 @@ layout: default
 
                     <div class="social-sharing-section">
                         <h3 class="sharing-title">
-                            <i class="fas fa-share-alt"></i>
+                            {% include icon.html name="share" %}
                             Partager cet article
                         </h3>
                         <div class="social-sharing-buttons">
                             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--linkedin" aria-label="Partager sur LinkedIn" title="Partager sur LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
+                                {% include icon.html name="linkedin" %}
                             </a>
                             
                             <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&hashtags=développement,php,prestashop&via=ndabene" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--twitter" aria-label="Partager sur X/Twitter" title="Partager sur X/Twitter">
-                                <i class="fab fa-twitter"></i>
+                                {% include icon.html name="twitter" %}
                             </a>
                             
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--facebook" aria-label="Partager sur Facebook" title="Partager sur Facebook">
-                                <i class="fab fa-facebook-f"></i>
+                                {% include icon.html name="facebook" %}
                             </a>
                             
                             <a href="https://reddit.com/submit?url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--reddit" aria-label="Partager sur Reddit" title="Partager sur Reddit">
-                                <i class="fab fa-reddit-alien"></i>
+                                {% include icon.html name="reddit" %}
                             </a>
                             
                             <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--whatsapp" aria-label="Partager sur WhatsApp" title="Partager sur WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
+                                {% include icon.html name="whatsapp" %}
                             </a>
                             
                             <a href="https://t.me/share/url?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}" 
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--telegram" aria-label="Partager sur Telegram" title="Partager sur Telegram">
-                                <i class="fab fa-telegram"></i>
+                                {% include icon.html name="telegram" %}
                             </a>
                             
                             <a href="mailto:?subject={{ page.title | url_encode }}&body=Découvrez cet article : {{ page.title | url_encode }}%0A%0A{{ page.url | absolute_url }}" 
                                class="social-btn social-btn--email" aria-label="Partager par email" title="Partager par email">
-                                <i class="fas fa-envelope"></i>
+                                {% include icon.html name="envelope" %}
                             </a>
                             
                             <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="social-btn social-btn--copy" aria-label="Copier le lien" title="Copier le lien">
-                                <i class="fas fa-link"></i>
+                                {% include icon.html name="link" %}
                             </button>
                         </div>
                     </div>

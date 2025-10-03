@@ -16,7 +16,11 @@ body_class: "page-skills-modern"
         <div class="stats-pills">
             {% for stat in site.data.skills_featured.hero_stats %}
             <div class="stat-pill">
-                <i class="fas {{ stat.icon }}"></i>
+                {% assign icon_name = stat.icon | remove: 'fa-' %}
+                {% if icon_name == 'trophy' %}{% assign icon_name = 'star' %}{% endif %}
+                {% if icon_name == 'code' %}{% assign icon_name = 'cube' %}{% endif %}
+                {% if icon_name == 'briefcase' %}{% assign icon_name = 'cube' %}{% endif %}
+                <svg class="icon" aria-hidden="true"><use href="#icon-{{ icon_name }}"></use></svg>
                 <div>
                     <span class="stat-value">{{ stat.value }}</span>
                     <span class="stat-label">{{ stat.label }}</span>
@@ -46,7 +50,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -82,7 +86,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -118,7 +122,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -154,7 +158,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -190,7 +194,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -226,7 +230,7 @@ body_class: "page-skills-modern"
                 <div class="skill-card-content">
                     <p>{{ skill.description }}</p>
                     <div class="skill-metric">
-                        <i class="fas fa-chart-line"></i>
+                        {% include icon.html name="chart-line" %}
                         <span>{{ skill.metric }}</span>
                     </div>
                 </div>
@@ -255,11 +259,11 @@ body_class: "page-skills-modern"
                 <span>Voir mes formations</span>
             </a>
             <a href="{{ '/blog/' | relative_url }}" class="btn-cta btn-secondary">
-                <i class="fas fa-blog"></i>
+                {% include icon.html name="newspaper" %}
                 <span>Lire mes articles</span>
             </a>
             <a href="{{ '/contact/' | relative_url }}" class="btn-cta btn-secondary">
-                <i class="fas fa-envelope"></i>
+                {% include icon.html name="envelope" %}
                 <span>Me contacter</span>
             </a>
         </div>

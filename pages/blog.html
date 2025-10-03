@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Blog
 permalink: /blog/
@@ -73,7 +73,7 @@ llm_topics:
                         <div class="blog-filters-header">
                             <h2 class="section-title">Articles du blog</h2>
                             <button id="toggle-filters" class="toggle-filters-btn">
-                                <i class="fas fa-filter"></i>
+                                {% include icon.html name="filter" %}
                                 <span>Filtres</span>
                                 <i class="fas fa-chevron-down chevron-icon"></i>
                             </button>
@@ -85,10 +85,10 @@ llm_topics:
                         <!-- Barre de recherche moderne -->
                         <div class="blog-search-bar">
                             <div class="search-input-wrapper">
-                                <i class="fas fa-search"></i>
+                                {% include icon.html name="search" %}
                                 <input type="text" id="search-input" placeholder="Rechercher un article...">
                                 <button id="clear-search" class="clear-search-btn" style="display: none;">
-                                    <i class="fas fa-times"></i>
+                                    {% include icon.html name="times" %}
                                 </button>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ llm_topics:
                         <!-- Pills de catégories -->
                         <div class="blog-category-pills">
                             <button class="category-pill active" data-category="">
-                                <i class="fas fa-home"></i> Tous les articles
+                                {% include icon.html name="home" %} Tous les articles
                             </button>
                             {% assign published_posts_for_categories = site.posts | where_exp: "post", "post.date <= site.time" %}
                             {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
@@ -115,13 +115,13 @@ llm_topics:
                                     {% include icon.html name="fire" %} Récent
                                 </button>
                                 <button class="sort-pill" data-sort="date-asc">
-                                    <i class="fas fa-history"></i> Ancien
+                                    {% include icon.html name="history" %} Ancien
                                 </button>
                                 <button class="sort-pill" data-sort="reading-time">
                                     {% include icon.html name="clock" %} Rapide
                                 </button>
                                 <button class="sort-pill" data-sort="title">
-                                    <i class="fas fa-sort-alpha-down"></i> A-Z
+                                    {% include icon.html name="sort-alpha" %} A-Z
                                 </button>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ llm_topics:
                     <!-- Message quand aucun résultat -->
                     <div class="no-results" id="no-results">
                         <div class="no-results-icon">
-                            <i class="fas fa-search"></i>
+                            {% include icon.html name="search" %}
                         </div>
                         <h3>Aucun article trouvé</h3>
                         <p>Aucun article ne correspond à vos critères de recherche.</p>
@@ -488,11 +488,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
 
+        // Map FA icons to SVG sprite names
+        const iconMap = {
+            'fa-tag': 'tag',
+            'fa-book': 'file-pdf',
+            'fa-search': 'search',
+            'fa-fire': 'fire'
+        };
+        const svgIconName = iconMap[icon] || 'tag';
+        
         filterTag.innerHTML = `
-            <i class="fas ${icon}"></i>
+            <svg class="icon" aria-hidden="true"><use href="#icon-${svgIconName}"></use></svg>
             ${label}
             <button class="remove-filter" data-type="${type}">
-                <i class="fas fa-times"></i>
+                <svg class="icon" aria-hidden="true"><use href="#icon-times"></use></svg>
             </button>
         `;
 

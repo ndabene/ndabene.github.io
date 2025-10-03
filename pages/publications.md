@@ -1,4 +1,4 @@
-21
+﻿21
  <p class="section-description">{{ page.description }}</p>
 22 </div>
 23    
@@ -24,7 +24,7 @@
 43 <div class="external-publication-card">
 44 <div class="publication-card-header">
 45 <div class="publication-icon">
-46 <i class="fas fa-newspaper"></i>
+46 {% include icon.html name="newspaper" %}
 47 </div>
 48 <div class="publication-meta">
 49 <span>{{ group.name }}</span>
