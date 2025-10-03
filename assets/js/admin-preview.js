@@ -131,7 +131,7 @@ window.copyLinkedInSuggestion = function() {
 
 function showCopySuccess(button, message) {
     const originalText = button.innerHTML;
-    button.innerHTML = `<i class="fas fa-check"></i> ${message}`;
+    button.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> ${message}`;
     button.classList.add('success');
     
     setTimeout(() => {

@@ -26,7 +26,7 @@ function addCopyButtonsToCodeBlocks() {
         // Créer le bouton de copie
         const copyButton = document.createElement('button');
         copyButton.className = 'copy-button';
-        copyButton.innerHTML = '<i class="fas fa-copy"></i> Copier';
+        copyButton.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg> Copier';
         copyButton.setAttribute('aria-label', 'Copier le code');
         
         // Envelopper le pre dans le container
@@ -95,7 +95,7 @@ function fallbackCopyToClipboard(text, button) {
  */
 function showCopySuccess(button) {
     const originalContent = button.innerHTML;
-    button.innerHTML = '<i class="fas fa-check"></i> Copié !';
+    button.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> Copié !';
     button.classList.add('copied');
     
     setTimeout(function() {
@@ -109,7 +109,7 @@ function showCopySuccess(button) {
  */
 function showCopyError(button) {
     const originalContent = button.innerHTML;
-    button.innerHTML = '<i class="fas fa-times"></i> Erreur';
+    button.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-times"></use></svg> Erreur';
     button.style.backgroundColor = '#fee2e2';
     button.style.color = '#dc2626';
     

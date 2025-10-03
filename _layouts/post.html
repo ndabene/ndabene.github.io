@@ -171,7 +171,7 @@ layout: default
                         {% if page.table_of_contents != false %}
                         <div class="table-of-contents-inline">
                             <button class="toc-toggle" id="toc-toggle">
-                                <i class="fas fa-list"></i>
+                                {% include icon.html name="list" %}
                                 <span>Table des matières</span>
                                 {% include icon.html name="chevron-down" class="icon toc-arrow" %}
                             </button>

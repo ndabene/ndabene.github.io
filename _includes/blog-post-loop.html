@@ -53,7 +53,7 @@ html.admin-preview-active .future-post-item {
             <div class="draft-post-badge-compact">
                 {% include icon.html name="edit" %} 
                 Brouillon 
-                {% if post.preview_key %}<i class="fas fa-lock" title="Accès sécurisé"></i>{% endif %}
+                {% if post.preview_key %}{% include icon.html name="lock" aria_label="Accès sécurisé" %}{% endif %}
             </div>
         {% endif %}
     </div>

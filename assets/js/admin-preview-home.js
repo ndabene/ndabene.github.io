@@ -83,7 +83,7 @@ function generateHomePublicationHtml(post) {
                 <!-- Actions -->
                 <div class="post-news-actions">
                     <div class="future-post-badge">
-                        <i class="fas fa-clock"></i> Publication prévue le ${post.date_formatted}
+                        <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> Publication prévue le ${post.date_formatted}
                     </div>
                 </div>
             </div>

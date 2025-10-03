@@ -89,24 +89,24 @@ function generatePostPreviewHtml(post) {
                             </span>
                         ` : ''}
                         <a href="${post.url}" class="read-more-compact" onclick="return false;" title="Article futur - Non accessible">
-                            Lire <i class="fas fa-arrow-right"></i>
+                            Lire <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
                         </a>
                     </div>
                 </div>
             </article>
             
             <div class="future-post-badge-compact">
-                <i class="fas fa-clock"></i> Prévu le ${post.date_formatted}
+                <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> Prévu le ${post.date_formatted}
             </div>
             
             <!-- Helper LinkedIn pour les futurs posts -->
             <div class="future-post-linkedin-helper">
                 <div class="linkedin-preview-mini">
-                    <h5><i class="fab fa-linkedin"></i> Planification LinkedIn</h5>
+                    <h5><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg> Planification LinkedIn</h5>
                     <div class="url-copy-section">
                         <input type="text" value="https://nicolas-dabene.fr${post.url}" readonly class="production-url-input">
                         <button onclick="copyFuturePostUrl(this)" class="btn-copy-mini">
-                            <i class="fas fa-copy"></i>
+                            <svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg>
                         </button>
                     </div>
                     <textarea readonly class="linkedin-suggestion-mini" rows="3">🚀 Nouvel article bientôt publié : ${post.title}
@@ -117,7 +117,7 @@ ${post.excerpt.substring(0, 100)}...
 
 #${post.tags.join(' #')}</textarea>
                     <button onclick="copyLinkedInPost(this)" class="btn-copy-mini">
-                        <i class="fas fa-copy"></i> Copier le post
+                        <svg class="icon" aria-hidden="true"><use href="#icon-copy"></use></svg> Copier le post
                     </button>
                 </div>
             </div>
@@ -152,7 +152,7 @@ window.copyLinkedInPost = function(button) {
 
 function showCopyFeedback(button, message) {
     const originalText = button.innerHTML;
-    button.innerHTML = `<i class="fas fa-check"></i> ${message}`;
+    button.innerHTML = `<svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg> ${message}`;
     button.style.background = '#28a745';
     
     setTimeout(() => {
