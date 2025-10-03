@@ -16,7 +16,9 @@
                 <a href="{{ link.url }}"
                    class="contact-link {% if link.primary %}contact-link-primary{% endif %}"
                    {% if link.platform == 'LinkedIn' or link.platform == 'GitHub' %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                    <i class="{{ link.icon }}"></i>
+                    {% comment %}Map FA icons to SVG sprite{% endcomment %}
+                    {% assign icon_name = link.icon | remove: 'fas fa-' | remove: 'fab fa-' %}
+                    <svg class="icon" aria-hidden="true"><use href="#icon-{{ icon_name }}"></use></svg>
                     <span>{{ link.platform }}</span>
                 </a>
                 {% endfor %}

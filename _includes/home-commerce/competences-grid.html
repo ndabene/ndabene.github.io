@@ -9,7 +9,12 @@
             {% for competence in site.data.home-commerce.competences.items %}
             <div class="competence-card">
                 <div class="competence-icon">
-                    <i class="{{ competence.icon }}"></i>
+                    {% comment %}Map FA icons to SVG sprite{% endcomment %}
+                    {% assign icon_name = competence.icon | remove: 'fas fa-' | remove: 'fab fa-' %}
+                    {% if icon_name == 'shopping-cart' %}{% assign icon_name = 'cube' %}{% endif %}
+                    {% if icon_name == 'brain' %}{% assign icon_name = 'fire' %}{% endif %}
+                    {% if icon_name == 'shield-alt' %}{% assign icon_name = 'check-circle' %}{% endif %}
+                    <svg class="icon" aria-hidden="true"><use href="#icon-{{ icon_name }}"></use></svg>
                 </div>
                 <h3 class="competence-title">{{ competence.title }}</h3>
                 <p class="competence-description">{{ competence.description }}</p>
