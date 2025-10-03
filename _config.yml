@@ -76,12 +76,6 @@ exclude:
 
 # Fichiers à inclure explicitement
 include:
-  - sitemap_index.xml
-  - sitemap_pages.xml
-  - sitemap_posts_2025.xml
-  - sitemap_projects.xml
-  - sitemap_case_studies.xml
-  - sitemap_images.xml
   - robots.txt
 
 # Google Analytics
@@ -122,10 +116,6 @@ buy_me_a_coffee:
   session_timeout: 120 # minutes avant de pouvoir réafficher d
 cache_busting: true
 
-# Sitemap configuration
-sitemap:
-  file: "/sitemap_index.xml"
-  
 # Defaults pour les priorités sitemap
 defaults:
   - scope:

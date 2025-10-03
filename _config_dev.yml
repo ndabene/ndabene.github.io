@@ -1,8 +1,8 @@
 # Configuration spécifique de développement
 # Utilisé avec --config _config.yml,_config_dev.yml
 
-# Désactiver le cache busting en dev
-cache_busting: false
+# Activer le cache busting pour forcer le rechargement des assets
+cache_busting: true
 
 # Activer le mode développement
 environment: development
