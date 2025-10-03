@@ -1,0 +1,104 @@
+# Nicolas Dabène - Senior PHP Developer & AI Orchestrator
+
+> Portfolio professionnel de Nicolas Dabène, développeur PHP FullStack Senior avec 15+ années d'expérience, expert PrestaShop Elite (5 Awards 2011-2020) et pionnier de l'orchestration IA.
+
+## À propos
+
+Nicolas Dabène est un développeur PHP FullStack Senior et orchestrateur IA avec plus de 15 années d'expérience professionnelle depuis 2010. Expert certifié PrestaShop Elite avec 5 Awards officiels (2011-2020), il est spécialisé dans les solutions BusinessTech, l'architecture e-commerce complexe et l'orchestration IA pour multiplier l'efficacité de développement.
+
+**Localisé à** : Antibes, Côte d'Azur, France (Sophia Antipolis)
+**Contact** : ndabene2807@gmail.com
+**GitHub** : https://github.com/ndabene
+**LinkedIn** : https://linkedin.com/in/nicolas-dabène-473a43b8
+
+## Expertises principales
+
+### PrestaShop & E-commerce
+- Expert PrestaShop Elite avec 5 Awards officiels (2011-2020)
+- 30+ modules développés avec 100k+ installations actives
+- Architecture e-commerce complexe et évolutive
+- Développeur senior chez BusinessTech (15+ ans)
+- Maintenance, optimisation performance et SEO
+
+### Orchestration IA
+- Multiplication de l'efficacité de développement par 4
+- Maîtrise ChatGPT, Claude, Cursor, GitHub Copilot
+- Formation d'équipes aux workflows IA modernes
+- Intégration d'APIs IA (OpenAI, Anthropic)
+- Prompt engineering avancé pour développeurs
+
+### Stack technique
+**Backend** : PHP 8.3, Symfony, Laravel, PrestaShop
+**Frontend** : JavaScript, TypeScript, Vue.js, React
+**Outils IA** : Claude, ChatGPT, Cursor, GitHub Copilot, MCP Protocol
+**Base de données** : MySQL, PostgreSQL, Redis
+**DevOps** : Docker, Git, CI/CD
+
+## Services proposés
+
+### Formation IA pour développeurs
+- Formation présentiel et distanciel (Sophia Antipolis, Antibes, PACA)
+- Programme 2 à 5 jours selon les besoins
+- Niveaux débutant à avancé
+- Intégration d'APIs IA, prompt engineering, outils de coding IA
+- Accompagnement transformation IA en entreprise
+
+### Développement PrestaShop
+- Modules sur mesure
+- Optimisation performance et SEO
+- Maintenance et évolutions
+- Intégration IA dans les boutiques e-commerce
+- Audit technique et recommandations
+
+### Conseil & Leadership technique
+- Architecture de solutions complexes
+- Accompagnement transformation digitale
+- Formation d'équipes techniques
+- Audit et recommandations stratégiques
+
+## Navigation du site
+
+- **Accueil** : https://nicolas-dabene.fr/
+- **À propos** : https://nicolas-dabene.fr/about/
+- **Services** : https://nicolas-dabene.fr/services/
+- **Expertise** : https://nicolas-dabene.fr/expertise/
+- **Compétences** : https://nicolas-dabene.fr/skills/
+- **Projets** : https://nicolas-dabene.fr/projects/
+- **Études de cas** : https://nicolas-dabene.fr/case-studies.html
+- **Publications/Blog** : https://nicolas-dabene.fr/publications/
+- **Formations** : https://nicolas-dabene.fr/formations/
+- **Contact** : https://nicolas-dabene.fr/contact/
+
+## Articles populaires
+
+Le blog contient des articles techniques approfondis sur :
+- IA et développement (ChatGPT, Claude, MCP Protocol)
+- PrestaShop et e-commerce
+- Architecture logicielle
+- Leadership technique
+- Bonnes pratiques de développement
+
+## Réalisations notables
+
+- 100k+ installations actives de modules PrestaShop
+- 5 PrestaShop Awards (2011-2020)
+- 15+ années d'expérience professionnelle
+- 30+ modules e-commerce développés
+- Multiplication par 4 de l'efficacité via orchestration IA
+
+## Zone géographique
+
+**Intervention présentiel** : Antibes, Cannes, Nice, Sophia Antipolis, Monaco, Côte d'Azur, PACA
+**Intervention distanciel** : France entière et international
+
+## Mots-clés SEO
+
+formation ia développeurs, formateur ia sophia antipolis, développeur prestashop antibes, expert prestashop côte azur, orchestration ia, formation chatgpt développeurs, consultant ia entreprise paca, développeur php senior nice, architecture ecommerce, leadership technique
+
+---
+
+*Ce fichier est destiné aux LLMs (Large Language Models) pour faciliter la compréhension et l'indexation du contenu du site.*
+*Dernière mise à jour : {{ "now" | date: "%Y-%m-%d" }}*
+
+
+
