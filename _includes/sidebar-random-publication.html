@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Widget Random External Publication - Affiche une publication externe aléatoire
 {% endcomment %}
 
@@ -7,7 +7,7 @@ Widget Random External Publication - Affiche une publication externe aléatoire
     {% assign random_pub = shuffled_publications | first %}
 
     <div class="sidebar-widget-compact sidebar-publication-widget">
-        <h4><i class="fas fa-external-link-alt"></i> Publication externe</h4>
+        <h4>{% include icon.html name="external-link" %} Publication externe</h4>
         <div class="external-publication-card">
             <article class="external-pub-item">
                 {% if random_pub.image %}
@@ -33,7 +33,7 @@ Widget Random External Publication - Affiche une publication externe aléatoire
 
                     <div class="external-pub-footer">
                         <a href="{{ random_pub.link }}" class="external-pub-link" target="_blank" rel="noopener noreferrer">
-                            Lire l'article <i class="fas fa-external-link-alt"></i>
+                            Lire l'article {% include icon.html name="external-link" %}
                         </a>
                     </div>
                 </div>

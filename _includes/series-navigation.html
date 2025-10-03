@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Navigation pour les séries d'articles
 Usage: {% include series-navigation.html %}
 {% endcomment %}
@@ -8,7 +8,7 @@ Usage: {% include series-navigation.html %}
   {% if series_posts.size > 1 %}
     <div class="series-navigation card">
       <h3 class="series-title">
-        <i class="fas fa-list-ol"></i> Série : {{ page.series }}
+        {% include icon.html name="list" %} Série : {{ page.series }}
       </h3>
       
       <div class="series-description">
@@ -58,7 +58,7 @@ Usage: {% include series-navigation.html %}
         {% if current_index > 0 %}
           {% assign prev_post = series_posts[current_index | minus: 1] %}
           <a href="{{ prev_post.url | relative_url }}" class="btn btn-nav btn-prev">
-            <i class="fas fa-chevron-left"></i> Article précédent
+            {% include icon.html name="chevron-left" %} Article précédent
           </a>
         {% endif %}
         
@@ -66,7 +66,7 @@ Usage: {% include series-navigation.html %}
           {% assign next_post = series_posts[current_index | plus: 1] %}
           {% if next_post.date <= site.time or page.admin_preview == true %}
             <a href="{{ next_post.url | relative_url }}" class="btn btn-nav btn-next">
-              Article suivant <i class="fas fa-chevron-right"></i>
+              Article suivant {% include icon.html name="chevron-right" %}
             </a>
           {% else %}
             <span class="btn btn-nav btn-next disabled">

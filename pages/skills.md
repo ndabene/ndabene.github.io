@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Compétences techniques
 permalink: /skills/
@@ -251,7 +251,7 @@ body_class: "page-skills-modern"
         
         <div class="cta-buttons">
             <a href="{{ '/boutique/' | relative_url }}" class="btn-cta btn-primary">
-                <i class="fas fa-graduation-cap"></i>
+                {% include icon.html name="graduation-cap" %}
                 <span>Voir mes formations</span>
             </a>
             <a href="{{ '/blog/' | relative_url }}" class="btn-cta btn-secondary">

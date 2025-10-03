@@ -1,4 +1,4 @@
-<!-- ARTICLES DU BLOG SECTION -->
+﻿<!-- ARTICLES DU BLOG SECTION -->
 <section class="section publications-section" id="publications">
     <div class="container">
         <div class="section-header-clean scroll-reveal">
@@ -31,7 +31,7 @@
                     <div class="featured-card-content">
                         <div class="featured-card-meta">
                             <time datetime="{{ post.date | date_to_xmlschema }}">
-                                <i class="fas fa-calendar-alt"></i>
+                                {% include icon.html name="calendar" %}
                                 {% include date-fr.html date=post.date %}
                             </time>
 
@@ -40,7 +40,7 @@
                                 {% assign read_time = words | divided_by: 200 %}
                                 {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
                                 <span class="reading-time">
-                                    <i class="fas fa-clock"></i>
+                                    {% include icon.html name="clock" %}
                                     {{ read_time }} min
                                 </span>
                             {% endif %}
@@ -62,7 +62,7 @@
                             {% endif %}
 
                             <span class="featured-read-more">
-                                Lire <i class="fas fa-arrow-right"></i>
+                                Lire {% include icon.html name="arrow-right" %}
                             </span>
                         </div>
                     </div>

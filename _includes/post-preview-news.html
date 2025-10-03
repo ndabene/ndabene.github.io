@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Template d'article style "site de presse" - format horizontal compact
 Usage: {% include post-preview-news.html post=post %}
 {% endcomment %}
@@ -74,7 +74,7 @@ Usage: {% include post-preview-news.html post=post %}
         <!-- Actions -->
         <div class="post-news-actions">
             <a href="{{ post.url | relative_url }}" class="read-more-compact">
-                Lire l'article <i class="fas fa-arrow-right"></i>
+                Lire l'article {% include icon.html name="arrow-right" %}
             </a>
         </div>
     </div>

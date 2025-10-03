@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Hero Article - Article principal en format immersif pour portail de presse
 Usage: {% include hero-article.html post=site.posts.first %}
 {% endcomment %}
@@ -25,7 +25,7 @@ Usage: {% include hero-article.html post=site.posts.first %}
 
                 <div class="hero-meta-items">
                     <time datetime="{{ hero_post.date | date_to_xmlschema }}">
-                        <i class="fas fa-calendar-alt"></i>
+                        {% include icon.html name="calendar" %}
                         {% include date-fr.html date=hero_post.date %}
                     </time>
 
@@ -34,7 +34,7 @@ Usage: {% include hero-article.html post=site.posts.first %}
                         {% assign read_time = words | divided_by: 200 %}
                         {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
                         <span class="reading-time">
-                            <i class="fas fa-clock"></i>
+                            {% include icon.html name="clock" %}
                             {{ read_time }} min
                         </span>
                     {% endif %}
@@ -49,7 +49,7 @@ Usage: {% include hero-article.html post=site.posts.first %}
 
             <div class="hero-article-cta">
                 <span class="cta-text">Lire l'article</span>
-                <i class="fas fa-arrow-right"></i>
+                {% include icon.html name="arrow-right" %}
             </div>
         </div>
     </a>

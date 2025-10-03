@@ -1,4 +1,4 @@
-<!-- SERVICES FREELANCE -->
+﻿<!-- SERVICES FREELANCE -->
 <section class="section-commerce services-freelance" id="services">
     <div class="container-commerce">
         <div class="section-header-commerce">
@@ -12,7 +12,7 @@
                 <ul class="services-list">
                     {% for type in site.data.home-commerce.services_freelance.types %}
                     <li class="service-item">
-                        <i class="fas fa-check-circle"></i>
+                        {% include icon.html name="check-circle" %}
                         <span>{{ type }}</span>
                     </li>
                     {% endfor %}
@@ -22,7 +22,7 @@
             <!-- Zone d'intervention -->
             <div class="services-zone">
                 <h3 class="services-zone-title">
-                    <i class="fas fa-map-marker-alt"></i>
+                    {% include icon.html name="map-marker" %}
                     {{ site.data.home-commerce.services_freelance.zone.title }}
                 </h3>
                 <p class="services-zone-text">{{ site.data.home-commerce.services_freelance.zone.text }}</p>
@@ -34,7 +34,7 @@
                    class="btn-commerce btn-commerce-primary btn-commerce-large"
                    target="_blank"
                    rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
+                    {% include icon.html name="linkedin" %}
                     {{ site.data.home-commerce.services_freelance.cta.text }}
                 </a>
             </div>

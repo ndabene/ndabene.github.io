@@ -1,10 +1,10 @@
-<!-- CONTACT SIMPLE -->
+﻿<!-- CONTACT SIMPLE -->
 <section class="section-commerce contact-simple" id="contact">
     <div class="container-commerce">
         <div class="section-header-commerce">
             <h2 class="section-title-commerce">{{ site.data.home-commerce.contact.title }}</h2>
             <p class="contact-location">
-                <i class="fas fa-map-marker-alt"></i>
+                {% include icon.html name="map-marker" %}
                 {{ site.data.home-commerce.contact.location }}
             </p>
         </div>
@@ -28,7 +28,7 @@
                    class="btn-commerce btn-commerce-primary btn-commerce-large"
                    target="_blank"
                    rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
+                    {% include icon.html name="linkedin" %}
                     {{ site.data.home-commerce.contact.cta.text }}
                 </a>
             </div>

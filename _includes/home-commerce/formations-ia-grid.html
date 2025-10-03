@@ -1,4 +1,4 @@
-<!-- FORMATIONS IA GRID -->
+﻿<!-- FORMATIONS IA GRID -->
 <section class="section-commerce formations-ia" id="formations-ia">
     <div class="container-commerce">
         <div class="section-header-commerce">
@@ -29,13 +29,13 @@
                         <div class="formation-meta">
                             {% if formation.format %}
                             <span class="formation-meta-item">
-                                <i class="fas fa-file-pdf"></i>
+                                {% include icon.html name="file-pdf" %}
                                 {{ formation.format }}
                             </span>
                             {% endif %}
                             {% if formation.duree %}
                             <span class="formation-meta-item">
-                                <i class="fas fa-clock"></i>
+                                {% include icon.html name="clock" %}
                                 {{ formation.duree }}
                             </span>
                             {% endif %}
@@ -46,7 +46,7 @@
                     <div class="product-card-footer">
                         <span class="product-cta">
                             En savoir plus
-                            <i class="fas fa-arrow-right"></i>
+                            {% include icon.html name="arrow-right" %}
                         </span>
                     </div>
                 </a>
@@ -58,7 +58,7 @@
         <div class="section-cta-commerce">
             <a href="{{ site.data.home-commerce.formations_ia.cta.url }}" class="btn-commerce btn-commerce-outline">
                 {{ site.data.home-commerce.formations_ia.cta.text }}
-                <i class="fas fa-arrow-right"></i>
+                {% include icon.html name="arrow-right" %}
             </a>
         </div>
     </div>

@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 ---
 
@@ -6,7 +6,7 @@ layout: default
   <div class="container">
     <header class="series-header">
       <h1 class="series-title">
-        <i class="fas fa-list-ol"></i>
+        {% include icon.html name="list" %}
         {{ page.series_name }}
       </h1>
       
@@ -87,7 +87,7 @@ layout: default
                   
                   {% if post.estimated_reading_time %}
                     <span class="reading-time">
-                      <i class="fas fa-clock"></i> {{ post.estimated_reading_time }}
+                      {% include icon.html name="clock" %} {{ post.estimated_reading_time }}
                     </span>
                   {% endif %}
                 </div>
@@ -106,11 +106,11 @@ layout: default
               <div class="article-status">
                 {% if post.date <= site.time %}
                   <span class="status-published">
-                    <i class="fas fa-check-circle"></i> Publié
+                    {% include icon.html name="check-circle" %} Publié
                   </span>
                 {% else %}
                   <span class="status-future">
-                    <i class="fas fa-clock"></i> À venir
+                    {% include icon.html name="clock" %} À venir
                   </span>
                 {% endif %}
               </div>
@@ -128,7 +128,7 @@ layout: default
               <i class="fas fa-rss"></i> Flux RSS
             </a>
             <a href="https://www.linkedin.com/in/nicolas-dabene/" class="btn btn-primary" target="_blank">
-              <i class="fab fa-linkedin"></i> Suivre sur LinkedIn
+              {% include icon.html name="linkedin" %} Suivre sur LinkedIn
             </a>
           </div>
         </div>

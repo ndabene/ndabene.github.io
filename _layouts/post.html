@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 ---
 
@@ -91,7 +91,7 @@ layout: default
                     <div class="post-meta">
                         <div class="meta-primary">
                             <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-                                <i class="fas fa-calendar-alt"></i>
+                                {% include icon.html name="calendar" %}
                                 {% include date-fr.html date=page.date %}
                             </time>
                             {% if page.author %}
@@ -102,7 +102,7 @@ layout: default
                             {% endif %}
                             {% if page.estimated_reading_time %}
                                 <span class="post-reading-time">
-                                    <i class="fas fa-clock"></i>
+                                    {% include icon.html name="clock" %}
                                     {{ page.estimated_reading_time }}
                                 </span>
                             {% endif %}

@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Widget Trending Topics - Affiche les articles populaires avec métriques simulées
 {% endcomment %}
 
@@ -6,7 +6,7 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
 
 {% if trending_posts.size > 0 %}
 <div class="sidebar-widget-compact">
-    <h4><i class="fas fa-fire"></i> Tendances</h4>
+    <h4>{% include icon.html name="fire" %} Tendances</h4>
     <div class="trending-topics-list">
         {% for post in trending_posts %}
             {% assign days_since_published = site.time | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
@@ -27,7 +27,7 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
 
                         <div class="trending-stats">
                             <span class="trending-stat">
-                                <i class="fas fa-eye"></i>
+                                {% include icon.html name="eye" %}
                                 {{ simulated_views }}
                             </span>
 
@@ -36,7 +36,7 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
                                 {% assign read_time = words | divided_by: 200 %}
                                 {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
                                 <span class="trending-stat">
-                                    <i class="fas fa-clock"></i>
+                                    {% include icon.html name="clock" %}
                                     {{ read_time }} min
                                 </span>
                             {% endif %}
@@ -44,11 +44,11 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
 
                         {% if days_since_published <= 7 %}
                             <span class="trending-badge trending-hot">
-                                <i class="fas fa-fire"></i> Hot
+                                {% include icon.html name="fire" %} Hot
                             </span>
                         {% elsif days_since_published <= 30 %}
                             <span class="trending-badge trending-new">
-                                <i class="fas fa-star"></i> Nouveau
+                                {% include icon.html name="star" %} Nouveau
                             </span>
                         {% endif %}
                     </div>

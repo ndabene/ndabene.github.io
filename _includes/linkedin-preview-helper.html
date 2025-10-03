@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Helper pour prévisualiser et copier l'URL LinkedIn d'un article futur
 Usage: {% include linkedin-preview-helper.html %}
 {% endcomment %}
@@ -7,14 +7,14 @@ Usage: {% include linkedin-preview-helper.html %}
 {% assign page_date = page.date | date: "%Y%m%d%H%M%S" %}
 {% if page.admin_preview == true or page_date > current_time %}
 <div class="linkedin-preview-helper">
-  <h4><i class="fab fa-linkedin"></i> Planification LinkedIn</h4>
+  <h4>{% include icon.html name="linkedin" %} Planification LinkedIn</h4>
   
   <div class="url-preview">
     <label>URL de production :</label>
     <div class="url-display">
       <input type="text" id="production-url" value="https://nicolas-dabene.fr{{ page.url }}" readonly>
       <button onclick="copyProductionUrl()" class="btn btn-sm btn-copy">
-        <i class="fas fa-copy"></i> Copier
+        {% include icon.html name="copy" %} Copier
       </button>
     </div>
   </div>
@@ -29,7 +29,7 @@ Usage: {% include linkedin-preview-helper.html %}
 
 #{{ page.tags | join: ' #' | prepend: '#' }}</textarea>
     <button onclick="copyLinkedInSuggestion()" class="btn btn-sm btn-copy">
-      <i class="fas fa-copy"></i> Copier le post
+      {% include icon.html name="copy" %} Copier le post
     </button>
   </div>
   
@@ -47,7 +47,7 @@ function copyProductionUrl() {
   
   const btn = event.target.closest('button');
   const originalText = btn.innerHTML;
-  btn.innerHTML = '<i class="fas fa-check"></i> Copié !';
+  btn.innerHTML = '{% include icon.html name="check" %} Copié !';
   btn.classList.add('success');
   
   setTimeout(() => {
@@ -63,7 +63,7 @@ function copyLinkedInSuggestion() {
   
   const btn = event.target.closest('button');
   const originalText = btn.innerHTML;
-  btn.innerHTML = '<i class="fas fa-check"></i> Copié !';
+  btn.innerHTML = '{% include icon.html name="check" %} Copié !';
   btn.classList.add('success');
   
   setTimeout(() => {

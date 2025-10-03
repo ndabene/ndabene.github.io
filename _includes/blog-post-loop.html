@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Boucle pour afficher les posts avec gestion des futurs posts
 Usage: {% include blog-post-loop.html posts=site.posts limit=6 %}
 {% endcomment %}
@@ -44,14 +44,14 @@ html.admin-preview-active .future-post-item {
         
         {% if post.date > site.time %}
             <div class="future-post-badge-compact">
-                <i class="fas fa-clock"></i> 
+                {% include icon.html name="clock" %} 
                 Prévu le {% include date-fr.html date=post.date %}
             </div>
         {% endif %}
         
         {% if post.draft == true %}
             <div class="draft-post-badge-compact">
-                <i class="fas fa-edit"></i> 
+                {% include icon.html name="edit" %} 
                 Brouillon 
                 {% if post.preview_key %}<i class="fas fa-lock" title="Accès sécurisé"></i>{% endif %}
             </div>

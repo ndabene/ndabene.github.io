@@ -1,4 +1,4 @@
-{% comment %}
+﻿{% comment %}
 Featured Articles Grid - Grille d'articles secondaires mise en avant
 Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
 {% endcomment %}
@@ -30,7 +30,7 @@ Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
                 <div class="featured-card-content">
                     <div class="featured-card-meta">
                         <time datetime="{{ post.date | date_to_xmlschema }}">
-                            <i class="fas fa-calendar-alt"></i>
+                            {% include icon.html name="calendar" %}
                             {% include date-fr.html date=post.date %}
                         </time>
 
@@ -39,7 +39,7 @@ Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
                             {% assign read_time = words | divided_by: 200 %}
                             {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
                             <span class="reading-time">
-                                <i class="fas fa-clock"></i>
+                                {% include icon.html name="clock" %}
                                 {{ read_time }} min
                             </span>
                         {% endif %}
@@ -61,7 +61,7 @@ Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
                         {% endif %}
 
                         <span class="featured-read-more">
-                            Lire <i class="fas fa-arrow-right"></i>
+                            Lire {% include icon.html name="arrow-right" %}
                         </span>
                     </div>
                 </div>

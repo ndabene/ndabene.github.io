@@ -1,4 +1,4 @@
----
+﻿---
 layout: default
 title: Blog
 permalink: /blog/
@@ -112,13 +112,13 @@ llm_topics:
                             <span class="sort-label">Trier par :</span>
                             <div class="sort-pills">
                                 <button class="sort-pill active" data-sort="date-desc">
-                                    <i class="fas fa-fire"></i> Récent
+                                    {% include icon.html name="fire" %} Récent
                                 </button>
                                 <button class="sort-pill" data-sort="date-asc">
                                     <i class="fas fa-history"></i> Ancien
                                 </button>
                                 <button class="sort-pill" data-sort="reading-time">
-                                    <i class="fas fa-clock"></i> Rapide
+                                    {% include icon.html name="clock" %} Rapide
                                 </button>
                                 <button class="sort-pill" data-sort="title">
                                     <i class="fas fa-sort-alpha-down"></i> A-Z
@@ -137,7 +137,7 @@ llm_topics:
                         <!-- Bouton admin pour voir les futurs posts -->
                         <div id="admin-toggle-section" style="display: none;">
                             <button onclick="enableAdminPreview()" class="btn btn-admin-toggle">
-                                <i class="fas fa-eye"></i> Mode Admin (voir futurs posts)
+                                {% include icon.html name="eye" %} Mode Admin (voir futurs posts)
                             </button>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ llm_topics:
                     {% include sidebar-trending-topics.html %}
 
                     <div class="sidebar-widget-compact">
-                        <h4><i class="fas fa-clock"></i> Articles récents</h4>
+                        <h4>{% include icon.html name="clock" %} Articles récents</h4>
                         <div class="recent-posts-compact">
                             {% assign recent_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
                             {% for post in recent_posts limit: 5 %}
@@ -313,14 +313,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     '</div>' +
                     '<div class="featured-card-content">' +
                         '<div class="featured-card-meta">' +
-                            '<time><i class="fas fa-calendar-alt"></i> ' + dateFormatted + '</time>' +
-                            '<span class="reading-time"><i class="fas fa-clock"></i> ' + readTime + ' min</span>' +
+                            '<time>{% include icon.html name="calendar" %} ' + dateFormatted + '</time>' +
+                            '<span class="reading-time">{% include icon.html name="clock" %} ' + readTime + ' min</span>' +
                         '</div>' +
                         '<h3 class="featured-card-title">' + title + '</h3>' +
                         '<p class="featured-card-excerpt">' + excerpt + '</p>' +
                         '<div class="featured-card-footer">' +
                             tagsHtml +
-                            '<span class="featured-read-more">Lire <i class="fas fa-arrow-right"></i></span>' +
+                            '<span class="featured-read-more">Lire {% include icon.html name="arrow-right" %}</span>' +
                         '</div>' +
                     '</div>' +
                 '</a>' +
