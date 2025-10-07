@@ -26,11 +26,7 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
                         <h5 class="trending-title">{{ post.title | truncate: 60 }}</h5>
 
                         <div class="trending-stats">
-                            <span class="trending-stat">
-                                <i class="fas fa-eye"></i>
-                                {{ simulated_views }}
-                            </span>
-
+            
                             {% if post.content %}
                                 {% assign words = post.content | strip_html | number_of_words %}
                                 {% assign read_time = words | divided_by: 200 %}
