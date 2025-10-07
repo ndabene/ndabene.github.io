@@ -4,11 +4,23 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Vérifier si on est en mode admin
     const urlParams = new URLSearchParams(window.location.search);
-    const isAdminPreview = urlParams.get('admin_preview') === 'true' || 
-                          sessionStorage.getItem('admin_preview') === 'true';
-    
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const isAdminPreview = urlParams.get('admin_preview') === 'true' ||
+                          sessionStorage.getItem('admin_preview') === 'true' ||
+                          isLocalhost; // Auto-activer en local
+
+    console.log('📝 Future Posts Renderer:', {
+        isLocalhost: isLocalhost,
+        isAdminPreview: isAdminPreview,
+        dataScript: document.getElementById('future-posts-data') ? 'found' : 'NOT FOUND',
+        container: document.getElementById('blog-posts-container') ? 'found' : 'NOT FOUND'
+    });
+
     if (isAdminPreview) {
+        console.log('🚀 Loading future posts...');
         loadAndRenderFuturePosts();
+    } else {
+        console.log('⏸️ Admin mode not active, future posts hidden');
     }
 });
 
@@ -16,27 +28,31 @@ function loadAndRenderFuturePosts() {
     // Récupérer les données des futurs posts
     const dataScript = document.getElementById('future-posts-data');
     if (!dataScript) return;
-    
+
     try {
         const futurePosts = JSON.parse(dataScript.textContent);
         const container = document.getElementById('blog-posts-container');
-        
+
         if (!container) return;
-        
-        // Générer le HTML pour chaque futur post
-        futurePosts.forEach(post => {
+
+        // Trier les futurs posts par date (plus récent en premier)
+        futurePosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Générer le HTML pour chaque futur post en les insérant en haut
+        // On inverse l'ordre pour que le plus récent soit tout en haut
+        futurePosts.reverse().forEach(post => {
             const postHtml = generatePostPreviewHtml(post);
             container.insertAdjacentHTML('afterbegin', postHtml);
         });
-        
+
         // Réappliquer la vue actuelle après ajout des futurs posts
         const savedView = localStorage.getItem('blog-view') || 'list';
         if (savedView === 'grid') {
             container.classList.add('grid-view');
         }
-        
-        console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin`);
-        
+
+        console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin (en haut de la liste)`);
+
     } catch (error) {
         console.error('Erreur lors du chargement des futurs posts:', error);
     }
@@ -45,14 +61,19 @@ function loadAndRenderFuturePosts() {
 function generatePostPreviewHtml(post) {
     const tagsHtml = post.tags.slice(0, 3).map(tag => `<span class="tag-mini">${tag}</span>`).join('');
     const moreTagsHtml = post.tags.length > 3 ? `<span class="tag-more">+${post.tags.length - 3}</span>` : '';
-    
+    const timestamp = new Date(post.date).getTime() / 1000;
+
     return `
-        <div class="post-preview-wrapper future-post-item" 
+        <div class="post-preview-wrapper future-post-item"
              data-is-future="true"
              data-categories="${post.categories.join(' ')}"
              data-tags="${post.tags.join(' ')}"
-             data-date="${new Date(post.date).getTime() / 1000}">
-            <article class="post-preview-news">
+             data-date="${timestamp}">
+            <article class="post-preview-news"
+                     data-date="${timestamp}"
+                     data-categories="${post.categories.join(' ')}"
+                     data-tags="${post.tags.join(' ')}"
+                     data-read-time="${post.estimated_reading_time ? post.estimated_reading_time.replace(/\D/g, '') : '5'}">
                 <div class="post-news-content">
                     ${post.image ? `
                         <div class="post-news-thumb">

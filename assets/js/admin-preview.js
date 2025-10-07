@@ -4,15 +4,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Vérifier si on est en mode admin preview
     const urlParams = new URLSearchParams(window.location.search);
-    const isAdminPreview = urlParams.get('admin_preview') === 'true' || 
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const isAdminPreview = urlParams.get('admin_preview') === 'true' ||
                           sessionStorage.getItem('admin_preview') === 'true' ||
-                          localStorage.getItem('admin_preview') === 'true';
-    
+                          localStorage.getItem('admin_preview') === 'true' ||
+                          isLocalhost; // Auto-activer en local
+
+    console.log('🔍 Admin Preview Debug:', {
+        hostname: window.location.hostname,
+        isLocalhost: isLocalhost,
+        urlParam: urlParams.get('admin_preview'),
+        sessionStorage: sessionStorage.getItem('admin_preview'),
+        isAdminPreview: isAdminPreview
+    });
+
     if (isAdminPreview) {
+        console.log('✅ Mode admin activé');
         enableAdminMode();
     } else {
+        console.log('❌ Mode admin désactivé');
         // Afficher le bouton admin si on est en local
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        if (isLocalhost) {
             const adminToggle = document.getElementById('admin-toggle-section');
             if (adminToggle) {
                 adminToggle.style.display = 'block';
