@@ -109,7 +109,7 @@ function generatePostPreviewHtml(post) {
                                 ${post.difficulty}
                             </span>
                         ` : ''}
-                        <a href="${post.url}" class="read-more-compact" onclick="return false;" title="Article futur - Non accessible">
+                        <a href="${post.url}" class="read-more-compact" title="Article futur - Non accessible">
                             Lire <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
