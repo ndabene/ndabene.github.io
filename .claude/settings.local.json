@@ -10,7 +10,8 @@
       "Bash(find:*)",
       "Bash(tasklist)",
       "Bash(findstr:*)",
-      "Bash(netstat:*)"
+      "Bash(netstat:*)",
+      "mcp__ide__getDiagnostics"
     ],
     "deny": []
   }

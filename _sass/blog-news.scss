@@ -1469,16 +1469,21 @@ $tag-hover-text: #fff;
 
   .post-list-news {
     min-height: 60vh; // Hauteur minimale pour éviter l'espace vide
-    
+
     // Vue liste par défaut (format horizontal)
     .post-preview-wrapper {
       padding: 1.5rem;
       border-bottom: 1px solid $news-border;
-      
+
       &:last-child {
         border-bottom: none;
       }
-      
+
+      // Masquer les articles paginés
+      &.pagination-hidden {
+        display: none !important;
+      }
+
       // Style spécial pour les futurs posts en mode liste
       &.future-post-item {
         background: rgba(251, 191, 36, 0.03);
@@ -2711,4 +2716,134 @@ html:not(.admin-preview-active) .future-post-item {
 
 html.admin-preview-active .future-post-item {
   display: block !important;
+}
+
+//================================================
+// PAGINATION STYLES
+//================================================
+
+.pagination-container {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid $news-border;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  .pagination-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid $news-border;
+    background: white;
+    color: $news-secondary;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    &:hover:not(:disabled) {
+      background: $news-primary;
+      color: white;
+      border-color: $news-primary;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+  }
+}
+
+#pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .page-number {
+    padding: 0.6rem 1rem;
+    border: 2px solid $news-border;
+    background: white;
+    color: $news-secondary;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-width: 44px;
+    text-align: center;
+
+    &:hover {
+      background: $news-hover;
+      border-color: $news-secondary;
+      transform: translateY(-2px);
+    }
+
+    &.active {
+      background: $news-primary;
+      color: white;
+      border-color: $news-primary;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .pagination-ellipsis {
+    padding: 0.6rem 0.5rem;
+    color: $news-secondary;
+    font-weight: 600;
+  }
+}
+
+.pagination-info-wrapper {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid $news-border;
+  color: $news-secondary;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  #showing-range,
+  #total-posts {
+    font-weight: 700;
+    color: $news-primary;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagination-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .pagination {
+    gap: 0.5rem;
+
+    .pagination-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  #pagination-numbers {
+    gap: 0.35rem;
+
+    .page-number {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+      min-width: 38px;
+    }
+  }
 }

@@ -142,15 +142,10 @@ llm_topics:
                         </div>
                     </div>
                     
-                    <div class="post-list-news" id="blog-posts-container">
-                        {% comment %}Pagination avec paramètre page{% endcomment %}
-                        {% assign page_param = page.url | split: '?page=' | last | default: '1' %}
-                        {% assign current_page = page_param | times: 1 | default: 1 %}
-                        {% assign posts_per_page = 6 %}
-                        {% assign offset_calc = current_page | minus: 1 | times: posts_per_page | plus: 4 %}
-
-                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: offset_calc %}
-                        {% include blog-post-loop.html posts=published_posts_list limit=6 %}
+                    <div class="post-list-news grid-view" id="blog-posts-container">
+                        {% comment %}Charger tous les articles publiés - la pagination est gérée par JavaScript{% endcomment %}
+                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: 4 %}
+                        {% include blog-post-loop.html posts=published_posts_list %}
                     </div>
                     
                     <!-- Message quand aucun résultat -->
@@ -166,16 +161,19 @@ llm_topics:
                     <!-- Données des futurs posts pour le mode admin -->
                     {% include future-posts-data.html %}
 
-                    <!-- Pagination simplifiée sans JS externe -->
+                    <!-- Pagination -->
                     {% assign posts_per_page = 6 %}
                     {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
                     {% assign remaining_posts = published_posts_count | minus: 4 %}
                     {% if remaining_posts > posts_per_page %}
                         <div class="pagination-container">
                             <div class="pagination">
-                                <button id="prev-page-simple" class="pagination-btn" disabled>&laquo; Précédent</button>
-                                <span class="pagination-info">Page <span id="current-page">1</span> / <span id="total-pages">{{ remaining_posts | divided_by: posts_per_page | plus: 1 }}</span></span>
-                                <button id="next-page-simple" class="pagination-btn">Suivant &raquo;</button>
+                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
+                                <div id="pagination-numbers"></div>
+                                <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
+                            </div>
+                            <div class="pagination-info-wrapper">
+                                Affichage <span id="showing-range">1-6</span> sur <span id="total-posts">{{ remaining_posts }}</span> articles
                             </div>
                         </div>
                     {% endif %}
@@ -265,6 +263,8 @@ llm_topics:
         {% endif %}
     </div>
 </section>
+
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
 
 <script>
 // Randomisation des articles featured - Portail Presse
@@ -465,6 +465,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Appliquer le tri
         sortPosts(currentSort);
+
+        // Mettre à jour la pagination après filtrage
+        if (window.blogPaginationUpdate) {
+            window.blogPaginationUpdate();
+        }
     }
     
     // Fonction pour ajouter un filtre actif
@@ -659,50 +664,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exécuter un filtrage initial et vérifier les résultats
     setTimeout(applyFilters, 300);
     setTimeout(checkVisiblePosts, 1000);
-});
-</script>
-
-<!-- Pagination simple inline -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prev-page-simple');
-    const nextBtn = document.getElementById('next-page-simple');
-    const currentPageSpan = document.getElementById('current-page');
-    const totalPagesSpan = document.getElementById('total-pages');
-    const blogContent = document.querySelector('.blog-filters-container');
-
-    if (!prevBtn || !nextBtn) return;
-
-    const totalPages = parseInt(totalPagesSpan.textContent);
-
-    // Lire page actuelle depuis URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentPage = parseInt(urlParams.get('page')) || 1;
-
-    // Si on est sur une page > 1, scroller vers "Articles du blog"
-    if (currentPage > 1 && blogContent) {
-        setTimeout(function() {
-            blogContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-    }
-
-    // Mettre à jour l'affichage
-    currentPageSpan.textContent = currentPage;
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage >= totalPages;
-
-    // Navigation
-    prevBtn.addEventListener('click', function() {
-        if (currentPage > 1) {
-            window.location.href = '/blog/?page=' + (currentPage - 1);
-        }
-    });
-
-    nextBtn.addEventListener('click', function() {
-        if (currentPage < totalPages) {
-            window.location.href = '/blog/?page=' + (currentPage + 1);
-        }
-    });
 });
 </script>
 
