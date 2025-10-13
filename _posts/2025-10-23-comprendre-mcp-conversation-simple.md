@@ -201,10 +201,3 @@ Le plus beau dans tout ça ? Ce que nous venons d'apprendre n'était que la thé
 Dans un prochain article, nous mettrons les mains dans le code : initialisation du projet TypeScript, création de notre premier outil `readFile`, gestion des permissions et tests avec Claude. Mais pour l'instant, vous avez acquis la compréhension conceptuelle essentielle. C'est la fondation solide sur laquelle nous construirons notre serveur MCP.
 
 ---
-
-*Article publié le 23 octobre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience dans l'architecture logicielle et l'intégration d'IA*
-
-**À lire aussi :**
-- [Introduction à l'orchestration d'IA pour développeurs]
-- [Créer son premier serveur MCP : Guide pratique TypeScript]
-- [Sécurité et bonnes pratiques MCP pour applications d'entreprise]
