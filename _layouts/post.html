@@ -69,85 +69,6 @@ layout: default
 </script>
 
 <article class="post-page">
-    {% if page.image %}
-    <div class="post-banner" data-banner-position="{{ page.banner_position | default: 'center' }}">
-        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-banner-image">
-        <div class="post-banner-overlay" style="{% if page.banner_overlay %}opacity: {{ page.banner_overlay }};{% endif %}">
-            <div class="container">
-                <div class="post-banner-content-bg">
-                    <div class="post-banner-content">
-                    <div class="post-breadcrumb">
-                        <a href="/" class="breadcrumb-home">Accueil</a>
-                        <span class="breadcrumb-separator">/</span>
-                        <a href="/blog/" class="breadcrumb-blog">Blog</a>
-                        {% if page.categories and page.categories.size > 0 %}
-                            <span class="breadcrumb-separator">/</span>
-                            <span class="breadcrumb-category">{{ page.categories[0] }}</span>
-                        {% endif %}
-                    </div>
-                    
-                    <h1 class="post-title">{{ page.title }}</h1>
-                    
-                    <div class="post-meta">
-                        <div class="meta-primary">
-                            <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
-                                <i class="fas fa-calendar-alt"></i>
-                                {% include date-fr.html date=page.date %}
-                            </time>
-                            {% if page.author %}
-                                <span class="post-author">
-                                    <i class="fas fa-user"></i>
-                                    {{ page.author }}
-                                </span>
-                            {% endif %}
-                            {% if page.estimated_reading_time %}
-                                <span class="post-reading-time">
-                                    <i class="fas fa-clock"></i>
-                                    {{ page.estimated_reading_time }}
-                                </span>
-                            {% endif %}
-                        </div>
-                        
-                        {% if page.technologies and page.technologies.size > 0 %}
-                        <div class="meta-secondary">
-                            <div class="post-technologies">
-                                {% for tech in page.technologies limit: 3 %}
-                                    <span class="tech-badge">{{ tech }}</span>
-                                {% endfor %}
-                                {% if page.technologies.size > 3 %}
-                                    <span class="tech-more">+{{ page.technologies.size | minus: 3 }}</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                        {% endif %}
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% else %}
-    <header class="post-header-section">
-        <div class="container text-center">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <p class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}">{% include date-fr.html date=page.date %}</time>
-                {% if page.author %} &bull; {{ page.author }}{% endif %}
-                {% if page.read_time_minutes %} &bull; {{ page.read_time_minutes }} min read{% endif %}
-                {% if page.difficulty %} &bull; <span class="badge badge--difficulty-{{ page.difficulty | slugify }}">{{ page.difficulty }}</span>{% endif %}
-            </p>
-            <div class="post-categories-tags">
-                {% for category in page.categories %}
-                    <span class="badge badge--category" data-category="{{ category | slugify }}">{{ category }}</span>
-                {% endfor %}
-                {% for tag in page.tags %}
-                    <span class="badge badge--tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-        </div>
-    </header>
-    {% endif %}
-
     <!-- Barre d'administration pour preview -->
     {% include admin-preview-bar.html %}
     
@@ -158,16 +79,91 @@ layout: default
     </div>
     {% endif %}
 
+    <!-- Header d'article en pleine largeur -->
+    <header class="post-header-fullwidth">
+        <div class="post-header-content">
+            <div class="post-breadcrumb">
+                <a href="/" class="breadcrumb-home">Accueil</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="/blog/" class="breadcrumb-blog">Blog</a>
+                {% if page.categories and page.categories.size > 0 %}
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-category">{{ page.categories[0] }}</span>
+                {% endif %}
+            </div>
+
+            <h1 class="post-title">{{ page.title }}</h1>
+
+            <div class="post-meta">
+                <div class="meta-primary">
+                    <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        {% include date-fr.html date=page.date %}
+                    </time>
+                    {% if page.author %}
+                        <span class="post-author">
+                            <i class="fas fa-user"></i>
+                            {{ page.author }}
+                        </span>
+                    {% endif %}
+                    {% if page.estimated_reading_time %}
+                        <span class="post-reading-time">
+                            <i class="fas fa-clock"></i>
+                            {{ page.estimated_reading_time }}
+                        </span>
+                    {% endif %}
+                </div>
+
+                {% if page.technologies and page.technologies.size > 0 %}
+                <div class="meta-secondary">
+                    <div class="post-technologies">
+                        {% for tech in page.technologies limit: 3 %}
+                            <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                        {% if page.technologies.size > 3 %}
+                            <span class="tech-more">+{{ page.technologies.size | minus: 3 }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
     <div class="post-content-wrapper">
         <div class="container">
             <div class="post-layout">
+                <!-- Sidebar pour la table des matières (desktop uniquement) -->
+                {% if page.table_of_contents != false %}
+                <aside class="post-sidebar">
+                    <div class="sidebar-toc">
+                        <h3 class="sidebar-toc-title">
+                            <i class="fas fa-list"></i>
+                            Table des matières
+                        </h3>
+                        <nav class="toc-content">
+                            <ul class="toc-list" id="toc-nav">
+                                <!-- TOC will be generated by JavaScript -->
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+                {% endif %}
+
                 <!-- Main Content -->
-                <main class="post-main-content">
+                <main class="post-main-content{% if page.table_of_contents != false %} has-sidebar{% endif %}">
+                    <!-- Image de bannière dans le contenu -->
+                    {% if page.image %}
+                    <div class="post-banner-image-container">
+                        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-banner-image">
+                    </div>
+                    {% endif %}
+
                     <!-- Navigation série en haut de l'article -->
                     {% include series-navigation.html %}
                     
                     <article class="post-content">
-                        <!-- Table des matières repliable -->
+                        <!-- Table des matières repliable (mobile uniquement) -->
                         {% if page.table_of_contents != false %}
                         <div class="table-of-contents-inline">
                             <button class="toc-toggle" id="toc-toggle">
@@ -176,7 +172,7 @@ layout: default
                                 <i class="fas fa-chevron-down toc-arrow"></i>
                             </button>
                             <nav class="toc-content" id="toc-content">
-                                <ul class="toc-list" id="toc-nav">
+                                <ul class="toc-list" id="toc-nav-mobile">
                                     <!-- TOC will be generated by JavaScript -->
                                 </ul>
                             </nav>
@@ -371,27 +367,36 @@ layout: default
         }
         
         // Auto-generate Table of Contents
-        const tocNav = document.getElementById('toc-nav');
-        if (tocNav) {
+        const tocNavDesktop = document.getElementById('toc-nav');
+        const tocNavMobile = document.getElementById('toc-nav-mobile');
+
+        if (tocNavDesktop || tocNavMobile) {
             const headings = document.querySelectorAll('.post-content h2, .post-content h3');
             let tocHTML = '';
-            
+
             headings.forEach((heading, index) => {
                 const id = 'heading-' + index;
                 heading.id = id;
-                
+
                 const level = heading.tagName.toLowerCase();
                 const text = heading.textContent;
                 const className = level === 'h2' ? 'toc-h2' : 'toc-h3';
-                
+
                 tocHTML += `<li class="${className}"><a href="#${id}">${text}</a></li>`;
             });
-            
-            tocNav.innerHTML = tocHTML;
-            
-            // Highlight current section
-            const tocLinks = tocNav.querySelectorAll('a');
-            function highlightCurrentSection() {
+
+            // Générer la TOC pour desktop (sidebar)
+            if (tocNavDesktop) {
+                tocNavDesktop.innerHTML = tocHTML;
+            }
+
+            // Générer la TOC pour mobile (inline)
+            if (tocNavMobile) {
+                tocNavMobile.innerHTML = tocHTML;
+            }
+
+            // Fonction pour mettre à jour les liens actifs
+            function updateActiveLinks() {
                 let current = '';
                 headings.forEach(heading => {
                     const rect = heading.getBoundingClientRect();
@@ -399,20 +404,36 @@ layout: default
                         current = heading.id;
                     }
                 });
-                
-                tocLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
+
+                // Mettre à jour les liens dans la sidebar desktop
+                if (tocNavDesktop) {
+                    const desktopLinks = tocNavDesktop.querySelectorAll('a');
+                    desktopLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+
+                // Mettre à jour les liens dans la TOC mobile
+                if (tocNavMobile) {
+                    const mobileLinks = tocNavMobile.querySelectorAll('a');
+                    mobileLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
             }
-            
-            window.addEventListener('scroll', highlightCurrentSection);
-            highlightCurrentSection();
-            
-            // Gestion du scroll avec offset pour la navbar
-            tocLinks.forEach(link => {
+
+            window.addEventListener('scroll', updateActiveLinks);
+            updateActiveLinks();
+
+            // Gestion du scroll avec offset pour tous les liens TOC
+            const allTocLinks = document.querySelectorAll('#toc-nav a, #toc-nav-mobile a');
+            allTocLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('href').substring(1);
@@ -420,18 +441,18 @@ layout: default
                     const navbar = document.querySelector('.main-navigation');
                     const navbarHeight = navbar ? navbar.offsetHeight : 70;
                     const isMobile = window.innerWidth <= 768;
-                    
+
                     if (targetElement) {
                         const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
                         const scrollOffset = isMobile ? navbarHeight + 20 : navbarHeight + 30;
-                        
+
                         window.scrollTo({
                             top: offsetTop - scrollOffset,
                             behavior: 'smooth'
                         });
-                        
+
                         // Fermer la TOC sur mobile après clic
-                        if (isMobile && tocContent.classList.contains('expanded')) {
+                        if (isMobile && tocContent && tocContent.classList.contains('expanded')) {
                             tocToggle.click();
                         }
                     }

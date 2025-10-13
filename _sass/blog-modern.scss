@@ -1020,15 +1020,398 @@ $blog-content-bg: $white;
 }
 
 .post-layout {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 0 1rem;
+    gap: 1rem;
   }
 }
 
+// Header d'article en pleine largeur
+.post-header-fullwidth {
+  width: 100%;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+  color: #ffffff; // Couleur de texte par défaut blanche
+
+  // Forcer tous les éléments de texte à être blancs
+  * {
+    color: inherit;
+  }
+
+  .post-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+
+    .post-breadcrumb {
+      margin-bottom: 1.5rem;
+
+      a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: #60a5fa;
+        }
+      }
+
+      .breadcrumb-separator {
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0 0.5rem;
+      }
+
+      .breadcrumb-category {
+        color: #60a5fa;
+        font-weight: 500;
+      }
+    }
+
+    .post-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 2rem 0;
+      line-height: 1.1;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .post-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .meta-primary {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        time, span {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 1rem;
+
+          i {
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
+
+      .meta-secondary {
+        .post-technologies {
+          display: flex;
+          gap: 0.5rem;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .tech-badge {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(139, 92, 246, 0.2) 50%, rgba(236, 72, 153, 0.2) 100%);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            backdrop-filter: blur(12px);
+            box-shadow:
+              0 4px 20px rgba(6, 182, 212, 0.15),
+              0 0 0 1px rgba(255, 255, 255, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            font-size: 0.8rem;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                rgba(255, 255, 255, 0.2),
+                transparent);
+              transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+              animation: shimmer 3s infinite;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: -50%;
+              left: -50%;
+              width: 200%;
+              height: 200%;
+              background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(6, 182, 212, 0.3),
+                rgba(139, 92, 246, 0.3),
+                rgba(236, 72, 153, 0.3),
+                transparent
+              );
+              animation: rotate 8s linear infinite;
+              opacity: 0;
+              transition: opacity 0.4s ease;
+            }
+
+            &:hover {
+              background: linear-gradient(135deg, rgba(6, 182, 212, 0.35) 0%, rgba(139, 92, 246, 0.35) 50%, rgba(236, 72, 153, 0.35) 100%);
+              border-color: rgba(255, 255, 255, 0.5);
+              transform: translateY(-2px) scale(1.02);
+              box-shadow:
+                0 8px 32px rgba(6, 182, 212, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+
+          .tech-more {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+            backdrop-filter: blur(8px);
+            box-shadow:
+              0 2px 12px rgba(0, 0, 0, 0.15),
+              0 0 0 1px rgba(255, 255, 255, 0.1),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -50%;
+              left: -50%;
+              width: 200%;
+              height: 200%;
+              background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+              );
+              animation: rotate 6s linear infinite;
+              opacity: 0.3;
+            }
+
+            &:hover {
+              background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+              border-color: rgba(255, 255, 255, 0.5);
+              color: #ffffff;
+              transform: translateY(-1px);
+              box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+
+    .post-header-content {
+      padding: 0;
+
+      .post-title {
+        font-size: 2rem;
+      }
+
+      .post-meta .meta-primary {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// Animations pour les badges technologiques
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Image de bannière dans le contenu
+.post-banner-image-container {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .post-banner-image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-height: 250px;
+  }
+}
+
+// Sidebar pour la table des matières
+.post-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    order: 2; // Sidebar en bas sur tablet
+  }
+
+  @media (max-width: 768px) {
+    display: none; // Masquer la sidebar sur mobile
+  }
+}
+
+.sidebar-toc {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  position: sticky;
+  top: 2rem;
+
+  .sidebar-toc-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i {
+      color: #4a5568;
+    }
+  }
+
+  .toc-content {
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        &.toc-h2 {
+          font-weight: 600;
+          color: #2d3748;
+
+          a {
+            color: #2d3748;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+
+            &:hover {
+              color: #3182ce;
+              border-left-color: #3182ce;
+            }
+
+            &.active {
+              color: #3182ce;
+              border-left-color: #3182ce;
+              background-color: rgba(49, 130, 206, 0.1);
+            }
+          }
+        }
+
+        &.toc-h3 {
+          margin-left: 1rem;
+          font-weight: 500;
+          color: #4a5568;
+
+          a {
+            color: #4a5568;
+            text-decoration: none;
+            padding: 0.25rem 0;
+            display: block;
+            font-size: 0.9rem;
+            border-left: 2px solid transparent;
+            transition: all 0.2s ease;
+
+            &:hover {
+              color: #3182ce;
+              border-left-color: #3182ce;
+            }
+
+            &.active {
+              color: #3182ce;
+              border-left-color: #3182ce;
+              background-color: rgba(49, 130, 206, 0.05);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // Contenu principal de l'article
 .post-main-content {
@@ -1038,12 +1421,19 @@ $blog-content-bg: $white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(226, 232, 240, 0.8);
   width: 100%;
-  
+  flex: 1;
+
+  &.has-sidebar {
+    @media (min-width: 1025px) {
+      // Ajustements spécifiques quand il y a une sidebar
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 2rem;
     border-radius: 8px;
   }
-  
+
   @media (max-width: 480px) {
     padding: 1.5rem;
   }
@@ -1228,13 +1618,18 @@ $blog-content-bg: $white;
   border-radius: 16px;
   margin: 2rem 0;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba($primary-color, 0.12),
     0 0 0 1px rgba($accent-color-1, 0.1);
   backdrop-filter: blur(8px);
   position: relative;
   z-index: 10; // S'assurer qu'elle est toujours visible
   transition: all 0.3s ease; // Transition fluide pour le retour en position normale
+
+  // Masquer sur desktop (>1024px) car on utilise la sidebar
+  @media (min-width: 1025px) {
+    display: none;
+  }
   
   // Mobile : assurer la visibilité
   @media (max-width: 768px) {
