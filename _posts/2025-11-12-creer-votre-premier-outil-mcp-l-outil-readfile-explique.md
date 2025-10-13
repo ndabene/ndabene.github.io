@@ -669,3 +669,10 @@ En attendant, expérimentez ! Créez vos propres outils. Que diriez-vous d'un ou
 
 *Article publié le 12 novembre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience dans l'architecture logicielle et l'intégration d'IA*
 
+**À lire aussi :**
+- [Comprendre le Model Context Protocol (MCP) : Une Conversation Simple](/articles/2025/10/23/comprendre-mcp-conversation-simple)
+- [Créer son Premier Serveur MCP : Setup du Projet TypeScript](/articles/2025/10/30/setup-serveur-mcp-typescript)
+- [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Sécuriser votre Serveur MCP : Permissions, Validation et Protection](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
+- [Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete)
+

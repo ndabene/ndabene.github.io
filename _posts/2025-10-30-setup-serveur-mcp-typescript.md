@@ -316,3 +316,10 @@ Dans le prochain article, nous allons créer notre premier véritable outil MCP 
 N'hésitez pas à expérimenter avec ce setup. Essayez d'ajouter d'autres routes Express, jouez avec TypeScript, familiarisez-vous avec l'environnement. Plus vous serez à l'aise avec ces bases, plus la suite sera naturelle.
 
 ---
+
+**À lire aussi :**
+- [Comprendre le Model Context Protocol (MCP) : Une Conversation Simple](/articles/2025/10/23/comprendre-mcp-conversation-simple)
+- [Créer votre Premier Outil MCP : L'Outil readFile Expliqué](/articles/2025/11/12/creer-votre-premier-outil-mcp-l-outil-readfile-explique)
+- [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Sécuriser votre Serveur MCP : Permissions, Validation et Protection](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
+- [Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete)

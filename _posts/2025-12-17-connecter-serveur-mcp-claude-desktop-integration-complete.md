@@ -789,11 +789,11 @@ Le code que vous avez écrit est solide, sécurisé et maintenable. Il peut serv
 *Article publié le 17 décembre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience dans l'architecture logicielle et l'intégration d'IA*
 
 **Série complète MCP :**
-- [Partie 1 : Comprendre le Model Context Protocol]
-- [Partie 2 : Setup du Projet TypeScript]
-- [Partie 3 : Créer l'Outil readFile]
-- [Partie 4 : Système de Découverte]
-- [Partie 5 : Sécurité et Permissions]
-- [Partie 6 : Connexion Claude Desktop] ← Vous êtes ici
+- [Partie 1 : Comprendre le Model Context Protocol](/articles/2025/10/23/comprendre-mcp-conversation-simple)
+- [Partie 2 : Setup du Projet TypeScript](/articles/2025/10/30/setup-serveur-mcp-typescript)
+- [Partie 3 : Créer l'Outil readFile](/articles/2025/11/12/creer-votre-premier-outil-mcp-l-outil-readfile-explique)
+- [Partie 4 : Système de Découverte](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Partie 5 : Sécurité et Permissions](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
+- [Partie 6 : Connexion Claude Desktop](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete) ← Vous êtes ici
 
 **Merci d'avoir suivi cette série ! N'hésitez pas à partager vos créations MCP, je serais ravi de les découvrir.** 🚀

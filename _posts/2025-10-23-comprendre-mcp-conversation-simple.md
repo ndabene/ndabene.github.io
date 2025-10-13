@@ -201,3 +201,10 @@ Le plus beau dans tout ça ? Ce que nous venons d'apprendre n'était que la thé
 Dans un prochain article, nous mettrons les mains dans le code : initialisation du projet TypeScript, création de notre premier outil `readFile`, gestion des permissions et tests avec Claude. Mais pour l'instant, vous avez acquis la compréhension conceptuelle essentielle. C'est la fondation solide sur laquelle nous construirons notre serveur MCP.
 
 ---
+
+**À lire aussi :**
+- [Créer son Premier Serveur MCP : Setup du Projet TypeScript](/articles/2025/10/30/setup-serveur-mcp-typescript)
+- [Créer votre Premier Outil MCP : L'Outil readFile Expliqué](/articles/2025/11/12/creer-votre-premier-outil-mcp-l-outil-readfile-explique)
+- [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Sécuriser votre Serveur MCP : Permissions, Validation et Protection](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
+- [Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete)

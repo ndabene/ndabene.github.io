@@ -1930,7 +1930,8 @@ En attendant, testez votre système de sécurité ! Essayez de le contourner, te
 *Article publié le 10 décembre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience dans l'architecture logicielle et l'intégration d'IA*
 
 **À lire aussi :**
-- [Comprendre le Model Context Protocol (MCP) : Une Conversation Simple]
-- [Créer son Premier Serveur MCP : Setup du Projet TypeScript]
-- [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils]
-- [Connecter MCP à Claude Desktop : L'Intégration Finale] (à venir)
+- [Comprendre le Model Context Protocol (MCP) : Une Conversation Simple](/articles/2025/10/23/comprendre-mcp-conversation-simple)
+- [Créer son Premier Serveur MCP : Setup du Projet TypeScript](/articles/2025/10/30/setup-serveur-mcp-typescript)
+- [Créer votre Premier Outil MCP : L'Outil readFile Expliqué](/articles/2025/11/12/creer-votre-premier-outil-mcp-l-outil-readfile-explique)
+- [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete)
