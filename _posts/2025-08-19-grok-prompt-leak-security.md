@@ -1,16 +1,30 @@
 ---
+---
 layout: post
-title: "Grok expose ses prompts système : leçons pour la sécurité IA"
+title: 'Grok expose ses prompts système : leçons pour la sécurité IA'
 date: 2025-08-19
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Sécurité]
-tags: [prompt engineering, IA générative, sécurité, xAI, ChatGPT, Claude]
-excerpt: "L'exposition accidentelle des prompts système de Grok révèle des failles critiques de sécurité. Analyse technique des risques et bonnes pratiques."
-image: /assets/images/blog/2025-08-19-grok-prompt-leak-security.jpg
+categories:
+- Techniques
+tags:
+- prompt-engineering
+- ia-générative
+- security-sécurité
+- xai
+- ia-chatgpt
+- ia-claude
+excerpt: L'exposition accidentelle des prompts système de Grok révèle des failles
+  critiques de sécurité. Analyse technique des risques et bonnes pratiques.
+image: "/assets/images/blog/2025-08-19-grok-prompt-leak-security.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "Prompt Engineering", "Sécurité"]
-estimated_reading_time: "7 minutes"
+difficulty: Avancé
+technologies:
+- IA
+- Prompt Engineering
+- Sécurité
+estimated_reading_time: 5 minutes
+series: Sécurité IA
+word_count: 966
 ---
 
 # Grok expose ses prompts système : leçons pour la sécurité IA

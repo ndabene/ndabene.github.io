@@ -1,20 +1,33 @@
 ---
+---
 layout: post
-title: "L'évolution historique du 'Back to School' : De la tradition retail au phénomène
-  e-commerce"
+title: 'L''évolution historique du ''Back to School'' : De la tradition retail au
+  phénomène e-commerce'
 date: 2025-07-17
-categories: [Ecommerce, Commerce, Analyse Marché]
-tags: [rentrée scolaire, ecommerce, commerce retail, transformation digitale, 
-    analyse marché]
-description: "Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
+categories:
+- Techniques
+tags:
+- rentrée-scolaire
+- ecommerce
+- commerce-retail
+- transformation-digitale
+- analyse-marché
+description: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
   en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
-  traditionnel vers l'e-commerce."
-image: /assets/images/blog/back-to-school-evolution.jpg
-llm_summary: Analyse de l'évolution du marché 'Back to School' de 172,3 
-  milliards en 2024 vers 230,1 milliards projetés en 2030, explorant la 
-  transformation du retail traditionnel vers l'e-commerce.
-llm_topics: [rentrée scolaire, ecommerce, commerce retail, transformation 
-    digitale, analyse marché]
+  traditionnel vers l'e-commerce.
+image: "/assets/images/blog/back-to-school-evolution.jpg"
+llm_summary: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
+  en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
+  traditionnel vers l'e-commerce.
+llm_topics:
+- rentrée scolaire
+- ecommerce
+- commerce retail
+- transformation digitale
+- analyse marché
+difficulty: Avancé
+word_count: 778
+estimated_reading_time: 4 minutes
 ---
 L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affaires de **172,3 milliards de dollars en 2024** et une projection de **230,1 milliards de dollars d'ici 2030**.
 

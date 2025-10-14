@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "Grok Code Fast 1 : l'IA de codage rapide signée xAI"
+title: 'Grok Code Fast 1 : l''IA de codage rapide signée xAI'
 date: 2025-09-01
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement]
-tags: [xAI, Grok, IA de codage, GitHub Copilot, DeepSeek, GPT-5]
-excerpt: "xAI, la startup d'Elon Musk, lance Grok Code Fast 1 : un modèle de codage ultra-rapide et low cost intégré à GitHub Copilot. Promesses, limites et impact pour les développeurs."
-image: /assets/images/blog/2025-09-01-grok-code-fast-1.jpg
+categories:
+- Techniques
+tags:
+- xai
+- grok
+- ia-de-codage
+- github-copilot
+- deepseek
+- gpt-5
+excerpt: 'xAI, la startup d''Elon Musk, lance Grok Code Fast 1 : un modèle de codage
+  ultra-rapide et low cost intégré à GitHub Copilot. Promesses, limites et impact
+  pour les développeurs.'
+image: "/assets/images/blog/2025-09-01-grok-code-fast-1.jpg"
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["IA", "Développement", "GitHub Copilot", "PrestaShop"]
-estimated_reading_time: "9 minutes"
+difficulty: Avancé
+technologies:
+- IA
+- Développement
+- GitHub Copilot
+- PrestaShop
+estimated_reading_time: 4 minutes
+series: Sécurité IA
+word_count: 661
 ---
 
 # Grok Code Fast 1 : l'IA de codage rapide signée xAI

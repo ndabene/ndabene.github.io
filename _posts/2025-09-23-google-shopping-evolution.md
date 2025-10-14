@@ -1,16 +1,31 @@
 ---
+---
 layout: post
-title: "L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)"
+title: 'L''Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)'
 date: 2025-09-23
 author: Nicolas Dabène
-categories: [Ecommerce, Intelligence Artificielle]
-tags: [Google Shopping, e-commerce, SEO, IA, marketplace, publicité digitale]
-excerpt: "De simple comparateur gratuit à plateforme IA sophistiquée : découvrez 23 ans d'évolution révolutionnaire de Google Shopping."
-image: /assets/images/blog/2025-09-23-google-shopping-evolution.jpg
+categories:
+- Analyses
+tags:
+- google-shopping
+- e-commerce
+- seo
+- ia-ia
+- marketplace
+- publicité-digitale
+excerpt: 'De simple comparateur gratuit à plateforme IA sophistiquée : découvrez 23
+  ans d''évolution révolutionnaire de Google Shopping.'
+image: "/assets/images/blog/2025-09-23-google-shopping-evolution.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["Google Ads", "IA", "E-commerce", "SEO"]
-estimated_reading_time: "12 minutes"
+difficulty: Avancé
+technologies:
+- Google Ads
+- IA
+- E-commerce
+- SEO
+estimated_reading_time: 12 minutes
+series: IA E-commerce
+word_count: 2314
 ---
 
 # L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)

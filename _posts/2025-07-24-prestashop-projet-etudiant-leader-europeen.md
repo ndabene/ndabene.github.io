@@ -1,31 +1,55 @@
 ---
+---
 layout: post
-title: "PrestaShop : De projet étudiant à leader européen de l'e-commerce - L'épopée
-  complète (2005-2025)"
+title: 'PrestaShop : De projet étudiant à leader européen de l''e-commerce - L''épopée
+  complète (2005-2025)'
 date: 2025-07-24
 author: Nicolas Dabène
-categories: [Ecommerce, Entrepreneuriat, Success Story]
-tags: [PrestaShop, startup, ecommerce, entrepreneuriat, plateforme, open source, 
-    success story, Bruno Levesque, Epitech]
-excerpt: "PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises
+categories:
+- Case Studies
+tags:
+- prestashop
+- startup
+- ecommerce
+- ia-entrepreneuriat
+- plateforme
+- open-source
+- success-story
+- bruno-levesque
+- epitech
+excerpt: PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises
   de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce
   générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success
   story de 20 ans illustre parfaitement la capacité d'innovation française face aux
-  géants américains du secteur."
-image: 
-  /assets/images/blog/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
+  géants américains du secteur.
+image: "/assets/images/blog/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "E-commerce", "PHP", "Open Source", "Symfony", "MBE Worldwide"]
-estimated_reading_time: "18 minutes"
-llm_summary: PrestaShop incarne l'une des plus belles réussites 
-  entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech 
-  en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 
-  300 000 marchands mondiaux, cette success story de 20 ans illustre 
-  parfaitement la capacité d'innovation française face aux géants américains du 
-  secteur.
-llm_topics: [PrestaShop, startup, ecommerce, entrepreneuriat, plateforme, open 
-    source, success story, Bruno Levesque, Epitech]
+difficulty: Avancé
+technologies:
+- PrestaShop
+- E-commerce
+- PHP
+- Open Source
+- Symfony
+- MBE Worldwide
+estimated_reading_time: 9 minutes
+llm_summary: PrestaShop incarne l'une des plus belles réussites entrepreneuriales
+  françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme
+  e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux,
+  cette success story de 20 ans illustre parfaitement la capacité d'innovation française
+  face aux géants américains du secteur.
+llm_topics:
+- PrestaShop
+- startup
+- ecommerce
+- entrepreneuriat
+- plateforme
+- open source
+- success story
+- Bruno Levesque
+- Epitech
+series: PrestaShop Architecture
+word_count: 1761
 ---
 Prestashop: De projet étudiant à leader européen de l'e-commerce - L'épopée complète (2005-2025) PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success story de 20 ans illustre parfaitement la capacité d'innovation française face aux géants américains du secteur. Avec le lancement récent de PrestaShop 9.0 en juin 2025, l'entreprise entame un nouveau chapitre de son histoire, marqué par une modernisation technique ambitieuse et des défis concurrentiels renouvelés.
 

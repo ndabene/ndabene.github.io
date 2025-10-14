@@ -1,17 +1,39 @@
 ---
+---
 layout: post
-title: "OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)"
+title: 'OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)'
 date: 2025-10-16
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Automatisation]
-tags: [OpenAI, Agent Builder, AgentKit, ChatKit, IA conversationnelle, Automatisation, No-code, Zapier, n8n, Make]
-excerpt: "Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans coder. Une démocratisation de l'automatisation intelligente."
-image: /assets/images/blog/2025-10-16-openai-agent-builder.jpg
+categories:
+- Techniques
+tags:
+- ia-openai
+- agent-builder
+- agentkit
+- chatkit
+- ia-conversationnelle
+- automatisation
+- no-code
+- zapier
+- n8n
+- make
+excerpt: Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée
+  en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans
+  coder. Une démocratisation de l'automatisation intelligente.
+image: "/assets/images/blog/2025-10-16-openai-agent-builder.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["OpenAI", "Agent Builder", "AgentKit", "ChatKit", "IA", "Automatisation"]
-estimated_reading_time: "18 minutes"
+difficulty: Avancé
+technologies:
+- OpenAI
+- Agent Builder
+- AgentKit
+- ChatKit
+- IA
+- Automatisation
+estimated_reading_time: 12 minutes
 is_future: true
+series: Sécurité IA
+word_count: 2322
 ---
 
 # OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)

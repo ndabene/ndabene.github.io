@@ -1,16 +1,31 @@
 ---
+---
 layout: post
-title: "Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop"
+title: Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop
 date: 2025-09-08
 author: Nicolas Dabène
-categories: [PrestaShop, PHP, Développement]
-tags: [Doctrine, PrestaShop 9, ORM, database, modules, PHP 8]
-excerpt: "Découvrez comment résoudre l'erreur 'Base table or view not found' avec Doctrine dans PrestaShop en automatisant la gestion des préfixes de tables dynamiques."
-image: /assets/images/blog/2025-09-08-doctrine-prestashop-prefix.jpg
+categories:
+- Techniques
+tags:
+- doctrine
+- prestashop-9
+- orm
+- database
+- modules
+- dev-php-8
+excerpt: Découvrez comment résoudre l'erreur 'Base table or view not found' avec Doctrine
+  dans PrestaShop en automatisant la gestion des préfixes de tables dynamiques.
+image: "/assets/images/blog/2025-09-08-doctrine-prestashop-prefix.jpg"
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["PHP", "PrestaShop", "Doctrine", "Symfony"]
-estimated_reading_time: "8 minutes"
+difficulty: Avancé
+technologies:
+- PHP
+- PrestaShop
+- Doctrine
+- Symfony
+estimated_reading_time: 6 minutes
+series: PrestaShop Architecture
+word_count: 1021
 ---
 
 # Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop

@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA"
+title: Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
 date: 2025-10-07
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Ecommerce]
-tags: [GEO, FAQ, ChatGPT, IA conversationnelle, optimisation, e-commerce]
-excerpt: "Les assistants IA changent radicalement la façon dont vos clients vous trouvent. Découvrez pourquoi les FAQ bien structurées sont votre meilleur atout pour être recommandé par ChatGPT, Gemini et Perplexity."
-image: /assets/images/blog/2025-10-07-faq-geo-essentielles.jpg
+categories:
+- Analyses
+tags:
+- geo
+- faq
+- ia-chatgpt
+- ia-conversationnelle
+- optimisation
+- e-commerce
+excerpt: Les assistants IA changent radicalement la façon dont vos clients vous trouvent.
+  Découvrez pourquoi les FAQ bien structurées sont votre meilleur atout pour être
+  recommandé par ChatGPT, Gemini et Perplexity.
+image: "/assets/images/blog/2025-10-07-faq-geo-essentielles.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "GEO", "E-commerce", "PrestaShop"]
-estimated_reading_time: "10 minutes"
+difficulty: Avancé
+technologies:
+- IA
+- GEO
+- E-commerce
+- PrestaShop
+estimated_reading_time: 13 minutes
+series: IA E-commerce
+word_count: 2506
 ---
 
 # Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA

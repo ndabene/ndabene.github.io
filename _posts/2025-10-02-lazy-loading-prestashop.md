@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "Optimiser vos modules PrestaShop avec le lazy loading des services Symfony"
+title: Optimiser vos modules PrestaShop avec le lazy loading des services Symfony
 date: 2025-10-02
 author: Nicolas Dabène
-categories: [PrestaShop, Développement, Performance]
-tags: [prestashop, symfony, modules, lazy loading, performance, services, conteneur]
-excerpt: "Découvrez comment améliorer significativement les performances de vos modules PrestaShop grâce au lazy loading des services Symfony."
-image: /assets/images/blog/2025-10-02-lazy-loading-prestashop.jpg
+categories:
+- Techniques
+tags:
+- prestashop
+- symfony
+- modules
+- lazy-loading
+- performance
+- services
+- conteneur
+excerpt: Découvrez comment améliorer significativement les performances de vos modules
+  PrestaShop grâce au lazy loading des services Symfony.
+image: "/assets/images/blog/2025-10-02-lazy-loading-prestashop.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PHP", "PrestaShop", "Symfony", "YAML"]
-estimated_reading_time: "8 minutes"
+difficulty: Avancé
+technologies:
+- PHP
+- PrestaShop
+- Symfony
+- YAML
+estimated_reading_time: 6 minutes
+series: PrestaShop Architecture
+word_count: 1081
 ---
 
 # Optimiser vos modules PrestaShop avec le lazy loading des services Symfony

@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme"
+title: 'PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme'
 date: 2025-09-05
 author: Nicolas Dabène
-categories: [Ecommerce, PrestaShop, Analyse Marché]
-tags: [PrestaShop Enterprise, Shopify Plus, TCO, e-commerce, open source]
-excerpt: "Shopify Plus ou PrestaShop Enterprise ? Derrière le tarif mensuel, le vrai enjeu est la maîtrise du code, des coûts et des données. Analyse complète pour choisir durablement."
-image: /assets/images/blog/2025-09-05-prestashop-enterprise-vs-shopify-plus.jpg
+categories:
+- Techniques
+tags:
+- prestashop-enterprise
+- shopify-plus
+- tco
+- e-commerce
+- open-source
+excerpt: Shopify Plus ou PrestaShop Enterprise ? Derrière le tarif mensuel, le vrai
+  enjeu est la maîtrise du code, des coûts et des données. Analyse complète pour choisir
+  durablement.
+image: "/assets/images/blog/2025-09-05-prestashop-enterprise-vs-shopify-plus.jpg"
 featured: false
-difficulty: "Avancé"
-technologies: ["PrestaShop", "Shopify", "Cloud", "SQL", "Open Source"]
-estimated_reading_time: "14 minutes"
+difficulty: Avancé
+technologies:
+- PrestaShop
+- Shopify
+- Cloud
+- SQL
+- Open Source
+estimated_reading_time: 7 minutes
+series: PrestaShop Architecture
+word_count: 1287
 ---
 
 # PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme

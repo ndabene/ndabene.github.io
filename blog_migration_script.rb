@@ -9,19 +9,36 @@ require 'optparse'
 POSTS_DIR = '_posts'
 BACKUP_DIR = '_posts_backup'
 
-# Mapping des catégories anciennes vers nouvelles
+# Taxonomie optimisée basée sur l'analyse des 40 articles
 CATEGORY_MAPPING = {
+  # Catégorie principale : contenu pratique et pédagogique
   'Tutoriel' => 'Tutoriels',
+
+  # Catégorie principale : analyses, études, tendances
   'Intelligence Artificielle' => 'Analyses',
   'Ecommerce' => 'Analyses',
+  'Analyse Marché' => 'Analyses',
+  'Startups' => 'Analyses',
+  'Innovation' => 'Analyses',
+  'Europe' => 'Analyses',
+
+  # Catégorie principale : techniques, code, architecture
   'PrestaShop' => 'Techniques',
-  'Développement' => 'Tutoriels',
+  'Développement' => 'Techniques',
   'PHP' => 'Techniques',
   'Sécurité' => 'Techniques',
-  'Analyse Marché' => 'Analyses',
+  'Architecture' => 'Techniques',
+  'Performance' => 'Techniques',
+  'Bonnes Pratiques' => 'Techniques',
+  'Commerce' => 'Techniques',
+
+  # Catégorie principale : études de cas, success stories
   'Success Story' => 'Case Studies',
   'Entrepreneuriat' => 'Case Studies',
-  'Bonnes Pratiques' => 'Techniques'
+
+  # Catégories spécialisées conservées
+  'Automatisation' => 'Tutoriels',
+  'Design' => 'Techniques'
 }
 
 # Fonction pour normaliser les tags
@@ -72,23 +89,89 @@ def determine_difficulty(content, tags)
   end
 end
 
-# Fonction pour détecter les séries
+# Fonction pour détecter les séries d'articles
 SERIES_PATTERNS = {
   'MCP Protocol Complet' => [
     /mcp.*protocole/i, /mcp.*guide/i, /mcp.*introduction/i,
     /mcp.*outil/i, /mcp.*menu/i, /mcp.*découverte/i,
-    /mcp.*sécur/i, /mcp.*claude/i, /mcp.*desktop/i
+    /mcp.*sécur/i, /mcp.*claude/i, /mcp.*desktop/i,
+    /mcp.*typescript/i, /mcp.*setup/i, /mcp.*conversation/i
+  ],
+
+  'PrestaShop Architecture' => [
+    /prestashop.*api/i, /prestashop.*admin.*api/i, /command.*bus/i,
+    /prestashop.*doctrine/i, /prestashop.*lazy.*load/i,
+    /prestashop.*symfony/i, /prestashop.*migration/i
+  ],
+
+  'IA E-commerce' => [
+    /geo.*suite/i, /black.*friday.*geo/i, /google.*shopping.*gemini/i,
+    /shopify.*chatgpt/i, /prestashop.*shopify/i
+  ],
+
+  'Sécurité IA' => [
+    /ia.*sécur/i, /grok.*security/i, /chatgpt.*sécur/i,
+    /ia.*danger/i, /ai.*act/i, /contrôles.*parentaux/i
   ]
 }
 
 def detect_series(title, content, tags)
   SERIES_PATTERNS.each do |series_name, patterns|
-    if patterns.any? { |pattern| title =~ pattern || content =~ pattern } ||
-       tags.any? { |tag| tag.include?('mcp') }
+    title_content = "#{title} #{content}".downcase
+    tag_string = tags.join(' ').downcase
+
+    # Vérifier les patterns dans le titre/contenu ou les tags
+    if patterns.any? { |pattern|
+      title_content =~ pattern ||
+      tag_string =~ pattern ||
+      (series_name == 'MCP Protocol Complet' && (tag_string.include?('mcp') || content.include?('MCP')))
+    }
       return series_name
     end
   end
   nil
+end
+
+# Fonction pour déterminer l'épisode dans une série
+def determine_episode(series_name, title, content)
+  case series_name
+  when 'MCP Protocol Complet'
+    if title =~ /introduction|guide|protocole/i || content =~ /introduction|premiers pas/i
+      1
+    elsif title =~ /setup|typescript/i
+      2
+    elsif title =~ /outil|readfile/i
+      3
+    elsif title =~ /menu|découverte/i
+      4
+    elsif title =~ /sécur/i
+      5
+    elsif title =~ /claude|desktop|integration/i
+      6
+    else
+      nil
+    end
+  else
+    nil
+  end
+end
+
+# Fonction pour mapper les catégories avec logique de priorité
+def map_category(old_categories)
+  return 'Tutoriels' unless old_categories.is_a?(Array) && old_categories.any?
+
+  # Logique de priorité : Case Studies > Techniques > Analyses > Tutoriels
+  priority_order = ['Case Studies', 'Techniques', 'Analyses', 'Tutoriels']
+
+  mapped_categories = old_categories.map { |old_cat| CATEGORY_MAPPING[old_cat] }.compact.uniq
+
+  # Retourner la catégorie de plus haute priorité trouvée
+  priority_order.each do |priority_cat|
+    return priority_cat if mapped_categories.include?(priority_cat)
+  end
+
+  # Défaut si rien ne correspond
+  'Analyses'
 end
 
 # Fonction principale de migration
@@ -125,10 +208,9 @@ def migrate_post(file_path, options = {})
     # Appliquer les transformations
     new_front_matter = front_matter.dup
 
-    # 1. Recatégoriser
+    # 1. Recatégoriser avec logique de priorité
     if front_matter['categories'].is_a?(Array) && front_matter['categories'].length > 0
-      primary_category = front_matter['categories'].first
-      new_front_matter['categories'] = [CATEGORY_MAPPING[primary_category] || primary_category]
+      new_front_matter['categories'] = [map_category(front_matter['categories'])]
     end
 
     # 2. Normaliser les tags
@@ -139,7 +221,7 @@ def migrate_post(file_path, options = {})
     # 3. Déterminer la difficulté
     new_front_matter['difficulty'] = determine_difficulty(body_content, new_front_matter['tags'] || [])
 
-    # 4. Détecter les séries
+    # 4. Détecter les séries et épisodes
     series_name = detect_series(
       front_matter['title'] || '',
       body_content,
@@ -147,7 +229,8 @@ def migrate_post(file_path, options = {})
     )
     if series_name
       new_front_matter['series'] = series_name
-      # Logique pour déterminer l'épisode (à implémenter selon les patterns)
+      episode = determine_episode(series_name, front_matter['title'] || '', body_content)
+      new_front_matter['episode'] = episode if episode
     end
 
     # 5. Calculer le nombre de mots

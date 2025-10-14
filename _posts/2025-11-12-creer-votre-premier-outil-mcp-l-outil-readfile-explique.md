@@ -1,16 +1,33 @@
 ---
+---
 layout: post
-title: "Créer votre Premier Outil MCP : L'Outil readFile Expliqué"
+title: 'Créer votre Premier Outil MCP : L''Outil readFile Expliqué'
 date: 2025-11-12
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle]
-tags: [MCP, TypeScript, Node.js, readFile, tutorial, outils, développement]
-excerpt: "Du setup à l'action ! Créez votre premier outil MCP fonctionnel qui permet à une IA de lire des fichiers. Code complet et expliqué."
-image: /assets/images/blog/2025-11-12-creer-outil-readfile-mcp.jpg
+categories:
+- Analyses
+tags:
+- ia-mcp
+- dev-typescript
+- dev-node.js
+- readfile
+- ia-tutorial
+- outils
+- développement
+excerpt: Du setup à l'action ! Créez votre premier outil MCP fonctionnel qui permet
+  à une IA de lire des fichiers. Code complet et expliqué.
+image: "/assets/images/blog/2025-11-12-creer-outil-readfile-mcp.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["TypeScript", "Node.js", "MCP", "File System"]
-estimated_reading_time: "12 minutes"
+difficulty: Avancé
+technologies:
+- TypeScript
+- Node.js
+- MCP
+- File System
+estimated_reading_time: 13 minutes
+series: MCP Protocol Complet
+episode: 1
+word_count: 2542
 ---
 
 # Créer votre Premier Outil MCP : L'Outil readFile Expliqué

@@ -1,16 +1,35 @@
 ---
+---
 layout: post
-title: "Mistral AI : L'Histoire d'une Révolution Française de l'Intelligence Artificielle (2023-2025)"
+title: 'Mistral AI : L''Histoire d''une Révolution Française de l''Intelligence Artificielle
+  (2023-2025)'
 date: 2025-09-11
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Startups, Innovation, Europe]
-tags: [Mistral AI, IA Française, Arthur Mensch, Startup, Révolution IA, Souveraineté numérique, Europe Tech]
-excerpt: "En moins de deux ans, Mistral AI est devenue la première décacorne française, transformant le paysage de l'intelligence artificielle européenne avec une valorisation atteignant 11,7 milliards d'euros."
-image: /assets/images/blog/2025-09-11-mistral-ai-revolution.jpg
+categories:
+- Analyses
+tags:
+- mistral-ai
+- ia-française
+- arthur-mensch
+- startup
+- ia-révolution-ia
+- souveraineté-numérique
+- europe-tech
+excerpt: En moins de deux ans, Mistral AI est devenue la première décacorne française,
+  transformant le paysage de l'intelligence artificielle européenne avec une valorisation
+  atteignant 11,7 milliards d'euros.
+image: "/assets/images/blog/2025-09-11-mistral-ai-revolution.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["Mistral AI", "IA Générative", "Modèles de langage", "Mixture of Experts", "Open Source"]
-estimated_reading_time: "25 minutes"
+difficulty: Avancé
+technologies:
+- Mistral AI
+- IA Générative
+- Modèles de langage
+- Mixture of Experts
+- Open Source
+estimated_reading_time: 14 minutes
+series: Sécurité IA
+word_count: 2744
 ---
 
 # Mistral AI : L'Histoire d'une Révolution Française de l'Intelligence Artificielle (2023-2025)

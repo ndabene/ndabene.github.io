@@ -1,17 +1,36 @@
 ---
+---
 layout: post
-title: "🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?"
+title: "\U0001F9E9 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?"
 date: 2025-10-21
 author: Nicolas Dabène
-categories: [PrestaShop, Développement, PHP, Tutoriel]
-tags: [PrestaShop, Module, Développement, Erreurs, Debug, Hook, Smarty, SQL, Cache]
-excerpt: "Développeurs PrestaShop, je vous lance un défi ! Découvrez les 5 erreurs courantes dans ce module de best-sellers et améliorez vos compétences de développement."
-image: /assets/images/blog/2025-10-21-enigme-prestashop-erreurs.jpg
+categories:
+- Techniques
+tags:
+- prestashop
+- module
+- développement
+- erreurs
+- debug
+- hook
+- smarty
+- sql
+- cache
+excerpt: Développeurs PrestaShop, je vous lance un défi ! Découvrez les 5 erreurs
+  courantes dans ce module de best-sellers et améliorez vos compétences de développement.
+image: "/assets/images/blog/2025-10-21-enigme-prestashop-erreurs.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "PHP", "MySQL", "Smarty", "Hook"]
-estimated_reading_time: "15 minutes"
+difficulty: Avancé
+technologies:
+- PrestaShop
+- PHP
+- MySQL
+- Smarty
+- Hook
+estimated_reading_time: 10 minutes
 is_future: true
+series: Sécurité IA
+word_count: 1995
 ---
 
 # 🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?

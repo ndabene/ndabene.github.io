@@ -1,22 +1,46 @@
 ---
+---
 layout: post
-title: "Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l'IA et vos Systèmes"
+title: 'Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l''IA et vos
+  Systèmes'
 date: 2025-08-03
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Architecture]
-tags: [MCP, Anthropic, Claude, API, JSON-RPC, IA integration, protocols]
-excerpt: "Découvrez le Model Context Protocol d'Anthropic, le protocole qui permet
+categories:
+- Techniques
+tags:
+- ia-mcp
+- anthropic
+- ia-claude
+- api
+- json-rpc
+- ia-integration
+- protocols
+excerpt: Découvrez le Model Context Protocol d'Anthropic, le protocole qui permet
   aux IA d'accéder directement à vos données externes. Guide complet avec exemples
-  pratiques."
-image: /assets/images/blog/2025-08-03-mcp-protocol-guide.jpg
+  pratiques.
+image: "/assets/images/blog/2025-08-03-mcp-protocol-guide.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["MCP", "JSON-RPC", "HTTP", "Claude", "API"]
-estimated_reading_time: "12 minutes"
-llm_summary: Découvrez le Model Context Protocol d'Anthropic, le protocole qui 
-  permet aux IA d'accéder directement à vos données externes. Guide complet avec
-  exemples pratiques.
-llm_topics: [MCP, Anthropic, Claude, API, JSON-RPC, IA integration, protocols]
+difficulty: Avancé
+technologies:
+- MCP
+- JSON-RPC
+- HTTP
+- Claude
+- API
+estimated_reading_time: 14 minutes
+llm_summary: Découvrez le Model Context Protocol d'Anthropic, le protocole qui permet
+  aux IA d'accéder directement à vos données externes. Guide complet avec exemples
+  pratiques.
+llm_topics:
+- MCP
+- Anthropic
+- Claude
+- API
+- JSON-RPC
+- IA integration
+- protocols
+series: MCP Protocol Complet
+word_count: 2764
 ---
 # Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l'IA et vos Systèmes
 

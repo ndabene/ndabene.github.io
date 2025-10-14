@@ -1,16 +1,33 @@
 ---
+---
 layout: post
-title: "Sécuriser votre Serveur MCP : Permissions, Validation et Protection"
+title: 'Sécuriser votre Serveur MCP : Permissions, Validation et Protection'
 date: 2025-12-10
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle, Sécurité]
-tags: [MCP, sécurité, permissions, validation, authentification, TypeScript]
-excerpt: "Votre serveur MCP fonctionne ? Parfait. Maintenant, sécurisons-le pour qu'il soit production-ready avec validation, permissions et protection."
-image: /assets/images/blog/2025-12-10-securiser-serveur-mcp.jpg
+categories:
+- Techniques
+tags:
+- ia-mcp
+- security-sécurité
+- security-permissions
+- validation
+- security-authentification
+- dev-typescript
+excerpt: Votre serveur MCP fonctionne ? Parfait. Maintenant, sécurisons-le pour qu'il
+  soit production-ready avec validation, permissions et protection.
+image: "/assets/images/blog/2025-12-10-securiser-serveur-mcp.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["TypeScript", "MCP", "Security", "JWT", "Validation"]
-estimated_reading_time: "16 minutes"
+difficulty: Avancé
+technologies:
+- TypeScript
+- MCP
+- Security
+- JWT
+- Validation
+estimated_reading_time: 28 minutes
+series: MCP Protocol Complet
+episode: 1
+word_count: 5459
 ---
 
 # Sécuriser votre Serveur MCP : Permissions, Validation et Protection

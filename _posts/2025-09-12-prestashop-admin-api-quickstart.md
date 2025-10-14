@@ -1,16 +1,31 @@
 ---
+---
 layout: post
-title: "Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9"
+title: 'Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9'
 date: 2025-09-12
 author: Nicolas Dabène
-categories: [PrestaShop, Développement]
-tags: [PrestaShop 9, API, Admin API, CQRS, API Platform, OAuth]
-excerpt: "Un guide pédagogique pour créer vos premiers endpoints dans l’Admin API PrestaShop 9. Découvrez les 8 concepts essentiels et commencez à contribuer dès aujourd’hui."
-image: /assets/images/blog/2025-09-12-prestashop-admin-api-quickstart.jpg
+categories:
+- Techniques
+tags:
+- prestashop-9
+- api
+- admin-api
+- cqrs
+- api-platform
+- oauth
+excerpt: Un guide pédagogique pour créer vos premiers endpoints dans l’Admin API PrestaShop
+  9. Découvrez les 8 concepts essentiels et commencez à contribuer dès aujourd’hui.
+image: "/assets/images/blog/2025-09-12-prestashop-admin-api-quickstart.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "API Platform", "PHP", "Symfony"]
-estimated_reading_time: 12 minutes
+difficulty: Avancé
+technologies:
+- PrestaShop
+- API Platform
+- PHP
+- Symfony
+estimated_reading_time: 6 minutes
+series: PrestaShop Architecture
+word_count: 1029
 ---
 
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9

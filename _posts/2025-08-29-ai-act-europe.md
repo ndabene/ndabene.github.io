@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "AI Act : comprendre la régulation européenne de l’IA"
+title: 'AI Act : comprendre la régulation européenne de l’IA'
 date: 2025-08-29
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Bonnes Pratiques]
-tags: [AI Act, Europe, régulation, open source, PME, PrestaShop]
-excerpt: "L’AI Act est la première loi mondiale qui encadre l’intelligence artificielle. Découvrez son histoire, ses obligations et ses impacts pour les PME, les startups, les développeurs et l’open source en France."
-image: /assets/images/blog/2025-08-29-ai-act-europe.jpg
+categories:
+- Techniques
+tags:
+- ai-act
+- europe
+- régulation
+- open-source
+- pme
+- prestashop
+excerpt: L’AI Act est la première loi mondiale qui encadre l’intelligence artificielle.
+  Découvrez son histoire, ses obligations et ses impacts pour les PME, les startups,
+  les développeurs et l’open source en France.
+image: "/assets/images/blog/2025-08-29-ai-act-europe.jpg"
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["Intelligence Artificielle", "Open Source", "PHP", "PrestaShop"]
-estimated_reading_time: "14 minutes"
+difficulty: Avancé
+technologies:
+- Intelligence Artificielle
+- Open Source
+- PHP
+- PrestaShop
+estimated_reading_time: 6 minutes
+series: Sécurité IA
+word_count: 1036
 ---
 
 # AI Act : comprendre la régulation européenne de l’IA

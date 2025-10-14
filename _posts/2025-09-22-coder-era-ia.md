@@ -1,16 +1,32 @@
 ---
+---
 layout: post
-title: "Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025"
+title: 'Coder à l''Ère des IA : Comment Adapter ses Méthodes de Travail en 2025'
 date: 2025-09-22
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
-tags: [IA, développement assisté, GitHub Copilot, prompt engineering, méthodologie, junior vs senior]
-excerpt: "84% des développeurs utilisent l'IA, mais seuls 34% maîtrisent réellement cette collaboration. Découvrez les méthodes concrètes pour transformer l'IA d'un simple générateur de code en véritable partenaire de développement."
-image: /assets/images/blog/2025-09-22-coder-era-ia.jpg
+categories:
+- Techniques
+tags:
+- ia-ia
+- développement-assisté
+- github-copilot
+- prompt-engineering
+- méthodologie
+- junior-vs-senior
+excerpt: 84% des développeurs utilisent l'IA, mais seuls 34% maîtrisent réellement
+  cette collaboration. Découvrez les méthodes concrètes pour transformer l'IA d'un
+  simple générateur de code en véritable partenaire de développement.
+image: "/assets/images/blog/2025-09-22-coder-era-ia.jpg"
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "GitHub Copilot", "Développement", "Méthodologies"]
-estimated_reading_time: "12 minutes"
+difficulty: Avancé
+technologies:
+- IA
+- GitHub Copilot
+- Développement
+- Méthodologies
+estimated_reading_time: 6 minutes
+series: Sécurité IA
+word_count: 1171
 ---
 
 # Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025
