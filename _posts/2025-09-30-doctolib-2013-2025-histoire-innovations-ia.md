@@ -1,29 +1,16 @@
 ---
----
 layout: post
-title: 'Doctolib : De l''idée à la licorne française (2013-2025)'
+title: "Doctolib : De l'idée à la licorne française (2013-2025)"
 date: 2025-09-30
 author: Nicolas Dabène
-categories:
-- Case Studies
-tags:
-- french-tech
-- e-santé
-- téléconsultation
-- ia-ia
-- saas
-excerpt: 'De la prise de rendez-vous en ligne à un écosystème e-santé dopé à l’IA
-  : retour sur 12 ans d’hyper-croissance, de controverses et d’innovations chez Doctolib.'
-image: "/assets/images/blog/2025-09-30-doctolib-histoire-innovation.jpg"
+categories: [Success Story, Analyse Marché, Intelligence Artificielle]
+tags: ["french-tech", "e-santé", "téléconsultation", "ia-ia", "saas"]
+excerpt: "De la prise de rendez-vous en ligne à un écosystème e-santé dopé à l’IA : retour sur 12 ans d’hyper-croissance, de controverses et d’innovations chez Doctolib."
+image: /assets/images/blog/2025-09-30-doctolib-histoire-innovation.jpg
 featured: false
-difficulty: Intermédiaire
-technologies:
-- IA
-- SaaS
-- e-santé
-estimated_reading_time: 6 minutes
-series: Sécurité IA
-word_count: 1092
+difficulty: "Intermédiaire"
+technologies: ["IA", "SaaS", "e-santé"]
+estimated_reading_time: "12 minutes"
 ---
 
 # L'Histoire de Doctolib : De l'Idée Révolutionnaire à la Licorne Française (2013-2025)

@@ -1,43 +1,23 @@
 ---
----
 layout: post
-title: 'Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
-  Jekyll'
+title: "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
+  Jekyll"
 date: 2025-07-28
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- github-pages
-- jekyll
-- portfolio
-- site-statique
-- git
-- développement-web
-excerpt: Découvrez comment créer gratuitement un portfolio professionnel en ligne
-  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.
-image: "/assets/images/blog/2025-07-28-github-pages-jekyll-portfolio.jpg"
+categories: [Développement, Tutoriel]
+tags: ["github-pages", "jekyll", "portfolio", "site-statique", "git", "développement-web"]
+excerpt: "Découvrez comment créer gratuitement un portfolio professionnel en ligne
+  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs."
+image: /assets/images/blog/2025-07-28-github-pages-jekyll-portfolio.jpg
 featured: false
-difficulty: Avancé
-technologies:
-- GitHub Pages
-- Jekyll
-- Git
-- Markdown
-- HTML
-- CSS
-estimated_reading_time: 15 minutes
-llm_summary: Découvrez comment créer gratuitement un portfolio professionnel en ligne
-  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.
-llm_topics:
-- GitHub Pages
-- Jekyll
-- portfolio
-- site statique
-- git
-- développement web
-series: Sécurité IA
-word_count: 2859
+difficulty: "Débutant"
+technologies: ["GitHub Pages", "Jekyll", "Git", "Markdown", "HTML", "CSS"]
+estimated_reading_time: "12 minutes"
+llm_summary: Découvrez comment créer gratuitement un portfolio professionnel en 
+  ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et 
+  créatifs.
+llm_topics: [GitHub Pages, Jekyll, portfolio, site statique, git, développement 
+    web]
 ---
 # Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
 
@@ -245,7 +225,7 @@ layout: post
 title: "Application E-commerce Moderne"
 date: 2025-01-15
 categories: [Projet, Ecommerce]
-tags: [PHP, JavaScript, MySQL]
+tags: ["github-pages", "jekyll", "portfolio", "site-statique", "git", "développement-web"]
 image: /assets/images/ecommerce-project.jpg
 demo_url: "https://demo-ecommerce.com"
 github_url: "https://github.com/vous/projet-ecommerce"

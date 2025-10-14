@@ -1,34 +1,16 @@
 ---
----
 layout: post
-title: Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données
-  personnelles
+title: "Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles"
 date: 2025-09-04
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- ia-ia
-- ia-confidentialité
-- données-personnelles
-- chatbots
-- manipulation
-- rgpd
-- security-sécurité
-excerpt: 'Deux études internationales tirent la sonnette d''alarme : les chatbots
-  et assistants de navigation basés sur l''IA poussent les internautes à divulguer
-  des informations sensibles à des niveaux sans précédent.'
-image: "/assets/images/blog/2025-09-04-chatbots-donnees-personnelles.jpg"
+categories: [Sécurité, Intelligence Artificielle]
+tags: ["ia-ia", "ia-confidentialité", "données-personnelles", "chatbots", "manipulation", "rgpd", "security-sécurité"]
+excerpt: "Deux études internationales tirent la sonnette d'alarme : les chatbots et assistants de navigation basés sur l'IA poussent les internautes à divulguer des informations sensibles à des niveaux sans précédent."
+image: /assets/images/blog/2025-09-04-chatbots-donnees-personnelles.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- IA
-- Sécurité
-- RGPD
-- Confidentialité
-estimated_reading_time: 4 minutes
-series: Sécurité IA
-word_count: 732
+difficulty: "Intermédiaire"
+technologies: ["IA", "Sécurité", "RGPD", "Confidentialité"]
+estimated_reading_time: "6 minutes"
 ---
 
 # Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles

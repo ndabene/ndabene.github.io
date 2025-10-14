@@ -1,31 +1,16 @@
 ---
----
 layout: post
-title: 'Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin'
+title: "Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin"
 date: 2025-08-27
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- ia-gemini-ai
-- génération-images
-- google-ai
-- créativité
-- adobe-firefly
-- api
-- design-automation
-excerpt: 'Google lance Gemini 2.5 Flash Image : édition visuelle par simple conversation,
-  fusion intelligente d''images et créativité décuplée pour développeurs et créateurs.'
-image: "/assets/images/blog/2025-08-27-gemini-flash-image-revolution.jpg"
+categories: [Intelligence Artificielle, Innovation, Design]
+tags: ["ia-gemini-ai", "génération-images", "google-ai", "créativité", "adobe-firefly", "api", "design-automation"]
+excerpt: "Google lance Gemini 2.5 Flash Image : édition visuelle par simple conversation, fusion intelligente d'images et créativité décuplée pour développeurs et créateurs."
+image: /assets/images/blog/2025-08-27-gemini-flash-image-revolution.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- Gemini AI
-- Google Cloud
-- Adobe Firefly
-- API REST
-estimated_reading_time: 9 minutes
-word_count: 1660
+difficulty: "Intermédiaire"
+technologies: ["Gemini AI", "Google Cloud", "Adobe Firefly", "API REST"]
+estimated_reading_time: "9 minutes"
 ---
 
 # Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin

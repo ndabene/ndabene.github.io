@@ -1,33 +1,16 @@
 ---
----
 layout: post
-title: 'Créer son Premier Serveur MCP : Setup du Projet TypeScript'
+title: "Créer son Premier Serveur MCP : Setup du Projet TypeScript"
 date: 2025-10-30
 author: Nicolas Dabène
-categories:
-- Analyses
-tags:
-- ia-mcp
-- dev-typescript
-- dev-node.js
-- express
-- setup
-- ia-tutorial
-- développement
-excerpt: Passons à la pratique ! Découvrez comment initialiser un projet TypeScript
-  pour créer votre premier serveur MCP en quelques minutes.
-image: "/assets/images/blog/2025-10-30-setup-serveur-mcp-typescript.jpg"
+categories: [Tutoriel, Intelligence Artificielle]
+tags: [MCP, TypeScript, Node.js, Express, setup, tutorial, développement]
+excerpt: "Passons à la pratique ! Découvrez comment initialiser un projet TypeScript pour créer votre premier serveur MCP en quelques minutes."
+image: /assets/images/blog/2025-10-30-setup-serveur-mcp-typescript.jpg
 featured: false
-difficulty: Avancé
-technologies:
-- TypeScript
-- Node.js
-- Express
-- MCP
-estimated_reading_time: 10 minutes
-series: MCP Protocol Complet
-episode: 1
-word_count: 1885
+difficulty: "Débutant"
+technologies: ["TypeScript", "Node.js", "Express", "MCP"]
+estimated_reading_time: "8 minutes"
 ---
 
 # Créer son Premier Serveur MCP : Setup du Projet TypeScript

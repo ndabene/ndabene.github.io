@@ -1,35 +1,16 @@
 ---
----
 layout: post
-title: 'Cline : L''Assistant IA qui Révolutionne le Développement PrestaShop'
+title: "Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop"
 date: 2025-09-02
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- cline
-- vscode
-- ia-locale
-- prestashop
-- développement
-- assistant-coding
-- lm-studio
-- ollama
-excerpt: Découvrez Cline, l'extension VSCode qui transforme votre IDE en assistant
-  de développement autonome. Focus sur l'intégration de modèles IA locaux pour les
-  agences PrestaShop.
-image: "/assets/images/blog/2025-09-02-cline-prestashop-assistant-ia.jpg"
+categories: [Développement, PHP, PrestaShop, Intelligence Artificielle]
+tags: ["cline", "vscode", "ia-locale", "prestashop", "développement", "assistant-coding", "lm-studio", "ollama"]
+excerpt: "Découvrez Cline, l'extension VSCode qui transforme votre IDE en assistant de développement autonome. Focus sur l'intégration de modèles IA locaux pour les agences PrestaShop."
+image: /assets/images/blog/2025-09-02-cline-prestashop-assistant-ia.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- VSCode
-- Cline
-- PrestaShop
-- PHP
-- IA
-estimated_reading_time: 7 minutes
-series: MCP Protocol Complet
-word_count: 1356
+difficulty: "Intermédiaire"
+technologies: ["VSCode", "Cline", "PrestaShop", "PHP", "IA"]
+estimated_reading_time: "12 minutes"
 ---
 
 # Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop

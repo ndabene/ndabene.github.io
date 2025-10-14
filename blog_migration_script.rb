@@ -5,6 +5,7 @@
 require 'yaml'
 require 'fileutils'
 require 'optparse'
+require 'date'
 
 POSTS_DIR = '_posts'
 BACKUP_DIR = '_posts_backup'
@@ -205,55 +206,84 @@ def migrate_post(file_path, options = {})
       end
     end
 
-    # Appliquer les transformations
-    new_front_matter = front_matter.dup
+    # SKIP articles futurs pour éviter les 404
+    if front_matter['is_future']
+      puts "⏭️  Article futur ignoré: #{File.basename(file_path)}"
+      return
+    end
 
-    # 1. Recatégoriser avec logique de priorité
+    # Vérifier aussi la date si elle existe
+    if front_matter['date']
+      begin
+        article_date = Date.parse(front_matter['date'].to_s)
+        if article_date > Date.today
+          puts "⏭️  Article futur (date) ignoré: #{File.basename(file_path)}"
+          return
+        end
+      rescue
+        # Si on ne peut pas parser la date, on continue
+      end
+    end
+
+    # Lire le contenu original et faire des remplacements ciblés
+    original_content = File.read(file_path)
+    new_content = original_content.dup
+
+    # Remplacement 1: Recatégorisation
     if front_matter['categories'].is_a?(Array) && front_matter['categories'].length > 0
-      new_front_matter['categories'] = [map_category(front_matter['categories'])]
+      new_category = map_category(front_matter['categories'])
+      old_category_string = front_matter['categories'].first
+      new_content = original_content.gsub(
+        /categories: \[.*?"#{Regexp.escape(old_category_string)}".*?\]/,
+        "categories: [\"#{new_category}\"]"
+      )
     end
 
-    # 2. Normaliser les tags
+    # Remplacement 2: Normalisation des tags (si nécessaire)
     if front_matter['tags'].is_a?(Array)
-      new_front_matter['tags'] = normalize_tags(front_matter['tags'])
+      normalized_tags = normalize_tags(front_matter['tags'])
+      if normalized_tags != front_matter['tags']
+        # Reconstruire la ligne tags
+        tags_string = "[#{normalized_tags.map { |t| "\"#{t}\"" }.join(', ')}]"
+        new_content = new_content.gsub(/tags: \[.*?\]/, "tags: #{tags_string}")
+      end
     end
 
-    # 3. Déterminer la difficulté
-    new_front_matter['difficulty'] = determine_difficulty(body_content, new_front_matter['tags'] || [])
-
-    # 4. Détecter les séries et épisodes
-    series_name = detect_series(
-      front_matter['title'] || '',
-      body_content,
-      new_front_matter['tags'] || []
-    )
-    if series_name
-      new_front_matter['series'] = series_name
-      episode = determine_episode(series_name, front_matter['title'] || '', body_content)
-      new_front_matter['episode'] = episode if episode
+    # Remplacement 3: Ajouter la difficulté si manquante
+    if !front_matter['difficulty'] && !original_content.include?('difficulty:')
+      difficulty = determine_difficulty(body_content, front_matter['tags'] || [])
+      # Insérer après estimated_reading_time ou avant ---
+      if original_content =~ /(estimated_reading_time: .*?)\n---/
+        new_content = new_content.gsub(
+          /(estimated_reading_time: .*?)\n---/,
+          "\\1\ndifficulty: #{difficulty}\n---"
+        )
+      end
     end
 
-    # 5. Calculer le nombre de mots
-    word_count = body_content.split(/\s+/).length
-    new_front_matter['word_count'] = word_count
+    # Préparer les informations pour dry-run
+    changes = []
+    if front_matter['categories'].is_a?(Array) && front_matter['categories'].length > 0
+      new_category = map_category(front_matter['categories'])
+      changes << "Catégories: #{front_matter['categories'].first} → #{new_category}"
+    end
 
-    # 6. Calculer le temps de lecture (mots/minute = 200)
-    reading_time = (word_count / 200.0).ceil
-    new_front_matter['estimated_reading_time'] = "#{reading_time} minutes"
+    if front_matter['tags'].is_a?(Array)
+      normalized_tags = normalize_tags(front_matter['tags'])
+      if normalized_tags != front_matter['tags']
+        changes << "Tags: #{front_matter['tags'].first(3)} → #{normalized_tags.first(3)}"
+      end
+    end
 
-    # Générer le nouveau front matter
-    new_front_matter_yaml = new_front_matter.to_yaml
-
-    # Créer le nouveau contenu
-    new_content = "---\n#{new_front_matter_yaml}---\n#{body_content}"
+    if !front_matter['difficulty'] && !original_content.include?('difficulty:')
+      difficulty = determine_difficulty(body_content, front_matter['tags'] || [])
+      changes << "Difficulté ajoutée: #{difficulty}"
+    end
 
     if options[:dry_run]
-      puts "📋 DRY RUN - Modifications proposées pour #{file_path}:"
-      puts "  • Catégories: #{front_matter['categories']} → #{new_front_matter['categories']}"
-      puts "  • Tags: #{front_matter['tags']&.first(3)} → #{new_front_matter['tags']&.first(3)}"
-      puts "  • Difficulté: #{front_matter['difficulty']} → #{new_front_matter['difficulty']}"
-      puts "  • Série détectée: #{new_front_matter['series']}"
-      puts "  • Temps de lecture: #{new_front_matter['estimated_reading_time']}"
+      puts "📋 DRY RUN - Modifications proposées pour #{File.basename(file_path)}:"
+      changes.each { |change| puts "  • #{change}" }
+      puts "  • Total changements: #{changes.size}"
     else
       # Sauvegarde
       FileUtils.mkdir_p(BACKUP_DIR)
@@ -261,7 +291,7 @@ def migrate_post(file_path, options = {})
 
       # Écriture du nouveau fichier
       File.write(file_path, new_content)
-      puts "✅ Migré: #{file_path}"
+      puts "✅ Migré: #{File.basename(file_path)} (#{changes.size} changements)"
     end
 
   else

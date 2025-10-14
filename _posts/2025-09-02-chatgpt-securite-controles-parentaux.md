@@ -1,34 +1,16 @@
 ---
----
 layout: post
-title: 'ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au
-  service de la protection des utilisateurs'
+title: "ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs"
 date: 2025-09-02
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- ia-chatgpt
-- ia-openai
-- ia-sécurité-ia
-- contrôles-parentaux
-- gpt-5
-- santé-mentale
-- protection-mineurs
-excerpt: 'OpenAI déploie un plan de sécurité ambitieux sur 120 jours pour ChatGPT
-  : contrôles parentaux, détection de détresse et routage vers des modèles de raisonnement
-  avancés.'
-image: "/assets/images/blog/2025-09-02-chatgpt-securite-controles-parentaux.jpg"
+categories: [Intelligence Artificielle, Sécurité, Bonnes Pratiques]
+tags: ["ia-chatgpt", "ia-openai", "ia-sécurité-ia", "contrôles-parentaux", "gpt-5", "santé-mentale", "protection-mineurs"]
+excerpt: "OpenAI déploie un plan de sécurité ambitieux sur 120 jours pour ChatGPT : contrôles parentaux, détection de détresse et routage vers des modèles de raisonnement avancés."
+image: /assets/images/blog/2025-09-02-chatgpt-securite-controles-parentaux.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- ChatGPT
-- GPT-5
-- OpenAI
-- IA de sécurité
-estimated_reading_time: 10 minutes
-series: Sécurité IA
-word_count: 1901
+difficulty: "Intermédiaire"
+technologies: ["ChatGPT", "GPT-5", "OpenAI", "IA de sécurité"]
+estimated_reading_time: "12 minutes"
 ---
 
 # ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs

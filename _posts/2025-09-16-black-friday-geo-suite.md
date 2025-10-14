@@ -1,33 +1,16 @@
 ---
----
 layout: post
-title: 'Black Friday 2025 : La révolution GEO arrive sur PrestaShop'
+title: "Black Friday 2025 : La révolution GEO arrive sur PrestaShop"
 date: 2025-09-16
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- prestashop
-- black-friday
-- geo-suite
-- ia-générative
-- seo
-- optimisation
-- ventes
-- révolution
-excerpt: Le Black Friday 2025 sera dominé par les IA génératives. Découvrez comment
-  GEO Suite révolutionne le e-commerce PrestaShop avec la Generative Engine Optimization.
-image: "/assets/images/blog/2025-09-16-black-friday-geo-suite.jpg"
+categories: [PrestaShop, Ecommerce, Intelligence Artificielle]
+tags: ["prestashop", "black-friday", "geo-suite", "ia-générative", "seo", "optimisation", "ventes", "révolution"]
+excerpt: "Le Black Friday 2025 sera dominé par les IA génératives. Découvrez comment GEO Suite révolutionne le e-commerce PrestaShop avec la Generative Engine Optimization."
+image: /assets/images/blog/2025-09-16-black-friday-geo-suite.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- PrestaShop
-- IA
-- SEO
-- E-commerce
-estimated_reading_time: 6 minutes
-series: IA E-commerce
-word_count: 1104
+difficulty: "Intermédiaire"
+technologies: ["PrestaShop", "IA", "SEO", "E-commerce"]
+estimated_reading_time: "8 minutes"
 ---
 
 # Black Friday 2025 : La révolution GEO arrive sur PrestaShop

@@ -1,32 +1,16 @@
 ---
----
 layout: post
-title: 'Connecter votre Serveur MCP à Claude Desktop : L''Intégration Complète'
+title: "Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète"
 date: 2025-12-17
 author: Nicolas Dabène
-categories:
-- Analyses
-tags:
-- ia-mcp
-- ia-claude-desktop
-- intégration
-- ia-ia
-- configuration
-- test
-excerpt: 'Le moment tant attendu : connectons votre serveur MCP sécurisé à Claude
-  Desktop et voyons la magie opérer en conditions réelles.'
-image: "/assets/images/blog/2025-12-17-connecter-serveur-mcp-claude-desktop.jpg"
+categories: [Tutoriel, Intelligence Artificielle]
+tags: [MCP, Claude Desktop, intégration, IA, configuration, test]
+excerpt: "Le moment tant attendu : connectons votre serveur MCP sécurisé à Claude Desktop et voyons la magie opérer en conditions réelles."
+image: /assets/images/blog/2025-12-17-connecter-serveur-mcp-claude-desktop.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- MCP
-- Claude Desktop
-- TypeScript
-- Configuration
-estimated_reading_time: 14 minutes
-series: MCP Protocol Complet
-episode: 1
-word_count: 2747
+difficulty: "Intermédiaire"
+technologies: ["MCP", "Claude Desktop", "TypeScript", "Configuration"]
+estimated_reading_time: "14 minutes"
 ---
 
 # Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète

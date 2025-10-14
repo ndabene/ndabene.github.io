@@ -1,32 +1,16 @@
 ---
----
 layout: post
-title: 'Google Shopping avec Gemini : La révolution IA qui transforme l''e-commerce'
+title: "Google Shopping avec Gemini : La révolution IA qui transforme l'e-commerce"
 date: 2025-09-18
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- google-shopping
-- ia-gemini
-- ia-générative
-- e-commerce
-- prestashop
-- ia-shopping-intelligence
-- ia-recommandations-ia
-excerpt: Découvrez comment Gemini révolutionne Google Shopping avec l'essayage virtuel,
-  les briefings IA et le suivi intelligent des prix. Guide complet 2025.
-image: "/assets/images/blog/2025-09-18-google-shopping-gemini-revolution.jpg"
+categories: [Intelligence Artificielle, Ecommerce, PrestaShop]
+tags: ["google-shopping", "ia-gemini", "ia-générative", "e-commerce", "prestashop", "ia-shopping-intelligence", "ia-recommandations-ia"]
+excerpt: "Découvrez comment Gemini révolutionne Google Shopping avec l'essayage virtuel, les briefings IA et le suivi intelligent des prix. Guide complet 2025."
+image: /assets/images/blog/2025-09-18-google-shopping-gemini-revolution.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- Gemini AI
-- Google Shopping
-- PrestaShop
-- Module E-commerce
-estimated_reading_time: 9 minutes
-series: IA E-commerce
-word_count: 1715
+difficulty: "Intermédiaire"
+technologies: ["Gemini AI", "Google Shopping", "PrestaShop", "Module E-commerce"]
+estimated_reading_time: "10 minutes"
 ---
 
 # Google Shopping avec Gemini : La révolution IA qui transforme l'e-commerce

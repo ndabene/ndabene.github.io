@@ -1,42 +1,25 @@
 ---
----
 layout: post
-title: 'Quand l''édition de modules PrestaShop rencontre le growth hacking : mindset,
-  méthodes et points de convergence'
+title: "Quand l'édition de modules PrestaShop rencontre le growth hacking : mindset,
+  méthodes et points de convergence"
 date: 2025-08-06
 author: Nicolas Dabène
-categories:
-- Case Studies
-tags:
-- prestashop
-- modules
-- growth-hacking
-- mindset
-- ia-entrepreneuriat
-- scalabilité
-excerpt: 'De l''artisanat logiciel à la scalabilité : pourquoi les éditeurs de modules
+categories: [PrestaShop, Entrepreneuriat, Bonnes Pratiques]
+tags: [PrestaShop, modules, growth hacking, mindset, entrepreneuriat, 
+    scalabilité]
+excerpt: "De l'artisanat logiciel à la scalabilité : pourquoi les éditeurs de modules
   sont les premiers growth hackers sans le savoir. Une réflexion sur les convergences
-  philosophiques profondes.'
-image: "/assets/images/blog/2025-07-31-prestashop-growth-hacking-mindset.jpg"
+  philosophiques profondes."
+image: /assets/images/blog/2025-07-31-prestashop-growth-hacking-mindset.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- PrestaShop
-- Business Strategy
-- Growth Hacking
-estimated_reading_time: 7 minutes
-llm_summary: 'De l''artisanat logiciel à la scalabilité : pourquoi les éditeurs de
+difficulty: "Intermédiaire"
+technologies: ["PrestaShop", "Business Strategy", "Growth Hacking"]
+estimated_reading_time: "12 minutes"
+llm_summary: "De l'artisanat logiciel à la scalabilité : pourquoi les éditeurs de
   modules sont les premiers growth hackers sans le savoir. Une réflexion sur les convergences
-  philosophiques profondes.'
-llm_topics:
-- PrestaShop
-- modules
-- growth hacking
-- mindset
-- entrepreneuriat
-- scalabilité
-series: PrestaShop Architecture
-word_count: 1325
+  philosophiques profondes."
+llm_topics: [PrestaShop, modules, growth hacking, mindset, entrepreneuriat, 
+    scalabilité]
 ---
 # Quand l'édition de modules PrestaShop rencontre le growth hacking : mindset, méthodes et points de convergence
 

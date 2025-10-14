@@ -1,34 +1,16 @@
 ---
----
 layout: post
-title: Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA
-  ?
+title: "Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA ?"
 date: 2025-11-04
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- ia-ia
-- github-copilot
-- security-sécurité
-- dette-technique
-- supervision
-- bonnes-pratiques
-- développement
-excerpt: 84% des développeurs utilisent l'IA, mais 45% du code généré contient des
-  vulnérabilités. Découvrez pourquoi l'IA nécessite autant de supervision qu'un développeur
-  junior.
-image: "/assets/images/blog/2025-11-04-ia-supervision-developpement.jpg"
+categories: [Intelligence Artificielle, Développement, Sécurité]
+tags: [IA, GitHub Copilot, sécurité, dette technique, supervision, bonnes pratiques, développement]
+excerpt: "84% des développeurs utilisent l'IA, mais 45% du code généré contient des vulnérabilités. Découvrez pourquoi l'IA nécessite autant de supervision qu'un développeur junior."
+image: /assets/images/blog/2025-11-04-ia-supervision-developpement.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- IA
-- GitHub Copilot
-- Sécurité
-- DevOps
-estimated_reading_time: 18 minutes
-series: Sécurité IA
-word_count: 3452
+difficulty: "Intermédiaire"
+technologies: ["IA", "GitHub Copilot", "Sécurité", "DevOps"]
+estimated_reading_time: "12 minutes"
 ---
 
 # Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA ?

@@ -1,37 +1,22 @@
 ---
----
 layout: post
-title: 'ChatGPT + Shopify : le futur de l’e-commerce'
+title: "ChatGPT + Shopify : le futur de l’e-commerce"
 date: 2025-08-08
 author: Nicolas Dabène
-categories:
-- Analyses
-tags:
-- shopify
-- ia-chatgpt
-- commerce-conversationnel
-- ai-integration
-- e-commerce
-excerpt: L’intégration native de ChatGPT et Shopify permet un parcours d’achat fluide
-  dans la conversation, redéfinissant l’expérience e-commerce et les modèles.
-image: "/assets/images/blog/2025-08-08-chatgpt-shopify.jpg"
+categories: [Ecommerce, Intelligence Artificielle]
+tags: ["shopify", "ia-chatgpt", "commerce-conversationnel", "ai-integration", "e-commerce"]
+excerpt: "L’intégration native de ChatGPT et Shopify permet un parcours d’achat fluide
+  dans la conversation, redéfinissant l’expérience e-commerce et les modèles."
+image: /assets/images/blog/2025-08-08-chatgpt-shopify.jpg
 featured: false
-difficulty: Avancé
-technologies:
-- AI
-- ChatGPT
-- Shopify
-estimated_reading_time: 5 minutes
-llm_summary: L’intégration native de ChatGPT et Shopify permet un parcours d’achat
-  fluide dans la conversation, redéfinissant l’expérience e-commerce et les modèles.
-llm_topics:
-- Shopify
-- ChatGPT
-- commerce conversationnel
-- AI integration
-- e-commerce
-series: IA E-commerce
-word_count: 927
+difficulty: "Intermédiaire"
+technologies: ["AI", "ChatGPT", "Shopify"]
+estimated_reading_time: "10 minutes"
+llm_summary: L’intégration native de ChatGPT et Shopify permet un parcours 
+  d’achat fluide dans la conversation, redéfinissant l’expérience e-commerce et 
+  les modèles.
+llm_topics: [Shopify, ChatGPT, commerce conversationnel, AI integration, 
+    e-commerce]
 ---
 # ChatGPT + Shopify : le futur de l’e-commerce
 

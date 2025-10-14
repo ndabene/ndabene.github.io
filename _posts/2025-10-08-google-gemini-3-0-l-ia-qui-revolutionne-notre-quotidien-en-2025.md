@@ -1,33 +1,17 @@
 ---
----
 layout: post
-title: 'Google Gemini 3.0 : L''IA qui Révolutionne Notre Quotidien en 2025'
+title: "Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025"
 date: 2025-10-08
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- ia-gemini
-- ia-générative
-- google
-- multimodal
-- ia-agents-ia
-- deep-think
-excerpt: Découvrez Gemini 3.0, la nouvelle génération d'IA de Google qui repousse
-  les limites du possible avec son raisonnement avancé et ses capacités multimodales
-  révolutionnaires.
-image: "/assets/images/blog/2025-10-08-google-gemini-3.jpg"
+categories: [Intelligence Artificielle, Développement]
+tags: [Gemini, IA générative, Google, multimodal, agents IA, Deep Think]
+excerpt: "Découvrez Gemini 3.0, la nouvelle génération d'IA de Google qui repousse les limites du possible avec son raisonnement avancé et ses capacités multimodales révolutionnaires."
+image: /assets/images/blog/2025-10-08-google-gemini-3.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- IA
-- Google AI
-- Machine Learning
-- Gemini
-estimated_reading_time: 18 minutes
+difficulty: "Intermédiaire"
+technologies: ["IA", "Google AI", "Machine Learning", "Gemini"]
+estimated_reading_time: "14 minutes"
 is_future: true
-series: Sécurité IA
-word_count: 3590
 ---
 
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025

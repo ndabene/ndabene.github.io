@@ -1,34 +1,16 @@
 ---
----
 layout: post
-title: 'Comprendre le Model Context Protocol (MCP) : Une Conversation Simple'
+title: "Comprendre le Model Context Protocol (MCP) : Une Conversation Simple"
 date: 2025-10-23
 author: Nicolas Dabène
-categories:
-- Analyses
-tags:
-- ia-mcp
-- model-context-protocol
-- ia-ia
-- architecture
-- api
-- dev-typescript
-- ia-chatgpt
-- ia-claude
-excerpt: Découvrez comment les IA peuvent accéder à vos fichiers et données grâce
-  au MCP, expliqué à travers une conversation simple et pédagogique.
-image: "/assets/images/blog/2025-10-23-comprendre-mcp-conversation-simple.jpg"
+categories: [Intelligence Artificielle, Tutoriel]
+tags: [MCP, Model Context Protocol, IA, architecture, API, TypeScript, ChatGPT, Claude]
+excerpt: "Découvrez comment les IA peuvent accéder à vos fichiers et données grâce au MCP, expliqué à travers une conversation simple et pédagogique."
+image: /assets/images/blog/2025-10-23-comprendre-mcp-conversation-simple.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- MCP
-- TypeScript
-- IA
-- JSON
-estimated_reading_time: 9 minutes
-series: MCP Protocol Complet
-episode: 1
-word_count: 1680
+difficulty: "Débutant"
+technologies: ["MCP", "TypeScript", "IA", "JSON"]
+estimated_reading_time: "10 minutes"
 ---
 
 # Comprendre le Model Context Protocol (MCP) : Une Conversation Simple

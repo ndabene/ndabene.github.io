@@ -1,32 +1,16 @@
 ---
----
 layout: post
-title: 'Quand l''IA devient un danger : 370 000 conversations privées exposées par
-  erreur'
+title: "Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur"
 date: 2025-08-21
 author: Nicolas Dabène
-categories:
-- Techniques
-tags:
-- security-sécurité
-- ia-ia
-- ia-confidentialité
-- xai
-- grok
-- faille-de-données
-- vie-privée
-excerpt: Une faille majeure révèle des contenus troublants et met en lumière les risques
-  cachés des chatbots d'intelligence artificielle.
-image: "/assets/images/blog/2025-08-21-ia-danger-conversations-exposees.jpg"
+categories: [Sécurité, Intelligence Artificielle]
+tags: ["security-sécurité", "ia-ia", "ia-confidentialité", "xai", "grok", "faille-de-données", "vie-privée"]
+excerpt: "Une faille majeure révèle des contenus troublants et met en lumière les risques cachés des chatbots d'intelligence artificielle."
+image: /assets/images/blog/2025-08-21-ia-danger-conversations-exposees.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- IA
-- Sécurité
-- Confidentialité
-estimated_reading_time: 5 minutes
-series: Sécurité IA
-word_count: 883
+difficulty: "Intermédiaire"
+technologies: ["IA", "Sécurité", "Confidentialité"]
+estimated_reading_time: "6 minutes"
 ---
 
 # Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur

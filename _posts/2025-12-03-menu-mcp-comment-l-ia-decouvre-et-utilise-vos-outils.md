@@ -1,33 +1,16 @@
 ---
----
 layout: post
-title: 'Le Menu MCP : Comment l''IA Découvre et Utilise vos Outils'
+title: "Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils"
 date: 2025-12-03
 author: Nicolas Dabène
-categories:
-- Analyses
-tags:
-- ia-mcp
-- dev-typescript
-- api
-- discovery
-- protocol
-- outils
-- architecture
-excerpt: Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle
-  vos outils ? Plongeons dans le système de découverte du MCP.
-image: "/assets/images/blog/2025-12-03-menu-mcp-decouverte-outils.jpg"
+categories: [Tutoriel, Intelligence Artificielle]
+tags: [MCP, TypeScript, API, discovery, protocol, outils, architecture]
+excerpt: "Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle vos outils ? Plongeons dans le système de découverte du MCP."
+image: /assets/images/blog/2025-12-03-menu-mcp-decouverte-outils.jpg
 featured: true
-difficulty: Avancé
-technologies:
-- TypeScript
-- MCP
-- API REST
-- JSON
-estimated_reading_time: 18 minutes
-series: MCP Protocol Complet
-episode: 1
-word_count: 3575
+difficulty: "Intermédiaire"
+technologies: ["TypeScript", "MCP", "API REST", "JSON"]
+estimated_reading_time: "14 minutes"
 ---
 
 # Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils
