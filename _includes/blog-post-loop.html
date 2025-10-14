@@ -4,7 +4,7 @@ Usage: {% include blog-post-loop.html posts=site.posts limit=6 %}
 {% endcomment %}
 
 {% assign posts_to_show = include.posts | default: site.posts %}
-{% assign post_limit = include.limit | default: 12 %}
+{% assign post_limit = include.limit | default: 999 %}
 
 <!-- Script pour détecter le mode admin avant le rendu -->
 <script>
