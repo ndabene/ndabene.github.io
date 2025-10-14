@@ -87,7 +87,7 @@ llm_topics:
                             <div class="search-input-wrapper">
                                 <i class="fas fa-search"></i>
                                 <input type="text" id="search-input" placeholder="Rechercher un article...">
-                                <button id="clear-search" class="clear-search-btn" style="display: none;">
+                                <button id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Effacer la recherche">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
@@ -212,9 +212,9 @@ llm_topics:
                             {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
-                                <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
+                                <button class="category-compact" data-category="{{ category }}" type="button">
                                     {{ category }} <span>({{ category_posts.size }})</span>
-                                </a>
+                                </button>
                             {% endfor %}
                         </div>
                     </div>

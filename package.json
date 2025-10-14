@@ -23,6 +23,12 @@
   "author": "Nicolas Dabène",
   "license": "MIT",
   "devDependencies": {
+    "imagemin": "^9.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
+    "purgecss": "^7.0.2",
+    "sharp": "^0.34.4",
     "watch": "^1.0.2"
   }
 }
