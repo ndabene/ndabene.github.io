@@ -396,50 +396,29 @@ llm_topics: [ebooks, formations, ia, prestashop]
 }
 </script>
 
-<section class="faq-section-inline" aria-label="FAQ Boutique">
-  <div class="container">
+<section class="faq-section-blog" aria-label="FAQ Boutique">
+  <div class="faq-container">
     <h2>Questions fréquentes</h2>
-    <div class="faq-grid-inline">
-      <div class="faq-item-inline animate-item">
-        <div class="faq-icon-inline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18v-6h6v6"></path><path d="M9 9V5h6v4"></path></svg>
-        </div>
-        <div class="faq-content-inline">
-          <div class="faq-question-inline">Comment accéder à votre e‑book ou formation après l’achat&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Après paiement sécurisé, vous recevez immédiatement un e‑mail de confirmation avec votre lien d’accès/téléchargement. Conservez‑le, il reste actif. Besoin d’aide&nbsp;? <strong>Réponse sous 48h</strong> via le <a href="/contact/">formulaire</a>.</p></div>
-        </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Comment accéder à votre e‑book ou formation après l'achat ?</div>
+        <div class="faq-answer">Après paiement sécurisé, vous recevez immédiatement un e‑mail de confirmation avec votre lien d'accès/téléchargement. Conservez‑le, il reste actif. Besoin d'aide ? <strong>Réponse sous 48h</strong> via le <a href="/contact/">formulaire</a>.</div>
       </div>
 
-      <div class="faq-item-inline animate-item">
-        <div class="faq-icon-inline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path></svg>
-        </div>
-        <div class="faq-content-inline">
-          <div class="faq-question-inline">Quels univers sont couverts&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Nos contenus sont organisés par univers (IA, PrestaShop, développement). Chaque fiche affiche <strong>univers, niveau, durée et format</strong> pour vous orienter rapidement.</p></div>
-        </div>
+      <div class="faq-item">
+        <div class="faq-question">Quels univers sont couverts ?</div>
+        <div class="faq-answer">Nos contenus sont organisés par univers (IA, PrestaShop, développement). Chaque fiche affiche <strong>univers, niveau, durée et format</strong> pour vous orienter rapidement.</div>
       </div>
 
-      <div class="faq-item-inline animate-item">
-        <div class="faq-icon-inline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v4H3z"></path><path d="M7 7v14"></path><path d="M17 7v14"></path></svg>
-        </div>
-        <div class="faq-content-inline">
-          <div class="faq-question-inline">Comment les contenus sont‑ils mis à jour&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Nous publions des mises à jour régulières pour rester utiles et applicables. La <strong>date de mise à jour</strong> est visible sur chaque fiche.</p></div>
-        </div>
+      <div class="faq-item">
+        <div class="faq-question">Comment les contenus sont-ils mis à jour ?</div>
+        <div class="faq-answer">Nous publions des mises à jour régulières pour rester utiles et applicables. La <strong>date de mise à jour</strong> est visible sur chaque fiche.</div>
       </div>
 
-      <div class="faq-item-inline animate-item">
-        <div class="faq-icon-inline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l9-16H3l9 16z"/></svg>
-        </div>
-        <div class="faq-content-inline">
-          <div class="faq-question-inline">Puis‑je commencer tout de suite&nbsp;?</div>
-          <div class="faq-answer-inline"><p>Oui. Les contenus sont <strong>actionnables immédiatement</strong> : supports clairs, méthodes et check‑lists prêtes à l’emploi pour progresser pas à pas.</p></div>
-        </div>
+      <div class="faq-item">
+        <div class="faq-question">Puis-je commencer tout de suite ?</div>
+        <div class="faq-answer">Oui. Les contenus sont <strong>actionnables immédiatement</strong> : supports clairs, méthodes et check-lists prêtes à l'emploi pour progresser pas à pas.</div>
       </div>
-    
     </div>
   </div>
 </section>

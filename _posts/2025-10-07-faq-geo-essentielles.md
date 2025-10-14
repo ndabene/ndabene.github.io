@@ -203,20 +203,36 @@ Les e-commerçants qui structurent dès aujourd'hui leur contenu pour le GEO pre
 
 ## Questions Fréquentes
 
-**Q: Combien de FAQ devrais-je créer par produit ?**
-**R:** Entre 3 et 7 FAQ par produit est un bon équilibre. Concentrez-vous sur les questions qui influencent réellement la décision d'achat. Mieux vaut 5 excellentes FAQ qu'en avoir 20 médiocres.
+<section class="faq-section-blog">
+  <div class="faq-container">
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Combien de FAQ devrais-je créer par produit ?</div>
+        <div class="faq-answer">Entre 3 et 7 FAQ par produit est un bon équilibre. Concentrez-vous sur les questions qui influencent réellement la décision d'achat. Mieux vaut 5 excellentes FAQ qu'en avoir 20 médiocres.</div>
+      </div>
 
-**Q: Les FAQ doivent-elles être visibles sur la page ou peuvent-elles être masquées ?**
-**R:** Elles doivent absolument être visibles et accessibles dans le code HTML. Les IA crawlent le contenu réel de vos pages. Du contenu caché ou chargé dynamiquement peut ne pas être indexé correctement.
+      <div class="faq-item">
+        <div class="faq-question">Les FAQ doivent-elles être visibles sur la page ou peuvent-elles être masquées ?</div>
+        <div class="faq-answer">Elles doivent absolument être visibles et accessibles dans le code HTML. Les IA crawlent le contenu réel de vos pages. Du contenu caché ou chargé dynamiquement peut ne pas être indexé correctement.</div>
+      </div>
 
-**Q: Puis-je utiliser la même FAQ sur plusieurs produits similaires ?**
-**R:** Oui, mais adaptez-la avec les spécificités de chaque produit. Une FAQ "Ce produit est-il lavable en machine ?" peut être réutilisée, mais la réponse doit mentionner les températures spécifiques et précautions propres à chaque article.
+      <div class="faq-item">
+        <div class="faq-question">Puis-je utiliser la même FAQ sur plusieurs produits similaires ?</div>
+        <div class="faq-answer">Oui, mais adaptez-la avec les spécificités de chaque produit. Une FAQ "Ce produit est-il lavable en machine ?" peut être réutilisée, mais la réponse doit mentionner les températures spécifiques et précautions propres à chaque article.</div>
+      </div>
 
-**Q: Comment savoir si mes FAQ sont efficaces pour le GEO ?**
-**R:** Testez en posant vous-même des questions aux IA (ChatGPT, Perplexity, Gemini) sur vos produits ou votre domaine. Voyez si votre site apparaît dans les réponses et comment vos informations sont utilisées. C'est le meilleur test terrain.
+      <div class="faq-item">
+        <div class="faq-question">Comment savoir si mes FAQ sont efficaces pour le GEO ?</div>
+        <div class="faq-answer">Testez en posant vous-même des questions aux IA (ChatGPT, Perplexity, Gemini) sur vos produits ou votre domaine. Voyez si votre site apparaît dans les réponses et comment vos informations sont utilisées. C'est le meilleur test terrain.</div>
+      </div>
 
-**Q: Les FAQ nuisent-elles au SEO classique ?**
-**R:** Au contraire ! Les FAQ bien structurées améliorent aussi votre SEO traditionnel. Google affiche souvent les FAQ dans les featured snippets, et elles augmentent le temps passé sur page ainsi que l'engagement utilisateur.
+      <div class="faq-item">
+        <div class="faq-question">Les FAQ nuisent-elles au SEO classique ?</div>
+        <div class="faq-answer">Au contraire ! Les FAQ bien structurées améliorent aussi votre SEO traditionnel. Google affiche souvent les FAQ dans les featured snippets, et elles augmentent le temps passé sur page ainsi que l'engagement utilisateur.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 ## Conclusion
 

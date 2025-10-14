@@ -5269,6 +5269,22 @@ div.skills-page-modern div.expertise-section-clean div.grid-unified div.expertis
 }
 
 //================================================
+// FAQ ICONS - TAILLE CONTRÔLÉE POUR ÉVITER QU'ELLES SOIENT ÉNORMES
+//================================================
+.faq-icon-inline {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    max-width: 24px;
+    max-height: 24px;
+  }
+}
+
+//================================================
 // FAQ CARDS - STYLE CIRCULAIRE COMME LES COMPÉTENCES
 //================================================
 .faq-section-geo {

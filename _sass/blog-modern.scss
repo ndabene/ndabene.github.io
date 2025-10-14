@@ -2692,3 +2692,172 @@ $blog-content-bg: $white;
     transform: scale(1.05);
   }
 }
+
+//================================================
+// FAQ SECTION - MODERN BLOG DESIGN
+//================================================
+.faq-section-blog {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 4rem 0;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  margin: 4rem 0;
+
+  .faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+      border-radius: 2px;
+    }
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      border-color: rgba(15, 23, 42, 0.2);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, #0f172a, #1e293b);
+      border-radius: 12px 0 0 12px;
+    }
+  }
+
+  .faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 3rem;
+
+    &:before {
+      content: 'Q';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #111827;
+    margin: 0;
+    padding-left: 3rem;
+    position: relative;
+
+    &:before {
+      content: 'R';
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+      width: 24px;
+      height: 24px;
+      background: rgba(30, 41, 59, 0.1);
+      color: #1e293b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+  }
+
+  // Responsive design
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    margin: 3rem 0;
+
+    .faq-container {
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-item {
+      padding: 2rem;
+
+      .faq-question {
+        font-size: 1.1rem;
+        padding-left: 2.5rem;
+
+        &:before {
+          width: 28px;
+          height: 28px;
+          font-size: 0.8rem;
+        }
+      }
+
+      .faq-answer {
+        font-size: 0.95rem;
+        padding-left: 2.5rem;
+
+        &:before {
+          left: 0;
+          top: 0.2em;
+          width: 20px;
+          height: 20px;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
