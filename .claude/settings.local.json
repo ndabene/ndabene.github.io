@@ -11,7 +11,10 @@
       "Bash(tasklist)",
       "Bash(findstr:*)",
       "Bash(netstat:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(git push:*)",
+      "Bash(dir:*)",
+      "Bash(del \"\\?\\C:\\laragon\\www\\ndabene.github.io\\assets\\images\\blog\\nul\")"
     ],
     "deny": []
   }

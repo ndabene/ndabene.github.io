@@ -1,0 +1,61 @@
+name: Fetch YouTube Videos
+
+on:
+  schedule:
+    # Exécuter tous les jours à 2h du matin (heure UTC)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Permettre l'exécution manuelle
+
+jobs:
+  fetch-videos:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Fetch YouTube videos
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+      run: |
+        ruby scripts/fetch_youtube_videos.rb
+
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changes == 'true'
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add _data/youtube_videos.yml
+        git commit -m "🔄 Mise à jour automatique des vidéos YouTube
+
+- Ajout des nouvelles vidéos depuis YouTube
+- Généré automatiquement le $(date +'%Y-%m-%d')" || echo "No changes to commit"
+        git push
+
+    - name: Build and deploy site (optionnel)
+      if: steps.verify-changed-files.outputs.changes == 'true'
+      run: |
+        # Ici vous pouvez ajouter des étapes pour builder et déployer le site
+        # Par exemple avec Jekyll ou votre workflow de déploiement existant
+        echo "Site mis à jour avec les nouvelles vidéos YouTube"
