@@ -1,11 +1,40 @@
 ---
 layout: youtube
-title: "Vidéos YouTube"
-description: "Découvrez mes vidéos YouTube sur le développement PrestaShop, PHP, l'IA et l'e-commerce"
+title: "Vidéos YouTube - Tutoriels PrestaShop, PHP & IA"
+description: "Découvrez mes vidéos YouTube sur le développement PrestaShop, PHP, l'intelligence artificielle et l'e-commerce. Tutoriels techniques, astuces pratiques et analyses approfondies."
 permalink: /youtube/
+keywords: "youtube videos, tutoriels prestashop, php development, intelligence artificielle, e-commerce, développement web, formation développeur, vidéos techniques, ndabene06"
+author: "Nicolas Dabène"
+date: 2025-10-15
+last_modified_at: 2025-10-15
 sitemap:
   changefreq: "daily"
   priority: 0.8
+
+# SEO et GEO Optimisation
+llm_summary: "Collection complète des vidéos YouTube de Nicolas Dabène sur le développement PrestaShop, PHP, IA et e-commerce. Contenu technique régulièrement mis à jour."
+llm_topics:
+  - tutoriels prestashop
+  - développement php
+  - intelligence artificielle
+  - e-commerce
+  - formation développeur
+  - vidéos techniques
+  - bonnes pratiques développement
+
+# Open Graph pour partage social
+og_title: "Vidéos YouTube - Nicolas Dabène | Développement PrestaShop & IA"
+og_description: "Découvrez mes tutoriels techniques sur PrestaShop, PHP et l'IA. Contenu régulièrement mis à jour avec les dernières technologies."
+og_image: "/assets/images/logo.png"
+og_url: "https://ndabene.github.io/youtube/"
+og_type: "website"
+
+# Twitter Cards
+twitter_card: "summary_large_image"
+twitter_title: "Vidéos YouTube - Nicolas Dabène"
+twitter_description: "Tutoriels PrestaShop, PHP & IA par un développeur senior"
+twitter_image: "/assets/images/logo.png"
+twitter_site: "@nicolasdabene"
 ---
 
 <section class="page-hero-section">
@@ -21,17 +50,106 @@ sitemap:
     </div>
 </section>
 
+<!-- Include SEO/GEO metadata -->
+{% include youtube-seo-meta.html %}
+
+<!-- Structured Data JSON-LD pour SEO et GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Vidéos YouTube - Nicolas Dabène",
+  "description": "Collection complète des vidéos YouTube de Nicolas Dabène sur le développement PrestaShop, PHP, IA et e-commerce",
+  "url": "https://ndabene.github.io/youtube/",
+  "author": {
+    "@type": "Person",
+    "name": "Nicolas Dabène",
+    "jobTitle": "Développeur PHP FullStack Senior",
+    "knowsAbout": ["PrestaShop", "PHP", "Intelligence Artificielle", "E-commerce", "Développement Web"],
+    "sameAs": [
+      "https://github.com/ndabene",
+      "https://linkedin.com/in/nicolas-dabène-473a43b8",
+      "https://www.youtube.com/@ndabene06",
+      "https://x.com/nicolasdabene"
+    ]
+  },
+  "mainEntity": {
+    "@type": "VideoGallery",
+    "name": "Tutoriels Techniques YouTube",
+    "description": "Vidéos éducatives sur le développement PrestaShop, PHP et l'intelligence artificielle",
+    "video": [
+      {% for video in sorted_videos limit: 10 %}
+      {
+        "@type": "VideoObject",
+        "name": "{{ video.title | escape }}",
+        "description": "{{ video.description | escape | truncate: 200 }}",
+        "url": "{{ video.url }}",
+        "thumbnailUrl": "{{ video.thumbnail }}",
+        "uploadDate": "{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}",
+        "duration": "{{ video.duration }}",
+        "author": {
+          "@type": "Person",
+          "name": "Nicolas Dabène"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Nicolas Dabène",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ndabene.github.io/assets/images/logo.png"
+          }
+        },
+        "keywords": "{{ video.category }}",
+        "inLanguage": "fr"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "PrestaShop",
+      "description": "Plateforme e-commerce open source"
+    },
+    {
+      "@type": "Thing",
+      "name": "PHP",
+      "description": "Langage de programmation web"
+    },
+    {
+      "@type": "Thing",
+      "name": "Intelligence Artificielle",
+      "description": "Technologies d'IA et apprentissage automatique"
+    },
+    {
+      "@type": "Thing",
+      "name": "E-commerce",
+      "description": "Commerce électronique et solutions digitales"
+    }
+  ],
+  "educationalUse": "professionalDevelopment",
+  "teaches": ["développement web", "PrestaShop", "PHP", "intelligence artificielle", "e-commerce"],
+  "inLanguage": "fr",
+  "datePublished": "2025-10-15",
+  "dateModified": "{{ site.time | date: '%Y-%m-%d' }}"
+}
+</script>
+
 <section class="blog-content-section">
     <div class="container">
         {% assign sorted_videos = site.data.youtube_videos | sort: 'published_at' | reverse %}
         {% assign total_videos = sorted_videos | size %}
 
-        <div class="blog-grid-news">
+        <div class="blog-grid-news" itemscope itemtype="https://schema.org/CollectionPage">
             <div class="main-blog-content-news">
                 <!-- Filtres et tri -->
                 <div class="blog-filters-container">
                     <div class="blog-filters-header">
-                        <h2 class="section-title">Vidéos YouTube</h2>
+                        <h2 class="section-title" itemprop="name">Vidéos YouTube</h2>
+                        <div class="videos-count-badge" itemprop="description">
+                            <span class="count-number">{{ total_videos }}</span>
+                            <span class="count-label">vidéos</span>
+                        </div>
                         <button id="toggle-youtube-filters" class="toggle-filters-btn">
                             <i class="fas fa-filter"></i>
                             <span>Filtres</span>
@@ -106,11 +224,11 @@ sitemap:
                 <!-- Grille des vidéos -->
                 <div class="post-list-news grid-view" id="youtube-videos-container">
                     {% for video in sorted_videos %}
-                        <div class="post-preview-wrapper">
+                        <div class="post-preview-wrapper" itemprop="hasPart" itemscope itemtype="https://schema.org/VideoObject">
                             <article class="post-preview-card" data-categories="{% if video.category %}{{ video.category | slugify }}{% endif %}" data-date="{{ video.published_at | date: '%s' }}" data-title="{{ video.title }}" data-channel="{{ video.channel }}">
                                 <div class="post-preview-image">
                                     <a href="{{ video.url }}" target="_blank" class="post-image-link">
-                                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy">
+                                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy" itemprop="thumbnailUrl">
                                         <div class="post-preview-overlay">
                                             <div class="play-icon-large">
                                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -122,6 +240,24 @@ sitemap:
                                             {% endif %}
                                         </div>
                                     </a>
+                                    <meta itemprop="url" content="{{ video.url }}">
+                                    <meta itemprop="name" content="{{ video.title }}">
+                                    <meta itemprop="description" content="{{ video.description | truncate: 200 }}">
+                                    <meta itemprop="uploadDate" content="{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
+                                    <meta itemprop="duration" content="{{ video.duration }}">
+                                    <meta itemprop="inLanguage" content="fr">
+                                    {% if video.category %}
+                                    <meta itemprop="keywords" content="{{ video.category }}">
+                                    {% endif %}
+                                    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                        <meta itemprop="name" content="Nicolas Dabène">
+                                    </div>
+                                    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                        <meta itemprop="name" content="Nicolas Dabène">
+                                        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                            <meta itemprop="url" content="https://ndabene.github.io/assets/images/logo.png">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="post-preview-content">
@@ -133,12 +269,12 @@ sitemap:
                                                 YouTube
                                             {% endif %}
                                         </span>
-                                        <time class="post-date" datetime="{{ video.published_at | date: '%Y-%m-%d' }}">
+                                        <time class="post-date" datetime="{{ video.published_at | date: '%Y-%m-%d' }}" itemprop="datePublished">
                                             {% include date-fr.html date=video.published_at %}
                                         </time>
                                     </div>
 
-                                    <h3 class="post-preview-title">
+                                    <h3 class="post-preview-title" itemprop="headline">
                                         <a href="{{ video.url }}" target="_blank">{{ video.title }}</a>
                                     </h3>
 
