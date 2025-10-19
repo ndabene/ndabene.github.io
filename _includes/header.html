@@ -1,4 +1,14 @@
 <header class="header-executive">
+  <!-- Perplexity Banner -->
+  <div class="perplexity-banner" id="perplexity-banner">
+    <div class="banner-content">
+      <span class="banner-icon">🎁</span>
+      <span class="banner-text">Perplexity PRO : 30 jours gratuits offerts</span>
+      <a href="https://pplx.ai/ndabene28081991" class="banner-cta" target="_blank" rel="noopener">Activer l'offre →</a>
+      <button class="banner-close" onclick="closePerplexityBanner()">&times;</button>
+    </div>
+  </div>
+
   <div class="header-container">
     <div class="header-logo">
       <a href="{{ "/" | relative_url }}">
@@ -43,3 +53,23 @@
     </ul>
   </div>
 </header>
+
+<script>
+  // Perplexity Banner Management
+  function closePerplexityBanner() {
+    const banner = document.getElementById('perplexity-banner');
+    banner.style.display = 'none';
+    localStorage.setItem('perplexityBannerClosed', 'true');
+  }
+
+  // Check if banner was previously closed
+  document.addEventListener('DOMContentLoaded', function() {
+    const bannerClosed = localStorage.getItem('perplexityBannerClosed');
+    if (bannerClosed === 'true') {
+      const banner = document.getElementById('perplexity-banner');
+      if (banner) {
+        banner.style.display = 'none';
+      }
+    }
+  });
+</script>

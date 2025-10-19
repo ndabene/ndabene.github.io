@@ -162,7 +162,22 @@ layout: default
                     <!-- Navigation série en haut de l'article -->
                     {% include series-navigation.html %}
                     
+
                     <article class="post-content">
+                        <!-- Bloc Perplexity au-dessus de la table des matières -->
+                        {% if true %}
+                        <div class="toc-perplexity-block">
+                            <h4>🎁 Perplexity PRO offert</h4>
+                            <div class="perplexity-sidebar-content">
+                                <p><strong>30 jours gratuits</strong></p>
+                                <p class="sidebar-perplexity-text">Téléchargez Comet, connectez votre compte et posez votre première question.</p>
+                                <a href="https://pplx.ai/ndabene28081991" class="perplexity-sidebar-btn" target="_blank" rel="noopener">
+                                    Activer l'offre →
+                                </a>
+                            </div>
+                        </div>
+                        {% endif %}
+
                         <!-- Table des matières repliable (mobile uniquement) -->
                         {% if page.table_of_contents != false %}
                         <div class="table-of-contents-inline">
@@ -178,7 +193,7 @@ layout: default
                             </nav>
                         </div>
                         {% endif %}
-                        
+
                         {{ content }}
 
                         <!-- CTA SEO/GEO -->

@@ -1614,9 +1614,43 @@ body.dark-mode {
       }
     }
     
+    .perplexity-offer {
+      background: rgba($dark-surface, 0.5);
+      border-left-color: $accent-color-1;
+
+      p {
+        color: $dark-text;
+      }
+    }
+
+    .perplexity-cta {
+      background: $accent-color-1;
+
+      &:hover {
+        background: lighten($accent-color-1, 10%);
+      }
+    }
+
+    .perplexity-offer {
+      background: rgba($dark-surface, 0.5);
+      border-left-color: $accent-color-1;
+
+      p {
+        color: $dark-text;
+      }
+    }
+
+    .perplexity-cta {
+      background: $accent-color-1;
+
+      &:hover {
+        background: lighten($accent-color-1, 10%);
+      }
+    }
+
     .footer-bottom {
       border-top-color: rgba($dark-text-muted, 0.2);
-      
+
       p {
         color: $dark-text-muted;
       }
@@ -1646,10 +1680,66 @@ body.dark-mode {
     .social-icons .social-icon {
       width: 40px;
       height: 40px;
-      
+
       svg {
         width: 18px;
         height: 18px;
+      }
+    }
+
+    .perplexity-offer {
+      background: rgba($white, 0.1);
+      border-radius: $border-radius;
+      padding: $spacing-md;
+      margin-bottom: $spacing-md;
+      border-left: 4px solid $accent-color-1;
+
+      p {
+        margin: 0 0 $spacing-sm 0;
+        font-size: $font-size-sm;
+        line-height: 1.4;
+        color: $white;
+      }
+    }
+
+    .perplexity-cta {
+      display: inline-block;
+      background: $accent-color-1;
+      color: $white;
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $border-radius;
+      text-decoration: none;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-sm;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba($accent-color-1, 0.3);
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+      }
+
+      &:hover {
+        background: darken($accent-color-1, 10%);
+        transform: translateX(3px) scale(1.05);
+        box-shadow: 0 4px 15px rgba($accent-color-1, 0.5);
+
+        &::before {
+          left: 100%;
+        }
+      }
+
+      &:active {
+        transform: translateX(3px) scale(0.98);
+        box-shadow: 0 2px 8px rgba($accent-color-1, 0.3);
       }
     }
   }
