@@ -6,6 +6,10 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch: # Permettre l'exécution manuelle
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   fetch-videos:
     runs-on: ubuntu-latest
@@ -49,8 +53,8 @@ jobs:
         git add _data/youtube_videos.yml
         git commit -m "🔄 Mise à jour automatique des vidéos YouTube
 
-- Ajout des nouvelles vidéos depuis YouTube
-- Généré automatiquement le $(date +'%Y-%m-%d')" || echo "No changes to commit"
+        - Ajout des nouvelles vidéos depuis YouTube
+        - Généré automatiquement le $(date +'%Y-%m-%d')" || echo "No changes to commit"
         git push
 
     - name: Build and deploy site (optionnel)
