@@ -11,23 +11,9 @@
 **Portfolio personnel de Nicolas Dabène**  
 *Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience*
 
-[🌐 Voir le site](https://nicolas-dabene.fr) • [📧 Contact](mailto:contact@ndabene.fr) • [💼 LinkedIn](https://linkedin.com/in/nicolasdabene)
+[🌐 Voir le site](https://nicolas-dabene.fr) • [📧 Contact](https://nicolas-dabene.fr/contact/) • [💼 LinkedIn](https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/)
 
 </div>
-
-## ⚡ Commandes rapides
-
-```bash
-# 🚀 Démarrage rapide
-npm run serve                           # Démarre le serveur local
-
-# ✍️ Création de contenu  
-npm run new-post "Mon Nouvel Article"   # Crée un article optimisé GEO
-
-# 🔄 Maintenance
-npm run update-sitemap                  # Met à jour sitemap + notifie moteurs
-npm run build                          # Build pour production
-```
 
 ## 📋 Table des matières
 
