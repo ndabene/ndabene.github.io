@@ -8,8 +8,9 @@ baseurl: ""
 # Environnement de production
 environment: production
 
-# Désactiver les features non supportées par GitHub Pages
-future: false
+# Activer la génération des articles futurs pour permettre le partage en avance
+# Les articles futurs sont générés mais pas listés sur la page blog (filtrés côté Liquid)
+future: true
 unpublished: false
 
 # Optimisations pour la production
