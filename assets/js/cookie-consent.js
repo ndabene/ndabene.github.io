@@ -443,7 +443,7 @@ class CookieConsent {
             if (adSenseScript) {
                 // Supprimer le script AdSense si chargé sans consentement
                 adSenseScript.remove();
-                console.log('AdSense script removed due to lack of consent');
+                // console.log('AdSense script removed due to lack of consent');
             }
         }
     }
@@ -464,12 +464,12 @@ class CookieConsent {
         const head = document.head || document.getElementsByTagName('head')[0];
         head.appendChild(script);
 
-        console.log('AdSense script loaded with consent');
+        // console.log('AdSense script loaded with consent');
 
         // Attendre que AdSense soit chargé puis initialiser
         script.onload = () => {
             if (window.adsbygoogle) {
-                console.log('AdSense loaded successfully');
+                // console.log('AdSense loaded successfully');
             }
         };
     }

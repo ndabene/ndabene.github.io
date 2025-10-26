@@ -10,19 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
                           localStorage.getItem('admin_preview') === 'true' ||
                           isLocalhost; // Auto-activer en local
 
-    console.log('🔍 Admin Preview Debug:', {
-        hostname: window.location.hostname,
-        isLocalhost: isLocalhost,
-        urlParam: urlParams.get('admin_preview'),
-        sessionStorage: sessionStorage.getItem('admin_preview'),
-        isAdminPreview: isAdminPreview
-    });
+    // Debug: Admin Preview
+    // console.log('🔍 Admin Preview Debug:', { hostname: window.location.hostname, isLocalhost, isAdminPreview });
 
     if (isAdminPreview) {
-        console.log('✅ Mode admin activé');
+        // console.log('✅ Mode admin activé');
         enableAdminMode();
     } else {
-        console.log('❌ Mode admin désactivé');
+        // console.log('❌ Mode admin désactivé');
         // Afficher le bouton admin si on est en local
         if (isLocalhost) {
             const adminToggle = document.getElementById('admin-toggle-section');

@@ -34,9 +34,9 @@ function loadAndRenderHomePublications() {
             const publicationHtml = generateHomePublicationHtml(post);
             container.insertAdjacentHTML('beforeend', publicationHtml);
         });
-        
-        console.log(`✅ ${futurePosts.length} futurs posts ajoutés à la section publications de la page d'accueil en mode admin`);
-        
+
+        // console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin`);
+
     } catch (error) {
         console.error('Erreur lors du chargement des publications pour la homepage:', error);
     }

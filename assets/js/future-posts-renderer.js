@@ -9,18 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
                           sessionStorage.getItem('admin_preview') === 'true' ||
                           isLocalhost; // Auto-activer en local
 
-    console.log('📝 Future Posts Renderer:', {
-        isLocalhost: isLocalhost,
-        isAdminPreview: isAdminPreview,
-        dataScript: document.getElementById('future-posts-data') ? 'found' : 'NOT FOUND',
-        container: document.getElementById('blog-posts-container') ? 'found' : 'NOT FOUND'
-    });
+    // Debug: Future Posts Renderer
+    // console.log('📝 Future Posts Renderer:', { isLocalhost, isAdminPreview });
 
     if (isAdminPreview) {
-        console.log('🚀 Loading future posts...');
+        // console.log('🚀 Loading future posts...');
         loadAndRenderFuturePosts();
-    } else {
-        console.log('⏸️ Admin mode not active, future posts hidden');
     }
 });
 
@@ -51,7 +45,7 @@ function loadAndRenderFuturePosts() {
             container.classList.add('grid-view');
         }
 
-        console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin (en haut de la liste)`);
+        // console.log(`✅ ${futurePosts.length} futurs posts ajoutés en mode admin`);
 
     } catch (error) {
         console.error('Erreur lors du chargement des futurs posts:', error);

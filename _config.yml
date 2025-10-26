@@ -83,9 +83,7 @@ include:
 # Google Analytics
 google_analytics: G-38JJ2JLMX4
 
-# Maintenance mode settings
-maintenance_mode: false
-maintenance_authorized_ip: ""
+# Site settings
 under_construction: false # Bannière "under construction" désactivée
 
 # Performance & Mobile Optimization 2025

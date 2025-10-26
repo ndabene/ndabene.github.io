@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const card = btn.closest('.product-card');
     if (!card) return;
     const tpl = card.querySelector('.quick-view-content');
-    if (!tpl) { console.warn('Quick-view template introuvable'); return; }
+    if (!tpl) { /* console.warn('Quick-view template introuvable'); */ return; }
     const html = tpl.innerHTML && tpl.innerHTML.trim();
-    if (!html) { console.warn('Quick-view template vide'); return; }
+    if (!html) { /* console.warn('Quick-view template vide'); */ return; }
     openModal(html);
     // Inject lightweight JSON-LD for modal view (non-indexed) to help GEO tools parse context
     try {
