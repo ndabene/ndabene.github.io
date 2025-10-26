@@ -21,9 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    console.log('[layout-debug] viewportWidth=', viewportWidth, 'offenders=', offenders.length, offenders);
+    // Debug output (uncomment to enable console logging)
+    // console.log('[layout-debug] viewportWidth=', viewportWidth, 'offenders=', offenders.length, offenders);
   } catch (e) {
-    console.warn('[layout-debug] error', e);
+    console.error('[layout-debug] error', e);
   }
 });
 
