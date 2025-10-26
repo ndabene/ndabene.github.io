@@ -1,184 +1,333 @@
 /* ================================================================
-   PUBLICATIONS EXTERNES - Style cohérent avec le site
+   PUBLICATIONS EXTERNES - Design élégant cohérent avec le site
+   Style inspiré des featured cards et hero articles
    ================================================================ */
 
+// Variables reprises du site
+$news-primary: #111827;
+$news-secondary: #374151;
+$news-accent: #0f172a;
+$news-border: #e2e8f0;
+$news-hover: #f3f4f6;
+
 /* ----------------------------------------------------------------
-   SIDEBAR WIDGET - Style cohérent avec Perplexity
+   SIDEBAR WIDGET - Style featured card miniature
    ---------------------------------------------------------------- */
 
-.external-pubs-sidebar-content {
-  text-align: center;
-
-  p:first-child {
-    color: #0f172a; // $news-accent
-    font-weight: 700;
-    margin: 0 0 0.5rem 0;
-    font-size: 0.9rem;
-  }
-
-  .external-pubs-text {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin: 0 0 1rem 0;
-    line-height: 1.4;
-  }
-}
-
-.external-pubs-sidebar-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+.external-pub-card {
+  display: block;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.3);
+  margin-top: 0.75rem;
 
   &:hover {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.4);
-  }
-}
-
-/* ----------------------------------------------------------------
-   POST CTA - Style cohérent avec social-sharing-section
-   ---------------------------------------------------------------- */
-
-.external-publications-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  margin: 3rem 0;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  text-align: center;
-
-  .external-pubs-content {
-    max-width: 600px;
-    margin: 0 auto;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
-  .external-pubs-header {
+  .external-pub-header {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 100px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: rotate(20deg);
+    }
+  }
+
+  .external-pub-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+  }
 
-    i {
-      font-size: 1.5rem;
-      color: #0f172a;
-      opacity: 0.8;
-    }
+  .external-pub-badge {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 2;
+  }
 
-    h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1e293b;
-      margin: 0;
+  .external-pub-content {
+    padding: 1.25rem;
+    border-bottom: 1px solid $news-border;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      color: $news-primary;
       line-height: 1.3;
     }
+
+    p {
+      font-size: 0.85rem;
+      color: $news-secondary;
+      margin: 0;
+      line-height: 1.5;
+    }
   }
 
-  .external-pubs-description {
-    font-size: 1rem;
-    color: #64748b;
-    line-height: 1.6;
-    margin: 0 0 2rem 0;
+  .external-pub-footer {
+    padding: 0.875rem 1.25rem;
+    background: $news-hover;
+    display: flex;
+    justify-content: flex-end;
   }
 
-  .external-pubs-btn {
+  .external-pub-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $news-accent;
+    transition: gap 0.3s ease;
+
+    i {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .external-pub-cta {
+    gap: 0.7rem;
+
+    i {
+      transform: translateX(3px);
+    }
+  }
+}
+
+/* ----------------------------------------------------------------
+   POST CTA - Style hero section élégant
+   ---------------------------------------------------------------- */
+
+.external-pubs-post-section {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  margin: 3rem 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #2563eb 50%, #3b82f6 100%);
+  }
+
+  .external-pubs-post-inner {
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #fafbfc 0%, #ffffff 100%);
+
+    @media (max-width: 768px) {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .external-pubs-post-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
-    padding: 0.875rem 1.75rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    margin-bottom: 1.5rem;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  .external-pubs-post-title {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: $news-primary;
+    margin: 0 0 1rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .external-pubs-post-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: $news-secondary;
+    margin: 0 0 2rem 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  .external-pubs-post-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, $news-accent 0%, $news-primary 100%);
+    color: white;
+    padding: 1rem 2rem;
     border-radius: 10px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.2);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
 
     i {
       transition: transform 0.3s ease;
     }
 
     &:hover {
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.3);
+
+      &::before {
+        left: 100%;
+      }
 
       i {
-        transform: translateX(3px);
+        transform: translateX(5px);
       }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      font-size: 0.95rem;
     }
   }
 }
 
 /* ----------------------------------------------------------------
-   RESPONSIVE
+   RESPONSIVE - Mobile
    ---------------------------------------------------------------- */
 
-@media (max-width: 768px) {
-  .external-pubs-sidebar-btn {
-    font-size: 0.8rem;
-    padding: 0.45rem 0.9rem;
-  }
+@media (max-width: 480px) {
+  .external-pub-card {
+    .external-pub-header {
+      padding: 0.875rem;
+    }
 
-  .external-publications-section {
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
+    .external-pub-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
 
-    .external-pubs-header {
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
+    .external-pub-badge {
+      font-size: 0.7rem;
+      padding: 0.35rem 0.7rem;
+    }
 
-      i {
-        font-size: 1.3rem;
+    .external-pub-content {
+      padding: 1rem;
+
+      h5 {
+        font-size: 0.95rem;
       }
 
-      h3 {
-        font-size: 1.2rem;
+      p {
+        font-size: 0.8rem;
       }
     }
 
-    .external-pubs-description {
+    .external-pub-footer {
+      padding: 0.75rem 1rem;
+    }
+
+    .external-pub-cta {
+      font-size: 0.8rem;
+    }
+  }
+
+  .external-pubs-post-section {
+    margin: 2rem 0;
+
+    .external-pubs-post-inner {
+      padding: 1.5rem 1rem;
+    }
+
+    .external-pubs-post-badge {
+      font-size: 0.75rem;
+      padding: 0.4rem 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .external-pubs-post-title {
+      font-size: 1.3rem;
+    }
+
+    .external-pubs-post-description {
       font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
 
-    .external-pubs-btn {
+    .external-pubs-post-btn {
       font-size: 0.9rem;
-      padding: 0.75rem 1.5rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .external-publications-section {
-    padding: 1.5rem 1rem;
-    margin: 2rem 0;
-
-    .external-pubs-header {
-      h3 {
-        font-size: 1.1rem;
-      }
-    }
-
-    .external-pubs-description {
-      font-size: 0.85rem;
-    }
-
-    .external-pubs-btn {
-      width: 100%;
-      justify-content: center;
-      font-size: 0.85rem;
     }
   }
 }

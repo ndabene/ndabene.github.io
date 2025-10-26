@@ -1,20 +1,35 @@
 {% comment %}
-Widget Publications Externes - Style cohérent avec le reste du site
+Widget Publications Externes - Design élégant type featured card
 {% endcomment %}
 
 <div class="sidebar-widget-compact">
-    <h4><i class="fas fa-newspaper"></i> Publications externes</h4>
-    <div class="external-pubs-sidebar-content">
-        <p><strong>Articles Business Tech</strong></p>
-        <p class="external-pubs-text">Retrouvez mes guides e-commerce et tutoriels PrestaShop.</p>
-        <a href="https://www.businesstech.fr/landing/articles/?utm_source=nicolas-dabene&utm_medium=blog-sidebar&utm_campaign=external-publications"
-           class="external-pubs-sidebar-btn"
-           target="_blank"
-           rel="noopener">
-            Voir les articles →
-        </a>
-    </div>
+    <h4><i class="fas fa-external-link-alt"></i> Publications externes</h4>
+
+    <a href="https://www.businesstech.fr/landing/articles/?utm_source=nicolas-dabene&utm_medium=blog-sidebar&utm_campaign=external-publications"
+       class="external-pub-card"
+       target="_blank"
+       rel="noopener">
+        <div class="external-pub-header">
+            <div class="external-pub-icon">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="external-pub-badge">
+                Business Tech
+            </div>
+        </div>
+        <div class="external-pub-content">
+            <h5>Mes articles e-commerce</h5>
+            <p>Guides PrestaShop, tutoriels & bonnes pratiques</p>
+        </div>
+        <div class="external-pub-footer">
+            <span class="external-pub-cta">
+                Découvrir
+                <i class="fas fa-arrow-right"></i>
+            </span>
+        </div>
+    </a>
+
     {% comment %}
-    Pour ajouter d'autres plateformes, dupliquez le bloc ci-dessus
+    Pour ajouter d'autres plateformes, dupliquez la card ci-dessus avec une URL différente
     {% endcomment %}
 </div>
