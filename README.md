@@ -1,411 +1,187 @@
-# Nicolas Dabène - Portfolio Professionnel
+# Nicolas Dabène
 
 <div align="center">
 
-![Portfolio Banner](https://img.shields.io/badge/Portfolio-Nicolas%20Dabène-2563EB?style=for-the-badge&logo=github&logoColor=white)
-[![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-22863a?style=for-the-badge&logo=github&logoColor=white)](https://nicolas-dabene.fr)
-[![Build & Deploy Jekyll](https://github.com/ndabene/nicolas-dabene.fr/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ndabene/nicolas-dabene.fr/actions/workflows/jekyll.yml)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-
-**Portfolio personnel de Nicolas Dabène**  
-*Senior PHP FullStack Developer & AI Orchestrator avec 15+ ans d'expérience*
-
-[🌐 Voir le site](https://nicolas-dabene.fr) • [📧 Contact](https://nicolas-dabene.fr/contact/) • [💼 LinkedIn](https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/)
-
-</div>
-
-## 📋 Table des matières
-
-- [🚀 Aperçu](#-aperçu)
-- [✨ Fonctionnalités](#-fonctionnalités)
-- [🛠️ Technologies](#️-technologies)
-- [📁 Structure du projet](#-structure-du-projet)
-- [🏃‍♂️ Installation et développement](#️-installation-et-développement)
-- [🎨 Design System](#-design-system)
-- [📝 Gestion du contenu](#-gestion-du-contenu)
-- [🚀 Déploiement et SEO](#-déploiement-et-seo)
-- [🤝 Contribution](#-contribution)
-- [📄 License](#-license)
-
-## 🚀 Aperçu
-
-Ce portfolio présente le parcours professionnel de Nicolas Dabène, développeur senior spécialisé dans l'écosystème PHP/Symfony et l'e-commerce PrestaShop. Le site met en valeur ses 15+ années d'expérience, ses expertises techniques, ses projets marquants et son expertise en intégration d'IA.
-
-### 🎯 Expertises principales
-
-| Domaine | Description | Expérience |
-|---------|-------------|------------|
-| **PrestaShop Development** | 50+ modules développés, architecture e-commerce | 10+ ans |
-| **PHP/Symfony** | Architecture backend robuste, APIs haute performance | 15+ ans |
-| **AI Integration** | Orchestration d'IA dans les workflows de développement | 2+ ans |
-| **FullStack Development** | Frontend moderne + Backend scalable | 15+ ans |
-| **Product Management** | Gestion de produits techniques, roadmaps | 5+ ans |
-| **Innovation & Leadership** | Direction technique, mentoring équipes | 8+ ans |
-
-## ✨ Fonctionnalités
-
-- ✅ **Design moderne et responsive** - Compatible tous écrans
-- ✅ **Navigation dynamique** - Générée depuis les données YAML
-- ✅ **Contenu modulaire** - Sections réutilisables et maintenables
-- ✅ **SEO optimisé** - Meta tags, Open Graph, structure sémantique
-- ✅ **Performance élevée** - CSS minifié, images optimisées
-- ✅ **Accessibilité** - WCAG 2.1, navigation clavier, ARIA
-- ✅ **Blog intégré** - Articles techniques et cas d'usage
-- ✅ **Études de cas détaillées** - Projets avec métriques business
-- ✅ **Portfolio de modules** - 50+ modules PrestaShop documentés
-
-## 🛠️ Technologies
-
-### Core Stack
-- **Framework**: [Jekyll](https://jekyllrb.com/) 4.3+
-- **Langages**: Ruby, Liquid, Markdown, HTML5, CSS3/Sass
-- **Hébergement**: GitHub Pages
-- **CI/CD**: GitHub Actions
-
-### Design & Assets
-- **CSS Framework**: Sass/SCSS avec design system personnalisé
-- **Typographie**: Inter (corps) + Poppins (titres)
-- **Icons**: Font Awesome Pro
-- **Responsive**: Mobile-first approach
-
-### Outils de développement
-- **Bundler**: Gestion des dépendances Ruby
-- **Sass**: Préprocesseur CSS avec modules
-- **Jekyll Plugins**: SEO, sitemap, feed RSS
-
-## 📁 Structure du projet
-
-```
-├── 📂 _data/                 # Données structurées (YAML)
-│   ├── navigation.yml        # Menu principal
-│   ├── expertise.yml         # Domaines d'expertise
-│   ├── modules.yml          # Modules PrestaShop
-│   └── publications.yml     # Articles et tutoriels
-├── 📂 _includes/            # Composants réutilisables
-│   ├── header.html          # En-tête du site
-│   ├── footer.html          # Pied de page
-│   └── components/          # Cards, boutons, badges
-├── 📂 _layouts/             # Templates de page
-│   ├── default.html         # Template de base
-│   ├── page.html           # Pages statiques
-│   └── post.html           # Articles de blog
-├── 📂 _posts/               # Articles de blog (Markdown)
-├── 📂 _projects/            # Portfolio de projets
-├── 📂 _case_studies/        # Études de cas détaillées
-├── 📂 _sass/                # Styles modulaires
-│   ├── _variables.scss      # Variables globales
-│   ├── _components.scss     # Composants UI
-│   └── _layouts.scss        # Mise en page
-├── 📂 assets/               # Assets statiques
-│   ├── css/                # CSS compilé
-│   ├── js/                 # JavaScript
-│   └── images/             # Images et médias
-├── 📂 pages/                # Pages principales
-│   ├── expertise.md         # Page expertise
-│   ├── projets.md          # Portfolio projets
-│   └── contact.md          # Page contact
-├── 📄 _config.yml           # Configuration Jekyll
-├── 📄 Gemfile              # Dépendances Ruby
-└── 📄 index.md             # Page d'accueil
-```
-
-## 🏃‍♂️ Installation et développement
-
-### Prérequis
-
-- **Ruby** 3.0+ ([Installation](https://www.ruby-lang.org/fr/documentation/installation/))
-- **Bundler** 2.0+ (`gem install bundler`)
-- **Git** pour le clonage du repository
-
-### Installation
-
-```bash
-# Cloner le repository
-git clone https://github.com/ndabene/nicolas-dabene.fr.git
-cd nicolas-dabene.fr
-
-# Installer les dépendances Ruby
-bundle install
-
-# Démarrer le serveur de développement
-bundle exec jekyll serve
-
-# Le site sera accessible sur http://localhost:4000
-```
-
-### Commandes utiles
-
-```bash
-# Développement avec rechargement automatique
-bundle exec jekyll serve --livereload
-
-# Build pour production
-bundle exec jekyll build --config _config.yml,_config_github.yml
-
-# Build avec environnement de production
-JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_github.yml
-
-# Vérifier la configuration
-bundle exec jekyll doctor
-
-# Scripts NPM (alternatives pratiques)
-npm run serve          # Démarre le serveur de développement
-npm run build          # Build pour production
-npm run clean          # Nettoie les fichiers générés
-npm run update-sitemap # Met à jour le sitemap et notifie les moteurs
-```
-
-## 🎨 Design System
-
-### Palette de couleurs
-
-```scss
-// Couleurs principales
-$primary-blue: #2563EB;     // Bleu tech principal
-$accent-teal: #0D9488;      // Accent teal
-$accent-orange: #EA580C;    // Accent orange
-$dark-navy: #1E293B;        // Texte principal
-$light-gray: #F8FAFC;       // Arrière-plans
-
-// Dégradés
-$gradient-primary: linear-gradient(135deg, $primary-blue, $accent-teal);
-$gradient-accent: linear-gradient(135deg, $accent-orange, #F59E0B);
-```
-
-### Typographie
-
-- **Titres**: Poppins (600, 700)
-- **Corps de texte**: Inter (400, 500, 600)
-- **Code**: Monaco, Consolas, monospace
-
-### Composants
-
-- **Cards**: Ombre subtile, bordures arrondies, hover effects
-- **Boutons**: Styles primary, secondary, outline avec animations
-- **Badges**: Couleurs sémantiques pour technologies et compétences
-- **Grid**: Système flexible basé sur CSS Grid et Flexbox
-
-## 📝 Gestion du contenu
-
-Le contenu est entièrement géré via des fichiers YAML dans le dossier `_data/` pour faciliter la maintenance.
-
-### 📰 Création d'articles de blog
-
-#### Méthode automatisée (recommandée)
-
-```bash
-# Créer un nouvel article avec template optimisé
-npm run new-post "Titre de votre article"
-
-# Exemple
-npm run new-post "Guide complet PrestaShop 8.0"
-```
-
-**Ce script :**
-- ✅ Génère automatiquement le fichier avec la date
-- ✅ Crée un template optimisé GEO (IA-friendly) 
-- ✅ Met à jour le sitemap automatiquement
-- ✅ Notifie les moteurs de recherche
-
-#### Template d'article généré
-
-```markdown
----
-layout: post
-title: "Votre Titre"
-date: 2025-01-23
-author: Nicolas Dabène
-categories: [Development]
-tags: [PHP, PrestaShop]
-excerpt: "Description SEO-optimisée"
-image: /assets/images/blog/default-blog.jpg
-featured: false
-difficulty: "Intermédiaire"
-technologies: ["PHP", "JavaScript"]
----
-
-# Titre
-
-## 📋 Résumé Exécutif
-**Points clés :** (optimisé pour IA génératives)
-- Point 1
-- Point 2
-
-**Temps de lecture :** X minutes | **Niveau :** Intermédiaire
-
----
-
-Votre contenu...
-```
-
-### 🗂️ Structure des données YAML
-
-```yaml
-# _data/expertise.yml
-- domain: "PrestaShop Development"
-  icon: "fab fa-php"
-  description: "Architecture e-commerce haute performance"
-  skills:
-    - name: "Module Development"
-      level: 95
-    - name: "Theme Integration" 
-      level: 90
-  projects_count: 50
-```
-
-### 📋 Types de contenu
-
-| Type | Localisation | Commande | Auto-sitemap |
-|------|--------------|----------|--------------|
-| **Articles blog** | `_posts/` | `npm run new-post "Titre"` | ✅ |
-| **Projets** | `_data/modules.yml` | Manuel | ✅ |
-| **Expertise** | `_data/expertise.yml` | Manuel | ✅ |
-| **Pages** | `pages/` | Manuel | ✅ |
-
-### 🔄 Workflow de publication
-
-1. **Créer** l'article : `npm run new-post "Mon Article"`
-2. **Éditer** le fichier généré dans `_posts/`
-3. **Preview** : `npm run serve`
-4. **Publier** : `git add . && git commit -m "Nouvel article" && git push`
-5. **Sitemap** : Mise à jour automatique lors du build
-
-## 🛒 Mini‑boutique (produits + packs)
-
-- **Fichiers clés**
-  - Données: `_data/produits.yml`
-  - Page: `pages/boutique.md`
-  - Styles: `_sass/boutique.scss`
-  - Logique UI: `assets/js/boutique-filters.js`
-
-- **Ce qui est inclus**
-  - Section bénéfices en têtes de page (3 cartes).
-  - Navigation rapide: filtres par `univers` et `categorie`, recherche instantanée.
-  - Pagination client (24 items/lot), bouton “Charger plus”.
-  - Cartes produits + bloc Pack avec prise en charge des `micro_extraits` (3 puces).
-
-- **Schéma de données (extrait)**
-
-```yaml
-- nom: "Titre du produit"
-  description: "Résumé court"
-  image: "assets/images/produits/visuel.png"
-  categorie: "Formation IA pour tous"   # ou "Pack", etc.
-  prix: "49€ / HT"
-  type: "ebook"                          # ebook | formation | pack
-  format: "PDF"
-  file_format: "pdf"
-  univers: "IA"
-  micro_extraits:                         # optionnel — 3 puces max affichées
-    - "Vous apprendrez …"
-    - "Vous saurez …"
-    - "Vous maîtriserez …"
-```
-
-- **Notes d’implémentation**
-  - Les `micro_extraits` s’affichent automatiquement sur les cartes produits et dans le bloc Pack lorsqu’ils sont présents dans les données.
-  - Les icônes des puces du Pack sont réduites via:
-
-```scss
-.pack-content .micro-extraits li svg { width: 16px; height: 16px; }
-```
-
-  - Pour activer les CTA d’achat, le code vérifie `site.shop_enabled` dans la config.
-  - Après modification des données ou styles, relancer le build/serveur.
-
-## 🚀 Déploiement et SEO
-
-### Déploiement automatique
-
-Le site est automatiquement déployé sur GitHub Pages via GitHub Actions :
-
-1. **Push sur `main`** déclenche le build automatique
-2. **Jekyll build** génère les fichiers statiques
-3. **Déploiement** sur `https://nicolas-dabene.fr`
-4. **Sitemap** automatiquement mis à jour et indexé
-
-### 🔍 Optimisation GEO (Generative Engine Optimization)
-
-Le site est optimisé pour les **IA génératives** (ChatGPT, Claude, Bard) :
-
-#### Features GEO implémentées
-- ✅ **Schema.org enrichi** : Person, TechArticle, ProfessionalService
-- ✅ **FAQ structurées** : Questions/réponses pour extraction directe
-- ✅ **Résumés exécutifs** : Points clés en début d'articles
-- ✅ **Métadonnées IA** : Tags spécialisés pour crawlers génératifs
-- ✅ **Sitemap dynamique** : Mise à jour automatique avec nouveau contenu
-
-#### Sitemap intelligent
-
-```bash
-# Le sitemap se met à jour automatiquement lors de :
-- Nouvel article (npm run new-post)
-- Nouveau projet ajouté
-- Build Jekyll (bundle exec jekyll build)
-
-# Notification automatique des moteurs de recherche
-npm run update-sitemap  # Google, Bing notifiés automatiquement
-```
-
-### Configuration GEO
-
-```yaml
-# _config.yml - Optimisations pour IA
-sitemap:
-  file: "/sitemap_index.xml"
-  
-defaults:
-  - scope:
-      type: "posts"
-    values:
-      sitemap:
-        changefreq: "monthly"
-        priority: 0.7
-```
-
-## 🤝 Contribution
-
-Ce projet étant un portfolio personnel, les contributions externes ne sont pas acceptées. Cependant, vous pouvez :
-
-- 🐛 [Signaler des bugs](https://github.com/ndabene/nicolas-dabene.fr/issues)
-- 💡 [Suggérer des améliorations](https://github.com/ndabene/nicolas-dabene.fr/issues)
-- ⭐ Mettre une étoile si le projet vous inspire !
-
-### Guidelines pour les issues
-
-- Utilisez les templates d'issues fournis
-- Incluez des captures d'écran si pertinent
-- Précisez votre navigateur et OS
-
-## 📊 Métriques et performance
-
-- **Performance Score**: 95+ (Lighthouse)
-- **Accessibilité**: 100/100 (WCAG 2.1 AA)
-- **SEO Score**: 100/100
-- **Temps de chargement**: < 2s (3G)
-
-## 📧 Contact et liens
-
-<div align="center">
-
+[![Portfolio](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://nicolas-dabene.fr)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicolas%20Dabène-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
-[![GitHub](https://img.shields.io/badge/GitHub-ndabene-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ndabene)
+[![PrestaShop](https://img.shields.io/badge/PrestaShop-5%20Awards-DF0067?style=for-the-badge&logo=prestashop&logoColor=white)](https://nicolas-dabene.fr)
+
+**Expert PrestaShop Elite | Pionnier IA E-commerce | Formateur**
+*Sophia Antipolis - Côte d'Azur, France*
+
+[🌐 Découvrir le portfolio](https://nicolas-dabene.fr) • [📧 Me contacter](https://nicolas-dabene.fr/contact/) • [📚 Lire mes articles](https://nicolas-dabene.fr/blog/)
 
 </div>
 
-## 📄 License
+---
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+## 👋 Qui suis-je ?
+
+Développeur PrestaShop passionné et **reconnu officiellement avec 5 PrestaShop Awards** (2011-2020), je transforme les défis e-commerce en solutions techniques innovantes depuis plus de 15 ans.
+
+### 🏆 En quelques chiffres
+
+- **5 PrestaShop Awards** + 4 "coups de cœur" du jury
+- **30+ modules PrestaShop** avec **100 000+ installations actives**
+- **Expert IA e-commerce** - Gain d'efficacité **4x** grâce à l'orchestration d'agents IA
+- **15+ années** d'expérience en développement PHP/Symfony
+- **Basé à Sophia Antipolis**, disponible pour la Côte d'Azur
+
+---
+
+## 🎯 Mes Expertises
+
+### 🛒 E-commerce & PrestaShop
+Expert PrestaShop reconnu au sein de **BusinessTech**, l'une des plus anciennes entreprises éditrices de modules PrestaShop en France. Spécialiste des architectures e-commerce complexes, multi-boutiques et intégrations tierces.
+
+**Mes modules phares :**
+- **GEO Suite** - Optimisation SEO et GEO (Generative Engine Optimization)
+- **Google Merchant Center Pro** - Synchronisation catalogue avancée
+- **Google Analytics 4** - Tracking e-commerce complet
+- **Facebook Dynamic Ads** - Retargeting automatisé
+- Et 26 autres modules professionnels...
+
+### 🤖 Intelligence Artificielle
+Pionnier de l'intégration d'IA dans le développement e-commerce avec un **gain d'efficacité de 4x**. Je forme les équipes aux méthodologies IA et au Prompt-Driven Development pour révolutionner leurs workflows.
+
+**Mes spécialités IA :**
+- Orchestration d'agents IA pour le développement
+- Automation intelligente des processus métier
+- Formation d'équipes aux méthodologies IA
+- Intégration seamless dans architectures existantes
+
+### 💼 Product Management
+Vision holistique combinant expertise technique, compréhension business et orientation résultats. Analyse approfondie des besoins clients pour créer des produits qui génèrent de la valeur mesurable.
+
+---
+
+## 📚 Contenus & Ressources
+
+### ✍️ Blog Technique
+Plus de **60 articles** sur le développement e-commerce, PrestaShop, l'IA et les meilleures pratiques :
+- Architecture et performance PrestaShop
+- Guides d'intégration IA dans le développement
+- Tutoriels techniques et retours d'expérience
+- Optimisation SEO et GEO pour l'e-commerce
+
+👉 [Découvrir tous les articles](https://nicolas-dabene.fr/blog/)
+
+### 🎓 Formations IA
+Formations pratiques pour développeurs souhaitant intégrer l'IA dans leurs workflows :
+- **"Coder à l'Ère des IA"** - Méthodes concrètes pour développeurs
+- **"Prompt-Driven Development"** - Révolutionner sa façon de coder
+- **Guides pratiques** - Outils, astuces et retours d'expérience
+
+👉 [Voir les formations disponibles](https://nicolas-dabene.fr/boutique/)
+
+### 🔧 Modules PrestaShop
+Catalogue complet de 30 modules professionnels pour PrestaShop :
+- SEO & Marketing (GEO Suite, Google Shopping, Facebook Ads...)
+- Analytics & Tracking (Google Analytics 4, Meta Pixel...)
+- Paiement & Conversion (Google Pay, optimisation tunnel...)
+- Outils Développeur (Debug, performance, migration...)
+
+👉 [Explorer les modules](https://nicolas-dabene.fr/modules/)
+
+---
+
+## 🚀 Projets & Réalisations Marquantes
+
+### PrestaShop Awards
+- **2020** - Module Google Merchant Center Pro
+- **2017** - Innovation technique e-commerce
+- **2015** - Module Facebook Dynamic Ads
+- **2013** - Contribution à l'écosystème
+- **2011** - Premier Award pour excellence technique
+
+### Innovations Récentes
+- **GEO Suite** - Premier module PrestaShop optimisé pour les IA génératives
+- **Architecture IA** - Framework d'orchestration d'agents pour développement 4x plus rapide
+- **Formation IA** - Programme complet pour développeurs e-commerce
+
+### Impact Business
+- **100k+ installations** de mes modules sur des boutiques actives
+- **Top contributeur** marketplace PrestaShop France
+- **Centaines d'e-commerçants** accompagnés dans leur transformation digitale
+
+---
+
+## 💡 Ma Vision
+
+> "L'avenir de l'e-commerce se construit à l'intersection de l'expertise métier, de l'excellence technique et de l'intelligence artificielle. Mon objectif : rendre ces technologies accessibles et créer de la valeur business mesurable."
+
+Je crois fermement que l'IA n'est pas là pour remplacer les développeurs, mais pour **décupler leur efficacité** et leur permettre de se concentrer sur ce qui compte vraiment : **comprendre les besoins** et **créer de la valeur**.
+
+---
+
+## 🤝 Travaillons Ensemble
+
+### Freelance E-commerce
+Disponible pour vos projets e-commerce sur la **Côte d'Azur** (Sophia Antipolis, Nice, Antibes, Cannes) :
+- Développement de modules PrestaShop sur mesure
+- Architecture et optimisation de boutiques complexes
+- Intégration d'IA dans vos processus e-commerce
+- Audit technique et recommandations stratégiques
+
+### Formation & Consulting
+- Formation d'équipes aux méthodologies IA
+- Consulting technique PrestaShop
+- Accompagnement transformation digitale
+- Audit et optimisation de performances
+
+### 📧 Me Contacter
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-ndabene2807%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ndabene2807@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Me%20contacter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
+[![Site Web](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://nicolas-dabene.fr/contact/)
+
+</div>
+
+---
+
+## 🌟 Reconnaissance & Communauté
+
+- **5x PrestaShop Awards Winner** (2011-2020)
+- **Expert PrestaShop Elite** - Contribution significative à l'écosystème
+- **Auteur** - 60+ articles techniques sur l'e-commerce et l'IA
+- **Formateur** - Accompagnement de développeurs vers l'IA
+- **Open Source** - Partage de connaissances et bonnes pratiques
+
+---
+
+## 📈 Statistiques du Portfolio
+
+![Visiteurs](https://img.shields.io/badge/Visiteurs-Actif-success?style=flat-square)
+![Articles](https://img.shields.io/badge/Articles-60%2B-blue?style=flat-square)
+![Modules](https://img.shields.io/badge/Modules-30%2B-orange?style=flat-square)
+![Installations](https://img.shields.io/badge/Installations-100k%2B-red?style=flat-square)
+![Awards](https://img.shields.io/badge/Awards-5-gold?style=flat-square)
+
+---
+
+## 🔗 Liens Utiles
+
+| Ressource | Lien |
+|-----------|------|
+| 🏠 **Portfolio** | [nicolas-dabene.fr](https://nicolas-dabene.fr) |
+| 📝 **Blog** | [nicolas-dabene.fr/blog](https://nicolas-dabene.fr/blog/) |
+| 🛒 **Modules** | [nicolas-dabene.fr/modules](https://nicolas-dabene.fr/modules/) |
+| 🎓 **Formations** | [nicolas-dabene.fr/boutique](https://nicolas-dabene.fr/boutique/) |
+| 💼 **Services** | [nicolas-dabene.fr/services](https://nicolas-dabene.fr/services/) |
+| 📧 **Contact** | [nicolas-dabene.fr/contact](https://nicolas-dabene.fr/contact/) |
 
 ---
 
 <div align="center">
 
-**Développé avec ❤️ par Nicolas Dabène**  
-*Utilisant Jekyll et déployé sur GitHub Pages*
+**Développé avec passion par Nicolas Dabène**
+*Expert PrestaShop • Pionnier IA E-commerce • Formateur*
 
 [![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-CC0000?style=flat-square&logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![Hosted on GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-22863a?style=flat-square&logo=github&logoColor=white)](https://pages.github.com/)
+
+**© 2025 Nicolas Dabène - Tous droits réservés**
 
 </div>
