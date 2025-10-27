@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories: [Développement, Intelligence Artificielle]
 tags: [IA, compétences, développeur, automatisation, documentation]
 excerpt: "En quelques mois seulement, l'intelligence artificielle a redéfini le métier de développeur : moins de technique répétitive, plus de conception, de vision et d'humain. Voici comment cette mutation s'est opérée."
-image: /assets/images/blog/2025-11-10-evolution-competences-developpeurs.jpg
+image: /assets/images/blog/2025/11/2025-11-10-evolution-competences-developpeurs.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["IA", "ChatGPT", "Copilot"]
