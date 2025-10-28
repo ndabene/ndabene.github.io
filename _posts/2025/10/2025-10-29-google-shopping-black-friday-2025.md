@@ -294,8 +294,3 @@ Le Black Friday 2025 n'est plus seulement sur votre site web. Il se joue sur Goo
 ---
 
 *Article publié le 29 octobre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience en e-commerce et optimisation de ventes digitales*
-
-**À lire aussi :**
-- [L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)](https://ndabene.github.io/2025/09/23/google-shopping-evolution.html)
-- [PrestaShop 8 : Optimisation Complète des Performances](https://ndabene.github.io)
-- [Guide Complet : Intégration de l'IA dans PrestaShop](https://ndabene.github.io)
