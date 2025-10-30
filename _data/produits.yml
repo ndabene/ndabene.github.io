@@ -19,7 +19,7 @@
     - "Repérer des cas d'usage concrets à fort impact dans votre quotidien"
     - "Rédiger des prompts fiables qui limitent hallucinations et biais"
   support: "Support email sous 48h"
-  last_update: "2025-08-12"
+  last_update: "2025-10-30"
   programme:
     - "Distinguer simplement IA, ML, DL et IA générative, sans jargon"
     - "Repérer des cas d'usage concrets à fort impact dans votre quotidien"
@@ -49,7 +49,7 @@
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d01dbc06-935f-4f44-a95d-df7b527deec0"
   active: true
   garantie: "14 jours"
-  last_update: "2025-08-12"
+  last_update: "2025-10-30"
   inclus:
     - "Module 0: Devenez Acteur de l'IA"
     - "Module 1: L'Intelligence Artificielle pour Débutants"
@@ -80,7 +80,7 @@
   format: "PDF & Podcast"
   univers: "IA"
   active: true
-  last_update: "2025-08-12"
+  last_update: "2025-10-30"
   programme:
     - "Mesurer l'empreinte (énergie, eau, matériel) d'un usage IA sur tout le cycle de vie"
     - "Déployer un plan « Green AI » pragmatique (right-sizing, prompts sobres, cache, batch)"
@@ -111,7 +111,7 @@
   active: true
   duree: "3h"
   garantie: "14 jours"
-  last_update: "2025-08-12"
+  last_update: "2025-10-30"
   mots_cles: ["prompt", "méthode CLAIR", "types de prompts", "cas concrets"]
   resultats:
     - "Structurer des instructions claires et efficaces avec la méthode C.L.A.I.R"
