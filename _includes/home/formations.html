@@ -7,9 +7,15 @@
     </div>
     <div class="block-card-content">
       <div id="home-formations-list" class="home-formation-list stagger-animation">
-        {% assign courses_type = site.data.produits | where: 'type', 'formation' %}
-        {% assign courses_cat1 = site.data.produits | where: 'categorie', 'Formation en ligne' %}
-        {% assign courses_cat2 = site.data.produits | where: 'categorie', 'Formation IA pour tous' %}
+        {% assign active_products = '' | split: '' %}
+        {% for product in site.data.produits %}
+          {% if product.active == true %}
+            {% assign active_products = active_products | push: product %}
+          {% endif %}
+        {% endfor %}
+        {% assign courses_type = active_products | where: 'type', 'formation' %}
+        {% assign courses_cat1 = active_products | where: 'categorie', 'Formation en ligne' %}
+        {% assign courses_cat2 = active_products | where: 'categorie', 'Formation IA pour tous' %}
         {% assign courses = courses_type | concat: courses_cat1 | concat: courses_cat2 | uniq %}
         {% if courses.size == 0 %}
           {% assign courses = site.data.produits %}
@@ -17,9 +23,7 @@
         {% for product in courses %}
           {% capture fmt %}{{ product.format | default: product.file_format | default: '' }}{% endcapture %}
           {% assign has_payment = product.lien_paiement and product.lien_paiement != '' %}
-          {% assign override_inactive = false %}
-          {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
-          {% assign is_active = site.shop_enabled and has_payment and override_inactive == false %}
+          {% assign is_active = site.shop_enabled and has_payment %}
           {% assign cta_label = 'Commencer' %}
           <div class="home-formation-item" style="display:none;">
             <div class="home-formation-thumb">

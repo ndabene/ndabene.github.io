@@ -19,6 +19,9 @@ llm_topics: [ebooks, formations, ia, prestashop]
   "@context": "https://schema.org",
   "@graph": [
     {% for product in site.data.produits %}
+      {% assign override_inactive = false %}
+      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+      {% if override_inactive == false %}
       {
         "@type": "Product",
         "name": "{{ product.nom | escape }}",
@@ -43,6 +46,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
           "name": "Presta Module"
         }
       }{% unless forloop.last %},{% endunless %}
+      {% endif %}
     {% endfor %}
   ]
 }
@@ -61,6 +65,9 @@ llm_topics: [ebooks, formations, ia, prestashop]
     {% assign ebooks_tmp = ebooks_by_type | concat: ebooks_by_ff %}
     {% assign ebooks = ebooks_tmp | concat: ebooks_by_format | uniq %}
     {% for product in ebooks %}
+      {% assign override_inactive = false %}
+      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+      {% if override_inactive == false %}
       {
         "@type": "Book",
         "name": "{{ product.nom | escape }}",
@@ -85,6 +92,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
           "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
       }{% unless forloop.last %},{% endunless %}
+      {% endif %}
     {% endfor %}
   ]
 }
@@ -102,6 +110,9 @@ llm_topics: [ebooks, formations, ia, prestashop]
     {% assign courses_by_cat = site.data.produits | where: 'categorie', 'Formation en ligne' %}
     {% assign courses = courses_by_type | concat: courses_by_cat | uniq %}
     {% for product in courses %}
+      {% assign override_inactive = false %}
+      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+      {% if override_inactive == false %}
       {
         "@type": "Course",
         "name": "{{ product.nom | escape }}",
@@ -128,6 +139,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
           "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
         }
       }{% unless forloop.last %},{% endunless %}
+      {% endif %}
     {% endfor %}
   ]
 }
@@ -142,11 +154,15 @@ llm_topics: [ebooks, formations, ia, prestashop]
   "description": "{{ page.description | escape }}",
   "hasPart": [
     {% for product in site.data.produits %}
+      {% assign override_inactive = false %}
+      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+      {% if override_inactive == false %}
       {
         "@type": "ListItem",
         "name": "{{ product.nom | escape }}",
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/"
       }{% unless forloop.last %},{% endunless %}
+      {% endif %}
     {% endfor %}
   ]
 }
@@ -318,6 +334,9 @@ llm_topics: [ebooks, formations, ia, prestashop]
                 {% assign bestsellers = group.items | where: 'bestseller', true %}
                 {% assign ordered_items = bestsellers | concat: same_univers | concat: group.items | uniq %}
                 {% for product in ordered_items %}
+                {% assign override_inactive = false %}
+                {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
+                {% if override_inactive == false %}
                 {% assign is_course = false %}
                 {% assign is_ebook = false %}
                 {% assign is_pack = false %}
@@ -340,6 +359,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
                   {% assign is_pack = true %}
                 {% endif %}
                 {% include product-card-formation.html product=product %}
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

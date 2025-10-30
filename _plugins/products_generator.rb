@@ -16,6 +16,11 @@ module Jekyll
         name = product['nom']
         next unless name && !name.to_s.strip.empty?
 
+        # Skip inactive products
+        active = product['active'] || product['actif'] || product['enabled']
+        status = product['status']
+        next if active == false || status == 'inactive'
+
         slug = Utils.slugify(name.to_s, mode: 'pretty')
         dest_dir = File.join('boutique', slug)
 
