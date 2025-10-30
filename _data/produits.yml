@@ -4,7 +4,7 @@
   image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/6658860a-70ad-484a-82ac-1f8e16577051"
   categorie: "Formation IA pour tous"
-  prix: "49€ / HT"
+  prix: "10€ / HT"
   lemon_variant_id: 937957
   type: "ebook"
   format: "PDF & Podcast"
@@ -42,10 +42,10 @@
     - "assets/images/produits/pack-ia.jpg"
     - "assets/images/produits/ia-pack-fondamentaux-banner-1600x1200.png"
   categorie: "Pack"
-  prix: "119€ / HT"
+  prix: "20€ / HT"
   type: "pack"
   univers: "IA"
-  avantages: "Économisez 28€"
+  avantages: "Économisez"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d01dbc06-935f-4f44-a95d-df7b527deec0"
   active: true
   garantie: "14 jours"
@@ -74,7 +74,7 @@
   image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/0b81d9f2-5cbc-4f09-b2f1-b86504e9b7c1"
   categorie: "Formation IA pour tous"
-  prix: "29€ / HT"
+  prix: "10€ / HT"
   lemon_variant_id: 937978
   type: "ebook"
   format: "PDF & Podcast"
@@ -102,7 +102,7 @@
   image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/35c244d8-e607-4917-ac65-932e79dbb5e7"
   categorie: "Formation IA pour tous"
-  prix: "49€ / HT"
+  prix: "10€ / HT"
   lemon_variant_id:
   type: "ebook"
   format: "PDF & Podcast"
@@ -135,7 +135,7 @@
   image: "assets/images/produits/4kmhX2GxNSEZpzqJDzzkX.png"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/f2b82876-4300-47eb-bbeb-c81fe5e1f464"
   categorie: "Formation IA pour tous"
-  prix: "49€ / HT"
+  prix: "10€ / HT"
   lemon_variant_id: 
   type: "ebook"
   format: "PDF, Podcast & Fiches Outils"
@@ -171,7 +171,7 @@
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/eac3a9e6-dd71-43b2-bdc5-2938a00d5dcd"
   univers: "IA & Pédagogie"
   categorie: "Formation IA pour enseignants"
-  prix: "49€ / HT"
+  prix: "20€ / HT"
   lemon_variant_id: 
   type: "ebook"
   format: "PDF, Podcast & Fiches Outils"
