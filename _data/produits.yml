@@ -47,7 +47,7 @@
   univers: "IA"
   avantages: "Économisez"
   lien_paiement: "https://ndabene.lemonsqueezy.com/buy/d01dbc06-935f-4f44-a95d-df7b527deec0"
-  active: true
+  active: false
   garantie: "14 jours"
   last_update: "2025-10-30"
   inclus:
@@ -144,7 +144,7 @@
   active: true
   duree: "2h"
   garantie: "14 jours"
-  last_update: "2025-08-17"
+  last_update: "2025-10-30"
   mots_cles: ["contenu visuel", "générateur d'images IA", "présentation", "PowerPoint", "Midjourney", "DALL-E", "Canva", "créativité", "mise en page"]
   resultats:
     - "Créer des présentations professionnelles et attractives en quelques minutes grâce à l'IA"
@@ -177,10 +177,10 @@
   format: "PDF, Podcast & Fiches Outils"
   univers: "IA"
   niveau: "Débutant à intermédiaire"
-  active: true
+  active: false
   duree: "2h"
   garantie: "14 jours"
-  last_update: "2025-08-17"
+  last_update: "2025-10-30"
   mots_cles: ["IA", "Pédagogie", "Primaire", "Collège", "Lycée", "Guides pratiques", "Fiches outils", "Packs de prompts", "Grilles d'évaluation", "Protocoles opérationnels"]
   resultats:
     - "Gagnez du temps : séquences prêtes en moins de 20 minutes"
@@ -219,7 +219,7 @@
   niveau: "Tous niveaux"
   duree: "3h"
   garantie: "14 jours"
-  active: true
+  active: false
   last_update: "2025-09-18"
   mots_cles: ["ia", "développement", "méthodes", "junior", "senior", "coder", "outils ia"]
   resultats:
