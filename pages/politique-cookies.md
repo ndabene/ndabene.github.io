@@ -100,15 +100,6 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                 <li><strong>Base légale :</strong> Consentement (Article 6.1.a du RGPD)</li>
                 <li><strong>Durée de conservation :</strong> Jusqu'à désinscription ou 3 ans d'inactivité</li>
             </ul>
-
-            <h3>2.5. Dons (Buy Me a Coffee)</h3>
-            <p>Si vous effectuez un don via Buy Me a Coffee :</p>
-            <ul>
-                <li><strong>Données collectées :</strong> Nom, email, montant du don (gérées par Buy Me a Coffee)</li>
-                <li><strong>Finalités :</strong> Réception et gestion des dons de soutien</li>
-                <li><strong>Base légale :</strong> Consentement (Article 6.1.a du RGPD)</li>
-                <li><strong>Durée de conservation :</strong> Selon la politique de Buy Me a Coffee</li>
-            </ul>
         </div>
     </div>
 
@@ -261,15 +252,6 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                         <strong>Lemon Squeezy (LemonSqueezy LLC)</strong>
                         <p><strong>Service :</strong> Plateforme de paiement et facturation<br>
                         <strong>Finalité :</strong> Traitement des paiements, facturation<br>
-                        <strong>Localisation :</strong> États-Unis</p>
-                    </div>
-                </div>
-                <div class="privacy-feature">
-                    <span class="feature-icon">☕</span>
-                    <div>
-                        <strong>Buy Me a Coffee</strong>
-                        <p><strong>Service :</strong> Plateforme de dons<br>
-                        <strong>Finalité :</strong> Gestion des dons et pourboires<br>
                         <strong>Localisation :</strong> États-Unis</p>
                     </div>
                 </div>
