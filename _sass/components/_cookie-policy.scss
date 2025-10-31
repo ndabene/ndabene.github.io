@@ -1,734 +1,580 @@
 /**
- * Styles pour la page Politique de Cookies
+ * Styles pour la page Politique de Cookies - SIMPLIFIÉ
  * Design harmonisé avec la charte graphique
  */
 
 .cookie-policy-page {
-  // Introduction section
-  .cookie-intro-section {
-    margin-bottom: $space-xl;
+
+  // Layout principal avec sidebar
+  .cookie-policy-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: $space-3xl;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $space-3xl $space-lg;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+      gap: $space-xl;
+      padding: $space-xl $space-md;
+    }
   }
-  
-  // Card d'introduction
-  .intro-card {
-    .card-body {
-      text-align: center;
-      padding: $space-xl;
-    }
-    
-    h2 {
-      color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $font-size-xl;
+
+  // Table des matières sticky
+  .toc-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+    background: $white;
+    border: 1px solid $gray-light;
+    border-radius: $rounded-lg;
+    padding: $space-lg;
+    box-shadow: $shadow-sm;
+
+    h3 {
+      font-size: $font-size-lg;
       margin-bottom: $space-md;
+      color: $text-color;
+      font-weight: $font-weight-semibold;
     }
-    
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: $space-xs;
+
+        a {
+          display: block;
+          padding: $space-sm $space-md;
+          color: $text-color-light;
+          text-decoration: none;
+          border-radius: $rounded-sm;
+          font-size: $font-size-sm;
+          transition: $transition-fast;
+
+          &:hover {
+            background: rgba($primary-color, 0.05);
+            color: $primary-color;
+            transform: translateX(4px);
+          }
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      position: static;
+      padding: $space-md;
+
+      h3 {
+        font-size: $font-size-base;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs;
+
+        li {
+          margin: 0;
+
+          a {
+            padding: $space-xs $space-sm;
+            background: rgba($primary-color, 0.05);
+            font-size: $font-size-xs;
+
+            &:hover {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Contenu principal
+  .cookie-policy-content {
+    min-width: 0; // Fix pour grid overflow
+  }
+
+  // Sections
+  .policy-section {
+    margin-bottom: $space-4xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: $h1-size;
+      color: $text-color;
+      margin-bottom: $space-md;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: $h2-size;
+      }
+    }
+
+    h2 {
+      font-size: $h2-size;
+      color: $text-color;
+      margin-bottom: $space-lg;
+      padding-bottom: $space-sm;
+      border-bottom: 2px solid $gray-light;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: $h3-size;
+      }
+    }
+
+    h3 {
+      font-size: $h3-size;
+      color: $text-color;
+      margin-bottom: $space-md;
+      margin-top: $space-lg;
+
+      @media (max-width: $breakpoint-sm) {
+        font-size: $h4-size;
+      }
+    }
+
+    h4 {
+      font-size: $h4-size;
+      color: $text-color;
+      margin-bottom: $space-sm;
+      margin-top: $space-lg;
+    }
+
     p {
       color: $text-color-light;
-      font-size: $font-size-base;
       line-height: $line-height-base;
-      max-width: 600px;
-      margin: 0 auto $space-lg auto;
+      margin-bottom: $space-md;
     }
-    
-    .update-info {
-      text-align: center;
-      
-      .update-date {
-        display: inline-flex;
-        align-items: center;
-        gap: $space-sm;
-        color: $gray-medium;
-        font-size: $font-size-sm;
-        background: rgba($primary-color, 0.05);
-        padding: $space-sm $space-md;
-        border-radius: $rounded-full;
-      }
-    }
-  }
-  
-  // Section headers
-  .cookies-section,
-  .privacy-section-header,
-  .preferences-section-header {
-    margin-bottom: $space-lg;
-    
-    h2 {
+
+    .lead {
+      font-size: $font-size-lg;
       color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $h2-size;
+      margin-bottom: $space-lg;
+      line-height: $line-height-relaxed;
+    }
+
+    .update-date {
+      color: $gray-medium;
+      font-size: $font-size-sm;
+      display: inline-block;
+      padding: $space-sm $space-md;
+      background: rgba($primary-color, 0.05);
+      border-radius: $rounded-full;
+    }
+  }
+
+  // Grille d'informations
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $space-lg;
+    margin: $space-lg 0;
+  }
+
+  .info-item {
+    display: flex;
+    gap: $space-md;
+    padding: $space-lg;
+    background: $gray-ultra-light;
+    border-radius: $rounded-lg;
+    border-left: 3px solid $primary-color;
+
+    .icon {
+      font-size: $font-size-xl;
+      flex-shrink: 0;
+    }
+
+    strong {
+      display: block;
+      color: $text-color;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $space-xs;
+    }
+
+    p {
+      color: $text-color-light;
+      font-size: $font-size-sm;
       margin: 0;
-      text-align: center;
-      position: relative;
-      
-      &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 3px;
-        background: $primary-color;
-        margin: $space-md auto 0;
-        border-radius: $rounded-sm;
+      line-height: $line-height-base;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
-  
-  // Catégories de cookies
-  .cookie-categories {
-    display: grid;
-    gap: $space-lg;
-    margin-bottom: $space-xl;
-  }
-  
-  .cookie-category-card {
-    .card-header {
-      padding: $space-lg;
-      border-bottom: 1px solid $gray-light;
+
+  // Catégories de données
+  .data-category {
+    background: $white;
+    border: 1px solid $gray-light;
+    border-radius: $rounded-lg;
+    padding: $space-lg;
+    margin-bottom: $space-lg;
+
+    h3 {
+      margin-top: 0;
+      color: $primary-color;
     }
-    
-    .category-header {
+
+    p {
+      margin-bottom: $space-sm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Types de cookies
+  .cookie-type {
+    background: $white;
+    border: 1px solid $gray-light;
+    border-radius: $rounded-lg;
+    padding: $space-lg;
+    margin-bottom: $space-lg;
+
+    .cookie-header {
       display: flex;
       align-items: center;
       gap: $space-md;
-    }
-    
-    .category-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: $rounded-xl;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      svg {
-        color: $white;
+      margin-bottom: $space-md;
+
+      .icon {
+        font-size: $font-size-xl;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $rounded;
+        flex-shrink: 0;
       }
-      
-      &.essential {
-        background: $success-color;
-      }
-      
-      &.analytics {
-        background: $primary-color;
-      }
-    }
-    
-    h3 {
-      color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $font-size-lg;
-      margin: 0 0 $space-xs 0;
-    }
-    
-    .category-status {
-      padding: $space-xs $space-sm;
-      border-radius: $rounded-full;
-      font-size: $font-size-xs;
-      font-weight: $font-weight-medium;
-      
-      &.required {
+
+      &.essential .icon {
         background: rgba($success-color, 0.1);
-        color: $success-color;
       }
-      
-      &.optional {
+
+      &.analytics .icon {
         background: rgba($primary-color, 0.1);
-        color: $primary-color;
       }
-    }
-    
-    .card-body {
-      padding: $space-lg;
-      
-      p {
-        color: $text-color-light;
-        margin-bottom: $space-lg;
+
+      &.ads .icon {
+        background: rgba($warning-color, 0.1);
+      }
+
+      h3 {
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      .badge {
+        padding: $space-xs $space-md;
+        border-radius: $rounded-full;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-medium;
+
+        &.required {
+          background: rgba($success-color, 0.1);
+          color: $success-color;
+        }
+
+        &.optional {
+          background: rgba($gray-medium, 0.1);
+          color: $gray-medium;
+        }
       }
     }
   }
-  
-  // Table des cookies responsive
+
+  // Tables de cookies
   .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: $space-md;
     background: $gray-ultra-light;
-    border-radius: $rounded-lg;
+    border-radius: $rounded;
     overflow: hidden;
-    
-    .cookie-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr 2fr 1fr;
+
+    th, td {
       padding: $space-md;
+      text-align: left;
       border-bottom: 1px solid $gray-light;
-      
-      &.header {
-        background: $primary-color;
-        color: $white;
-        font-weight: $font-weight-semibold;
-        font-size: $font-size-sm;
-      }
-      
-      &:last-child {
-        border-bottom: none;
-      }
-      
-      span, code {
-        padding: $space-xs;
-      }
-      
+    }
+
+    th {
+      background: $primary-color;
+      color: $white;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-sm;
+    }
+
+    td {
+      font-size: $font-size-sm;
+      color: $text-color-light;
+
       code {
         background: rgba($primary-color, 0.1);
         color: $primary-color;
         padding: $space-xs $space-sm;
         border-radius: $rounded-sm;
-        font-size: $font-size-xs;
         font-family: $font-mono;
+        font-size: $font-size-xs;
       }
-      
-      @media (max-width: $breakpoint-md) {
-        grid-template-columns: 1fr;
-        gap: $space-xs;
-        
-        &.header {
-          display: none;
-        }
-        
-        span, code {
-          padding: $space-xs 0;
-        }
-        
-        span:before {
-          content: attr(data-label) ': ';
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      th {
+        display: none;
+      }
+
+      td {
+        display: block;
+        padding: $space-sm;
+        border: none;
+
+        &:before {
+          content: attr(data-label);
           font-weight: $font-weight-semibold;
+          display: block;
+          margin-bottom: $space-xs;
           color: $text-color;
         }
       }
-    }
-  }
-  
-  // Section vie privée
-  .privacy-section {
-    display: grid;
-    gap: $space-lg;
-    margin-bottom: $space-xl;
-    
-    @media (min-width: $breakpoint-lg) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .privacy-card, .rights-card {
-    .card-header {
-      padding: $space-lg;
-      border-bottom: 1px solid $gray-light;
-      display: flex;
-      align-items: center;
-      gap: $space-md;
-    }
-    
-    .privacy-icon {
-      width: 40px;
-      height: 40px;
-      background: $primary-color;
-      border-radius: $rounded-lg;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      svg {
-        color: $white;
-      }
-    }
-    
-    h3 {
-      color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $font-size-lg;
-      margin: 0;
-    }
-    
-    .card-body {
-      padding: $space-lg;
-    }
-  }
-  
-  .privacy-features, .rights-list {
-    display: grid;
-    gap: $space-md;
-  }
-  
-  .privacy-feature, .right-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $space-md;
-    
-    .feature-icon, .right-icon {
-      font-size: $font-size-lg;
-      margin-top: $space-xs;
-    }
-    
-    strong {
-      color: $text-color;
-      font-weight: $font-weight-semibold;
-      display: block;
-      margin-bottom: $space-xs;
-    }
-    
-    p {
-      color: $text-color-light;
-      font-size: $font-size-sm;
-      margin: 0;
-      line-height: $line-height-base;
-    }
-  }
-  
-  // Section préférences
-  .preferences-section {
-    margin-bottom: $space-xl;
-  }
-  
-  .preferences-card {
-    .card-body {
-      padding: $space-xl;
-      text-align: center;
-    }
-    
-    h3 {
-      color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $font-size-xl;
-      margin-bottom: $space-md;
-    }
-    
-    p {
-      color: $text-color-light;
-      margin-bottom: $space-md;
-    }
-    
-    ul {
-      text-align: left;
-      max-width: 500px;
-      margin: 0 auto $space-lg auto;
-      
-      li {
-        color: $text-color-light;
-        margin-bottom: $space-sm;
+
+      tr {
+        display: block;
+        margin-bottom: $space-md;
+        border: 1px solid $gray-light;
+        border-radius: $rounded;
       }
     }
   }
-  
-  .preferences-actions {
-    margin-top: $space-lg;
-  }
-  
-  .preferences-btn {
-    background: $primary-color;
-    color: $white;
-    border: none;
-    padding: $space-md $space-xl;
+
+  // Préférences cookies
+  .cookie-preferences {
+    background: rgba($primary-color, 0.03);
+    border: 1px dashed $primary-color;
     border-radius: $rounded-lg;
-    font-size: $font-size-base;
+    padding: $space-lg;
+    margin-top: $space-xl;
+
+    h4 {
+      margin-top: 0;
+      color: $primary-color;
+    }
+
+    ul {
+      margin-bottom: $space-md;
+    }
+
+    .btn-link {
+      display: inline-block;
+      color: $primary-color;
+      font-weight: $font-weight-medium;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Boxes d'information
+  .info-box {
+    background: $gray-ultra-light;
+    border-left: 4px solid $primary-color;
+    border-radius: $rounded-lg;
+    padding: $space-lg;
+    margin: $space-lg 0;
+
+    h3 {
+      margin-top: 0;
+      color: $primary-color;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .important-note {
+    background: rgba($warning-color, 0.1);
+    border-left: 4px solid $warning-color;
+    padding: $space-md $space-lg;
+    border-radius: $rounded;
+    margin: $space-lg 0;
+    color: $text-color;
     font-weight: $font-weight-medium;
-    font-family: $font-family-primary;
-    cursor: pointer;
-    transition: $transition-normal;
-    display: inline-flex;
-    align-items: center;
-    gap: $space-sm;
-    box-shadow: $shadow-md;
-    
-    &:hover {
-      background: $primary-color-dark;
-      transform: translateY(-2px);
-      box-shadow: $shadow-lg;
-    }
-    
-    svg {
-      fill: none;
-      stroke: currentColor;
-    }
   }
-  
-  // Sections supplémentaires
-  .additional-info-section,
-  .compliance-section,
-  .technical-section,
-  .contact-section,
-  .changelog-section {
-    margin-bottom: $space-xl;
-  }
-  
-  // Instructions navigateurs
-  .browser-instructions {
+
+  // Liste des droits
+  .rights-list {
     display: grid;
     gap: $space-md;
-    margin-bottom: $space-lg;
+    margin: $space-lg 0;
   }
-  
-  .browser-item {
+
+  .right-item {
     display: flex;
-    align-items: flex-start;
     gap: $space-md;
     padding: $space-md;
-    background: rgba($primary-color, 0.02);
-    border-radius: $rounded-lg;
-    border-left: 4px solid $primary-color;
-    
-    .browser-icon {
-      font-size: $font-size-xl;
+    background: $white;
+    border: 1px solid $gray-light;
+    border-radius: $rounded;
+
+    .icon {
+      font-size: $font-size-lg;
+      flex-shrink: 0;
+      margin-top: $space-xs;
     }
-    
+
     strong {
+      display: block;
       color: $text-color;
       font-weight: $font-weight-semibold;
-      display: block;
       margin-bottom: $space-xs;
     }
-    
+
     p {
-      color: $text-color-light;
-      font-size: $font-size-sm;
       margin: 0;
+      font-size: $font-size-sm;
     }
   }
-  
-  // Section GA disable
-  .ga-disable-section {
-    margin-top: $space-xl;
-    padding-top: $space-lg;
-    border-top: 1px solid $gray-light;
-    
-    h4 {
-      color: $text-color;
-      font-family: $font-family-headings;
-      font-size: $font-size-lg;
-      margin-bottom: $space-md;
-    }
-    
-    p {
-      color: $text-color-light;
-      margin-bottom: $space-md;
-    }
-  }
-  
-  .ga-disable-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-sm;
-    padding: $space-sm $space-lg;
-    border: 2px solid $primary-color;
-    color: $primary-color;
-    text-decoration: none;
-    border-radius: $rounded-lg;
-    font-weight: $font-weight-medium;
-    transition: $transition-normal;
-    
-    &:hover {
-      background: $primary-color;
-      color: $white;
-      transform: translateY(-2px);
-    }
-    
-    svg {
-      fill: none;
-      stroke: currentColor;
-    }
-  }
-  
-  // Grilles devices
-  .devices-grid {
+
+  // Grille sécurité
+  .security-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: $space-lg;
-    margin-top: $space-lg;
+    margin: $space-lg 0;
   }
-  
-  .device-item {
+
+  .security-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: $space-lg;
-    background: rgba($primary-color, 0.02);
-    border-radius: $rounded-lg;
-    
-    .device-icon {
-      font-size: 2rem;
-      display: block;
-      margin-bottom: $space-md;
-    }
-    
-    strong {
-      color: $text-color;
-      font-weight: $font-weight-semibold;
-      display: block;
-      margin-bottom: $space-sm;
-    }
-    
-    p {
-      color: $text-color-light;
-      font-size: $font-size-sm;
-      margin: 0;
-    }
-  }
-  
-  // Items légaux
-  .legal-items {
-    display: grid;
-    gap: $space-lg;
-  }
-  
-  .legal-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $space-md;
-    
-    .legal-flag {
-      font-size: $font-size-xl;
-      margin-top: $space-xs;
-    }
-    
-    strong {
-      color: $text-color;
-      font-weight: $font-weight-semibold;
-      display: block;
-      margin-bottom: $space-sm;
-    }
-    
-    p {
-      color: $text-color-light;
-      margin-bottom: $space-sm;
-    }
-    
-    ul {
-      margin: 0;
-      padding-left: $space-lg;
-      
-      li {
-        color: $text-color-light;
-        font-size: $font-size-sm;
-        margin-bottom: $space-xs;
-      }
-    }
-  }
-  
-  // Grille technique
-  .technical-grid {
-    display: grid;
-    gap: $space-lg;
-  }
-  
-  .tech-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: $space-md;
-    
-    .tech-icon {
-      font-size: $font-size-xl;
-      margin-top: $space-xs;
-    }
-    
-    strong {
-      color: $text-color;
-      font-weight: $font-weight-semibold;
-      display: block;
-      margin-bottom: $space-sm;
-    }
-    
-    p {
-      color: $text-color-light;
-      margin-bottom: $space-sm;
-    }
-    
-    ul {
-      margin: 0;
-      padding-left: $space-lg;
-      
-      li {
-        color: $text-color-light;
-        font-size: $font-size-sm;
-        margin-bottom: $space-xs;
-      }
-    }
-  }
-  
-  // Contact info
-  .contact-info {
-    text-align: center;
-    
-    .contact-item {
-      margin-bottom: $space-lg;
-      
-      strong {
-        color: $text-color;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-semibold;
-        display: block;
-        margin-bottom: $space-xs;
-      }
-      
-      p {
-        color: $text-color-light;
-        margin: 0;
-      }
-    }
-  }
-  
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: $space-lg;
-    flex-wrap: wrap;
-  }
-  
-  .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-sm;
-    padding: $space-md $space-lg;
-    background: $primary-color;
-    color: $white;
-    text-decoration: none;
-    border-radius: $rounded-lg;
-    font-weight: $font-weight-medium;
-    transition: $transition-normal;
-    
-    &:hover {
-      background: $primary-color-dark;
-      transform: translateY(-2px);
-      box-shadow: $shadow-lg;
-    }
-    
-    svg {
-      fill: none;
-      stroke: currentColor;
-    }
-  }
-  
-  // Changelog table
-  .changelog-table {
     background: $gray-ultra-light;
     border-radius: $rounded-lg;
-    overflow: hidden;
-    
-    .changelog-row {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      padding: $space-md;
-      border-bottom: 1px solid $gray-light;
-      
-      &.header {
-        background: $primary-color;
-        color: $white;
-        font-weight: $font-weight-semibold;
-      }
-      
-      &:last-child {
-        border-bottom: none;
-      }
-      
-      @media (max-width: $breakpoint-sm) {
-        grid-template-columns: 1fr;
-        gap: $space-xs;
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: $space-md;
+    }
+
+    strong {
+      display: block;
+      color: $text-color;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $space-xs;
+    }
+
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+    }
+  }
+
+  // Contact box
+  .contact-box {
+    background: $primary-color;
+    color: $white;
+    border-radius: $rounded-lg;
+    padding: $space-xl;
+    text-align: center;
+
+    h3 {
+      color: $white;
+      margin-top: 0;
+    }
+
+    p {
+      color: rgba($white, 0.9);
+      margin-bottom: $space-md;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }
-  
-  // Footer note
-  .footer-note {
-    text-align: center;
-    padding: $space-xl 0;
+
+  // Conformité légale
+  .legal-compliance {
+    .compliance-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: $space-md;
+        background: $gray-ultra-light;
+        border-radius: $rounded;
+        margin-bottom: $space-sm;
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  // Footer
+  .policy-footer {
+    margin-top: $space-4xl;
+    padding-top: $space-xl;
     border-top: 1px solid $gray-light;
-    margin-top: $space-xl;
-    
+    text-align: center;
+
     p {
-      color: $text-color-light;
+      color: $gray-medium;
       font-style: italic;
       margin: 0;
     }
   }
-
-  // Responsive adjustments
-  @media (max-width: $breakpoint-md) {
-    .main-content {
-      padding: 0 $space-md;
-    }
-    
-    .cookie-categories {
-      gap: $space-md;
-    }
-    
-    .privacy-section {
-      gap: $space-md;
-    }
-    
-    .preferences-card .card-body {
-      padding: $space-lg;
-    }
-    
-    .contact-links {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .devices-grid {
-      grid-template-columns: 1fr;
-    }
-  }
 }
 
-// Dark mode support
+// Dark mode (si nécessaire)
 @media (prefers-color-scheme: dark) {
   .cookie-policy-page {
-    .page-header {
-      background: linear-gradient(135deg, rgba($dark-surface, 0.8) 0%, rgba($dark-card, 0.5) 100%);
-      
-      h1 {
-        color: $white;
-      }
-      
-      .page-subtitle {
-        color: $dark-text-muted;
-      }
-      
-      .header-meta .update-date {
-        background: rgba($dark-card, 0.8);
-        color: $dark-text-muted;
-      }
-    }
-    
-    .card-modern {
+    .toc-sidebar,
+    .data-category,
+    .cookie-type,
+    .right-item {
       background: $dark-card;
       border-color: rgba($gray-light, 0.1);
-      
-      .card-header {
-        border-color: rgba($gray-light, 0.1);
-      }
-      
-      h2, h3 {
-        color: $white;
-      }
-      
-      p, li {
-        color: $dark-text-muted;
-      }
     }
-    
-    .cookie-table {
+
+    .info-item,
+    .security-item,
+    .info-box {
       background: $dark-surface;
-      
-      .cookie-row {
-        border-color: rgba($gray-light, 0.1);
-        
-        &:not(.header) {
-          color: $dark-text-muted;
-        }
-        
-        code {
-          background: rgba($primary-color, 0.2);
-        }
-      }
     }
-    
-    .preferences-btn {
-      &:hover {
-        background: $primary-color-dark;
-      }
+
+    h1, h2, h3, h4, strong {
+      color: $white;
+    }
+
+    p, li {
+      color: $dark-text-muted;
     }
   }
 }
