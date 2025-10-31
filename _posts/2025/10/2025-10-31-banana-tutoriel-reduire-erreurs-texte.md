@@ -183,6 +183,3 @@ Mais en combinant ces techniques, tu :
 
 🎯 C'est exactement l'objectif de ce guide : **faire de Banana un outil fiable pour produire des images avec du texte exploitable.**
 
----
-
-**Vous avez testé ces techniques ? Partagez vos résultats ou vos astuces dans les commentaires !**
