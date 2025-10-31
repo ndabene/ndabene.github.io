@@ -474,20 +474,28 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
             <h3>8. Gestion de vos préférences cookies</h3>
         </div>
         <div class="card-body">
-            <p>Vous pouvez modifier vos préférences de cookies à tout moment :</p>
+            <p>Vous pouvez modifier vos préférences de cookies à tout moment via le <strong>Consent Mode de Google</strong>.</p>
+
+            <p><strong>Comment accéder aux préférences de cookies :</strong></p>
             <ul>
-                <li>Cliquez sur le lien <strong>"Préférences cookies"</strong> en bas de page</li>
-                <li>Ou utilisez le bouton ci-dessous</li>
+                <li><strong>Lors de votre première visite :</strong> Un banner de consentement Google s'affiche automatiquement vous permettant de choisir vos préférences</li>
+                <li><strong>Pour modifier vos choix ultérieurement :</strong>
+                    <ul>
+                        <li>Le banner Google peut réapparaître périodiquement</li>
+                        <li>Vous pouvez supprimer les cookies via votre navigateur (voir section ci-dessous)</li>
+                        <li>Vous pouvez nous contacter pour demander la modification de vos préférences</li>
+                    </ul>
+                </li>
             </ul>
 
-            <div class="preferences-actions">
-                <button onclick="if(window.cookieConsent) { window.cookieConsent.showBanner(); window.cookieConsent.showSettings(); }" class="btn-primary preferences-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                    </svg>
-                    Modifier mes préférences
-                </button>
+            <div class="privacy-features" style="margin-top: 20px;">
+                <div class="privacy-feature">
+                    <span class="feature-icon">🔔</span>
+                    <div>
+                        <strong>Banner officiel Google</strong>
+                        <p>Ce site utilise le système de consentement officiel de Google (Google Consent Mode v2) pour respecter vos choix de confidentialité de manière transparente et conforme au RGPD.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
