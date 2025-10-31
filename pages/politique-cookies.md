@@ -222,12 +222,13 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                         <em>États-Unis</em></p>
                     </div>
                 </div>
-                <div class="info-item">
-                    <span class="icon">☕</span>
+                <div class="privacy-feature">
+                    <span class="feature-icon">🎥</span>
                     <div>
-                        <strong>Buy Me a Coffee</strong>
-                        <p>Plateforme de dons<br>
-                        <em>États-Unis</em></p>
+                        <strong>YouTube (Google LLC)</strong>
+                        <p><strong>Service :</strong> Hébergement de vidéos<br>
+                        <strong>Finalité :</strong> Diffusion de contenu vidéo<br>
+                        <strong>Localisation :</strong> États-Unis</p>
                     </div>
                 </div>
                 <div class="info-item">
