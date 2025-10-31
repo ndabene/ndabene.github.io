@@ -462,4 +462,37 @@ html, body {
       }
     }
   }
+}
+
+/* ========================================
+   GOOGLE ADSENSE - Styles pour les annonces
+   ======================================== */
+.adsense-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 100%;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+
+  .adsbygoogle {
+    display: block;
+    min-height: 100px;
+  }
+}
+
+/* Responsive Design pour les annonces */
+@media (max-width: 768px) {
+  .adsense-container {
+    margin: 1.5rem auto;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .adsense-container {
+    margin: 1rem auto;
+    padding: 0.5rem;
+  }
 } 
