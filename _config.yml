@@ -83,6 +83,9 @@ include:
 # Google Analytics
 google_analytics: G-38JJ2JLMX4
 
+# Google AdSense
+google_adsense: ca-pub-1445021827447908
+
 # Site settings
 under_construction: false # Bannière "under construction" désactivée
 
