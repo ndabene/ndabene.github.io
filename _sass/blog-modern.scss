@@ -1020,15 +1020,17 @@ $blog-content-bg: $white;
 }
 
 .post-layout {
-  max-width: 1200px;
+  max-width: 1600px; // Augmenté de 1200px à 1600px pour plus d'espace
   margin: 0 auto;
   display: flex;
   gap: 3rem;
   align-items: flex-start;
+  padding: 0 2rem; // Ajout de padding horizontal pour éviter que le contenu touche les bords
 
   @media (max-width: 1024px) {
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1.5rem;
   }
 
   @media (max-width: 768px) {
@@ -1052,7 +1054,7 @@ $blog-content-bg: $white;
   }
 
   .post-header-content {
-    max-width: 1200px;
+    max-width: 1600px; // Augmenté de 1200px à 1600px pour cohérence avec le layout
     margin: 0 auto;
     padding: 0 2rem;
     text-align: center;
@@ -1417,7 +1419,7 @@ $blog-content-bg: $white;
 .post-main-content {
   background: white;
   border-radius: 12px;
-  padding: 3rem;
+  padding: 3rem 4rem; // Augmenté le padding horizontal de 3rem à 4rem pour mieux utiliser l'espace
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(226, 232, 240, 0.8);
   width: 100%;
@@ -1426,6 +1428,7 @@ $blog-content-bg: $white;
   &.has-sidebar {
     @media (min-width: 1025px) {
       // Ajustements spécifiques quand il y a une sidebar
+      max-width: none; // Permet au contenu d'utiliser toute la largeur disponible
     }
   }
 
@@ -1442,11 +1445,11 @@ $blog-content-bg: $white;
 // Typography améliorée pour le contenu
 .post-content {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1rem, calc(1rem + 1.5vw), 1.25rem);
+  font-size: clamp(1rem, calc(1rem + 1.5vw), 1.125rem); // Légèrement réduit pour une meilleure lisibilité sur grand écran
   line-height: 1.7;
   color: #374151;
-  max-width: 70ch;
-  margin: 0 auto;
+  max-width: 100%; // Suppression de la limitation 70ch pour utiliser toute la largeur disponible
+  margin: 0; // Suppression du centrage automatique
   
   // Scroll offset pour éviter que les titres soient cachés derrière la navbar
   scroll-padding-top: 100px;
