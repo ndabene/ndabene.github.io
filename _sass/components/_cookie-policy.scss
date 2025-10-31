@@ -216,6 +216,43 @@
     }
   }
 
+  .privacy-feature {
+    display: flex;
+    gap: $space-md;
+    padding: $space-lg;
+    background: $white;
+    border: 2px solid #334155;
+    border-radius: $rounded-lg;
+
+    .feature-icon {
+      font-size: $font-size-xl;
+      flex-shrink: 0;
+    }
+
+    strong {
+      display: block;
+      color: $text-color;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $space-xs;
+    }
+
+    p {
+      color: $text-color-light;
+      font-size: $font-size-sm;
+      margin: 0;
+      line-height: $line-height-base;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   // Catégories de données
   .data-category {
     background: $white;
@@ -559,14 +596,17 @@
     .data-category,
     .cookie-type,
     .right-item {
-      background: $dark-card;
-      border-color: rgba($gray-light, 0.1);
+      background: transparent;
+      border: 2px solid #334155;
+      border-color: #334155;
     }
 
     .info-item,
     .security-item,
-    .info-box {
-      background: $dark-surface;
+    .info-box,
+    .privacy-feature {
+      background: transparent;
+      border: 2px solid #334155;
     }
 
     h1, h2, h3, h4, strong {
@@ -574,7 +614,7 @@
     }
 
     p, li {
-      color: $dark-text-muted;
+      color: rgba($white, 0.85);
     }
   }
 }
