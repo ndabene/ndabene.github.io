@@ -1,6 +1,8 @@
 # Robots.txt optimisé pour crawlers IA et SEO
 User-agent: *
 Allow: /
+User-agent: Google-Display-Ads-Bot
+User-agent: Mediapartners-Google
 
 # Crawlers IA spécialisés
 User-agent: ChatGPT-User
