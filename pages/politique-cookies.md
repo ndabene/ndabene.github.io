@@ -49,7 +49,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                     <span class="icon">📧</span>
                     <div>
                         <strong>Contact</strong>
-                        <p>Email : <a href="mailto:ndabene2807@gmail.com">ndabene2807@gmail.com</a><br>
+                        <p><a href="/contact/">Formulaire de contact</a><br>
                         Site : <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a></p>
                     </div>
                 </div>
@@ -306,7 +306,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
 
             <div class="info-box">
                 <h3>Comment exercer vos droits ?</h3>
-                <p>Contactez-nous par email à <a href="mailto:ndabene2807@gmail.com">ndabene2807@gmail.com</a> ou via le <a href="/contact/">formulaire de contact</a>.</p>
+                <p>Contactez-nous via le <a href="/contact/">formulaire de contact</a>.</p>
                 <p>Votre demande sera traitée dans un délai d'<strong>1 mois</strong>.</p>
             </div>
 
@@ -363,8 +363,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                 <h3>Pour toute question concernant cette politique :</h3>
                 <p><strong>Nicolas Dabène</strong><br>
                 Développeur PHP Senior & Architecte IA</p>
-                <p>📧 <a href="mailto:ndabene2807@gmail.com">ndabene2807@gmail.com</a><br>
-                🌐 <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a><br>
+                <p>🌐 <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a><br>
                 📝 <a href="/contact/">Formulaire de contact</a></p>
             </div>
         </section>
