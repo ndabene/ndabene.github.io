@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!postsContainer) return;
 
-    const postsPerPage = 6;
+    const postsPerPage = 8;
     let currentPage = 1;
 
     // Fonction pour obtenir tous les articles visibles (non masqués par les filtres)
