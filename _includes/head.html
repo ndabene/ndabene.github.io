@@ -62,17 +62,22 @@
 
 <!-- Open Graph / Facebook -->
 {% if page.layout == 'product' and page.product %}
-  {% assign _og_image = page.product.image | prepend: site.baseurl | prepend: '/' | replace: '//' , '/' | absolute_url %}
+  {% assign _og_image = page.product.image | absolute_url %}
 {% elsif page.image %}
-  {% assign _og_image = page.image | prepend: site.baseurl | prepend: '/' | replace: '//' , '/' | absolute_url %}
+  {% assign _og_image = page.image | absolute_url %}
 {% else %}
-  {% assign _og_image = site.url | append: '/assets/images/hero/profile-hero.jpg' %}
+  {% assign _og_image = '/assets/images/hero/profile-hero.jpg' | absolute_url %}
 {% endif %}
 <meta property="og:type" content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
 <meta property="og:description" content="{{ page.description | default: site.description }}">
 <meta property="og:image" content="{{ _og_image }}">
+<meta property="og:image:secure_url" content="{{ _og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.title | escape }}">
+<meta property="og:image:type" content="image/jpeg">
 {% if page.layout == 'product' and page.product and page.product.prix %}
   <meta property="product:price:amount" content="{{ page.product.prix | remove: '€' | strip }}">
   <meta property="product:price:currency" content="EUR">
@@ -86,6 +91,7 @@
 <meta name="twitter:title" content="{{ site.title }} | {{ page.title }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description }}">
 <meta name="twitter:image" content="{{ _og_image }}">
+<meta name="twitter:image:alt" content="{{ page.title | escape }}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/assets/images/favicon.png">
