@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Et si l'IA rejetait ton code pour de mauvaises raisons ? Les biais cachés des outils de code review automatisés"
-date: 2025-11-10
+date: 2025-11-13
 author: Nicolas Dabène
 categories: [IA, Développement, Éthique]
 tags: [Intelligence Artificielle, Développement, Éthique du code, Biais algorithmiques, Code Review, GitHub Copilot, IA générative]
