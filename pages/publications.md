@@ -48,7 +48,7 @@
 67        {% endfor %}
 68 
 69 <div class="view-all-section publications-external-link">
-70 <a href="https://www.businesstech.fr/landing/articles/index.html" class="view-all-btn" target="_blank">
+70 <a href="https://www.businesstech.fr/articles/index.html" class="view-all-btn" target="_blank">
 71 <span class="btn-text">Voir tous mes articles sur Business Tech</span>
 72 <svg viewBox="0 0 24 24" fill="currentColor">
 73 <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
