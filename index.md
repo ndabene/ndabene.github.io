@@ -29,6 +29,8 @@ llm_topics:
 
 {% include home-commerce/services-freelance.html %}
 
+{% include sponsors-block.html %}
+
 {% include home-commerce/contact-simple.html %}
 
 {% include person-jsonld.html %}

@@ -1670,6 +1670,27 @@ body.dark-mode {
       }
     }
 
+    .footer-referral {
+      background: rgba($dark-surface, 0.5);
+      border-left-color: #ff6b35;
+
+      p {
+        color: $dark-text;
+      }
+
+      a {
+        color: #ff8c5a;
+
+        &:hover {
+          color: lighten(#ff8c5a, 15%);
+        }
+      }
+
+      strong {
+        color: #ff8c5a;
+      }
+    }
+
     .footer-bottom {
       border-top-color: rgba($dark-text-muted, 0.2);
 
@@ -1762,6 +1783,42 @@ body.dark-mode {
       &:active {
         transform: translateX(3px) scale(0.98);
         box-shadow: 0 2px 8px rgba($accent-color-1, 0.3);
+      }
+    }
+
+    .footer-referral {
+      background: rgba($white, 0.1);
+      border-radius: $border-radius;
+      padding: $spacing-md;
+      margin-top: $spacing-md;
+      border-left: 4px solid #ff6b35;
+
+      p {
+        margin: 0 0 $spacing-sm 0;
+        font-size: $font-size-sm;
+        line-height: 1.4;
+        color: $white;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        color: #ffa07a;
+        text-decoration: none;
+        font-weight: $font-weight-semibold;
+        transition: $transition-base;
+
+        &:hover {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+
+      strong {
+        color: #ffa07a;
+        font-weight: $font-weight-bold;
       }
     }
   }
