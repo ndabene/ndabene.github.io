@@ -68,6 +68,18 @@ $linkedin-color: #0077B5;
 .hero-commerce {
   padding: 5rem 0 4rem;
   background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+  position: relative;
+
+  // Séparation visuelle douce en bas
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
 
   @media (max-width: 768px) {
     padding: 3rem 0 2rem;
@@ -252,8 +264,18 @@ $linkedin-color: #0077B5;
 
 .about-short {
   background: white;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  position: relative;
+
+  // Séparation visuelle douce en bas
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
 }
 
 .about-short-content {
@@ -273,9 +295,34 @@ $linkedin-color: #0077B5;
 // PRODUCTS GRID (Modules + Formations)
 //================================================
 
-.modules-prestashop,
+.modules-prestashop {
+  background: $bg-light;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
+}
+
 .formations-ia {
   background: white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
 }
 
 .products-grid {
@@ -527,7 +574,18 @@ $linkedin-color: #0077B5;
 //================================================
 
 .competences {
-  background: $bg-light;
+  background: linear-gradient(180deg, white 0%, $bg-light 100%);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
 }
 
 .competences-grid {
@@ -546,45 +604,40 @@ $linkedin-color: #0077B5;
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid $border-color;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
-  // Gradient de fond subtil
+  // Gradient de fond subtil au hover
   &::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba($primary-color, 0.03) 0%, transparent 70%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba($primary-color, 0.02) 0%, rgba($secondary-color, 0.02) 100%);
     opacity: 0;
-    transition: opacity 0.4s ease, transform 0.6s ease;
+    transition: opacity 0.3s ease;
     pointer-events: none;
   }
 
   &:hover {
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1), 0 5px 20px rgba($primary-color, 0.15);
-    transform: translateY(-5px) scale(1.02);
-    border-color: rgba($primary-color, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba($primary-color, 0.2);
 
     &::before {
       opacity: 1;
-      transform: rotate(45deg);
     }
 
     .competence-icon {
-      transform: scale(1.15) rotate(5deg);
-      box-shadow: 0 8px 30px rgba($primary-color, 0.5), 0 0 50px rgba($primary-color, 0.4);
-      animation: float-subtle 4s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
-
-      &::before {
-        opacity: 1;
-      }
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba($primary-color, 0.3);
 
       i {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
   }
@@ -599,35 +652,29 @@ $linkedin-color: #0077B5;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba($primary-color, 0.25), 0 0 0 0 rgba($primary-color, 0.4);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 3px 12px rgba($primary-color, 0.2);
+  transition: all 0.3s ease;
   position: relative;
-  animation: float-subtle 4s ease-in-out infinite;
+  overflow: hidden;
 
-  // Glow pulsant en arrière-plan
+  // Effet de brillance subtil et élégant (une seule fois au hover)
   &::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    background: linear-gradient(135deg, $primary-color, $secondary-color);
-    border-radius: 16px;
-    opacity: 0;
-    filter: blur(12px);
-    transition: opacity 0.5s ease;
-    z-index: -1;
-  }
-
-  // Shine effect amélioré
-  &::after {
     content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.5), transparent 70%);
-    transform: rotate(45deg);
-    animation: shine-smooth 4s ease-in-out infinite;
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.15) 45%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.15) 55%,
+      transparent 70%
+    );
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transition: none;
   }
 
   i {
@@ -635,43 +682,22 @@ $linkedin-color: #0077B5;
     color: white;
     position: relative;
     z-index: 1;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
   }
 }
 
-// Flottement subtil permanent
-@keyframes float-subtle {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
+// Animation de brillance au hover uniquement
+.competence-card:hover .competence-icon::before {
+  animation: shine-once 0.8s ease-out;
 }
 
-// Effet de brillance plus fluide
-@keyframes shine-smooth {
+@keyframes shine-once {
   0% {
-    transform: translateX(-150%) translateY(-150%) rotate(45deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
   }
   100% {
-    transform: translateX(150%) translateY(150%) rotate(45deg);
-    opacity: 0;
-  }
-}
-
-// Effet pulsant au hover
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 4px 15px rgba($primary-color, 0.25), 0 0 20px rgba($primary-color, 0.3);
-  }
-  50% {
-    box-shadow: 0 4px 25px rgba($primary-color, 0.4), 0 0 40px rgba($primary-color, 0.5);
+    transform: translateX(100%) translateY(100%) rotate(45deg);
   }
 }
 
@@ -690,13 +716,193 @@ $linkedin-color: #0077B5;
 }
 
 //================================================
+// EXPERTISE & STACK SECTION
+//================================================
+
+.expertise-stack {
+  background: $bg-light;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
+}
+
+// Compétences compactes dans expertise-stack
+.competences-compact {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  border: 1px solid $border-color;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+  .subsection-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      border-radius: 3px;
+    }
+  }
+}
+
+.competences-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.competence-card-compact {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($primary-color, 0.02);
+    transform: translateY(-2px);
+  }
+}
+
+// Missions types dans expertise-stack
+.missions-types {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  border: 1px solid $border-color;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+  .subsection-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      border-radius: 3px;
+    }
+  }
+}
+
+.missions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: grid;
+  gap: 0.75rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    background: linear-gradient(135deg, rgba($primary-color, 0.03) 0%, rgba($secondary-color, 0.03) 100%);
+    border-radius: 10px;
+    border-left: 3px solid $primary-color;
+    font-size: 1rem;
+    color: $text-dark;
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '✓';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, $primary-color, $secondary-color);
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background: linear-gradient(135deg, rgba($primary-color, 0.06) 0%, rgba($secondary-color, 0.06) 100%);
+      transform: translateX(4px);
+      border-left-color: $secondary-color;
+    }
+  }
+}
+
+.zone-intervention {
+  background: linear-gradient(135deg, rgba($secondary-color, 0.05) 0%, rgba($primary-color, 0.05) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba($secondary-color, 0.2);
+
+  .zone-text {
+    margin: 0;
+    font-size: 1rem;
+    color: $text-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+
+    i {
+      color: $secondary-color;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+//================================================
 // SERVICES FREELANCE
 //================================================
 
 .services-freelance {
   background: white;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, $border-color 20%, $border-color 80%, transparent);
+  }
 }
 
 .services-content {
@@ -770,7 +976,8 @@ $linkedin-color: #0077B5;
 //================================================
 
 .contact-simple {
-  background: $bg-light;
+  background: linear-gradient(135deg, $bg-light 0%, #EFF6FF 100%);
+  position: relative;
 }
 
 .contact-location {
