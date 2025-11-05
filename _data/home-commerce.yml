@@ -1,22 +1,16 @@
 hero:
   title: "Développeur PrestaShop & Formateur IA"
-  subtitle: "Modules e-commerce sur-mesure • Formations IA pratiques • Freelance Côte d'Azur"
+  subtitle: "Je crée des modules e-commerce fiables et je forme des équipes à l'IA. Basé à Antibes, j'aide les pros de la Côte d'Azur à booster leurs ventes et leur autonomie. Pas de jargon, que du concret."
   location: "Sophia Antipolis"
   photo: "assets/images/nicolas-dabene-headshot.jpg"
   cta:
     primary:
       text: "Voir mes modules"
-      url: "#modules-prestashop"
+      url: "#realisations"
     secondary:
-      text: "Mes formations IA"
-      url: "#formations-ia"
-    tertiary:
-      text: "LinkedIn"
-      url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
-      external: true
+      text: "Lire le blog"
+      url: "/blog/"
 
-about:
-  content: "Je m'appelle Nicolas, je développe des modules PrestaShop et je forme des pros à l'IA. Basé à Antibes, j'aide les marchands à booster leur e-commerce avec des solutions techniques fiables et j'accompagne les équipes pour qu'elles deviennent autonomes avec l'intelligence artificielle. Pas de jargon, que du concret."
 
 modules_prestashop:
   title: "Mes Modules PrestaShop"
@@ -25,24 +19,17 @@ modules_prestashop:
   featured:
     - id: "geo-suite"
       title: "GEO Suite"
-      description: "Optimisez vos données structurées pour le SEO local et international"
+      description: "SEO local & IA pour mieux vous positionner"
       image: "assets/images/modules/geo-generative-engine-optimization.png"
       link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
-      tags: ["SEO", "IA"]
+      tags: ["SEO"]
       category: "Module"
     - id: "google-merchant-center-pro"
       title: "Google Merchant Center Pro"
-      description: "Intégrez Google Shopping pour augmenter vos ventes"
+      description: "Intégration Google Shopping pour booster vos ventes"
       image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
       link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
-      tags: ["Shopping", "Flux"]
-      category: "Module"
-    - id: "google-pay"
-      title: "Google Pay"
-      description: "Paiement rapide et sécurisé pour améliorer la conversion"
-      image: "assets/images/modules/google-pay-for-prestashop.png"
-      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/82-google-pay.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
-      tags: ["Paiement", "Conversion"]
+      tags: ["Shopping"]
       category: "Module"
   cta:
     text: "Découvrir tous mes modules"
@@ -53,33 +40,19 @@ formations_ia_featured:
   title_benefit: "Devenez autonome avec l'IA"
   subtitle: "Formations pratiques pour maîtriser l'IA en quelques heures"
   featured:
-    # - id: "starter-pack-ia"
-    #   title: "Starter Pack IA 4-en-1"
-    #   description: "Le parcours complet de débutant à autonome : fondamentaux, impact écologique, prompts, création visuelle"
-    #   image: "assets/images/produits/pack-ia.jpg"
-    #   link: "/boutique/#starter-pack-ia"
-    #   tags: ["Pack complet", "4 chapitres"]
-    #   category: "Formation"
     - id: "chapitre-1-ia-debutants"
       title: "Chapitre 1 : IA pour Débutants"
-      description: "Posez des bases solides en IA sans jargon. Comprenez les Transformers et appliquez l'IA au quotidien"
+      description: "Comprendre l'IA en 2h30 sans jargon technique"
       image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
       link: "/boutique/#chapitre-1"
-      tags: ["Débutant", "2h30"]
+      tags: ["Débutant"]
       category: "Formation"
     - id: "chapitre-3-art-du-prompt"
       title: "Chapitre 3 : L'Art du Prompt"
-      description: "Maîtrisez la méthode C.L.A.I.R et 7 types de prompts pour des résultats concrets"
+      description: "Méthode C.L.A.I.R pour des prompts efficaces"
       image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
       link: "/boutique/#chapitre-3"
-      tags: ["Avancé", "3h"]
-      category: "Formation"
-    - id: "chapitre-2-impact-ecologique"
-      title: "Chapitre 2 : Impact Écologique de l'IA"
-      description: "Comprenez les impacts environnementaux de l'IA et adoptez une démarche Green AI responsable"
-      image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
-      link: "/boutique/#chapitre-2"
-      tags: ["Environnement", "2h"]
+      tags: ["Avancé"]
       category: "Formation"
   cta:
     text: "Voir toutes mes formations"
@@ -154,12 +127,12 @@ services_freelance:
     url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
 
 expertise_stack:
-  title: "Mon expertise & ma stack"
-  intro: "Je travaille principalement sur PrestaShop 8/9, l'IA appliquée au e-commerce, et la fiabilité long terme. Voici comment je peux vous aider :"
+  title: "Comment je peux vous aider"
+  intro: ""
 
 contact:
   title: "Travaillons ensemble"
-  intro: "Un projet e-commerce en tête ? Une équipe à former à l'IA ? Je suis disponible pour échanger sur vos besoins."
+  intro: "Un projet e-commerce ? Une formation IA pour votre équipe ?"
   location: "Basé à Antibes, actif sur Sophia Antipolis et la Côte d'Azur"
   links:
     - platform: "LinkedIn"
