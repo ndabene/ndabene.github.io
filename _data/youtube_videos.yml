@@ -92,3 +92,24 @@
   channel: ndabene06
   duration: PT1M30S
   category: IA & Automatisation
+- title: 'L&#39;Évolution de Google Shopping : 2002-2025'
+  video_id: jqervLxhvUk
+  url: https://www.youtube.com/watch?v=jqervLxhvUk
+  thumbnail: https://i.ytimg.com/vi/jqervLxhvUk/hqdefault.jpg
+  description: Cet article de blog de Nicolas Dabène, expert en développement PHP
+    et IA, propose un aperçu détaillé de l'évolution de Google ...
+  published_at: '2025-11-04T23:01:06Z'
+  channel: ndabene06
+  duration: PT6M8S
+  category: PHP & Frameworks
+- title: "Mistral AI : La Révolution Française de l&#39;Intelligence Artificielle
+    \U0001F1EB\U0001F1F7 | IA Souveraine"
+  video_id: D2FAqwTg2y0
+  url: https://www.youtube.com/watch?v=D2FAqwTg2y0
+  thumbnail: https://i.ytimg.com/vi/D2FAqwTg2y0/hqdefault.jpg
+  description: Découvrez Mistral AI, la révolution française de l'intelligence artificielle
+    qui bouleverse le paysage technologique mondial !
+  published_at: '2025-11-04T23:00:14Z'
+  channel: ndabene06
+  duration: PT6M47S
+  category: IA & Automatisation
