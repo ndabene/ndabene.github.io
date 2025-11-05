@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories: [PrestaShop, Bonnes Pratiques, Tutoriel]
 tags: [PrestaShop, modules, validation, qualité, sécurité, développement, marketplace]
 excerpt: "Découvrez comment PrestaShop Extension Validator transforme la création de modules en processus fiable et professionnel, garantissant qualité et sécurité."
-image: /assets/images/blog/2025-01-24-prestashop-extension-validator.jpg
+image: /assets/images/blog/2025/11/2025-01-24-prestashop-extension-validator.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["PrestaShop", "PHP", "Validation"]
