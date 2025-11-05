@@ -20,7 +20,8 @@ about:
 
 modules_prestashop:
   title: "Mes Modules PrestaShop"
-  subtitle: "Solutions professionnelles pour votre e-commerce"
+  title_benefit: "Solutions pour votre e-commerce"
+  subtitle: "Modules professionnels pour booster vos ventes"
   featured:
     - id: "geo-suite"
       title: "GEO Suite"
@@ -49,7 +50,8 @@ modules_prestashop:
 
 formations_ia_featured:
   title: "Mes Formations IA"
-  subtitle: "Devenez autonome avec l'IA en quelques heures"
+  title_benefit: "Devenez autonome avec l'IA"
+  subtitle: "Formations pratiques pour maîtriser l'IA en quelques heures"
   featured:
     # - id: "starter-pack-ia"
     #   title: "Starter Pack IA 4-en-1"
@@ -151,20 +153,22 @@ services_freelance:
     text: "Discuter d'un projet sur LinkedIn"
     url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
 
+expertise_stack:
+  title: "Mon expertise & ma stack"
+  intro: "Je travaille principalement sur PrestaShop 8/9, l'IA appliquée au e-commerce, et la fiabilité long terme. Voici comment je peux vous aider :"
+
 contact:
   title: "Travaillons ensemble"
+  intro: "Un projet e-commerce en tête ? Une équipe à former à l'IA ? Je suis disponible pour échanger sur vos besoins."
   location: "Basé à Antibes, actif sur Sophia Antipolis et la Côte d'Azur"
   links:
     - platform: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
       primary: true
-    - platform: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/ndabene"
-    - platform: "Formulaire"
+    - platform: "Email"
       icon: "fas fa-envelope"
       url: "/contact/"
   cta:
-    text: "Me contacter sur LinkedIn"
+    text: "Discuter sur LinkedIn"
     url: "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"

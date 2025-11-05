@@ -8,8 +8,8 @@
 
         <div class="featured-articles-grid">
             {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-            {% assign random_posts = published_posts | sample: 3 %}
-            {% for post in random_posts %}
+            {% assign recent_posts = published_posts | limit: 3 %}
+            {% for post in recent_posts %}
             <article class="featured-article-card">
                 <a href="{{ post.url | relative_url }}" class="featured-card-link">
                     <div class="featured-card-image">
