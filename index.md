@@ -17,10 +17,6 @@ llm_topics:
 ---
 {% include home-commerce/hero-commerce.html %}
 
-{% include home-commerce/ce-que-je-cree.html %}
-
-{% include home/publications.html %}
-
 {% include home-commerce/expertise-stack.html %}
 
 {% include home-commerce/contact-simple.html %}
