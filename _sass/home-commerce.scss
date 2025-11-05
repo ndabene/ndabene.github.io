@@ -575,8 +575,17 @@ $linkedin-color: #0077B5;
     }
 
     .competence-icon {
-      transform: scale(1.1) rotate(5deg);
-      box-shadow: 0 8px 25px rgba($primary-color, 0.4);
+      transform: scale(1.15) rotate(5deg);
+      box-shadow: 0 8px 30px rgba($primary-color, 0.5), 0 0 50px rgba($primary-color, 0.4);
+      animation: float-subtle 4s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+
+      &::before {
+        opacity: 1;
+      }
+
+      i {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -590,11 +599,25 @@ $linkedin-color: #0077B5;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba($primary-color, 0.25);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba($primary-color, 0.25), 0 0 0 0 rgba($primary-color, 0.4);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  animation: float-subtle 4s ease-in-out infinite;
 
-  // Shine effect
+  // Glow pulsant en arrière-plan
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    border-radius: 16px;
+    opacity: 0;
+    filter: blur(12px);
+    transition: opacity 0.5s ease;
+    z-index: -1;
+  }
+
+  // Shine effect amélioré
   &::after {
     content: '';
     position: absolute;
@@ -602,9 +625,9 @@ $linkedin-color: #0077B5;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.5), transparent 70%);
     transform: rotate(45deg);
-    animation: shine 3s ease-in-out infinite;
+    animation: shine-smooth 4s ease-in-out infinite;
   }
 
   i {
@@ -612,16 +635,43 @@ $linkedin-color: #0077B5;
     color: white;
     position: relative;
     z-index: 1;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
   }
 }
 
-@keyframes shine {
+// Flottement subtil permanent
+@keyframes float-subtle {
   0%, 100% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
+    transform: translateY(-6px);
+  }
+}
+
+// Effet de brillance plus fluide
+@keyframes shine-smooth {
+  0% {
+    transform: translateX(-150%) translateY(-150%) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(150%) translateY(150%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+// Effet pulsant au hover
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba($primary-color, 0.25), 0 0 20px rgba($primary-color, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba($primary-color, 0.4), 0 0 40px rgba($primary-color, 0.5);
   }
 }
 
