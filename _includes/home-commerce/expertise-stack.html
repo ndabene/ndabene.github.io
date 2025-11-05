@@ -1,0 +1,107 @@
+<!-- EXPERTISE & STACK - Section fusionnée : Compétences + Services + Outils -->
+<section class="section-commerce expertise-stack" id="expertise">
+    <div class="container-commerce">
+        <!-- En-tête -->
+        <div class="section-header-commerce">
+            <h2 class="section-title-commerce">{{ site.data.home-commerce.expertise_stack.title | default: "Mon expertise & ma stack" }}</h2>
+            <p class="section-intro-text">{{ site.data.home-commerce.expertise_stack.intro | default: "Je travaille principalement sur PrestaShop 8/9, l'IA appliquée au e-commerce, et la fiabilité long terme. Voici comment je peux vous aider :" }}</p>
+        </div>
+
+        <!-- COMPÉTENCES CLÉS (3 cartes compactes) -->
+        <div class="competences-compact">
+            <h3 class="subsection-title">Compétences clés</h3>
+            <div class="competences-grid-compact">
+                {% for competence in site.data.home-commerce.competences.items %}
+                <div class="competence-card-compact">
+                    <div class="competence-icon">
+                        <i class="{{ competence.icon }}"></i>
+                    </div>
+                    <h4 class="competence-title">{{ competence.title }}</h4>
+                    <p class="competence-description">{{ competence.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- TYPES DE MISSIONS (liste inline) -->
+        <div class="missions-types">
+            <h3 class="subsection-title">Types de missions</h3>
+            <div class="missions-badges">
+                {% for type in site.data.home-commerce.services_freelance.types %}
+                <span class="mission-badge">{{ type }}</span>
+                {% endfor %}
+            </div>
+
+            <!-- Zone d'intervention -->
+            <div class="zone-intervention">
+                <p class="zone-text">
+                    <i class="fas fa-map-marker-alt"></i>
+                    {{ site.data.home-commerce.services_freelance.zone.text }}
+                </p>
+            </div>
+        </div>
+
+        <!-- OUTILS QUE J'UTILISE (version compacte sponsors) -->
+        <div class="stack-tools">
+            <h3 class="subsection-title">Outils que j'utilise au quotidien</h3>
+            <div class="tools-compact-grid">
+                <!-- Perplexity Pro -->
+                <div class="tool-compact-card">
+                    <div class="tool-header">
+                        <div class="tool-icon perplexity-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h4>Perplexity Pro</h4>
+                            <span class="tool-category">Intelligence Artificielle</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Mon outil d'IA quotidien pour recherches et analyses</p>
+                    <a href="https://pplx.ai/ndabene28081991" class="tool-link" target="_blank" rel="noopener">
+                        🎁 30 jours gratuits <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- Hostinger -->
+                <div class="tool-compact-card">
+                    <div class="tool-header">
+                        <div class="tool-icon hostinger-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h4>Hostinger</h4>
+                            <span class="tool-category">Hébergement & Infrastructure</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">Hébergement de mes outils d'automatisation (n8n, IA)</p>
+                    <a href="https://hostinger.fr?REFERRALCODE=NFWNDABENI2P" class="tool-link" target="_blank" rel="noopener noreferrer">
+                        💰 -20% code parrain <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <!-- n8n / Autres outils -->
+                <div class="tool-compact-card">
+                    <div class="tool-header">
+                        <div class="tool-icon automation-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="tool-info">
+                            <h4>Stack technique</h4>
+                            <span class="tool-category">Automatisation & DevOps</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">n8n, Docker, Git, APIs REST, webhooks, monitoring</p>
+                    <a href="/sponsors/" class="tool-link">
+                        Voir ma stack complète <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mention légale -->
+            <p class="tools-disclaimer">
+                <i class="fas fa-info-circle"></i>
+                Liens affiliés — Je recommande ces outils que j'utilise quotidiennement
+            </p>
+        </div>
+    </div>
+</section>

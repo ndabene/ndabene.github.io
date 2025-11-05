@@ -17,19 +17,11 @@ llm_topics:
 ---
 {% include home-commerce/hero-commerce.html %}
 
-{% include home-commerce/about-short.html %}
-
-{% include home-commerce/modules-featured.html %}
-
-{% include home-commerce/modules-prestashop-grid.html %}
-
-{% include home-commerce/competences-grid.html %}
+{% include home-commerce/ce-que-je-cree.html %}
 
 {% include home/publications.html %}
 
-{% include home-commerce/services-freelance.html %}
-
-{% include sponsors-block.html %}
+{% include home-commerce/expertise-stack.html %}
 
 {% include home-commerce/contact-simple.html %}
 

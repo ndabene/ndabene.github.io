@@ -3,6 +3,9 @@
     <div class="container-commerce">
         <div class="section-header-commerce">
             <h2 class="section-title-commerce">{{ site.data.home-commerce.contact.title }}</h2>
+            {% if site.data.home-commerce.contact.intro %}
+            <p class="contact-intro">{{ site.data.home-commerce.contact.intro }}</p>
+            {% endif %}
             <p class="contact-location">
                 <i class="fas fa-map-marker-alt"></i>
                 {{ site.data.home-commerce.contact.location }}
