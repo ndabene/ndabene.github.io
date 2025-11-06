@@ -1,0 +1,515 @@
+/**
+ * Cookie Banner intégré dans le footer
+ * Design harmonisé avec le footer existant
+ * PAS d'overlay, PAS de position fixed, PAS de z-index élevé
+ */
+
+.footer-cookies {
+    // Pas de position fixed, intégré dans le flux du footer
+    position: relative;
+    width: 100%;
+    margin-top: $spacing-xl;
+    margin-bottom: $spacing-lg;
+    padding: $spacing-lg;
+    background: rgba($white, 0.05);
+    border-radius: $border-radius;
+    border: 1px solid rgba($white, 0.1);
+    backdrop-filter: blur(10px);
+
+    // Apparition en douceur quand le banner est affiché
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out, margin 0.4s ease-in-out;
+
+    // Classe ajoutée par JS quand le banner doit être visible
+    &[style*="display: block"],
+    &.show {
+        opacity: 1;
+        max-height: 1000px;
+
+        @media (max-width: $tablet) {
+            max-height: 2000px;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        margin-top: $spacing-lg;
+        padding: $spacing-md;
+    }
+}
+
+.cookie-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-lg;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: $spacing-md;
+    }
+}
+
+.cookie-info {
+    flex: 1;
+
+    h4 {
+        color: $white;
+        font-size: $h4-size;
+        font-weight: $font-weight-bold;
+        margin: 0 0 $spacing-sm 0;
+        font-family: $font-family-headings;
+
+        @media (max-width: $tablet) {
+            font-size: $font-size-lg;
+        }
+    }
+
+    p {
+        color: rgba($white, 0.8);
+        line-height: 1.6;
+        margin: 0;
+        font-size: $font-size-sm;
+
+        @media (max-width: $tablet) {
+            font-size: $font-size-xs;
+        }
+    }
+
+    .cookie-policy-link {
+        color: rgba($white, 0.9);
+        text-decoration: underline;
+        font-weight: $font-weight-medium;
+        transition: $transition-base;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.cookie-actions {
+    display: flex;
+    gap: $spacing-sm;
+    flex-shrink: 0;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        gap: $spacing-sm;
+    }
+
+    @media (max-width: $mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        button {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+}
+
+// Boutons du cookie banner - Style harmonisé avec le footer
+.footer-cookies button,
+.cookie-settings-wrapper button {
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+    transition: $transition-base;
+    font-family: $font-family-primary;
+    border: none;
+    white-space: nowrap;
+
+    @media (max-width: $tablet) {
+        padding: $spacing-sm $spacing-md;
+        font-size: $font-size-xs;
+        white-space: normal;
+    }
+}
+
+.btn-cookie-accept {
+    background: rgba($white, 0.95);
+    color: $primary-color;
+    border: 2px solid rgba($white, 0.95);
+    font-weight: $font-weight-semibold;
+
+    &:hover {
+        background: $white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($white, 0.3);
+    }
+}
+
+.btn-cookie-customize {
+    background: rgba($white, 0.1);
+    color: rgba($white, 0.9);
+    border: 2px solid rgba($white, 0.3);
+
+    &:hover {
+        background: rgba($white, 0.2);
+        border-color: rgba($white, 0.5);
+        color: $white;
+        transform: translateY(-2px);
+    }
+}
+
+.btn-cookie-reject {
+    background: transparent;
+    color: rgba($white, 0.7);
+    border: 2px solid rgba($white, 0.2);
+
+    &:hover {
+        background: rgba($white, 0.1);
+        border-color: rgba($white, 0.3);
+        color: rgba($white, 0.9);
+        transform: translateY(-2px);
+    }
+}
+
+// Panel de paramètres des cookies
+.cookie-settings-wrapper {
+    margin-top: $spacing-lg;
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba($white, 0.1);
+
+    // Animation d'apparition
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+
+    &[style*="display: block"],
+    &.show {
+        opacity: 1;
+        max-height: 2000px;
+    }
+
+    h4 {
+        color: $white;
+        font-size: $h4-size;
+        font-weight: $font-weight-semibold;
+        margin: 0 0 $spacing-md 0;
+        font-family: $font-family-headings;
+
+        @media (max-width: $tablet) {
+            font-size: $font-size-lg;
+        }
+    }
+}
+
+.cookie-categories {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+}
+
+.cookie-category {
+    background: rgba($white, 0.05);
+    border: 1px solid rgba($white, 0.1);
+    border-radius: $border-radius;
+    padding: $spacing-md;
+
+    @media (max-width: $tablet) {
+        padding: $spacing-sm;
+    }
+}
+
+.cookie-category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-md;
+
+    div {
+        flex: 1;
+    }
+
+    h5 {
+        color: $white;
+        font-size: $font-size-base;
+        font-weight: $font-weight-semibold;
+        margin: 0 0 $spacing-xs 0;
+        font-family: $font-family-headings;
+
+        @media (max-width: $tablet) {
+            font-size: $font-size-sm;
+        }
+    }
+
+    p {
+        color: rgba($white, 0.7);
+        font-size: $font-size-xs;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+// Toggle switch - Style harmonisé
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    flex-shrink: 0;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .toggle-slider {
+            background-color: rgba($white, 0.3);
+
+            &:before {
+                transform: translateX(22px);
+                background-color: $white;
+            }
+        }
+
+        &:disabled + .toggle-slider {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($white, 0.1);
+    transition: $transition-base;
+    border-radius: 13px;
+    border: 1px solid rgba($white, 0.2);
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: rgba($white, 0.7);
+        transition: $transition-base;
+        border-radius: 50%;
+    }
+}
+
+.toggle.disabled .toggle-slider {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+// Actions du panel de paramètres
+.cookie-settings-actions {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: flex-end;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+}
+
+.btn-cookie-save {
+    background: rgba($white, 0.95);
+    color: $primary-color;
+    border: 2px solid rgba($white, 0.95);
+    font-weight: $font-weight-semibold;
+
+    &:hover {
+        background: $white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($white, 0.3);
+    }
+}
+
+.btn-cookie-cancel {
+    background: transparent;
+    color: rgba($white, 0.8);
+    border: 2px solid rgba($white, 0.2);
+
+    &:hover {
+        background: rgba($white, 0.1);
+        border-color: rgba($white, 0.3);
+        color: $white;
+        transform: translateY(-2px);
+    }
+}
+
+// Lien dans le footer-bottom pour modifier les préférences
+.footer-bottom .cookie-preferences-link {
+    color: rgba($white, 0.7);
+    font-size: $font-size-sm;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+// Responsive - Stack vertical sur mobile
+@media (max-width: $mobile) {
+    .footer-cookies {
+        padding: $spacing-sm;
+        margin-top: $spacing-md;
+        margin-bottom: $spacing-sm;
+    }
+
+    .cookie-info {
+        h4 {
+            font-size: $font-size-base;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+    .cookie-actions {
+        button {
+            padding: $spacing-xs $spacing-sm;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+// Mode sombre - Harmonisé avec le footer
+body.dark-mode {
+    .footer-cookies {
+        background: rgba($dark-surface, 0.5);
+        border-color: rgba($accent-color-1, 0.2);
+    }
+
+    .cookie-info {
+        h4 {
+            color: $dark-text;
+        }
+
+        p {
+            color: $dark-text-muted;
+        }
+
+        .cookie-policy-link {
+            color: $accent-cyan;
+
+            &:hover {
+                color: lighten($accent-cyan, 15%);
+            }
+        }
+    }
+
+    .btn-cookie-accept {
+        background: $accent-color-1;
+        color: $white;
+        border-color: $accent-color-1;
+
+        &:hover {
+            background: lighten($accent-color-1, 10%);
+        }
+    }
+
+    .btn-cookie-customize {
+        background: rgba($dark-surface, 0.5);
+        color: $dark-text;
+        border-color: rgba($accent-color-1, 0.3);
+
+        &:hover {
+            background: $dark-surface;
+            border-color: $accent-color-1;
+        }
+    }
+
+    .btn-cookie-reject {
+        background: transparent;
+        color: $dark-text-muted;
+        border-color: rgba($dark-text-muted, 0.3);
+
+        &:hover {
+            background: rgba($dark-surface, 0.3);
+            color: $dark-text;
+        }
+    }
+
+    .cookie-settings-wrapper {
+        border-top-color: rgba($accent-color-1, 0.2);
+
+        h4 {
+            color: $dark-text;
+        }
+    }
+
+    .cookie-category {
+        background: rgba($dark-surface, 0.3);
+        border-color: rgba($accent-color-1, 0.2);
+
+        h5 {
+            color: $dark-text;
+        }
+
+        p {
+            color: $dark-text-muted;
+        }
+    }
+
+    .toggle-slider {
+        background-color: rgba($dark-text-muted, 0.2);
+        border-color: rgba($dark-text-muted, 0.3);
+
+        &:before {
+            background-color: $dark-text-muted;
+        }
+    }
+
+    .toggle input:checked + .toggle-slider {
+        background-color: rgba($accent-color-1, 0.3);
+
+        &:before {
+            background-color: $accent-color-1;
+        }
+    }
+
+    .btn-cookie-save {
+        background: $accent-color-1;
+        color: $white;
+        border-color: $accent-color-1;
+
+        &:hover {
+            background: lighten($accent-color-1, 10%);
+        }
+    }
+
+    .btn-cookie-cancel {
+        background: transparent;
+        color: $dark-text-muted;
+        border-color: rgba($dark-text-muted, 0.3);
+
+        &:hover {
+            background: rgba($dark-surface, 0.3);
+            color: $dark-text;
+        }
+    }
+}
+
+// Animation d'accessibilité
+@media (prefers-reduced-motion: reduce) {
+    .footer-cookies,
+    .cookie-settings-wrapper,
+    .toggle-slider,
+    .toggle-slider:before,
+    .footer-cookies button,
+    .cookie-settings-wrapper button {
+        transition: none;
+    }
+}
