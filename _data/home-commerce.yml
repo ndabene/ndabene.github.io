@@ -6,7 +6,7 @@ hero:
   cta:
     primary:
       text: "Voir mes modules"
-      url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
     secondary:
       text: "Mes formations"
       url: "/boutique/"
