@@ -657,6 +657,14 @@ $linkedin-color: #0077B5;
   position: relative;
   overflow: hidden;
 
+  @media (max-width: 768px) {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   // Effet de brillance subtil et élégant (une seule fois au hover)
   &::before {
     content: '';
@@ -706,6 +714,11 @@ $linkedin-color: #0077B5;
   font-weight: 700;
   color: $text-dark;
   margin: 0 0 0.75rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem 0;
+  }
 }
 
 .competence-description {
@@ -713,6 +726,11 @@ $linkedin-color: #0077B5;
   line-height: 1.6;
   color: $text-gray;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
 }
 
 //================================================
@@ -743,6 +761,11 @@ $linkedin-color: #0077B5;
   border: 1px solid $border-color;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   .subsection-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -751,6 +774,11 @@ $linkedin-color: #0077B5;
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
 
     &::after {
       content: '';
@@ -775,6 +803,10 @@ $linkedin-color: #0077B5;
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 }
 
 .competence-card-compact {
@@ -782,6 +814,10 @@ $linkedin-color: #0077B5;
   padding: 1.5rem;
   border-radius: 12px;
   transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 
   &:hover {
     background: rgba($primary-color, 0.02);
