@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "IA et Développement : Maîtriser les Pièges Invisibles"
-date: 2025-12-10
+date: 2025-12-09
 author: Nicolas Dabène
 categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
 tags: [IA, productivité, code quality, architecture, ChatGPT, Copilot, prompt engineering]
