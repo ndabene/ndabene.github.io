@@ -13,7 +13,9 @@ layout: null
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% assign all_posts = site.documents | where: "collection", "posts" | sort: "date" %}
     {% for post in all_posts %}
-      {% if post.date >= site.time %}
+      {% assign post_date = post.date | date: "%Y-%m-%d" %}
+      {% assign today = site.time | date: "%Y-%m-%d" %}
+      {% if post_date >= today %}
         <item>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape }}</description>
