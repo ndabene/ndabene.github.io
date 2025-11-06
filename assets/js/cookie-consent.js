@@ -57,21 +57,20 @@ class CookieConsent {
     }
 
     showBanner() {
-        // Créer le banner s'il n'existe pas
-        if (!document.getElementById('cookie-banner')) {
-            this.createBanner();
-        }
-        
-        const banner = document.getElementById('cookie-banner');
+        // Utiliser le banner intégré dans le footer
+        const banner = document.getElementById('cookie-consent');
         if (banner) {
             banner.style.display = 'block';
             // Animation d'entrée
             setTimeout(() => banner.classList.add('show'), 100);
+
+            // Scroll vers le footer pour rendre le banner visible
+            banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     }
 
     hideBanner() {
-        const banner = document.getElementById('cookie-banner');
+        const banner = document.getElementById('cookie-consent');
         if (banner) {
             banner.classList.remove('show');
             setTimeout(() => {
@@ -80,127 +79,42 @@ class CookieConsent {
         }
     }
 
-    createBanner() {
-        const banner = document.createElement('div');
-        banner.id = 'cookie-banner';
-        banner.className = 'cookie-banner';
-        banner.innerHTML = `
-            <div class="cookie-banner-content">
-                <div class="cookie-banner-info">
-                    <h3>🍪 Respect de votre vie privée</h3>
-                    <p>Ce site utilise des cookies pour améliorer votre expérience et analyser l'audience. 
-                    Vous pouvez accepter tous les cookies ou personnaliser vos préférences.</p>
-                </div>
-                <div class="cookie-banner-actions">
-                    <button id="cookie-settings" class="btn-secondary">Personnaliser</button>
-                    <button id="cookie-refuse" class="btn-outline">Refuser</button>
-                    <button id="cookie-accept" class="btn-primary">Accepter tout</button>
-                </div>
-            </div>
-            <div id="cookie-settings-panel" class="cookie-settings-panel" style="display: none;">
-                <h4>Personnaliser les cookies</h4>
-                <div class="cookie-category">
-                    <div class="cookie-category-header">
-                        <h5>Cookies essentiels</h5>
-                        <span class="required">Obligatoire</span>
-                    </div>
-                    <p>Nécessaires au fonctionnement du site (navigation, sécurité).</p>
-                </div>
-                <div class="cookie-category">
-                    <div class="cookie-category-header">
-                        <h5>Cookies d'analyse</h5>
-                        <label class="toggle">
-                            <input type="checkbox" id="analytics-consent">
-                            <span class="toggle-slider"></span>
-                        </label>
-                    </div>
-                    <p>Google Analytics pour comprendre l'utilisation du site. Par défaut, mesure anonyme sans cookie (Consent Mode). Cookies activés uniquement si vous acceptez.</p>
-                </div>
-                <div class="cookie-category">
-                    <div class="cookie-category-header">
-                        <h5>Cookies publicitaires</h5>
-                        <label class="toggle">
-                            <input type="checkbox" id="ad-consent">
-                            <span class="toggle-slider"></span>
-                        </label>
-                    </div>
-                    <p>Google AdSense pour afficher des publicités personnalisées et mesurer leur efficacité. Les données sont utilisées pour cibler les annonces selon vos intérêts.</p>
-                    <div class="sub-consent" style="margin-top: 10px; margin-left: 20px;">
-                        <label class="toggle" style="font-size: 0.9em;">
-                            <input type="checkbox" id="ad-user-data-consent">
-                            <span class="toggle-slider"></span>
-                            Partage des données utilisateur
-                        </label>
-                        <p style="font-size: 0.85em; margin: 5px 0 0 0; color: #666;">Autorise le partage des données utilisateur avec des partenaires publicitaires.</p>
-                    </div>
-                    <div class="sub-consent" style="margin-top: 10px; margin-left: 20px;">
-                        <label class="toggle" style="font-size: 0.9em;">
-                            <input type="checkbox" id="ad-personalization-consent">
-                            <span class="toggle-slider"></span>
-                            Personnalisation des annonces
-                        </label>
-                        <p style="font-size: 0.85em; margin: 5px 0 0 0; color: #666;">Permet la personnalisation des annonces basée sur votre navigation.</p>
-                    </div>
-                </div>
-                <div class="cookie-settings-actions">
-                    <button id="cookie-save" class="btn-primary">Sauvegarder</button>
-                    <button id="cookie-cancel" class="btn-secondary">Annuler</button>
-                </div>
-            </div>
-            </div>
-            <div id="cookie-settings-panel" class="cookie-settings-panel" style="display: none;">
-                <h4>Personnaliser les cookies</h4>
-                <div class="cookie-category">
-                    <div class="cookie-category-header">
-                        <h5>Cookies essentiels</h5>
-                        <span class="required">Obligatoire</span>
-                    </div>
-                    <p>Nécessaires au fonctionnement du site (navigation, sécurité).</p>
-                </div>
-                    <div class="cookie-category">
-                        <div class="cookie-category-header">
-                            <h5>Cookies d'analyse</h5>
-                            <label class="toggle">
-                                <input type="checkbox" id="analytics-consent">
-                                <span class="toggle-slider"></span>
-                            </label>
-                        </div>
-                        <p>Google Analytics pour comprendre l'utilisation du site. Par défaut, mesure anonyme sans cookie (Consent Mode). Cookies activés uniquement si vous acceptez.</p>
-                    </div>
-                <div class="cookie-settings-actions">
-                    <button id="cookie-save" class="btn-primary">Sauvegarder</button>
-                    <button id="cookie-cancel" class="btn-secondary">Annuler</button>
-                </div>
-            </div>
-        `;
-        
-        document.body.appendChild(banner);
-    }
-
     bindEvents() {
-        // Délégation d'événements pour gérer les éléments créés dynamiquement
+        // Exposer les fonctions globalement pour les onclick dans le HTML
+        window.acceptAllCookies = () => this.acceptAll();
+        window.rejectAllCookies = () => this.refuseAll();
+        window.toggleCookieSettings = () => this.toggleSettings();
+        window.saveCustomCookies = () => this.savePreferences();
+        window.showCookieConsent = () => {
+            this.showBanner();
+            this.showSettings();
+        };
+
+        // Délégation d'événements pour les éléments créés dynamiquement
         document.addEventListener('click', (e) => {
-            if (e.target.id === 'cookie-accept') {
+            // Classes des boutons dans le nouveau HTML du footer
+            if (e.target.classList.contains('btn-cookie-accept')) {
                 this.acceptAll();
-            } else if (e.target.id === 'cookie-refuse') {
+            } else if (e.target.classList.contains('btn-cookie-reject')) {
                 this.refuseAll();
-            } else if (e.target.id === 'cookie-settings') {
+            } else if (e.target.classList.contains('btn-cookie-customize')) {
                 this.showSettings();
-            } else if (e.target.id === 'cookie-save') {
+            } else if (e.target.classList.contains('btn-cookie-save')) {
                 this.savePreferences();
-            } else if (e.target.id === 'cookie-cancel') {
+            } else if (e.target.classList.contains('btn-cookie-cancel')) {
                 this.hideSettings();
             }
         });
+    }
 
-        // Gestion du lien "Modifier les préférences" dans le footer
-        const cookieLink = document.querySelector('a[href="#cookie-preferences"]');
-        if (cookieLink) {
-            cookieLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.showBanner();
+    toggleSettings() {
+        const panel = document.getElementById('cookie-settings');
+        if (panel) {
+            if (panel.style.display === 'none' || !panel.style.display) {
                 this.showSettings();
-            });
+            } else {
+                this.hideSettings();
+            }
         }
     }
 
@@ -233,54 +147,46 @@ class CookieConsent {
     }
 
     showSettings() {
-        const panel = document.getElementById('cookie-settings-panel');
+        const panel = document.getElementById('cookie-settings');
         if (panel) {
             panel.style.display = 'block';
-            
+            panel.classList.add('show');
+
             // Préremplir selon le consentement actuel
             if (this.consentData && this.consentData.preferences) {
-                const analyticsCheckbox = document.getElementById('analytics-consent');
+                const analyticsCheckbox = document.getElementById('analytics-cookies');
                 if (analyticsCheckbox) {
                     analyticsCheckbox.checked = this.consentData.preferences.analytics || false;
                 }
 
-                const adCheckbox = document.getElementById('ad-consent');
-                if (adCheckbox) {
-                    adCheckbox.checked = this.consentData.preferences.ad || false;
-                }
-
-                const adUserDataCheckbox = document.getElementById('ad-user-data-consent');
-                if (adUserDataCheckbox) {
-                    adUserDataCheckbox.checked = this.consentData.preferences.adUserData || false;
-                }
-
-                const adPersonalizationCheckbox = document.getElementById('ad-personalization-consent');
-                if (adPersonalizationCheckbox) {
-                    adPersonalizationCheckbox.checked = this.consentData.preferences.adPersonalization || false;
+                const marketingCheckbox = document.getElementById('marketing-cookies');
+                if (marketingCheckbox) {
+                    marketingCheckbox.checked = this.consentData.preferences.ad || false;
                 }
             }
         }
     }
 
     hideSettings() {
-        const panel = document.getElementById('cookie-settings-panel');
+        const panel = document.getElementById('cookie-settings');
         if (panel) {
-            panel.style.display = 'none';
+            panel.classList.remove('show');
+            setTimeout(() => {
+                panel.style.display = 'none';
+            }, 300);
         }
     }
 
     savePreferences() {
-        const analyticsCheckbox = document.getElementById('analytics-consent');
-        const adCheckbox = document.getElementById('ad-consent');
-        const adUserDataCheckbox = document.getElementById('ad-user-data-consent');
-        const adPersonalizationCheckbox = document.getElementById('ad-personalization-consent');
+        const analyticsCheckbox = document.getElementById('analytics-cookies');
+        const marketingCheckbox = document.getElementById('marketing-cookies');
 
         const preferences = {
             essential: true,
             analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
-            ad: adCheckbox ? adCheckbox.checked : false,
-            adUserData: adUserDataCheckbox ? adUserDataCheckbox.checked : false,
-            adPersonalization: adPersonalizationCheckbox ? adPersonalizationCheckbox.checked : false
+            ad: marketingCheckbox ? marketingCheckbox.checked : false,
+            adUserData: marketingCheckbox ? marketingCheckbox.checked : false,
+            adPersonalization: marketingCheckbox ? marketingCheckbox.checked : false
         };
 
         this.setConsentData(preferences);
@@ -296,6 +202,7 @@ class CookieConsent {
             this.disableGoogleAnalytics();
         }
 
+        this.hideSettings();
         this.hideBanner();
         this.showNotification('Préférences cookies mises à jour.');
     }
