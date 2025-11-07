@@ -319,16 +319,6 @@ llm_topics: [ebooks, formations, ia, prestashop]
             {{ cat_meta.description }}
         </div>
         {% endif %}
-                <script type="application/ld+json">
-                {
-                  "@context": "https://schema.org",
-                  "@type": "AggregateOffer",
-                  "priceCurrency": "EUR",
-                  "lowPrice": "{{ group.items | map: 'prix' | join: '|' | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | split: '|' | sort | first | strip }}",
-                  "highPrice": "{{ group.items | map: 'prix' | join: '|' | replace: '€ / HT','' | replace: '/ HT','' | replace: '€ HT','' | replace: '€','' | replace: 'HT','' | split: '|' | sort | last | strip }}",
-                  "offerCount": "{{ group.items.size }}"
-                }
-                </script>
                 {% comment %}Recommended for you: push bestsellers (bestseller:true) and same-univers first{% endcomment %}
                 {% assign same_univers = group.items | where: 'univers', univers_list.first %}
                 {% assign bestsellers = group.items | where: 'bestseller', true %}
