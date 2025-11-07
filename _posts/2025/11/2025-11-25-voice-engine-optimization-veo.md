@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories: [Intelligence Artificielle, SEO, Tutoriel]
 tags: [VEO, voice search, voice commerce, AI, assistant vocal, recherche vocale, Google Assistant, Alexa, Siri, optimisation vocale]
 excerpt: "De la frappe au micro : découvrez comment l'optimisation vocale (VEO) redéfinit la visibilité en ligne et pourquoi ignorer cette révolution silencieuse revient à perdre une part croissante de votre audience."
-image: /assets/images/blog/2025-11-25-voice-engine-optimization-veo.jpg
+image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.jpg
 featured: false
 difficulty: "Intermédiaire"
 technologies: ["Voice Search", "AI", "Schema Markup", "SEO", "Voice Commerce"]
