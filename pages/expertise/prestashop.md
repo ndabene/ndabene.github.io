@@ -75,7 +75,7 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
         </div>
         <div class="credential-item">
           <h3>Top Marketplace France</h3>
-          <p>Position de leader chez BusinessTech, plus ancienne entreprise éditrice de modules PrestaShop</p>
+          <p>Position de leader chez <a href="https://www.businesstech.fr/landing/?utm_source=nicolas-dabene-site&utm_medium=expertise-page&utm_campaign=prestashop-expertise" target="_blank">BusinessTech</a>, plus ancienne entreprise éditrice de modules PrestaShop</p>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ Développeur PrestaShop passionné et **reconnu officiellement avec 5 PrestaShop
 ## 🎯 Mes Expertises
 
 ### 🛒 E-commerce & PrestaShop
-Expert PrestaShop reconnu au sein de **BusinessTech**, l'une des plus anciennes entreprises éditrices de modules PrestaShop en France. Spécialiste des architectures e-commerce complexes, multi-boutiques et intégrations tierces.
+Expert PrestaShop reconnu au sein de **[BusinessTech](https://www.businesstech.fr/landing/?utm_source=github&utm_medium=readme&utm_campaign=portfolio){:target="_blank"}**, l'une des plus anciennes entreprises éditrices de modules PrestaShop en France. Spécialiste des architectures e-commerce complexes, multi-boutiques et intégrations tierces.
 
 **Mes modules phares :**
 - **GEO Suite** - Optimisation SEO et GEO (Generative Engine Optimization)
