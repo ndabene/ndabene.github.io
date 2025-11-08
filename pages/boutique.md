@@ -299,9 +299,9 @@ llm_context: |
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": "{{ site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != false' | size }}",
+    "numberOfItems": "{{ site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != "inactive"' | size }}",
     "itemListElement": [
-      {% assign active_products = site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != false' %}
+      {% assign active_products = site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != "inactive"' %}
       {% for product in active_products %}
       {
         "@type": "ListItem",
