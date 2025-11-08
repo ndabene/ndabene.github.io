@@ -25,7 +25,7 @@ Dans ma pratique de développement web depuis 15 ans, j'ai observé chaque trans
 
 ## Décomposer le Défi de la Mesure du GEO
 
-Le GEO est la pratique d'optimiser le contenu numérique et la présence de marque pour être compris, synthétisés et cités comme une source faisant autorité par les modèles d'IA générative comme les AI Overviews de Google, ChatGPT, Gemini et Perplexity.
+Le [GEO (Generative Engine Optimization)](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=guide-mesurer-geo) est la pratique d'optimiser le contenu numérique et la présence de marque pour être compris, synthétisés et cités comme une source faisant autorité par les modèles d'IA générative comme les AI Overviews de Google, ChatGPT, Gemini et Perplexity.
 
 Contrairement au SEO, qui vise à obtenir un rang élevé dans une liste de liens hypertextes, l'objectif principal du GEO est de devenir une partie intégrante de la réponse unique et synthétisée générée par l'IA. Cette distinction est le fondement du défi de la mesure. Le succès ne réside plus dans la visibilité au sein d'une liste, mais dans l'influence au sein d'un récit.
 

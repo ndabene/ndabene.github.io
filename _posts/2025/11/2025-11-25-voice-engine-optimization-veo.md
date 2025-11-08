@@ -164,15 +164,13 @@ Vous remarquerez que cette approche du Schema Markup **rejoint exactement la phi
 
 **SEO classique** parle aux moteurs de recherche textuels. **GEO et VEO** parlent aux IA génératives et aux assistants vocaux. Elles exigent la même rigueur structurelle, les mêmes données fiables, mais avec un contexte compréhensible par la machine.
 
-En PrestaShop e-commerce, cette structuration est devenue critique. C'est pourquoi nous proposons un **module GEO spécialisé** : [**GEO PrestaShop Module**](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html) qui automatise précisément cette tâche. Le module :
+En PrestaShop e-commerce, cette structuration est devenue critique. C'est pourquoi nous proposons un **module [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=veo-voice-optimization) spécialisé** qui automatise précisément cette tâche. Le module :
 
 ✅ Génère automatiquement FAQPage Schema pour vos produits
 ✅ Crée LocalBusiness Schema optimisé pour voice commerce
 ✅ Valide votre E-E-A-T auprès des IA génératives
 ✅ Optimise vos descriptions produits pour VEO + GEO
 ✅ Maintient la cohérence Schema à l'échelle du catalogue
-
-Pour les commerçants PrestaShop cherchant à dominer voice commerce et réponses IA, c'est le lien manquant. Plus d'infos sur [la landing GEO PrestaShop](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html).
 
 **Pour ceux qui codent en PHP :** La validation Schema se fait simplement via [Google Structured Data Testing Tool](https://schema.org/docs/gs.html) ou [JSON-LD.org](https://json-ld.org/). Mais l'automatisation reste le gain majeur.
 
