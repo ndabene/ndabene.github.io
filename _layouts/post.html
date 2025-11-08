@@ -160,11 +160,7 @@ layout: default
 
                     <!-- Navigation série en haut de l'article -->
                     {% include series-navigation.html %}
-                    
 
-                    <!-- Schemas SEO/GEO/VEO -->
-                    {% include faq-schema.html %}
-                    {% include howto-schema.html %}
 
                     <article class="post-content">
                         <!-- Bloc Perplexity au-dessus de la table des matières -->
@@ -198,6 +194,10 @@ layout: default
                         {% endif %}
 
                         {{ content }}
+
+                        <!-- Schemas SEO/GEO/VEO - FAQs en fin d'article -->
+                        {% include faq-schema.html %}
+                        {% include howto-schema.html %}
 
                         <!-- Google AdSense -->
                         {% include google-adsense.html %}
