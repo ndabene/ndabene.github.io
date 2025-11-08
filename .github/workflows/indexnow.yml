@@ -5,22 +5,75 @@ on:
     branches: [ main ]
   schedule:
     - cron: '0 7 * * *'  # tous les jours à 7h
+  workflow_dispatch:  # Permet de déclencher manuellement
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      - name: Fetch and Parse Sitemap
+        id: sitemap
+        run: |
+          echo "📥 Téléchargement du sitemap..."
+
+          # Télécharger le sitemap
+          SITEMAP_CONTENT=$(curl -s https://nicolas-dabene.fr/sitemap.xml)
+
+          if [ -z "$SITEMAP_CONTENT" ]; then
+            echo "❌ Erreur : Le sitemap est vide ou inaccessible"
+            exit 1
+          fi
+
+          echo "✅ Sitemap téléchargé avec succès"
+
+          # Extraire toutes les URLs du sitemap
+          URLS=$(echo "$SITEMAP_CONTENT" | grep -o '<loc>[^<]*</loc>' | sed 's/<loc>//;s/<\/loc>//')
+
+          # Compter les URLs
+          URL_COUNT=$(echo "$URLS" | wc -l)
+          echo "📊 Nombre d'URLs trouvées dans le sitemap : $URL_COUNT"
+
+          # Convertir en JSON array (limite à 10000 URLs selon spec IndexNow)
+          URL_LIST=$(echo "$URLS" | head -10000 | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+          # Sauvegarder dans une variable d'environnement
+          echo "URL_LIST=$URL_LIST" >> $GITHUB_OUTPUT
+          echo "URL_COUNT=$URL_COUNT" >> $GITHUB_OUTPUT
+
+          # Afficher les premières URLs pour vérification
+          echo ""
+          echo "🔍 Premières URLs qui seront notifiées :"
+          echo "$URLS" | head -5
+
+          # Afficher les dernières URLs pour vérification
+          echo ""
+          echo "🔍 Dernières URLs qui seront notifiées :"
+          echo "$URLS" | tail -5
+
       - name: Send URLs to IndexNow
         run: |
-          curl -X POST "https://api.indexnow.org/indexnow" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "host": "nicolas-dabene.fr",
-            "key": "64e86f4e43274b82908443e1965dc198",
-            "urlList": [
-              "https://nicolas-dabene.fr/",
-              "https://nicolas-dabene.fr/feed.xml",
-              "https://nicolas-dabene.fr/past_post.xml",
-              "https://nicolas-dabene.fr/sitemap.xml"
-            ]
-          }'
+          echo "🚀 Envoi de ${{ steps.sitemap.outputs.URL_COUNT }} URLs à IndexNow..."
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "nicolas-dabene.fr",
+              "key": "64e86f4e43274b82908443e1965dc198",
+              "urlList": ${{ steps.sitemap.outputs.URL_LIST }}
+            }')
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "📡 Code de réponse HTTP : $HTTP_CODE"
+
+          if [ "$HTTP_CODE" -eq 200 ]; then
+            echo "✅ Toutes les URLs ont été notifiées avec succès à IndexNow !"
+            echo "📊 URLs notifiées : ${{ steps.sitemap.outputs.URL_COUNT }}"
+          elif [ "$HTTP_CODE" -eq 202 ]; then
+            echo "✅ URLs acceptées par IndexNow (202 Accepted)"
+            echo "📊 URLs notifiées : ${{ steps.sitemap.outputs.URL_COUNT }}"
+          else
+            echo "⚠️ Code de réponse inattendu : $HTTP_CODE"
+            echo "Body: $BODY"
+          fi
