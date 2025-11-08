@@ -299,10 +299,12 @@ llm_context: |
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": "{{ site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != "inactive"' | size }}",
+    "numberOfItems": "{% assign active_count = 0 %}{% for p in site.data.produits %}{% assign is_inactive = false %}{% if p.actif == false or p.active == false or p.enabled == false or p.status == 'inactive' %}{% assign is_inactive = true %}{% endif %}{% if is_inactive == false %}{% assign active_count = active_count | plus: 1 %}{% endif %}{% endfor %}{{ active_count }}",
     "itemListElement": [
-      {% assign active_products = site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false' | where_exp: 'p', 'p.status != "inactive"' %}
-      {% for product in active_products %}
+      {% for product in site.data.produits %}
+      {% assign is_inactive = false %}
+      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign is_inactive = true %}{% endif %}
+      {% if is_inactive == false %}
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},
@@ -311,6 +313,7 @@ llm_context: |
         "description": "{{ product.description | truncate: 150 | escape }}",
         "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}"
       }{% unless forloop.last %},{% endunless %}
+      {% endif %}
       {% endfor %}
     ]
   },
