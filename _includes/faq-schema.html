@@ -35,7 +35,7 @@
 </script>
 
 <!-- Section FAQ visible pour les utilisateurs -->
-<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+<section class="faq-section">
   <h2 class="faq-title">
     <i class="fas fa-question-circle"></i>
     Questions Fréquentes
@@ -43,13 +43,13 @@
 
   <div class="faq-container">
     {% for item in page.faq %}
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <h3 class="faq-question" itemprop="name">
+    <div class="faq-item">
+      <h3 class="faq-question">
         <i class="fas fa-chevron-right"></i>
         {{ item.question }}
       </h3>
-      <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-        <div itemprop="text">
+      <div class="faq-answer">
+        <div>
           {{ item.answer | markdownify }}
         </div>
       </div>
