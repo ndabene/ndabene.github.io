@@ -21,7 +21,7 @@ Imaginez le scénario : un consommateur cherche un cadeau pour le Black Friday. 
 
 Cette scène, anecdotique il y a un an, devient la nouvelle norme. **67% des 18-34 ans consultent désormais une IA avant un achat important**. Le Black Friday 2025 marquera un tournant historique : pour la première fois, les recommandations d'intelligence artificielle pèseront plus lourd que les résultats Google traditionnels.
 
-C'est exactement pour cette révolution que GEO Suite a été conçu. Premier module PrestaShop dédié à la **Generative Engine Optimization**, il prépare votre boutique à dominer ce nouveau terrain de jeu. Voici pourquoi c'est crucial pour votre Black Friday.
+C'est exactement pour cette révolution que [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=black-friday-geo) a été conçu. Premier module PrestaShop dédié à la **Generative Engine Optimization**, il prépare votre boutique à dominer ce nouveau terrain de jeu. Voici pourquoi c'est crucial pour votre Black Friday.
 
 ## La fin d'une époque : quand Google ne suffit plus
 
