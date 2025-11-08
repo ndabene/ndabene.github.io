@@ -1,0 +1,142 @@
+name: Verify Sitemap
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # Permet de déclencher manuellement
+  schedule:
+    - cron: '0 8 * * *'  # tous les jours à 8h (après le build)
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download and Analyze Sitemap
+        run: |
+          echo "📥 Téléchargement du sitemap..."
+
+          # Attendre que le site soit déployé (si push récent)
+          sleep 30
+
+          # Télécharger le sitemap
+          SITEMAP_URL="https://nicolas-dabene.fr/sitemap.xml"
+          SITEMAP_CONTENT=$(curl -s "$SITEMAP_URL")
+
+          if [ -z "$SITEMAP_CONTENT" ]; then
+            echo "❌ Erreur : Le sitemap est vide ou inaccessible"
+            exit 1
+          fi
+
+          echo "✅ Sitemap téléchargé avec succès"
+          echo ""
+
+          # Extraire toutes les URLs
+          URLS=$(echo "$SITEMAP_CONTENT" | grep -o '<loc>[^<]*</loc>' | sed 's/<loc>//;s/<\/loc>//')
+
+          # Statistiques globales
+          TOTAL=$(echo "$URLS" | wc -l)
+          echo "📊 STATISTIQUES DU SITEMAP"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "Total d'URLs : $TOTAL"
+          echo ""
+
+          # Compter les articles de blog
+          BLOG_COUNT=$(echo "$URLS" | grep -c "/articles/" || true)
+          echo "📝 Articles de blog (/articles/) : $BLOG_COUNT"
+
+          # Compter les pages produits
+          PRODUCT_COUNT=$(echo "$URLS" | grep -c "/boutique/" || true)
+          echo "🛒 Pages produits (/boutique/) : $PRODUCT_COUNT"
+
+          # Compter les case studies
+          CASE_STUDY_COUNT=$(echo "$URLS" | grep -c "/case-studies/" || true)
+          echo "📂 Case studies (/case-studies/) : $CASE_STUDY_COUNT"
+
+          # Compter les pages principales
+          MAIN_PAGES=$(echo "$URLS" | grep -v "/articles/" | grep -v "/boutique/" | grep -v "/case-studies/" | wc -l)
+          echo "📄 Pages principales : $MAIN_PAGES"
+
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          # Vérifications de cohérence
+          echo ""
+          echo "🔍 VÉRIFICATIONS"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          # Vérifier qu'il y a des articles
+          if [ "$BLOG_COUNT" -lt 50 ]; then
+            echo "⚠️  AVERTISSEMENT : Seulement $BLOG_COUNT articles trouvés (attendu ~54)"
+          else
+            echo "✅ Articles de blog : OK ($BLOG_COUNT)"
+          fi
+
+          # Vérifier qu'il y a des produits
+          if [ "$PRODUCT_COUNT" -eq 0 ]; then
+            echo "❌ ERREUR : Aucune page produit trouvée (attendu ~239)"
+          elif [ "$PRODUCT_COUNT" -lt 200 ]; then
+            echo "⚠️  AVERTISSEMENT : Seulement $PRODUCT_COUNT pages produits trouvées (attendu ~239)"
+          else
+            echo "✅ Pages produits : OK ($PRODUCT_COUNT)"
+          fi
+
+          # Vérifier qu'il y a des case studies
+          if [ "$CASE_STUDY_COUNT" -lt 3 ]; then
+            echo "⚠️  AVERTISSEMENT : Seulement $CASE_STUDY_COUNT case studies trouvées (attendu 3)"
+          else
+            echo "✅ Case studies : OK ($CASE_STUDY_COUNT)"
+          fi
+
+          # Vérifier les URLs importantes
+          echo ""
+          echo "🔍 URLs CRITIQUES"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          for url in "https://nicolas-dabene.fr/" \
+                     "https://nicolas-dabene.fr/about/" \
+                     "https://nicolas-dabene.fr/boutique/" \
+                     "https://nicolas-dabene.fr/youtube/"; do
+            if echo "$URLS" | grep -q "^$url$"; then
+              echo "✅ $url"
+            else
+              echo "❌ MANQUANT : $url"
+            fi
+          done
+
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          # Afficher des exemples d'URLs
+          echo ""
+          echo "📋 EXEMPLES D'URLS"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          echo ""
+          echo "Exemples d'articles :"
+          echo "$URLS" | grep "/articles/" | head -3
+
+          if [ "$PRODUCT_COUNT" -gt 0 ]; then
+            echo ""
+            echo "Exemples de produits :"
+            echo "$URLS" | grep "/boutique/" | head -3
+          fi
+
+          if [ "$CASE_STUDY_COUNT" -gt 0 ]; then
+            echo ""
+            echo "Exemples de case studies :"
+            echo "$URLS" | grep "/case-studies/" | head -3
+          fi
+
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          # Vérifier les métadonnées du sitemap
+          echo ""
+          echo "📅 DERNIÈRES MODIFICATIONS"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+          LASTMOD=$(echo "$SITEMAP_CONTENT" | grep -o '<lastmod>[^<]*</lastmod>' | sed 's/<lastmod>//;s/<\/lastmod>//' | sort -r | head -1)
+          echo "Dernière modification dans le sitemap : $LASTMOD"
+
+          echo ""
+          echo "✅ Vérification du sitemap terminée !"
