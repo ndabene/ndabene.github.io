@@ -1,0 +1,186 @@
+{% comment %}
+  Composant FAQ avec FAQPage Schema pour optimisation GEO/VEO
+
+  Usage dans un article:
+  1. Ajouter dans le front matter:
+     faq:
+       - question: "Qu'est-ce que le GEO ?"
+         answer: "Le GEO (Generative Engine Optimization) est..."
+       - question: "Pourquoi le VEO est-il important ?"
+         answer: "Le VEO permet d'optimiser..."
+
+  2. Inclure ce composant dans le layout ou l'article:
+     {% include faq-schema.html %}
+{% endcomment %}
+
+{% if page.faq and page.faq.size > 0 %}
+<!-- FAQPage Schema pour optimisation VEO/GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer | strip_html | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Section FAQ visible pour les utilisateurs -->
+<section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+  <h2 class="faq-title">
+    <i class="fas fa-question-circle"></i>
+    Questions Fréquentes
+  </h2>
+
+  <div class="faq-container">
+    {% for item in page.faq %}
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 class="faq-question" itemprop="name">
+        <i class="fas fa-chevron-right"></i>
+        {{ item.question }}
+      </h3>
+      <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <div itemprop="text">
+          {{ item.answer | markdownify }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.faq-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border-left: 4px solid #007bff;
+}
+
+.faq-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.faq-title i {
+  color: #007bff;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.faq-question i {
+  color: #007bff;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover .faq-question i {
+  transform: translateX(4px);
+}
+
+.faq-answer {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.faq-answer p {
+  margin: 0.5rem 0;
+}
+
+.faq-answer ul, .faq-answer ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.faq-answer strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.faq-answer code {
+  background: #f1f3f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  color: #d63384;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .faq-title {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Rendre les FAQ items cliquables pour collapse/expand (optionnel)
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    // Ajouter un indicateur de collapse (optionnel)
+    // Cette fonctionnalité peut être activée si vous voulez des FAQ pliables
+  });
+});
+</script>
+{% endif %}

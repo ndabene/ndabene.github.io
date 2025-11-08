@@ -108,7 +108,56 @@
     "@type": "Blog",
     "name": "{{ site.title }}",
     "url": "{{ site.url }}/blog/"
-  }
+  }{% if page.citations or page.sources %},{% endif %}
+  {% if page.citations %}
+  "citation": [
+    {% for citation in page.citations %}
+    {
+      "@type": "CreativeWork",
+      "name": "{{ citation.name | escape }}",
+      "url": "{{ citation.url }}",
+      {% if citation.author %}
+      "author": {
+        "@type": "{% if citation.author_type %}{{ citation.author_type }}{% else %}Person{% endif %}",
+        "name": "{{ citation.author }}"
+      },
+      {% endif %}
+      {% if citation.publisher %}
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ citation.publisher }}"
+      },
+      {% endif %}
+      {% if citation.date %}
+      "datePublished": "{{ citation.date }}"
+      {% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]{% if page.sources %},{% endif %}
+  {% endif %}
+  {% if page.sources %}
+  "isBasedOn": [
+    {% for source in page.sources %}
+    {
+      "@type": "{% if source.type %}{{ source.type }}{% else %}WebPage{% endif %}",
+      "name": "{{ source.name | escape }}",
+      "url": "{{ source.url }}",
+      {% if source.organization %}
+      "sourceOrganization": {
+        "@type": "Organization",
+        "name": "{{ source.organization }}",
+        {% if source.organization_url %}
+        "url": "{{ source.organization_url }}"
+        {% endif %}
+      },
+      {% endif %}
+      {% if source.date %}
+      "datePublished": "{{ source.date }}"
+      {% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+  {% endif %}
 }
 </script>
 {% endif %}
