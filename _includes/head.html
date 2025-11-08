@@ -3,7 +3,7 @@
 
 <!-- Métadonnées optimisées pour IA génératives (GEO) -->
 <title>{{ site.title }} | {{ page.title }}</title>
-<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="fr" href="{{ page.url | absolute_url }}">
 {% if page.alternates %}
@@ -17,7 +17,7 @@
 {% if page.llm_summary %}
 <meta name="llm:summary" content="{{ page.llm_summary | escape }}">
 {% else %}
-<meta name="llm:summary" content="{{ page.description | default: site.description }}">
+<meta name="llm:summary" content="{{ page.description | default: page.excerpt | strip_html | strip | default: site.description }}">
 {% endif %}
 {% if page.llm_topics %}
 <meta name="llm:topics" content="{{ page.llm_topics | join: ', ' | escape }}">
@@ -71,7 +71,7 @@
 <meta property="og:type" content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
-<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
 <meta property="og:image" content="{{ _og_image }}">
 <meta property="og:image:secure_url" content="{{ _og_image }}">
 <meta property="og:image:width" content="1200">
@@ -108,7 +108,7 @@
 <meta name="twitter:creator" content="@nicolasdabene">
 <meta name="twitter:url" content="{{ page.url | absolute_url }}">
 <meta name="twitter:title" content="{{ site.title }} | {{ page.title }}">
-<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
 <meta name="twitter:image" content="{{ _og_image }}">
 <meta name="twitter:image:alt" content="{{ page.title | escape }}">
 
@@ -350,7 +350,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "{{ page.title | escape }}",
-  "description": "{{ page.description | default: site.description | escape }}",
+  "description": "{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description | escape }}",
   "url": "{{ page.url | absolute_url }}",
   "inLanguage": "fr-FR",
   "isPartOf": {
