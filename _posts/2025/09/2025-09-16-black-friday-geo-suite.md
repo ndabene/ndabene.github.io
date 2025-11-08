@@ -21,7 +21,7 @@ Imaginez le scénario : un consommateur cherche un cadeau pour le Black Friday. 
 
 Cette scène, anecdotique il y a un an, devient la nouvelle norme. **67% des 18-34 ans consultent désormais une IA avant un achat important**. Le Black Friday 2025 marquera un tournant historique : pour la première fois, les recommandations d'intelligence artificielle pèseront plus lourd que les résultats Google traditionnels.
 
-C'est exactement pour cette révolution que [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=black-friday-geo) a été conçu. Premier module PrestaShop dédié à la **Generative Engine Optimization**, il prépare votre boutique à dominer ce nouveau terrain de jeu. Voici pourquoi c'est crucial pour votre Black Friday.
+C'est exactement pour cette révolution que [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=black-friday-geo){:target="_blank"} a été conçu. Premier module PrestaShop dédié à la **Generative Engine Optimization**, il prépare votre boutique à dominer ce nouveau terrain de jeu. Voici pourquoi c'est crucial pour votre Black Friday.
 
 ## La fin d'une époque : quand Google ne suffit plus
 
@@ -49,7 +49,7 @@ Plus frappant encore : **34% des achats "coup de cœur"** du Black Friday 2024 s
 
 Si le SEO (Search Engine Optimization) a dominé les 20 dernières années, la **GEO (Generative Engine Optimization)** définira les 20 prochaines. La différence ? Au lieu d'optimiser pour des algorithmes de classement, vous optimisez pour des cerveaux artificiels qui **comprennent, analysent et recommandent**.
 
-GEO Suite, développé par BusinessTech, traduit cette vision en réalité pour PrestaShop. Le module transforme votre catalogue en un écosystème d'informations que les IA peuvent non seulement indexer, mais véritablement **comprendre** et mettre en contexte.
+GEO Suite, développé par [BusinessTech](https://www.businesstech.fr/landing/?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=black-friday-geo){:target="_blank"}, traduit cette vision en réalité pour PrestaShop. Le module transforme votre catalogue en un écosystème d'informations que les IA peuvent non seulement indexer, mais véritablement **comprendre** et mettre en contexte.
 
 **Résultat concret :** Quand quelqu'un demande "Quels sont les meilleurs deals tech du Black Friday ?", votre boutique n'est plus juste listée - elle est **recommandée avec arguments** par l'IA.
 

@@ -160,11 +160,11 @@ Voici un exemple en JSON-LD :
 
 ### GEO et VEO : L'intersection critique
 
-Vous remarquerez que cette approche du Schema Markup **rejoint exactement la philosophie de la GEO (Generative Engine Optimization)** - celle que nous détaillons dans notre guide PrestaShop sur BusinessTech. La différence ?
+Vous remarquerez que cette approche du Schema Markup **rejoint exactement la philosophie de la GEO (Generative Engine Optimization)** - celle que nous détaillons dans notre guide PrestaShop sur [BusinessTech](https://www.businesstech.fr/landing/?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=veo-voice-optimization){:target="_blank"}. La différence ?
 
 **SEO classique** parle aux moteurs de recherche textuels. **GEO et VEO** parlent aux IA génératives et aux assistants vocaux. Elles exigent la même rigueur structurelle, les mêmes données fiables, mais avec un contexte compréhensible par la machine.
 
-En PrestaShop e-commerce, cette structuration est devenue critique. C'est pourquoi nous proposons un **module [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=veo-voice-optimization) spécialisé** qui automatise précisément cette tâche. Le module :
+En PrestaShop e-commerce, cette structuration est devenue critique. C'est pourquoi nous proposons un **module [GEO Suite](https://www.businesstech.fr/landing/geo-generative-engine-optimization-prestashop.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=veo-voice-optimization){:target="_blank"} spécialisé** qui automatise précisément cette tâche. Le module :
 
 ✅ Génère automatiquement FAQPage Schema pour vos produits
 ✅ Crée LocalBusiness Schema optimisé pour voice commerce

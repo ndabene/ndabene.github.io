@@ -256,7 +256,7 @@ Ici commence la vraie intelligence commerciale. Ces indicateurs vous diront si v
 
 Maintenant que vous comprenez l'importance stratégique de Google Shopping pour le Black Friday 2025, il est temps de passer à l'action. La configuration de Google Merchant Center peut sembler technique, mais avec les bons outils, elle devient accessible.
 
-Pour les marchands PrestaShop, **le module Google Merchant Center Pro de BusinessTech** représente la solution la plus complète du marché. Développé en partenariat officiel avec Google, ce module automatise l'intégralité de votre flux produits vers Google Shopping.
+Pour les marchands PrestaShop, **le module Google Merchant Center Pro de [BusinessTech](https://www.businesstech.fr/landing/?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=google-shopping-black-friday-2025){:target="_blank"}** représente la solution la plus complète du marché. Développé en partenariat officiel avec Google, ce module automatise l'intégralité de votre flux produits vers Google Shopping.
 
 Ce qui fait la différence :
 
@@ -268,7 +268,7 @@ Ce qui fait la différence :
 
 Le Black Friday 2025 arrive vite. Chaque jour de préparation compte. Avec une installation qui prend moins d'une heure et une configuration intuitive, vous pouvez être opérationnel rapidement.
 
-**[Découvrez le module Google Merchant Center Pro pour PrestaShop](https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=blog&utm_medium=article&utm_campaign=black-friday-2025&utm_content=cta-final)**
+**[Découvrez le module Google Merchant Center Pro pour PrestaShop](https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=nicolas-dabene-blog&utm_medium=article&utm_campaign=google-shopping-black-friday-2025&utm_content=cta-final){:target="_blank"}**
 
 L'investissement dans un flux Google Shopping de qualité se récupère dès les premières semaines. Pour le Black Friday, il se rentabilise souvent dès le premier jour.
 
