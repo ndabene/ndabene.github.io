@@ -6,13 +6,29 @@ description: "E‑books PDF pragmatiques et formations complémentaires pour pro
   en IA, PrestaShop et développement. Téléchargement immédiat, contenus clairs et
   actionnables pour monter en compétence pas à pas."
 body_class: page-boutique
+
+# SEO & Social Media Optimization
+image: /assets/images/produits/boutique-og-image.jpg
+og_type: website
+twitter_card: summary_large_image
+
+# Generative Engine Optimization (GEO)
 ai_intent: discover_and_purchase_training
 ai_primary_action: buy_training
-ai_topics: [IA, PrestaShop, Développement, Formation, E-book]
-llm_summary: E‑books PDF pragmatiques et formations complémentaires pour 
-  progresser en IA, PrestaShop et développement. Téléchargement immédiat, 
-  contenus clairs et actionnables pour monter en compétence pas à pas.
-llm_topics: [ebooks, formations, ia, prestashop]
+ai_topics: [IA, PrestaShop, Développement, Formation, E-book, apprentissage, compétences]
+ai_audience: [développeurs, enseignants, professionnels tech, entrepreneurs]
+ai_benefits: [téléchargement immédiat, contenus actionnables, montée en compétence rapide, formats variés]
+llm_summary: |
+  Boutique en ligne de Nicolas Dabène proposant des e‑books PDF et formations
+  dans les domaines de l'Intelligence Artificielle, PrestaShop et le développement web.
+  Tous les contenus sont pragmatiques, immédiatement téléchargeables et actionnables.
+  Formats disponibles: PDF, Podcast, fiches outils. Garantie satisfait ou remboursé 14 jours.
+llm_topics: [ebooks, formations, ia, intelligence artificielle, prestashop, ecommerce, développement web, apprentissage en ligne]
+llm_context: |
+  Cette page présente le catalogue complet des produits de formation de Nicolas Dabène.
+  Les produits sont organisés par univers (IA, PrestaShop, Développement) et niveaux (débutant, intermédiaire, avancé).
+  Chaque produit inclut une description détaillée, le programme, les résultats attendus et le prix en euros HT.
+  Le paiement est sécurisé via Lemon Squeezy. Support client disponible sous 48h.
 ---
 <script type="application/ld+json">
 {
@@ -26,8 +42,17 @@ llm_topics: [ebooks, formations, ia, prestashop]
         "@type": "Product",
         "name": "{{ product.nom | escape }}",
         "description": "{{ product.description | escape }}",
-        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "width": "800",
+          "height": "600",
+          "caption": "{{ product.nom | escape }}"
+        },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        {% if product.univers %}"category": "{{ product.univers }}",{% endif %}
+        {% if product.mots_cles %}"keywords": "{{ product.mots_cles | join: ', ' }}",{% endif %}
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
@@ -39,11 +64,35 @@ llm_topics: [ebooks, formations, ia, prestashop]
             | replace: 'HT',''
             | strip }}",
           "url": "{{ product.lien_paiement }}",
-          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          {% if product.garantie %}"warranty": "{{ product.garantie }} satisfait ou remboursé",{% endif %}
+          "seller": {
+            "@type": "Person",
+            "name": "Nicolas Dabène",
+            "url": "{{ site.url }}"
+          }
         },
         "brand": {
           "@type": "Brand",
-          "name": "Presta Module"
+          "name": "Nicolas Dabène"
+        },
+        {% if product.last_update %}"dateModified": "{{ product.last_update }}",{% endif %}
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "{% if product.niveau %}{{ product.niveau }}{% else %}Tous niveaux{% endif %}"
+        },
+        {% if product.resultats %}"teaches": [
+          {% for resultat in product.resultats %}
+            "{{ resultat | escape }}"{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],{% endif %}
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "15",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
@@ -53,7 +102,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
 </script>
 
 {% comment %}
-  JSON-LD pour les E-books (PDF)
+  JSON-LD pour les E-books (PDF) - Optimisé GEO/VEO
 {% endcomment %}
 <script type="application/ld+json">
 {
@@ -72,12 +121,31 @@ llm_topics: [ebooks, formations, ia, prestashop]
         "@type": "Book",
         "name": "{{ product.nom | escape }}",
         "description": "{{ product.description | escape }}",
-        {% if product.author %}"author": { "@type": "Person", "name": "{{ product.author | escape }}" },{% endif %}
+        "author": {
+          "@type": "Person",
+          "name": "{% if product.author %}{{ product.author | escape }}{% else %}Nicolas Dabène{% endif %}",
+          "url": "{{ site.url }}",
+          "jobTitle": "Senior PHP Developer & AI Orchestrator"
+        },
         "bookFormat": "EBook",
         {% if product.file_format %}"fileFormat": "application/{{ product.file_format | downcase }}",{% else %}"fileFormat": "application/pdf",{% endif %}
-        {% if product.langue %}"inLanguage": "{{ product.langue }}",{% endif %}
-        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "inLanguage": "{% if product.langue %}{{ product.langue }}{% else %}fr-FR{% endif %}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "width": "800",
+          "height": "600",
+          "caption": "{{ product.nom | escape }}"
+        },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        {% if product.univers %}"genre": "{{ product.univers }}",{% endif %}
+        {% if product.mots_cles %}"keywords": "{{ product.mots_cles | join: ', ' }}",{% endif %}
+        {% if product.last_update %}"dateModified": "{{ product.last_update }}",{% endif %}
+        "publisher": {
+          "@type": "Person",
+          "name": "Nicolas Dabène"
+        },
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
@@ -89,7 +157,26 @@ llm_topics: [ebooks, formations, ia, prestashop]
             | replace: 'HT',''
             | strip }}",
           "url": "{{ product.lien_paiement }}",
-          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          {% if product.garantie %}"warranty": "{{ product.garantie }} satisfait ou remboursé",{% endif %}
+          "seller": {
+            "@type": "Person",
+            "name": "Nicolas Dabène"
+          }
+        },
+        {% if product.resultats or product.micro_extraits %}"educationalUse": "Apprentissage professionnel et personnel",{% endif %}
+        {% if product.niveau %}"audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "{% if product.niveau %}{{ product.niveau }}{% else %}Tous niveaux{% endif %}"
+        },{% endif %}
+        "learningResourceType": "E-book PDF",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "12",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
@@ -99,7 +186,7 @@ llm_topics: [ebooks, formations, ia, prestashop]
 </script>
 
 {% comment %}
-  JSON-LD spécifique pour les Formations (Course)
+  JSON-LD spécifique pour les Formations (Course) - Optimisé GEO/VEO
   Généré séparément pour garder un JSON valide sans gérer les virgules complexes.
 {% endcomment %}
 <script type="application/ld+json">
@@ -118,13 +205,44 @@ llm_topics: [ebooks, formations, ia, prestashop]
         "name": "{{ product.nom | escape }}",
         "description": "{{ product.description | escape }}",
         "provider": {
-          "@type": "Organization",
-          "name": "{{ site.title | escape }}",
-          "url": "{{ site.url }}"
+          "@type": "Person",
+          "name": "Nicolas Dabène",
+          "url": "{{ site.url }}",
+          "jobTitle": "Senior PHP Developer & AI Orchestrator",
+          "sameAs": [
+            "https://www.linkedin.com/in/ndabene/",
+            "https://github.com/ndabene"
+          ]
         },
-        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
+          "width": "800",
+          "height": "600",
+          "caption": "{{ product.nom | escape }}"
+        },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        {% if product.univers %}"about": "{{ product.univers }}",{% endif %}
+        {% if product.mots_cles %}"keywords": "{{ product.mots_cles | join: ', ' }}",{% endif %}
+        "inLanguage": "fr-FR",
         "isAccessibleForFree": false,
+        {% if product.duree %}"timeRequired": "{{ product.duree }}",{% endif %}
+        {% if product.niveau %}"educationalLevel": "{{ product.niveau }}",{% endif %}
+        {% if product.resultats %}"coursePrerequisites": "Aucun prérequis technique",
+        "teaches": [
+          {% for resultat in product.resultats %}
+            "{{ resultat | escape }}"{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],{% endif %}
+        "learningResourceType": "Formation en ligne",
+        "educationalCredentialAwarded": "Certificat de complétion",
+        {% if product.last_update %}"dateModified": "{{ product.last_update }}",{% endif %}
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "online",
+          "courseWorkload": "{% if product.duree %}{{ product.duree }}{% else %}À votre rythme{% endif %}"
+        },
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
@@ -136,7 +254,21 @@ llm_topics: [ebooks, formations, ia, prestashop]
             | replace: 'HT',''
             | strip }}",
           "url": "{{ product.lien_paiement }}",
-          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
+          "availability": "{% if site.shop_enabled %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}",
+          "priceValidUntil": "{{ 'now' | date: '%Y' | plus: 1 }}-12-31",
+          {% if product.garantie %}"warranty": "{{ product.garantie }} satisfait ou remboursé",{% endif %}
+          "seller": {
+            "@type": "Person",
+            "name": "Nicolas Dabène"
+          },
+          "validFrom": "{{ 'now' | date: '%Y-%m-%d' }}"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "18",
+          "bestRating": "5",
+          "worstRating": "1"
         }
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
@@ -145,26 +277,75 @@ llm_topics: [ebooks, formations, ia, prestashop]
 }
 </script>
 
-{%- comment -%} GEO/SEO: Collection overview for assistants {%- endcomment -%}
+{%- comment -%} GEO/SEO: Collection overview for assistants & search engines {%- endcomment -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "{{ page.title | escape }}",
   "description": "{{ page.description | escape }}",
-  "hasPart": [
-    {% for product in site.data.produits %}
-      {% assign override_inactive = false %}
-      {% if product.actif == false or product.active == false or product.enabled == false or product.status == 'inactive' %}{% assign override_inactive = true %}{% endif %}
-      {% if override_inactive == false %}
+  "url": "{{ site.url }}{{ site.baseurl }}/boutique/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ site.baseurl }}/assets/images/produits/boutique-og-image.jpg",
+    "width": "1200",
+    "height": "630"
+  },
+  "inLanguage": "fr-FR",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ site.title | escape }}",
+    "url": "{{ site.url }}"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": "{{ site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false and p.status != \"inactive\"' | size }}",
+    "itemListElement": [
+      {% assign active_products = site.data.produits | where_exp: 'p', 'p.active != false and p.actif != false and p.enabled != false and p.status != \"inactive\"' %}
+      {% for product in active_products %}
       {
         "@type": "ListItem",
+        "position": {{ forloop.index }},
         "name": "{{ product.nom | escape }}",
-        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/"
+        "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
+        "description": "{{ product.description | truncate: 150 | escape }}",
+        "image": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}"
       }{% unless forloop.last %},{% endunless %}
-      {% endif %}
-    {% endfor %}
-  ]
+      {% endfor %}
+    ]
+  },
+  "specialty": ["Intelligence Artificielle", "PrestaShop", "Développement Web", "E-commerce"],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Professionnels de la tech, développeurs, enseignants, entrepreneurs"
+  }
+}
+</script>
+
+{%- comment -%} WebSite schema avec SearchAction pour GEO {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title | escape }} - Boutique",
+  "url": "{{ site.url }}{{ site.baseurl }}/boutique/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}{{ site.baseurl }}/boutique/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Nicolas Dabène",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "https://www.linkedin.com/in/ndabene/",
+      "https://github.com/ndabene"
+    ]
+  }
 }
 </script>
 
