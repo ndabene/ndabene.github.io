@@ -1,0 +1,26 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 7 * * *'  # tous les jours à 7h
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send URLs to IndexNow
+        run: |
+          curl -X POST "https://api.indexnow.org/indexnow" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "host": "nicolas-dabene.fr",
+            "key": "64e86f4e43274b82908443e1965dc198",
+            "urlList": [
+              "https://nicolas-dabene.fr/",
+              "https://nicolas-dabene.fr/feed.xml",
+              "https://nicolas-dabene.fr/past_post.xml",
+              "https://nicolas-dabene.fr/sitemap.xml"
+            ]
+          }'
