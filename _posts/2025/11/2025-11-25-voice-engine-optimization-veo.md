@@ -161,32 +161,21 @@ Les données structurées (Schema Markup) sont le langage technique essentiel po
 
 C'est le plus crucial pour le VEO. Il permet de baliser vos pages de questions-réponses, facilitant l'extraction par les assistants vocaux. Ce qui fait toute la différence : une FAQ bien structurée en Schema Markup est **10x plus susceptible** d'être sélectionnée comme source par Google Assistant ou Alexa.
 
-Voici un exemple en JSON-LD :
+**Structure requise d'un FAQPage Schema :**
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Quel est le meilleur prix pour l'iPhone 16 Pro à Paris ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En novembre 2025, l'iPhone 16 Pro coûte 999€ chez Apple Store Paris. Les revendeurs agréés comme Fnac et Darty proposent des tarifs similaires avec parfois des codes promo de 5-10%. Vérifiez les offres de financements disponibles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Où trouver un réparateur iPhone agréé à Paris ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Apple Store sur les Champs-Élysées (10 rue de la Paix), Fnac République, ou utilisez le localisateur officiel Apple. Les délais de réparation sont généralement de 3 à 5 jours ouvrables."
-      }
-    }
-  ]
-}
-```
+- **@context**: "https://schema.org" (contexte du vocabulaire)
+- **@type**: "FAQPage" (type de page)
+- **mainEntity**: Array de questions structurées
+  - Chaque **Question** avec **name** (la question) et **acceptedAnswer**
+  - Chaque **Answer** avec **@type**: "Answer" et **text** (la réponse)
+
+**Documentation officielle et outils de validation :**
+
+- [Schema.org FAQPage](https://schema.org/FAQPage) - Spécification complète
+- [Google FAQPage Guidelines](https://developers.google.com/search/docs/appearance/structured-data/faqpage?hl=fr) - Recommandations Google
+- [Rich Results Test](https://search.google.com/test/rich-results) - Outil de validation Google
+
+*Note : Cet article génère automatiquement un FAQPage Schema valide depuis son front matter `faq:` (voir les 6 questions en bas de page).*
 
 ### GEO et VEO : L'intersection critique
 
