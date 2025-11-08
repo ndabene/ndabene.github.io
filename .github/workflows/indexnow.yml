@@ -58,7 +58,7 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
               "host": "nicolas-dabene.fr",
-              "key": "64e86f4e43274b82908443e1965dc198",
+              "key": "78f5577c5f464d7b920139ca9af76cf4",
               "urlList": ${{ steps.sitemap.outputs.URL_LIST }}
             }')
 
