@@ -1,0 +1,372 @@
+{% comment %}
+  Composant HowTo Schema pour tutoriels - Optimisation GEO/VEO
+
+  Usage dans un article:
+  1. Ajouter dans le front matter:
+     howto:
+       name: "Comment configurer un serveur MCP"
+       description: "Guide étape par étape pour configurer un serveur MCP TypeScript"
+       total_time: "PT30M"
+       estimated_cost:
+         currency: "EUR"
+         value: "0"
+       steps:
+         - name: "Installer les dépendances"
+           text: "Installez Node.js et npm sur votre système"
+           image: "/assets/images/blog/step1.jpg"
+         - name: "Créer le projet"
+           text: "Initialisez un nouveau projet TypeScript avec npm init"
+
+  2. Inclure ce composant:
+     {% include howto-schema.html %}
+{% endcomment %}
+
+{% if page.howto %}
+<!-- HowTo Schema pour optimisation VEO/GEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ page.howto.name | escape }}",
+  "description": "{{ page.howto.description | escape }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | default: '/assets/images/blog/default-blog.jpg' | prepend: site.url }}"
+  },
+  {% if page.howto.total_time %}
+  "totalTime": "{{ page.howto.total_time }}",
+  {% endif %}
+  {% if page.howto.estimated_cost %}
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "{{ page.howto.estimated_cost.currency | default: 'EUR' }}",
+    "value": "{{ page.howto.estimated_cost.value | default: '0' }}"
+  },
+  {% endif %}
+  "tool": [
+    {% for tool in page.howto.tools %}
+    {
+      "@type": "HowToTool",
+      "name": "{{ tool }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "supply": [
+    {% for supply in page.howto.supplies %}
+    {
+      "@type": "HowToSupply",
+      "name": "{{ supply }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "step": [
+    {% for step in page.howto.steps %}
+    {
+      "@type": "HowToStep",
+      "position": {{ forloop.index }},
+      "name": "{{ step.name | escape }}",
+      "text": "{{ step.text | strip_html | escape }}",
+      {% if step.image %}
+      "image": "{{ step.image | prepend: site.url }}",
+      {% endif %}
+      "url": "{{ page.url | prepend: site.url }}#step-{{ forloop.index }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Section HowTo visible pour les utilisateurs -->
+<section class="howto-section" itemscope itemtype="https://schema.org/HowTo">
+  <h2 class="howto-title">
+    <i class="fas fa-tasks"></i>
+    <span itemprop="name">{{ page.howto.name }}</span>
+  </h2>
+
+  {% if page.howto.description %}
+  <p class="howto-description" itemprop="description">
+    {{ page.howto.description }}
+  </p>
+  {% endif %}
+
+  <div class="howto-meta">
+    {% if page.howto.total_time %}
+    <div class="howto-time">
+      <i class="fas fa-clock"></i>
+      <span itemprop="totalTime" content="{{ page.howto.total_time }}">
+        Durée : {{ page.howto.total_time | replace: "PT", "" | replace: "M", " min" | replace: "H", "h " }}
+      </span>
+    </div>
+    {% endif %}
+
+    {% if page.howto.estimated_cost %}
+    <div class="howto-cost" itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
+      <i class="fas fa-tag"></i>
+      Coût estimé :
+      <span itemprop="value">{{ page.howto.estimated_cost.value }}</span>
+      <span itemprop="currency" content="{{ page.howto.estimated_cost.currency }}">€</span>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if page.howto.tools or page.howto.supplies %}
+  <div class="howto-requirements">
+    {% if page.howto.tools %}
+    <div class="howto-tools">
+      <h3><i class="fas fa-wrench"></i> Outils nécessaires</h3>
+      <ul>
+        {% for tool in page.howto.tools %}
+        <li itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+          <span itemprop="name">{{ tool }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if page.howto.supplies %}
+    <div class="howto-supplies">
+      <h3><i class="fas fa-box"></i> Prérequis</h3>
+      <ul>
+        {% for supply in page.howto.supplies %}
+        <li itemprop="supply" itemscope itemtype="https://schema.org/HowToSupply">
+          <span itemprop="name">{{ supply }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="howto-steps">
+    {% for step in page.howto.steps %}
+    <div class="howto-step" id="step-{{ forloop.index }}" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+      <div class="step-number">
+        <span>{{ forloop.index }}</span>
+      </div>
+      <div class="step-content">
+        <h3 class="step-name" itemprop="name">{{ step.name }}</h3>
+        <div class="step-text" itemprop="text">
+          {{ step.text | markdownify }}
+        </div>
+        {% if step.image %}
+        <div class="step-image">
+          <img src="{{ step.image }}" alt="{{ step.name }}" itemprop="image">
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.howto-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #0066cc;
+}
+
+.howto-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.howto-title i {
+  color: #0066cc;
+}
+
+.howto-description {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.howto-meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.howto-time, .howto-cost {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #495057;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.howto-time i, .howto-cost i {
+  color: #0066cc;
+}
+
+.howto-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.howto-tools, .howto-supplies {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.howto-tools h3, .howto-supplies h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.howto-tools h3 i, .howto-supplies h3 i {
+  color: #0066cc;
+}
+
+.howto-tools ul, .howto-supplies ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.howto-tools li, .howto-supplies li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.howto-tools li:before, .howto-supplies li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.howto-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.howto-step {
+  display: flex;
+  gap: 1.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.howto-step:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.step-text {
+  color: #495057;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.step-text p {
+  margin: 0.5rem 0;
+}
+
+.step-text code {
+  background: #f1f3f5;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  color: #d63384;
+}
+
+.step-text pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.step-image {
+  margin-top: 1rem;
+}
+
+.step-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .howto-section {
+    padding: 1.5rem;
+  }
+
+  .howto-step {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .howto-requirements {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+{% endif %}

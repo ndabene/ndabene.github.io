@@ -227,11 +227,40 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "LocalBusiness"],
   "name": "{{ site.title }}",
   "url": "{{ site.url }}",
   "description": "{{ site.description }}",
   "providerMobility": "France entière et remote",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressRegion": "France"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "46.227638",
+    "longitude": "2.213749"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Place",
+      "name": "Europe (Remote)"
+    },
+    {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "46.227638",
+        "longitude": "2.213749"
+      },
+      "geoRadius": "1000000"
+    }
+  ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -240,6 +269,16 @@
     "worstRating": "1"
   },
   "priceRange": "€€€",
+  "telephone": "+33-XXX-XXX-XXX",
+  "email": "{{ site.author.email }}",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
   "serviceType": [
     "Développement Web PHP",
     "Architecture E-commerce PrestaShop",
@@ -248,10 +287,6 @@
     "Conseil Technique et Stratégique",
     "Formation Développement",
     "Audit Code et Sécurité"
-  ],
-  "areaServed": [
-    {"@type": "Country", "name": "France"},
-    {"@type": "Place", "name": "Europe (Remote)"}
   ],
   "availableChannel": {
     "@type": "ServiceChannel",
@@ -306,7 +341,8 @@
     "PrestaShop Certified Developer",
     "15+ années d'expertise technique",
     "50+ projets e-commerce réalisés"
-  ]
+  ],
+  "slogan": "Expert PHP & AI Orchestrator - Transformez votre vision en réalité digitale"
 }
 </script>
 <script type="application/ld+json">
