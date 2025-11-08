@@ -16,7 +16,10 @@
 
 {% comment %} Trouver les articles liés par tags, catégories et technologies {% endcomment %}
 {% for post in site.posts %}
-  {% if post.url != current_post.url %}
+  {% comment %} Exclure le post actuel et les articles futurs {% endcomment %}
+  {% assign post_timestamp = post.date | date: "%s" %}
+  {% assign now_timestamp = site.time | date: "%s" %}
+  {% if post.url != current_post.url and post_timestamp <= now_timestamp %}
     {% assign score = 0 %}
 
     {% comment %} Score par tags communs (poids: 3) {% endcomment %}
