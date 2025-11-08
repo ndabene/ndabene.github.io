@@ -11,6 +11,17 @@ featured: false
 difficulty: "Intermédiaire"
 technologies: ["IA", "SaaS", "e-santé"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Quand Doctolib est-il devenu une licorne française ?"
+    answer: "Doctolib a atteint le statut de licorne en mars 2019 avec une levée de 150 millions d'euros qui valorisait l'entreprise à plus d'un milliard d'euros. Cette étape coïncidait avec le lancement des services de téléconsultation développés avec 500 médecins partenaires."
+  - question: "Quelle est la valorisation de Doctolib en 2025 ?"
+    answer: "Après la méga-levée de 500 millions d'euros le 15 mars 2022, Doctolib atteint une valorisation de 5,8 milliards d'euros, devenant ainsi la startup française la mieux valorisée, dépassant Back Market. L'entreprise vise la rentabilité en 2025 et envisage une introduction en bourse pour 2025 ou 2026."
+  - question: "Comment Doctolib génère-t-il ses revenus ?"
+    answer: "99% du chiffre d'affaires de Doctolib provient des abonnements des professionnels de santé (129€ TTC par mois pour les cabinets), et non des patients qui utilisent gratuitement la plateforme. En 2024, Doctolib a généré 348 millions d'euros de revenus récurrents annuels (+22,5% vs 2023)."
+  - question: "Qu'est-ce que l'Assistant de consultation IA de Doctolib ?"
+    answer: "Lancé en octobre 2024, l'Assistant de consultation basé sur l'IA automatise la prise de notes durant les consultations, permettant aux médecins de se concentrer davantage sur leurs patients. Cette innovation majeure illustre le virage de Doctolib vers l'intelligence artificielle pour améliorer la pratique médicale."
+  - question: "Combien d'utilisateurs Doctolib compte-t-il en Europe ?"
+    answer: "L'expansion européenne de Doctolib compte 45 millions d'utilisateurs en France, 10 millions en Allemagne et 5 millions en Italie, pour un total de 60 millions d'utilisateurs. La plateforme équipe 300 000 professionnels de santé et 1 700 établissements à travers l'Europe."
 ---
 
 # L'Histoire de Doctolib : De l'Idée Révolutionnaire à la Licorne Française (2013-2025)

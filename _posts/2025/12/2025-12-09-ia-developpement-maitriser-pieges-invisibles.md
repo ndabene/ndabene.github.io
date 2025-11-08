@@ -11,6 +11,15 @@ featured: false
 difficulty: "Intermédiaire"
 technologies: ["IA", "GitHub Copilot", "Claude", "ChatGPT", "Développement"]
 estimated_reading_time: "10 minutes"
+faq:
+  - question: "L'IA va vraiment remplacer les développeurs ?"
+    answer: "Non. L'IA va remplacer les développeurs qui utilisent l'IA de manière passive. Elle va amplifier les développeurs qui l'utilisent de manière stratégique. Le choix est vôtre."
+  - question: "Comment convaincre mon manager qu'il faut du temps pour relire le code IA ?"
+    answer: "Montrez-lui les chiffres : 40% du temps en relecture, c'est 40% de temps gagné en corrections ultérieures. C'est du ROI."
+  - question: "Par où commencer si je n'ai jamais utilisé d'IA pour coder ?"
+    answer: "Commencez petit. Une fonction. Relisez-la comme si c'était le code du junior le plus brillant mais inexpérimenté. Notez ce que vous avez corrigé. Ça vous apprendra à mieux prompter."
+  - question: "Est-ce que GitHub Copilot, Claude et ChatGPT font la même chose ?"
+    answer: "Presque, mais pas tout à fait. Copilot est spécialisé dans la complétion. Claude excelle en architecture complexe. ChatGPT est polyvalent. Testez les trois et voyez ce qui colle à votre workflow."
 ---
 
 ## Introduction
@@ -266,26 +275,6 @@ Mais elle ne peut pas **assumer.**
 
 Elle peut coder.
 Mais elle ne peut pas **porter une vision.**
-
-## Questions Fréquentes
-
-**Q: L'IA va vraiment remplacer les développeurs ?**
-
-**R:** Non. L'IA va remplacer les développeurs qui utilisent l'IA de manière passive. Elle va amplifier les développeurs qui l'utilisent de manière stratégique. Le choix est vôtre.
-
-**Q: Comment convaincre mon manager qu'il faut du temps pour relire le code IA ?**
-
-**R:** Montrez-lui les chiffres : 40% du temps en relecture, c'est 40% de temps gagné en corrections ultérieures. C'est du ROI.
-
-**Q: Par où commencer si je n'ai jamais utilisé d'IA pour coder ?**
-
-**R:** Commencez petit. Une fonction. Relisez-la comme si c'était le code du junior le plus brillant mais inexpérimenté. Notez ce que vous avez corrigé. Ça vous apprendra à mieux prompter.
-
-**Q: Est-ce que GitHub Copilot, Claude et ChatGPT font la même chose ?**
-
-**R:** Presque, mais pas tout à fait. Copilot est spécialisé dans la complétion. Claude excelle en architecture complexe. ChatGPT est polyvalent. Testez les trois et voyez ce qui colle à votre workflow.
-
----
 
 ## Conclusion : Demain, Les Devs Seront Plus Essentiels Que Jamais
 

@@ -11,6 +11,13 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["TypeScript", "Node.js", "MCP", "File System"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Puis-je créer un outil qui écrit des fichiers ?"
+    answer: "Absolument ! La structure est la même. Utilisez fs.writeFile() au lieu de fs.readFile(). Mais attention à la sécurité : l'écriture est plus risquée que la lecture."
+  - question: "Comment gérer les fichiers binaires ?"
+    answer: "Utilisez l'encoding base64 pour lire les fichiers binaires et les transmettre en tant que texte. L'IA pourra ensuite les manipuler."
+  - question: "Mes outils peuvent-ils appeler d'autres outils ?"
+    answer: "Techniquement oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels entre outils. Gardez vos outils simples et atomiques."
 ---
 
 # Créer votre Premier Outil MCP : L'Outil readFile Expliqué
@@ -635,20 +642,6 @@ Gardez une trace de qui accède à quoi :
 ```typescript
 console.log(`[${new Date().toISOString()}] readFile: ${params.chemin_du_fichier}`);
 ```
-
-## Questions Fréquentes
-
-**Q : Puis-je créer un outil qui écrit des fichiers ?**
-
-**R :** Absolument ! La structure est la même. Utilisez `fs.writeFile()` au lieu de `fs.readFile()`. Mais attention à la sécurité : l'écriture est plus risquée que la lecture.
-
-**Q : Comment gérer les fichiers binaires ?**
-
-**R :** Utilisez l'encoding 'base64' pour lire les fichiers binaires et les transmettre en tant que texte. L'IA pourra ensuite les manipuler.
-
-**Q : Mes outils peuvent-ils appeler d'autres outils ?**
-
-**R :** Techniquement oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels entre outils. Gardez vos outils simples et atomiques.
 
 ## Conclusion
 

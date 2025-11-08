@@ -11,6 +11,19 @@ featured: true
 difficulty: "Débutant"
 technologies: ["IA", "Navigateur Web", "Chromium", "Automation"]
 estimated_reading_time: "15 minutes"
+faq:
+  - question: "Comet est-il vraiment gratuit ou y a-t-il des limitations cachées ?"
+    answer: "La version gratuite offre déjà l'essentiel : navigation intelligente, assistant IA contextuel, raccourcis personnalisés, intégrations Gmail et Calendar. Les limitations concernent le nombre de requêtes complexes par jour et l'Assistant Background réservé aux Max. Pour un usage quotidien normal, la version gratuite est largement suffisante."
+  - question: "Mes données sont-elles vraiment en sécurité avec Comet ?"
+    answer: "Comet stocke par défaut vos données localement avec chiffrement bout-en-bout. Les certifications SOC 2, GDPR et HIPAA garantissent des standards sérieux. La clé : ne jamais saisir de mots de passe ou données ultra-sensibles dans les prompts, vérifier les permissions régulièrement, utiliser l'authentification à deux facteurs."
+  - question: "Puis-je utiliser Comet si je ne parle pas anglais ?"
+    answer: "Absolument ! Comet supporte le français nativement, ainsi qu'une vingtaine d'autres langues. L'assistant comprend parfaitement les requêtes en français et répond dans la même langue. L'interface est également entièrement traduite."
+  - question: "Comet peut-il remplacer complètement Chrome ou Firefox ?"
+    answer: "Techniquement oui, puisque Comet est basé sur Chromium et supporte toutes les extensions Chrome. Comet brille surtout pour automatiser, rechercher intelligemment et exécuter des tâches complexes. Beaucoup gardent leur navigateur classique pour la navigation simple et utilisent Comet pour les tâches productives."
+  - question: "Les étudiants peuvent-ils vraiment utiliser Comet gratuitement sans limite de temps ?"
+    answer: "Oui, tant que vous maintenez votre statut étudiant vérifié. L'accès gratuit n'est pas une promotion temporaire mais un engagement de Perplexity pour démocratiser l'IA éducative. Vous conservez l'accès pendant toutes vos études, et même quelques mois après."
+  - question: "Comet fonctionne-t-il hors ligne ?"
+    answer: "Partiellement. Vous pouvez naviguer sur des sites web hors ligne (si déjà visités). L'assistant IA nécessite une connexion internet pour communiquer avec les serveurs Perplexity. C'est une limitation des IA génératives actuelles trop volumineuses pour tourner entièrement en local."
 ---
 
 # Perplexity Comet 2025 : Quand Votre Navigateur Devient Votre Assistant Intelligent
@@ -260,32 +273,6 @@ Pour les grandes organisations, Perplexity développe Comet Enterprise Max avec 
 **Outils de gouvernance avancés** pour gérer finement qui a accès à quoi, tracer les actions, et garantir la conformité réglementaire
 
 **Déploiement on-premise** pour les secteurs les plus sensibles (défense, santé, finance) qui ne peuvent pas envoyer leurs données dans le cloud
-
-## Questions Fréquentes
-
-**Q: Comet est-il vraiment gratuit ou y a-t-il des limitations cachées ?**
-
-**R:** La version gratuite de Comet offre déjà l'essentiel des fonctionnalités : navigation intelligente, assistant IA contextuel, raccourcis personnalisés, intégrations Gmail et Calendar. Les limitations concernent principalement le nombre de requêtes complexes par jour et l'accès à l'Assistant Background qui reste réservé aux utilisateurs Max. Mais pour un usage quotidien normal, la version gratuite est largement suffisante.
-
-**Q: Mes données sont-elles vraiment en sécurité avec Comet ?**
-
-**R:** Comet stocke par défaut vos données localement avec chiffrement bout-en-bout. Les certifications SOC 2, GDPR et HIPAA garantissent des standards de sécurité sérieux. Cependant, comme tout outil basé sur l'IA, il existe des vulnérabilités potentielles. La clé est d'adopter les bonnes pratiques : ne jamais saisir de mots de passe ou données ultra-sensibles dans les prompts, vérifier régulièrement les permissions, utiliser l'authentification à deux facteurs.
-
-**Q: Puis-je utiliser Comet si je ne parle pas anglais ?**
-
-**R:** Absolument ! Comet supporte le français nativement, ainsi qu'une vingtaine d'autres langues. L'assistant comprend parfaitement les requêtes en français et répond dans la même langue. L'interface est également entièrement traduite.
-
-**Q: Comet peut-il remplacer complètement Chrome ou Firefox ?**
-
-**R:** Techniquement oui, puisque Comet est basé sur Chromium et supporte toutes les extensions Chrome. Mais la vraie question est : en avez-vous besoin ? Pour naviguer simplement sur des sites, Chrome ou Firefox font très bien le travail. Comet brille vraiment quand vous avez besoin d'automatiser, de rechercher intelligemment, ou d'exécuter des tâches complexes. Beaucoup d'utilisateurs gardent leur navigateur classique pour la navigation simple et utilisent Comet pour les tâches productives.
-
-**Q: Les étudiants peuvent-ils vraiment utiliser Comet gratuitement sans limite de temps ?**
-
-**R:** Oui, tant que vous maintenez votre statut étudiant vérifié. L'accès gratuit pour les étudiants n'est pas une promotion temporaire mais un engagement de Perplexity pour démocratiser l'accès à l'IA éducative. Vous conservez l'accès pendant toutes vos études, et même quelques mois après l'obtention de votre diplôme.
-
-**Q: Comet fonctionne-t-il hors ligne ?**
-
-**R:** Partiellement. Vous pouvez naviguer sur des sites web normalement hors ligne (si vous les avez déjà visités). Par contre, l'assistant IA nécessite une connexion internet pour fonctionner, puisqu'il doit communiquer avec les serveurs de Perplexity pour traiter vos requêtes. C'est une limitation inhérente aux IA génératives actuelles qui sont trop volumineuses pour tourner entièrement en local sur un ordinateur personnel.
 
 ## Conclusion : Une Nouvelle Ère de l'Internet Intelligent
 

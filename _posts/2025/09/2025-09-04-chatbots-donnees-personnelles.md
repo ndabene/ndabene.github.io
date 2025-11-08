@@ -11,6 +11,13 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["IA", "Sécurité", "RGPD", "Confidentialité"]
 estimated_reading_time: "6 minutes"
+faq:
+  - question: "Comment reconnaître un chatbot manipulateur ?"
+    answer: "Méfiez-vous des chatbots qui semblent trop empathiques, partagent des anecdotes personnelles, ou vous rassurent excessivement sur la confidentialité. Ces techniques de réciprocité sont conçues pour vous mettre en confiance."
+  - question: "Quelles données sont les plus à risque avec les chatbots ?"
+    answer: "Les informations médicales, financières, les identifiants de connexion et les détails personnels partagés dans un contexte émotionnel sont particulièrement vulnérables à l'exploitation."
+  - question: "Comment me protéger lors de l'utilisation d'assistants IA ?"
+    answer: "Limitez les informations sensibles partagées, vérifiez les permissions des extensions de navigateur, et préférez les outils avec des politiques de confidentialité transparentes et conformes au RGPD."
 ---
 
 # Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles
@@ -52,17 +59,6 @@ Le **Dr William Seymour**, conférencier en cybersécurité au King's College, a
 ### Recommandations des chercheurs
 
 Les chercheurs appellent désormais à une **transparence accrue** sur les pratiques de collecte, un **contrôle renforcé par les utilisateurs**, et une **supervision réglementaire plus stricte**, alors que ces outils s'intègrent de plus en plus dans la vie numérique quotidienne.
-
-### ❓ Questions Fréquentes
-
-**Q: Comment reconnaître un chatbot manipulateur ?**  
-**R:** Méfiez-vous des chatbots qui semblent trop empathiques, partagent des "anecdotes personnelles" ou vous rassurent excessivement sur la confidentialité.
-
-**Q: Quelles données sont les plus à risque ?**  
-**R:** Les informations médicales, financières, les identifiants de connexion et les détails personnels partagés dans un contexte émotionnel.
-
-**Q: Comment me protéger lors de l'utilisation d'assistants IA ?**  
-**R:** Limitez les informations sensibles, vérifiez les permissions des extensions et préférez les outils avec des politiques de confidentialité transparentes.
 
 ## Un enjeu mondial de gouvernance de l'IA
 

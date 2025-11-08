@@ -11,6 +11,13 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["IA", "Prompt Engineering", "Sécurité"]
 estimated_reading_time: "7 minutes"
+faq:
+  - question: "Comment protéger mes prompts système en production ?"
+    answer: "Utilisez un gestionnaire de secrets comme HashiCorp Vault ou AWS Secrets Manager et chiffrez toujours vos prompts sensibles. Ne stockez jamais de prompts en dur dans le code source."
+  - question: "Que faire si je détecte une tentative d'injection de prompt ?"
+    answer: "Loggez immédiatement l'incident, bloquez temporairement l'utilisateur concerné, et analysez le pattern d'attaque pour améliorer vos filtres de sécurité. La détection précoce est cruciale pour prévenir les exploitations."
+  - question: "Faut-il tester la sécurité de mes intégrations IA ?"
+    answer: "Absolument ! Intégrez des tests de sécurité IA spécifiques dans votre pipeline CI/CD, comme vous le feriez pour des tests de vulnérabilités classiques SQL injection ou XSS."
 ---
 
 # Grok expose ses prompts système : leçons pour la sécurité IA
@@ -192,17 +199,6 @@ Services:
     Role: "Filtrage des réponses IA"
     Rules: "Blacklist, whitelist, modération"
 ```
-
-## ❓ Questions Fréquentes
-
-**Q: Comment protéger mes prompts système en production ?**  
-**R:** Utilisez un gestionnaire de secrets (HashiCorp Vault, AWS Secrets Manager) et chiffrez toujours vos prompts sensibles. Jamais de prompts en dur dans le code !
-
-**Q: Que faire si je détecte une tentative d'injection de prompt ?**  
-**R:** Loggez l'incident, bloquez temporairement l'utilisateur, et analysez le pattern pour améliorer vos filtres. La détection précoce est cruciale.
-
-**Q: Faut-il tester la sécurité de mes intégrations IA ?**  
-**R:** Absolument ! Intégrez des tests de sécurité IA dans votre CI/CD, comme vous le feriez pour des tests de vulnérabilités classiques.
 
 ## Conclusion
 

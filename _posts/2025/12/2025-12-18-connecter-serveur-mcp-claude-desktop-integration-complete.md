@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["MCP", "Claude Desktop", "TypeScript", "Configuration"]
 estimated_reading_time: "14 minutes"
+faq:
+  - question: "Puis-je avoir plusieurs serveurs MCP en même temps ?"
+    answer: "Oui ! Ajoutez-les dans la configuration JSON avec plusieurs entrées dans mcpServers. Chaque serveur aura son propre nom et configuration."
+  - question: "Claude peut-il utiliser mes outils sans me demander ?"
+    answer: "Non. Claude demande TOUJOURS la permission avant d'exécuter un outil. C'est une garantie de sécurité côté Anthropic."
+  - question: "Les outils fonctionnent-ils avec Claude sur le web ?"
+    answer: "Actuellement, non. Les serveurs MCP ne fonctionnent qu'avec Claude Desktop. Mais Anthropic travaille sur d'autres intégrations."
+  - question: "Puis-je partager mon serveur MCP avec d'autres ?"
+    answer: "Oui ! Publiez-le sur npm ou GitHub. D'autres pourront l'installer et le configurer dans leur Claude Desktop."
 ---
 
 # Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète
@@ -796,4 +805,4 @@ Le code que vous avez écrit est solide, sécurisé et maintenable. Il peut serv
 - [Partie 5 : Sécurité et Permissions](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
 - [Partie 6 : Connexion Claude Desktop](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete) ← Vous êtes ici
 
-**Merci d'avoir suivi cette série ! N'hésitez pas à partager vos créations MCP, je serais ravi de les découvrir.** 🚀
+**Merci d'avoir suivi cette série ! N'hésitez pas à partager vos créations MCP, je serais ravi de les découvrir.**

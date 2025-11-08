@@ -15,8 +15,19 @@ estimated_reading_time: "10 minutes"
 llm_summary: L’intégration native de ChatGPT et Shopify permet un parcours 
   d’achat fluide dans la conversation, redéfinissant l’expérience e-commerce et 
   les modèles.
-llm_topics: [Shopify, ChatGPT, commerce conversationnel, AI integration, 
+llm_topics: [Shopify, ChatGPT, commerce conversationnel, AI integration,
     e-commerce]
+faq:
+  - question: "Comment fonctionne l'intégration ChatGPT et Shopify ?"
+    answer: "L'intégration permet un parcours d'achat complet dans ChatGPT via des appels API Shopify Storefront. ChatGPT interroge le catalogue marchand, enrichit avec avis et stock, génère des cartes produit dynamiques puis redirige vers Shopify Checkout avec un handoff sécurisé conservant tout le contexte produit sans travail supplémentaire côté commerçant."
+  - question: "Quels avantages pour les marchands Shopify ?"
+    answer: "Les marchands accèdent instantanément à l'audience massive de ChatGPT sans développement supplémentaire via l'API Storefront existante. Cette distribution élargie offre un canal d'acquisition inédit plus qualifié, une conversion accélérée avec moins de clics, et une réduction significative du cart abandonment grâce au funnel conversationnel simplifié."
+  - question: "Quelle commission prélève OpenAI sur les ventes ?"
+    answer: "OpenAI prévoit de prélever environ 2% de commission sur chaque vente conclue via ChatGPT selon les démonstrations privées. Ce modèle économique diversifie les revenus d'OpenAI au-delà des abonnements ChatGPT Plus tout en restant compétitif face aux marketplaces traditionnelles grâce aux meilleurs taux de conversion."
+  - question: "Qu'est-ce que l'AIO (Artificial Intelligence Optimization) ?"
+    answer: "L'AIO est l'équivalent du SEO pour les intelligences artificielles. Il s'agit de nouvelles tactiques pour structurer ses fiches produit afin de plaire aux LLM qui contrôlent désormais la recommandation produit. Optimiser pour l'IA devient aussi crucial que le SEO il y a dix ans pour la visibilité des marques."
+  - question: "Le commerce conversationnel remplace-t-il les sites e-commerce ?"
+    answer: "Le commerce conversationnel ne remplace pas mais complète les sites e-commerce traditionnels en créant un nouveau canal de distribution. Les sites pourraient voir leur trafic organique diminuer au profit des plateformes IA, mais l'expérience conversationnelle offre des taux de conversion supérieurs grâce à son UX simplifiée et personnalisée."
 ---
 # ChatGPT + Shopify : le futur de l’e-commerce
 

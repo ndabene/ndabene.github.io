@@ -13,10 +13,17 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["JavaScript", "PHP", "Bash", "MCP"]
 estimated_reading_time: "12 minutes"
-llm_summary: 'Cursor CLI permet d’interagir avec l’agent de Cursor directement depuis
+llm_summary: 'Cursor CLI permet d'interagir avec l'agent de Cursor directement depuis
   le terminal : écrire, revoir et modifier du code, exécuter des commandes approuvées,
   reprendre des sessions, et automatiser des workflows'
 llm_topics: [Cursor, CLI, terminal, AI, automation, PrestaShop, Symfony, GPT]
+faq:
+  - question: "Le CLI Cursor est-il disponible pour tous les utilisateurs ?"
+    answer: "Le CLI Cursor est actuellement en phase bêta et n'est pas disponible pour certains plans Enterprise. Il est accessible pour la plupart des autres utilisateurs via l'installation curl."
+  - question: "Puis-je utiliser les intégrations MCP avec Cursor CLI comme dans l'IDE ?"
+    answer: "Oui, le CLI Cursor lit votre fichier mcp.json et charge automatiquement les mêmes serveurs et outils que ceux configurés dans l'IDE Cursor."
+  - question: "Comment obtenir l'aide détaillée sur les commandes Cursor CLI ?"
+    answer: "Utilisez cursor-agent help [commande] pour l'aide en ligne de commande, ou tapez /help [commande] en session interactive pour obtenir des informations détaillées sur une commande spécifique."
 ---
 # Cursor CLI : guide complet + commandes /help
 
@@ -251,22 +258,6 @@ cursor-agent -p "Relis hookDisplayProductAdditionalInfo de ps_feature_badges : s
 ## Sécurité & limitations
 
 Le CLI peut **lire/écrire/supprimer des fichiers** et **exécuter des commandes shell** (avec approbation en mode interactif). En non-interactif, la prudence s’impose : isolez en sandbox/CI, versionnez vos scripts, surveillez les permissions.
-
----
-
-## FAQ rapide
-
-### Le CLI est-il disponible pour tous ?
-
-Le CLI est en bêta et non disponible pour certains plans Enterprise à date.
-
-### Puis-je piloter des intégrations MCP comme en IDE ?
-
-Oui : le CLI lit `mcp.json` et charge les mêmes serveurs/outils.
-
-### Comment obtenir l’aide détaillée en ligne de commande ?
-
-Utilisez `cursor-agent help [commande]` pour la CLI, et `/help [commande]` en session interactive.
 
 ---
 

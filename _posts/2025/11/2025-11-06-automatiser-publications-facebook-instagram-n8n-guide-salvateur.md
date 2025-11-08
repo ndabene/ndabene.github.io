@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["n8n", "Meta API", "Facebook", "Instagram", "No-Code"]
 estimated_reading_time: "15 minutes"
+faq:
+  - question: "Puis-je publier sur plusieurs comptes Instagram/Facebook depuis le même workflow n8n ?"
+    answer: "Absolument ! Créez simplement plusieurs credentials dans n8n (un par compte) et dupliquez vos branches de publication. Attention toutefois aux rate limits si vous gérez de nombreux comptes."
+  - question: "Faut-il renouveler le token Instagram non-expirable ?"
+    answer: "Théoriquement non, il est censé ne jamais expirer. En pratique, si vous modifiez les permissions de votre application développeur ou de l'utilisateur système, vous devrez peut-être en générer un nouveau. Gardez une documentation de la procédure pour ne pas être pris au dépourvu."
+  - question: "Peut-on programmer des publications avec cette méthode ?"
+    answer: "Oui ! Utilisez le node Schedule Trigger de n8n pour déclencher vos workflows à des horaires précis. Vous pouvez même créer une base de données (Airtable, Notion, etc.) qui contient vos posts planifiés, et n8n les publie automatiquement."
+  - question: "Est-ce que cette configuration respecte les conditions d'utilisation de Meta ?"
+    answer: "Oui, tant que vous utilisez l'API officielle (ce que nous faisons ici) et que vous respectez les règles de contenu de Meta. Cette méthode est parfaitement légale et encouragée par Meta pour les usages business légitimes."
 ---
 
 # Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur
@@ -380,24 +389,6 @@ Configurez un système de logging dans n8n pour tracker :
 - Temps de traitement
 
 Vous pouvez utiliser le node "Airtable" ou "Google Sheets" pour créer un dashboard de suivi.
-
-## Questions Fréquentes
-
-**Q : Puis-je publier sur plusieurs comptes Instagram/Facebook depuis le même workflow n8n ?**
-
-**R :** Absolument ! Créez simplement plusieurs credentials dans n8n (un par compte) et dupliquez vos branches de publication. Attention toutefois aux rate limits si vous gérez de nombreux comptes.
-
-**Q : Faut-il renouveler le token Instagram non-expirable ?**
-
-**R :** Théoriquement non, il est censé ne jamais expirer. En pratique, si vous modifiez les permissions de votre application développeur ou de l'utilisateur système, vous devrez peut-être en générer un nouveau. Gardez une documentation de la procédure pour ne pas être pris au dépourvu.
-
-**Q : Peut-on programmer des publications avec cette méthode ?**
-
-**R :** Oui ! Utilisez le node "Schedule Trigger" de n8n pour déclencher vos workflows à des horaires précis. Vous pouvez même créer une base de données (Airtable, Notion, etc.) qui contient vos posts planifiés, et n8n les publie automatiquement.
-
-**Q : Est-ce que cette configuration respecte les conditions d'utilisation de Meta ?**
-
-**R :** Oui, tant que vous utilisez l'API officielle (ce que nous faisons ici) et que vous respectez les règles de contenu de Meta. Cette méthode est parfaitement légale et encouragée par Meta pour les usages business légitimes.
 
 ## Conclusion
 

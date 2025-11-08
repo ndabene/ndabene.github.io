@@ -11,6 +11,13 @@ featured: false
 difficulty: "Intermédiaire"
 technologies: ["IA", "Développement", "GitHub Copilot", "PrestaShop"]
 estimated_reading_time: "9 minutes"
+faq:
+  - question: "Grok Code Fast 1 peut-il remplacer GitHub Copilot ?"
+    answer: "Pas totalement. Il complète Copilot en offrant vitesse et prix réduits, mais reste limité sur la planification."
+  - question: "Est-il adapté à des projets complexes ?"
+    answer: "Non, Grok est optimisé pour les corrections rapides, pas pour la conception globale."
+  - question: "Quelle est la différence avec GPT-5 Mini ?"
+    answer: "GPT-5 Mini raisonne mieux, Grok est plus rapide et plus abordable."
 ---
 
 # Grok Code Fast 1 : l'IA de codage rapide signée xAI
@@ -98,19 +105,6 @@ Mais que vaut réellement ce nouvel assistant de programmation face aux poids lo
 ### Open source & PrestaShop
 - Peut accélérer le **debug de modules** et les **patchs ponctuels**  
 - Pas encore assez fiable pour concevoir des **architectures Symfony** ou des projets complexes  
-
----
-
-## ❓ Questions fréquentes (FAQ)
-
-**Q : Grok Code Fast 1 peut-il remplacer GitHub Copilot ?**  
-R : Pas totalement. Il complète Copilot en offrant vitesse et prix réduits, mais reste limité sur la planification.  
-
-**Q : Est-il adapté à des projets complexes ?**  
-R : Non, Grok est optimisé pour les corrections rapides, pas pour la conception globale.  
-
-**Q : Quelle est la différence avec GPT-5 Mini ?**  
-R : GPT-5 Mini raisonne mieux, Grok est plus rapide et plus abordable.  
 
 ---
 

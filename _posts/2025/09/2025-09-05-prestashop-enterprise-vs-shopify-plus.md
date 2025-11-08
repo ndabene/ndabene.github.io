@@ -11,6 +11,13 @@ featured: false
 difficulty: "Avancé"
 technologies: ["PrestaShop", "Shopify", "Cloud", "SQL", "Open Source"]
 estimated_reading_time: "14 minutes"
+faq:
+  - question: "PrestaShop Enterprise est-il plus cher que Shopify Plus ?"
+    answer: "Non, le tarif de base est similaire (environ 2000-2500€/mois), mais Shopify applique des frais variables sur les paiements, devises et apps tierces qui érodent la marge à mesure que l'activité croît."
+  - question: "Peut-on vraiment personnaliser le checkout avec PrestaShop Enterprise ?"
+    answer: "Oui, PrestaShop Enterprise offre une liberté totale de personnalisation du tunnel de commande, sans dépendre d'un plan spécifique ni de limitations imposées par la plateforme."
+  - question: "Comment PrestaShop Enterprise gère-t-il le RGPD ?"
+    answer: "PrestaShop Enterprise permet d'héberger et d'auditer les données en Europe avec une conformité totale. Shopify externalise via des clauses juridiques mais les données peuvent circuler hors UE."
 ---
 
 # PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme
@@ -104,19 +111,6 @@ Avant de te lancer, voici quelques points essentiels à cadrer :
 - Roadmap migration : pilote → cohabitation → bascule.  
 - Plan SEO et tests de charge.  
 - Projection TCO sur 36 mois, intégrant CA, PSP, apps, infra et support.  
-
----
-
-## ❓ Questions fréquentes
-
-**Q : PrestaShop Enterprise est-il plus cher que Shopify Plus ?**  
-Non. Le tarif de base est similaire, mais Shopify applique des frais variables (PSP, devises, apps) qui érodent ta marge à mesure que tu grossis.  
-
-**Q : Peut-on vraiment personnaliser le checkout avec Enterprise ?**  
-Oui. Tu as une liberté totale, sans dépendre d’un plan spécifique.  
-
-**Q : Quid du RGPD ?**  
-Enterprise permet d’héberger et d’auditer en Europe. Shopify externalise sur la base de clauses juridiques, mais les données circulent hors UE.  
 
 ---
 

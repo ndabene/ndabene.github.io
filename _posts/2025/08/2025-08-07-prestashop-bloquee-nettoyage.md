@@ -16,6 +16,17 @@ llm_summary: Votre boutique PrestaShop est bloquée ? Voici un guide simple entr
   pros pour nettoyer la base de données, éviter les surcharges et reprendre le 
   contrôle.
 llm_topics: [base de données, phpmyadmin, statsdata, nettoyage, performance]
+faq:
+  - question: "Pourquoi ma boutique PrestaShop est-elle bloquée ?"
+    answer: "Le blocage est souvent causé par le module natif statsdata qui enregistre massivement visites, pages vues et logs sans maintenance. Sans nettoyage régulier, ces données saturent la base MySQL provoquant ralentissements sévères, erreurs 500/504 et blocage complet du front-office et back-office, particulièrement sur hébergements mutualisés."
+  - question: "Comment débloquer une boutique PrestaShop en urgence ?"
+    answer: "Accédez à phpMyAdmin, faites d'abord une sauvegarde complète, puis videz les tables volumineuses avec TRUNCATE sur ps_connections, ps_connections_page, ps_guest, ps_pagenotfound, ps_referrer, ps_referrer_cache et ps_log. L'accès est généralement rétabli immédiatement. Désactivez ensuite temporairement le module statsdata."
+  - question: "Comment éviter que ma boutique PrestaShop se bloque à nouveau ?"
+    answer: "Mettez en place un nettoyage automatisé régulier avec un module spécialisé permettant de planifier via Cron le vidage ciblé des tables volumineuses (invités, stats, logs, cache). Cette maintenance préventive évite les saturations futures sans intervention manuelle et garantit des performances stables."
+  - question: "Existe-t-il une alternative au module statsdata ?"
+    answer: "Oui, des modules comme Op'art Stat utilisent les données natives de PrestaShop sans impact sur les performances. Ils proposent plus de 80 rapports clairs et utiles (CA, marges, paniers) avec interface moderne, permettant de suivre ses performances sans surcharger la base de données contrairement à statsdata."
+  - question: "Est-il risqué de vider les tables PrestaShop avec TRUNCATE ?"
+    answer: "TRUNCATE sur les tables de statistiques et logs (ps_connections, ps_guest, ps_log, etc.) est sans risque pour vos données commerciales car elles ne contiennent que des historiques de navigation non critiques. Cependant, faites toujours une sauvegarde complète avant toute intervention directe en base de données par précaution."
 ---
 # Boutique PrestaShop bloquée ? Guide pratique entre pros
 

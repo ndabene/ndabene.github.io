@@ -11,6 +11,13 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["IA", "Sécurité", "Confidentialité"]
 estimated_reading_time: "6 minutes"
+faq:
+  - question: "Mes conversations avec les autres chatbots sont-elles sécurisées ?"
+    answer: "Aucun chatbot ne peut garantir une sécurité absolue. Traitez toujours vos interactions avec des IA comme potentiellement publiques et ne partagez jamais d'informations sensibles ou confidentielles."
+  - question: "Comment vérifier si mes données ont été exposées ?"
+    answer: "Recherchez des extraits spécifiques de vos conversations sur Google en utilisant des mots-clés uniques que vous avez utilisés. Si vous trouvez vos conversations, contactez immédiatement le fournisseur du service."
+  - question: "Que faire si je trouve mes conversations exposées ?"
+    answer: "Contactez immédiatement l'entreprise concernée pour demander le retrait, signalez l'incident aux autorités de protection des données (CNIL en France), et documentez toutes les preuves de l'exposition."
 ---
 
 # Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur
@@ -64,17 +71,6 @@ Cette affaire révèle des vérités dérangeantes sur notre époque numérique.
 ## Comment vous protéger
 
 Face à ces risques, voici quelques précautions essentielles. Ne partagez jamais d'informations sensibles avec un chatbot, lisez attentivement les conditions d'utilisation avant d'utiliser un service d'IA, méfiez-vous des boutons de partage sur les plateformes d'IA, et rappelez-vous que rien n'est vraiment gratuit : si c'est gratuit, vous êtes le produit.
-
-### ❓ Questions Fréquentes
-
-**Q: Mes conversations avec les autres chatbots sont-elles sécurisées ?**  
-**R:** Aucun chatbot ne peut garantir une sécurité absolue. Traitez toujours vos interactions comme potentiellement publiques.
-
-**Q: Comment vérifier si mes données ont été exposées ?**  
-**R:** Recherchez des extraits de vos conversations sur Google avec des mots-clés spécifiques que vous avez utilisés.
-
-**Q: Que faire si je trouve mes conversations exposées ?**  
-**R:** Contactez immédiatement l'entreprise concernée et signalez l'incident aux autorités de protection des données.
 
 ## Un signal d'alarme pour l'humanité
 
