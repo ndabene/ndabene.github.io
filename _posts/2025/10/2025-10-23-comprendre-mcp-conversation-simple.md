@@ -11,6 +11,13 @@ featured: true
 difficulty: "Débutant"
 technologies: ["MCP", "TypeScript", "IA", "JSON"]
 estimated_reading_time: "10 minutes"
+faq:
+  - question: "Le MCP remplace-t-il les API traditionnelles ?"
+    answer: "Non, le MCP est une couche au-dessus des API existantes. Il standardise la façon dont les IA interagissent avec ces API, mais les API restent le moyen technique d'accès aux données."
+  - question: "Puis-je créer un serveur MCP sans être expert en IA ?"
+    answer: "Absolument ! Le MCP utilise des technologies web standard (TypeScript, JSON). Si vous savez créer une API REST basique, vous pouvez créer un serveur MCP."
+  - question: "Mes données sont-elles envoyées à l'IA ?"
+    answer: "Oui, mais seulement après votre autorisation explicite. Le serveur MCP lit vos données et les transmet à l'IA pour traitement. C'est pourquoi la question de la confiance envers le fournisseur d'IA reste importante."
 ---
 
 # Comprendre le Model Context Protocol (MCP) : Une Conversation Simple
@@ -180,17 +187,6 @@ Cette standardisation ouvre des possibilités infinies :
 - Intégration avec des outils d'entreprise
 - Automatisation de tâches complexes
 - Création d'assistants IA véritablement utiles au quotidien
-
-## Questions Fréquentes
-
-**Q : Le MCP remplace-t-il les API traditionnelles ?**
-**R :** Non, le MCP est une couche au-dessus des API existantes. Il standardise la façon dont les IA interagissent avec ces API, mais les API restent le moyen technique d'accès aux données.
-
-**Q : Puis-je créer un serveur MCP sans être expert en IA ?**
-**R :** Absolument ! Le MCP utilise des technologies web standard (TypeScript, JSON). Si vous savez créer une API REST basique, vous pouvez créer un serveur MCP.
-
-**Q : Mes données sont-elles envoyées à l'IA ?**
-**R :** Oui, mais seulement après votre autorisation explicite. Le serveur MCP lit vos données et les transmet à l'IA pour traitement. C'est pourquoi la question de la confiance envers le fournisseur d'IA reste importante.
 
 ## Conclusion
 

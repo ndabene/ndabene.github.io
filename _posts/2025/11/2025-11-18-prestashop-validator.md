@@ -11,6 +11,15 @@ featured: false
 difficulty: "Intermédiaire"
 technologies: ["PrestaShop", "PHP", "Validation"]
 estimated_reading_time: "10 minutes"
+faq:
+  - question: "Le Validator détecte-t-il les bugs métier ?"
+    answer: "Non, et c'est important de comprendre cette limite. Le Validator vérifie la conformité technique et les bonnes pratiques, pas la logique métier de votre module. Un module peut passer la validation et contenir quand même un bug logique. C'est pour ça que les tests manuels et les tests unitaires restent essentiels."
+  - question: "Combien de temps prend la validation ?"
+    answer: "L'analyse automatisée prend généralement 2 à 5 minutes. Si vous soumettez manuellement pour une publication sur la marketplace, l'équipe PrestaShop examine le module dans les 5 à 10 jours ouvrables. Le Validator en ligne, lui, est instantané."
+  - question: "Puis-je utiliser le Validator pour des modules privés ?"
+    answer: "Oui ! Vous n'êtes pas obligé de publier votre module sur la marketplace pour l'utiliser. Le Validator fonctionne pour tout type de module PrestaShop, y compris les solutions sur mesure développées pour un seul client."
+  - question: "Que faire si le Validator reporte une erreur que je ne comprends pas ?"
+    answer: "Chaque rapport inclut une documentation détaillée. Si ce n'est pas suffisant, la communauté PrestaShop est généralement très réactive sur les forums officiels. N'hésitez pas à poser votre question en mentionnant exactement quel type d'erreur vous avez reçue."
 ---
 
 # PrestaShop Validator : Garantir la Qualité de Vos Modules
@@ -139,24 +148,6 @@ Ce processus itératif peut sembler fastidieux, mais c'est exactement comme ça 
 Un conseil d'expert : installez le Validator localement dans votre environnement de développement. Certains projets mettent à disposition des outils CLI (command-line interface) qui vous permettent de tester directement sur votre machine, sans attendre le site web.
 
 Cela accélère énormément le cycle itératif et vous économise de nombreux allers-retours avec le service en ligne.
-
-## Questions Fréquentes
-
-### Q : Le Validator détecte-t-il les bugs métier ?
-
-**R :** Non, et c'est important de comprendre cette limite. Le Validator vérifie la conformité technique et les bonnes pratiques, pas la logique métier de votre module. Un module peut passer la validation et contenir quand même un bug logique. C'est pour ça que les tests manuels et les tests unitaires restent essentiels. Le Validator est une partie de votre processus d'assurance qualité, pas le tout.
-
-### Q : Combien de temps prend la validation ?
-
-**R :** L'analyse automatisée prend généralement 2 à 5 minutes. Si vous soumettez manuellement pour une publication sur la marketplace, l'équipe PrestaShop examine le module dans les 5 à 10 jours ouvrables. Le Validator en ligne, lui, est instantané.
-
-### Q : Puis-je utiliser le Validator pour des modules privés ?
-
-**R :** Oui ! Vous n'êtes pas obligé de publier votre module sur la marketplace pour l'utiliser. Le Validator fonctionne pour tout type de module PrestaShop, y compris les solutions sur mesure développées pour un seul client.
-
-### Q : Que faire si le Validator reporte une erreur que je ne comprends pas ?
-
-**R :** Chaque rapport inclut une documentation détaillée. Si ce n'est pas suffisant, la communauté PrestaShop est généralement très réactive sur les forums officiels. N'hésitez pas à poser votre question en mentionnant exactement quel type d'erreur vous avez reçue.
 
 ## Conseils pour Maximiser l'Impact du Validator
 

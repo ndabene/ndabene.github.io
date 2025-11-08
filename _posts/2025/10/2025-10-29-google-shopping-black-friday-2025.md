@@ -11,6 +11,17 @@ featured: false
 difficulty: "Intermédiaire"
 technologies: ["Google Shopping", "PrestaShop", "Google Merchant Center", "E-commerce"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Pourquoi Google Shopping est-il crucial pour le Black Friday 2025 ?"
+    answer: "70% des revenus publicitaires de Google Ads proviennent de Google Shopping. En 2025, les consommateurs européens prévoient de dépenser en moyenne 400€ chacun avec une participation de 36%. La majorité des décisions d'achat se prennent sur Google Shopping, transformé en plateforme de découverte intelligente dopée à l'IA."
+  - question: "Quelles sont les différences du Black Friday entre Europe et Amérique ?"
+    answer: "En Amérique, c'est un sprint intense d'une seule journée (29 novembre). En Europe, c'est un marathon étalé sur plusieurs semaines avec 61% des consommateurs qui planifient et budgétisent leurs achats bien à l'avance. Cette période d'évaluation prolongée nécessite une présence Google Shopping continue et optimisée."
+  - question: "Quels sont les benchmarks Google Shopping en Europe pour 2025 ?"
+    answer: "Coût par clic moyen : 2,85€, Taux de conversion moyen : 1,76% (deux fois supérieur aux annonces textuelles), Part du mobile : 65% des revenus, ROAS par secteur : Automobile 10,61, Jouets 8,82, Fournitures de bureau 7,09. Ces chiffres montrent que les gens achètent massivement via Google Shopping."
+  - question: "Comment optimiser mes fiches produits pour Google Shopping ?"
+    answer: "Structurez vos données en flux Google Merchant Center avec tous les attributs (ID, titre, description, prix, promotion, stock, image, catégorie). Optimisez les titres produits avec mots-clés recherchés (\"Veste Hiver Homme Imperméable XL Noir\" vs \"Veste\"). Utilisez images haute résolution (minimum 1000x1000px) avec plusieurs vues produit."
+  - question: "Comment le module BusinessTech aide-t-il pour le Black Friday ?"
+    answer: "Le module Google Merchant Center Pro de BusinessTech automatise la synchronisation catalogue en temps réel, exporte les promotions avec mention \"Offre Spéciale\", intègre le système d'avis clients, permet la segmentation avancée par libellés (marge, saisonnalité, performance) et supporte le multi-pays pour vendre en Europe avec installation en moins d'une heure."
 ---
 
 # Google Shopping & Black Friday 2025 : Guide Complet pour PrestaShop

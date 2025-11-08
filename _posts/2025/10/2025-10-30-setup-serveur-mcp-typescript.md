@@ -351,20 +351,6 @@ Nous avons maintenant une base solide ! Voici ce qui nous attend dans les procha
 - **Partie 5** : Gérer les permissions et la sécurité
 - **Partie 6** : Tester notre serveur avec Claude ou ChatGPT
 
-## Questions Fréquentes
-
-**Q : Pourquoi TypeScript et pas JavaScript directement ?**
-
-**R :** TypeScript ajoute une couche de sécurité avec le typage statique. Pour un serveur qui manipule des données sensibles, c'est un investissement qui vaut le coup. De plus, l'auto-complétion et la détection d'erreurs rendent le développement beaucoup plus agréable.
-
-**Q : Puis-je utiliser autre chose qu'Express ?**
-
-**R :** Absolument ! Fastify, Koa, Hapi... tous fonctionnent. Express est juste le plus populaire et le mieux documenté pour débuter.
-
-**Q : Mon serveur ne démarre pas, que faire ?**
-
-**R :** Vérifiez que le port 3000 n'est pas déjà utilisé. Essayez de changer le numéro de port dans le code. Vérifiez aussi que toutes les dépendances sont bien installées avec `npm install`.
-
 ## Conclusion
 
 Nous venons de poser les fondations solides de notre serveur MCP. Certes, il ne fait pas grand-chose pour l'instant, mais tous les outils sont en place. C'est comme avoir préparé sa cuisine avant de commencer à cuisiner un repas complexe : tout est rangé, accessible, et on peut se concentrer sur l'essentiel.

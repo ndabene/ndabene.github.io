@@ -11,6 +11,17 @@ featured: true
 difficulty: "Avancé"
 estimated_reading_time: "10 minutes"
 technologies: ["IA générative", "LLM", "GitHub Copilot", "SonarQube"]
+faq:
+  - question: "Pourquoi les outils de code review IA ne sont-ils pas neutres ?"
+    answer: "Aucune IA n'est neutre car toute IA est le reflet de ses données, concepteurs et choix d'entraînement. Les modèles apprennent principalement sur du code occidental anglophone dans certains langages dominants. Si votre code ne ressemble pas à ce qu'ils connaissent, il sera jugé anormal, pas faux, juste hors norme."
+  - question: "Quels sont les principaux types de biais dans les reviewers IA ?"
+    answer: "Les biais d'entraînement (données majoritairement occidentales anglophones), les biais d'évaluation (préférence pour les formes les plus vues même si non optimales dans votre contexte), et les biais de contexte (l'IA ne comprend pas vos contraintes métier, dette technique, priorités business)."
+  - question: "Comment les biais IA affectent-ils concrètement les développeurs ?"
+    answer: "Les développeurs s'alignent inconsciemment sur conventions majoritaires, évitent structures atypiques, écrivent pour plaire à la machine plutôt qu'aux humains. Dans les grandes entreprises avec review automatisé en CI/CD, le biais devient systémique : un code mal noté peut retarder déploiement, fausser évaluation de performance, influencer décisions RH."
+  - question: "Comment rendre les IA de review plus justes ?"
+    answer: "Diversifier les jeux de données (langues, styles, structures variés), réintroduire l'humain avec système human-in-the-loop pour contextualiser, documenter la logique du modèle (expliquer pourquoi un code est jugé problématique), et former développeurs à détecter quand un feedback IA est légitime ou arbitraire."
+  - question: "Faut-il faire confiance aux outils de code review automatisés ?"
+    answer: "Les IA doivent assister, pas juger seules. Le bon code n'est pas celui qui plaît à une IA, mais celui qui sert son utilisateur, respecte son contexte et garde une intention claire. L'humain garde la responsabilité finale, la machine apporte l'assistance. Déléguer totalement le jugement risque d'automatiser le conformisme."
 ---
 
 # 🧠 Et si l'IA rejetait ton code pour de mauvaises raisons ?

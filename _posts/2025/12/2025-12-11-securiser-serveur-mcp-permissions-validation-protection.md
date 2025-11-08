@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["TypeScript", "MCP", "Security", "JWT", "Validation"]
 estimated_reading_time: "16 minutes"
+faq:
+  - question: "Est-ce que ce système est production-ready ?"
+    answer: "C'est une excellente base, mais pour la production, ajoutez : vrai JWT (avec jsonwebtoken), hash bcrypt, HTTPS obligatoire, logging vers un service externe, et tests de sécurité automatisés."
+  - question: "Comment gérer les permissions plus complexes ?"
+    answer: "Implémentez un système RBAC (Role-Based Access Control) complet avec des rôles composables et des permissions hiérarchiques. Vous pouvez aussi utiliser CASL ou Casbin."
+  - question: "Que faire si un utilisateur abuse du système ?"
+    answer: "Ajoutez un système de bannissement temporaire ou permanent, avec détection automatique des comportements suspects (trop d'erreurs, patterns anormaux)."
+  - question: "Comment protéger contre les attaques DDoS ?"
+    answer: "Utilisez un reverse proxy comme Nginx avec rate limiting, un WAF (Web Application Firewall), et des services comme Cloudflare en frontal."
 ---
 
 # Sécuriser votre Serveur MCP : Permissions, Validation et Protection
@@ -1891,24 +1900,6 @@ class AuditLogger {
   }
 }
 ```
-
-## Questions Fréquentes
-
-**Q : Est-ce que ce système est production-ready ?**
-
-**R :** C'est une excellente base, mais pour la production, ajoutez : vrai JWT (avec jsonwebtoken), hash bcrypt, HTTPS obligatoire, logging vers un service externe, et tests de sécurité automatisés.
-
-**Q : Comment gérer les permissions plus complexes ?**
-
-**R :** Implémentez un système RBAC (Role-Based Access Control) complet avec des rôles composables et des permissions hiérarchiques. Vous pouvez aussi utiliser CASL ou Casbin.
-
-**Q : Que faire si un utilisateur abuse du système ?**
-
-**R :** Ajoutez un système de bannissement temporaire ou permanent, avec détection automatique des comportements suspects (trop d'erreurs, patterns anormaux).
-
-**Q : Comment protéger contre les attaques DDoS ?**
-
-**R :** Utilisez un reverse proxy comme Nginx avec rate limiting, un WAF (Web Application Firewall), et des services comme Cloudflare en frontal.
 
 ## Conclusion
 

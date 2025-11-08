@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["Claude", "IA", "Cloud Development", "GitHub", "JavaScript"]
 estimated_reading_time: "15 minutes"
+faq:
+  - question: "Puis-je utiliser Claude Code Web sans compte Pro ?"
+    answer: "Non, Claude Code Web est actuellement réservé aux utilisateurs Pro et Max. Anthropic propose une bêta limitée en Early Access, mais il n'y a pas d'accès gratuit pour le moment."
+  - question: "Est-ce que mon code présenté à Claude reste privé ?"
+    answer: "Oui, Claude Code Web n'envoie pas votre code aux serveurs Anthropic pour l'entraînement. Le contenu est traité selon la politique de confidentialité standard mais n'alimente pas les futurs modèles."
+  - question: "Puis-je l'utiliser avec des repos privés GitHub ?"
+    answer: "Oui, l'intégration GitHub authentifiée fonctionne aussi avec les repos privés, à condition que votre token GitHub ait les bonnes permissions d'accès."
+  - question: "Ça fonctionne avec PHP/Laravel ou seulement JavaScript ?"
+    answer: "Claude Code Web fonctionne avec tous les langages : PHP, Python, JavaScript/Node, Java, Go, Rust, C#. Tout s'exécute dans le conteneur cloud."
 ---
 
 # Claude Code en Ligne : L'IA Agentique Transforme le Développement Web
@@ -175,20 +184,6 @@ Claude Code Web est actuellement disponible en **bêta publique pour les utilisa
 - **Max** : jusqu'à 200 $/mois → utilisation illimitée + priorité d'exécution
 
 L'accès s'effectue directement depuis claude.ai, ou via l'application iOS Claude si vous préférez développer depuis une tablette (une première sur le marché).
-
-### Questions Fréquentes
-
-**Q: Puis-je utiliser Claude Code Web sans compte Pro ?**
-**R:** Non, actuellement réservé aux utilisateurs Pro et Max. Anthropic propose une bêta limitée aux Early Access, mais pas d'accès gratuit pour le moment.
-
-**Q: Est-ce que mon code présenté à Claude reste privé ?**
-**R:** Oui. Claude Code Web n'envoie pas votre code aux serveurs Anthropic pour l'entraînement. Le contenu est traité selon la politique de confidentialité standard, mais n'alimente pas les futurs modèles.
-
-**Q: Puis-je l'utiliser avec des repos privés GitHub ?**
-**R:** Oui, l'intégration GitHub authentifiée fonctionne aussi avec les repos privés, à condition que votre token GitHub ait les bonnes permissions.
-
-**Q: Ça fonctionne avec PHP/Laravel ou seulement JavaScript ?**
-**R:** Fonctionne avec tous les langages : PHP, Python, JavaScript/Node, Java, Go, Rust, C#. Tout est dans le conteneur cloud.
 
 ## Conclusion : Le Futur Du Développement Est Agentique
 

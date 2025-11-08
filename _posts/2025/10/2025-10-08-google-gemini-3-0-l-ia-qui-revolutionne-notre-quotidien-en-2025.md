@@ -12,6 +12,9 @@ difficulty: "Intermédiaire"
 technologies: ["IA", "Google AI", "Machine Learning", "Gemini"]
 estimated_reading_time: "14 minutes"
 is_future: true
+faq:
+  - question: "Quelle est la différence principale entre Gemini 3.0 et les versions précédentes ?"
+    answer: "La clé réside dans le raisonnement natif intégré (Deep Think) qui permet une analyse profonde avant de répondre, les capacités multimodales avancées (vidéo 60 FPS, analyse 3D), et le mode agent qui permet à l'IA d'exécuter des tâches complexes de manière autonome."
 ---
 
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025

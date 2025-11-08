@@ -11,6 +11,16 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["TypeScript", "MCP", "API REST", "JSON"]
 estimated_reading_time: "14 minutes"
+
+faq:
+  - question: "Puis-je avoir plusieurs serveurs MCP avec des outils différents ?"
+    answer: "Absolument ! Chaque serveur peut exposer ses propres outils. L'IA peut même combiner des outils de plusieurs serveurs dans une même conversation."
+  - question: "Comment gérer les outils qui nécessitent une authentification ?"
+    answer: "Le MCP ne spécifie pas d'authentification standard, mais vous pouvez implémenter JWT, API keys, ou OAuth selon vos besoins. L'endpoint de découverte peut être protégé."
+  - question: "Les outils peuvent-ils communiquer entre eux ?"
+    answer: "Oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels. Cependant, vos outils peuvent appeler d'autres outils via le registre si nécessaire."
+  - question: "Comment versionner mes outils ?"
+    answer: "Incluez la version dans la description de l'outil et dans les métadonnées du serveur. L'IA peut alors décider si elle supporte cette version."
 ---
 
 # Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils
@@ -1054,24 +1064,6 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 ```
-
-## Questions Fréquentes
-
-**Q : Puis-je avoir plusieurs serveurs MCP avec des outils différents ?**
-
-**R :** Absolument ! Chaque serveur peut exposer ses propres outils. L'IA peut même combiner des outils de plusieurs serveurs dans une même conversation.
-
-**Q : Comment gérer les outils qui nécessitent une authentification ?**
-
-**R :** Le MCP ne spécifie pas d'authentification standard, mais vous pouvez implémenter JWT, API keys, ou OAuth selon vos besoins. L'endpoint de découverte peut être protégé.
-
-**Q : Les outils peuvent-ils communiquer entre eux ?**
-
-**R :** Oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels. Cependant, vos outils peuvent appeler d'autres outils via le registre si nécessaire.
-
-**Q : Comment versionner mes outils ?**
-
-**R :** Incluez la version dans la description de l'outil et dans les métadonnées du serveur. L'IA peut alors décider si elle supporte cette version.
 
 ## Conclusion : Un Nouveau Paradigme
 

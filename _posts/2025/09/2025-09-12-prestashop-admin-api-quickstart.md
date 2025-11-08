@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["PrestaShop", "API Platform", "PHP", "Symfony"]
 estimated_reading_time: 12 minutes
+faq:
+  - question: "Dois-je créer mes propres Commands et Queries pour l'Admin API ?"
+    answer: "Non, dans la majorité des cas, les Commands et Queries existent déjà dans le cœur de PrestaShop. Vous devez simplement les brancher correctement dans votre ressource API."
+  - question: "Quelle est la différence entre l'Admin API et l'ancienne Webservice API ?"
+    answer: "L'Admin API repose sur Symfony et API Platform avec support OAuth2 et CQRS, offrant une approche moderne. L'ancienne Webservice API XML est héritée et limitée dans ses fonctionnalités."
+  - question: "Puis-je tester mes endpoints sans interface front ?"
+    answer: "Oui, vous pouvez utiliser des clients HTTP comme Postman, Insomnia ou curl pour tester rapidement vos endpoints API et vérifier leur fonctionnement."
+  - question: "Où poser mes questions si je bloque sur l'Admin API ?"
+    answer: "Le Slack communautaire PrestaShop, canal #cfc-adminapi, est l'endroit idéal pour échanger avec d'autres contributeurs et obtenir de l'aide."
 ---
 
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9
@@ -247,22 +256,6 @@ Les notions avancées (State Providers, Processors, Serialization Groups…) vie
 
 👉 Le meilleur moment pour commencer, c’était hier.
 Le deuxième meilleur moment, c’est aujourd’hui.
-
----
-
-## ❓ Questions Fréquentes
-
-**Q: Dois-je créer mes propres Commands et Queries ?**
-**R:** Non. Dans la majorité des cas, elles existent déjà dans le cœur de PrestaShop. Vous n’avez qu’à les brancher correctement.
-
-**Q: Quelle est la différence entre l’Admin API et l’ancienne Webservice API ?**
-**R:** L’Admin API repose sur Symfony + API Platform et supporte OAuth2, CQRS et une approche moderne, alors que l’ancienne API XML est héritée et limitée.
-
-**Q: Puis-je tester mes endpoints sans front ?**
-**R:** Oui, avec un client HTTP comme Postman, Insomnia ou même `curl`, vous pouvez tester vos endpoints rapidement.
-
-**Q: Où poser mes questions si je bloque ?**
-**R:** Le Slack communautaire `#cfc-adminapi` est l’endroit idéal pour échanger avec d’autres contributeurs.
 
 ---
 

@@ -17,6 +17,17 @@ llm_summary: Découvrez le Model Context Protocol d'Anthropic, le protocole qui
   permet aux IA d'accéder directement à vos données externes. Guide complet avec
   exemples pratiques.
 llm_topics: [MCP, Anthropic, Claude, API, JSON-RPC, IA integration, protocols]
+faq:
+  - question: "Qu'est-ce que le Model Context Protocol (MCP) ?"
+    answer: "Le MCP est un protocole open-source développé par Anthropic qui permet aux modèles d'IA d'accéder directement à des systèmes externes pour obtenir du contexte frais et précis. C'est une API spécialement conçue pour les intelligences artificielles qui fonctionne comme un traducteur universel entre l'IA et vos données."
+  - question: "Quels sont les trois piliers du MCP ?"
+    answer: "Le MCP propose trois types de fonctionnalités principales : les Ressources pour lister et lire des documents en lecture seule, les Outils pour réaliser des opérations interactives sur votre système, et les Prompts qui aident les utilisateurs à formuler correctement leurs demandes via des templates prédéfinis."
+  - question: "Comment développer un serveur MCP ?"
+    answer: "Un serveur MCP traite des requêtes JSON-RPC en implémentant les méthodes initialize, resources/list, resources/read, tools/list et tools/call. Vous pouvez utiliser des bibliothèques officielles pour Node.js, Python ou créer votre propre implémentation en PHP ou autre langage supportant JSON-RPC et HTTP."
+  - question: "Quels sont les risques de sécurité du MCP ?"
+    answer: "Le MCP présente des risques d'injection de prompt où un serveur malveillant pourrait injecter des instructions cachées dans ses réponses. Les mesures de protection incluent l'audit systématique du code serveur, le principe du moindre privilège, l'exécution en environnement isolé et la validation stricte de toutes les entrées et sorties."
+  - question: "Peut-on utiliser MCP avec d'autres IA que Claude ?"
+    answer: "Oui, le MCP étant un protocole open-source standardisé basé sur JSON-RPC, il peut être intégré avec différentes IA supportant ce protocole comme Gemini, VS Code Copilot ou tout autre client implémentant les spécifications MCP. C'est justement l'avantage de cette standardisation universelle."
 ---
 # Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l'IA et vos Systèmes
 

@@ -10,6 +10,17 @@ image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.jpg
 difficulty: "Débutant"
 technologies: ["Banana", "IA générative", "Prompt Engineering"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Pourquoi Banana génère-t-il souvent du texte avec des erreurs ?"
+    answer: "Banana, comme tous les générateurs d'images IA, n'a pas été conçu pour écrire du texte parfaitement lisible. Il dessine des lettres au lieu de les écrire. Les accents français sont mal interprétés, les lettres se fusionnent ou se tordent, et certains mots déclenchent des erreurs visuelles récurrentes."
+  - question: "Quelles sont les 5 règles d'or pour limiter les erreurs de texte dans Banana ?"
+    answer: "1) Décrivez d'abord la scène, ensuite le texte. 2) Précisez que le texte est imprimé, pas manuscrit. 3) Mentionnez la langue et le style typographique (\"texte en français clair et parfaitement écrit\"). 4) Utilisez un format carré 1:1 pour stabilité. 5) Gardez le texte court (moins de 25 caractères)."
+  - question: "Comment gérer les mots problématiques comme 'besoin' ou 'école' ?"
+    answer: "Certains mots provoquent des erreurs récurrentes (fusion, remplacement, accent disparu). Ajoutez à votre prompt : \"Le mot [mot sensible] doit être parfaitement écrit et lisible\". Ou générez temporairement avec version neutre (\"beso1n\" pour \"besoin\") puis corrigez manuellement dans Canva ou Photoshop."
+  - question: "Quel format d'image est recommandé pour du texte dans Banana ?"
+    answer: "Le format carré 1:1 (1080×1080) est le plus stable pour le positionnement du texte et parfait pour les mèmes. Utilisez un style Réaliste ou Cinématique pour des lettres nettes, réglez Sharpness sur 0.7-0.8 pour netteté typographique, et activez Text emphasis pour prioriser le texte."
+  - question: "Peut-on obtenir un texte parfait à 100% avec Banana ?"
+    answer: "Non, aucune méthode ne garantit un texte 100% juste. Vous pouvez obtenir un excellent rendu sur une image et une horreur sur la suivante avec le même prompt. Cependant, en appliquant les bonnes techniques, vous pouvez atteindre 80 à 90% de réussite stable et réduire drastiquement les erreurs."
 ---
 
 # 🍌 TUTORIEL — Comment réduire les erreurs de texte dans Banana (sans promettre l'impossible)

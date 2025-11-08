@@ -11,6 +11,15 @@ featured: true
 difficulty: "Intermédiaire"
 technologies: ["ChatGPT", "GPT-5", "OpenAI", "IA de sécurité"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Les contrôles parentaux fonctionnent-ils rétroactivement sur les anciennes conversations ?"
+    answer: "Non, les contrôles parentaux s'appliquent uniquement aux nouvelles conversations créées après leur activation. Les conversations existantes ne sont pas affectées rétroactivement."
+  - question: "Comment l'IA détecte-t-elle précisément la détresse aiguë ?"
+    answer: "Via l'analyse du langage, des patterns comportementaux et des demandes spécifiques. Les détails techniques exacts restent confidentiels pour éviter les contournements par des utilisateurs malveillants."
+  - question: "Les parents peuvent-ils lire les conversations de leurs adolescents ?"
+    answer: "Non, les fonctionnalités annoncées se concentrent sur les contrôles et notifications de détresse, pas sur la surveillance directe des contenus de conversation pour préserver la vie privée des adolescents."
+  - question: "Ces mesures affecteront-elles les performances de ChatGPT ?"
+    answer: "Le routage vers des modèles de raisonnement pourrait légèrement ralentir les réponses dans certains cas de détresse, mais cela améliore significativement leur qualité et leur sécurité."
 ---
 
 # ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs
@@ -137,22 +146,6 @@ Ces développements soulèvent des questions fondamentales : jusqu'où une entre
 - Gardez à l'esprit qu'une IA, même avancée, ne remplace pas un professionnel de la santé mentale
 - Si vous traversez une crise, contactez directement les lignes d'écoute ou services d'urgence
 - Utilisez les fonctionnalités de pause et de limitation du temps d'utilisation
-
-## Questions fréquemment posées
-
-### ❓ Questions Fréquentes
-
-**Q: Les contrôles parentaux fonctionnent-ils rétroactivement sur les anciennes conversations ?**  
-**R:** Non, ils s'appliquent uniquement aux nouvelles conversations créées après leur activation.
-
-**Q: Comment l'IA détecte-t-elle précisément la "détresse aiguë" ?**  
-**R:** Via l'analyse du langage, des patterns comportementaux et des demandes spécifiques, mais les détails exacts restent confidentiels pour éviter les contournements.
-
-**Q: Les parents peuvent-ils lire les conversations de leurs adolescents ?**  
-**R:** Les fonctionnalités annoncées se concentrent sur les contrôles et notifications de détresse, pas sur la surveillance directe des contenus de conversation.
-
-**Q: Ces mesures affecteront-elles les performances de ChatGPT ?**  
-**R:** Le routage vers des modèles de raisonnement pourrait légèrement ralentir les réponses dans certains cas, mais améliorer leur qualité et leur sécurité.
 
 ## Perspectives d'avenir : vers une IA vraiment responsable
 

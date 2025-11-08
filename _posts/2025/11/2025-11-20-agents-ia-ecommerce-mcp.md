@@ -11,6 +11,17 @@ featured: false
 difficulty: "Avancé"
 technologies: ["MCP", "Anthropic", "PHP", "TypeScript", "PrestaShop"]
 estimated_reading_time: "12 minutes"
+faq:
+  - question: "Qu'est-ce que le Model Context Protocol (MCP) ?"
+    answer: "Le MCP est un protocole open-source d'Anthropic qui définit comment un agent IA communique avec des serveurs d'outils. Chaque serveur MCP expose des capacités (récupérer commandes, modifier produits, générer rapports) sous forme standardisée avec schémas, entrées, sorties et documentation. C'est un langage universel entre modèles IA et systèmes métiers."
+  - question: "Quelle est la différence entre Tool Calling Direct et Code Execution avec MCP ?"
+    answer: "Tool Calling Direct charge toutes les définitions d'outils dans le contexte du modèle qui appelle chaque outil séparément (lent, cher, latence élevée). Code Execution permet au modèle d'écrire et exécuter un script dans une sandbox connectée aux serveurs MCP, filtrant les résultats localement. La consommation de tokens chute de plus de 98%."
+  - question: "Comment l'exécution de code bénéficie-t-elle à l'e-commerce ?"
+    answer: "L'exécution de code permet aux agents de générer des rapports automatisés en PHP/TypeScript, calculer des indicateurs en direct sur commandes, identifier anomalies produits, mettre à jour stocks ou relancer clients, sans jamais saturer le modèle d'informations inutiles. L'agent devient opérateur plutôt que consultant."
+  - question: "Pourquoi l'exécution de code est-elle plus efficace que les appels d'outils ?"
+    answer: "Avec Tool Calling, chaque résultat complet transite par le modèle (milliers de tokens, latence élevée). Avec Code Execution, 95% du travail est effectué localement : l'IA ne lit que le résumé final. Seules les définitions d'outils nécessaires sont chargées, et les gros volumes de données ne passent plus par le modèle."
+  - question: "Qu'est-ce que cela change pour les développeurs e-commerce ?"
+    answer: "Les développeurs écrivent les outils, l'IA apprend à les utiliser, puis elle écrit elle-même le code qui les orchestre. C'est une nouvelle grammaire de collaboration entre modèles et code. Demain, nos agents seront de véritables collaborateurs techniques capables de concevoir, tester et exécuter du code métier autonome."
 ---
 
 # 🧠 Agents IA et e-commerce : pourquoi exécuter du code vaut mieux qu'appeler des outils
