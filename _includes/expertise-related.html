@@ -25,6 +25,17 @@
   {% assign related = related | uniq %}
   {% assign related = related | sort: 'date' | reverse %}
 
+  {% comment %} Exclure les articles futurs {% endcomment %}
+  {% assign filtered_related = '' | split: '' %}
+  {% assign now_timestamp = site.time | date: "%s" %}
+  {% for post in related %}
+    {% assign post_timestamp = post.date | date: "%s" %}
+    {% if post_timestamp <= now_timestamp %}
+      {% assign filtered_related = filtered_related | push: post %}
+    {% endif %}
+  {% endfor %}
+  {% assign related = filtered_related %}
+
   {% if related and related.size > 0 %}
     <div class="expertise-card">
       <h3>Articles liés</h3>
