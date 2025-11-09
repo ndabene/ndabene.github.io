@@ -754,7 +754,7 @@ $border-color: #E2E8F0;
 //================================================
 
 .rss-subscribe {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
   padding: 3rem 0;
 
   @media (max-width: 768px) {
@@ -783,7 +783,7 @@ $border-color: #E2E8F0;
 .rss-subscribe-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -861,12 +861,12 @@ $border-color: #E2E8F0;
 }
 
 .btn-rss-primary {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
   color: white;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 10px 30px rgba($primary-creator, 0.4);
   }
 }
 
