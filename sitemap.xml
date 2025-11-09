@@ -3,11 +3,13 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <!-- Homepage -->
   <url>
     <loc>{{ site.url }}/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}/" />
     <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -19,12 +21,14 @@ layout: null
     {% assign last = page.last_modified_at | default: page.date | default: site.time %}
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ page.url | prepend: site.url }}" />
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
       <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.8{% endif %}</priority>
       {% if page.image %}
       <image:image>
         <image:loc>{{ page.image | prepend: site.url }}</image:loc>
+        <image:title>{% if page.title %}{{ page.title | xml_escape }}{% else %}{{ page.name | xml_escape }}{% endif %}</image:title>
       </image:image>
       {% endif %}
     </url>
@@ -37,12 +41,15 @@ layout: null
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ post.url | prepend: site.url }}" />
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
       <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
       {% if post.image %}
       <image:image>
         <image:loc>{{ post.image | prepend: site.url }}</image:loc>
+        <image:title>{{ post.title | xml_escape }}</image:title>
+        {% if post.description %}<image:caption>{{ post.description | xml_escape }}</image:caption>{% endif %}
       </image:image>
       {% endif %}
     </url>
@@ -55,12 +62,15 @@ layout: null
     {% assign last = project.last_modified_at | default: project.date | default: site.time %}
     <url>
       <loc>{{ project.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ project.url | prepend: site.url }}" />
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>{% if project.sitemap.changefreq %}{{ project.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
       <priority>{% if project.sitemap.priority %}{{ project.sitemap.priority }}{% else %}0.6{% endif %}</priority>
       {% if project.image %}
       <image:image>
         <image:loc>{{ project.image | prepend: site.url }}</image:loc>
+        <image:title>{{ project.title | xml_escape }}</image:title>
+        {% if project.description %}<image:caption>{{ project.description | xml_escape }}</image:caption>{% endif %}
       </image:image>
       {% endif %}
     </url>
@@ -73,16 +83,42 @@ layout: null
     {% assign last = case_study.last_modified_at | default: case_study.date | default: site.time %}
     <url>
       <loc>{{ case_study.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ case_study.url | prepend: site.url }}" />
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>{% if case_study.sitemap.changefreq %}{{ case_study.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
       <priority>{% if case_study.sitemap.priority %}{{ case_study.sitemap.priority }}{% else %}0.5{% endif %}</priority>
       {% if case_study.image %}
       <image:image>
         <image:loc>{{ case_study.image | prepend: site.url }}</image:loc>
+        <image:title>{{ case_study.title | xml_escape }}</image:title>
+        {% if case_study.description %}<image:caption>{{ case_study.description | xml_escape }}</image:caption>{% endif %}
       </image:image>
       {% endif %}
     </url>
     {% endunless %}
+  {% endfor %}
+
+  <!-- Tag Pages (generated dynamically) -->
+  {% assign all_tags = "" | split: "" %}
+  {% for post in site.posts %}
+    {% if post.tags %}
+      {% for tag in post.tags %}
+        {% unless all_tags contains tag %}
+          {% assign all_tags = all_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% for tag in all_tags %}
+    {% assign slug = tag | slugify: "pretty" %}
+    <url>
+      <loc>{{ site.url }}/blog/tags/{{ slug }}/</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}/blog/tags/{{ slug }}/" />
+      <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+    </url>
   {% endfor %}
 
 </urlset>

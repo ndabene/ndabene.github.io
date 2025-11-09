@@ -21,7 +21,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://nicolas-dabene.fr/sitemap_index.xml
+Sitemap: https://nicolas-dabene.fr/sitemap.xml
 
 # Priorités de contenu pour extraction IA
 # Articles techniques haute valeur
