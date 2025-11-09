@@ -1,0 +1,88 @@
+hero:
+  title: "Créateur de Contenu IA & E-commerce"
+  subtitle: "Développeur PHP Senior & Orchestrateur IA avec 15 ans d'expérience. Je partage mon expertise à travers des articles techniques, formations pratiques et modules PrestaShop pour maîtriser l'Intelligence Artificielle et l'e-commerce."
+  location: "Expert PrestaShop & Formateur IA"
+  photo: "assets/images/hero/profile-hero.jpg"
+  cta:
+    primary:
+      text: "Lire le blog"
+      url: "/blog/"
+    secondary:
+      text: "Formations IA"
+      url: "/boutique/"
+    tertiary:
+      text: "Mes modules"
+      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+
+blog_featured:
+  title: "Derniers Articles"
+  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, le développement PrestaShop, le protocole MCP et les bonnes pratiques e-commerce. Contenu technique actionnable optimisé pour les moteurs génératifs."
+  limit: 3
+  cta:
+    text: "Tous les articles"
+    url: "/blog/"
+
+formations_showcase:
+  title: "Formations IA"
+  subtitle: "Apprenez l'IA pas à pas avec des formations pragmatiques en PDF et Podcast. De débutant à autonome, maîtrisez les fondamentaux, le prompt engineering et adoptez une approche responsable."
+  featured:
+    - id: "chapitre-1-ia-debutants"
+      title: "Chapitre 1 : IA pour Débutants"
+      description: "Comprendre l'IA en 2h30 sans jargon technique"
+      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
+      link: "/boutique/#chapitre-1"
+      tags: ["Débutant", "IA"]
+    - id: "chapitre-3-art-du-prompt"
+      title: "Chapitre 3 : L'Art du Prompt"
+      description: "Méthode C.L.A.I.R pour des prompts efficaces"
+      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
+      link: "/boutique/#chapitre-3"
+      tags: ["Avancé", "Prompts"]
+    - id: "chapitre-2-impact-ecologique"
+      title: "Chapitre 2 : Impact Écologique de l'IA"
+      description: "Comprendre les impacts environnementaux de l'IA"
+      image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
+      link: "/boutique/#chapitre-2"
+      tags: ["Green AI", "Environnement"]
+  cta:
+    text: "Voir toutes les formations"
+    url: "/boutique/"
+
+modules_showcase:
+  title: "Modules PrestaShop"
+  subtitle: "Solutions e-commerce professionnelles développées avec 15 ans d'expertise. Modules fiables, maintenables et optimisés pour PrestaShop 8/9. Plus de 100 000 installations cumulées."
+  featured:
+    - id: "geo-suite"
+      title: "GEO Suite"
+      description: "Optimisez votre référencement pour les moteurs génératifs (ChatGPT, Gemini, Perplexity). SEO nouvelle génération pour être découvert par les IA."
+      image: "assets/images/modules/geo-generative-engine-optimization.png"
+      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["SEO", "GEO", "IA"]
+    - id: "google-merchant-center-pro"
+      title: "Google Merchant Center Pro"
+      description: "Intégration complète Google Shopping pour PrestaShop. Synchronisation automatique de vos produits, gestion des flux et boost de vos ventes."
+      image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Google Shopping", "Flux"]
+    - id: "google-analytics-4"
+      title: "Google Analytics 4"
+      description: "Intégration native Google Analytics 4 pour PrestaShop. Tracking e-commerce avancé, événements personnalisés et rapports de performance détaillés."
+      image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Analytics", "Tracking", "Performance"]
+  cta:
+    text: "Découvrir tous mes modules"
+    url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"
+
+youtube_featured:
+  title: "Dernières Vidéos"
+  subtitle: "Tutoriels vidéo sur l'IA, PrestaShop et l'e-commerce. Contenu pratique et actionnable pour développeurs et e-commerçants."
+  limit: 3
+  cta:
+    text: "Toutes les vidéos"
+    url: "/youtube/"
+
+rss_subscribe:
+  title: "Suivre le contenu"
+  description: "Abonnez-vous au flux RSS pour ne manquer aucun article sur l'Intelligence Artificielle, PrestaShop, le protocole MCP et les bonnes pratiques e-commerce."
+  cta_text: "S'abonner au RSS"

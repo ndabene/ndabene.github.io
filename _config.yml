@@ -1,8 +1,8 @@
-title: "Nicolas Dabène - Senior PHP Developer & AI Orchestrator"
+title: "Nicolas Dabène - Créateur de Contenu IA & E-commerce"
 author:
   name: Nicolas Dabène
   email: ndabene2807@gmail.com
-description: "Portfolio de Nicolas Dabène, Senior PHP FullStack Developer & AI Orchestrator avec plus de 15 années d'expérience professionnelle depuis 2010. Spécialiste des solutions BusinessTech, expert des modules PrestaShop et de l'architecture e-commerce."
+description: "Blog et formations de Nicolas Dabène, créateur de contenu spécialisé en Intelligence Artificielle et e-commerce PrestaShop. Articles techniques, formations pratiques et modules professionnels. Expert PrestaShop depuis 2010."
 
 # URL & Base URL
 url: "https://nicolas-dabene.fr" # le domaine de votre site
@@ -12,8 +12,6 @@ baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la r
 lang: fr
 future: true  # Publier les posts avec une date future (filtrés côté client)
 
-# Admin IP pour preview des futurs posts
-admin_preview_ip: "127.0.0.1"  # Remplacez par votre IP locale
 markdown: kramdown
 kramdown:
   input: GFM

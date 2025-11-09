@@ -1,0 +1,55 @@
+<!-- MODULES SHOWCASE - Modules PrestaShop -->
+<section class="section-creator modules-showcase" id="modules">
+    <div class="container-creator">
+        <!-- En-tête -->
+        <div class="section-header-creator">
+            <h2 class="section-title-creator">{{ site.data.home-content.modules_showcase.title | default: "Modules PrestaShop" }}</h2>
+            {% if site.data.home-content.modules_showcase.subtitle and site.data.home-content.modules_showcase.subtitle != "" %}
+            <p class="section-intro-text">{{ site.data.home-content.modules_showcase.subtitle }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Grille de modules -->
+        <div class="modules-grid">
+            {% for module in site.data.home-content.modules_showcase.featured %}
+            <div class="module-card">
+                <div class="module-image">
+                    <a href="{{ module.link }}" target="_blank" rel="noopener">
+                        <img src="/{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="module-content">
+                    <h3 class="module-title">
+                        <a href="{{ module.link }}" target="_blank" rel="noopener">{{ module.title }}</a>
+                    </h3>
+
+                    <p class="module-description">{{ module.description }}</p>
+
+                    {% if module.tags and module.tags.size > 0 %}
+                    <div class="module-tags">
+                        {% for tag in module.tags %}
+                        <span class="tag-badge">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <a href="{{ module.link }}" target="_blank" rel="noopener" class="module-link">
+                        Découvrir <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- CTA Tous les modules -->
+        {% if site.data.home-content.modules_showcase.cta %}
+        <div class="section-cta-center">
+            <a href="{{ site.data.home-content.modules_showcase.cta.url }}" target="_blank" rel="noopener" class="btn-creator btn-creator-outline-large">
+                {{ site.data.home-content.modules_showcase.cta.text }}
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>

@@ -1,0 +1,72 @@
+<!-- YOUTUBE FEATURED - Dernières vidéos YouTube -->
+<section class="section-creator youtube-featured" id="youtube-featured">
+    <div class="container-creator">
+        <!-- En-tête -->
+        <div class="section-header-creator">
+            <h2 class="section-title-creator">{{ site.data.home-content.youtube_featured.title | default: "Dernières Vidéos" }}</h2>
+            {% if site.data.home-content.youtube_featured.subtitle and site.data.home-content.youtube_featured.subtitle != "" %}
+            <p class="section-intro-text">{{ site.data.home-content.youtube_featured.subtitle }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Grille de vidéos -->
+        <div class="youtube-featured-grid">
+            {% assign limit = site.data.home-content.youtube_featured.limit | default: 3 %}
+            {% for video in site.data.youtube_videos limit: limit %}
+            <div class="youtube-video-card">
+                <div class="youtube-video-thumbnail">
+                    <a href="{{ video.url }}" target="_blank" rel="noopener" aria-label="Regarder {{ video.title }} sur YouTube">
+                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy">
+                        <div class="youtube-play-button">
+                            <svg width="68" height="48" viewBox="0 0 68 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#FF0000"/>
+                                <path d="M 45,24 27,14 27,34" fill="#FFFFFF"/>
+                            </svg>
+                        </div>
+                        {% if video.duration %}
+                        <div class="youtube-duration">{{ video.duration | replace: 'PT', '' | replace: 'M', ':' | replace: 'S', '' }}</div>
+                        {% endif %}
+                    </a>
+                </div>
+
+                <div class="youtube-video-content">
+                    <h3 class="youtube-video-title">
+                        <a href="{{ video.url }}" target="_blank" rel="noopener">{{ video.title }}</a>
+                    </h3>
+
+                    <div class="youtube-video-meta">
+                        <time datetime="{{ video.published_at }}">
+                            <i class="fas fa-calendar-alt"></i>
+                            {{ video.published_at | date: "%d %B %Y" }}
+                        </time>
+                        {% if video.category %}
+                        <span class="youtube-category">
+                            <i class="fas fa-tag"></i>
+                            {{ video.category }}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    {% if video.description %}
+                    <p class="youtube-video-description">{{ video.description | strip_html | truncate: 120 }}</p>
+                    {% endif %}
+
+                    <a href="{{ video.url }}" target="_blank" rel="noopener" class="youtube-video-link">
+                        Regarder sur YouTube <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- CTA Toutes les vidéos -->
+        {% if site.data.home-content.youtube_featured.cta %}
+        <div class="section-cta-center">
+            <a href="{{ site.data.home-content.youtube_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
+                {{ site.data.home-content.youtube_featured.cta.text }}
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
