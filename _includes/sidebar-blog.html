@@ -1,0 +1,424 @@
+{% comment %}
+  Sidebar commune pour les pages blog, catégories, tags, etc.
+  Usage: {% include sidebar-blog.html %}
+{% endcomment %}
+
+<aside class="blog-sidebar">
+  <!-- Widget Articles Populaires -->
+  {% include sidebar-popular-posts.html limit=5 %}
+
+  <!-- Widget Publications Externes -->
+  {% include sidebar-external-publications.html %}
+
+  <!-- Widget Trending Topics -->
+  {% include sidebar-trending-topics.html %}
+
+  <!-- Widget Articles récents -->
+  <div class="sidebar-widget-compact">
+    <h4><i class="fas fa-clock"></i> Articles récents</h4>
+    <div class="recent-posts-compact">
+      {% assign recent_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+      {% for post in recent_posts limit: 5 %}
+        <article class="recent-post-compact">
+          {% if post.image %}
+            <div class="recent-thumb-mini">
+              <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            </div>
+          {% endif %}
+          <div class="recent-content-mini">
+            <h5><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a></h5>
+            <time>{% include date-fr.html date=post.date %}</time>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Widget Catégories -->
+  <div class="sidebar-widget-compact">
+    <h4><i class="fas fa-folder"></i> Catégories</h4>
+    <div class="categories-list">
+      {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+      {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
+      {% for category in all_categories %}
+        {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
+        <a href="/blog/categories/{{ category | slugify }}/" class="category-link">
+          <i class="fas fa-chevron-right"></i>
+          {{ category }}
+          <span class="category-count">({{ category_posts.size }})</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Widget Tags Populaires -->
+  <div class="sidebar-widget-compact">
+    <h4><i class="fas fa-tags"></i> Tags Populaires</h4>
+    <div class="tags-cloud-compact">
+      {% assign all_tags = "" | split: "" %}
+      {% for post in published_posts %}
+        {% if post.tags %}
+          {% for tag in post.tags %}
+            {% assign all_tags = all_tags | push: tag %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign tag_counts = "" | split: "" %}
+      {% assign unique_tags = all_tags | uniq | sort %}
+
+      {% for tag in unique_tags %}
+        {% assign count = 0 %}
+        {% for t in all_tags %}
+          {% if t == tag %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% assign tag_data = tag | append: "|" | append: count %}
+        {% assign tag_counts = tag_counts | push: tag_data %}
+      {% endfor %}
+
+      {% assign sorted_tags = tag_counts | sort | reverse %}
+
+      {% for tag_data in sorted_tags limit: 15 %}
+        {% assign parts = tag_data | split: "|" %}
+        {% assign tag = parts[0] %}
+        {% assign count = parts[1] | plus: 0 %}
+        <a href="/blog/tags/{{ tag | slugify }}/" class="tag-badge">
+          #{{ tag }}
+          <span>({{ count }})</span>
+        </a>
+      {% endfor %}
+    </div>
+    <div class="tags-footer">
+      <a href="/blog/tags/" class="view-all-tags">
+        <i class="fas fa-th"></i>
+        Voir tous les tags
+      </a>
+    </div>
+  </div>
+
+  <!-- Widget Séries -->
+  {% if site.data.series %}
+    {% assign has_series_with_posts = false %}
+    {% for series in site.data.series %}
+      {% assign series_posts = published_posts | where: "series", series[0] %}
+      {% if series_posts.size > 0 %}
+        {% assign has_series_with_posts = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_series_with_posts %}
+    <div class="sidebar-widget-compact">
+      <h4><i class="fas fa-list-ol"></i> Séries d'articles</h4>
+      <div class="series-list">
+        {% for series_entry in site.data.series %}
+          {% assign series_key = series_entry[0] %}
+          {% assign series_data = series_entry[1] %}
+          {% assign series_posts = published_posts | where: "series", series_key %}
+          {% if series_posts.size > 0 %}
+            <a href="/series/{{ series_key | slugify }}.html" class="series-link">
+              <i class="fas fa-book"></i>
+              {{ series_key }}
+              <span class="series-count">({{ series_posts.size }})</span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
+
+  <!-- Widget Nuage de tags (mini version) -->
+  <div class="sidebar-widget-compact sidebar-cta">
+    <h4><i class="fas fa-compass"></i> Explorer</h4>
+    <div class="explore-links">
+      <a href="/guides/" class="explore-link">
+        <i class="fas fa-book-open"></i>
+        <span>Guides thématiques</span>
+      </a>
+      <a href="/blog/" class="explore-link">
+        <i class="fas fa-newspaper"></i>
+        <span>Tous les articles</span>
+      </a>
+      <a href="/boutique/" class="explore-link">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Formations</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<style>
+.blog-sidebar {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.sidebar-widget-compact {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 2px solid #e2e8f0;
+}
+
+.sidebar-widget-compact h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-widget-compact h4 i {
+  color: #7c3aed;
+}
+
+/* Recent posts */
+.recent-posts-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recent-post-compact {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.recent-thumb-mini {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.recent-thumb-mini img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recent-content-mini h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.375rem 0;
+  line-height: 1.4;
+}
+
+.recent-content-mini h5 a {
+  color: #0f172a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.recent-content-mini h5 a:hover {
+  color: #7c3aed;
+}
+
+.recent-content-mini time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Categories */
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-link:hover {
+  background: #f8fafc;
+  color: #7c3aed;
+  transform: translateX(4px);
+}
+
+.category-link i {
+  font-size: 0.625rem;
+  color: #cbd5e1;
+}
+
+.category-count {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+/* Tags */
+.tags-cloud-compact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  background: #f1f5f9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.tag-badge:hover {
+  background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+  color: #7c3aed;
+  border-color: #e9d5ff;
+  transform: translateY(-2px);
+}
+
+.tag-badge span {
+  color: #94a3b8;
+  font-size: 0.6875rem;
+}
+
+.tags-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.view-all-tags {
+  color: #7c3aed;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.view-all-tags:hover {
+  color: #6d28d9;
+  gap: 0.75rem;
+}
+
+/* Series */
+.series-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.series-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.series-link:hover {
+  background: white;
+  border-color: #7c3aed;
+  color: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(124, 58, 237, 0.15);
+}
+
+.series-link i {
+  color: #7c3aed;
+}
+
+.series-count {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+/* CTA */
+.sidebar-cta {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-color: #e9d5ff;
+}
+
+.explore-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.explore-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e9d5ff;
+}
+
+.explore-link:hover {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.explore-link i {
+  color: #7c3aed;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+.explore-link:hover i {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .blog-sidebar {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+    margin-top: 3rem;
+  }
+
+  .sidebar-widget-compact {
+    margin-bottom: 1.5rem;
+  }
+}
+</style>

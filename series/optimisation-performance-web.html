@@ -1,0 +1,18 @@
+---
+layout: series
+title: "Optimisation Performance Web"
+series_name: "Optimisation Performance Web"
+permalink: /series/optimisation-performance-web.html
+description: "Techniques avancées pour optimiser les performances de vos applications web PHP et JavaScript."
+keywords: "performance web, optimisation php, core web vitals, série performance, cache php"
+---
+
+{% comment %}Collect all posts from this series{% endcomment %}
+{% assign series_posts = site.posts | where: "series", "Optimisation Performance Web" | sort: "series_part" %}
+
+{% comment %}Get series info from data file{% endcomment %}
+{% assign series_info = site.data.series["Optimisation Performance Web"] %}
+
+{% comment %}Make variables available to the layout{% endcomment %}
+{% assign page.series_posts = series_posts %}
+{% assign page.series_info = series_info %}
