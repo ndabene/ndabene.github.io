@@ -26,7 +26,11 @@
 {% endif %}
 <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
 <meta name="author" content="{{ site.author.name }}">
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% else %}
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{% endif %}
 
 <meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% else %}professional-profile{% endif %}">
 <meta name="expertise-level" content="{% if page.difficulty %}{{ page.difficulty }}{% else %}expert{% endif %}">
