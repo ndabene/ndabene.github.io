@@ -11,6 +11,11 @@ $bg-light: #F8FAFC;
 $bg-card: #FFFFFF;
 $border-color: #E2E8F0;
 
+// Couleurs du footer (importées de variables.scss)
+$footer-primary: #0f172a; // Bleu marine profond
+$footer-secondary: #1e293b; // Gris anthracite
+$footer-gray: #475569; // Gris ardoise
+
 // Conteneur créateur
 .container-creator {
   max-width: 1200px;
@@ -754,7 +759,7 @@ $border-color: #E2E8F0;
 //================================================
 
 .rss-subscribe {
-  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
+  background: linear-gradient(135deg, $footer-primary 0%, $footer-secondary 50%, $footer-gray 100%);
   padding: 3rem 0;
 
   @media (max-width: 768px) {
@@ -783,7 +788,7 @@ $border-color: #E2E8F0;
 .rss-subscribe-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
+  background: linear-gradient(135deg, $footer-primary 0%, $footer-secondary 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -861,12 +866,12 @@ $border-color: #E2E8F0;
 }
 
 .btn-rss-primary {
-  background: linear-gradient(135deg, $primary-creator 0%, #3B82F6 100%);
+  background: linear-gradient(135deg, $footer-primary 0%, $footer-secondary 100%);
   color: white;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba($primary-creator, 0.4);
+    box-shadow: 0 10px 30px rgba($footer-primary, 0.4);
   }
 }
 
