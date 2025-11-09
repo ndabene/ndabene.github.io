@@ -1,27 +1,46 @@
 ---
 layout: post
-title: "Claude Code en Ligne : L'IA Agentique Transforme le Développement Web"
+title: 'Claude Code en Ligne : L''IA Agentique Transforme le Développement Web'
 date: 2025-10-21
 author: Nicolas Dabène
-categories: [Développement, Intelligence Artificielle, Tutoriel]
-tags: [Claude Code, IA agentique, cloud development, GitHub integration, automation]
-excerpt: "Claude Code débarque dans votre navigateur : découvrez comment l'IA agentique d'Anthropic bouleverse le workflow des développeurs PHP et JavaScript en 2025."
+categories:
+- Développement
+- Intelligence Artificielle
+- Tutoriel
+tags:
+- Claude Code
+- IA agentique
+- développement cloud
+- GitHub integration
+- automatisation
+excerpt: 'Claude Code débarque dans votre navigateur : découvrez comment l''IA agentique
+  d''Anthropic bouleverse le workflow des développeurs PHP et JavaScript en 2025.'
 image: /assets/images/blog/2025/10/2025-10-21-claude-code-browser.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["Claude", "IA", "Cloud Development", "GitHub", "JavaScript"]
-estimated_reading_time: "15 minutes"
+difficulty: Intermédiaire
+technologies:
+- Claude
+- IA
+- Cloud Development
+- GitHub
+- JavaScript
+estimated_reading_time: 15 minutes
 faq:
-  - question: "Puis-je utiliser Claude Code Web sans compte Pro ?"
-    answer: "Non, Claude Code Web est actuellement réservé aux utilisateurs Pro et Max. Anthropic propose une bêta limitée en Early Access, mais il n'y a pas d'accès gratuit pour le moment."
-  - question: "Est-ce que mon code présenté à Claude reste privé ?"
-    answer: "Oui, Claude Code Web n'envoie pas votre code aux serveurs Anthropic pour l'entraînement. Le contenu est traité selon la politique de confidentialité standard mais n'alimente pas les futurs modèles."
-  - question: "Puis-je l'utiliser avec des repos privés GitHub ?"
-    answer: "Oui, l'intégration GitHub authentifiée fonctionne aussi avec les repos privés, à condition que votre token GitHub ait les bonnes permissions d'accès."
-  - question: "Ça fonctionne avec PHP/Laravel ou seulement JavaScript ?"
-    answer: "Claude Code Web fonctionne avec tous les langages : PHP, Python, JavaScript/Node, Java, Go, Rust, C#. Tout s'exécute dans le conteneur cloud."
+- question: Puis-je utiliser Claude Code Web sans compte Pro ?
+  answer: Non, Claude Code Web est actuellement réservé aux utilisateurs Pro et Max.
+    Anthropic propose une bêta limitée en Early Access, mais il n'y a pas d'accès
+    gratuit pour le moment.
+- question: Est-ce que mon code présenté à Claude reste privé ?
+  answer: Oui, Claude Code Web n'envoie pas votre code aux serveurs Anthropic pour
+    l'entraînement. Le contenu est traité selon la politique de confidentialité standard
+    mais n'alimente pas les futurs modèles.
+- question: Puis-je l'utiliser avec des repos privés GitHub ?
+  answer: Oui, l'intégration GitHub authentifiée fonctionne aussi avec les repos privés,
+    à condition que votre token GitHub ait les bonnes permissions d'accès.
+- question: Ça fonctionne avec PHP/Laravel ou seulement JavaScript ?
+  answer: 'Claude Code Web fonctionne avec tous les langages : PHP, Python, JavaScript/Node,
+    Java, Go, Rust, C#. Tout s''exécute dans le conteneur cloud.'
 ---
-
 # Claude Code en Ligne : L'IA Agentique Transforme le Développement Web
 
 Imaginez un développeur qui n'a jamais besoin d'ouvrir son terminal local, qui peut corriger un bug en disant simplement "il y a un problème sur la page de login" et qui génère automatiquement une pull request bien documentée. Cela ne relève plus de la science-fiction : **Claude Code, l'outil de codage d'Anthropic, franchit un cap décisif en devenant totalement accessible depuis votre navigateur**.
