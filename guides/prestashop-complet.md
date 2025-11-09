@@ -3,7 +3,7 @@ layout: content-hub
 title: "Guide Complet PrestaShop"
 description: "Le guide ultime pour maîtriser PrestaShop : développement de modules, optimisation des performances, SEO, sécurité et best practices. Toutes les ressources pour devenir expert PrestaShop."
 permalink: /guides/prestashop-complet/
-hub_icon: "fab fa-shopify"
+hub_icon: "fas fa-shopping-cart"
 hero_gradient: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563EB 100%)"
 hub_categories:
   - "PrestaShop"
