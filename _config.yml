@@ -12,8 +12,6 @@ baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la r
 lang: fr
 future: true  # Publier les posts avec une date future (filtrés côté client)
 
-# Admin IP pour preview des futurs posts
-admin_preview_ip: "127.0.0.1"  # Remplacez par votre IP locale
 markdown: kramdown
 kramdown:
   input: GFM

@@ -1,7 +1,7 @@
 hero:
   title: "Créateur de Contenu IA & E-commerce"
-  subtitle: "Articles techniques, formations pratiques et modules PrestaShop pour maîtriser l'Intelligence Artificielle et l'e-commerce"
-  location: "Expert PrestaShop depuis 2010"
+  subtitle: "Développeur PHP Senior & Orchestrateur IA avec 15 ans d'expérience. Je partage mon expertise à travers des articles techniques, formations pratiques et modules PrestaShop pour maîtriser l'Intelligence Artificielle et l'e-commerce."
+  location: "Expert PrestaShop certifié depuis 2010"
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
@@ -16,15 +16,15 @@ hero:
 
 blog_featured:
   title: "Derniers Articles"
-  subtitle: "Articles techniques sur l'IA, PrestaShop et l'e-commerce"
-  limit: 4
+  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, le développement PrestaShop, le protocole MCP et les bonnes pratiques e-commerce. Contenu technique actionnable optimisé pour les moteurs génératifs."
+  limit: 3
   cta:
     text: "Tous les articles"
     url: "/blog/"
 
 formations_showcase:
   title: "Formations IA"
-  subtitle: "Parcours d'apprentissage pratique pour maîtriser l'IA"
+  subtitle: "Apprenez l'IA pas à pas avec des formations pragmatiques en PDF et Podcast. De débutant à autonome, maîtrisez les fondamentaux, le prompt engineering et adoptez une approche responsable."
   featured:
     - id: "chapitre-1-ia-debutants"
       title: "Chapitre 1 : IA pour Débutants"
@@ -50,20 +50,26 @@ formations_showcase:
 
 modules_showcase:
   title: "Modules PrestaShop"
-  subtitle: "Solutions e-commerce professionnelles"
+  subtitle: "Solutions e-commerce professionnelles développées avec 15 ans d'expertise. Modules fiables, maintenables et optimisés pour PrestaShop 8/9. Plus de 100 000 installations cumulées."
   featured:
     - id: "geo-suite"
       title: "GEO Suite"
-      description: "SEO local & IA pour améliorer votre visibilité dans les moteurs génératifs"
+      description: "Optimisez votre référencement pour les moteurs génératifs (ChatGPT, Gemini, Perplexity). SEO nouvelle génération pour être découvert par les IA."
       image: "assets/images/modules/geo-generative-engine-optimization.png"
       link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["SEO", "GEO", "IA"]
     - id: "google-merchant-center-pro"
       title: "Google Merchant Center Pro"
-      description: "Intégration Google Shopping pour booster vos ventes e-commerce"
+      description: "Intégration complète Google Shopping pour PrestaShop. Synchronisation automatique de vos produits, gestion des flux et boost de vos ventes."
       image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
       link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["Google Shopping", "Flux"]
+    - id: "google-analytics-4"
+      title: "Google Analytics 4"
+      description: "Intégration native Google Analytics 4 pour PrestaShop. Tracking e-commerce avancé, événements personnalisés et rapports de performance détaillés."
+      image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Analytics", "Tracking", "Performance"]
   cta:
     text: "Découvrir tous mes modules"
     url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"
