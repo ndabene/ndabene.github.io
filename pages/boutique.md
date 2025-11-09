@@ -86,14 +86,7 @@ llm_context: |
           {% for resultat in product.resultats %}
             "{{ resultat | escape }}"{% unless forloop.last %},{% endunless %}
           {% endfor %}
-        ],{% endif %}
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "15",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        ]{% endif %}
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
     {% endfor %}
@@ -170,14 +163,7 @@ llm_context: |
           "@type": "EducationalAudience",
           "educationalRole": "{% if product.niveau %}{{ product.niveau }}{% else %}Tous niveaux{% endif %}"
         },{% endif %}
-        "learningResourceType": "E-book PDF",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "12",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
+        "learningResourceType": "E-book PDF"
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
     {% endfor %}
@@ -262,13 +248,6 @@ llm_context: |
             "name": "Nicolas Dabène"
           },
           "validFrom": "{{ 'now' | date: '%Y-%m-%d' }}"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "18",
-          "bestRating": "5",
-          "worstRating": "1"
         }
       }{% unless forloop.last %},{% endunless %}
       {% endif %}
