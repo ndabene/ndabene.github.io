@@ -41,6 +41,12 @@ jobs:
         run: |
           printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
 
+      - name: Generate tag pages
+        run: |
+          echo "🚀 Génération automatique des pages de tags..."
+          ruby scripts/generate_tag_pages.rb
+          echo "✅ Pages de tags générées avec succès"
+
       - name: Build with Jekyll
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"
