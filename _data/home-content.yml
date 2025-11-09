@@ -1,0 +1,69 @@
+hero:
+  title: "Créateur de Contenu IA & E-commerce"
+  subtitle: "Articles techniques, formations pratiques et modules PrestaShop pour maîtriser l'Intelligence Artificielle et l'e-commerce"
+  location: "Expert PrestaShop depuis 2010"
+  photo: "assets/images/hero/profile-hero.jpg"
+  cta:
+    primary:
+      text: "Lire le blog"
+      url: "/blog/"
+    secondary:
+      text: "Formations IA"
+      url: "/boutique/"
+    tertiary:
+      text: "Mes modules"
+      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+
+blog_featured:
+  title: "Derniers Articles"
+  subtitle: "Articles techniques sur l'IA, PrestaShop et l'e-commerce"
+  limit: 4
+  cta:
+    text: "Tous les articles"
+    url: "/blog/"
+
+formations_showcase:
+  title: "Formations IA"
+  subtitle: "Parcours d'apprentissage pratique pour maîtriser l'IA"
+  featured:
+    - id: "chapitre-1-ia-debutants"
+      title: "Chapitre 1 : IA pour Débutants"
+      description: "Comprendre l'IA en 2h30 sans jargon technique"
+      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
+      link: "/boutique/#chapitre-1"
+      tags: ["Débutant", "IA"]
+    - id: "chapitre-3-art-du-prompt"
+      title: "Chapitre 3 : L'Art du Prompt"
+      description: "Méthode C.L.A.I.R pour des prompts efficaces"
+      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
+      link: "/boutique/#chapitre-3"
+      tags: ["Avancé", "Prompts"]
+    - id: "chapitre-2-impact-ecologique"
+      title: "Chapitre 2 : Impact Écologique de l'IA"
+      description: "Comprendre les impacts environnementaux de l'IA"
+      image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
+      link: "/boutique/#chapitre-2"
+      tags: ["Green AI", "Environnement"]
+  cta:
+    text: "Voir toutes les formations"
+    url: "/boutique/"
+
+modules_showcase:
+  title: "Modules PrestaShop"
+  subtitle: "Solutions e-commerce professionnelles"
+  featured:
+    - id: "geo-suite"
+      title: "GEO Suite"
+      description: "SEO local & IA pour améliorer votre visibilité dans les moteurs génératifs"
+      image: "assets/images/modules/geo-generative-engine-optimization.png"
+      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["SEO", "GEO", "IA"]
+    - id: "google-merchant-center-pro"
+      title: "Google Merchant Center Pro"
+      description: "Intégration Google Shopping pour booster vos ventes e-commerce"
+      image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Google Shopping", "Flux"]
+  cta:
+    text: "Découvrir tous mes modules"
+    url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"

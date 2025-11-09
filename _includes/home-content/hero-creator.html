@@ -1,0 +1,42 @@
+<!-- HERO CREATOR - Créateur de contenu IA & E-commerce -->
+<section class="hero-creator" id="hero-creator">
+    <div class="container">
+        <div class="hero-creator-grid">
+            <!-- Photo professionnelle -->
+            <div class="hero-creator-visual">
+                <div class="hero-photo-card">
+                    <img src="/assets/images/hero/profile-hero.jpg"
+                         alt="Nicolas Dabène - Créateur de Contenu IA & E-commerce"
+                         class="hero-photo">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="hero-creator-content">
+                <div class="hero-badge">
+                    <i class="fas fa-pencil-alt"></i>
+                    <span>{{ site.data.home-content.hero.location }}</span>
+                </div>
+
+                <h1 class="hero-creator-title">{{ site.data.home-content.hero.title }}</h1>
+                <p class="hero-creator-subtitle">{{ site.data.home-content.hero.subtitle }}</p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-creator-cta">
+                    <a href="{{ site.data.home-content.hero.cta.primary.url }}" class="btn-creator btn-creator-primary">
+                        <i class="fas fa-book-open"></i>
+                        <span>{{ site.data.home-content.hero.cta.primary.text }}</span>
+                    </a>
+                    <a href="{{ site.data.home-content.hero.cta.secondary.url }}" class="btn-creator btn-creator-secondary">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>{{ site.data.home-content.hero.cta.secondary.text }}</span>
+                    </a>
+                    <a href="{{ site.data.home-content.hero.cta.tertiary.url }}" class="btn-creator btn-creator-outline">
+                        <i class="fas fa-cube"></i>
+                        <span>{{ site.data.home-content.hero.cta.tertiary.text }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

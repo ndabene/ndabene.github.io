@@ -1,0 +1,55 @@
+<!-- FORMATIONS SHOWCASE - Formations IA -->
+<section class="section-creator formations-showcase" id="formations">
+    <div class="container-creator">
+        <!-- En-tête -->
+        <div class="section-header-creator">
+            <h2 class="section-title-creator">{{ site.data.home-content.formations_showcase.title | default: "Formations IA" }}</h2>
+            {% if site.data.home-content.formations_showcase.subtitle and site.data.home-content.formations_showcase.subtitle != "" %}
+            <p class="section-intro-text">{{ site.data.home-content.formations_showcase.subtitle }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Grille de formations -->
+        <div class="formations-grid">
+            {% for formation in site.data.home-content.formations_showcase.featured %}
+            <div class="formation-card">
+                <div class="formation-image">
+                    <a href="{{ formation.link }}">
+                        <img src="/{{ formation.image }}" alt="{{ formation.title }}" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="formation-content">
+                    <h3 class="formation-title">
+                        <a href="{{ formation.link }}">{{ formation.title }}</a>
+                    </h3>
+
+                    <p class="formation-description">{{ formation.description }}</p>
+
+                    {% if formation.tags and formation.tags.size > 0 %}
+                    <div class="formation-tags">
+                        {% for tag in formation.tags %}
+                        <span class="tag-badge">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <a href="{{ formation.link }}" class="formation-link">
+                        Découvrir <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- CTA Toutes les formations -->
+        {% if site.data.home-content.formations_showcase.cta %}
+        <div class="section-cta-center">
+            <a href="{{ site.data.home-content.formations_showcase.cta.url }}" class="btn-creator btn-creator-secondary-large">
+                {{ site.data.home-content.formations_showcase.cta.text }}
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
