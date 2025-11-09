@@ -1,30 +1,68 @@
 ---
 layout: post
-title: "🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?"
+title: '🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?'
 date: 2025-10-21
 author: Nicolas Dabène
-categories: [PrestaShop, Développement, PHP, Tutoriel]
-tags: [PrestaShop, Module, Développement, Erreurs, Debug, Hook, Smarty, SQL, Cache]
-excerpt: "Développeurs PrestaShop, je vous lance un défi ! Découvrez les 5 erreurs courantes dans ce module de best-sellers et améliorez vos compétences de développement."
+categories:
+- PrestaShop
+- Développement
+- PHP
+- Tutoriel
+tags:
+- PrestaShop
+- modules
+- développement
+- Erreurs
+- Debug
+- Hook
+- Smarty
+- SQL
+- Cache
+excerpt: Développeurs PrestaShop, je vous lance un défi ! Découvrez les 5 erreurs
+  courantes dans ce module de best-sellers et améliorez vos compétences de développement.
 image: /assets/images/blog/2025/10/2025-10-21-enigme-prestashop-erreurs.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "PHP", "MySQL", "Smarty", "Hook"]
-estimated_reading_time: "15 minutes"
+difficulty: Intermédiaire
+technologies:
+- PrestaShop
+- PHP
+- MySQL
+- Smarty
+- Hook
+estimated_reading_time: 15 minutes
 is_future: true
 faq:
-  - question: "Pourquoi parent::__construct() est-il indispensable dans un module PrestaShop ?"
-    answer: "parent::__construct() initialise le contexte ($this->context), configure l'environnement Smarty, prépare les traductions ($this->l()) et initialise toutes les propriétés essentielles du module. Sans cet appel, vous obtiendrez des erreurs fatales 'Call to undefined method' ou 'Undefined property' dès l'utilisation de ces fonctionnalités."
-  - question: "Pourquoi faut-il appeler parent::install() lors de l'installation d'un module ?"
-    answer: "parent::install() enregistre votre module dans la base de données PrestaShop (table ps_module), définit le statut d'activation et permet à PrestaShop de 'voir' votre module. Sans cet appel, le module semble installé mais n'apparaît pas dans la liste des modules et les hooks ne fonctionnent pas."
-  - question: "Quelle est la bonne façon d'accéder au contexte PrestaShop dans un hook ?"
-    answer: "La meilleure pratique est d'utiliser Context::getContext() qui fonctionne partout et est plus fiable. Vous pouvez aussi utiliser $this->context (possible après parent::__construct()). Le contexte contient toutes les informations sur l'environnement actuel : langue, boutique, client, devise."
-  - question: "Comment assigner correctement des variables à Smarty dans PrestaShop ?"
-    answer: "Utilisez $this->context->smarty->assign(array('products' => $bestSellers)) en format tableau. Smarty attend un tableau associatif complet avec toutes les variables, pas des appels individuels. C'est plus performant (un seul appel), plus lisible (toutes les variables au même endroit) et plus facile à maintenir."
-  - question: "Quelle est la structure de chemin correcte pour les templates de hooks ?"
-    answer: "PrestaShop suit une convention stricte : views/templates/hook/ pour les templates de hooks, views/templates/admin/ pour l'administration, et views/templates/front/ pour les contrôleurs front-office. Le chemin complet dans display() doit être : $this->display(__FILE__, 'views/templates/hook/bestsellers.tpl')."
+- question: Pourquoi parent::__construct() est-il indispensable dans un module PrestaShop
+    ?
+  answer: parent::__construct() initialise le contexte ($this->context), configure
+    l'environnement Smarty, prépare les traductions ($this->l()) et initialise toutes
+    les propriétés essentielles du module. Sans cet appel, vous obtiendrez des erreurs
+    fatales 'Call to undefined method' ou 'Undefined property' dès l'utilisation de
+    ces fonctionnalités.
+- question: Pourquoi faut-il appeler parent::install() lors de l'installation d'un
+    module ?
+  answer: parent::install() enregistre votre module dans la base de données PrestaShop
+    (table ps_module), définit le statut d'activation et permet à PrestaShop de 'voir'
+    votre module. Sans cet appel, le module semble installé mais n'apparaît pas dans
+    la liste des modules et les hooks ne fonctionnent pas.
+- question: Quelle est la bonne façon d'accéder au contexte PrestaShop dans un hook
+    ?
+  answer: 'La meilleure pratique est d''utiliser Context::getContext() qui fonctionne
+    partout et est plus fiable. Vous pouvez aussi utiliser $this->context (possible
+    après parent::__construct()). Le contexte contient toutes les informations sur
+    l''environnement actuel : langue, boutique, client, devise.'
+- question: Comment assigner correctement des variables à Smarty dans PrestaShop ?
+  answer: Utilisez $this->context->smarty->assign(array('products' => $bestSellers))
+    en format tableau. Smarty attend un tableau associatif complet avec toutes les
+    variables, pas des appels individuels. C'est plus performant (un seul appel),
+    plus lisible (toutes les variables au même endroit) et plus facile à maintenir.
+- question: Quelle est la structure de chemin correcte pour les templates de hooks
+    ?
+  answer: 'PrestaShop suit une convention stricte : views/templates/hook/ pour les
+    templates de hooks, views/templates/admin/ pour l''administration, et views/templates/front/
+    pour les contrôleurs front-office. Le chemin complet dans display() doit être
+    : $this->display(__FILE__, ''views/templates/hook/bestsellers.tpl'').'
 ---
-
 # 🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?
 
 Développeurs PrestaShop, je vous lance un défi ! 🚀
