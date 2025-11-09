@@ -40,5 +40,9 @@ faq:
 
 {% include home-content/modules-showcase.html %}
 
+{% include home-content/youtube-featured.html %}
+
+{% include home-content/rss-subscribe.html %}
+
 {% include person-jsonld.html %}
 {% include faq-schema.html %}

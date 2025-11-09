@@ -73,3 +73,16 @@ modules_showcase:
   cta:
     text: "Découvrir tous mes modules"
     url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"
+
+youtube_featured:
+  title: "Dernières Vidéos"
+  subtitle: "Tutoriels vidéo sur l'IA, PrestaShop et l'e-commerce. Contenu pratique et actionnable pour développeurs et e-commerçants."
+  limit: 3
+  cta:
+    text: "Toutes les vidéos"
+    url: "/youtube/"
+
+rss_subscribe:
+  title: "Suivre le contenu"
+  description: "Abonnez-vous au flux RSS pour ne manquer aucun article sur l'Intelligence Artificielle, PrestaShop, le protocole MCP et les bonnes pratiques e-commerce."
+  cta_text: "S'abonner au RSS"
