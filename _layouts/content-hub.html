@@ -1,0 +1,434 @@
+---
+layout: default
+---
+
+<!-- Schema.org pour les content hubs -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "{{ site.url }}"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "{{ site.url }}/guides/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "{{ page.title }}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+    ]
+  }
+}
+</script>
+
+<section class="hub-hero-section" style="background: {{ page.hero_gradient | default: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #475569 100%)' }};">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/" style="color: white;">Accueil</a>
+            <a href="/guides/" style="color: white;">Guides</a>
+            <span style="color: white;">{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            {% if page.hub_icon %}
+            <div class="hub-icon">
+                <i class="{{ page.hub_icon }}"></i>
+            </div>
+            {% endif %}
+            <h1 style="color: white;">{{ page.title }}</h1>
+            <p class="section-description" style="color: rgba(255,255,255,0.95); font-size: 1.25rem;">
+                {{ page.description }}
+            </p>
+
+            {% if page.stats %}
+            <div class="hub-stats">
+                {% for stat in page.stats %}
+                <div class="stat-item">
+                    <div class="stat-number">{{ stat.number }}</div>
+                    <div class="stat-label">{{ stat.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="hub-content-section">
+    <div class="container">
+        {{ content }}
+
+        {% comment %}Collect related posts based on hub categories/tags{% endcomment %}
+        {% if page.hub_categories or page.hub_tags %}
+            {% assign hub_posts = "" | split: "" %}
+            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+
+            {% for post in published_posts %}
+                {% assign match = false %}
+
+                {% comment %}Check categories{% endcomment %}
+                {% if page.hub_categories %}
+                    {% for hub_cat in page.hub_categories %}
+                        {% if post.categories contains hub_cat %}
+                            {% assign match = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% comment %}Check tags{% endcomment %}
+                {% if page.hub_tags %}
+                    {% for hub_tag in page.hub_tags %}
+                        {% if post.tags contains hub_tag %}
+                            {% assign match = true %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if match %}
+                    {% assign hub_posts = hub_posts | push: post %}
+                {% endif %}
+            {% endfor %}
+
+            {% if hub_posts.size > 0 %}
+            <div class="hub-articles-section">
+                <h2 class="section-title">
+                    <i class="fas fa-newspaper"></i>
+                    Articles sur ce thème
+                    <span class="articles-count">({{ hub_posts.size }})</span>
+                </h2>
+
+                {% assign articles_limit = page.articles_limit | default: 12 %}
+                <div class="posts-grid">
+                    {% for post in hub_posts limit: articles_limit %}
+                        <article class="post-card">
+                            <a href="{{ post.url | relative_url }}" class="post-card-link">
+                                <div class="post-card-image">
+                                    {% if post.image %}
+                                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                                    {% else %}
+                                        <img src="/assets/images/blog/default-blog.jpg" alt="{{ post.title }}" loading="lazy">
+                                    {% endif %}
+
+                                    {% if post.categories.first %}
+                                    <span class="post-category category-{{ post.categories.first | slugify }}">
+                                        {{ post.categories.first }}
+                                    </span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="post-card-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">
+                                            <i class="far fa-calendar"></i>
+                                            {% include date-fr.html date=post.date %}
+                                        </span>
+                                        <span class="post-read-time">
+                                            <i class="far fa-clock"></i>
+                                            {% if post.content %}
+                                                {% assign words = post.content | strip_html | number_of_words %}
+                                                {% assign read_time = words | divided_by: 200 %}
+                                                {% if read_time < 1 %}1{% else %}{{ read_time }}{% endif %} min
+                                            {% else %}
+                                                5 min
+                                            {% endif %}
+                                        </span>
+                                    </div>
+
+                                    <h3 class="post-card-title">{{ post.title }}</h3>
+
+                                    <p class="post-card-excerpt">
+                                        {{ post.excerpt | strip_html | truncate: 150 }}
+                                    </p>
+
+                                    {% if post.tags %}
+                                    <div class="post-tags">
+                                        {% for tag in post.tags limit:3 %}
+                                            <span class="tag">#{{ tag }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </a>
+                        </article>
+                    {% endfor %}
+                </div>
+
+                {% if hub_posts.size > 12 %}
+                <div class="view-all-link" style="text-align: center; margin-top: 3rem;">
+                    <a href="/blog/?category={{ page.hub_categories.first | slugify }}" class="btn btn--primary">
+                        Voir tous les {{ hub_posts.size }} articles
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endif %}
+
+        <!-- Related resources -->
+        {% if page.show_resources %}
+        <div class="hub-resources" style="margin-top: 4rem;">
+            {% include post-related-resources.html %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.hub-hero-section {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hub-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom center no-repeat;
+    opacity: 0.1;
+}
+
+.hub-hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hub-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hub-icon i {
+    font-size: 3.5rem;
+    color: white;
+}
+
+.hub-hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hub-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.hub-stats .stat-item {
+    text-align: center;
+}
+
+.hub-stats .stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+}
+
+.hub-stats .stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hub-content-section {
+    padding: 4rem 0;
+}
+
+.hub-articles-section {
+    margin-top: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.articles-count {
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-link {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover .post-card-image img {
+    transform: scale(1.05);
+}
+
+.post-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #0f172a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.post-card-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.post-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+}
+
+.post-card-excerpt {
+    color: #475569;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hub-hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hub-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hub-icon i {
+        font-size: 2.5rem;
+    }
+
+    .hub-stats {
+        gap: 2rem;
+    }
+
+    .hub-stats .stat-number {
+        font-size: 2rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

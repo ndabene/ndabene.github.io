@@ -183,6 +183,9 @@ llm_topics:
 
                 <!-- Sidebar -->
                 <aside class="blog-sidebar-news">
+                    <!-- Widget Articles Populaires -->
+                    {% include sidebar-popular-posts.html limit=5 %}
+
                     <!-- Widget Publications Externes -->
                     {% include sidebar-external-publications.html %}
 

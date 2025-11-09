@@ -1,0 +1,19 @@
+---
+layout: series
+title: "Test Série PrestaShop"
+series_name: "Test Série PrestaShop"
+permalink: /series/test-serie-prestashop.html
+description: "Série de test pour valider le système de navigation et preview admin des futurs posts."
+keywords: "test prestashop, série test, développement prestashop"
+admin_preview: true
+---
+
+{% comment %}Collect all posts from this series{% endcomment %}
+{% assign series_posts = site.posts | where: "series", "Test Série PrestaShop" | sort: "series_part" %}
+
+{% comment %}Get series info from data file{% endcomment %}
+{% assign series_info = site.data.series["Test Série PrestaShop"] %}
+
+{% comment %}Make variables available to the layout{% endcomment %}
+{% assign page.series_posts = series_posts %}
+{% assign page.series_info = series_info %}

@@ -1,0 +1,18 @@
+---
+layout: series
+title: "Intelligence Artificielle en PHP"
+series_name: "Intelligence Artificielle en PHP"
+permalink: /series/intelligence-artificielle-en-php.html
+description: "Découvrez comment intégrer l'IA dans vos applications PHP, des APIs aux outils d'analyse de données."
+keywords: "ia php, intelligence artificielle php, llm php, api ia, série ia php"
+---
+
+{% comment %}Collect all posts from this series{% endcomment %}
+{% assign series_posts = site.posts | where: "series", "Intelligence Artificielle en PHP" | sort: "series_part" %}
+
+{% comment %}Get series info from data file{% endcomment %}
+{% assign series_info = site.data.series["Intelligence Artificielle en PHP"] %}
+
+{% comment %}Make variables available to the layout{% endcomment %}
+{% assign page.series_posts = series_posts %}
+{% assign page.series_info = series_info %}

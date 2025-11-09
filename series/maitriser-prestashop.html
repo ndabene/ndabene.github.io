@@ -1,0 +1,18 @@
+---
+layout: series
+title: "Maîtriser PrestaShop"
+series_name: "Maîtriser PrestaShop"
+permalink: /series/maitriser-prestashop.html
+description: "Une série complète pour devenir expert en développement PrestaShop, de la création de modules à l'optimisation des performances."
+keywords: "prestashop, développement prestashop, tutoriels prestashop, modules prestashop, série prestashop"
+---
+
+{% comment %}Collect all posts from this series{% endcomment %}
+{% assign series_posts = site.posts | where: "series", "Maîtriser PrestaShop" | sort: "series_part" %}
+
+{% comment %}Get series info from data file{% endcomment %}
+{% assign series_info = site.data.series["Maîtriser PrestaShop"] %}
+
+{% comment %}Make variables available to the layout{% endcomment %}
+{% assign page.series_posts = series_posts %}
+{% assign page.series_info = series_info %}

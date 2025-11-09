@@ -1,0 +1,174 @@
+{% comment %}
+  Renders a tag cloud with all tags from published posts
+  Usage: {% include tags-cloud.html %}
+  Optional parameters:
+    - limit: number of tags to display (default: all)
+    - min_size: minimum font size in rem (default: 0.875)
+    - max_size: maximum font size in rem (default: 2)
+{% endcomment %}
+
+{% comment %}Collect all tags from published posts{% endcomment %}
+{% assign all_tags = "" | split: "" %}
+{% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+
+{% for post in published_posts %}
+  {% if post.tags %}
+    {% for tag in post.tags %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}Count tag occurrences{% endcomment %}
+{% assign tag_counts = "" | split: "" %}
+{% assign unique_tags = all_tags | uniq | sort %}
+
+{% for tag in unique_tags %}
+  {% assign count = 0 %}
+  {% for t in all_tags %}
+    {% if t == tag %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% assign tag_data = tag | append: "|" | append: count %}
+  {% assign tag_counts = tag_counts | push: tag_data %}
+{% endfor %}
+
+{% comment %}Get min and max counts for sizing{% endcomment %}
+{% assign max_count = 0 %}
+{% assign min_count = 999999 %}
+
+{% for tag_data in tag_counts %}
+  {% assign parts = tag_data | split: "|" %}
+  {% assign count = parts[1] | plus: 0 %}
+  {% if count > max_count %}
+    {% assign max_count = count %}
+  {% endif %}
+  {% if count < min_count %}
+    {% assign min_count = count %}
+  {% endif %}
+{% endfor %}
+
+{% assign min_font_size = include.min_size | default: 0.875 %}
+{% assign max_font_size = include.max_size | default: 2 %}
+{% assign limit = include.limit %}
+
+<div class="tags-cloud-container">
+  <div class="tags-cloud">
+    {% for tag_data in tag_counts limit: limit %}
+      {% assign parts = tag_data | split: "|" %}
+      {% assign tag = parts[0] %}
+      {% assign count = parts[1] | plus: 0 %}
+
+      {% comment %}Calculate font size based on count{% endcomment %}
+      {% if max_count == min_count %}
+        {% assign font_size = min_font_size %}
+      {% else %}
+        {% assign count_range = max_count | minus: min_count | times: 1.0 %}
+        {% assign size_range = max_font_size | minus: min_font_size %}
+        {% assign normalized = count | minus: min_count | times: 1.0 | divided_by: count_range %}
+        {% assign font_size = normalized | times: size_range | plus: min_font_size %}
+      {% endif %}
+
+      {% comment %}Determine color intensity based on count{% endcomment %}
+      {% assign intensity = count | times: 100 | divided_by: max_count %}
+
+      <a href="/blog/tags/{{ tag | slugify }}/"
+         class="tag-cloud-item"
+         style="font-size: {{ font_size }}rem;"
+         data-count="{{ count }}"
+         data-intensity="{{ intensity }}"
+         title="{{ count }} article{% if count > 1 %}s{% endif %}">
+        <span class="tag-text">#{{ tag }}</span>
+        <span class="tag-count">{{ count }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.tags-cloud-container {
+  margin: 2rem 0;
+}
+
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.tag-cloud-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #e2e8f0;
+  position: relative;
+}
+
+.tag-cloud-item:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #7c3aed;
+  color: #7c3aed;
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+}
+
+.tag-cloud-item[data-intensity="100"],
+.tag-cloud-item[data-count^="1"][data-count$="0"],
+.tag-cloud-item[data-count^="2"] {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  color: white;
+  border-color: #7c3aed;
+}
+
+.tag-cloud-item[data-intensity="100"]:hover,
+.tag-cloud-item[data-count^="1"][data-count$="0"]:hover,
+.tag-cloud-item[data-count^="2"]:hover {
+  background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+  border-color: #6d28d9;
+}
+
+.tag-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tag-count {
+  background: rgba(0, 0, 0, 0.1);
+  color: currentColor;
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tag-cloud-item[data-intensity="100"] .tag-count,
+.tag-cloud-item[data-count^="1"][data-count$="0"] .tag-count,
+.tag-cloud-item[data-count^="2"] .tag-count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .tags-cloud {
+    padding: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .tag-cloud-item {
+    font-size: 0.875rem !important;
+    padding: 0.5rem 0.75rem;
+  }
+}
+</style>
