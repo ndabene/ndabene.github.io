@@ -115,8 +115,9 @@ layout: default
                     <span class="articles-count">({{ hub_posts.size }})</span>
                 </h2>
 
+                {% assign articles_limit = page.articles_limit | default: 12 %}
                 <div class="posts-grid">
-                    {% for post in hub_posts limit: page.articles_limit | default: 12 %}
+                    {% for post in hub_posts limit: articles_limit %}
                         <article class="post-card">
                             <a href="{{ post.url | relative_url }}" class="post-card-link">
                                 <div class="post-card-image">
