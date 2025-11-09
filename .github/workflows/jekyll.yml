@@ -41,6 +41,21 @@ jobs:
         run: |
           printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Harmonize tags
+        run: |
+          echo "🏷️  Harmonisation automatique des tags..."
+          python3 harmonize_tags.py --apply
+          echo "✅ Tags harmonisés avec succès"
+
       - name: Generate tag pages
         run: |
           echo "🚀 Génération automatique des pages de tags..."
