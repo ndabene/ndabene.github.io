@@ -17,7 +17,7 @@ from collections import Counter, defaultdict
 # Configuration
 POSTS_DIR = "./_posts"
 MAPPING_FILE = "tag_mapping.yaml"
-REPORT_FILE = "RAPPORT_MIGRATION_TAGS.md"
+REPORT_FILE = "docs/migration-tags/RAPPORT_MIGRATION_TAGS.md"
 
 # Tags stratégiques (les 11 seuls tags autorisés)
 STRATEGIC_TAGS = [
@@ -354,7 +354,7 @@ def main():
         print("✅ Les fichiers ont été modifiés avec succès !")
         print()
         print("📋 Prochaines étapes :")
-        print("   1. Vérifier le rapport : cat RAPPORT_MIGRATION_TAGS.md")
+        print("   1. Vérifier le rapport : cat docs/migration-tags/RAPPORT_MIGRATION_TAGS.md")
         print("   2. Tester la génération du site")
         print("   3. Vérifier les pages de tags")
         print("   4. Commit et push")
