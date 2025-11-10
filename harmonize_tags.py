@@ -10,7 +10,7 @@ import yaml
 from collections import defaultdict
 from pathlib import Path
 
-# Mapping de remplacement des tags (selon RAPPORT_HARMONISATION_TAGS.md)
+# Mapping de remplacement des tags (selon docs/migration-tags/RAPPORT_HARMONISATION_TAGS.md)
 TAG_REPLACEMENTS = {
     # IA/AI - CRITIQUE
     "AI": "IA",
