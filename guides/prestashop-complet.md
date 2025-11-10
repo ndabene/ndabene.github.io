@@ -16,7 +16,7 @@ articles_limit: 20
 show_resources: true
 keywords: "guide prestashop, tutoriel prestashop, développement prestashop, formation prestashop, expert prestashop"
 stats:
-  - number: "{{ site.posts | where_exp: 'post', 'post.categories contains \"PrestaShop\"' | size }}+"
+  - category: "PrestaShop"
     label: "Articles PrestaShop"
   - number: "10+"
     label: "Ans d'expérience"

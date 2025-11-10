@@ -16,7 +16,7 @@ articles_limit: 20
 show_resources: true
 keywords: "performance web, optimisation php, core web vitals, cache, cdn, speed optimization"
 stats:
-  - number: "{{ site.posts | where_exp: 'post', 'post.categories contains \"Performance\"' | size }}+"
+  - category: "Performance"
     label: "Articles Performance"
   - number: "90+"
     label: "Score PageSpeed visé"
