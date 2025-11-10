@@ -21,7 +21,100 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
+      # ========================================
+      # OPTIMISATION IMAGES - WebP Conversion
+      # ========================================
+      - name: Install WebP tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y webp jpegoptim optipng
+          echo "✅ WebP tools installed"
+          cwebp -version
+
+      - name: Convert images to WebP
+        run: |
+          echo "🖼️  Starting WebP conversion..."
+
+          # Compteurs
+          CONVERTED=0
+          TOTAL_SIZE_BEFORE=0
+          TOTAL_SIZE_AFTER=0
+
+          # Fonction pour obtenir taille fichier
+          get_size() {
+            stat -c%s "$1" 2>/dev/null || echo 0
+          }
+
+          # Fonction pour formater taille
+          format_size() {
+            numfmt --to=iec-i --suffix=B $1 2>/dev/null || echo "$1 B"
+          }
+
+          # Convertir JPG/JPEG en WebP
+          echo "📁 Processing JPG/JPEG files..."
+          find assets/images -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) | while read file; do
+            webp_file="${file%.*}.webp"
+
+            if [ ! -f "$webp_file" ]; then
+              size_before=$(get_size "$file")
+              TOTAL_SIZE_BEFORE=$((TOTAL_SIZE_BEFORE + size_before))
+
+              # Convertir en WebP (qualité 85, compression maximale)
+              cwebp -q 85 -m 6 "$file" -o "$webp_file" -quiet 2>/dev/null || true
+
+              if [ -f "$webp_file" ]; then
+                size_after=$(get_size "$webp_file")
+                TOTAL_SIZE_AFTER=$((TOTAL_SIZE_AFTER + size_after))
+                saving=$((size_before - size_after))
+                saving_percent=$((saving * 100 / size_before))
+
+                echo "  ✓ $(basename "$file"): $(format_size $size_before) → $(format_size $size_after) (-${saving_percent}%)"
+                CONVERTED=$((CONVERTED + 1))
+              fi
+
+              # Compresser JPG original pour fallback
+              jpegoptim --max=85 --strip-all --preserve --quiet "$file" 2>/dev/null || true
+            fi
+          done
+
+          # Convertir PNG en WebP
+          echo "📁 Processing PNG files..."
+          find assets/images -type f -iname "*.png" | while read file; do
+            webp_file="${file%.*}.webp"
+
+            if [ ! -f "$webp_file" ]; then
+              size_before=$(get_size "$file")
+
+              # Convertir en WebP (qualité 90 pour PNG)
+              cwebp -q 90 -m 6 "$file" -o "$webp_file" -quiet 2>/dev/null || true
+
+              if [ -f "$webp_file" ]; then
+                size_after=$(get_size "$webp_file")
+                saving=$((size_before - size_after))
+                saving_percent=$((saving * 100 / size_before))
+
+                echo "  ✓ $(basename "$file"): $(format_size $size_before) → $(format_size $size_after) (-${saving_percent}%)"
+                CONVERTED=$((CONVERTED + 1))
+              fi
+
+              # Optimiser PNG original
+              optipng -quiet -o2 "$file" 2>/dev/null || true
+            fi
+          done
+
+          echo ""
+          echo "✅ WebP conversion completed!"
+          echo "📊 Files converted: $CONVERTED"
+
+          # Lister quelques exemples de WebP créés
+          echo ""
+          echo "📂 Sample WebP files created:"
+          find assets/images -name "*.webp" -type f | head -5
+
+      # ========================================
+      # JEKYLL BUILD
+      # ========================================
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -30,13 +123,13 @@ jobs:
 
       - name: Install dependencies
         run: bundle install
-      
+
       # Validation steps disabled temporarily
-          
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-        
+
       - name: Enable future posts for preview
         run: |
           printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
@@ -72,7 +165,17 @@ jobs:
           fi
         env:
           JEKYLL_ENV: production
-          
+
+      - name: Verify WebP files in build
+        run: |
+          echo "🔍 Verifying WebP files in _site..."
+          WEBP_COUNT=$(find _site/assets/images -name "*.webp" -type f 2>/dev/null | wc -l)
+          echo "✅ Found $WEBP_COUNT WebP files in build output"
+
+          if [ $WEBP_COUNT -eq 0 ]; then
+            echo "⚠️  Warning: No WebP files found in build!"
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
