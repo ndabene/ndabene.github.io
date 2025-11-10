@@ -74,13 +74,13 @@ $tag-hover-text: #fff;
     img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center;
       transition: transform 0.4s ease;
 
       // Support pour image_display personnalisé
-      [data-image-display="cover"] & {
-        object-fit: cover;
+      [data-image-display="contain"] & {
+        object-fit: contain;
       }
 
       [data-image-display="fill"] & {
@@ -244,13 +244,13 @@ $tag-hover-text: #fff;
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
         transition: transform 0.5s ease;
 
         // Support pour image_display personnalisé via front-matter
-        [data-image-display="cover"] & {
-          object-fit: cover;
+        [data-image-display="contain"] & {
+          object-fit: contain;
         }
 
         [data-image-display="fill"] & {
@@ -1580,13 +1580,13 @@ $tag-hover-text: #fff;
           img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             object-position: center;
             transition: transform 0.3s ease;
 
             // Support pour image_display personnalisé
-            [data-image-display="cover"] & {
-              object-fit: cover;
+            [data-image-display="contain"] & {
+              object-fit: contain;
             }
 
             [data-image-display="fill"] & {

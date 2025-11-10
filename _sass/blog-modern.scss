@@ -1282,39 +1282,44 @@ $blog-content-bg: $white;
   }
 }
 
-// Image de bannière dans le contenu
+// Image de bannière dans le contenu - Image flottante à gauche
 .post-banner-image-container {
-  margin-bottom: 2rem;
+  float: left;
+  width: 45%;
+  margin: 0 2.5rem 1.5rem 0;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  min-height: 300px;
-  max-height: 500px;
-  aspect-ratio: 16 / 9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f1f5f9;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(226, 232, 240, 0.4);
+
+  @media (max-width: 968px) {
+    float: none;
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+
+  @media (max-width: 640px) {
+    margin: 0 0 1.5rem 0;
+  }
 
   .post-banner-image {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+    height: auto;
     display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
   }
+}
 
-  @media (max-width: 768px) {
-    min-height: 200px;
-    max-height: 350px;
-    aspect-ratio: 4 / 3;
-  }
+// Nettoyer le flux après l'image (pour que le contenu suivant ne soit pas affecté)
+.post-content > h2:first-of-type {
+  clear: both;
+  padding-top: 1rem;
 }
 
 // Support pour banner_display personnalisé via front-matter dans les articles
@@ -1324,6 +1329,11 @@ $blog-content-bg: $white;
 
 [data-banner-display="fill"] .post-banner-image-container .post-banner-image {
   object-fit: fill;
+}
+
+[data-banner-display="contain"] .post-banner-image-container .post-banner-image {
+  object-fit: contain;
+  background: #f1f5f9;
 }
 
 // Support pour banner_position personnalisé via front-matter dans les articles
