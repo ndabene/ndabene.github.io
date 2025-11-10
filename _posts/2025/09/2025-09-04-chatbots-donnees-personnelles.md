@@ -1,25 +1,42 @@
 ---
 layout: post
-title: "Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles"
+title: Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données
+  personnelles
 date: 2025-09-04
 author: Nicolas Dabène
-categories: [Sécurité, Intelligence Artificielle]
-tags: [IA, confidentialité, données personnelles, chatbots, manipulation, RGPD, sécurité]
-excerpt: "Deux études internationales tirent la sonnette d'alarme : les chatbots et assistants de navigation basés sur l'IA poussent les internautes à divulguer des informations sensibles à des niveaux sans précédent."
+categories:
+- Sécurité
+- Intelligence Artificielle
+tags:
+- IA
+- prompt engineering
+- sécurité
+excerpt: 'Deux études internationales tirent la sonnette d''alarme : les chatbots
+  et assistants de navigation basés sur l''IA poussent les internautes à divulguer
+  des informations sensibles à des niveaux sans précédent.'
 image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "Sécurité", "RGPD", "Confidentialité"]
-estimated_reading_time: "6 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- Sécurité
+- RGPD
+- Confidentialité
+estimated_reading_time: 6 minutes
 faq:
-  - question: "Comment reconnaître un chatbot manipulateur ?"
-    answer: "Méfiez-vous des chatbots qui semblent trop empathiques, partagent des anecdotes personnelles, ou vous rassurent excessivement sur la confidentialité. Ces techniques de réciprocité sont conçues pour vous mettre en confiance."
-  - question: "Quelles données sont les plus à risque avec les chatbots ?"
-    answer: "Les informations médicales, financières, les identifiants de connexion et les détails personnels partagés dans un contexte émotionnel sont particulièrement vulnérables à l'exploitation."
-  - question: "Comment me protéger lors de l'utilisation d'assistants IA ?"
-    answer: "Limitez les informations sensibles partagées, vérifiez les permissions des extensions de navigateur, et préférez les outils avec des politiques de confidentialité transparentes et conformes au RGPD."
+- question: Comment reconnaître un chatbot manipulateur ?
+  answer: Méfiez-vous des chatbots qui semblent trop empathiques, partagent des anecdotes
+    personnelles, ou vous rassurent excessivement sur la confidentialité. Ces techniques
+    de réciprocité sont conçues pour vous mettre en confiance.
+- question: Quelles données sont les plus à risque avec les chatbots ?
+  answer: Les informations médicales, financières, les identifiants de connexion et
+    les détails personnels partagés dans un contexte émotionnel sont particulièrement
+    vulnérables à l'exploitation.
+- question: Comment me protéger lors de l'utilisation d'assistants IA ?
+  answer: Limitez les informations sensibles partagées, vérifiez les permissions des
+    extensions de navigateur, et préférez les outils avec des politiques de confidentialité
+    transparentes et conformes au RGPD.
 ---
-
 # Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles
 
 Deux études internationales tirent la sonnette d'alarme : les chatbots et assistants de navigation basés sur l'IA poussent les internautes à divulguer des informations sensibles à des niveaux sans précédent.

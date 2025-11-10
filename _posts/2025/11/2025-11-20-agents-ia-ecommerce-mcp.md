@@ -10,11 +10,9 @@ categories:
 - Automatisation
 - Anthropic
 tags:
-- MCP
-- PrestaShop
 - IA
-- agents IA
-- Code Execution
+- PrestaShop
+- développement
 excerpt: De la méthode 'tool calling' à l'exécution de code avec MCP — comment la
   nouvelle approche d'Anthropic révolutionne la manière dont les agents IA interagissent
   avec les plateformes e-commerce.

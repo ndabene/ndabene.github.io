@@ -1,29 +1,51 @@
 ---
 layout: post
-title: "Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA"
+title: Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
 date: 2025-10-07
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Ecommerce]
-tags: [GEO, FAQ, ChatGPT, IA conversationnelle, optimisation, e-commerce]
-excerpt: "Les assistants IA changent radicalement la façon dont vos clients vous trouvent. Découvrez pourquoi les FAQ bien structurées sont votre meilleur atout pour être recommandé par ChatGPT, Gemini et Perplexity."
+categories:
+- Intelligence Artificielle
+- Ecommerce
+tags:
+- IA
+- e-commerce
+- développement
+- SEO
+excerpt: Les assistants IA changent radicalement la façon dont vos clients vous trouvent.
+  Découvrez pourquoi les FAQ bien structurées sont votre meilleur atout pour être
+  recommandé par ChatGPT, Gemini et Perplexity.
 image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "GEO", "E-commerce", "PrestaShop"]
-estimated_reading_time: "10 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- GEO
+- E-commerce
+- PrestaShop
+estimated_reading_time: 10 minutes
 faq:
-  - question: "Combien de FAQ devrais-je créer par produit ?"
-    answer: "Entre 3 et 7 FAQ par produit est un bon équilibre. Concentrez-vous sur les questions qui influencent réellement la décision d'achat. Mieux vaut 5 excellentes FAQ qu'en avoir 20 médiocres."
-  - question: "Les FAQ doivent-elles être visibles sur la page ou peuvent-elles être masquées ?"
-    answer: "Elles doivent absolument être visibles et accessibles dans le code HTML. Les IA crawlent le contenu réel de vos pages. Du contenu caché ou chargé dynamiquement peut ne pas être indexé correctement."
-  - question: "Puis-je utiliser la même FAQ sur plusieurs produits similaires ?"
-    answer: "Oui, mais adaptez-la avec les spécificités de chaque produit. Une FAQ \"Ce produit est-il lavable en machine ?\" peut être réutilisée, mais la réponse doit mentionner les températures spécifiques et précautions propres à chaque article."
-  - question: "Comment savoir si mes FAQ sont efficaces pour le GEO ?"
-    answer: "Testez en posant vous-même des questions aux IA (ChatGPT, Perplexity, Gemini) sur vos produits ou votre domaine. Voyez si votre site apparaît dans les réponses et comment vos informations sont utilisées. C'est le meilleur test terrain."
-  - question: "Les FAQ nuisent-elles au SEO classique ?"
-    answer: "Au contraire ! Les FAQ bien structurées améliorent aussi votre SEO traditionnel. Google affiche souvent les FAQ dans les featured snippets, et elles augmentent le temps passé sur page ainsi que l'engagement utilisateur."
+- question: Combien de FAQ devrais-je créer par produit ?
+  answer: Entre 3 et 7 FAQ par produit est un bon équilibre. Concentrez-vous sur les
+    questions qui influencent réellement la décision d'achat. Mieux vaut 5 excellentes
+    FAQ qu'en avoir 20 médiocres.
+- question: Les FAQ doivent-elles être visibles sur la page ou peuvent-elles être
+    masquées ?
+  answer: Elles doivent absolument être visibles et accessibles dans le code HTML.
+    Les IA crawlent le contenu réel de vos pages. Du contenu caché ou chargé dynamiquement
+    peut ne pas être indexé correctement.
+- question: Puis-je utiliser la même FAQ sur plusieurs produits similaires ?
+  answer: Oui, mais adaptez-la avec les spécificités de chaque produit. Une FAQ "Ce
+    produit est-il lavable en machine ?" peut être réutilisée, mais la réponse doit
+    mentionner les températures spécifiques et précautions propres à chaque article.
+- question: Comment savoir si mes FAQ sont efficaces pour le GEO ?
+  answer: Testez en posant vous-même des questions aux IA (ChatGPT, Perplexity, Gemini)
+    sur vos produits ou votre domaine. Voyez si votre site apparaît dans les réponses
+    et comment vos informations sont utilisées. C'est le meilleur test terrain.
+- question: Les FAQ nuisent-elles au SEO classique ?
+  answer: Au contraire ! Les FAQ bien structurées améliorent aussi votre SEO traditionnel.
+    Google affiche souvent les FAQ dans les featured snippets, et elles augmentent
+    le temps passé sur page ainsi que l'engagement utilisateur.
 ---
-
 # Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
 
 Imaginez la scène : un client potentiel demande à ChatGPT "Quel casque audio choisir pour faire du sport ?" Au lieu de consulter 15 sites différents comme il l'aurait fait avec Google, il obtient une réponse unique, directe, avec deux ou trois recommandations précises. Si votre produit n'est pas dans cette courte liste, vous venez de perdre une vente. Et probablement bien d'autres.

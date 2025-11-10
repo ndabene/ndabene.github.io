@@ -8,16 +8,9 @@ categories:
 - Développement
 - Automatisation
 tags:
-- OpenAI
-- Agent Builder
-- AgentKit
-- ChatKit
-- IA conversationnelle
+- ChatGPT
+- IA
 - automatisation
-- no-code
-- Zapier
-- n8n
-- Make
 excerpt: Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée
   en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans
   coder. Une démocratisation de l'automatisation intelligente.

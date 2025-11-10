@@ -1,33 +1,66 @@
 ---
 layout: post
-title: "PHP : L'Histoire d'un Langage Incontournable, de ses Débuts à 2025"
+title: 'PHP : L''Histoire d''un Langage Incontournable, de ses Débuts à 2025'
 date: 2025-07-30
 author: Nicolas Dabène
-categories: [PHP, Développement]
-tags: [PHP 8, histoire tech, Facebook, WordPress, PrestaShop, WooCommerce, 
-    évolution]
-excerpt: "Découvrez l'histoire paradoxale de PHP : mal-aimé mais incontournable, ce
-  langage propulse encore Facebook, WordPress et des millions de sites en 2025."
+categories:
+- PHP
+- Développement
+tags:
+- PrestaShop
+- automatisation
+- développement
+- e-commerce
+excerpt: 'Découvrez l''histoire paradoxale de PHP : mal-aimé mais incontournable,
+  ce langage propulse encore Facebook, WordPress et des millions de sites en 2025.'
 image: /assets/images/blog/2025/07/2025-07-30-php-histoire-langage.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PHP", "Web Development", "Facebook", "WordPress"]
-estimated_reading_time: "12 minutes"
-llm_summary: "Découvrez l'histoire paradoxale de PHP : mal-aimé mais incontournable,
-  ce langage propulse encore Facebook, WordPress et des millions de sites en 2025."
-llm_topics: [PHP 8, histoire tech, Facebook, WordPress, PrestaShop, WooCommerce,
-    évolution]
+difficulty: Intermédiaire
+technologies:
+- PHP
+- Web Development
+- Facebook
+- WordPress
+estimated_reading_time: 12 minutes
+llm_summary: 'Découvrez l''histoire paradoxale de PHP : mal-aimé mais incontournable,
+  ce langage propulse encore Facebook, WordPress et des millions de sites en 2025.'
+llm_topics:
+- PHP 8
+- histoire tech
+- Facebook
+- WordPress
+- PrestaShop
+- WooCommerce
+- évolution
 faq:
-  - question: "Qui a créé PHP et quand ?"
-    answer: "PHP a été créé en 1995 par Rasmus Lerdorf, programmeur danois-canadien qui cherchait à créer des pages web dynamiques pour son site personnel. Le nom signifiait initialement Personal Home Page avant de devenir PHP Hypertext Preprocessor en 1997 avec la réécriture complète par Zeev Suraski et Andi Gutmans."
-  - question: "Pourquoi PHP est-il encore si utilisé en 2025 ?"
-    answer: "En 2025, PHP propulse plus de 75% des sites web dont on peut déterminer le langage backend, notamment grâce à WordPress (40% des sites), PrestaShop et WooCommerce. Sa persistance s'explique par un écosystème d'hébergement mature et abordable, excellente compatibilité descendante, cycle de développement rapide et évolution constante avec PHP 8."
-  - question: "Facebook utilise-t-il toujours PHP ?"
-    answer: "Oui, Meta (Facebook) n'a jamais abandonné PHP et a même investi massivement dans son amélioration en développant HHVM (HipHop Virtual Machine) et Hack, un langage dérivé de PHP avec typage statique. Ce choix initial de Mark Zuckerberg en 2004 pour sa simplicité et rapidité de développement reste stratégique aujourd'hui."
-  - question: "Quelles sont les nouveautés de PHP 8 ?"
-    answer: "PHP 8 apporte des fonctionnalités modernes majeures incluant un compilateur JIT pour performances doublées, types union et intersection, attributs natifs, promoted constructor properties, match expression, nullsafe operator et amélioration continue des performances jusqu'à PHP 8.3+, rivalisant ainsi avec les langages les plus modernes."
-  - question: "PHP 8 est-il performant comparé aux autres langages ?"
-    answer: "Oui, PHP 8 avec son nouveau moteur Zend Engine 3 et compilateur JIT offre des performances doublées par rapport à PHP 5.6 et rivalise désormais avec des langages compilés. Les frameworks modernes comme Laravel et Symfony permettent des architectures sophistiquées et performantes adaptées aux applications professionnelles à grande échelle."
+- question: Qui a créé PHP et quand ?
+  answer: PHP a été créé en 1995 par Rasmus Lerdorf, programmeur danois-canadien qui
+    cherchait à créer des pages web dynamiques pour son site personnel. Le nom signifiait
+    initialement Personal Home Page avant de devenir PHP Hypertext Preprocessor en
+    1997 avec la réécriture complète par Zeev Suraski et Andi Gutmans.
+- question: Pourquoi PHP est-il encore si utilisé en 2025 ?
+  answer: En 2025, PHP propulse plus de 75% des sites web dont on peut déterminer
+    le langage backend, notamment grâce à WordPress (40% des sites), PrestaShop et
+    WooCommerce. Sa persistance s'explique par un écosystème d'hébergement mature
+    et abordable, excellente compatibilité descendante, cycle de développement rapide
+    et évolution constante avec PHP 8.
+- question: Facebook utilise-t-il toujours PHP ?
+  answer: Oui, Meta (Facebook) n'a jamais abandonné PHP et a même investi massivement
+    dans son amélioration en développant HHVM (HipHop Virtual Machine) et Hack, un
+    langage dérivé de PHP avec typage statique. Ce choix initial de Mark Zuckerberg
+    en 2004 pour sa simplicité et rapidité de développement reste stratégique aujourd'hui.
+- question: Quelles sont les nouveautés de PHP 8 ?
+  answer: PHP 8 apporte des fonctionnalités modernes majeures incluant un compilateur
+    JIT pour performances doublées, types union et intersection, attributs natifs,
+    promoted constructor properties, match expression, nullsafe operator et amélioration
+    continue des performances jusqu'à PHP 8.3+, rivalisant ainsi avec les langages
+    les plus modernes.
+- question: PHP 8 est-il performant comparé aux autres langages ?
+  answer: Oui, PHP 8 avec son nouveau moteur Zend Engine 3 et compilateur JIT offre
+    des performances doublées par rapport à PHP 5.6 et rivalise désormais avec des
+    langages compilés. Les frameworks modernes comme Laravel et Symfony permettent
+    des architectures sophistiquées et performantes adaptées aux applications professionnelles
+    à grande échelle.
 ---
 # PHP : L'Histoire d'un Langage Incontournable, de ses Débuts à 2025
 

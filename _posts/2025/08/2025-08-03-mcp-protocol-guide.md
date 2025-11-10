@@ -9,13 +9,9 @@ categories:
 - Développement
 - Architecture
 tags:
-- MCP
-- Anthropic
-- Claude
 - API
-- JSON-RPC
-- intégration IA
-- protocols
+- IA
+- développement
 excerpt: Découvrez le Model Context Protocol d'Anthropic, le protocole qui permet
   aux IA d'accéder directement à vos données externes. Guide complet avec exemples
   pratiques.

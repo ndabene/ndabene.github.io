@@ -8,13 +8,9 @@ categories:
 - Développement
 - Performance
 tags:
+- API
 - PrestaShop
-- Symfony
-- modules
-- lazy loading
-- performance
-- services
-- conteneur
+- développement
 excerpt: Découvrez comment améliorer significativement les performances de vos modules
   PrestaShop grâce au lazy loading des services Symfony.
 image: /assets/images/blog/2025/10/2025-10-02-lazy-loading-prestashop.jpg

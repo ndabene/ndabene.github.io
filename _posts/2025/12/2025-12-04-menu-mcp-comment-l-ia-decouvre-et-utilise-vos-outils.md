@@ -7,13 +7,10 @@ categories:
 - Tutoriel
 - Intelligence Artificielle
 tags:
-- MCP
-- TypeScript
 - API
-- discovery
-- protocols
-- outils
-- architecture
+- IA
+- SEO
+- développement
 excerpt: Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle
   vos outils ? Plongeons dans le système de découverte du MCP.
 image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.jpg

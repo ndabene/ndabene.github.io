@@ -1,22 +1,35 @@
 ---
 layout: post
-title: "Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025"
+title: 'Google Gemini 3.0 : L''IA qui Révolutionne Notre Quotidien en 2025'
 date: 2025-10-08
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement]
-tags: [Gemini, IA générative, Google, multimodal, agents IA, Deep Think]
-excerpt: "Découvrez Gemini 3.0, la nouvelle génération d'IA de Google qui repousse les limites du possible avec son raisonnement avancé et ses capacités multimodales révolutionnaires."
+categories:
+- Intelligence Artificielle
+- Développement
+tags:
+- IA
+- développement
+excerpt: Découvrez Gemini 3.0, la nouvelle génération d'IA de Google qui repousse
+  les limites du possible avec son raisonnement avancé et ses capacités multimodales
+  révolutionnaires.
 image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "Google AI", "Machine Learning", "Gemini"]
-estimated_reading_time: "14 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- Google AI
+- Machine Learning
+- Gemini
+estimated_reading_time: 14 minutes
 is_future: true
 faq:
-  - question: "Quelle est la différence principale entre Gemini 3.0 et les versions précédentes ?"
-    answer: "La clé réside dans le raisonnement natif intégré (Deep Think) qui permet une analyse profonde avant de répondre, les capacités multimodales avancées (vidéo 60 FPS, analyse 3D), et le mode agent qui permet à l'IA d'exécuter des tâches complexes de manière autonome."
+- question: Quelle est la différence principale entre Gemini 3.0 et les versions précédentes
+    ?
+  answer: La clé réside dans le raisonnement natif intégré (Deep Think) qui permet
+    une analyse profonde avant de répondre, les capacités multimodales avancées (vidéo
+    60 FPS, analyse 3D), et le mode agent qui permet à l'IA d'exécuter des tâches
+    complexes de manière autonome.
 ---
-
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025
 
 Imaginez un assistant numérique capable de comprendre une vidéo en temps réel, de raisonner sur des problèmes complexes comme un expert, et d'automatiser vos tâches quotidiennes avec une intelligence quasi-humaine. Ce n'est plus de la science-fiction : c'est Google Gemini 3.0, la troisième génération de l'intelligence artificielle de Google qui s'apprête à transformer radicalement notre façon de travailler, d'apprendre et de créer.

@@ -1,25 +1,40 @@
 ---
 layout: post
-title: "Grok expose ses prompts système : leçons pour la sécurité IA"
+title: 'Grok expose ses prompts système : leçons pour la sécurité IA'
 date: 2025-08-19
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Sécurité]
-tags: [prompt engineering, IA générative, sécurité, xAI, ChatGPT, Claude]
-excerpt: "L'exposition accidentelle des prompts système de Grok révèle des failles critiques de sécurité. Analyse technique des risques et bonnes pratiques."
+categories:
+- Intelligence Artificielle
+- Sécurité
+tags:
+- ChatGPT
+- IA
+- prompt engineering
+- sécurité
+excerpt: L'exposition accidentelle des prompts système de Grok révèle des failles
+  critiques de sécurité. Analyse technique des risques et bonnes pratiques.
 image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "Prompt Engineering", "Sécurité"]
-estimated_reading_time: "7 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- Prompt Engineering
+- Sécurité
+estimated_reading_time: 7 minutes
 faq:
-  - question: "Comment protéger mes prompts système en production ?"
-    answer: "Utilisez un gestionnaire de secrets comme HashiCorp Vault ou AWS Secrets Manager et chiffrez toujours vos prompts sensibles. Ne stockez jamais de prompts en dur dans le code source."
-  - question: "Que faire si je détecte une tentative d'injection de prompt ?"
-    answer: "Loggez immédiatement l'incident, bloquez temporairement l'utilisateur concerné, et analysez le pattern d'attaque pour améliorer vos filtres de sécurité. La détection précoce est cruciale pour prévenir les exploitations."
-  - question: "Faut-il tester la sécurité de mes intégrations IA ?"
-    answer: "Absolument ! Intégrez des tests de sécurité IA spécifiques dans votre pipeline CI/CD, comme vous le feriez pour des tests de vulnérabilités classiques SQL injection ou XSS."
+- question: Comment protéger mes prompts système en production ?
+  answer: Utilisez un gestionnaire de secrets comme HashiCorp Vault ou AWS Secrets
+    Manager et chiffrez toujours vos prompts sensibles. Ne stockez jamais de prompts
+    en dur dans le code source.
+- question: Que faire si je détecte une tentative d'injection de prompt ?
+  answer: Loggez immédiatement l'incident, bloquez temporairement l'utilisateur concerné,
+    et analysez le pattern d'attaque pour améliorer vos filtres de sécurité. La détection
+    précoce est cruciale pour prévenir les exploitations.
+- question: Faut-il tester la sécurité de mes intégrations IA ?
+  answer: Absolument ! Intégrez des tests de sécurité IA spécifiques dans votre pipeline
+    CI/CD, comme vous le feriez pour des tests de vulnérabilités classiques SQL injection
+    ou XSS.
 ---
-
 # Grok expose ses prompts système : leçons pour la sécurité IA
 
 La récente exposition accidentelle des prompts système internes de Grok, le chatbot de xAI, illustre parfaitement pourquoi la sécurité des systèmes d'IA générative ne peut pas être prise à la légère. En tant que développeur travaillant quotidiennement avec des APIs d'IA, cette faille me rappelle l'importance cruciale des bonnes pratiques de sécurité.

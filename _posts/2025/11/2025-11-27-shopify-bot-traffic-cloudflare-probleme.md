@@ -1,38 +1,70 @@
 ---
 layout: post
-title: "Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs campagnes publicitaires : le problème du trafic bot et des limitations Cloudflare"
+title: 'Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs
+  campagnes publicitaires : le problème du trafic bot et des limitations Cloudflare'
 date: 2025-11-27
 author: Nicolas Dabène
-categories: [Ecommerce, Données, Sécurité, Publicité]
-tags: [Shopify, PrestaShop, Cloudflare, bot traffic, analytics, Meta Ads, Google Ads, WAF]
-excerpt: "En 2025, jusqu'à 73% du trafic sur certaines boutiques Shopify provient de bots. Cette explosion, combinée à l'impossibilité d'activer le proxy Cloudflare, crée une distorsion massive dans les données analytiques et fausse les campagnes publicitaires. Un constat documenté, aux conséquences économiques majeures pour les marchands."
+categories:
+- Ecommerce
+- Données
+- Sécurité
+- Publicité
+tags:
+- PrestaShop
+- SEO
+- e-commerce
+- sécurité
+excerpt: En 2025, jusqu'à 73% du trafic sur certaines boutiques Shopify provient de
+  bots. Cette explosion, combinée à l'impossibilité d'activer le proxy Cloudflare,
+  crée une distorsion massive dans les données analytiques et fausse les campagnes
+  publicitaires. Un constat documenté, aux conséquences économiques majeures pour
+  les marchands.
 image: /assets/images/blog/2025/11/shopify-bot-traffic-problem.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["Shopify", "PrestaShop", "Cloudflare", "Analytics", "Meta Ads", "Google Ads"]
-estimated_reading_time: "14 minutes"
+difficulty: Intermédiaire
+technologies:
+- Shopify
+- PrestaShop
+- Cloudflare
+- Analytics
+- Meta Ads
+- Google Ads
+estimated_reading_time: 14 minutes
 faq:
-  - question: "Pourquoi le trafic bot est-il devenu un problème majeur pour les marchands Shopify ?"
-    answer: "Parce que Shopify empêche l'usage du proxy Cloudflare, les marchands ne peuvent pas filtrer le trafic à la source. Les bots atteignent leurs serveurs et polluent leurs données analytiques et publicitaires."
-  - question: "Combien de trafic e-commerce est généré par des bots en 2025 ?"
-    answer: "Selon Radware et Security Magazine, 57% du trafic e-commerce mondial provient de bots, dont 31% malveillants. Sur Shopify, certaines boutiques atteignent 73% de trafic non humain."
-  - question: "Pourquoi les données publicitaires deviennent-elles inexploitables ?"
-    answer: "Les bots envoient de faux signaux aux pixels Meta et Google, faussant les taux de conversion, le CPA et les modèles d'attribution. Les algorithmes apprennent à cibler des bots au lieu de clients."
-  - question: "Quel rôle joue Cloudflare dans la protection contre les bots ?"
-    answer: "Cloudflare filtre le trafic HTTP en amont grâce à son WAF et son intelligence comportementale. Mais Shopify interdit son utilisation en mode proxy, réservée aux clients Enterprise."
-  - question: "Comment PrestaShop diffère-t-il sur ce point ?"
-    answer: "PrestaShop permet d'activer librement Cloudflare proxy, d'utiliser le WAF complet et de configurer un filtrage bot proactif. Les marchands conservent la maîtrise de leurs DNS et de la sécurité edge."
-  - question: "Le nouveau filtre 'Humain ou Bot' de Shopify corrige-t-il le problème ?"
-    answer: "Non. Il s'agit d'un filtrage rétrospectif : les bots sont visibles dans les rapports, mais pas bloqués. Le trafic reste comptabilisé et continue d'impacter les pixels publicitaires."
+- question: Pourquoi le trafic bot est-il devenu un problème majeur pour les marchands
+    Shopify ?
+  answer: Parce que Shopify empêche l'usage du proxy Cloudflare, les marchands ne
+    peuvent pas filtrer le trafic à la source. Les bots atteignent leurs serveurs
+    et polluent leurs données analytiques et publicitaires.
+- question: Combien de trafic e-commerce est généré par des bots en 2025 ?
+  answer: Selon Radware et Security Magazine, 57% du trafic e-commerce mondial provient
+    de bots, dont 31% malveillants. Sur Shopify, certaines boutiques atteignent 73%
+    de trafic non humain.
+- question: Pourquoi les données publicitaires deviennent-elles inexploitables ?
+  answer: Les bots envoient de faux signaux aux pixels Meta et Google, faussant les
+    taux de conversion, le CPA et les modèles d'attribution. Les algorithmes apprennent
+    à cibler des bots au lieu de clients.
+- question: Quel rôle joue Cloudflare dans la protection contre les bots ?
+  answer: Cloudflare filtre le trafic HTTP en amont grâce à son WAF et son intelligence
+    comportementale. Mais Shopify interdit son utilisation en mode proxy, réservée
+    aux clients Enterprise.
+- question: Comment PrestaShop diffère-t-il sur ce point ?
+  answer: PrestaShop permet d'activer librement Cloudflare proxy, d'utiliser le WAF
+    complet et de configurer un filtrage bot proactif. Les marchands conservent la
+    maîtrise de leurs DNS et de la sécurité edge.
+- question: Le nouveau filtre 'Humain ou Bot' de Shopify corrige-t-il le problème
+    ?
+  answer: 'Non. Il s''agit d''un filtrage rétrospectif : les bots sont visibles dans
+    les rapports, mais pas bloqués. Le trafic reste comptabilisé et continue d''impacter
+    les pixels publicitaires.'
 sources:
-  - "https://www.radware.com/blog/application-protection/the-alarming-rise-of-bot-traffic-reshaping-the-holiday-shopping-landscape/"
-  - "https://community.shopify.com/t/shopify-bot-exploit-add-to-cart-abuse-is-corrupting-analytics-shopify-refuses-to-act-at-platform/412062"
-  - "https://changelog.shopify.com/posts/filter-out-bot-traffic-in-your-sessions-related-reports"
-  - "https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/provider-guides/shopify/"
-  - "https://help-center.prestashop.com/hc/en-us/articles/16417637123602-Configure-Cloudflare-on-PS-Hosting"
-  - "https://prestahero.com/blog/post/122-how-to-prevent-spam-and-bots-with-captcha-recaptcha-module.html"
+- https://www.radware.com/blog/application-protection/the-alarming-rise-of-bot-traffic-reshaping-the-holiday-shopping-landscape/
+- https://community.shopify.com/t/shopify-bot-exploit-add-to-cart-abuse-is-corrupting-analytics-shopify-refuses-to-act-at-platform/412062
+- https://changelog.shopify.com/posts/filter-out-bot-traffic-in-your-sessions-related-reports
+- https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/provider-guides/shopify/
+- https://help-center.prestashop.com/hc/en-us/articles/16417637123602-Configure-Cloudflare-on-PS-Hosting
+- https://prestahero.com/blog/post/122-how-to-prevent-spam-and-bots-with-captcha-recaptcha-module.html
 ---
-
 # Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs campagnes publicitaires
 
 Les marchands Shopify sont confrontés à un **défi structurel** : un afflux massif de trafic non humain combiné à l'impossibilité d'utiliser les outils d'infrastructure nécessaires pour le filtrer.

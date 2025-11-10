@@ -1,27 +1,44 @@
 ---
 layout: post
-title: "Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9"
+title: 'Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9'
 date: 2025-09-12
 author: Nicolas Dabène
-categories: [PrestaShop, Développement]
-tags: [PrestaShop 9, API, Admin API, CQRS, API Platform, OAuth]
-excerpt: "Un guide pédagogique pour créer vos premiers endpoints dans l’Admin API PrestaShop 9. Découvrez les 8 concepts essentiels et commencez à contribuer dès aujourd’hui."
+categories:
+- PrestaShop
+- Développement
+tags:
+- API
+- PrestaShop
+- développement
+- sécurité
+excerpt: Un guide pédagogique pour créer vos premiers endpoints dans l’Admin API PrestaShop
+  9. Découvrez les 8 concepts essentiels et commencez à contribuer dès aujourd’hui.
 image: /assets/images/blog/2025/09/2025-09-12-prestashop-admin-api-quickstart.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "API Platform", "PHP", "Symfony"]
+difficulty: Intermédiaire
+technologies:
+- PrestaShop
+- API Platform
+- PHP
+- Symfony
 estimated_reading_time: 12 minutes
 faq:
-  - question: "Dois-je créer mes propres Commands et Queries pour l'Admin API ?"
-    answer: "Non, dans la majorité des cas, les Commands et Queries existent déjà dans le cœur de PrestaShop. Vous devez simplement les brancher correctement dans votre ressource API."
-  - question: "Quelle est la différence entre l'Admin API et l'ancienne Webservice API ?"
-    answer: "L'Admin API repose sur Symfony et API Platform avec support OAuth2 et CQRS, offrant une approche moderne. L'ancienne Webservice API XML est héritée et limitée dans ses fonctionnalités."
-  - question: "Puis-je tester mes endpoints sans interface front ?"
-    answer: "Oui, vous pouvez utiliser des clients HTTP comme Postman, Insomnia ou curl pour tester rapidement vos endpoints API et vérifier leur fonctionnement."
-  - question: "Où poser mes questions si je bloque sur l'Admin API ?"
-    answer: "Le Slack communautaire PrestaShop, canal #cfc-adminapi, est l'endroit idéal pour échanger avec d'autres contributeurs et obtenir de l'aide."
+- question: Dois-je créer mes propres Commands et Queries pour l'Admin API ?
+  answer: Non, dans la majorité des cas, les Commands et Queries existent déjà dans
+    le cœur de PrestaShop. Vous devez simplement les brancher correctement dans votre
+    ressource API.
+- question: Quelle est la différence entre l'Admin API et l'ancienne Webservice API
+    ?
+  answer: L'Admin API repose sur Symfony et API Platform avec support OAuth2 et CQRS,
+    offrant une approche moderne. L'ancienne Webservice API XML est héritée et limitée
+    dans ses fonctionnalités.
+- question: Puis-je tester mes endpoints sans interface front ?
+  answer: Oui, vous pouvez utiliser des clients HTTP comme Postman, Insomnia ou curl
+    pour tester rapidement vos endpoints API et vérifier leur fonctionnement.
+- question: Où poser mes questions si je bloque sur l'Admin API ?
+  answer: 'Le Slack communautaire PrestaShop, canal #cfc-adminapi, est l''endroit
+    idéal pour échanger avec d''autres contributeurs et obtenir de l''aide.'
 ---
-
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9
 
 ![Carte mentale des 8 concepts essentiels pour l’Admin API PrestaShop 9](/assets/images/blog/article_content/2025-09-12-carte-mental.png)

@@ -8,14 +8,8 @@ categories:
 - Intelligence Artificielle
 - Tutoriel
 tags:
-- n8n
+- API
 - automatisation
-- Facebook
-- Instagram
-- Meta API
-- no-code
-- workflow
-- social media
 excerpt: Si vous pensiez que l'intégration Meta serait un jeu d'enfant, ce guide détaillé
   va vous éviter des heures de frustration et vous montrer la voie.
 image: /assets/images/blog/2025/11/automatisation-meta-n8n.jpg

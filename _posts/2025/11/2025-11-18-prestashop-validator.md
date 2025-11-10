@@ -1,27 +1,47 @@
 ---
 layout: post
-title: "PrestaShop Validator : Garantir la Qualité de Vos Modules"
+title: 'PrestaShop Validator : Garantir la Qualité de Vos Modules'
 date: 2025-11-18
 author: Nicolas Dabène
-categories: [PrestaShop, Bonnes Pratiques, Tutoriel]
-tags: [PrestaShop, modules, validation, qualité, sécurité, développement, marketplace]
-excerpt: "Découvrez comment PrestaShop Extension Validator transforme la création de modules en processus fiable et professionnel, garantissant qualité et sécurité."
+categories:
+- PrestaShop
+- Bonnes Pratiques
+- Tutoriel
+tags:
+- PrestaShop
+- développement
+- e-commerce
+- sécurité
+excerpt: Découvrez comment PrestaShop Extension Validator transforme la création de
+  modules en processus fiable et professionnel, garantissant qualité et sécurité.
 image: /assets/images/blog/2025/11/2025-01-24-prestashop-extension-validator.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "PHP", "Validation"]
-estimated_reading_time: "10 minutes"
+difficulty: Intermédiaire
+technologies:
+- PrestaShop
+- PHP
+- Validation
+estimated_reading_time: 10 minutes
 faq:
-  - question: "Le Validator détecte-t-il les bugs métier ?"
-    answer: "Non, et c'est important de comprendre cette limite. Le Validator vérifie la conformité technique et les bonnes pratiques, pas la logique métier de votre module. Un module peut passer la validation et contenir quand même un bug logique. C'est pour ça que les tests manuels et les tests unitaires restent essentiels."
-  - question: "Combien de temps prend la validation ?"
-    answer: "L'analyse automatisée prend généralement 2 à 5 minutes. Si vous soumettez manuellement pour une publication sur la marketplace, l'équipe PrestaShop examine le module dans les 5 à 10 jours ouvrables. Le Validator en ligne, lui, est instantané."
-  - question: "Puis-je utiliser le Validator pour des modules privés ?"
-    answer: "Oui ! Vous n'êtes pas obligé de publier votre module sur la marketplace pour l'utiliser. Le Validator fonctionne pour tout type de module PrestaShop, y compris les solutions sur mesure développées pour un seul client."
-  - question: "Que faire si le Validator reporte une erreur que je ne comprends pas ?"
-    answer: "Chaque rapport inclut une documentation détaillée. Si ce n'est pas suffisant, la communauté PrestaShop est généralement très réactive sur les forums officiels. N'hésitez pas à poser votre question en mentionnant exactement quel type d'erreur vous avez reçue."
+- question: Le Validator détecte-t-il les bugs métier ?
+  answer: Non, et c'est important de comprendre cette limite. Le Validator vérifie
+    la conformité technique et les bonnes pratiques, pas la logique métier de votre
+    module. Un module peut passer la validation et contenir quand même un bug logique.
+    C'est pour ça que les tests manuels et les tests unitaires restent essentiels.
+- question: Combien de temps prend la validation ?
+  answer: L'analyse automatisée prend généralement 2 à 5 minutes. Si vous soumettez
+    manuellement pour une publication sur la marketplace, l'équipe PrestaShop examine
+    le module dans les 5 à 10 jours ouvrables. Le Validator en ligne, lui, est instantané.
+- question: Puis-je utiliser le Validator pour des modules privés ?
+  answer: Oui ! Vous n'êtes pas obligé de publier votre module sur la marketplace
+    pour l'utiliser. Le Validator fonctionne pour tout type de module PrestaShop,
+    y compris les solutions sur mesure développées pour un seul client.
+- question: Que faire si le Validator reporte une erreur que je ne comprends pas ?
+  answer: Chaque rapport inclut une documentation détaillée. Si ce n'est pas suffisant,
+    la communauté PrestaShop est généralement très réactive sur les forums officiels.
+    N'hésitez pas à poser votre question en mentionnant exactement quel type d'erreur
+    vous avez reçue.
 ---
-
 # PrestaShop Validator : Garantir la Qualité de Vos Modules
 
 Vous avez développé un magnifique module PrestaShop. Les fonctionnalités fonctionnent parfaitement en local, vos tests sont concluants, et vous vous apprêtez à le publier sur la marketplace... Mais attendez ! Avez-vous vérifié sa conformité technique ? C'est précisément à ce moment crucial qu'intervient **PrestaShop Validator**, un outil qui transforme l'incertitude en confiance et la validation en processus transparent.

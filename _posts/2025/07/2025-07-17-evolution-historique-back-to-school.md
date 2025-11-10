@@ -8,11 +8,8 @@ categories:
 - Commerce
 - Analyse Marché
 tags:
-- rentrée scolaire
+- automatisation
 - e-commerce
-- commerce retail
-- transformation digitale
-- analyse marché
 description: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
   en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
   traditionnel vers l'e-commerce.

@@ -10,14 +10,8 @@ categories:
 - Success Story
 tags:
 - PrestaShop
-- startup
+- développement
 - e-commerce
-- entrepreneuriat
-- plateforme
-- open source
-- success story
-- Bruno Levesque
-- Epitech
 excerpt: PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises
   de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce
   générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success

@@ -10,14 +10,7 @@ categories:
 - Tutoriel
 tags:
 - PrestaShop
-- modules
 - développement
-- Erreurs
-- Debug
-- Hook
-- Smarty
-- SQL
-- Cache
 excerpt: Développeurs PrestaShop, je vous lance un défi ! Découvrez les 5 erreurs
   courantes dans ce module de best-sellers et améliorez vos compétences de développement.
 image: /assets/images/blog/2025/10/2025-10-21-enigme-prestashop-erreurs.jpg
