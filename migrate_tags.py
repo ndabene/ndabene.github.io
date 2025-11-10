@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Script de migration des tags du blog
-Consolidation de 220 tags vers 10 tags stratégiques
+Consolidation de 220 tags vers 11 tags stratégiques
 
 Usage:
     python3 migrate_tags.py --dry-run  # Simulation sans modification
@@ -19,7 +19,7 @@ POSTS_DIR = "./_posts"
 MAPPING_FILE = "tag_mapping.yaml"
 REPORT_FILE = "RAPPORT_MIGRATION_TAGS.md"
 
-# Tags stratégiques (les 10 seuls tags autorisés)
+# Tags stratégiques (les 11 seuls tags autorisés)
 STRATEGIC_TAGS = [
     "IA",
     "PrestaShop",
@@ -27,6 +27,7 @@ STRATEGIC_TAGS = [
     "développement",
     "sécurité",
     "SEO",
+    "GEO",
     "automatisation",
     "API",
     "ChatGPT",
@@ -236,7 +237,7 @@ def generate_report(all_stats, mapping):
     report += """
 ---
 
-## 🎯 Les 10 Tags Stratégiques Finaux
+## 🎯 Les 11 Tags Stratégiques Finaux
 
 1. **IA** - Intelligence Artificielle et outils IA
 2. **PrestaShop** - Plateforme e-commerce
@@ -244,10 +245,11 @@ def generate_report(all_stats, mapping):
 4. **développement** - Développement logiciel
 5. **sécurité** - Sécurité et confidentialité
 6. **SEO** - Référencement et optimisation
-7. **automatisation** - Workflows et no-code
-8. **API** - Intégrations et API
-9. **ChatGPT** - Outil IA spécifique
-10. **prompt engineering** - Techniques de prompting
+7. **GEO** - Generative Engine Optimization (moteurs IA)
+8. **automatisation** - Workflows et no-code
+9. **API** - Intégrations et API
+10. **ChatGPT** - Outil IA spécifique
+11. **prompt engineering** - Techniques de prompting
 
 ---
 

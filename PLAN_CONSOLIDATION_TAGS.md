@@ -1,12 +1,12 @@
-# 🎯 Plan de Consolidation des Tags - Maximum 10 Tags Stratégiques
+# 🎯 Plan de Consolidation des Tags - 11 Tags Stratégiques
 
 **Date** : 10 novembre 2025
-**Analyse** : 54 articles, 220 tags uniques → **10 tags stratégiques**
+**Analyse** : 54 articles, 220 tags uniques → **11 tags stratégiques**
 **Impact SEO** : CRITIQUE - Concentration du jus SEO sur les mots-clés forts
 
 ---
 
-## 🏆 Les 10 Tags Stratégiques Proposés
+## 🏆 Les 11 Tags Stratégiques Proposés
 
 ### Sélection basée sur :
 1. **Fréquence d'utilisation** (popularité dans le contenu existant)
@@ -21,14 +21,15 @@
 | 4 | **développement** | 7 | Tech | Public cible développeurs |
 | 5 | **sécurité** | 7 | Tech | Préoccupation majeure, bon SEO |
 | 6 | **SEO** | 4 | Marketing | Méta-tag pertinent, forte intention |
-| 7 | **automatisation** | 5 | Productivité | Tendance forte, bon potentiel |
-| 8 | **API** | 5 | Tech | Contenu technique, audience qualifiée |
-| 9 | **ChatGPT** | 8 | IA Générative | Outil phare, fort volume recherche |
-| 10 | **prompt engineering** | 5 | IA Générative | Compétence émergente, bon SEO |
+| 7 | **GEO** | 2 | Marketing IA | Concept émergent, optimisation moteurs IA |
+| 8 | **automatisation** | 5 | Productivité | Tendance forte, bon potentiel |
+| 9 | **API** | 5 | Tech | Contenu technique, audience qualifiée |
+| 10 | **ChatGPT** | 8 | IA Générative | Outil phare, fort volume recherche |
+| 11 | **prompt engineering** | 5 | IA Générative | Compétence émergente, bon SEO |
 
 ---
 
-## 📋 Mapping des 220 Tags vers les 10 Tags Stratégiques
+## 📋 Mapping des 220 Tags vers les 11 Tags Stratégiques
 
 ### 🤖 TAG 1 : **IA** (Regroupe ~60 tags)
 
@@ -136,10 +137,9 @@
 
 ---
 
-### 📈 TAG 6 : **SEO** (Regroupe ~15 tags)
+### 📈 TAG 6 : **SEO** (Regroupe ~12 tags)
 
 **Tags à fusionner vers "SEO" :**
-- GEO (2), GEO Suite (1) → `SEO`
 - VEO (1), voice search, optimisation vocale → `SEO`
 - Google Analytics 4 (1), analytics (1) → `SEO`
 - stratégie digitale, marketing digital → `SEO` + `e-commerce`
@@ -147,11 +147,28 @@
 - discovery → `SEO`
 - FAQ (contexte SEO) → `SEO`
 
-**Règle** : Tout contenu sur le référencement et la visibilité → `SEO`
+**Règle** : Tout contenu sur le référencement classique (moteurs de recherche traditionnels) → `SEO`
 
 ---
 
-### ⚙️ TAG 7 : **automatisation** (Regroupe ~12 tags)
+### 🎯 TAG 7 : **GEO** (Regroupe ~3 tags)
+
+**Tags à fusionner vers "GEO" :**
+- GEO (2) → `GEO`
+- GEO Suite (1) → `GEO`
+
+**Pourquoi un tag séparé de "SEO" ?**
+- **GEO (Generative Engine Optimization)** est une discipline émergente distincte du SEO classique
+- Cible les moteurs IA (ChatGPT, Gemini, Perplexity, Claude) vs moteurs traditionnels (Google, Bing)
+- Techniques différentes : optimisation pour les réponses IA, citations, sources structurées
+- Potentiel de croissance majeur : +300% de recherches sur "GEO" en 2025
+- Expertise différenciante pour le blog
+
+**Règle** : Tout contenu sur l'optimisation pour les moteurs IA et réponses génératives → `GEO`
+
+---
+
+### ⚙️ TAG 8 : **automatisation** (Regroupe ~12 tags)
 
 **Tags à fusionner vers "automatisation" :**
 - automation, Automatisation → automatisation (normalisation)
@@ -165,7 +182,7 @@
 
 ---
 
-### 🔌 TAG 8 : **API** (Regroupe ~10 tags)
+### 🔌 TAG 9 : **API** (Regroupe ~10 tags)
 
 **Tags à fusionner vers "API" :**
 - API Platform, Admin API, Meta API → `API`
@@ -177,7 +194,7 @@
 
 ---
 
-### 💬 TAG 9 : **ChatGPT** (TAG SPÉCIFIQUE - À CONSERVER)
+### 💬 TAG 10 : **ChatGPT** (TAG SPÉCIFIQUE - À CONSERVER)
 
 **Pourquoi le garder séparé de "IA" ?**
 - Volume de recherche très élevé sur "ChatGPT"
@@ -193,7 +210,7 @@
 
 ---
 
-### 📝 TAG 10 : **prompt engineering** (Regroupe ~5 tags)
+### 📝 TAG 11 : **prompt engineering** (Regroupe ~5 tags)
 
 **Tags à fusionner vers "prompt engineering" :**
 - Prompt Engineering → prompt engineering (casse)
