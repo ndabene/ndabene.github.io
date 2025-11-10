@@ -1,23 +1,38 @@
 ---
 layout: post
-title: "Black Friday 2025 : La révolution GEO arrive sur PrestaShop"
+title: 'Black Friday 2025 : La révolution GEO arrive sur PrestaShop'
 date: 2025-09-16
 author: Nicolas Dabène
-categories: [PrestaShop, Ecommerce, Intelligence Artificielle]
-tags: [PrestaShop, Black Friday, GEO Suite, IA générative, SEO, optimisation, ventes, révolution]
-excerpt: "Le Black Friday 2025 sera dominé par les IA génératives. Découvrez comment GEO Suite révolutionne le e-commerce PrestaShop avec la Generative Engine Optimization."
+categories:
+- PrestaShop
+- Ecommerce
+- Intelligence Artificielle
+tags:
+- IA
+- PrestaShop
+- e-commerce
+- développement
+excerpt: Le Black Friday 2025 sera dominé par les IA génératives. Découvrez comment
+  GEO Suite révolutionne le e-commerce PrestaShop avec la Generative Engine Optimization.
 image: /assets/images/blog/2025/09/2025-09-16-black-friday-geo-suite.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "IA", "SEO", "E-commerce"]
-estimated_reading_time: "8 minutes"
+difficulty: Intermédiaire
+technologies:
+- PrestaShop
+- IA
+- SEO
+- E-commerce
+estimated_reading_time: 8 minutes
 faq:
-  - question: "GEO Suite remplace-t-il le SEO traditionnel ?"
-    answer: "Non, GEO Suite complète le SEO traditionnel sans le remplacer. Vous gardez vos positions Google tout en gagnant de la visibilité auprès des IA génératives, générant ainsi du trafic supplémentaire qualifié."
-  - question: "Combien de temps pour voir les premiers effets de GEO Suite ?"
-    answer: "Les premiers adoptants rapportent des résultats significatifs dès 3 à 4 semaines après l'installation du module. L'impact s'accroît avec le temps et l'optimisation continue."
+- question: GEO Suite remplace-t-il le SEO traditionnel ?
+  answer: Non, GEO Suite complète le SEO traditionnel sans le remplacer. Vous gardez
+    vos positions Google tout en gagnant de la visibilité auprès des IA génératives,
+    générant ainsi du trafic supplémentaire qualifié.
+- question: Combien de temps pour voir les premiers effets de GEO Suite ?
+  answer: Les premiers adoptants rapportent des résultats significatifs dès 3 à 4
+    semaines après l'installation du module. L'impact s'accroît avec le temps et l'optimisation
+    continue.
 ---
-
 # Black Friday 2025 : La révolution GEO arrive sur PrestaShop
 
 ## Introduction

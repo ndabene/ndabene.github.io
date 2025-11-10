@@ -1,25 +1,37 @@
 ---
 layout: post
-title: "Créer votre Premier Outil MCP : L'Outil readFile Expliqué"
+title: 'Créer votre Premier Outil MCP : L''Outil readFile Expliqué'
 date: 2025-11-12
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle]
-tags: [MCP, TypeScript, Node.js, readFile, tutorial, outils, développement]
-excerpt: "Du setup à l'action ! Créez votre premier outil MCP fonctionnel qui permet à une IA de lire des fichiers. Code complet et expliqué."
+categories:
+- Tutoriel
+- Intelligence Artificielle
+tags:
+- IA
+- développement
+excerpt: Du setup à l'action ! Créez votre premier outil MCP fonctionnel qui permet
+  à une IA de lire des fichiers. Code complet et expliqué.
 image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["TypeScript", "Node.js", "MCP", "File System"]
-estimated_reading_time: "12 minutes"
+difficulty: Intermédiaire
+technologies:
+- TypeScript
+- Node.js
+- MCP
+- File System
+estimated_reading_time: 12 minutes
 faq:
-  - question: "Puis-je créer un outil qui écrit des fichiers ?"
-    answer: "Absolument ! La structure est la même. Utilisez fs.writeFile() au lieu de fs.readFile(). Mais attention à la sécurité : l'écriture est plus risquée que la lecture."
-  - question: "Comment gérer les fichiers binaires ?"
-    answer: "Utilisez l'encoding base64 pour lire les fichiers binaires et les transmettre en tant que texte. L'IA pourra ensuite les manipuler."
-  - question: "Mes outils peuvent-ils appeler d'autres outils ?"
-    answer: "Techniquement oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels entre outils. Gardez vos outils simples et atomiques."
+- question: Puis-je créer un outil qui écrit des fichiers ?
+  answer: 'Absolument ! La structure est la même. Utilisez fs.writeFile() au lieu
+    de fs.readFile(). Mais attention à la sécurité : l''écriture est plus risquée
+    que la lecture.'
+- question: Comment gérer les fichiers binaires ?
+  answer: Utilisez l'encoding base64 pour lire les fichiers binaires et les transmettre
+    en tant que texte. L'IA pourra ensuite les manipuler.
+- question: Mes outils peuvent-ils appeler d'autres outils ?
+  answer: Techniquement oui, mais c'est généralement le rôle de l'IA d'orchestrer
+    les appels entre outils. Gardez vos outils simples et atomiques.
 ---
-
 # Créer votre Premier Outil MCP : L'Outil readFile Expliqué
 
 Vous avez configuré votre environnement TypeScript dans l'article précédent ? Parfait ! Maintenant, place au moment magique où la théorie devient réalité. Nous allons créer ensemble votre tout premier outil MCP : une fonction qui permettra à une IA de lire des fichiers sur votre machine. C'est simple, concret, et surtout : ça fonctionne vraiment.

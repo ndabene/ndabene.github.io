@@ -1,34 +1,67 @@
 ---
 layout: post
-title: "Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
-  Jekyll"
+title: 'Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
+  Jekyll'
 date: 2025-07-28
 author: Nicolas Dabène
-categories: [Développement, Tutoriel]
-tags: [GitHub Pages, Jekyll, portfolio, site statique, git, développement web]
-excerpt: "Découvrez comment créer gratuitement un portfolio professionnel en ligne
-  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs."
+categories:
+- Développement
+- Tutoriel
+tags:
+- automatisation
+- développement
+excerpt: Découvrez comment créer gratuitement un portfolio professionnel en ligne
+  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.
 image: /assets/images/blog/2025/07/2025-07-28-github-pages-jekyll-portfolio.jpg
 featured: false
-difficulty: "Débutant"
-technologies: ["GitHub Pages", "Jekyll", "Git", "Markdown", "HTML", "CSS"]
-estimated_reading_time: "12 minutes"
-llm_summary: Découvrez comment créer gratuitement un portfolio professionnel en 
-  ligne avec GitHub Pages et Jekyll. Guide complet pour développeurs et 
-  créatifs.
-llm_topics: [GitHub Pages, Jekyll, portfolio, site statique, git, développement
-    web]
+difficulty: Débutant
+technologies:
+- GitHub Pages
+- Jekyll
+- Git
+- Markdown
+- HTML
+- CSS
+estimated_reading_time: 12 minutes
+llm_summary: Découvrez comment créer gratuitement un portfolio professionnel en ligne
+  avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.
+llm_topics:
+- GitHub Pages
+- Jekyll
+- portfolio
+- site statique
+- git
+- développement web
 faq:
-  - question: "Qu'est-ce que GitHub Pages ?"
-    answer: "GitHub Pages est un service d'hébergement gratuit de sites web statiques directement intégré à GitHub. Il transforme automatiquement votre code source en site web accessible publiquement en créant un dépôt spécial nommé votre-nom-utilisateur.github.io, offrant hébergement professionnel et fiable sans frais ni configuration serveur complexe."
-  - question: "Pourquoi choisir Jekyll pour créer un portfolio ?"
-    answer: "Jekyll est un générateur de sites statiques qui compile vos contenus Markdown en HTML prêt à servir. Il offre performance exceptionnelle, sécurité renforcée sans base de données, intégration native avec GitHub Pages et permet de séparer clairement contenu et présentation pour une maintenance simplifiée et une évolutivité optimale."
-  - question: "Comment publier mon site sur GitHub Pages ?"
-    answer: "Créez un dépôt GitHub nommé votre-nom.github.io, activez GitHub Pages dans Settings > Pages en sélectionnant la branche main, puis poussez votre code avec git add, git commit et git push. Votre site se met à jour automatiquement en quelques minutes à chaque modification sans configuration supplémentaire."
-  - question: "Peut-on utiliser un nom de domaine personnalisé avec GitHub Pages ?"
-    answer: "Oui, GitHub Pages supporte parfaitement les domaines personnalisés comme votrenom.com. La configuration prend quelques minutes et renforce considérablement votre image professionnelle en transformant votre portfolio d'un projet GitHub en véritable présence web professionnelle pour un investissement minime de quelques euros par an."
-  - question: "Faut-il installer Jekyll localement pour utiliser GitHub Pages ?"
-    answer: "Non, GitHub Pages peut compiler Jekyll dans le cloud sans installation locale. Cependant, installer Jekyll localement est fortement recommandé car cela permet de prévisualiser instantanément chaque modification, tester différents designs et déboguer avant publication, transformant votre processus créatif en expérience plus productive et sereine."
+- question: Qu'est-ce que GitHub Pages ?
+  answer: GitHub Pages est un service d'hébergement gratuit de sites web statiques
+    directement intégré à GitHub. Il transforme automatiquement votre code source
+    en site web accessible publiquement en créant un dépôt spécial nommé votre-nom-utilisateur.github.io,
+    offrant hébergement professionnel et fiable sans frais ni configuration serveur
+    complexe.
+- question: Pourquoi choisir Jekyll pour créer un portfolio ?
+  answer: Jekyll est un générateur de sites statiques qui compile vos contenus Markdown
+    en HTML prêt à servir. Il offre performance exceptionnelle, sécurité renforcée
+    sans base de données, intégration native avec GitHub Pages et permet de séparer
+    clairement contenu et présentation pour une maintenance simplifiée et une évolutivité
+    optimale.
+- question: Comment publier mon site sur GitHub Pages ?
+  answer: Créez un dépôt GitHub nommé votre-nom.github.io, activez GitHub Pages dans
+    Settings > Pages en sélectionnant la branche main, puis poussez votre code avec
+    git add, git commit et git push. Votre site se met à jour automatiquement en quelques
+    minutes à chaque modification sans configuration supplémentaire.
+- question: Peut-on utiliser un nom de domaine personnalisé avec GitHub Pages ?
+  answer: Oui, GitHub Pages supporte parfaitement les domaines personnalisés comme
+    votrenom.com. La configuration prend quelques minutes et renforce considérablement
+    votre image professionnelle en transformant votre portfolio d'un projet GitHub
+    en véritable présence web professionnelle pour un investissement minime de quelques
+    euros par an.
+- question: Faut-il installer Jekyll localement pour utiliser GitHub Pages ?
+  answer: Non, GitHub Pages peut compiler Jekyll dans le cloud sans installation locale.
+    Cependant, installer Jekyll localement est fortement recommandé car cela permet
+    de prévisualiser instantanément chaque modification, tester différents designs
+    et déboguer avant publication, transformant votre processus créatif en expérience
+    plus productive et sereine.
 ---
 # Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
 

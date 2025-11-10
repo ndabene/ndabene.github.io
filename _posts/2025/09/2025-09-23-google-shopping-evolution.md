@@ -1,25 +1,42 @@
 ---
 layout: post
-title: "L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)"
+title: 'L''Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)'
 date: 2025-09-23
 author: Nicolas Dabène
-categories: [Ecommerce, Intelligence Artificielle]
-tags: [Google Shopping, e-commerce, SEO, IA, marketplace, publicité digitale]
-excerpt: "De simple comparateur gratuit à plateforme IA sophistiquée : découvrez 23 ans d'évolution révolutionnaire de Google Shopping."
+categories:
+- Ecommerce
+- Intelligence Artificielle
+tags:
+- IA
+- PrestaShop
+- SEO
+- e-commerce
+excerpt: 'De simple comparateur gratuit à plateforme IA sophistiquée : découvrez 23
+  ans d''évolution révolutionnaire de Google Shopping.'
 image: /assets/images/blog/2025/09/2025-09-23-google-shopping-evolution.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["Google Ads", "IA", "E-commerce", "SEO"]
-estimated_reading_time: "12 minutes"
+difficulty: Intermédiaire
+technologies:
+- Google Ads
+- IA
+- E-commerce
+- SEO
+estimated_reading_time: 12 minutes
 faq:
-  - question: "Comment optimiser son référencement sur Google Shopping en 2025 ?"
-    answer: "La clé réside dans la qualité des données produits, l'utilisation de Google Merchant Center Next pour l'automatisation, et l'adaptation aux nouvelles fonctionnalités IA de personnalisation et de recommandation."
-  - question: "Les petites entreprises peuvent-elles encore concurrencer sur Google Shopping ?"
-    answer: "Absolument. Le retour des listings gratuits en 2020 et les nouveaux outils d'automatisation démocratisent l'accès. Le retrait d'Amazon de Google Shopping libère également des opportunités importantes."
-  - question: "Quelle est la différence entre Google Shopping et Amazon ?"
-    answer: "Google Shopping fonctionne comme un comparateur dirigeant vers les sites marchands externes, tandis qu'Amazon est une marketplace centralisée. Google mise sur la découverte via la recherche, Amazon sur l'achat direct sur sa plateforme."
+- question: Comment optimiser son référencement sur Google Shopping en 2025 ?
+  answer: La clé réside dans la qualité des données produits, l'utilisation de Google
+    Merchant Center Next pour l'automatisation, et l'adaptation aux nouvelles fonctionnalités
+    IA de personnalisation et de recommandation.
+- question: Les petites entreprises peuvent-elles encore concurrencer sur Google Shopping
+    ?
+  answer: Absolument. Le retour des listings gratuits en 2020 et les nouveaux outils
+    d'automatisation démocratisent l'accès. Le retrait d'Amazon de Google Shopping
+    libère également des opportunités importantes.
+- question: Quelle est la différence entre Google Shopping et Amazon ?
+  answer: Google Shopping fonctionne comme un comparateur dirigeant vers les sites
+    marchands externes, tandis qu'Amazon est une marketplace centralisée. Google mise
+    sur la découverte via la recherche, Amazon sur l'achat direct sur sa plateforme.
 ---
-
 # L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)
 
 Google Shopping représente aujourd'hui l'un des leviers les plus puissants du commerce électronique, responsable de 70% du chiffre d'affaires de la publicité en ligne générée par Google Ads. Cette plateforme, qui a révolutionné la façon dont nous découvrons et comparons les produits en ligne, a connu une évolution remarquable depuis ses humbles débuts. De simple comparateur gratuit lancé en 2002 sous le nom de "Froogle" à plateforme sophistiquée dopée à l'intelligence artificielle en 2025, Google Shopping illustre parfaitement l'adaptation constante de Google aux besoins changeants du commerce numérique.

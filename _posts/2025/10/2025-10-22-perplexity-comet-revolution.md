@@ -8,12 +8,7 @@ categories:
 - Développement
 tags:
 - IA
-- Perplexity
-- Comet
-- navigateur
-- productivité
 - automatisation
-- assistant intelligent
 excerpt: Découvrez comment Perplexity Comet transforme radicalement notre façon d'utiliser
   internet en rendant accessible gratuitement un navigateur dopé à l'IA.
 image: /assets/images/blog/2025/10/2025-10-22-perplexity-comet-revolution.jpg

@@ -8,13 +8,9 @@ categories:
 - Innovation
 - Design
 tags:
-- Gemini
-- génération images
-- Google AI
-- créativité
-- Adobe Firefly
 - API
-- automatisation design
+- IA
+- automatisation
 excerpt: 'Google lance Gemini 2.5 Flash Image : édition visuelle par simple conversation,
   fusion intelligente d''images et créativité décuplée pour développeurs et créateurs.'
 image: /assets/images/blog/2025/08/2025-08-27-gemini-flash-image-revolution.jpg

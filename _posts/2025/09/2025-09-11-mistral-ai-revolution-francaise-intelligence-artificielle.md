@@ -10,13 +10,9 @@ categories:
 - Innovation
 - Europe
 tags:
-- Mistral AI
-- IA Française
-- Arthur Mensch
-- startup
-- Révolution IA
-- Souveraineté numérique
-- Europe Tech
+- IA
+- développement
+- e-commerce
 excerpt: En moins de deux ans, Mistral AI est devenue la première décacorne française,
   transformant le paysage de l'intelligence artificielle européenne avec une valorisation
   atteignant 11,7 milliards d'euros.

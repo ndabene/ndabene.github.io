@@ -10,11 +10,8 @@ categories:
 - Banana
 - Tutoriels
 tags:
-- Banana
-- Image IA
+- IA
 - prompt engineering
-- Texte
-- Mèmes
 excerpt: Aucune méthode ne garantit un texte parfait dans Banana, mais ce guide rassemble
   les meilleures astuces pour réduire au maximum les erreurs de lettres, d'accents
   et de placement.

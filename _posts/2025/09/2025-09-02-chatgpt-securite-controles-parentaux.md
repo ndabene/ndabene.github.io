@@ -1,27 +1,48 @@
 ---
 layout: post
-title: "ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs"
+title: 'ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au
+  service de la protection des utilisateurs'
 date: 2025-09-02
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Sécurité, Bonnes Pratiques]
-tags: [ChatGPT, OpenAI, sécurité IA, contrôles parentaux, GPT-5, santé mentale, protection mineurs]
-excerpt: "OpenAI déploie un plan de sécurité ambitieux sur 120 jours pour ChatGPT : contrôles parentaux, détection de détresse et routage vers des modèles de raisonnement avancés."
+categories:
+- Intelligence Artificielle
+- Sécurité
+- Bonnes Pratiques
+tags:
+- ChatGPT
+- IA
+- sécurité
+excerpt: 'OpenAI déploie un plan de sécurité ambitieux sur 120 jours pour ChatGPT
+  : contrôles parentaux, détection de détresse et routage vers des modèles de raisonnement
+  avancés.'
 image: /assets/images/blog/2025/09/2025-09-02-chatgpt-securite-controles-parentaux.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["ChatGPT", "GPT-5", "OpenAI", "IA de sécurité"]
-estimated_reading_time: "12 minutes"
+difficulty: Intermédiaire
+technologies:
+- ChatGPT
+- GPT-5
+- OpenAI
+- IA de sécurité
+estimated_reading_time: 12 minutes
 faq:
-  - question: "Les contrôles parentaux fonctionnent-ils rétroactivement sur les anciennes conversations ?"
-    answer: "Non, les contrôles parentaux s'appliquent uniquement aux nouvelles conversations créées après leur activation. Les conversations existantes ne sont pas affectées rétroactivement."
-  - question: "Comment l'IA détecte-t-elle précisément la détresse aiguë ?"
-    answer: "Via l'analyse du langage, des patterns comportementaux et des demandes spécifiques. Les détails techniques exacts restent confidentiels pour éviter les contournements par des utilisateurs malveillants."
-  - question: "Les parents peuvent-ils lire les conversations de leurs adolescents ?"
-    answer: "Non, les fonctionnalités annoncées se concentrent sur les contrôles et notifications de détresse, pas sur la surveillance directe des contenus de conversation pour préserver la vie privée des adolescents."
-  - question: "Ces mesures affecteront-elles les performances de ChatGPT ?"
-    answer: "Le routage vers des modèles de raisonnement pourrait légèrement ralentir les réponses dans certains cas de détresse, mais cela améliore significativement leur qualité et leur sécurité."
+- question: Les contrôles parentaux fonctionnent-ils rétroactivement sur les anciennes
+    conversations ?
+  answer: Non, les contrôles parentaux s'appliquent uniquement aux nouvelles conversations
+    créées après leur activation. Les conversations existantes ne sont pas affectées
+    rétroactivement.
+- question: Comment l'IA détecte-t-elle précisément la détresse aiguë ?
+  answer: Via l'analyse du langage, des patterns comportementaux et des demandes spécifiques.
+    Les détails techniques exacts restent confidentiels pour éviter les contournements
+    par des utilisateurs malveillants.
+- question: Les parents peuvent-ils lire les conversations de leurs adolescents ?
+  answer: Non, les fonctionnalités annoncées se concentrent sur les contrôles et notifications
+    de détresse, pas sur la surveillance directe des contenus de conversation pour
+    préserver la vie privée des adolescents.
+- question: Ces mesures affecteront-elles les performances de ChatGPT ?
+  answer: Le routage vers des modèles de raisonnement pourrait légèrement ralentir
+    les réponses dans certains cas de détresse, mais cela améliore significativement
+    leur qualité et leur sécurité.
 ---
-
 # ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs
 
 ## Introduction

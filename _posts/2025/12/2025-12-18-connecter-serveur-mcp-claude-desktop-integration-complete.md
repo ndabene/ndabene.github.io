@@ -1,27 +1,40 @@
 ---
 layout: post
-title: "Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète"
+title: 'Connecter votre Serveur MCP à Claude Desktop : L''Intégration Complète'
 date: 2025-12-18
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle]
-tags: [MCP, Claude Desktop, intégration, IA, configuration, test]
-excerpt: "Le moment tant attendu : connectons votre serveur MCP sécurisé à Claude Desktop et voyons la magie opérer en conditions réelles."
+categories:
+- Tutoriel
+- Intelligence Artificielle
+tags:
+- API
+- IA
+- développement
+excerpt: 'Le moment tant attendu : connectons votre serveur MCP sécurisé à Claude
+  Desktop et voyons la magie opérer en conditions réelles.'
 image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["MCP", "Claude Desktop", "TypeScript", "Configuration"]
-estimated_reading_time: "14 minutes"
+difficulty: Intermédiaire
+technologies:
+- MCP
+- Claude Desktop
+- TypeScript
+- Configuration
+estimated_reading_time: 14 minutes
 faq:
-  - question: "Puis-je avoir plusieurs serveurs MCP en même temps ?"
-    answer: "Oui ! Ajoutez-les dans la configuration JSON avec plusieurs entrées dans mcpServers. Chaque serveur aura son propre nom et configuration."
-  - question: "Claude peut-il utiliser mes outils sans me demander ?"
-    answer: "Non. Claude demande TOUJOURS la permission avant d'exécuter un outil. C'est une garantie de sécurité côté Anthropic."
-  - question: "Les outils fonctionnent-ils avec Claude sur le web ?"
-    answer: "Actuellement, non. Les serveurs MCP ne fonctionnent qu'avec Claude Desktop. Mais Anthropic travaille sur d'autres intégrations."
-  - question: "Puis-je partager mon serveur MCP avec d'autres ?"
-    answer: "Oui ! Publiez-le sur npm ou GitHub. D'autres pourront l'installer et le configurer dans leur Claude Desktop."
+- question: Puis-je avoir plusieurs serveurs MCP en même temps ?
+  answer: Oui ! Ajoutez-les dans la configuration JSON avec plusieurs entrées dans
+    mcpServers. Chaque serveur aura son propre nom et configuration.
+- question: Claude peut-il utiliser mes outils sans me demander ?
+  answer: Non. Claude demande TOUJOURS la permission avant d'exécuter un outil. C'est
+    une garantie de sécurité côté Anthropic.
+- question: Les outils fonctionnent-ils avec Claude sur le web ?
+  answer: Actuellement, non. Les serveurs MCP ne fonctionnent qu'avec Claude Desktop.
+    Mais Anthropic travaille sur d'autres intégrations.
+- question: Puis-je partager mon serveur MCP avec d'autres ?
+  answer: Oui ! Publiez-le sur npm ou GitHub. D'autres pourront l'installer et le
+    configurer dans leur Claude Desktop.
 ---
-
 # Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète
 
 Nous y sommes. Après avoir construit un serveur MCP de A à Z, créé des outils fonctionnels, implémenté la découverte automatique et ajouté quatre couches de sécurité, il est temps de voir tout ça fonctionner avec une vraie IA. Aujourd'hui, nous connectons votre serveur à Claude Desktop et vous verrez enfin Claude utiliser vos outils en temps réel. C'est le moment où tout prend sens.

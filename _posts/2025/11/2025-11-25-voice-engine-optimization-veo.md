@@ -8,16 +8,9 @@ categories:
 - SEO
 - Tutoriel
 tags:
-- VEO
-- voice search
-- voice commerce
 - IA
-- assistant vocal
-- recherche vocale
-- Google Assistant
-- Alexa
-- Siri
-- optimisation vocale
+- SEO
+- e-commerce
 excerpt: L'optimisation vocale (VEO) transforme la recherche en 2025. Avec 8,4 milliards
   d'assistants vocaux actifs et 20% des utilisateurs qui adoptent la voix, ignorer
   le VEO revient à perdre votre audience. Découvrez les 3 piliers techniques pour
