@@ -96,7 +96,7 @@ Bienvenue dans le **guide complet de la performance web** ! Apprenez à optimise
   </a>
 
   <a href="/blog/categories/performance/?tag=prestashop" class="topic-link" style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: white; border-radius: 10px; border: 2px solid #e2e8f0; text-decoration: none; color: inherit; transition: all 0.3s ease;">
-    <i class="fab fa-shopify" style="font-size: 2rem; color: #2563EB;"></i>
+    <i class="fas fa-store" style="font-size: 2rem; color: #2563EB;"></i>
     <div>
       <h4 style="margin: 0; color: #0f172a;">E-commerce Speed</h4>
       <p style="margin: 0.25rem 0 0; font-size: 0.875rem; color: #64748b;">PrestaShop, WooCommerce</p>
