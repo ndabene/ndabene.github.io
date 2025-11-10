@@ -1,0 +1,312 @@
+# Mapping des 220 tags actuels vers les 10 tags stratégiques
+# Format: "ancien_tag": ["nouveau_tag1", "nouveau_tag2"]
+# Les tags en tableau vide [] seront supprimés
+
+# =============================================================================
+# TAG 1 : IA (Intelligence Artificielle)
+# =============================================================================
+
+"AI": ["IA"]
+"Intelligence Artificielle": ["IA"]
+"IA": ["IA"]
+"IA générative": ["IA"]
+"IA conversationnelle": ["IA"]
+"IA agentique": ["IA"]
+"IA de codage": ["IA"]
+"IA locale": ["IA"]
+"IA éthique": ["IA"]
+"IA Française": ["IA"]
+"agents IA": ["IA"]
+"recommandations IA": ["IA"]
+"sécurité IA": ["IA", "sécurité"]
+"intégration IA": ["IA", "API"]
+"Gemini": ["IA"]
+"Gemini AI": ["IA"]
+"Claude": ["IA"]
+"Claude Desktop": ["IA"]
+"Claude Code": ["IA", "développement"]
+"OpenAI": ["IA"]
+"GPT-5": ["IA"]
+"Mistral AI": ["IA"]
+"DeepSeek": ["IA"]
+"Anthropic": ["IA"]
+"xAI": ["IA"]
+"Grok": ["IA"]
+"Google AI": ["IA"]
+"Google Assistant": ["IA"]
+"Alexa": ["IA"]
+"Siri": ["IA"]
+"Perplexity": ["IA"]
+"Comet": ["IA"]
+"Image IA": ["IA"]
+"génération images": ["IA"]
+"LM Studio": ["IA"]
+"Ollama": ["IA"]
+"assistant intelligent": ["IA"]
+"assistant vocal": ["IA"]
+"assistant coding": ["IA", "développement"]
+"Révolution IA": ["IA"]
+"innovation technologique": ["IA"]
+"Biais algorithmiques": ["IA", "sécurité"]
+"Éthique du code": ["IA", "sécurité"]
+"Deep Think": ["IA"]
+"multimodal": ["IA"]
+"Code Execution": ["IA", "développement"]
+
+# =============================================================================
+# TAG 2 : PrestaShop
+# =============================================================================
+
+"PrestaShop": ["PrestaShop"]
+"prestashop": ["PrestaShop"]
+"PrestaShop 8": ["PrestaShop"]
+"PrestaShop 9": ["PrestaShop"]
+"PrestaShop Enterprise": ["PrestaShop"]
+"modules": ["PrestaShop", "développement"]
+"Module": ["PrestaShop", "développement"]
+"marketplace": ["PrestaShop", "e-commerce"]
+"Hook": ["PrestaShop", "développement"]
+"Smarty": ["PrestaShop", "développement"]
+"Admin API": ["PrestaShop", "API"]
+"Command Bus": ["PrestaShop", "développement"]
+"CQRS": ["PrestaShop", "développement"]
+"Tactician": ["PrestaShop", "développement"]
+"Messenger": ["PrestaShop", "développement"]
+
+# =============================================================================
+# TAG 3 : e-commerce
+# =============================================================================
+
+"e-commerce": ["e-commerce"]
+"ecommerce": ["e-commerce"]
+"Shopify": ["e-commerce"]
+"Shopify Plus": ["e-commerce"]
+"WooCommerce": ["e-commerce"]
+"commerce conversationnel": ["e-commerce", "IA"]
+"commerce retail": ["e-commerce"]
+"voice commerce": ["e-commerce", "SEO"]
+"Google Shopping": ["e-commerce", "SEO"]
+"Black Friday": ["e-commerce", "SEO"]
+"marketing digital": ["e-commerce", "SEO"]
+"ventes": ["e-commerce"]
+"shopping intelligence": ["e-commerce", "IA"]
+"Advanced Search Pro": ["e-commerce", "SEO"]
+"recherche facettes": ["e-commerce", "SEO"]
+"bot traffic": ["e-commerce", "sécurité"]
+"Meta Ads": ["e-commerce", "SEO"]
+"Google Ads": ["e-commerce", "SEO"]
+"publicité digitale": ["e-commerce", "SEO"]
+"FAQ": ["e-commerce", "SEO"]
+
+# =============================================================================
+# TAG 4 : développement
+# =============================================================================
+
+"développement": ["développement"]
+"Développement": ["développement"]
+"développement web": ["développement"]
+"développement logiciel": ["développement"]
+"développement cloud": ["développement"]
+"développement assisté": ["développement", "IA"]
+"cloud development": ["développement"]
+"TypeScript": ["développement"]
+"Node.js": ["développement"]
+"PHP 8": ["développement"]
+"Symfony": ["développement"]
+"symfony": ["développement"]
+"Express": ["développement"]
+"API Platform": ["développement", "API"]
+"architecture": ["développement"]
+"Git": ["développement"]
+"git": ["développement"]
+"GitHub integration": ["développement", "API"]
+"VSCode": ["développement"]
+"Debug": ["développement"]
+"Erreurs": ["développement"]
+"test": ["développement"]
+"qualité du code": ["développement", "sécurité"]
+"code quality": ["développement", "sécurité"]
+"bonnes pratiques": ["développement", "sécurité"]
+"dette technique": ["développement", "sécurité"]
+"Code Review": ["développement", "sécurité"]
+"lazy loading": ["développement"]
+"performance": ["développement"]
+"optimisation": ["développement"]
+"Cache": ["développement"]
+"database": ["développement"]
+"base de données": ["développement"]
+"Doctrine": ["développement"]
+"ORM": ["développement"]
+"SQL": ["développement"]
+"migration": ["développement"]
+"compatibilité": ["développement"]
+"setup": ["développement"]
+"configuration": ["développement"]
+"tutorial": ["développement"]
+"documentation": ["développement"]
+"compétences": ["développement"]
+"développeur": ["développement"]
+"junior vs senior": ["développement"]
+"scalabilité": ["développement"]
+"Cline": ["développement", "IA"]
+"GitHub Copilot": ["IA", "développement"]
+
+# =============================================================================
+# TAG 5 : sécurité
+# =============================================================================
+
+"sécurité": ["sécurité"]
+"validation": ["sécurité", "développement"]
+"qualité": ["sécurité", "développement"]
+"supervision": ["sécurité", "développement"]
+"authentification": ["sécurité", "API"]
+"OAuth": ["sécurité", "API"]
+"permissions": ["sécurité"]
+"confidentialité": ["sécurité"]
+"vie privée": ["sécurité"]
+"données personnelles": ["sécurité"]
+"RGPD": ["sécurité"]
+"AI Act": ["sécurité", "IA"]
+"régulation": ["sécurité"]
+"faille de données": ["sécurité"]
+"WAF": ["sécurité", "e-commerce"]
+"Cloudflare": ["sécurité", "e-commerce"]
+
+# =============================================================================
+# TAG 6 : SEO
+# =============================================================================
+
+"SEO": ["SEO"]
+"GEO": ["SEO"]
+"GEO Suite": ["SEO"]
+"VEO": ["SEO"]
+"voice search": ["SEO"]
+"recherche vocale": ["SEO"]
+"optimisation vocale": ["SEO"]
+"Google Analytics 4": ["SEO"]
+"analytics": ["SEO"]
+"stratégie digitale": ["SEO", "e-commerce"]
+"KPI": ["SEO"]
+"mesure": ["SEO"]
+"discovery": ["SEO"]
+
+# =============================================================================
+# TAG 7 : automatisation
+# =============================================================================
+
+"automatisation": ["automatisation"]
+"Automatisation": ["automatisation"]
+"automation": ["automatisation"]
+"design automation": ["automatisation"]
+"automatisation design": ["automatisation"]
+"n8n": ["automatisation"]
+"Make": ["automatisation"]
+"Zapier": ["automatisation"]
+"no-code": ["automatisation"]
+"No-code": ["automatisation"]
+"workflow": ["automatisation"]
+"productivité": ["automatisation"]
+
+# =============================================================================
+# TAG 8 : API
+# =============================================================================
+
+"API": ["API"]
+"Meta API": ["API"]
+"JSON-RPC": ["API"]
+"protocols": ["API"]
+"protocol": ["API"]
+"intégration": ["API"]
+"services": ["API", "développement"]
+
+# =============================================================================
+# TAG 9 : ChatGPT (tag spécifique conservé pour SEO)
+# =============================================================================
+
+"ChatGPT": ["ChatGPT", "IA"]
+"ChatKit": ["ChatGPT", "IA"]
+
+# =============================================================================
+# TAG 10 : prompt engineering
+# =============================================================================
+
+"prompt engineering": ["prompt engineering", "IA"]
+"Prompt Engineering": ["prompt engineering", "IA"]
+"chatbots": ["prompt engineering", "IA"]
+
+# =============================================================================
+# TAGS À SUPPRIMER (impact SEO négatif ou hors-sujet)
+# =============================================================================
+
+# Hors thématique principale
+"rentrée scolaire": []
+"contrôles parentaux": []
+"protection mineurs": []
+"santé mentale": []
+"e-santé": []
+"téléconsultation": []
+
+# Trop anecdotique
+"Mèmes": []
+"Banana": []
+"Texte": []
+
+# Noms propres peu pertinents
+"Epitech": []
+"Bruno Levesque": []
+"Arthur Mensch": []
+
+# Trop générique
+"success story": []
+"histoire tech": []
+"évolution": []
+"révolution": []
+"créativité": []
+"manipulation": []
+"mindset": []
+"transformation digitale": []
+
+# Géographie trop large
+"Europe": []
+"Europe Tech": []
+"French Tech": []
+"Souveraineté numérique": []
+
+# Trop générique technique
+"plateforme": []
+"navigateur": []
+"conteneur": []
+
+# Social media (garder seulement dans contexte automatisation)
+"social media": ["automatisation"]
+"Facebook": ["automatisation"]
+"Instagram": ["automatisation"]
+
+# Business générique
+"SaaS": []
+"PME": []
+"entrepreneuriat": []
+"startup": []
+"Startup": []
+"growth hacking": []
+"TCO": []
+
+# Outils éphémères ou trop spécifiques
+"Adobe Firefly": []
+"AgentKit": []
+"Agent Builder": []
+
+# Autres
+"phpmyadmin": ["développement"]
+"statsdata": ["développement"]
+"nettoyage": ["développement"]
+"WordPress": ["e-commerce"]
+"GitHub Pages": ["développement"]
+"Jekyll": ["développement"]
+"site statique": ["développement"]
+"portfolio": ["développement"]
+"outils": []
+"MCP": ["IA", "développement"]
+"Model Context Protocol": ["IA", "développement"]
+"readFile": ["développement"]
+"open source": ["développement"]
