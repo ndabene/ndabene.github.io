@@ -27,7 +27,7 @@
 "Claude Code": ["IA", "développement"]
 "OpenAI": ["IA"]
 "GPT-5": ["IA"]
-"Mistral AI": ["IA"]
+"Mistral AI": ["IA", "développement"]
 "DeepSeek": ["IA"]
 "Anthropic": ["IA"]
 "xAI": ["IA"]
@@ -50,7 +50,7 @@
 "Biais algorithmiques": ["IA", "sécurité"]
 "Éthique du code": ["IA", "sécurité"]
 "Deep Think": ["IA"]
-"multimodal": ["IA"]
+"multimodal": ["IA", "développement"]
 "Code Execution": ["IA", "développement"]
 
 # =============================================================================
@@ -248,8 +248,8 @@
 "contrôles parentaux": []
 "protection mineurs": []
 "santé mentale": []
-"e-santé": []
-"téléconsultation": []
+"e-santé": ["IA"]
+"téléconsultation": ["IA"]
 
 # Trop anecdotique
 "Mèmes": []
@@ -269,7 +269,7 @@
 "créativité": []
 "manipulation": []
 "mindset": []
-"transformation digitale": []
+"transformation digitale": ["automatisation"]
 
 # Géographie trop large
 "Europe": []
@@ -288,12 +288,12 @@
 "Instagram": ["automatisation"]
 
 # Business générique
-"SaaS": []
+"SaaS": ["automatisation"]
 "PME": []
 "entrepreneuriat": []
-"startup": []
-"Startup": []
-"growth hacking": []
+"startup": ["e-commerce"]
+"Startup": ["e-commerce"]
+"growth hacking": ["e-commerce", "SEO"]
 "TCO": []
 
 # Outils éphémères ou trop spécifiques
@@ -301,13 +301,13 @@
 "AgentKit": []
 "Agent Builder": []
 
-# Autres
-"phpmyadmin": ["développement"]
-"statsdata": ["développement"]
-"nettoyage": ["développement"]
+# Autres (contexte PrestaShop)
+"phpmyadmin": ["PrestaShop", "développement"]
+"statsdata": ["PrestaShop", "développement"]
+"nettoyage": ["PrestaShop", "développement"]
 "WordPress": ["e-commerce"]
-"GitHub Pages": ["développement"]
-"Jekyll": ["développement"]
+"GitHub Pages": ["développement", "automatisation"]
+"Jekyll": ["développement", "automatisation"]
 "site statique": ["développement"]
 "portfolio": ["développement"]
 "outils": []
@@ -315,3 +315,8 @@
 "Model Context Protocol": ["IA", "développement"]
 "readFile": ["développement"]
 "open source": ["développement"]
+
+# Tags manquants détectés lors du test
+"analyse marché": ["e-commerce"]
+"méthodologie": ["développement"]
+"Google": ["IA"]
