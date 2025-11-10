@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<div {% if page.banner_display %}data-banner-display="{{ page.banner_display }}"{% endif %}
+     {% if page.banner_position %}data-banner-position="{{ page.banner_position }}"{% endif %}>
 
 <!-- Schema.org Article pour GEO -->
 <script type="application/ld+json">
@@ -552,3 +554,4 @@ layout: default
     });
     </script>
 </article>
+</div>
