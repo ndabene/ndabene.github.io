@@ -66,12 +66,10 @@ $tag-hover-text: #fff;
     min-height: 200px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #f1f5f9;
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -230,9 +228,6 @@ $tag-hover-text: #fff;
       max-height: 600px;
       aspect-ratio: 16 / 9;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: #f1f5f9;
 
       @media (max-width: 768px) {
@@ -242,6 +237,7 @@ $tag-hover-text: #fff;
       }
 
       img {
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1566,9 +1562,6 @@ $tag-hover-text: #fff;
           position: relative;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           align-self: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           background: #f1f5f9;
 
           @media (max-width: 640px) {
@@ -1578,6 +1571,7 @@ $tag-hover-text: #fff;
           }
 
           img {
+            display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
