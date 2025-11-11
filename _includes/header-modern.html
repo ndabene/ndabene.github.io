@@ -1,14 +1,24 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.i18n[current_lang] %}
+{% if current_lang == 'fr' %}
+  {% assign navigation = site.data.navigation_fr %}
+  {% assign home_url = "/" %}
+{% else %}
+  {% assign navigation = site.data.navigation_en %}
+  {% assign home_url = "/en/" %}
+{% endif %}
+
 <header class="header-executive nav-modern" id="modern-nav">
   <div class="header-container">
     <div class="header-logo nav-brand">
-      <a href="{{ "/" | relative_url }}" class="brand-link">
+      <a href="{{ home_url | relative_url }}" class="brand-link">
         <img src="/assets/images/logo.png" alt="Nicolas Dabène" class="logo animate-float" width="95" height="95">
       </a>
     </div>
-    
+
     <nav class="header-nav main-navigation">
       <ul class="nav-links" role="menubar" aria-label="Navigation principale">
-        {% for item in site.data.navigation %}
+        {% for item in navigation %}
           {% unless item.hidden %}
           <li class="nav-item{% if item.subitems %} has-submenu{% endif %}" role="none">
             <a href="{{ item.link | default: '#' | relative_url }}" 
@@ -31,14 +41,17 @@
     </nav>
 
     <div class="header-actions nav-actions">
-      <a href="{{ "/contact" | relative_url }}" class="btn btn--primary ripple-effect">
+      <!-- Language switcher moderne -->
+      {% include language-switcher-modern.html %}
+
+      <a href="{% if current_lang == 'fr' %}/contact{% else %}/en/contact{% endif %}" class="btn btn--primary ripple-effect">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
           <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
         </svg>
-        Me contacter
+        {{ t.nav.contact }}
       </a>
-      
+
       <button class="mobile-menu-btn" id="mobile-menu-toggle">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -150,7 +163,7 @@
   <!-- Mobile Navigation - Collapsible submenus -->
   <div class="mobile-nav" id="mobile-nav-panel">
     <ul>
-      {% for item in site.data.navigation %}
+      {% for item in navigation %}
         {% unless item.hidden %}
         <li class="mobile-item{% if item.subitems %} has-submenu{% endif %}">
           <a href="{{ item.link | default: '#' | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}" aria-expanded="false">
@@ -166,7 +179,8 @@
         </li>
         {% endunless %}
       {% endfor %}
-      <li><a href="{{ "/contact" | relative_url }}" class="btn btn--primary">Discutons de votre projet</a></li>
+      <li>{% include language-switcher-modern.html %}</li>
+      <li><a href="{% if current_lang == 'fr' %}/contact{% else %}/en/contact{% endif %}" class="btn btn--primary">{{ t.nav.contact }}</a></li>
     </ul>
   </div>
 </header>

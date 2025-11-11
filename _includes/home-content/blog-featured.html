@@ -1,17 +1,30 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+  {% assign read_more_text = "Read more" %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+  {% assign read_more_text = "Lire la suite" %}
+{% endif %}
+
 <!-- BLOG FEATURED - Derniers articles du créateur -->
 <section class="section-creator blog-featured" id="blog-featured">
     <div class="container-creator">
         <!-- En-tête -->
         <div class="section-header-creator">
-            <h2 class="section-title-creator">{{ site.data.home-content.blog_featured.title | default: "Derniers Articles" }}</h2>
-            {% if site.data.home-content.blog_featured.subtitle and site.data.home-content.blog_featured.subtitle != "" %}
-            <p class="section-intro-text">{{ site.data.home-content.blog_featured.subtitle }}</p>
+            <h2 class="section-title-creator">{{ content_data.blog_featured.title | default: "Derniers Articles" }}</h2>
+            {% if content_data.blog_featured.subtitle and content_data.blog_featured.subtitle != "" %}
+            <p class="section-intro-text">{{ content_data.blog_featured.subtitle }}</p>
             {% endif %}
         </div>
 
         <!-- Grille d'articles -->
         <div class="blog-featured-grid">
-            {% assign all_posts = site.documents | where: "collection", "posts" | sort: "date" | reverse %}
+            {% if current_lang == 'en' %}
+              {% assign all_posts = site.documents | where: "collection", "posts_en" | sort: "date" | reverse %}
+            {% else %}
+              {% assign all_posts = site.documents | where: "collection", "posts" | sort: "date" | reverse %}
+            {% endif %}
             {% assign published_posts = "" | split: "" %}
             {% for post in all_posts %}
                 {% if post.date < site.time %}
@@ -19,7 +32,7 @@
                 {% endif %}
             {% endfor %}
 
-            {% assign limit = site.data.home-content.blog_featured.limit | default: 4 %}
+            {% assign limit = content_data.blog_featured.limit | default: 4 %}
             {% for post in published_posts limit: limit %}
             <article class="blog-featured-card">
                 {% if post.image %}
@@ -55,7 +68,7 @@
                     {% endif %}
 
                     <a href="{{ post.url }}" class="blog-featured-link">
-                        Lire la suite <i class="fas fa-arrow-right"></i>
+                        {{ read_more_text }} <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
@@ -63,10 +76,10 @@
         </div>
 
         <!-- CTA Tous les articles -->
-        {% if site.data.home-content.blog_featured.cta %}
+        {% if content_data.blog_featured.cta %}
         <div class="section-cta-center">
-            <a href="{{ site.data.home-content.blog_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
-                {{ site.data.home-content.blog_featured.cta.text }}
+            <a href="{{ content_data.blog_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
+                {{ content_data.blog_featured.cta.text }}
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>

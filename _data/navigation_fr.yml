@@ -1,0 +1,12 @@
+- name: "À propos"
+  link: /
+- name: "Compétences"
+  link: /skills/
+- name: "Formations"
+  link: /boutique/
+- name: "Vidéos"
+  link: /youtube/
+- name: "Blog"
+  link: /blog/
+- name: "Sponsors"
+  link: /sponsors/
