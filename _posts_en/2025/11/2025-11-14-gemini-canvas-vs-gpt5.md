@@ -76,7 +76,7 @@ Thanks to **Canvas**, any user can generate a slide deck from text, a link, or e
 ### 🎯 What I Got With My Prompt
 
 In a few seconds, Gemini generated:
-- 10 coherent and well-hierarchized slides
+- Coherent and well-hierarchized slides
 - A clean visual identity, based on Google Slides tones
 - Relevant visuals evoking the future of development and AI
 - A logical plan:
