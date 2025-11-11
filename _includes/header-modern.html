@@ -41,8 +41,8 @@
     </nav>
 
     <div class="header-actions nav-actions">
-      <!-- Language switcher -->
-      {% include language-switcher.html %}
+      <!-- Language switcher moderne -->
+      {% include language-switcher-modern.html %}
 
       <a href="{% if current_lang == 'fr' %}/contact{% else %}/en/contact{% endif %}" class="btn btn--primary ripple-effect">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +179,7 @@
         </li>
         {% endunless %}
       {% endfor %}
-      <li>{% include language-switcher.html %}</li>
+      <li>{% include language-switcher-modern.html %}</li>
       <li><a href="{% if current_lang == 'fr' %}/contact{% else %}/en/contact{% endif %}" class="btn btn--primary">{{ t.nav.contact }}</a></li>
     </ul>
   </div>

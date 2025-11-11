@@ -1,0 +1,92 @@
+{% comment %}
+  Sélecteur de langue amélioré
+  Version moderne avec drapeaux et dropdown
+  Affiche la langue actuelle + permet de switcher
+{% endcomment %}
+
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign translations = site.data.i18n %}
+
+<div class="language-switcher-modern">
+  {% comment %} Bouton de langue actuelle {% endcomment %}
+  <button class="lang-current" aria-label="Change language / Changer de langue">
+    {% if current_lang == 'fr' %}
+      <span class="flag-icon">🇫🇷</span>
+      <span class="lang-label">FR</span>
+    {% else %}
+      <span class="flag-icon">🇬🇧</span>
+      <span class="lang-label">EN</span>
+    {% endif %}
+    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+      <path d="M2 4l4 4 4-4"/>
+    </svg>
+  </button>
+
+  {% comment %} Dropdown avec les langues disponibles {% endcomment %}
+  <div class="lang-dropdown">
+    {% comment %} Pour les articles de blog avec ref {% endcomment %}
+    {% if page.ref and (page.collection == 'posts' or page.collection == 'posts_en') %}
+      {% assign all_posts = site.posts | concat: site.posts_en %}
+      {% assign has_translation = false %}
+
+      {% for alt_post in all_posts %}
+        {% if alt_post.ref == page.ref and alt_post.lang != current_lang %}
+          {% assign has_translation = true %}
+          <a href="{{ alt_post.url | relative_url }}"
+             class="lang-option"
+             hreflang="{{ alt_post.lang }}"
+             title="{% if alt_post.lang == 'en' %}Read this article in English{% else %}Lire cet article en français{% endif %}">
+            {% if alt_post.lang == 'en' %}
+              <span class="flag-icon">🇬🇧</span>
+              <span class="lang-name">English</span>
+            {% else %}
+              <span class="flag-icon">🇫🇷</span>
+              <span class="lang-name">Français</span>
+            {% endif %}
+          </a>
+        {% endif %}
+      {% endfor %}
+
+      {% unless has_translation %}
+        {% comment %} Pas de traduction disponible, lien vers homepage {% endcomment %}
+        {% if current_lang == 'fr' %}
+          <a href="/en/" class="lang-option" hreflang="en" title="Switch to English site">
+            <span class="flag-icon">🇬🇧</span>
+            <span class="lang-name">English</span>
+            <span class="lang-badge">Home</span>
+          </a>
+        {% else %}
+          <a href="/" class="lang-option" hreflang="fr" title="Basculer vers le site français">
+            <span class="flag-icon">🇫🇷</span>
+            <span class="lang-name">Français</span>
+            <span class="lang-badge">Accueil</span>
+          </a>
+        {% endif %}
+      {% endunless %}
+    {% else %}
+      {% comment %} Pour les pages statiques {% endcomment %}
+      {% if current_lang == 'fr' %}
+        {% comment %} Construire l'URL anglaise {% endcomment %}
+        {% if page.url == '/' or page.url == '/index.html' %}
+          {% assign en_url = '/en/' %}
+        {% else %}
+          {% assign en_url = page.url | prepend: '/en' %}
+        {% endif %}
+        <a href="{{ en_url }}" class="lang-option" hreflang="en" title="View this page in English">
+          <span class="flag-icon">🇬🇧</span>
+          <span class="lang-name">English</span>
+        </a>
+      {% else %}
+        {% comment %} Construire l'URL française {% endcomment %}
+        {% assign fr_url = page.url | remove_first: '/en' %}
+        {% if fr_url == '' or fr_url == '/' %}
+          {% assign fr_url = '/' %}
+        {% endif %}
+        <a href="{{ fr_url }}" class="lang-option" hreflang="fr" title="Voir cette page en français">
+          <span class="flag-icon">🇫🇷</span>
+          <span class="lang-name">Français</span>
+        </a>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
