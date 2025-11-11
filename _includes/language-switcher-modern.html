@@ -1,24 +1,36 @@
 {% comment %}
-  Sélecteur de langue amélioré
-  Version moderne avec drapeaux et dropdown
-  Affiche la langue actuelle + permet de switcher
+  Sélecteur de langue professionnel
+  Version avec drapeaux SVG et design épuré
 {% endcomment %}
 
 {% assign current_lang = page.lang | default: site.default_lang %}
-{% assign translations = site.data.i18n %}
 
 <div class="language-switcher-modern">
   {% comment %} Bouton de langue actuelle {% endcomment %}
   <button class="lang-current" aria-label="Change language / Changer de langue">
     {% if current_lang == 'fr' %}
-      <span class="flag-icon">🇫🇷</span>
+      <svg class="flag-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="600" fill="#ED2939"/>
+        <rect width="600" height="600" fill="#fff"/>
+        <rect width="300" height="600" fill="#002395"/>
+      </svg>
       <span class="lang-label">FR</span>
     {% else %}
-      <span class="flag-icon">🇬🇧</span>
+      <svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+        <clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+        <g clip-path="url(#s)">
+          <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+        </g>
+      </svg>
       <span class="lang-label">EN</span>
     {% endif %}
-    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-      <path d="M2 4l4 4 4-4"/>
+    <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
+      <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   </button>
 
@@ -37,10 +49,24 @@
              hreflang="{{ alt_post.lang }}"
              title="{% if alt_post.lang == 'en' %}Read this article in English{% else %}Lire cet article en français{% endif %}">
             {% if alt_post.lang == 'en' %}
-              <span class="flag-icon">🇬🇧</span>
+              <svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <clipPath id="s2"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                <clipPath id="t2"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                <g clip-path="url(#s2)">
+                  <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                  <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                  <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t2)" stroke="#C8102E" stroke-width="4"/>
+                  <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                  <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                </g>
+              </svg>
               <span class="lang-name">English</span>
             {% else %}
-              <span class="flag-icon">🇫🇷</span>
+              <svg class="flag-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+                <rect width="900" height="600" fill="#ED2939"/>
+                <rect width="600" height="600" fill="#fff"/>
+                <rect width="300" height="600" fill="#002395"/>
+              </svg>
               <span class="lang-name">Français</span>
             {% endif %}
           </a>
@@ -51,15 +77,27 @@
         {% comment %} Pas de traduction disponible, lien vers homepage {% endcomment %}
         {% if current_lang == 'fr' %}
           <a href="/en/" class="lang-option" hreflang="en" title="Switch to English site">
-            <span class="flag-icon">🇬🇧</span>
+            <svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="s3"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+              <clipPath id="t3"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+              <g clip-path="url(#s3)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t3)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </g>
+            </svg>
             <span class="lang-name">English</span>
-            <span class="lang-badge">Home</span>
           </a>
         {% else %}
           <a href="/" class="lang-option" hreflang="fr" title="Basculer vers le site français">
-            <span class="flag-icon">🇫🇷</span>
+            <svg class="flag-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+              <rect width="900" height="600" fill="#ED2939"/>
+              <rect width="600" height="600" fill="#fff"/>
+              <rect width="300" height="600" fill="#002395"/>
+            </svg>
             <span class="lang-name">Français</span>
-            <span class="lang-badge">Accueil</span>
           </a>
         {% endif %}
       {% endunless %}
@@ -73,7 +111,17 @@
           {% assign en_url = page.url | prepend: '/en' %}
         {% endif %}
         <a href="{{ en_url }}" class="lang-option" hreflang="en" title="View this page in English">
-          <span class="flag-icon">🇬🇧</span>
+          <svg class="flag-svg" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+            <clipPath id="s4"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+            <clipPath id="t4"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+            <g clip-path="url(#s4)">
+              <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+              <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t4)" stroke="#C8102E" stroke-width="4"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+              <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </g>
+          </svg>
           <span class="lang-name">English</span>
         </a>
       {% else %}
@@ -83,7 +131,11 @@
           {% assign fr_url = '/' %}
         {% endif %}
         <a href="{{ fr_url }}" class="lang-option" hreflang="fr" title="Voir cette page en français">
-          <span class="flag-icon">🇫🇷</span>
+          <svg class="flag-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+            <rect width="900" height="600" fill="#ED2939"/>
+            <rect width="600" height="600" fill="#fff"/>
+            <rect width="300" height="600" fill="#002395"/>
+          </svg>
           <span class="lang-name">Français</span>
         </a>
       {% endif %}
