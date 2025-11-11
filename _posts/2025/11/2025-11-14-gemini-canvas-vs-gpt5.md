@@ -26,11 +26,11 @@ faq:
 - question: Qu'est-ce que Canvas de Google Gemini ?
   answer: Canvas est une fonctionnalité intégrée à Gemini qui permet de créer automatiquement des présentations complètes à partir d'un texte, d'une URL ou d'images. Il génère un plan structuré, des thèmes cohérents avec couleurs et typographies, des images générées par IA, et permet même d'utiliser du LaTeX pour des équations complexes.
 - question: Quelles sont les principales différences entre Gemini Canvas et GPT-5 pour créer des présentations ?
-  answer: Gemini Canvas excelle par sa facilité d'usage, son intégration native avec Google Slides et son style visuel épuré et professionnel. GPT-5 se distingue par une richesse de contenu plus élevée et une approche plus narrative et créative, mais nécessite plus de structuration du prompt et l'utilisation d'API pour l'intégration.
+  answer: Gemini Canvas excelle par sa facilité d'usage, son intégration native avec Google Slides et son style visuel épuré et professionnel avec un résultat immédiatement exploitable. GPT-5, en revanche, produit des résultats décevants qui nécessitent un gros retravail et un prompt très élaboré en amont pour être utilisables.
 - question: Comment utiliser Canvas pour créer une présentation ?
   answer: "Il suffit d'ouvrir Gemini, d'aller dans la section Outils → Canvas, de coller votre sujet, texte ou URL, puis de cliquer sur 'Créer une présentation'. Gemini génère automatiquement le plan, les visuels et le contenu, que vous pouvez ensuite éditer et exporter vers Google Slides en un clic."
 - question: Pour quel type d'utilisateur chaque outil est-il le plus adapté ?
-  answer: "Gemini Canvas est idéal pour les étudiants, professionnels pressés et toute personne cherchant une solution rapide et esthétique. GPT-5 convient mieux aux formateurs, créateurs de contenu et professionnels qui privilégient la profondeur narrative et la personnalisation du contenu."
+  answer: "Gemini Canvas est idéal pour tous les utilisateurs souhaitant créer des présentations rapidement et efficacement : étudiants, professionnels, formateurs. GPT-5 n'est pas recommandé pour la génération de présentations visuelles, sauf si vous êtes prêt à consacrer beaucoup de temps au retravail et à l'élaboration de prompts complexes."
 ---
 
 # Gemini Canvas vs GPT-5 : qui crée la meilleure présentation ?
@@ -88,20 +88,24 @@ Le résultat est **propre, lisible et immédiatement exploitable**.
 
 ---
 
-## 🤖 GPT-5 : une approche plus narrative et créative
+## 🤖 GPT-5 : un résultat décevant et non exploitable en l'état
 
-De son côté, **GPT-5** a produit une présentation plus "humaine" dans la structure.
-Moins axée sur le design, mais **plus riche en contenu** : chaque diapositive comportait une trame narrative complète, souvent rédigée comme un script.
+De son côté, **GPT-5** a produit un résultat **nettement en dessous** de Gemini Canvas.
+Sans un **prompt très élaboré et structuré en amont**, la présentation générée n'est **pas exploitable directement**.
 
-### Ce que GPT-5 fait mieux
-- Meilleure **synthèse argumentée** : il comprend les nuances du texte source
-- Intégration directe possible avec **PowerPoint ou Google Slides via API**
-- Plus grande liberté dans le ton et le style (storytelling, pédagogie, etc.)
-
-### Ce qu'il fait moins bien
+### Les principales faiblesses
+- **Résultat brut inexploitable** : nécessite un **gros retravail** pour être présentable
 - Pas de génération visuelle native (il faut un plugin pour les images)
-- Nécessite de **structurer le prompt plus précisément**
-- Moins fluide si on cherche simplement à "avoir une présentation prête"
+- **Structure incohérente** sans un prompt très précis et détaillé
+- Mise en page absente ou hasardeuse selon les générations
+- Nécessite souvent **plusieurs itérations** pour obtenir quelque chose de correct
+
+### Ce que GPT-5 peut faire (avec beaucoup d'effort)
+- Intégration possible avec **PowerPoint ou Google Slides via API** (mais configuration complexe)
+- Potentiel narratif intéressant **si et seulement si** le prompt est très travaillé
+- Peut générer du contenu dense, mais souvent trop verbeux pour des slides
+
+> ⚠️ **Verdict** : Pour la génération de présentations, GPT-5 **n'est pas à la hauteur** de Gemini Canvas. Le temps gagné par l'automatisation est perdu en retravail et ajustements.
 
 ---
 
@@ -109,13 +113,14 @@ Moins axée sur le design, mais **plus riche en contenu** : chaque diapositive c
 
 | Critère | **Gemini Canvas** | **GPT-5** |
 |----------|------------------|-----------|
-| **Facilité d'usage** | ⭐⭐⭐⭐ | ⭐⭐ |
-| **Style visuel** | Épuré, professionnel | Variable selon le prompt |
-| **Richesse du contenu** | Moyenne | Élevée |
-| **Créativité du plan** | Basique mais efficace | Structurée et narrative |
-| **Intégration Slides** | Native | Via API ou export |
+| **Facilité d'usage** | ⭐⭐⭐⭐⭐ | ⭐ |
+| **Style visuel** | Épuré, professionnel | Inexistant sans retravail |
+| **Richesse du contenu** | Moyenne mais exploitable | Trop dense, mal structurée |
+| **Créativité du plan** | Basique mais efficace | Incohérente sans prompt élaboré |
+| **Intégration Slides** | Native (1 clic) | Via API (complexe) |
 | **Support LaTeX / PDF** | Oui | Partiel |
-| **Public cible** | Étudiants, pros pressés | Formateurs, créateurs de contenu |
+| **Résultat immédiat** | ✅ Exploitable directement | ❌ Nécessite gros retravail |
+| **Public cible** | Tous publics | Experts prêts à itérer longuement |
 
 ---
 
@@ -144,11 +149,13 @@ J'ai mis les deux présentations côte à côte — **Gemini vs GPT-5** — pour
 
 ## Conclusion
 
-Entre Gemini Canvas et GPT-5, il n'y a pas un "meilleur", mais **deux approches complémentaires** :
-- **Gemini Canvas** brille par sa **simplicité, sa cohérence visuelle et son intégration** avec Google Slides.
-- **GPT-5**, lui, excelle dans la **profondeur du contenu** et la **création narrative**.
+Entre Gemini Canvas et GPT-5, **le verdict est sans appel** : **Gemini Canvas l'emporte largement** pour la création de présentations.
 
-Pour ma part, je vois Gemini comme un **outil d'exécution rapide**, et GPT-5 comme un **assistant à forte valeur ajoutée** pour les présentations scénarisées.
+- **Gemini Canvas** offre un résultat **immédiatement exploitable**, avec une cohérence visuelle, une structure claire et une intégration native avec Google Slides. C'est l'outil idéal pour tous ceux qui veulent gagner du temps.
+
+- **GPT-5**, en revanche, **déçoit sur cette tâche** : sans un prompt très élaboré en amont, le résultat nécessite un **retravail important** qui annule le gain de productivité espéré. Il n'est pas adapté à la génération de présentations visuelles.
+
+**Mon conseil** : pour créer des présentations rapidement et efficacement, **Gemini Canvas est le choix évident**. GPT-5 pourra éventuellement servir en complément pour affiner du contenu textuel, mais certainement pas comme outil principal de création de slides.
 
 ---
 
