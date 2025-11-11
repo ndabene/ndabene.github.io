@@ -74,7 +74,7 @@ Grâce à **Canvas**, tout utilisateur peut générer un jeu de diapositives à 
 ### 🎯 Ce que j'ai obtenu avec mon prompt
 
 En quelques secondes, Gemini a généré :
-- 10 diapositives cohérentes et bien hiérarchisées
+- Des diapositives cohérentes et bien hiérarchisées
 - Une identité visuelle sobre, basée sur les tons de Google Slides
 - Des visuels pertinents évoquant le futur du développement et de l'IA
 - Un plan logique :
