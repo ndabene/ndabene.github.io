@@ -1,0 +1,12 @@
+- name: "About"
+  link: /en/
+- name: "Skills"
+  link: /en/skills/
+- name: "Training"
+  link: /en/shop/
+- name: "Videos"
+  link: /en/youtube/
+- name: "Blog"
+  link: /en/blog/
+- name: "Sponsors"
+  link: /en/sponsors/

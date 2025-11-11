@@ -1,0 +1,147 @@
+# Fichier de traduction français
+lang_code: fr
+lang_name: Français
+lang_name_en: French
+
+# Navigation
+nav:
+  home: "Accueil"
+  about: "À propos"
+  skills: "Compétences"
+  training: "Formations"
+  videos: "Vidéos"
+  blog: "Blog"
+  sponsors: "Sponsors"
+  contact: "Contact"
+  services: "Services"
+  expertise: "Expertise"
+  projects: "Projets"
+  case_studies: "Études de cas"
+
+# Blog
+blog:
+  title: "Blog"
+  latest_articles: "Derniers articles"
+  all_articles: "Tous les articles"
+  read_more: "Lire la suite"
+  min_read: "min de lecture"
+  published_on: "Publié le"
+  updated_on: "Mis à jour le"
+  last_updated: "Dernière mise à jour"
+  author: "Auteur"
+  categories: "Catégories"
+  tags: "Tags"
+  share: "Partager"
+  related_posts: "Articles liés"
+  in_category: "dans"
+  back_to_blog: "Retour au blog"
+  no_posts: "Aucun article pour le moment"
+
+# Categories
+categories:
+  all: "Toutes les catégories"
+  title: "Catégories"
+  browse: "Parcourir par catégorie"
+
+# Tags
+tags:
+  all: "Tous les tags"
+  title: "Tags"
+  browse: "Parcourir par tag"
+
+# Footer
+footer:
+  rights: "Tous droits réservés"
+  privacy: "Politique de confidentialité"
+  cookies: "Politique des cookies"
+  legal: "Mentions légales"
+  about_me: "À propos de moi"
+  follow_me: "Me suivre"
+  newsletter: "Newsletter"
+  subscribe: "S'abonner"
+
+# Common UI elements
+common:
+  back: "Retour"
+  next: "Suivant"
+  previous: "Précédent"
+  search: "Rechercher"
+  language: "Langue"
+  menu: "Menu"
+  close: "Fermer"
+  open: "Ouvrir"
+  toggle_menu: "Basculer le menu"
+  skip_to_content: "Passer au contenu"
+  home: "Accueil"
+  page_not_found: "Page non trouvée"
+  error_404: "Erreur 404"
+
+# Forms
+forms:
+  name: "Nom"
+  email: "Email"
+  message: "Message"
+  send: "Envoyer"
+  required: "Obligatoire"
+  submit: "Soumettre"
+
+# Time & Dates
+time:
+  today: "Aujourd'hui"
+  yesterday: "Hier"
+  days_ago: "jours"
+  weeks_ago: "semaines"
+  months_ago: "mois"
+  years_ago: "ans"
+  minute: "minute"
+  minutes: "minutes"
+  hour: "heure"
+  hours: "heures"
+  day: "jour"
+  days: "jours"
+
+# SEO & Meta
+seo:
+  read_time: "Temps de lecture"
+  table_of_contents: "Table des matières"
+  share_on: "Partager sur"
+  copy_link: "Copier le lien"
+
+# E-commerce / Shop
+shop:
+  title: "Boutique"
+  buy_now: "Acheter maintenant"
+  add_to_cart: "Ajouter au panier"
+  price: "Prix"
+  free: "Gratuit"
+  soon: "Bientôt disponible"
+
+# Projects
+projects:
+  title: "Projets"
+  view_project: "Voir le projet"
+  github: "Voir sur GitHub"
+  demo: "Démo"
+
+# Case Studies
+case_study:
+  title: "Études de cas"
+  read_case_study: "Lire l'étude de cas"
+  challenge: "Défi"
+  solution: "Solution"
+  results: "Résultats"
+
+# Skills / Expertise
+skills:
+  title: "Compétences"
+  years_experience: "ans d'expérience"
+  expertise_in: "Expertise en"
+
+# Social
+social:
+  follow: "Suivre"
+  share: "Partager"
+  youtube: "YouTube"
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  twitter: "Twitter"
