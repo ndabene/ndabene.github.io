@@ -1,17 +1,24 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
 <!-- YOUTUBE FEATURED - Dernières vidéos YouTube -->
 <section class="section-creator youtube-featured" id="youtube-featured">
     <div class="container-creator">
         <!-- En-tête -->
         <div class="section-header-creator">
-            <h2 class="section-title-creator">{{ site.data.home-content.youtube_featured.title | default: "Dernières Vidéos" }}</h2>
-            {% if site.data.home-content.youtube_featured.subtitle and site.data.home-content.youtube_featured.subtitle != "" %}
-            <p class="section-intro-text">{{ site.data.home-content.youtube_featured.subtitle }}</p>
+            <h2 class="section-title-creator">{{ content_data.youtube_featured.title | default: "Dernières Vidéos" }}</h2>
+            {% if content_data.youtube_featured.subtitle and content_data.youtube_featured.subtitle != "" %}
+            <p class="section-intro-text">{{ content_data.youtube_featured.subtitle }}</p>
             {% endif %}
         </div>
 
         <!-- Grille de vidéos -->
         <div class="youtube-featured-grid">
-            {% assign limit = site.data.home-content.youtube_featured.limit | default: 3 %}
+            {% assign limit = content_data.youtube_featured.limit | default: 3 %}
             {% for video in site.data.youtube_videos limit: limit %}
             <div class="youtube-video-card">
                 <div class="youtube-video-thumbnail">
@@ -60,10 +67,10 @@
         </div>
 
         <!-- CTA Toutes les vidéos -->
-        {% if site.data.home-content.youtube_featured.cta %}
+        {% if content_data.youtube_featured.cta %}
         <div class="section-cta-center">
-            <a href="{{ site.data.home-content.youtube_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
-                {{ site.data.home-content.youtube_featured.cta.text }}
+            <a href="{{ content_data.youtube_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
+                {{ content_data.youtube_featured.cta.text }}
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
