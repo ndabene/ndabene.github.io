@@ -54,6 +54,16 @@
 <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | absolute_url }}">
 {% endfor %}
 {% endif %}
+
+<!-- RSS Feeds par langue (pour éviter les doublons dans les automatisations) -->
+{% if current_lang == 'fr' %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Flux RSS Français" href="{{ '/feed.xml' | absolute_url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - English RSS Feed" href="{{ '/feed_en.xml' | absolute_url }}" hreflang="en" />
+{% else %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - English RSS Feed" href="{{ '/feed_en.xml' | absolute_url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Flux RSS Français" href="{{ '/feed.xml' | absolute_url }}" hreflang="fr" />
+{% endif %}
+
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{% if current_lang == 'fr' %}fr_FR{% else %}en_US{% endif %}">
 <!-- Generative Engine Optimisation (GEO) helpers -->

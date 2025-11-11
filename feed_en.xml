@@ -4,16 +4,16 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }} - Français</title>
+    <title>{{ site.title | xml_escape }} - English</title>
     <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>{{ site.url }}{{ site.baseurl }}/en/</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/feed_en.xml" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    <language>fr</language>
-    {% comment %} IMPORTANT: Ne prendre QUE les articles français (collection posts) {% endcomment %}
-    {% assign all_posts = site.posts | sort: "date" %}
+    <language>en</language>
+    {% comment %} IMPORTANT: Ne prendre QUE les articles anglais (collection posts_en) {% endcomment %}
+    {% assign all_posts = site.posts_en | sort: "date" %}
     {% for post in all_posts %}
       {% assign post_date = post.date | date: "%Y-%m-%d" %}
       {% assign today = site.time | date: "%Y-%m-%d" %}
