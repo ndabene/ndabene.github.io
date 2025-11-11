@@ -1,0 +1,235 @@
+---
+layout: default
+title: Blog
+permalink: /en/blog/
+description: "Articles and insights on PHP, AI, e-commerce and software engineering by Nicolas Dabène."
+keywords: "php blog, ai blog, ecommerce blog, software engineering, technical articles, prestashop"
+lang: en
+image: /assets/images/hero/profile-hero.jpg
+body_class: "page-blog"
+llm_summary: Articles and insights on PHP, AI, e-commerce and software engineering by Nicolas Dabène.
+llm_topics:
+- php blog
+- ai blog
+- ecommerce blog
+- software engineering
+- technical articles
+- prestashop
+---
+
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/en/">Home</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>Technical & E-commerce Blog</h1>
+            <p class="section-description">Explore in-depth technical articles on PHP, PrestaShop and e-commerce, discover the latest innovations in artificial intelligence, and master software engineering best practices to boost your digital projects.</p>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content-section">
+    <div class="container">
+        {% assign published_posts = site.posts_en | where_exp: "post", "post.date <= site.time" | sort: 'date' | reverse %}
+
+        {% if published_posts.size > 0 %}
+            <div class="blog-grid-simple">
+                {% for post in published_posts %}
+                <article class="post-card">
+                    {% if post.image %}
+                        <a href="{{ post.url | relative_url }}">
+                            <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image" loading="lazy">
+                        </a>
+                    {% endif %}
+                    <div class="post-content">
+                        {% if post.categories %}
+                            <div class="post-category">
+                                <span class="category-badge">{{ post.categories | first }}</span>
+                            </div>
+                        {% endif %}
+                        <h2 class="post-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h2>
+                        <p class="post-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">
+                                {{ post.date | date: "%B %d, %Y" }}
+                            </time>
+                            {% if post.content %}
+                                {% assign words = post.content | strip_html | number_of_words %}
+                                {% assign read_time = words | divided_by: 200 %}
+                                {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                                • {{ read_time }} min read
+                            {% endif %}
+                        </p>
+                        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="read-more">Read article →</a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="no-posts-container">
+                <span class="no-posts-icon">📝</span>
+                <h2>Blog is under construction</h2>
+                <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my publications!</p>
+                <a href="/en/" class="btn btn--primary">Back to homepage</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.page-hero-section {
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: white;
+}
+
+.breadcrumb span {
+    margin-left: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.blog-content-section {
+    padding: 3rem 0;
+}
+
+.blog-grid-simple {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.post-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-category {
+    margin-bottom: 0.75rem;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #667eea;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.post-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+.post-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #667eea;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.post-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #764ba2;
+}
+
+.no-posts-container {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.no-posts-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.no-posts-container h2 {
+    margin-bottom: 1rem;
+}
+
+.no-posts-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .blog-grid-simple {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+</style>
