@@ -28,11 +28,11 @@ faq:
 - question: What is Google Gemini's Canvas?
   answer: Canvas is a feature integrated into Gemini that automatically creates complete presentations from text, URL, or images. It generates a structured plan, coherent themes with colors and typography, AI-generated images, and even supports LaTeX for complex equations.
 - question: What are the main differences between Gemini Canvas and GPT-5 for creating presentations?
-  answer: Gemini Canvas excels in ease of use, native integration with Google Slides, and clean, professional visual style. GPT-5 stands out for richer content and a more narrative, creative approach, but requires more prompt structuring and API usage for integration.
+  answer: Gemini Canvas excels in ease of use, native integration with Google Slides, and clean, professional visual style with an immediately usable result. GPT-5, on the other hand, produces disappointing results that require major rework and a very elaborate prompt upfront to be usable.
 - question: How do you use Canvas to create a presentation?
   answer: "Simply open Gemini, go to Tools → Canvas section, paste your topic, text or URL, then click 'Create presentation'. Gemini automatically generates the plan, visuals and content, which you can then edit and export to Google Slides in one click."
 - question: Which tool is best suited for which type of user?
-  answer: "Gemini Canvas is ideal for students, busy professionals, and anyone looking for a quick and aesthetic solution. GPT-5 is better suited for trainers, content creators, and professionals who prioritize narrative depth and content customization."
+  answer: "Gemini Canvas is ideal for all users who want to create presentations quickly and effectively: students, professionals, trainers. GPT-5 is not recommended for visual presentation generation, unless you are willing to spend a lot of time on rework and crafting complex prompts."
 ---
 
 # Gemini Canvas vs GPT-5: Which Creates the Best Presentation?
@@ -90,20 +90,24 @@ The result is **clean, readable and immediately usable**.
 
 ---
 
-## 🤖 GPT-5: A More Narrative and Creative Approach
+## 🤖 GPT-5: A Disappointing and Unusable Result
 
-For its part, **GPT-5** produced a more "human" presentation in structure.
-Less focused on design, but **richer in content**: each slide had a complete narrative framework, often written like a script.
+For its part, **GPT-5** produced a result **significantly below** Gemini Canvas.
+Without a **very elaborate and structured prompt upfront**, the generated presentation is **not directly usable**.
 
-### What GPT-5 Does Better
-- Better **argued synthesis**: it understands the nuances of the source text
-- Direct integration possible with **PowerPoint or Google Slides via API**
-- Greater freedom in tone and style (storytelling, pedagogy, etc.)
-
-### What It Does Less Well
+### Main Weaknesses
+- **Unusable raw output**: requires **major rework** to be presentable
 - No native visual generation (requires a plugin for images)
-- Needs **more precise prompt structuring**
-- Less fluid if you simply want to "have a ready presentation"
+- **Incoherent structure** without a very precise and detailed prompt
+- Absent or haphazard layout depending on generations
+- Often requires **multiple iterations** to get something correct
+
+### What GPT-5 Can Do (With Much Effort)
+- Possible integration with **PowerPoint or Google Slides via API** (but complex setup)
+- Interesting narrative potential **if and only if** the prompt is very well crafted
+- Can generate dense content, but often too verbose for slides
+
+> ⚠️ **Verdict**: For presentation generation, GPT-5 **is not up to par** with Gemini Canvas. The time saved by automation is lost in rework and adjustments.
 
 ---
 
@@ -111,13 +115,14 @@ Less focused on design, but **richer in content**: each slide had a complete nar
 
 | Criterion | **Gemini Canvas** | **GPT-5** |
 |----------|------------------|-----------|
-| **Ease of use** | ⭐⭐⭐⭐ | ⭐⭐ |
-| **Visual style** | Clean, professional | Variable depending on prompt |
-| **Content richness** | Medium | High |
-| **Plan creativity** | Basic but effective | Structured and narrative |
-| **Slides integration** | Native | Via API or export |
+| **Ease of use** | ⭐⭐⭐⭐⭐ | ⭐ |
+| **Visual style** | Clean, professional | Non-existent without rework |
+| **Content richness** | Medium but usable | Too dense, poorly structured |
+| **Plan creativity** | Basic but effective | Incoherent without elaborate prompt |
+| **Slides integration** | Native (1 click) | Via API (complex) |
 | **LaTeX / PDF support** | Yes | Partial |
-| **Target audience** | Students, busy pros | Trainers, content creators |
+| **Immediate result** | ✅ Directly usable | ❌ Requires major rework |
+| **Target audience** | All users | Experts willing to iterate extensively |
 
 ---
 
@@ -146,11 +151,13 @@ I put the two presentations side by side — **Gemini vs GPT-5** — so you can 
 
 ## Conclusion
 
-Between Gemini Canvas and GPT-5, there isn't a "best", but **two complementary approaches**:
-- **Gemini Canvas** shines through its **simplicity, visual coherence and integration** with Google Slides.
-- **GPT-5** excels in **content depth** and **narrative creation**.
+Between Gemini Canvas and GPT-5, **the verdict is clear**: **Gemini Canvas wins by a wide margin** for presentation creation.
 
-For my part, I see Gemini as a **rapid execution tool**, and GPT-5 as a **high value-added assistant** for scripted presentations.
+- **Gemini Canvas** delivers an **immediately usable result**, with visual coherence, clear structure, and native integration with Google Slides. It's the ideal tool for anyone looking to save time.
+
+- **GPT-5**, on the other hand, **disappoints on this task**: without a very elaborate prompt upfront, the result requires **significant rework** that cancels out the expected productivity gain. It is not suited for visual presentation generation.
+
+**My recommendation**: for creating presentations quickly and effectively, **Gemini Canvas is the obvious choice**. GPT-5 might occasionally serve as a complement to refine textual content, but certainly not as a primary slide creation tool.
 
 ---
 
