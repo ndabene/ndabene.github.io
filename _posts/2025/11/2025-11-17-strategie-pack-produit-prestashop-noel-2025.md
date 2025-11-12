@@ -6,7 +6,7 @@ categories: [PrestaShop, E-commerce, Marketing]
 tags: [prestashop, advanced pack, noel, ventes, panier moyen, strategie]
 excerpt: >
   À quelques semaines de Noël, la pression monte. Plutôt que de céder à la guerre des prix, découvrez une stratégie plus intelligente et rentable pour votre boutique PrestaShop. Cet article vous guide pas à pas pour créer des packs produits percutants avec Advanced Pack, un levier puissant pour augmenter votre panier moyen, guider vos clients et écouler vos stocks stratégiquement. Transformez le stress de dernière minute en une opportunité de vente exceptionnelle.
-image: /assets/images/blog/strategie-pack-produit-prestashop-noel-2025.jpg
+image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.jpg
 keywords: [prestashop, pack produit, advanced pack, ventes de noël, panier moyen, e-commerce, stratégie marketing, vente additionnelle, business tech]
 difficulty: "⭐️⭐️"
 technologies: [PrestaShop, Advanced Pack]
