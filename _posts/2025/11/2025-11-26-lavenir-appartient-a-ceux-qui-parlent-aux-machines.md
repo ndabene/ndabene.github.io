@@ -33,6 +33,17 @@ technologies:
 - PrestaShop
 - n8n
 estimated_reading_time: 15 minutes
+faq:
+- question: Pourquoi dit-on que l'avenir appartient à ceux qui parlent aux machines plutôt qu'à ceux qui codent ?
+  answer: Avec l'arrivée des LLM comme GPT-4, les machines comprennent désormais le langage naturel. Le développeur n'est plus nécessaire comme traducteur entre l'intention humaine et l'exécution machine. La compétence clé devient la capacité à formuler des demandes claires et précises en langage naturel, démocratisant ainsi la création digitale.
+- question: Qu'est-ce que le Prompt Engineering ?
+  answer: Le Prompt Engineering est l'art et la science de construire l'instruction parfaite pour obtenir le résultat parfait d'une IA. Ce n'est pas simplement "demander" à l'IA, mais la sculpter, la guider et la contraindre avec des instructions structurées et précises.
+- question: Quels sont les 4 éléments clés pour bien communiquer avec une IA ?
+  answer: "Les 4 piliers sont : 1) Le Rôle (Persona) - définir l'expert que vous invoquez, 2) L'Objectif (Goal) - ce que l'IA doit accomplir, 3) Le Contexte (Context) - les données, exemples et contraintes, 4) Le Format (Format) - comment structurer le résultat. Maîtriser ces éléments permet de transformer l'IA en outil surpuissant."
+- question: Est-ce que les développeurs vont disparaître avec l'IA ?
+  answer: Non, ils évoluent. Les développeurs deviennent des Architectes de Systèmes d'IA. Leur rôle n'est plus de construire chaque fonctionnalité, mais de créer les APIs robustes, assurer la sécurité, construire les infrastructures et intervenir sur les problèmes complexes où l'IA échoue. Le code devient une méta-compétence.
+- question: Comment l'IA change-t-elle le travail des e-commerçants PrestaShop ?
+  answer: Les e-commerçants peuvent désormais créer des workflows complexes (SAV automatisé, analyses de données, promotions personnalisées) sans coder, en utilisant des outils comme n8n combinés à des prompts bien rédigés. Ils passent du mode réactif (dépendre d'un développeur) au mode proactif (dialoguer directement avec des systèmes automatisés).
 ---
 
 # L'Avenir Appartient à Ceux qui Parlent aux Machines, Pas à Ceux qui les Codent

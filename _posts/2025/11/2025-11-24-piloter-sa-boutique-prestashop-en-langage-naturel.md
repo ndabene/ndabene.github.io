@@ -33,6 +33,17 @@ technologies:
 - Claude
 - AI
 estimated_reading_time: 9 minutes
+faq:
+- question: Qu'est-ce que le MCP Server et comment fonctionne-t-il ?
+  answer: Le MCP Server (Model Context Protocol Server) est la fondation technique développée par PrestaShop qui gère la communication et la sécurité entre votre boutique et les différents tools compatibles MCP. Il ne fournit pas lui-même des fonctions métier, mais permet à l'IA de comprendre et d'exécuter des requêtes en langage naturel de manière sécurisée.
+- question: Quelle est la différence entre le MCP Server et les MCP Tools+ ?
+  answer: Le MCP Server est l'infrastructure de base qui gère la communication. Les MCP Tools officiels de PrestaShop (lecture produits, clients, commandes) sont les outils de base. Les MCP Tools+ de BusinessTech/PrestaModule sont une extension premium qui ajoute des outils avancés pour l'analyse (ventes, marges, comportements clients, indicateurs de performance).
+- question: Qui orchestre réellement les commandes - les tools ou le LLM ?
+  answer: C'est le LLM (Claude, ChatGPT, etc.) qui interprète la commande en langage naturel et orchestre l'exécution à travers les tools disponibles. Les tools (PrestaShop et Tools+) agissent comme des amplificateurs de contexte et d'intelligence métier, mais c'est le LLM qui comprend l'intention et coordonne les actions.
+- question: Quels types de commandes peut-on donner à sa boutique PrestaShop avec le MCP ?
+  answer: "On peut donner des commandes naturelles comme : 'Exporte les ventes du trimestre et envoie-les à mon comptable', 'Identifie le top 10 des clients sur les 30 derniers jours', 'Montre-moi les produits dont les ventes baissent'. Le système comprend, analyse, extrait les données et exécute l'action demandée."
+- question: Quand sera disponible le MCP Server officiel de PrestaShop ?
+  answer: PrestaShop a publié ses premiers MCP Tools officiels le 19 novembre 2025. Ces tools de base permettent d'interagir avec la boutique (lecture de produits, clients, commandes) via le langage naturel et représentent la première brique d'un écosystème plus large à venir.
 ---
 
 # Piloter sa Boutique PrestaShop en Langage Naturel (grâce au MCP)

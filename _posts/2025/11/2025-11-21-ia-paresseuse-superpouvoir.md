@@ -32,6 +32,17 @@ technologies:
 - LLM
 - GPT
 estimated_reading_time: 15 minutes
+faq:
+- question: Pourquoi dit-on que l'IA est "paresseuse" plutôt qu'"intelligente" ?
+  answer: Les LLM comme GPT ne "pensent" pas vraiment. Leur objectif est de minimiser la "surprise statistique" en prédisant le mot suivant le plus probable. Ils ne cherchent pas à comprendre ou à réfléchir, mais à suivre le chemin statistiquement le plus court et le plus fréquent. C'est une intelligence fondée sur l'économie d'énergie cognitive, pas sur la compréhension profonde.
+- question: Comment fonctionne la "paresse algorithmique" des LLM ?
+  answer: Un LLM a été entraîné à prédire le mot (token) suivant le plus probable à partir de la séquence précédente. C'est tout. Par exemple, après "Je vais au restaurant pour manger...", il calculera que "une pizza" est très probable, "un tournevis" extrêmement improbable. Il suit la pente de la distribution de probabilités sans aucune conscience ni intention.
+- question: Pourquoi cette "paresse" de l'IA est-elle en réalité une force ?
+  answer: L'IA n'a pas d'ego, pas de peur de se tromper, pas de distraction. Elle génère instantanément du contenu cohérent et prévisible sans les hésitations humaines. Dans un monde saturé d'informations, cette capacité à produire rapidement de la cohérence statistique devient un super-pouvoir. Elle élimine les erreurs et hésitations humaines, créant une illusion de maîtrise parfaite.
+- question: Comment doit-on adapter notre façon de travailler avec une IA "paresseuse" ?
+  answer: On ne "brief" pas un collègue intelligent, on cadre un assistant ultra-performant mais sans initiative. Il faut fournir un contexte riche et contraignant (rôle, objectif, contexte, format) pour forcer l'IA à générer un résultat de haute qualité. Notre valeur ajoutée devient de penser là où l'IA est incapable de le faire - poser le bon problème, challenger les évidences, donner du sens.
+- question: L'IA va-t-elle remplacer les développeurs et créateurs ?
+  answer: Non. L'IA gagne la course de la vitesse, mais notre terrain de jeu reste celui du sens. Elle automatise la formulation et l'exécution, nous libérant du temps de cerveau pour la stratégie, la créativité et l'empathie - des domaines où la simple prédiction statistique est inutile. Notre force est de comprendre profondément pourquoi nous faisons les choses.
 ---
 
 # L'IA n'est pas Intelligente, elle est Paresseuse (et c'est sa plus grande force)
