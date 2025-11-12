@@ -33,6 +33,17 @@ technologies:
 - Claude
 - AI
 estimated_reading_time: 9 minutes
+faq:
+- question: What is the MCP Server and how does it work?
+  answer: The MCP Server (Model Context Protocol Server) is the technical foundation developed by PrestaShop that manages communication and security between your store and various MCP-compatible tools. It doesn't provide business functions itself, but allows AI to understand and execute natural language requests securely.
+- question: What is the difference between the MCP Server and MCP Tools+?
+  answer: The MCP Server is the base infrastructure that handles communication. Official PrestaShop MCP Tools (product, customer, order reading) are the basic tools. MCP Tools+ from BusinessTech/PrestaModule is a premium extension that adds advanced tools for analysis (sales, margins, customer behavior, performance indicators).
+- question: Who actually orchestrates commands - the tools or the LLM?
+  answer: It's the LLM (Claude, ChatGPT, etc.) that interprets the natural language command and orchestrates execution through available tools. The tools (PrestaShop and Tools+) act as context and business intelligence amplifiers, but it's the LLM that understands intent and coordinates actions.
+- question: What types of commands can you give to your PrestaShop store with MCP?
+  answer: "You can give natural commands like: 'Export this quarter's sales and send them to my accountant', 'Identify the top 10 customers over the last 30 days', 'Show me products whose sales are declining'. The system understands, analyzes, extracts data and executes the requested action."
+- question: When will the official PrestaShop MCP Server be available?
+  answer: PrestaShop published its first official MCP Tools on November 19, 2025. These basic tools allow interaction with the store (reading products, customers, orders) via natural language and represent the first building block of a larger ecosystem to come.
 ---
 
 # Managing Your PrestaShop Store in Natural Language (with MCP)
