@@ -31,7 +31,7 @@ llm_topics:
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign published_posts = site.posts_en | where_exp: "post", "post.date <= site.time" %}
+        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
         {% if published_posts.size > 0 %}
 
             <!-- HERO ARTICLE (Most recent article) -->
@@ -97,7 +97,7 @@ llm_topics:
                             <button class="category-pill active" data-category="">
                                 <i class="fas fa-home"></i> All articles
                             </button>
-                            {% assign published_posts_for_categories = site.posts_en | where_exp: "post", "post.date <= site.time" %}
+                            {% assign published_posts_for_categories = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
                             {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 <button class="category-pill" data-category="{{ category }}">
@@ -128,7 +128,7 @@ llm_topics:
                         </div><!-- End filters-content -->
 
                         <div class="filter-results-info" id="filter-results-info">
-                            {% assign published_posts_count = site.posts_en | where_exp: "post", "post.date <= site.time" | size %}
+                            {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
                             <span class="results-count">All articles <span id="filtered-count">({{ published_posts_count }})</span></span>
                             <div class="active-filters" id="active-filters"></div>
                         </div>
@@ -143,7 +143,7 @@ llm_topics:
 
                     <div class="post-list-news grid-view" id="blog-posts-container">
                         {% comment %}Load all published articles - pagination is handled by JavaScript{% endcomment %}
-                        {% assign published_posts_list = site.posts_en | where_exp: "post", "post.date <= site.time" | offset: 4 %}
+                        {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | offset: 4 %}
                         {% include blog-post-loop.html posts=published_posts_list %}
                     </div>
 
@@ -162,7 +162,7 @@ llm_topics:
 
                     <!-- Pagination -->
                     {% assign posts_per_page = 8 %}
-                    {% assign published_posts_count = site.posts_en | where_exp: "post", "post.date <= site.time" | size %}
+                    {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
                     {% assign remaining_posts = published_posts_count | minus: 4 %}
                     {% if remaining_posts > posts_per_page %}
                         <div class="pagination-container">
@@ -193,7 +193,7 @@ llm_topics:
                     <div class="sidebar-widget-compact">
                         <h4><i class="fas fa-clock"></i> Recent articles</h4>
                         <div class="recent-posts-compact">
-                            {% assign recent_posts = site.posts_en | where_exp: "post", "post.date <= site.time" %}
+                            {% assign recent_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
                             {% for post in recent_posts limit: 5 %}
                                 <article class="recent-post-compact">
                                     {% if post.image %}
@@ -213,7 +213,7 @@ llm_topics:
                     <div class="sidebar-widget-compact">
                         <h4>Categories</h4>
                         <div class="categories-compact">
-                            {% assign published_posts = site.posts_en | where_exp: "post", "post.date <= site.time" %}
+                            {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
                             {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
                             {% for category in all_categories %}
                                 {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
@@ -226,7 +226,7 @@ llm_topics:
 
 
                     {% if site.data.series %}
-                        {% assign published_posts = site.posts_en | where_exp: "post", "post.date <= site.time" %}
+                        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
                         {% assign has_series_with_posts = false %}
                         {% for series in site.data.series %}
                             {% assign series_posts = published_posts | where: "series", series[0] %}
