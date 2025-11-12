@@ -139,21 +139,26 @@ class TagHarmonizer:
         return True
 
     def process_all(self):
-        """Traite tous les fichiers markdown dans _posts"""
-        posts_path = Path(self.posts_dir)
+        """Traite tous les fichiers markdown dans _posts et _posts_en"""
+        # Liste des répertoires à traiter (FR et EN)
+        posts_dirs = [self.posts_dir, "_posts_en"] if self.posts_dir == "_posts" else [self.posts_dir]
 
-        if not posts_path.exists():
-            print(f"❌ Erreur : Le répertoire {self.posts_dir} n'existe pas")
-            return
-
-        print(f"🔍 Scan du répertoire : {self.posts_dir}")
         print(f"📝 Mode : {'DRY RUN (simulation)' if self.dry_run else 'PRODUCTION (modification réelle)'}")
         print()
 
-        # Trouver tous les fichiers .md
-        md_files = list(posts_path.rglob("*.md"))
+        all_md_files = []
+        for posts_dir in posts_dirs:
+            posts_path = Path(posts_dir)
+            if not posts_path.exists():
+                print(f"⚠️  Le répertoire {posts_dir} n'existe pas, ignoré")
+                continue
 
-        for filepath in sorted(md_files):
+            print(f"🔍 Scan du répertoire : {posts_dir}")
+            md_files = list(posts_path.rglob("*.md"))
+            all_md_files.extend(md_files)
+
+        print()
+        for filepath in sorted(all_md_files):
             self.stats['files_scanned'] += 1
             self.process_file(filepath)
 

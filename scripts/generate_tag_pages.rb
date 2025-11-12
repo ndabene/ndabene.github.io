@@ -28,10 +28,10 @@ def slugify(text)
     .gsub(/^-|-$/, '')          # Supprime tirets au début/fin
 end
 
-# Collecte tous les tags de tous les posts
+# Collecte tous les tags de tous les posts (FR et EN)
 tags = Set.new
 
-Dir.glob('_posts/**/*.md').each do |post_file|
+Dir.glob('{_posts,_posts_en}/**/*.md').each do |post_file|
   content = File.read(post_file)
 
   # Extrait le front matter

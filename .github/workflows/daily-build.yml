@@ -79,15 +79,15 @@ jobs:
         run: |
           # Vérifier s'il y a des articles futurs qui peuvent maintenant être publiés
           current_date=$(date -u +"%Y-%m-%d")
-          future_posts=$(find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null | wc -l)
-          
+          future_posts=$(find _posts _posts_en -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null | wc -l)
+
           echo "Articles potentiellement publiables: $future_posts"
           echo "current_date=$current_date" >> $GITHUB_OUTPUT
           echo "future_posts=$future_posts" >> $GITHUB_OUTPUT
-          
+
           # Lister les articles concernés pour debug
           echo "=== Articles avec dates récentes ==="
-          find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null || echo "Aucun article trouvé"
+          find _posts _posts_en -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null || echo "Aucun article trouvé"
       
       - name: Build with Jekyll
         run: |
