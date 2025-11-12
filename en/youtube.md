@@ -85,6 +85,7 @@ twitter_site: "@nicolasdabene"
         "name": "{{ video.title | escape }}",
         "description": "{{ video.description | escape | truncate: 200 }}",
         "url": "{{ video.url }}",
+        "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}",
         "thumbnailUrl": "{{ video.thumbnail }}",
         "uploadDate": "{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}",
         "duration": "{{ video.duration }}",
