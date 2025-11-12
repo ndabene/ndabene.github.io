@@ -4,6 +4,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://nicolas-dabene.fr)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicolas%20Dabène-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
+[![Dev.to](https://img.shields.io/badge/Dev.to-ndabene-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ndabene)
 [![PrestaShop](https://img.shields.io/badge/PrestaShop-5%20Awards-DF0067?style=for-the-badge&logo=prestashop&logoColor=white)](https://nicolas-dabene.fr)
 
 **Expert PrestaShop Elite | Pionnier IA E-commerce | Formateur**
@@ -135,6 +136,7 @@ Disponible pour vos projets e-commerce sur la **Côte d'Azur** (Sophia Antipolis
 
 [![Email](https://img.shields.io/badge/Email-ndabene2807%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ndabene2807@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Me%20contacter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
+[![Dev.to](https://img.shields.io/badge/Dev.to-ndabene-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ndabene)
 [![Site Web](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://nicolas-dabene.fr/contact/)
 
 </div>
