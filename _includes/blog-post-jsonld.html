@@ -1,35 +1,50 @@
 {% comment %}
   Données structurées Article pour optimiser SEO/GEO des posts de blog
+  Optimisé pour Google Rich Results, ChatGPT, Perplexity et autres moteurs IA
 {% endcomment %}
 
 {% if page.layout == 'post' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "TechArticle",
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.excerpt | default: page.description | strip_html | escape }}",
-  "image": [
-    "{{ page.image | default: site.url | append: '/assets/images/social-share.jpg' | absolute_url }}"
-    {% if page.featured_image %}
-    ,"{{ page.featured_image | absolute_url }}"
-    {% endif %}
-  ],
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page.image | default: '/assets/images/blog/default-blog.jpg' | absolute_url }}",
+    "width": 1200,
+    "height": 630
+  },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "author": {
     "@type": "Person",
-    "name": "{{ site.author.name }}",
+    "name": "{{ page.author | default: site.author.name }}",
     "url": "{{ site.url }}",
+    "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
+    "knowsAbout": [
+      "PHP Development",
+      "PrestaShop E-commerce",
+      "Artificial Intelligence Integration",
+      "Web Development",
+      "Software Architecture"
+    ],
     "sameAs": [
-      "{{ site.url }}",
-      "https://github.com/ndabene"
+      "https://www.linkedin.com/in/nicolas-dabene/",
+      "https://github.com/ndabene",
+      "{{ site.url }}"
     ]
   },
   "publisher": {
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
-    "url": "{{ site.url }}"
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png",
+      "width": 600,
+      "height": 60
+    }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -38,6 +53,7 @@
   "wordCount": {{ content | number_of_words }},
   "timeRequired": "PT{{ content | number_of_words | divided_by: 200 | ceil }}M",
   "articleSection": "{{ page.categories | first | default: 'Blog' }}",
+  "inLanguage": "{% if page.lang %}{{ page.lang }}{% else %}fr{% endif %}-FR",
   "keywords": [
     {% for tag in page.tags %}
     "{{ tag | escape }}"{% unless forloop.last %},{% endunless %}
@@ -48,6 +64,15 @@
     {% endfor %}
     {% endif %}
   ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Développeurs, Architectes logiciel, CTO, Technical Leaders"
+  },
+  "teaches": "{{ page.excerpt | default: page.description | strip_html | escape }}",
+  "educationalLevel": "{% if page.difficulty %}{{ page.difficulty }}{% else %}Intermédiaire{% endif %}",
+  "learningResourceType": "Article technique",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
   "about": [
     {% if page.categories contains 'Intelligence Artificielle' %}
     {
