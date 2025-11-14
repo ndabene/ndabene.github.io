@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "L'Ère de l'Assistant de Gestion IA : Décryptage du PS MCP Server et l'Avènement du Module Révolutionnaire MCP Tools Plus"
-date: 2025-11-19
+date: 2025-11-20
 categories: [IA, PrestaShop, E-commerce]
 tags: [mcp, prestashop, ai, automation, natural-language, business-intelligence]
 excerpt: >
@@ -140,4 +140,4 @@ Si vous souhaitez contribuer à l'enrichissement de MCP Tools Plus, des mécanis
 
 ---
 
-*Article publié le 19 novembre 2025 par Nicolas Dabène – Expert PrestaShop & IA avec 15+ ans d'expérience dans le développement e-commerce.*
+*Article publié le 20 novembre 2025 par Nicolas Dabène – Expert PrestaShop & IA avec 15+ ans d'expérience dans le développement e-commerce.*
