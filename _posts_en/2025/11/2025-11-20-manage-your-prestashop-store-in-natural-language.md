@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Managing Your PrestaShop Store in Natural Language (with MCP)"
-date: 2025-11-24
+date: 2025-11-20
 author: Nicolas Dabène
 categories:
 - AI
@@ -185,7 +185,7 @@ What would be **your first natural command** to your PrestaShop store?
 
 ---
 
-*Article published on November 24, 2025 by Nicolas Dabène – PrestaShop & AI Expert with 15+ years of experience in e-commerce development.*
+*Article published on November 20, 2025 by Nicolas Dabène – PrestaShop & AI Expert with 15+ years of experience in e-commerce development.*
 
 ---
 
