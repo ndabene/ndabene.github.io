@@ -77,23 +77,10 @@ Before starting, ensure you have a compatible environment:
 - **PHP 8.1 or higher** - PHP attributes (modern annotations) are at the core of the tool discovery system. PHP 8.1 also introduces crucial performance improvements for resource-intensive AI operations.
 - **An MCP-compatible client** - To test and use your server: Claude Desktop, Dust, Gemini CLI, or MCP Inspector (debugging tool without AI).
 
-### Installation Steps
-
-Installation follows the standard PrestaShop module process, with some MCP-specific features:
-
-1. Download the **ps_mcp_server** module from the official repository or PrestaShop marketplace. Install it via your PrestaShop back office in the **Modules > Module Manager** section.
-
-2. Once installed, activate the module then access its configuration. This is where MCP magic begins: click **"Start MCP Server"** in the configuration interface.
-
-3. The system automatically generates a **unique security token**. Copy this token carefully—you'll need it to connect your AI clients. This token ensures only authorized agents access your store.
-
-4. **STDIO Alternative**: If you're developing a standalone module or want to debug locally, use the embedded MCP client in STDIO mode. No token is needed in this mode; the server runs as a child process.
-
 ### File Structure
 
-The module automatically creates a `.mcp` folder at the PrestaShop root containing:
+The module automatically creates a `.mcp` folder at his own root containing:
 
-- **modules-registered.json** - List of modules declared MCP-compatible, generated at initial setup.
 - **.cache** - Tool discovery cache to optimize performance. Delete it to force a new scan.
 - **.logs** - Detailed log files (when "Enable logs" is activated in configuration). Essential for debugging AI interactions.
 
