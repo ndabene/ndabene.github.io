@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Piloter sa Boutique PrestaShop en Langage Naturel (grâce au MCP)"
-date: 2025-11-24
+date: 2025-11-20
 author: Nicolas Dabène
 categories:
 - IA
@@ -185,7 +185,7 @@ Quelle serait **votre première commande naturelle** à votre boutique PrestaSho
 
 ---
 
-*Article publié le 24 novembre 2025 par Nicolas Dabène – Expert PrestaShop & IA avec 15+ ans d'expérience dans le développement e-commerce.*
+*Article publié le 20 novembre 2025 par Nicolas Dabène – Expert PrestaShop & IA avec 15+ ans d'expérience dans le développement e-commerce.*
 
 ---
 

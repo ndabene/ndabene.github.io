@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'AI Agents and E-commerce: Why Executing Code Is Better Than Calling Tools'
-date: 2025-11-20
+date: 2025-11-24
 author: Nicolas Dabène
 categories:
 - AI
@@ -218,4 +218,4 @@ And for us, developers and merchants, it's the promise of smoother, safer, and i
 
 ---
 
-*Article published November 20, 2025 by Nicolas Dabène - E-commerce and AI expert with 15+ years of experience*
+*Article published November 24, 2025 by Nicolas Dabène - E-commerce and AI expert with 15+ years of experience*

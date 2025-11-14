@@ -2,7 +2,7 @@
 layout: post
 title: 'Agents IA et e-commerce : pourquoi exécuter du code vaut mieux qu''appeler
   des outils'
-date: 2025-11-20
+date: 2025-11-24
 author: Nicolas Dabène
 categories:
 - IA
@@ -238,4 +238,4 @@ Et pour nous, développeurs et marchands, c'est la promesse d'une automatisation
 
 ---
 
-*Article publié le 20 novembre 2025 par Nicolas Dabène - Expert e-commerce et IA avec 15+ ans d'expérience*
+*Article publié le 24 novembre 2025 par Nicolas Dabène - Expert e-commerce et IA avec 15+ ans d'expérience*
