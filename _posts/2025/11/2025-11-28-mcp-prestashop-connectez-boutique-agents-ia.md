@@ -77,23 +77,10 @@ Avant de commencer, assurez-vous de disposer d'un environnement compatible :
 - **PHP 8.1 ou supérieur** - Les attributs PHP (annotations modernes) sont au cœur du système de découverte d'outils. PHP 8.1 introduit également des améliorations de performance cruciales pour les opérations IA gourmandes.
 - **Un client MCP compatible** - Pour tester et utiliser votre serveur : Claude Desktop, Dust, Gemini CLI ou MCP Inspector (outil de debug sans IA).
 
-### Étapes d'Installation
-
-L'installation suit le processus standard des modules PrestaShop, avec quelques spécificités MCP :
-
-1. Téléchargez le module **ps_mcp_server** depuis le repository officiel ou le marketplace PrestaShop. Installez-le via votre back-office PrestaShop dans la section **Modules > Gestionnaire de modules**.
-
-2. Une fois installé, activez le module puis accédez à sa configuration. C'est ici que la magie MCP commence : cliquez sur **"Démarrer le serveur MCP"** dans l'interface de configuration.
-
-3. Le système génère automatiquement un **token de sécurité unique**. Copiez ce token précieusement, vous en aurez besoin pour connecter vos clients IA. Ce token garantit que seuls les agents autorisés accèdent à votre boutique.
-
-4. **Alternative STDIO** : Si vous développez un module autonome ou souhaitez debugger en local, utilisez le client MCP embarqué en mode STDIO. Aucun token n'est nécessaire dans ce mode, le serveur s'exécute comme processus enfant.
-
 ### Structure des Fichiers
 
-Le module crée automatiquement un dossier `.mcp` à la racine de PrestaShop contenant :
+Le module crée automatiquement un dossier `.mcp` à sa racine contenant :
 
-- **modules-registered.json** - Liste des modules déclarés compatibles MCP, générée au setup initial.
 - **.cache** - Cache de découverte des outils pour optimiser les performances. Supprimez-le pour forcer un nouveau scan.
 - **.logs** - Fichiers de logs détaillés (quand "Enable logs" est activé dans la configuration). Essentiel pour le debug des interactions IA.
 
