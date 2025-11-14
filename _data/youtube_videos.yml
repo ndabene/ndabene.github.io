@@ -113,3 +113,13 @@
   channel: ndabene06
   duration: PT6M47S
   category: IA & Automatisation
+- title: Codeurs IA   Supervisés ou Sabotage
+  video_id: ASqUCYKnEZc
+  url: https://www.youtube.com/watch?v=ASqUCYKnEZc
+  thumbnail: https://i.ytimg.com/vi/ASqUCYKnEZc/hqdefault.jpg
+  description: 84% des développeurs utilisent l'IA, mais 45% du code généré contient
+    des vulnérabilités. Vous laisseriez un développeur junior ...
+  published_at: '2025-11-13T23:00:16Z'
+  channel: ndabene06
+  duration: PT6M53S
+  category: IA & Automatisation
