@@ -170,8 +170,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Navigation par clavier
-    document.addEventListener('keydown', function(e) {
+    // Navigation par clavier - Optimisée pour éviter les écoutes inutiles
+    let keyboardNavigationEnabled = false;
+
+    // Activer la navigation clavier seulement si l'utilisateur interagit avec la pagination
+    function enableKeyboardNavigation() {
+        if (keyboardNavigationEnabled) return;
+        keyboardNavigationEnabled = true;
+
+        document.addEventListener('keydown', handleKeyboardNavigation);
+    }
+
+    function handleKeyboardNavigation(e) {
+        // Ignorer si l'utilisateur tape dans un champ
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
             return;
         }
@@ -186,7 +197,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             goToPage(currentPage + 1);
         }
-    });
+    }
+
+    // Activer au survol ou clic sur les boutons de pagination
+    const paginationContainer = document.querySelector('.pagination-container');
+    if (paginationContainer) {
+        paginationContainer.addEventListener('mouseenter', enableKeyboardNavigation, { once: true });
+        paginationContainer.addEventListener('click', enableKeyboardNavigation, { once: true });
+    }
 
     // Initialiser l'affichage
     updateDisplay();
