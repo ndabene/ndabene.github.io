@@ -6,7 +6,7 @@ categories: [AI, PrestaShop, E-commerce]
 tags: [mcp, prestashop, ai, automation, natural-language, business-intelligence]
 excerpt: >
   Imagine an AI assistant managing your PrestaShop store like a tireless right-hand: accounting reports in the blink of an eye, automated targeted promotions, and much more. With the PS MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover how these tools transform daily frustrations into growth opportunities for merchants and agencies.
-image: /assets/images/blog/ps-mcp-server-tools-plus.jpg
+image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg
 keywords: [PS MCP Server, MCP Tools Plus, PrestaShop, AI, management assistant, e-commerce, automation, natural language, PrestaShop module]
 difficulty: "⭐️⭐️⭐️"
 technologies: [PrestaShop, MCP, Claude, ChatGPT, Brevo, Qonto]
