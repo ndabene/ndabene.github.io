@@ -16,21 +16,10 @@ Usage: {% include blog-post-loop.html posts=site.posts limit=6 %}
                     sessionStorage.getItem('admin_preview') === 'true' ||
                     isLocalhost; // Auto-activer en local
 
-    console.log('🎯 Blog Post Loop - Admin Detection:', {
-        hostname: window.location.hostname,
-        isLocalhost: isLocalhost,
-        urlParam: urlParams.get('admin_preview'),
-        sessionStorage: sessionStorage.getItem('admin_preview'),
-        isAdmin: isAdmin
-    });
-
     if (isAdmin) {
         // Marquer le mode admin avant que la page soit complètement rendue
         document.documentElement.classList.add('admin-preview-active');
         sessionStorage.setItem('admin_preview', 'true');
-        console.log('✅ admin-preview-active class added to <html>');
-    } else {
-        console.log('❌ Admin mode not active - future posts will be hidden');
     }
 })();
 </script>
