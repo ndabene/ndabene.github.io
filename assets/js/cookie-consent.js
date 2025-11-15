@@ -336,49 +336,38 @@ class CookieConsent {
     }
 
     manageAdSenseConsent(preferences) {
-        // Vérifier si AdSense est déjà chargé
-        const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
+        // Le chargement du script AdSense est maintenant géré par adsense-lazy-loader.js
+        // On notifie simplement le changement de consentement
 
         if (preferences.ad || preferences.adUserData || preferences.adPersonalization) {
             // Consentement donné pour au moins un type de publicité
-            if (!adSenseScript) {
-                this.loadAdSense();
-            }
-            // Le Consent Mode gère automatiquement l'état via gtag
+            // Notifier le lazy loader que le consentement est accordé
+            this.notifyAdSenseConsentChange(true);
         } else {
             // Pas de consentement publicitaire
+            // Notifier le lazy loader et nettoyer si nécessaire
+            this.notifyAdSenseConsentChange(false);
+
+            // Supprimer le script AdSense si déjà chargé sans consentement
+            const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
             if (adSenseScript) {
-                // Supprimer le script AdSense si chargé sans consentement
                 adSenseScript.remove();
-                // console.log('AdSense script removed due to lack of consent');
             }
         }
     }
 
-    loadAdSense() {
-        // Vérifier si le script n'est pas déjà présent
-        if (document.querySelector('script[src*="pagead2.googlesyndication.com"]')) {
-            return; // Déjà chargé
+    notifyAdSenseConsentChange(hasConsent) {
+        // Émettre un événement personnalisé pour le lazy loader
+        const event = new CustomEvent('cookieConsentUpdated', {
+            detail: { hasAdConsent: hasConsent }
+        });
+        document.dispatchEvent(event);
+
+        // Si le lazy loader est déjà chargé, mettre à jour directement
+        if (window.adSenseLazyLoader && hasConsent) {
+            window.adSenseLazyLoader.checkConsent();
+            window.adSenseLazyLoader.observeAds();
         }
-
-        // Créer et insérer le script AdSense
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1445021827447908';
-        script.crossOrigin = 'anonymous';
-
-        // Trouver l'emplacement approprié (dans le head)
-        const head = document.head || document.getElementsByTagName('head')[0];
-        head.appendChild(script);
-
-        // console.log('AdSense script loaded with consent');
-
-        // Attendre que AdSense soit chargé puis initialiser
-        script.onload = () => {
-            if (window.adsbygoogle) {
-                // console.log('AdSense loaded successfully');
-            }
-        };
     }
 }
 
