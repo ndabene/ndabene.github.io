@@ -417,10 +417,16 @@
 
 {% include breadcrumb-jsonld.html %}
 
+<!-- Resource hints pour optimiser AdSense (preconnect avant chargement) -->
+<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+<link rel="dns-prefetch" href="https://adservice.google.com">
+<link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com">
+
 <!-- Google Funding Choices - Gestion du consentement pour la monétisation -->
 <script async src="https://fundingchoicesmessages.google.com/i/pub-1445021827447908?ers=1"></script>
 <script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
 
-<!-- Google AdSense - Chargé dynamiquement selon consentement via cookie-consent.js -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1445021827447908"
-     crossorigin="anonymous"></script>
+<!-- Google AdSense - Chargé avec lazy loading via adsense-lazy-loader.js -->
+<!-- Le script sera chargé uniquement quand nécessaire et avec consentement -->
+<script src="{{ '/assets/js/adsense-lazy-loader.js' | relative_url }}" defer></script>
