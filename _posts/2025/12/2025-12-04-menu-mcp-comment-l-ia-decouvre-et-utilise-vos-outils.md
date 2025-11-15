@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Le Menu MCP : Comment l''IA Découvre et Utilise vos Outils'
+title: Comment l'IA découvre vos outils MCP?
 date: 2025-12-04
 author: Nicolas Dabène
 categories:
@@ -36,7 +36,14 @@ faq:
 - question: Comment versionner mes outils ?
   answer: Incluez la version dans la description de l'outil et dans les métadonnées
     du serveur. L'IA peut alors décider si elle supporte cette version.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 ---
+
 # Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils
 
 Vous avez créé votre premier outil `readFile` dans l'article précédent. Félicitations ! Mais imaginez que vous arriviez dans un restaurant sans menu. Comment sauriez-vous ce qui est disponible ? C'est exactement le problème que résout le système de découverte du MCP. Aujourd'hui, nous allons implémenter le "menu" complet qui permet à une IA de découvrir automatiquement tous vos outils et de les utiliser intelligemment.

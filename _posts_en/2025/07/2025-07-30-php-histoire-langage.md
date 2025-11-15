@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PHP: The History of an Essential Language, from Its Beginnings to 2025'
+title: 'PHP: History of an Essential Language'
 date: 2025-07-30
 author: Nicolas Dabène
 lang: en
@@ -42,10 +42,9 @@ faq:
     the complete rewrite by Zeev Suraski and Andi Gutmans.
 - question: Why is PHP still so widely used in 2025?
   answer: In 2025, PHP powers over 75% of websites whose backend language can be determined,
-    notably thanks to WordPress (40% of sites), PrestaShop, and WooCommerce. Its
-    persistence is explained by a mature and affordable hosting ecosystem, excellent
-    backward compatibility, rapid development cycle, and constant evolution with PHP
-    8.
+    notably thanks to WordPress (40% of sites), PrestaShop, and WooCommerce. Its persistence
+    is explained by a mature and affordable hosting ecosystem, excellent backward
+    compatibility, rapid development cycle, and constant evolution with PHP 8.
 - question: Does Facebook still use PHP?
   answer: Yes, Meta (Facebook) has never abandoned PHP and has even massively invested
     in its improvement by developing HHVM (HipHop Virtual Machine) and Hack, a language
@@ -61,7 +60,10 @@ faq:
     compared to PHP 5.6 and now competes with compiled languages. Modern frameworks
     like Laravel and Symfony enable sophisticated and performant architectures adapted
     to large-scale professional applications.
+- question: Is this suitable for beginners?
+  answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
+
 # PHP: The History of an Essential Language, from Its Beginnings to 2025
 
 Imagine a programming language that is the subject of constant jokes in the developer community, that is regularly announced as "dying" or "outdated", but that nevertheless continues to silently power a gigantic part of the global web. This fascinating paradox is PHP's story.

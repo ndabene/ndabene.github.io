@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA
-  ?
+title: Laisseriez-vous un dev junior coder seul?
 date: 2025-11-04
 author: Nicolas Dabène
 categories:
@@ -55,7 +54,11 @@ faq:
     bien encadrées : 2 736€ annuels de licences génèrent 90 000€ d''économies en temps
     développeur, soit 87 264€ de bénéfice net. Mais ce ROI n''est atteignable qu''avec
     une supervision adéquate évitant les coûts cachés de remédiation.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA ?
 
 Imaginez la scène : vous embauchez un développeur junior talentueux, plein d'énergie et de bonnes idées. Le premier jour, vous lui donnez accès au code de production et lui dites "vas-y, code tout seul, on te fait confiance !". Impensable, n'est-ce pas ? Pourtant, c'est exactement ce que font de nombreuses équipes avec l'intelligence artificielle.

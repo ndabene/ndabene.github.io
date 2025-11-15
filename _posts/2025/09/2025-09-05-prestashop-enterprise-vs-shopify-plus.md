@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme'
+title: PrestaShop Enterprise vs Shopify Plus
 date: 2025-09-05
 author: Nicolas Dabène
 categories:
@@ -38,7 +38,17 @@ faq:
   answer: PrestaShop Enterprise permet d'héberger et d'auditer les données en Europe
     avec une conformité totale. Shopify externalise via des clauses juridiques mais
     les données peuvent circuler hors UE.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
+- question: PrestaShop convient-il aux débutants?
+  answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
+    les débutants créent leur boutique en quelques semaines.
+- question: Combien coûte l'hébergement PrestaShop?
+  answer: 'Hébergement partagé : 5-15€/mois, VPS : 20-50€/mois, serveur dédié : 100€+
+    selon vos besoins.'
 ---
+
 # PrestaShop Enterprise vs Shopify Plus : le vrai choix long terme
 
 ## Introduction

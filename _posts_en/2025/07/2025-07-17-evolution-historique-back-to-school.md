@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'The Historical Evolution of ''Back to School'': From Retail Tradition to E-commerce
-  Phenomenon'
+title: 'Back to School Evolution: 1850-2025'
 date: 2025-07-17
 lang: en
 ref: back-to-school-evolution-2025
@@ -42,16 +41,20 @@ faq:
     and m-commerce via the iPhone (2007). In 2024, Amazon generated $12.7 billion
     during Prime Day integrated with Back to School.
 - question: How many seasonal jobs does Back to School create?
-  answer: The Back to School period generates massive seasonal job creation with
-    Amazon hiring 250,000 employees, UPS over 125,000 for logistics, Target 100,000
-    additional employees, and Walmart 40,000 temporary employees to meet this period
-    of high commercial activity.
+  answer: The Back to School period generates massive seasonal job creation with Amazon
+    hiring 250,000 employees, UPS over 125,000 for logistics, Target 100,000 additional
+    employees, and Walmart 40,000 temporary employees to meet this period of high
+    commercial activity.
 - question: What is the growth projection for the Back to School market?
-  answer: The Back to School market is expected to reach $230.1 billion by 2030,
-    driven by post-COVID accelerated digitalization, demographic growth of the global
-    school population, premiumization of educational products, and integration of
-    AI and IoT technologies in education.
+  answer: The Back to School market is expected to reach $230.1 billion by 2030, driven
+    by post-COVID accelerated digitalization, demographic growth of the global school
+    population, premiumization of educational products, and integration of AI and
+    IoT technologies in education.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 The "Back to School" commercial event now represents the world's second-largest retail market, with revenue of **$172.3 billion in 2024** and a projection of **$230.1 billion by 2030**.
 
 ## The Historical Roots of a Commercial Phenomenon

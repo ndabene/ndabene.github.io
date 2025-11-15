@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs
-  campagnes publicitaires : le problème du trafic bot et des limitations Cloudflare'
+title: Pourquoi Shopify ne suit pas bien vos campagnes?
 date: 2025-11-27
 author: Nicolas Dabène
 categories:
@@ -65,6 +64,7 @@ sources:
 - https://help-center.prestashop.com/hc/en-us/articles/16417637123602-Configure-Cloudflare-on-PS-Hosting
 - https://prestahero.com/blog/post/122-how-to-prevent-spam-and-bots-with-captcha-recaptcha-module.html
 ---
+
 # Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs campagnes publicitaires
 
 Les marchands Shopify sont confrontés à un **défi structurel** : un afflux massif de trafic non humain combiné à l'impossibilité d'utiliser les outils d'infrastructure nécessaires pour le filtrer.

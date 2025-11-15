@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Le Guide Définitif pour Mesurer le GEO : Du Classement SEO à l''Influence
-  IA'
+title: Guide définitif pour mesurer le GEO
 date: 2025-11-03
 author: Nicolas Dabène
 categories:
@@ -82,6 +81,7 @@ sources:
   organization: Perplexity AI
   type: Report
 ---
+
 # Le Guide Définitif pour Mesurer le GEO : Du Classement SEO à l'Influence IA
 
 ## Introduction : Le Nouvel Impératif de Mesure

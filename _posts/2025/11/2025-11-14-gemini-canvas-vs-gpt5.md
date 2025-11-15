@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gemini Canvas vs GPT-5 : qui crée la meilleure présentation ?"
+title: 'Gemini Canvas vs GPT-5 : qui crée mieux?'
 date: 2025-11-14
 author: Nicolas Dabène
 categories:
@@ -12,7 +12,9 @@ tags:
 - Google Slides
 - IA générative
 - présentation
-excerpt: "J'ai testé la nouvelle fonction Canvas de Google Gemini face à GPT-5 pour générer une présentation à partir de mon article sur l'évolution des compétences développeurs. Voici les résultats, le prompt exact et mon verdict."
+excerpt: J'ai testé la nouvelle fonction Canvas de Google Gemini face à GPT-5 pour
+  générer une présentation à partir de mon article sur l'évolution des compétences
+  développeurs. Voici les résultats, le prompt exact et mon verdict.
 image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.jpg
 featured: true
 difficulty: Intermédiaire
@@ -24,14 +26,35 @@ technologies:
 estimated_reading_time: 8 minutes
 faq:
 - question: Qu'est-ce que Canvas de Google Gemini ?
-  answer: Canvas est une fonctionnalité intégrée à Gemini qui permet de créer automatiquement des présentations complètes à partir d'un texte, d'une URL ou d'images. Il génère un plan structuré, des thèmes cohérents avec couleurs et typographies, des images générées par IA, et permet même d'utiliser du LaTeX pour des équations complexes.
-- question: Quelles sont les principales différences entre Gemini Canvas et GPT-5 pour créer des présentations ?
-  answer: Gemini Canvas excelle par sa facilité d'usage, son intégration native avec Google Slides et son style visuel épuré et professionnel avec un résultat immédiatement exploitable. GPT-5, en revanche, produit des résultats décevants qui nécessitent un gros retravail et un prompt très élaboré en amont pour être utilisables.
+  answer: Canvas est une fonctionnalité intégrée à Gemini qui permet de créer automatiquement
+    des présentations complètes à partir d'un texte, d'une URL ou d'images. Il génère
+    un plan structuré, des thèmes cohérents avec couleurs et typographies, des images
+    générées par IA, et permet même d'utiliser du LaTeX pour des équations complexes.
+- question: Quelles sont les principales différences entre Gemini Canvas et GPT-5
+    pour créer des présentations ?
+  answer: Gemini Canvas excelle par sa facilité d'usage, son intégration native avec
+    Google Slides et son style visuel épuré et professionnel avec un résultat immédiatement
+    exploitable. GPT-5, en revanche, produit des résultats décevants qui nécessitent
+    un gros retravail et un prompt très élaboré en amont pour être utilisables.
 - question: Comment utiliser Canvas pour créer une présentation ?
-  answer: "Il suffit d'ouvrir Gemini, d'aller dans la section Outils → Canvas, de coller votre sujet, texte ou URL, puis de cliquer sur 'Créer une présentation'. Gemini génère automatiquement le plan, les visuels et le contenu, que vous pouvez ensuite éditer et exporter vers Google Slides en un clic."
+  answer: Il suffit d'ouvrir Gemini, d'aller dans la section Outils → Canvas, de coller
+    votre sujet, texte ou URL, puis de cliquer sur 'Créer une présentation'. Gemini
+    génère automatiquement le plan, les visuels et le contenu, que vous pouvez ensuite
+    éditer et exporter vers Google Slides en un clic.
 - question: Pour quel type d'utilisateur chaque outil est-il le plus adapté ?
-  answer: "Gemini Canvas est idéal pour tous les utilisateurs souhaitant créer des présentations rapidement et efficacement : étudiants, professionnels, formateurs. GPT-5 n'est pas recommandé pour la génération de présentations visuelles, sauf si vous êtes prêt à consacrer beaucoup de temps au retravail et à l'élaboration de prompts complexes."
+  answer: 'Gemini Canvas est idéal pour tous les utilisateurs souhaitant créer des
+    présentations rapidement et efficacement : étudiants, professionnels, formateurs.
+    GPT-5 n''est pas recommandé pour la génération de présentations visuelles, sauf
+    si vous êtes prêt à consacrer beaucoup de temps au retravail et à l''élaboration
+    de prompts complexes.'
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
+- question: Combien de temps pour mettre en place?
+  answer: Selon votre expérience, comptez entre 30 minutes et 2 heures pour une première
+    mise en place.
 ---
+
 
 # Gemini Canvas vs GPT-5 : qui crée la meilleure présentation ?
 

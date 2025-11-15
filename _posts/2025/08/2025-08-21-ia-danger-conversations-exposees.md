@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Quand l''IA devient un danger : 370 000 conversations privées exposées par
-  erreur'
+title: 'VEO 2025 : l''optimisation vocale transforme le SEO'
 date: 2025-08-21
 author: Nicolas Dabène
 categories:
@@ -33,7 +32,17 @@ faq:
   answer: Contactez immédiatement l'entreprise concernée pour demander le retrait,
     signalez l'incident aux autorités de protection des données (CNIL en France),
     et documentez toutes les preuves de l'exposition.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
+- question: Claude peut-il accéder à Internet?
+  answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
+    MCP pour accéder à des données externes.
 ---
+
 # Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur
 
 Imaginez que vos conversations les plus privées avec votre assistant vocal se retrouvent soudainement visibles sur Google. C'est exactement ce qui vient d'arriver à des centaines de milliers d'utilisateurs de Grok, le chatbot d'Elon Musk. Plus de 370 000 conversations confidentielles ont été accidentellement rendues publiques et indexées par les moteurs de recherche, créant une situation sans précédent dans le monde de l'intelligence artificielle.

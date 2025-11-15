@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Mistral AI: The Story of a French AI Revolution (2023-2025)'
+title: 'Mistral AI: French AI Revolution'
 date: 2025-09-11
 author: Nicolas Dabène
 lang: en
@@ -14,7 +14,8 @@ tags:
 - AI
 - development
 - e-commerce
-excerpt: In less than two years, Mistral AI became France's first decacorn, transforming the European artificial intelligence landscape with a valuation reaching €11.7 billion.
+excerpt: In less than two years, Mistral AI became France's first decacorn, transforming
+  the European artificial intelligence landscape with a valuation reaching €11.7 billion.
 image: /assets/images/blog/2025/09/2025-09-11-mistral-ai-revolution.jpg
 featured: true
 difficulty: Intermediate
@@ -27,16 +28,28 @@ technologies:
 estimated_reading_time: 25 minutes
 faq:
 - question: What's the difference between Mistral AI and American giants like OpenAI?
-  answer: Mistral AI focuses on open source, European data sovereignty, and a more efficient approach in terms of computing resources. Unlike OpenAI which keeps its models proprietary, Mistral publishes its base models under free license.
+  answer: Mistral AI focuses on open source, European data sovereignty, and a more
+    efficient approach in terms of computing resources. Unlike OpenAI which keeps
+    its models proprietary, Mistral publishes its base models under free license.
 - question: Are Mistral models really open source?
-  answer: Yes, base models like Mistral 7B are published under Apache 2.0 license, allowing complete code audit, modification, and local deployment. Enterprise versions offer additional paid features.
+  answer: Yes, base models like Mistral 7B are published under Apache 2.0 license,
+    allowing complete code audit, modification, and local deployment. Enterprise versions
+    offer additional paid features.
 - question: What's the impact of the European AI Act on Mistral?
-  answer: Mistral AI actively participated in developing the AI Act and considers the final framework manageable for its operations. The company respects defined thresholds and collaborates with regulators.
+  answer: Mistral AI actively participated in developing the AI Act and considers
+    the final framework manageable for its operations. The company respects defined
+    thresholds and collaborates with regulators.
 - question: How does Mistral ensure data sovereignty?
-  answer: Through local infrastructure deployment options, strategic European partnerships, and building sovereign datacenters in France. Clients can keep their data in Europe.
+  answer: Through local infrastructure deployment options, strategic European partnerships,
+    and building sovereign datacenters in France. Clients can keep their data in Europe.
 - question: What is Mistral's monetization strategy?
-  answer: 'Mistral adopts a dual approach: free open source models for the community, and paid enterprise versions with advanced features, support, and SLA for businesses.'
+  answer: 'Mistral adopts a dual approach: free open source models for the community,
+    and paid enterprise versions with advanced features, support, and SLA for businesses.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Mistral AI: The Story of a French AI Revolution (2023-2025)
 
 ## Introduction

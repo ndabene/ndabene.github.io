@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop Validator: Ensuring Your Module Quality'
+title: 'PrestaShop Validator: Ensure Quality'
 date: 2025-11-18
 author: Nicolas Dabène
 categories:
@@ -12,7 +12,8 @@ tags:
 - development
 - e-commerce
 - security
-excerpt: Discover how PrestaShop Extension Validator transforms module creation into a reliable and professional process, ensuring quality and security.
+excerpt: Discover how PrestaShop Extension Validator transforms module creation into
+  a reliable and professional process, ensuring quality and security.
 image: /assets/images/blog/2025/11/2025-01-24-prestashop-extension-validator.jpg
 lang: en
 ref: prestashop-validator-nov2025
@@ -25,14 +26,30 @@ technologies:
 estimated_reading_time: 10 minutes
 faq:
 - question: Does the Validator detect business bugs?
-  answer: No, and it's important to understand this limitation. The Validator checks technical compliance and best practices, not your module's business logic. A module can pass validation and still contain a logical bug. That's why manual testing and unit tests remain essential.
+  answer: No, and it's important to understand this limitation. The Validator checks
+    technical compliance and best practices, not your module's business logic. A module
+    can pass validation and still contain a logical bug. That's why manual testing
+    and unit tests remain essential.
 - question: How long does validation take?
-  answer: Automated analysis generally takes 2 to 5 minutes. If you manually submit for marketplace publication, the PrestaShop team examines the module within 5 to 10 business days. The online Validator is instant.
+  answer: Automated analysis generally takes 2 to 5 minutes. If you manually submit
+    for marketplace publication, the PrestaShop team examines the module within 5
+    to 10 business days. The online Validator is instant.
 - question: Can I use the Validator for private modules?
-  answer: Yes! You don't have to publish your module on the marketplace to use it. The Validator works for any type of PrestaShop module, including custom solutions developed for a single client.
+  answer: Yes! You don't have to publish your module on the marketplace to use it.
+    The Validator works for any type of PrestaShop module, including custom solutions
+    developed for a single client.
 - question: What if the Validator reports an error I don't understand?
-  answer: Each report includes detailed documentation. If it's not enough, the PrestaShop community is generally very responsive on official forums. Don't hesitate to ask your question mentioning exactly what type of error you received.
+  answer: Each report includes detailed documentation. If it's not enough, the PrestaShop
+    community is generally very responsive on official forums. Don't hesitate to ask
+    your question mentioning exactly what type of error you received.
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
+- question: Is PrestaShop suitable for beginners?
+  answer: PrestaShop has a medium learning curve. With documentation, beginners can
+    create their store in weeks.
 ---
+
 # PrestaShop Validator: Ensuring Your Module Quality
 
 You've developed a magnificent PrestaShop module. The features work perfectly locally, your tests are conclusive, and you're about to publish it on the marketplace... But wait! Have you verified its technical compliance? This is precisely where **PrestaShop Validator** comes in, a tool that transforms uncertainty into confidence and validation into a transparent process.

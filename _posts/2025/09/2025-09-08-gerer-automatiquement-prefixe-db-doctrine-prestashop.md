@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop
+title: 'IA et développement : éviter les pièges courants'
 date: 2025-09-08
 author: Nicolas Dabène
 categories:
@@ -47,7 +47,11 @@ faq:
     str_starts_with($classMetadata->getName(), 'Vendor\\YourModule\\Entity\\'). Si
     l'entité ne correspond pas à votre module, retournez immédiatement. Cette précaution
     évite les conflits avec autres modules ou le core PrestaShop.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop
 
 Vous développez un module PrestaShop avec Doctrine et vous tombez sur cette erreur frustrante : `Base table or view not found`... alors que votre table existe bel et bien en base ? Le problème vient probablement du préfixe de table dynamique que PrestaShop ajoute automatiquement, mais que Doctrine ignore royalement.

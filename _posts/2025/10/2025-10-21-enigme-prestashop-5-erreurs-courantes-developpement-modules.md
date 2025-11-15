@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?'
+title: 'Énigme PrestaShop : trouvez les 5 erreurs'
 date: 2025-10-21
 author: Nicolas Dabène
 categories:
@@ -55,7 +55,11 @@ faq:
     templates de hooks, views/templates/admin/ pour l''administration, et views/templates/front/
     pour les contrôleurs front-office. Le chemin complet dans display() doit être
     : $this->display(__FILE__, ''views/templates/hook/bestsellers.tpl'').'
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # 🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?
 
 Développeurs PrestaShop, je vous lance un défi ! 🚀

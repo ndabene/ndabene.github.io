@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Le VEO en 2025 : Comment l''optimisation vocale transforme la recherche'
+title: 'VEO 2025 : l''optimisation vocale transforme le SEO'
 date: 2025-11-25
 author: Nicolas Dabène
 categories:
@@ -77,6 +77,7 @@ sources:
   organization: Schema.org
   type: TechArticle
 ---
+
 # Le VEO en 2025 : Comment l'optimisation vocale transforme la recherche
 
 Avez-vous remarqué comment notre dialogue avec la technologie a changé ? Nous sommes passés de l'ère des mots-clés hachés saisis sur un clavier à celle des conversations naturelles avec nos assistants. Nous ne tapons plus « météo Paris », nous demandons : « Quelle sera la météo à Paris cet après-midi ? ».

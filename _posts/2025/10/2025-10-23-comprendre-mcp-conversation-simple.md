@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Comprendre le Model Context Protocol (MCP) : Une Conversation Simple'
+title: ChatGPT autorise les conversations érotiques
 date: 2025-10-23
 author: Nicolas Dabène
 categories:
@@ -34,7 +34,17 @@ faq:
   answer: Oui, mais seulement après votre autorisation explicite. Le serveur MCP lit
     vos données et les transmet à l'IA pour traitement. C'est pourquoi la question
     de la confiance envers le fournisseur d'IA reste importante.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
+- question: Ai-je besoin de connaissances en programmation?
+  answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
+    des serveurs MCP.
 ---
+
 # Comprendre le Model Context Protocol (MCP) : Une Conversation Simple
 
 Vous êtes-vous déjà demandé comment les intelligences artificielles comme ChatGPT ou Claude pourraient accéder à vos fichiers personnels, vos e-mails ou votre base de données ? La réponse tient en trois lettres : **MCP** (Model Context Protocol). Mais avant de plonger dans le code, prenons le temps de comprendre cette architecture révolutionnaire à travers une analogie simple et une conversation guidée.

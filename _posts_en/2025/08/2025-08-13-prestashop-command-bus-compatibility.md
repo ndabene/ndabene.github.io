@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop 8/9 Compatibility: Mastering the Command Bus Transition'
+title: 'PrestaShop 8/9 Compatibility: Transition'
 date: 2025-08-13
 author: Nicolas Dabène
 lang: en
@@ -12,7 +12,8 @@ categories:
 tags:
 - PrestaShop
 - development
-excerpt: Practical guide to develop PrestaShop modules compatible with versions 8 and 9 despite the migration from Tactician to Symfony Messenger.
+excerpt: Practical guide to develop PrestaShop modules compatible with versions 8
+  and 9 despite the migration from Tactician to Symfony Messenger.
 image: /assets/images/blog/2025/08/2025-08-13-prestashop-command-bus-compatibility.jpg
 featured: false
 difficulty: Intermediate
@@ -22,7 +23,8 @@ technologies:
 - Symfony
 - Command Bus
 estimated_reading_time: 12 minutes
-llm_summary: Practical guide to develop PrestaShop modules compatible with versions 8 and 9 despite the migration from Tactician to Symfony Messenger.
+llm_summary: Practical guide to develop PrestaShop modules compatible with versions
+  8 and 9 despite the migration from Tactician to Symfony Messenger.
 llm_topics:
 - PrestaShop 8
 - PrestaShop 9
@@ -34,16 +36,35 @@ llm_topics:
 - compatibility
 faq:
 - question: What's the difference between Tactician and Symfony Messenger?
-  answer: Tactician (PrestaShop 8) and Symfony Messenger (PrestaShop 9) are both Command Bus but with different conventions. Tactician uses a handle() method while Messenger uses __invoke(). Messenger additionally offers native support for asynchronous messages and better integration with the modern Symfony ecosystem.
+  answer: Tactician (PrestaShop 8) and Symfony Messenger (PrestaShop 9) are both Command
+    Bus but with different conventions. Tactician uses a handle() method while Messenger
+    uses __invoke(). Messenger additionally offers native support for asynchronous
+    messages and better integration with the modern Symfony ecosystem.
 - question: How to create a PrestaShop 8 and 9 compatible module?
-  answer: To guarantee bidirectional compatibility, implement both handle() and __invoke() methods in your handlers. The __invoke() method contains your business logic while handle() simply delegates to __invoke(). Also add both tactician.handler and messenger.message_handler tags in your services.yml.
+  answer: To guarantee bidirectional compatibility, implement both handle() and __invoke()
+    methods in your handlers. The __invoke() method contains your business logic while
+    handle() simply delegates to __invoke(). Also add both tactician.handler and messenger.message_handler
+    tags in your services.yml.
 - question: Why is parent::__construct() mandatory in PrestaShop modules?
-  answer: Calling parent::__construct() initializes the context ($this->context), configures the Smarty environment, prepares translations ($this->l()), and initializes all essential module properties. Without this call, you'll get fatal errors as soon as you use these fundamental features.
+  answer: Calling parent::__construct() initializes the context ($this->context),
+    configures the Smarty environment, prepares translations ($this->l()), and initializes
+    all essential module properties. Without this call, you'll get fatal errors as
+    soon as you use these fundamental features.
 - question: How to debug Command Bus issues in PrestaShop?
-  answer: To debug, add temporary logs in your handle() and __invoke() methods to trace which method is called. Use php bin/console debug:container to verify your handlers are properly registered. Don't forget to clear the Symfony cache after each modification with php bin/console cache:clear.
+  answer: To debug, add temporary logs in your handle() and __invoke() methods to
+    trace which method is called. Use php bin/console debug:container to verify your
+    handlers are properly registered. Don't forget to clear the Symfony cache after
+    each modification with php bin/console cache:clear.
 - question: Can I use Tactician and Messenger simultaneously in a module?
-  answer: Yes, this is exactly the recommended compatibility strategy. By implementing both methods (handle and __invoke) and using both tags in services.yml, your handler will automatically work on PrestaShop 8 (Tactician) and 9 (Messenger) without code modification.
+  answer: Yes, this is exactly the recommended compatibility strategy. By implementing
+    both methods (handle and __invoke) and using both tags in services.yml, your handler
+    will automatically work on PrestaShop 8 (Tactician) and 9 (Messenger) without
+    code modification.
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 # PrestaShop 8/9 Compatibility: Mastering the Command Bus Transition
 
 The evolution of web frameworks is an inescapable reality of our profession. Sometimes, these evolutions involve major architectural changes that radically transform our development approach. This is precisely what happened with PrestaShop during the transition from version 8 to version 9, particularly concerning Command Bus management.

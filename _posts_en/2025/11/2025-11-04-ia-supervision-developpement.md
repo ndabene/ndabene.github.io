@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Would You Let a Junior Dev Code Without Supervision? Then Why AI?
+title: Would You Let Junior Dev Code Without Supervision?
 date: 2025-11-04
 author: Nicolas Dabène
 categories:
@@ -11,7 +11,8 @@ tags:
 - AI
 - development
 - security
-excerpt: 84% of developers use AI, but 45% of generated code contains vulnerabilities. Discover why AI requires as much supervision as a junior developer.
+excerpt: 84% of developers use AI, but 45% of generated code contains vulnerabilities.
+  Discover why AI requires as much supervision as a junior developer.
 image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.jpg
 lang: en
 ref: ia-supervision-developpement-nov2025
@@ -25,16 +26,35 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: Why does AI require as much supervision as a junior developer?
-  answer: Unlike a junior who learns from mistakes and progresses, AI repeats the same errors indefinitely without ever improving. 45% of AI-generated code contains vulnerabilities with failure rates reaching 70% for Java and 86% for XSS protection. AI doesn't understand business context nor questions dangerous instructions.
+  answer: Unlike a junior who learns from mistakes and progresses, AI repeats the
+    same errors indefinitely without ever improving. 45% of AI-generated code contains
+    vulnerabilities with failure rates reaching 70% for Java and 86% for XSS protection.
+    AI doesn't understand business context nor questions dangerous instructions.
 - question: What are the hidden costs of unsupervised AI?
-  answer: GitClear reveals an 8x increase in duplicated blocks and 10x more copy-pasted code. Technical debt accumulates rapidly, debugging costs explode (majority of developers spend more time debugging AI code), and fixing a vulnerability in production costs 30 times more than during development.
+  answer: GitClear reveals an 8x increase in duplicated blocks and 10x more copy-pasted
+    code. Technical debt accumulates rapidly, debugging costs explode (majority of
+    developers spend more time debugging AI code), and fixing a vulnerability in production
+    costs 30 times more than during development.
 - question: What is the Human-in-the-Loop (HITL) framework?
-  answer: 'HITL is a structured approach integrating human expertise at critical points. The HULA framework proposes three components: AI Planner Agent (identifies files and plan), AI Coding Agent (generates modifications), and Human Agent (provides feedback and supervision). Any dangerous operation requires explicit human validation.'
+  answer: 'HITL is a structured approach integrating human expertise at critical points.
+    The HULA framework proposes three components: AI Planner Agent (identifies files
+    and plan), AI Coding Agent (generates modifications), and Human Agent (provides
+    feedback and supervision). Any dangerous operation requires explicit human validation.'
 - question: What are the best practices for supervising AI code?
-  answer: Treat every line of AI code as potentially dangerous until complete validation. Implement automated static analysis, specific security tests (SQL injection, XSS), and manual audit by experienced developers for critical parts. Adjust autonomy level according to risk analysis.
+  answer: Treat every line of AI code as potentially dangerous until complete validation.
+    Implement automated static analysis, specific security tests (SQL injection, XSS),
+    and manual audit by experienced developers for critical parts. Adjust autonomy
+    level according to risk analysis.
 - question: What is the realistic ROI of properly supervised AI?
-  answer: 'Microsoft calculates a 3,190% ROI for GitHub Copilot in well-managed teams: €2,736 annual licenses generate €90,000 in developer time savings, i.e., €87,264 net benefit. But this ROI is only achievable with adequate supervision avoiding hidden remediation costs.'
+  answer: 'Microsoft calculates a 3,190% ROI for GitHub Copilot in well-managed teams:
+    €2,736 annual licenses generate €90,000 in developer time savings, i.e., €87,264
+    net benefit. But this ROI is only achievable with adequate supervision avoiding
+    hidden remediation costs.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Would You Let a Junior Dev Code Without Supervision? Then Why AI?
 
 Imagine the scene: you hire a talented junior developer, full of energy and good ideas. On the first day, you give them access to production code and say "go ahead, code alone, we trust you!". Unthinkable, right? Yet that's exactly what many teams do with artificial intelligence.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'When AI Becomes a Danger: 370,000 Private Conversations Exposed by Error'
+title: 'VEO 2025: Voice Optimization Transforms SEO'
 date: 2025-08-21
 author: Nicolas Dabène
 lang: en
@@ -11,7 +11,8 @@ categories:
 tags:
 - AI
 - security
-excerpt: A major breach reveals disturbing content and highlights the hidden risks of artificial intelligence chatbots.
+excerpt: A major breach reveals disturbing content and highlights the hidden risks
+  of artificial intelligence chatbots.
 image: /assets/images/blog/2025/08/2025-08-21-ia-danger-conversations-exposees.jpg
 featured: true
 difficulty: Intermediate
@@ -22,12 +23,27 @@ technologies:
 estimated_reading_time: 6 minutes
 faq:
 - question: Are my conversations with other chatbots secure?
-  answer: No chatbot can guarantee absolute security. Always treat your interactions with AIs as potentially public and never share sensitive or confidential information.
+  answer: No chatbot can guarantee absolute security. Always treat your interactions
+    with AIs as potentially public and never share sensitive or confidential information.
 - question: How to verify if my data has been exposed?
-  answer: Search for specific excerpts of your conversations on Google using unique keywords you used. If you find your conversations, immediately contact the service provider.
+  answer: Search for specific excerpts of your conversations on Google using unique
+    keywords you used. If you find your conversations, immediately contact the service
+    provider.
 - question: What to do if I find my conversations exposed?
-  answer: Immediately contact the concerned company to request removal, report the incident to data protection authorities (CNIL in France), and document all evidence of exposure.
+  answer: Immediately contact the concerned company to request removal, report the
+    incident to data protection authorities (CNIL in France), and document all evidence
+    of exposure.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
+- question: Can Claude access the Internet?
+  answer: No, Claude doesn't have direct Internet access, but can use MCP servers
+    to access external data.
 ---
+
 # When AI Becomes a Danger: 370,000 Private Conversations Exposed by Error
 
 Imagine your most private conversations with your voice assistant suddenly becoming visible on Google. That's exactly what just happened to hundreds of thousands of users of Grok, Elon Musk's chatbot. More than 370,000 confidential conversations were accidentally made public and indexed by search engines, creating an unprecedented situation in the world of artificial intelligence.

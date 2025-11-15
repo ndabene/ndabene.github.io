@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Black Friday 2025 : La révolution GEO arrive sur PrestaShop'
+title: ChatGPT autorise les conversations érotiques
 date: 2025-09-16
 author: Nicolas Dabène
 categories:
@@ -32,7 +32,20 @@ faq:
   answer: Les premiers adoptants rapportent des résultats significatifs dès 3 à 4
     semaines après l'installation du module. L'impact s'accroît avec le temps et l'optimisation
     continue.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
+- question: PrestaShop convient-il aux débutants?
+  answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
+    les débutants créent leur boutique en quelques semaines.
+- question: Combien coûte l'hébergement PrestaShop?
+  answer: 'Hébergement partagé : 5-15€/mois, VPS : 20-50€/mois, serveur dédié : 100€+
+    selon vos besoins.'
+- question: PrestaShop supporte-t-il plusieurs langues?
+  answer: Oui, PrestaShop est nativement multilingue et multi-devises, parfait pour
+    l'international.
 ---
+
 # Black Friday 2025 : La révolution GEO arrive sur PrestaShop
 
 ## Introduction

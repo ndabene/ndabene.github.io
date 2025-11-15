@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Grok Exposes Its System Prompts: Lessons for AI Security'
+title: 'Grok Exposes Prompts: Security Lessons'
 date: 2025-08-19
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - AI
 - prompt engineering
 - security
-excerpt: Grok's accidental exposure of system prompts reveals critical security flaws. Technical analysis of risks and best practices.
+excerpt: Grok's accidental exposure of system prompts reveals critical security flaws.
+  Technical analysis of risks and best practices.
 image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.jpg
 featured: true
 difficulty: Intermediate
@@ -24,12 +25,26 @@ technologies:
 estimated_reading_time: 7 minutes
 faq:
 - question: How to protect my system prompts in production?
-  answer: Use a secrets manager like HashiCorp Vault or AWS Secrets Manager and always encrypt your sensitive prompts. Never store prompts hardcoded in source code.
+  answer: Use a secrets manager like HashiCorp Vault or AWS Secrets Manager and always
+    encrypt your sensitive prompts. Never store prompts hardcoded in source code.
 - question: What to do if I detect a prompt injection attempt?
-  answer: Immediately log the incident, temporarily block the concerned user, and analyze the attack pattern to improve your security filters. Early detection is crucial to prevent exploits.
+  answer: Immediately log the incident, temporarily block the concerned user, and
+    analyze the attack pattern to improve your security filters. Early detection is
+    crucial to prevent exploits.
 - question: Should I test the security of my AI integrations?
-  answer: Absolutely! Integrate specific AI security tests into your CI/CD pipeline, just as you would for classic vulnerability tests like SQL injection or XSS.
+  answer: Absolutely! Integrate specific AI security tests into your CI/CD pipeline,
+    just as you would for classic vulnerability tests like SQL injection or XSS.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
+- question: Can Claude access the Internet?
+  answer: No, Claude doesn't have direct Internet access, but can use MCP servers
+    to access external data.
 ---
+
 # Grok Exposes Its System Prompts: Lessons for AI Security
 
 The recent accidental exposure of Grok's internal system prompts, xAI's chatbot, perfectly illustrates why generative AI system security cannot be taken lightly. As a developer working daily with AI APIs, this breach reminds me of the crucial importance of security best practices.

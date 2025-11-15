@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Créer son Premier Serveur MCP : Setup du Projet TypeScript'
+title: 'Créer votre premier serveur MCP : Setup'
 date: 2025-10-30
 author: Nicolas Dabène
 categories:
@@ -92,6 +92,12 @@ faq:
     organisé : vous développez dans src/, TypeScript compile vers dist/, et c''est
     le contenu de dist/ qui est exécuté en production. Cela évite de mélanger code
     source et code compilé.'
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 sources:
 - name: TypeScript Official Documentation
   url: https://www.typescriptlang.org/docs/
@@ -106,6 +112,7 @@ sources:
   organization: Express
   type: Documentation
 ---
+
 # Créer son Premier Serveur MCP : Setup du Projet TypeScript
 
 Vous avez compris la théorie du Model Context Protocol dans notre article précédent ? Parfait ! Il est temps de mettre les mains dans le code. Nous allons construire ensemble les fondations d'un serveur MCP fonctionnel. Pas de panique, nous avançons étape par étape, comme si nous construisions une maison : d'abord les fondations, ensuite les murs, puis le toit.

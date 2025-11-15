@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PHP : L''Histoire d''un Langage Incontournable, de ses Débuts à 2025'
+title: 'PHP : histoire d''un langage incontournable'
 date: 2025-07-30
 author: Nicolas Dabène
 categories:
@@ -61,7 +61,11 @@ faq:
     langages compilés. Les frameworks modernes comme Laravel et Symfony permettent
     des architectures sophistiquées et performantes adaptées aux applications professionnelles
     à grande échelle.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
+
 # PHP : L'Histoire d'un Langage Incontournable, de ses Débuts à 2025
 
 Imaginez un langage de programmation qui fait l'objet de blagues constantes dans la communauté des développeurs, qui est régulièrement annoncé comme "mourant" ou "dépassé", mais qui continue pourtant de propulser silencieusement une partie gigantesque du web mondial. Ce paradoxe fascinant, c'est l'histoire de PHP.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Gemini 3.0: The AI Revolutionizing Our Daily Lives in 2025'
+title: 'Google Gemini 3.0: AI for Daily Life'
 date: 2025-10-08
 author: Nicolas Dabène
 lang: en
@@ -11,7 +11,8 @@ categories:
 tags:
 - AI
 - development
-excerpt: Discover Gemini 3.0, Google's new generation of AI that pushes the boundaries of what's possible with its advanced reasoning and revolutionary multimodal capabilities.
+excerpt: Discover Gemini 3.0, Google's new generation of AI that pushes the boundaries
+  of what's possible with its advanced reasoning and revolutionary multimodal capabilities.
 image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.jpg
 featured: true
 difficulty: Intermediate
@@ -24,8 +25,25 @@ estimated_reading_time: 14 minutes
 is_future: true
 faq:
 - question: What is the main difference between Gemini 3.0 and previous versions?
-  answer: The key lies in the integrated native reasoning (Deep Think) that allows deep analysis before responding, advanced multimodal capabilities (60 FPS video, 3D analysis), and agent mode that enables the AI to execute complex tasks autonomously.
+  answer: The key lies in the integrated native reasoning (Deep Think) that allows
+    deep analysis before responding, advanced multimodal capabilities (60 FPS video,
+    3D analysis), and agent mode that enables the AI to execute complex tasks autonomously.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
+- question: Can Claude access the Internet?
+  answer: No, Claude doesn't have direct Internet access, but can use MCP servers
+    to access external data.
+- question: Is my data secure with Claude?
+  answer: Anthropic doesn't store your conversations for training. Data is encrypted.
+- question: Can Claude replace a developer?
+  answer: No, Claude is a powerful assistant but doesn't replace human expertise.
+    It accelerates work.
 ---
+
 # Google Gemini 3.0: The AI Revolutionizing Our Daily Lives in 2025
 
 Imagine a digital assistant capable of understanding a video in real-time, reasoning about complex problems like an expert, and automating your daily tasks with near-human intelligence. This is no longer science fiction: it's Google Gemini 3.0, the third generation of Google's artificial intelligence that's about to radically transform how we work, learn, and create.

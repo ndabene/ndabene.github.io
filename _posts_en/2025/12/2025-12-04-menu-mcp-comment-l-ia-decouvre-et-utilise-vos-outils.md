@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The MCP Menu: How AI Discovers and Uses Your Tools'
+title: How AI Discovers Your MCP Tools?
 date: 2025-12-04
 author: Nicolas Dabène
 categories:
@@ -11,7 +11,8 @@ tags:
 - AI
 - SEO
 - development
-excerpt: Your AI can now read files. But how does it discover your tools? Let's dive into the MCP discovery system.
+excerpt: Your AI can now read files. But how does it discover your tools? Let's dive
+  into the MCP discovery system.
 image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.jpg
 featured: true
 difficulty: Intermediate
@@ -25,14 +26,25 @@ lang: en
 ref: mcp-menu-ai-tool-discovery-2025
 faq:
 - question: Can I have multiple MCP servers with different tools?
-  answer: Absolutely! Each server can expose its own tools. The AI can even combine tools from multiple servers in the same conversation.
+  answer: Absolutely! Each server can expose its own tools. The AI can even combine
+    tools from multiple servers in the same conversation.
 - question: How to handle tools requiring authentication?
-  answer: MCP doesn't specify standard authentication, but you can implement JWT, API keys, or OAuth according to your needs. The discovery endpoint can be protected.
+  answer: MCP doesn't specify standard authentication, but you can implement JWT,
+    API keys, or OAuth according to your needs. The discovery endpoint can be protected.
 - question: Can tools communicate with each other?
-  answer: Yes, but it's generally the AI's role to orchestrate calls. However, your tools can call other tools via the registry if necessary.
+  answer: Yes, but it's generally the AI's role to orchestrate calls. However, your
+    tools can call other tools via the registry if necessary.
 - question: How to version my tools?
-  answer: Include the version in the tool description and server metadata. The AI can then decide if it supports this version.
+  answer: Include the version in the tool description and server metadata. The AI
+    can then decide if it supports this version.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
 ---
+
 # The MCP Menu: How AI Discovers and Uses Your Tools
 
 You created your first `readFile` tool in the previous article. Congratulations! But imagine arriving at a restaurant without a menu. How would you know what's available? This is exactly the problem that the MCP discovery system solves. Today, we'll implement the complete "menu" that allows an AI to automatically discover all your tools and use them intelligently.

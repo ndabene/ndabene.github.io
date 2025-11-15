@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Sécuriser votre Serveur MCP : Permissions, Validation et Protection'
+title: Comment sécuriser un serveur MCP?
 date: 2025-12-11
 author: Nicolas Dabène
 categories:
@@ -39,7 +39,14 @@ faq:
 - question: Comment protéger contre les attaques DDoS ?
   answer: Utilisez un reverse proxy comme Nginx avec rate limiting, un WAF (Web Application
     Firewall), et des services comme Cloudflare en frontal.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 ---
+
 # Sécuriser votre Serveur MCP : Permissions, Validation et Protection
 
 Votre serveur MCP expose maintenant plusieurs outils que les IA peuvent découvrir et utiliser. Génial ! Mais une question cruciale se pose : qui peut utiliser quoi ? Dans cet article, nous allons transformer votre serveur en une forteresse sécurisée, sans sacrifier sa simplicité d'utilisation. Parce qu'un serveur puissant doit aussi être un serveur protégé.

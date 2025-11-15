@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Shopping avec Gemini : La révolution IA qui transforme l''e-commerce'
+title: 'Évolution de Google Shopping : Froogle à l''IA'
 date: 2025-09-18
 author: Nicolas Dabène
 categories:
@@ -53,7 +53,11 @@ faq:
     descriptions riches, images de qualité et informations techniques complètes. Construisez
     votre autorité de marque avec bons avis clients et adoptez une stratégie de prix
     transparente et juste.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Google Shopping avec Gemini : La révolution IA qui transforme l'e-commerce
 
 Imaginez pouvoir essayer virtuellement un vêtement avant de l'acheter, recevoir des conseils d'achat personnalisés comme si vous aviez un styliste personnel, ou encore être alerté au moment précis où le produit que vous convoitez baisse de prix. Ce qui relevait de la science-fiction il y a encore quelques années est aujourd'hui une réalité grâce à l'intégration de Gemini (anciennement Bard) dans Google Shopping.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Secure Your MCP Server: Permissions, Validation and Protection'
+title: How to Secure MCP Server?
 date: 2025-12-11
 author: Nicolas Dabène
 categories:
@@ -12,7 +12,8 @@ tags:
 - AI
 - development
 - security
-excerpt: Your MCP server works? Perfect. Now let's secure it to make it production-ready with validation, permissions, and protection.
+excerpt: Your MCP server works? Perfect. Now let's secure it to make it production-ready
+  with validation, permissions, and protection.
 image: /assets/images/blog/2025/12/2025-12-11-securiser-serveur-mcp.jpg
 featured: true
 difficulty: Intermediate
@@ -27,14 +28,26 @@ lang: en
 ref: secure-mcp-server-permissions-2025
 faq:
 - question: Is this system production-ready?
-  answer: 'It''s an excellent foundation, but for production, add: real JWT (with jsonwebtoken), bcrypt hash, mandatory HTTPS, logging to external service, and automated security tests.'
+  answer: 'It''s an excellent foundation, but for production, add: real JWT (with
+    jsonwebtoken), bcrypt hash, mandatory HTTPS, logging to external service, and
+    automated security tests.'
 - question: How to handle more complex permissions?
-  answer: Implement a complete RBAC (Role-Based Access Control) system with composable roles and hierarchical permissions. You can also use CASL or Casbin.
+  answer: Implement a complete RBAC (Role-Based Access Control) system with composable
+    roles and hierarchical permissions. You can also use CASL or Casbin.
 - question: What to do if a user abuses the system?
-  answer: Add a temporary or permanent banning system, with automatic detection of suspicious behaviors (too many errors, abnormal patterns).
+  answer: Add a temporary or permanent banning system, with automatic detection of
+    suspicious behaviors (too many errors, abnormal patterns).
 - question: How to protect against DDoS attacks?
-  answer: Use a reverse proxy like Nginx with rate limiting, a WAF (Web Application Firewall), and services like Cloudflare as frontend.
+  answer: Use a reverse proxy like Nginx with rate limiting, a WAF (Web Application
+    Firewall), and services like Cloudflare as frontend.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
 ---
+
 # Secure Your MCP Server: Permissions, Validation and Protection
 
 Your MCP server now exposes several tools that AIs can discover and use. Great! But a crucial question arises: who can use what? In this article, we'll transform your server into a secured fortress, without sacrificing its ease of use. Because a powerful server must also be a protected server.

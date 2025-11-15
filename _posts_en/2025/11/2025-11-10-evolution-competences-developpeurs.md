@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Evolution of Developer Skills: from Technical Expertise to Hybrid Visionary'
+title: Evolution of Developer Skills
 date: 2025-11-10
 author: Nicolas Dabène
 categories:
@@ -10,7 +10,9 @@ tags:
 - AI
 - automation
 - development
-excerpt: 'In just a few months, artificial intelligence has redefined the developer profession: less repetitive technical work, more design, vision and human focus. Here''s how this mutation occurred.'
+excerpt: 'In just a few months, artificial intelligence has redefined the developer
+  profession: less repetitive technical work, more design, vision and human focus.
+  Here''s how this mutation occurred.'
 image: /assets/images/blog/2025/11/2025-11-10-evolution-competences-developpeurs.jpg
 lang: en
 ref: evolution-competences-developpeurs-nov2025
@@ -23,16 +25,33 @@ technologies:
 estimated_reading_time: 10 minutes
 faq:
 - question: How has AI transformed the developer profession in just a few months?
-  answer: AI has freed up time to think about product, strategy and community rather than getting bogged down in repetitive tasks. Document writing is 40% faster (HBR) and development time reduced by 56% (MIT/Microsoft/GitHub). It's a shift from sorcerer's apprentice to true magician.
+  answer: AI has freed up time to think about product, strategy and community rather
+    than getting bogged down in repetitive tasks. Document writing is 40% faster (HBR)
+    and development time reduced by 56% (MIT/Microsoft/GitHub). It's a shift from
+    sorcerer's apprentice to true magician.
 - question: What types of technical tasks can AI automate?
-  answer: AI can handle writing and updating technical documentation, automatic PHPDoc correction, generating comments compliant with PSR-12, creating reusable snippets and boilerplates, and syntactic/functional review of classes before commit.
+  answer: AI can handle writing and updating technical documentation, automatic PHPDoc
+    correction, generating comments compliant with PSR-12, creating reusable snippets
+    and boilerplates, and syntactic/functional review of classes before commit.
 - question: How does AI accelerate developer learning?
-  answer: 83.5% of learners believe AI accelerates their skill development (MDPI). ChatGPT acts as a 24/7 pedagogical assistant capable of explaining obscure concepts, generating code examples, pointing out invisible errors. Learning cycles are shorter, smoother and understanding deeper.
+  answer: 83.5% of learners believe AI accelerates their skill development (MDPI).
+    ChatGPT acts as a 24/7 pedagogical assistant capable of explaining obscure concepts,
+    generating code examples, pointing out invisible errors. Learning cycles are shorter,
+    smoother and understanding deeper.
 - question: What human skills become more important with AI?
-  answer: 'With AI handling repetitive technical work, human skills gain importance: empathy, communication, community leadership, ability to connect technology to human product vision, community animation and knowledge sharing. 69% of professionals believe AI frees up time for high-level tasks.'
+  answer: 'With AI handling repetitive technical work, human skills gain importance:
+    empathy, communication, community leadership, ability to connect technology to
+    human product vision, community animation and knowledge sharing. 69% of professionals
+    believe AI frees up time for high-level tasks.'
 - question: Will the developer of the future be replaced by AI?
-  answer: No, the developer of the future isn't the one who codes fastest, but the one who knows how to collaborate intelligently with AI to create more value. AI hasn't replaced work — it has augmented it, allowing to refocus the role on creativity, strategy and communication while still progressing technically.
+  answer: No, the developer of the future isn't the one who codes fastest, but the
+    one who knows how to collaborate intelligently with AI to create more value. AI
+    hasn't replaced work — it has augmented it, allowing to refocus the role on creativity,
+    strategy and communication while still progressing technically.
+- question: Is this suitable for beginners?
+  answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
+
 # Evolution of Developer Skills: from Technical Expertise to Hybrid Visionary
 
 ## Introduction

@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Quand l''édition de modules PrestaShop rencontre le growth hacking : mindset,
-  méthodes et points de convergence'
+title: Édition de modules PrestaShop et growth hacking
 date: 2025-08-06
 author: Nicolas Dabène
 categories:
@@ -65,7 +64,11 @@ faq:
     illustre la puissance de l'intelligence collective où innovation naît de la confrontation
     d'idées et du partage d'expériences. Cette co-création et entraide permettent
     d'anticiper les évolutions du marché et détecter rapidement les opportunités émergentes.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Quand l'édition de modules PrestaShop rencontre le growth hacking : mindset, méthodes et points de convergence
 
 Il y a quelques mois, je réfléchissais à l'évolution fascinante du métier d'éditeur de modules PrestaShop. Comment sommes-nous passés d'une logique artisanale de prestation sur-mesure à une approche industrielle centrée sur le produit ? Cette transformation m'a frappé par sa ressemblance troublante avec une autre discipline : le growth hacking.

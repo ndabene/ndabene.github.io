@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Créer votre Premier Outil MCP : L''Outil readFile Expliqué'
+title: 'Créer votre premier outil MCP : readFile'
 date: 2025-11-12
 author: Nicolas Dabène
 categories:
@@ -31,7 +31,17 @@ faq:
 - question: Mes outils peuvent-ils appeler d'autres outils ?
   answer: Techniquement oui, mais c'est généralement le rôle de l'IA d'orchestrer
     les appels entre outils. Gardez vos outils simples et atomiques.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
+- question: Ai-je besoin de connaissances en programmation?
+  answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
+    des serveurs MCP.
 ---
+
 # Créer votre Premier Outil MCP : L'Outil readFile Expliqué
 
 Vous avez configuré votre environnement TypeScript dans l'article précédent ? Parfait ! Maintenant, place au moment magique où la théorie devient réalité. Nous allons créer ensemble votre tout premier outil MCP : une fonction qui permettra à une IA de lire des fichiers sur votre machine. C'est simple, concret, et surtout : ça fonctionne vraiment.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Doctolib: From Idea to French Unicorn (2013-2025)'
+title: 'Doctolib: From Idea to Unicorn (2013-2025)'
 date: 2025-09-30
 author: Nicolas Dabène
 lang: en
@@ -12,7 +12,8 @@ categories:
 tags:
 - AI
 - automation
-excerpt: 'From online appointment booking to an AI-powered e-health ecosystem: look back at 12 years of hyper-growth, controversies and innovations at Doctolib.'
+excerpt: 'From online appointment booking to an AI-powered e-health ecosystem: look
+  back at 12 years of hyper-growth, controversies and innovations at Doctolib.'
 image: /assets/images/blog/2025/09/2025-09-30-doctolib-histoire-innovation.jpg
 featured: false
 difficulty: Intermediate
@@ -23,16 +24,33 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: When did Doctolib become a French unicorn?
-  answer: Doctolib reached unicorn status in March 2019 with a €150 million fundraising that valued the company at over one billion euros. This milestone coincided with the launch of teleconsultation services developed with 500 partner doctors.
+  answer: Doctolib reached unicorn status in March 2019 with a €150 million fundraising
+    that valued the company at over one billion euros. This milestone coincided with
+    the launch of teleconsultation services developed with 500 partner doctors.
 - question: What is Doctolib's valuation in 2025?
-  answer: After the mega-fundraising of €500 million on March 15, 2022, Doctolib reaches a valuation of €5.8 billion, thus becoming the best-valued French startup, surpassing Back Market. The company targets profitability in 2025 and considers an IPO for 2025 or 2026.
+  answer: After the mega-fundraising of €500 million on March 15, 2022, Doctolib reaches
+    a valuation of €5.8 billion, thus becoming the best-valued French startup, surpassing
+    Back Market. The company targets profitability in 2025 and considers an IPO for
+    2025 or 2026.
 - question: How does Doctolib generate its revenue?
-  answer: 99% of Doctolib's revenue comes from healthcare professional subscriptions (€129 including tax per month for practices), not from patients who use the platform for free. In 2024, Doctolib generated €348 million in annual recurring revenue (+22.5% vs 2023).
+  answer: 99% of Doctolib's revenue comes from healthcare professional subscriptions
+    (€129 including tax per month for practices), not from patients who use the platform
+    for free. In 2024, Doctolib generated €348 million in annual recurring revenue
+    (+22.5% vs 2023).
 - question: What is Doctolib's AI Consultation Assistant?
-  answer: Launched in October 2024, the AI-based Consultation Assistant automates note-taking during consultations, allowing doctors to focus more on their patients. This major innovation illustrates Doctolib's pivot toward artificial intelligence to improve medical practice.
+  answer: Launched in October 2024, the AI-based Consultation Assistant automates
+    note-taking during consultations, allowing doctors to focus more on their patients.
+    This major innovation illustrates Doctolib's pivot toward artificial intelligence
+    to improve medical practice.
 - question: How many users does Doctolib have in Europe?
-  answer: Doctolib's European expansion counts 45 million users in France, 10 million in Germany and 5 million in Italy, for a total of 60 million users. The platform equips 300,000 healthcare professionals and 1,700 establishments across Europe.
+  answer: Doctolib's European expansion counts 45 million users in France, 10 million
+    in Germany and 5 million in Italy, for a total of 60 million users. The platform
+    equips 300,000 healthcare professionals and 1,700 establishments across Europe.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Doctolib's Story: From Revolutionary Idea to French Unicorn (2013-2025)
 
 Doctolib has become in barely twelve years one of French Tech's most remarkable success stories, radically transforming how French people make their medical appointments. Look back at the epic of a startup that revolutionized the digital health sector.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Perplexity Comet 2025: When Your Browser Becomes Your Intelligent Assistant'
+title: 'Perplexity Comet: Smart Browser 2025'
 date: 2025-10-22
 author: Nicolas Dabène
 lang: en
@@ -11,7 +11,8 @@ categories:
 tags:
 - AI
 - automation
-excerpt: Discover how Perplexity Comet radically transforms our way of using the internet by making an AI-powered browser freely accessible.
+excerpt: Discover how Perplexity Comet radically transforms our way of using the internet
+  by making an AI-powered browser freely accessible.
 image: /assets/images/blog/2025/10/2025-10-22-perplexity-comet-revolution.jpg
 featured: true
 difficulty: Beginner
@@ -23,18 +24,35 @@ technologies:
 estimated_reading_time: 15 minutes
 faq:
 - question: Is Comet really free or are there hidden limitations?
-  answer: 'The free version already offers the essentials: intelligent browsing, contextual AI assistant, personalized shortcuts, Gmail and Calendar integrations. Limitations concern the number of complex queries per day and Background Assistant reserved for Max. For normal daily use, the free version is largely sufficient.'
+  answer: 'The free version already offers the essentials: intelligent browsing, contextual
+    AI assistant, personalized shortcuts, Gmail and Calendar integrations. Limitations
+    concern the number of complex queries per day and Background Assistant reserved
+    for Max. For normal daily use, the free version is largely sufficient.'
 - question: Is my data really secure with Comet?
-  answer: 'Comet stores your data locally by default with end-to-end encryption. SOC 2, GDPR, and HIPAA certifications guarantee serious standards. The key: never enter passwords or ultra-sensitive data in prompts, regularly check permissions, use two-factor authentication.'
+  answer: 'Comet stores your data locally by default with end-to-end encryption. SOC
+    2, GDPR, and HIPAA certifications guarantee serious standards. The key: never
+    enter passwords or ultra-sensitive data in prompts, regularly check permissions,
+    use two-factor authentication.'
 - question: Can I use Comet if I don't speak English?
-  answer: Absolutely! Comet natively supports French, as well as about twenty other languages. The assistant perfectly understands queries in French and responds in the same language. The interface is also fully translated.
+  answer: Absolutely! Comet natively supports French, as well as about twenty other
+    languages. The assistant perfectly understands queries in French and responds
+    in the same language. The interface is also fully translated.
 - question: Can Comet completely replace Chrome or Firefox?
-  answer: Technically yes, since Comet is based on Chromium and supports all Chrome extensions. Comet shines especially for automating, searching intelligently, and executing complex tasks. Many keep their classic browser for simple browsing and use Comet for productive tasks.
+  answer: Technically yes, since Comet is based on Chromium and supports all Chrome
+    extensions. Comet shines especially for automating, searching intelligently, and
+    executing complex tasks. Many keep their classic browser for simple browsing and
+    use Comet for productive tasks.
 - question: Can students really use Comet for free without time limit?
-  answer: Yes, as long as you maintain your verified student status. Free access isn't a temporary promotion but Perplexity's commitment to democratize educational AI. You keep access throughout your studies, and even a few months after.
+  answer: Yes, as long as you maintain your verified student status. Free access isn't
+    a temporary promotion but Perplexity's commitment to democratize educational AI.
+    You keep access throughout your studies, and even a few months after.
 - question: Does Comet work offline?
-  answer: Partially. You can browse websites offline (if already visited). The AI assistant requires an internet connection to communicate with Perplexity servers. This is a limitation of current generative AIs that are too large to run entirely locally.
+  answer: Partially. You can browse websites offline (if already visited). The AI
+    assistant requires an internet connection to communicate with Perplexity servers.
+    This is a limitation of current generative AIs that are too large to run entirely
+    locally.
 ---
+
 # Perplexity Comet 2025: When Your Browser Becomes Your Intelligent Assistant
 
 Imagine for a moment that your web browser truly understands what you're looking for. No more juggling fifteen open tabs to compare prices, manually copying information from one site to another, or wasting twenty minutes planning a simple trip. This is exactly what Perplexity Comet offers, a browser that doesn't just display web pages, but thinks and acts with you.

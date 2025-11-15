@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'AI Act : comprendre la régulation européenne de l’IA'
+title: 'AI Act : comprendre la régulation IA en Europe'
 date: 2025-08-29
 author: Nicolas Dabène
 categories:
@@ -40,7 +40,14 @@ faq:
   answer: Comme le RGPD en 2018, l'AI Act pourrait devenir un standard mondial. L'Union
     européenne espère imposer sa vision d'une IA de confiance et éthique au niveau
     international.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
+
 # AI Act : comprendre la régulation européenne de l’IA
 
 ## Introduction

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Shopping & Black Friday 2025 : Guide Complet pour PrestaShop'
+title: 'Google Shopping & Black Friday 2025 : Guide'
 date: 2025-10-29
 author: Nicolas Dabène
 categories:
@@ -51,7 +51,11 @@ faq:
     intègre le système d'avis clients, permet la segmentation avancée par libellés
     (marge, saisonnalité, performance) et supporte le multi-pays pour vendre en Europe
     avec installation en moins d'une heure.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Google Shopping & Black Friday 2025 : Guide Complet pour PrestaShop
 
 Vous avez sûrement remarqué : chaque année, le Black Friday arrive avec l'impatience d'un enfant avant Noël. Pour les e-commerçants, cette période représente bien plus qu'une simple hausse de trafic - c'est un marathon commercial où chaque détail compte. Et devinez où se joue une grande partie de cette bataille ? Sur Google Shopping.

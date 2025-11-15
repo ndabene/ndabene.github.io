@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI Isn't Intelligent, It's Lazy (and that's its greatest strength)"
+title: 'AI is Lazy: Its Hidden Strength'
 date: 2025-11-21
 author: Nicolas Dabène
 categories:
@@ -13,8 +13,12 @@ tags:
 - llm
 - philosophy
 - future
-excerpt: >
-  What if the AI revolution was based on a huge misunderstanding? Models like GPT don't "think," they avoid thinking. Discover why this "algorithmic laziness" is actually a superpower and how, as developers and creators, we must change our relationship with this tool to unleash its full potential.
+excerpt: 'What if the AI revolution was based on a huge misunderstanding? Models like
+  GPT don''t "think," they avoid thinking. Discover why this "algorithmic laziness"
+  is actually a superpower and how, as developers and creators, we must change our
+  relationship with this tool to unleash its full potential.
+
+  '
 image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.jpg
 lang: en
 ref: ia-paresseuse-superpouvoir
@@ -26,14 +30,36 @@ technologies:
 estimated_reading_time: 15 minutes
 faq:
 - question: What does it mean that AI is "lazy"?
-  answer: AI doesn't actually think or reason. It simply predicts the most statistically probable next word based on patterns it learned during training. It takes the shortest cognitive path, seeking coherence rather than deep understanding. This "laziness" - avoiding computational effort - is its core design principle, not a flaw.
+  answer: AI doesn't actually think or reason. It simply predicts the most statistically
+    probable next word based on patterns it learned during training. It takes the
+    shortest cognitive path, seeking coherence rather than deep understanding. This
+    "laziness" - avoiding computational effort - is its core design principle, not
+    a flaw.
 - question: How does understanding AI's laziness change how we should use it?
-  answer: Instead of asking AI to "think," you should provide extremely detailed, constrained prompts that do the thinking for it. Your role shifts from asking questions to architecting precise instructions. You define the strategy, vision, and constraints; AI executes at lightning speed. This reframes AI as a powerful execution tool rather than a thinking partner.
+  answer: Instead of asking AI to "think," you should provide extremely detailed,
+    constrained prompts that do the thinking for it. Your role shifts from asking
+    questions to architecting precise instructions. You define the strategy, vision,
+    and constraints; AI executes at lightning speed. This reframes AI as a powerful
+    execution tool rather than a thinking partner.
 - question: Why is statistical prediction so powerful even without understanding?
-  answer: In a world saturated with information, the ability to instantly generate coherent, predictable content is a superpower. AI eliminates human hesitation, bias, ego, and fatigue. It can produce functional PrestaShop code, empathetic customer service responses, or stunning images purely from statistical patterns, creating an illusion of mastery without genuine comprehension.
+  answer: In a world saturated with information, the ability to instantly generate
+    coherent, predictable content is a superpower. AI eliminates human hesitation,
+    bias, ego, and fatigue. It can produce functional PrestaShop code, empathetic
+    customer service responses, or stunning images purely from statistical patterns,
+    creating an illusion of mastery without genuine comprehension.
 - question: What is the human's role when AI handles execution?
-  answer: Humans excel where statistical prediction fails - defining the right problem, challenging assumptions, providing strategic vision, adding empathy, and giving meaning to AI's speed. As AI automates formulation, humans must focus on strategy, creativity, and understanding why we do things, not just what or how.
+  answer: Humans excel where statistical prediction fails - defining the right problem,
+    challenging assumptions, providing strategic vision, adding empathy, and giving
+    meaning to AI's speed. As AI automates formulation, humans must focus on strategy,
+    creativity, and understanding why we do things, not just what or how.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 
 # AI Isn't Intelligent, It's Lazy (and that's its greatest strength)
 

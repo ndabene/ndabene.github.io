@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gemini Canvas vs GPT-5: Which Creates the Best Presentation?"
+title: 'Gemini Canvas vs GPT-5: Which Creates Better?'
 date: 2025-11-14
 author: Nicolas Dabène
 categories:
@@ -12,7 +12,9 @@ tags:
 - Google Slides
 - generative AI
 - presentation
-excerpt: "I tested Google Gemini's new Canvas feature against GPT-5 to generate a presentation from my article on developer skills evolution. Here are the results, the exact prompt, and my verdict."
+excerpt: I tested Google Gemini's new Canvas feature against GPT-5 to generate a presentation
+  from my article on developer skills evolution. Here are the results, the exact prompt,
+  and my verdict.
 image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.jpg
 lang: en
 ref: gemini-canvas-vs-gpt5-nov2025
@@ -26,14 +28,34 @@ technologies:
 estimated_reading_time: 8 minutes
 faq:
 - question: What is Google Gemini's Canvas?
-  answer: Canvas is a feature integrated into Gemini that automatically creates complete presentations from text, URL, or images. It generates a structured plan, coherent themes with colors and typography, AI-generated images, and even supports LaTeX for complex equations.
-- question: What are the main differences between Gemini Canvas and GPT-5 for creating presentations?
-  answer: Gemini Canvas excels in ease of use, native integration with Google Slides, and clean, professional visual style with an immediately usable result. GPT-5, on the other hand, produces disappointing results that require major rework and a very elaborate prompt upfront to be usable.
+  answer: Canvas is a feature integrated into Gemini that automatically creates complete
+    presentations from text, URL, or images. It generates a structured plan, coherent
+    themes with colors and typography, AI-generated images, and even supports LaTeX
+    for complex equations.
+- question: What are the main differences between Gemini Canvas and GPT-5 for creating
+    presentations?
+  answer: Gemini Canvas excels in ease of use, native integration with Google Slides,
+    and clean, professional visual style with an immediately usable result. GPT-5,
+    on the other hand, produces disappointing results that require major rework and
+    a very elaborate prompt upfront to be usable.
 - question: How do you use Canvas to create a presentation?
-  answer: "Simply open Gemini, go to Tools → Canvas section, paste your topic, text or URL, then click 'Create presentation'. Gemini automatically generates the plan, visuals and content, which you can then edit and export to Google Slides in one click."
+  answer: Simply open Gemini, go to Tools → Canvas section, paste your topic, text
+    or URL, then click 'Create presentation'. Gemini automatically generates the plan,
+    visuals and content, which you can then edit and export to Google Slides in one
+    click.
 - question: Which tool is best suited for which type of user?
-  answer: "Gemini Canvas is ideal for all users who want to create presentations quickly and effectively: students, professionals, trainers. GPT-5 is not recommended for visual presentation generation, unless you are willing to spend a lot of time on rework and crafting complex prompts."
+  answer: 'Gemini Canvas is ideal for all users who want to create presentations quickly
+    and effectively: students, professionals, trainers. GPT-5 is not recommended for
+    visual presentation generation, unless you are willing to spend a lot of time
+    on rework and crafting complex prompts.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 
 # Gemini Canvas vs GPT-5: Which Creates the Best Presentation?
 

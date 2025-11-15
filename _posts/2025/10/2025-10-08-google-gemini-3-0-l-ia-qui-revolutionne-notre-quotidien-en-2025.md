@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Gemini 3.0 : L''IA qui Révolutionne Notre Quotidien en 2025'
+title: 'Google Gemini 3.0 : IA du quotidien'
 date: 2025-10-08
 author: Nicolas Dabène
 categories:
@@ -29,7 +29,23 @@ faq:
     une analyse profonde avant de répondre, les capacités multimodales avancées (vidéo
     60 FPS, analyse 3D), et le mode agent qui permet à l'IA d'exécuter des tâches
     complexes de manière autonome.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
+- question: Claude peut-il accéder à Internet?
+  answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
+    MCP pour accéder à des données externes.
+- question: Mes données sont-elles sécurisées?
+  answer: Anthropic ne stocke pas vos conversations pour l'entraînement. Les données
+    sont chiffrées.
+- question: Claude peut-il remplacer un développeur?
+  answer: Non, Claude est un assistant puissant mais ne remplace pas l'expertise humaine.
+    Il accélère le travail.
 ---
+
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025
 
 Imaginez un assistant numérique capable de comprendre une vidéo en temps réel, de raisonner sur des problèmes complexes comme un expert, et d'automatiser vos tâches quotidiennes avec une intelligence quasi-humaine. Ce n'est plus de la science-fiction : c'est Google Gemini 3.0, la troisième génération de l'intelligence artificielle de Google qui s'apprête à transformer radicalement notre façon de travailler, d'apprendre et de créer.

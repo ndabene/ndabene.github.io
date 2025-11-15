@@ -1,37 +1,64 @@
 ---
 layout: post
-title: "MCP pour PrestaShop : Connectez Votre Boutique aux Agents IA"
+title: Comment connecter PrestaShop aux agents IA?
 date: 2025-11-28
 author: Nicolas Dabène
-categories: [PrestaShop, Intelligence Artificielle, Développement]
-tags: [MCP, PrestaShop, IA, PHP 8, Agent IA, Model Context Protocol]
-excerpt: "Découvrez comment ps_mcp_server transforme votre boutique PrestaShop en plateforme IA-ready. Guide complet d'installation et développement avec exemples pratiques."
+categories:
+- PrestaShop
+- Intelligence Artificielle
+- Développement
+tags:
+- MCP
+- PrestaShop
+- IA
+- PHP 8
+- Agent IA
+- Model Context Protocol
+excerpt: Découvrez comment ps_mcp_server transforme votre boutique PrestaShop en plateforme
+  IA-ready. Guide complet d'installation et développement avec exemples pratiques.
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
 featured: true
-difficulty: "Avancé"
-technologies: ["PrestaShop 8+", "PHP 8.1+", "MCP", "IA"]
-estimated_reading_time: "10 minutes"
+difficulty: Avancé
+technologies:
+- PrestaShop 8+
+- PHP 8.1+
+- MCP
+- IA
+estimated_reading_time: 10 minutes
 faq:
-  - question: "Qu'est-ce que le Model Context Protocol (MCP) ?"
-    answer: "MCP est un protocole qui permet aux agents IA de communiquer avec des systèmes métiers comme PrestaShop. Il expose des outils via un serveur structuré, permettant aux LLM d'interagir avec votre boutique de manière sécurisée et contrôlée."
-  - question: "Pourquoi utiliser MCP avec PrestaShop ?"
-    answer: "MCP permet d'automatiser des tâches complexes via IA : gestion produits, analyse données, support client intelligent. Vos agents IA accèdent directement à la logique métier de votre boutique via des outils bien définis."
-  - question: "Quels sont les prérequis techniques pour ps_mcp_server ?"
-    answer: "Vous devez avoir PrestaShop 8.x minimum et PHP 8.1 ou supérieur. Le module utilise les attributs PHP modernes et nécessite un client MCP compatible comme Claude, Dust ou Gemini CLI."
-  - question: "Comment sécuriser l'accès au serveur MCP ?"
-    answer: "Le module intègre une gestion de session avec token d'authentification. Seuls les clients possédant un token valide peuvent accéder aux outils exposés. Activez toujours les logs en développement pour surveiller l'activité."
-  - question: "Quelle est la différence entre transport STDIO et HTTP ?"
-    answer: "STDIO lance le serveur comme processus enfant (idéal pour debug ou modules autonomes). HTTP expose le serveur via API (usage production avec Claude, Dust, ChatGPT). STDIO est synchrone, HTTP permet connexions multiples."
-  - question: "Comment créer mon premier outil MCP personnalisé ?"
-    answer: "Déclarez votre module MCP-compliant avec isMcpCompliant(), créez une classe sous src/Mcp/Tools, utilisez l'attribut #[McpTool] avec description claire. Le module scanne automatiquement vos outils au démarrage."
+- question: Qu'est-ce que le Model Context Protocol (MCP) ?
+  answer: MCP est un protocole qui permet aux agents IA de communiquer avec des systèmes
+    métiers comme PrestaShop. Il expose des outils via un serveur structuré, permettant
+    aux LLM d'interagir avec votre boutique de manière sécurisée et contrôlée.
+- question: Pourquoi utiliser MCP avec PrestaShop ?
+  answer: 'MCP permet d''automatiser des tâches complexes via IA : gestion produits,
+    analyse données, support client intelligent. Vos agents IA accèdent directement
+    à la logique métier de votre boutique via des outils bien définis.'
+- question: Quels sont les prérequis techniques pour ps_mcp_server ?
+  answer: Vous devez avoir PrestaShop 8.x minimum et PHP 8.1 ou supérieur. Le module
+    utilise les attributs PHP modernes et nécessite un client MCP compatible comme
+    Claude, Dust ou Gemini CLI.
+- question: Comment sécuriser l'accès au serveur MCP ?
+  answer: Le module intègre une gestion de session avec token d'authentification.
+    Seuls les clients possédant un token valide peuvent accéder aux outils exposés.
+    Activez toujours les logs en développement pour surveiller l'activité.
+- question: Quelle est la différence entre transport STDIO et HTTP ?
+  answer: STDIO lance le serveur comme processus enfant (idéal pour debug ou modules
+    autonomes). HTTP expose le serveur via API (usage production avec Claude, Dust,
+    ChatGPT). STDIO est synchrone, HTTP permet connexions multiples.
+- question: Comment créer mon premier outil MCP personnalisé ?
+  answer: 'Déclarez votre module MCP-compliant avec isMcpCompliant(), créez une classe
+    sous src/Mcp/Tools, utilisez l''attribut #[McpTool] avec description claire. Le
+    module scanne automatiquement vos outils au démarrage.'
 sources:
-  - title: "Model Context Protocol Official Spec"
-    url: "https://modelcontextprotocol.io"
-  - title: "PHP-MCP Documentation"
-    url: "https://github.com/php-mcp"
-  - title: "ps_mcp_boilerplate Repository"
-    url: "https://github.com/prestashop/ps_mcp_boilerplate"
+- title: Model Context Protocol Official Spec
+  url: https://modelcontextprotocol.io
+- title: PHP-MCP Documentation
+  url: https://github.com/php-mcp
+- title: ps_mcp_boilerplate Repository
+  url: https://github.com/prestashop/ps_mcp_boilerplate
 ---
+
 
 # MCP pour PrestaShop : Connectez Votre Boutique aux Agents IA
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Create Your First MCP Tool: The readFile Tool Explained'
+title: 'Create Your First MCP Tool: readFile'
 date: 2025-11-12
 author: Nicolas Dabène
 categories:
@@ -9,7 +9,8 @@ categories:
 tags:
 - AI
 - development
-excerpt: From setup to action! Create your first functional MCP tool that allows an AI to read files. Complete and explained code.
+excerpt: From setup to action! Create your first functional MCP tool that allows an
+  AI to read files. Complete and explained code.
 image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.jpg
 lang: en
 ref: creer-votre-premier-outil-mcp-l-outil-readfile-explique-nov2025
@@ -23,12 +24,25 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: Can I create a tool that writes files?
-  answer: 'Absolutely! The structure is the same. Use fs.writeFile() instead of fs.readFile(). But be careful with security: writing is riskier than reading.'
+  answer: 'Absolutely! The structure is the same. Use fs.writeFile() instead of fs.readFile().
+    But be careful with security: writing is riskier than reading.'
 - question: How to handle binary files?
-  answer: Use base64 encoding to read binary files and transmit them as text. The AI can then manipulate them.
+  answer: Use base64 encoding to read binary files and transmit them as text. The
+    AI can then manipulate them.
 - question: Can my tools call other tools?
-  answer: Technically yes, but it's generally the AI's role to orchestrate calls between tools. Keep your tools simple and atomic.
+  answer: Technically yes, but it's generally the AI's role to orchestrate calls between
+    tools. Keep your tools simple and atomic.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
+- question: Do I need programming knowledge?
+  answer: Yes, basic knowledge of JavaScript/TypeScript is recommended to create MCP
+    servers.
 ---
+
 # Create Your First MCP Tool: The readFile Tool Explained
 
 You've configured your TypeScript environment in the previous article? Perfect! Now, it's time for the magical moment when theory becomes reality. We're going to create your very first MCP tool together: a function that will allow an AI to read files on your machine. It's simple, concrete, and above all: it really works.

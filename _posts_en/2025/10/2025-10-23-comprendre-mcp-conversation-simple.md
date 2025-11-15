@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Understanding the Model Context Protocol (MCP): A Simple Conversation'
+title: 'Understanding MCP Protocol: Complete Guide'
 date: 2025-10-23
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - ChatGPT
 - AI
 - development
-excerpt: Discover how AIs can access your files and data through MCP, explained through a simple and educational conversation.
+excerpt: Discover how AIs can access your files and data through MCP, explained through
+  a simple and educational conversation.
 image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.jpg
 featured: true
 difficulty: Beginner
@@ -25,12 +26,26 @@ technologies:
 estimated_reading_time: 10 minutes
 faq:
 - question: Does MCP replace traditional APIs?
-  answer: No, MCP is a layer on top of existing APIs. It standardizes how AIs interact with these APIs, but APIs remain the technical means of accessing data.
+  answer: No, MCP is a layer on top of existing APIs. It standardizes how AIs interact
+    with these APIs, but APIs remain the technical means of accessing data.
 - question: Can I create an MCP server without being an AI expert?
-  answer: Absolutely! MCP uses standard web technologies (TypeScript, JSON). If you know how to create a basic REST API, you can create an MCP server.
+  answer: Absolutely! MCP uses standard web technologies (TypeScript, JSON). If you
+    know how to create a basic REST API, you can create an MCP server.
 - question: Is my data sent to the AI?
-  answer: Yes, but only after your explicit authorization. The MCP server reads your data and transmits it to the AI for processing. This is why trust in the AI provider remains important.
+  answer: Yes, but only after your explicit authorization. The MCP server reads your
+    data and transmits it to the AI for processing. This is why trust in the AI provider
+    remains important.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
+- question: Do I need programming knowledge?
+  answer: Yes, basic knowledge of JavaScript/TypeScript is recommended to create MCP
+    servers.
 ---
+
 # Understanding the Model Context Protocol (MCP): A Simple Conversation
 
 Have you ever wondered how artificial intelligences like ChatGPT or Claude could access your personal files, your emails or your database? The answer comes down to three letters: **MCP** (Model Context Protocol). But before diving into code, let's take time to understand this revolutionary architecture through a simple analogy and a guided conversation.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI Chatbots Induce Users to Share 12 Times More Personal Data
+title: AI Chatbots Induce Users to Share Data
 date: 2025-09-04
 author: Nicolas Dabène
 lang: en
@@ -12,7 +12,9 @@ tags:
 - AI
 - prompt engineering
 - security
-excerpt: 'Two international studies sound the alarm: AI-based chatbots and browsing assistants push internet users to disclose sensitive information at unprecedented levels.'
+excerpt: 'Two international studies sound the alarm: AI-based chatbots and browsing
+  assistants push internet users to disclose sensitive information at unprecedented
+  levels.'
 image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.jpg
 featured: true
 difficulty: Intermediate
@@ -24,12 +26,26 @@ technologies:
 estimated_reading_time: 6 minutes
 faq:
 - question: How to recognize a manipulative chatbot?
-  answer: Beware of chatbots that seem too empathetic, share personal anecdotes, or excessively reassure you about confidentiality. These reciprocity techniques are designed to build trust.
+  answer: Beware of chatbots that seem too empathetic, share personal anecdotes, or
+    excessively reassure you about confidentiality. These reciprocity techniques are
+    designed to build trust.
 - question: What data is most at risk with chatbots?
-  answer: Medical, financial information, login credentials, and personal details shared in an emotional context are particularly vulnerable to exploitation.
+  answer: Medical, financial information, login credentials, and personal details
+    shared in an emotional context are particularly vulnerable to exploitation.
 - question: How to protect myself when using AI assistants?
-  answer: Limit sensitive information shared, check browser extension permissions, and prefer tools with transparent and GDPR-compliant privacy policies.
+  answer: Limit sensitive information shared, check browser extension permissions,
+    and prefer tools with transparent and GDPR-compliant privacy policies.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
+- question: Can Claude access the Internet?
+  answer: No, Claude doesn't have direct Internet access, but can use MCP servers
+    to access external data.
 ---
+
 # AI Chatbots Induce Users to Share 12 Times More Personal Data
 
 Two international studies sound the alarm: AI-based chatbots and browsing assistants push internet users to disclose sensitive information at unprecedented levels.

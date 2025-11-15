@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel'
+title: 'Vibe Coding vs Prompt-Driven : IA générative'
 date: 2025-06-15
 author: Nicolas Dabène
 categories:
@@ -57,7 +57,11 @@ faq:
     ou POCs avec supervision technique stricte. Pour les projets de production, le
     Prompt-Driven Development est indispensable car il garantit sécurité, maintenabilité
     et conformité aux standards professionnels du développement logiciel.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel, sécurité et qualité du code
 
 

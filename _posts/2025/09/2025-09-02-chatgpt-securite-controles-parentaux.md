@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au
-  service de la protection des utilisateurs'
+title: ChatGPT renforce sa sécurité
 date: 2025-09-02
 author: Nicolas Dabène
 categories:
@@ -42,7 +41,14 @@ faq:
   answer: Le routage vers des modèles de raisonnement pourrait légèrement ralentir
     les réponses dans certains cas de détresse, mais cela améliore significativement
     leur qualité et leur sécurité.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
+
 # ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs
 
 ## Introduction

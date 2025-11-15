@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Mistral AI : L''Histoire d''une Révolution Française de l''Intelligence Artificielle
-  (2023-2025)'
+title: 'Mistral AI : révolution française de l''IA'
 date: 2025-09-11
 author: Nicolas Dabène
 categories:
@@ -49,7 +48,11 @@ faq:
   answer: 'Mistral adopte une double approche : des modèles open source gratuits pour
     la communauté, et des versions enterprise payantes avec fonctionnalités avancées,
     support et SLA pour les entreprises.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Mistral AI : L'Histoire d'une Révolution Française de l'Intelligence Artificielle (2023-2025)
 
 ## Introduction

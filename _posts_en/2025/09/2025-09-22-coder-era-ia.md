@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Coding in the AI Era: How to Adapt Your Working Methods in 2025'
+title: 'Coding in AI Era: Adapt Your Methods'
 date: 2025-09-22
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,9 @@ tags:
 - AI
 - development
 - prompt engineering
-excerpt: 84% of developers use AI, but only 34% truly master this collaboration. Discover concrete methods to transform AI from a simple code generator into a true development partner.
+excerpt: 84% of developers use AI, but only 34% truly master this collaboration. Discover
+  concrete methods to transform AI from a simple code generator into a true development
+  partner.
 image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.jpg
 featured: true
 difficulty: Intermediate
@@ -25,16 +27,35 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: What percentage of developers use AI in 2025?
-  answer: 84% of developers use or plan to use AI tools according to latest studies. The AI code assistant market is exploding, going from $5.5 billion in 2024 to a forecast of $47.3 billion by 2034. However, only 34% truly master this collaboration effectively.
+  answer: 84% of developers use or plan to use AI tools according to latest studies.
+    The AI code assistant market is exploding, going from $5.5 billion in 2024 to
+    a forecast of $47.3 billion by 2034. However, only 34% truly master this collaboration
+    effectively.
 - question: What is the PARR methodology for coding with AI?
-  answer: 'PARR stands for Plan → Act → Review → Repeat. Plan: discuss with AI without code to build a plan. Act: request execution while staying vigilant. Review: analyze generated code rigorously. Repeat: iterate integrating learnings. This approach transforms AI from a simple generator into a true partner.'
+  answer: 'PARR stands for Plan → Act → Review → Repeat. Plan: discuss with AI without
+    code to build a plan. Act: request execution while staying vigilant. Review: analyze
+    generated code rigorously. Repeat: iterate integrating learnings. This approach
+    transforms AI from a simple generator into a true partner.'
 - question: Why do senior developers adopt AI more than juniors?
-  answer: 33% of senior developers use AI for over half their code versus only 13% of juniors. Experience allows seniors to immediately detect when something "sounds wrong" in generated code, while a junior can spend hours on a subtle bug introduced by AI.
+  answer: 33% of senior developers use AI for over half their code versus only 13%
+    of juniors. Experience allows seniors to immediately detect when something "sounds
+    wrong" in generated code, while a junior can spend hours on a subtle bug introduced
+    by AI.
 - question: What are the main pitfalls to avoid with AI in development?
-  answer: Over-Reliance (inability to solve without AI), Black Box Mentality (blindly accepting without understanding), and Vibe Coding (chaotic use without methodology). 45% of developers spend more time debugging AI code than before, and 66% judge this code "almost correct but not quite."
+  answer: Over-Reliance (inability to solve without AI), Black Box Mentality (blindly
+    accepting without understanding), and Vibe Coding (chaotic use without methodology).
+    45% of developers spend more time debugging AI code than before, and 66% judge
+    this code "almost correct but not quite."
 - question: How does AI impact junior developer training?
-  answer: 'The traditional training ground disappears: the small repetitive tasks that forged reflexes are now instantly automated by AI. It''s like removing elementary school while keeping university. Juniors must now review line by line all generated code and extensively document each AI block.'
+  answer: 'The traditional training ground disappears: the small repetitive tasks
+    that forged reflexes are now instantly automated by AI. It''s like removing elementary
+    school while keeping university. Juniors must now review line by line all generated
+    code and extensively document each AI block.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Coding in the AI Era: How to Adapt Your Working Methods in 2025
 
 In my development practice for over 15 years, I've lived through several technological revolutions. But the one of artificial intelligence surpasses everything I've known. **84% of developers use or plan to use AI tools**, according to latest studies. The AI code assistant market is exploding, going from $5.5 billion in 2024 to a forecast of $47.3 billion by 2034.

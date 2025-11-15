@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Coder à l''Ère des IA : Comment Adapter ses Méthodes de Travail en 2025'
+title: 'Coder à l''ère de l''IA : adapter ses méthodes'
 date: 2025-09-22
 author: Nicolas Dabène
 categories:
@@ -51,7 +51,11 @@ faq:
     par l''IA. C''est comme supprimer l''école primaire en gardant l''université.
     Les juniors doivent désormais réviser ligne par ligne tout code généré et documenter
     extensivement chaque bloc IA.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025
 
 Dans ma pratique de développement depuis plus de 15 ans, j'ai vécu plusieurs révolutions technologiques. Mais celle de l'intelligence artificielle dépasse tout ce que j'ai connu. **84% des développeurs utilisent ou planifient d'utiliser des outils d'IA**, selon les dernières études. Le marché des assistants de code IA explose, passant de 5,5 milliards de dollars en 2024 à une prévision de 47,3 milliards d'ici 2034.

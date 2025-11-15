@@ -13,7 +13,9 @@ tags:
 - PrestaShop
 - development
 - security
-excerpt: The AI Act is the world's first law regulating artificial intelligence. Discover its history, obligations and impacts for SMEs, startups, developers and open source in France.
+excerpt: The AI Act is the world's first law regulating artificial intelligence. Discover
+  its history, obligations and impacts for SMEs, startups, developers and open source
+  in France.
 image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.jpg
 featured: false
 difficulty: Intermediate
@@ -25,14 +27,28 @@ technologies:
 estimated_reading_time: 14 minutes
 faq:
 - question: Will the AI Act slow down innovation in France?
-  answer: Not necessarily. The impact will depend on the level of support. Regulatory sandboxes aim to support startups, but initial compliance costs remain a real challenge for small structures.
+  answer: Not necessarily. The impact will depend on the level of support. Regulatory
+    sandboxes aim to support startups, but initial compliance costs remain a real
+    challenge for small structures.
 - question: Are open source projects concerned by the AI Act?
-  answer: No, as long as they remain in the domain of free sharing and are not used for critical applications. Compliance responsibility falls to the final operator who integrates the open source component.
+  answer: No, as long as they remain in the domain of free sharing and are not used
+    for critical applications. Compliance responsibility falls to the final operator
+    who integrates the open source component.
 - question: Do SMEs risk huge fines?
-  answer: No, fines are modulated according to company size. For an SME, it will be the lower amount and not a percentage of global turnover.
+  answer: No, fines are modulated according to company size. For an SME, it will be
+    the lower amount and not a percentage of global turnover.
 - question: How is the AI Act similar to GDPR?
-  answer: Like GDPR in 2018, the AI Act could become a global standard. The European Union hopes to impose its vision of trustworthy and ethical AI at the international level.
+  answer: Like GDPR in 2018, the AI Act could become a global standard. The European
+    Union hopes to impose its vision of trustworthy and ethical AI at the international
+    level.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 # AI Act: Understanding European AI Regulation
 
 ## Introduction

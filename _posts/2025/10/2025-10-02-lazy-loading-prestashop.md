@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimiser vos modules PrestaShop avec le lazy loading des services Symfony
+title: Optimiser PrestaShop avec le lazy loading
 date: 2025-10-02
 author: Nicolas Dabène
 categories:
@@ -49,7 +49,11 @@ faq:
     Préférez une interface : créez une ApiClientInterface, faites implémenter votre
     classe final, puis configurez le service avec l''interface en class. Le lazy loading
     fonctionnera alors sur l''interface.'
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Optimiser vos modules PrestaShop avec le lazy loading des services Symfony
 
 ## Introduction

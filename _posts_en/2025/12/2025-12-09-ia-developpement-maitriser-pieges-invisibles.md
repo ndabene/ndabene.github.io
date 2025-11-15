@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'AI and Development: Mastering Invisible Traps'
+title: 'AI & Development: Avoiding Common Traps'
 date: 2025-12-09
 author: Nicolas Dabène
 categories:
@@ -12,7 +12,8 @@ tags:
 - development
 - security
 - automation
-excerpt: AI makes us faster... but also more dangerous. Discover the 8 invisible traps of generated code and how to transform them into superpowers.
+excerpt: AI makes us faster... but also more dangerous. Discover the 8 invisible traps
+  of generated code and how to transform them into superpowers.
 image: /assets/images/blog/2025/12/ia-pieges-developpeurs.jpg
 featured: false
 difficulty: Intermediate
@@ -27,14 +28,27 @@ lang: en
 ref: ai-development-invisible-traps-2025
 faq:
 - question: Will AI really replace developers?
-  answer: No. AI will replace developers who use AI passively. It will amplify developers who use it strategically. The choice is yours.
+  answer: No. AI will replace developers who use AI passively. It will amplify developers
+    who use it strategically. The choice is yours.
 - question: How to convince my manager that reviewing AI code takes time?
-  answer: 'Show them the numbers: 40% of time in review is 40% of time saved in later corrections. That''s ROI.'
+  answer: 'Show them the numbers: 40% of time in review is 40% of time saved in later
+    corrections. That''s ROI.'
 - question: Where to start if I've never used AI for coding?
-  answer: Start small. One function. Review it as if it were code from the brightest but most inexperienced junior. Note what you corrected. That will teach you to prompt better.
+  answer: Start small. One function. Review it as if it were code from the brightest
+    but most inexperienced junior. Note what you corrected. That will teach you to
+    prompt better.
 - question: Do GitHub Copilot, Claude and ChatGPT do the same thing?
-  answer: Almost, but not quite. Copilot specializes in completion. Claude excels in complex architecture. ChatGPT is versatile. Test all three and see what fits your workflow.
+  answer: Almost, but not quite. Copilot specializes in completion. Claude excels
+    in complex architecture. ChatGPT is versatile. Test all three and see what fits
+    your workflow.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 ## Introduction
 
 Imagine a brilliant junior developer who writes code at the speed of light, but has no notion of architecture. That's what GitHub Copilot, Claude, or ChatGPT can become if left unsupervised. And that's exactly what's happening in teams that let AI drive.

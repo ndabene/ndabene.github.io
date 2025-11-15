@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'When PrestaShop Module Publishing Meets Growth Hacking: Mindset, Methods and Points of Convergence'
+title: PrestaShop Module Publishing & Growth Hacking
 date: 2025-08-06
 author: Nicolas Dabène
 lang: en
@@ -14,7 +14,8 @@ tags:
 - SEO
 - development
 - e-commerce
-excerpt: 'From software craftsmanship to scalability: why module publishers are the first growth hackers without knowing it. A reflection on deep philosophical convergences.'
+excerpt: 'From software craftsmanship to scalability: why module publishers are the
+  first growth hackers without knowing it. A reflection on deep philosophical convergences.'
 image: /assets/images/blog/2025/07/2025-07-31-prestashop-growth-hacking-mindset.jpg
 featured: true
 difficulty: Intermediate
@@ -23,7 +24,9 @@ technologies:
 - Business Strategy
 - Growth Hacking
 estimated_reading_time: 12 minutes
-llm_summary: 'From software craftsmanship to scalability: why module publishers are the first growth hackers without knowing it. A reflection on deep philosophical convergences.'
+llm_summary: 'From software craftsmanship to scalability: why module publishers are
+  the first growth hackers without knowing it. A reflection on deep philosophical
+  convergences.'
 llm_topics:
 - PrestaShop
 - modules
@@ -33,16 +36,37 @@ llm_topics:
 - scalability
 faq:
 - question: What is growth hacking?
-  answer: Growth hacking is a philosophy of systematic experimentation applied to the growth of a product or company. Beyond marketing tricks, it's an approach centered on the hypothesis-test-measure-learning-iteration loop, execution agility, acceptance of failure as a source of learning, and industrialization of processes that work.
+  answer: Growth hacking is a philosophy of systematic experimentation applied to
+    the growth of a product or company. Beyond marketing tricks, it's an approach
+    centered on the hypothesis-test-measure-learning-iteration loop, execution agility,
+    acceptance of failure as a source of learning, and industrialization of processes
+    that work.
 - question: Why are PrestaShop module publishers growth hackers?
-  answer: Module publishers naturally develop the growth hacking mindset through their scalability constraints (creating for thousands of configurations), experimental approach (MVP, feedback, iterations), acceptance of failure (only 1 in 5 modules succeeds), and obsession with data to optimize their product portfolio.
+  answer: Module publishers naturally develop the growth hacking mindset through their
+    scalability constraints (creating for thousands of configurations), experimental
+    approach (MVP, feedback, iterations), acceptance of failure (only 1 in 5 modules
+    succeeds), and obsession with data to optimize their product portfolio.
 - question: How do you move from artisanal development to scalable product?
-  answer: The transition requires adopting a logic of reproducibility and resource optimization where each module must work for the maximum number of users with minimum manual intervention. This constraint forges a mindset of use case anticipation and automation, maximizing impact with limited resources.
+  answer: The transition requires adopting a logic of reproducibility and resource
+    optimization where each module must work for the maximum number of users with
+    minimum manual intervention. This constraint forges a mindset of use case anticipation
+    and automation, maximizing impact with limited resources.
 - question: What is the harsh arithmetic of module publishing?
-  answer: In practice, only 1 module out of 5 really succeeds. This implacable reality forges a particular philosophy where the experienced publisher learns to quickly cut modules that don't take off to concentrate resources on those showing positive signals, using metrics as survival tools.
+  answer: In practice, only 1 module out of 5 really succeeds. This implacable reality
+    forges a particular philosophy where the experienced publisher learns to quickly
+    cut modules that don't take off to concentrate resources on those showing positive
+    signals, using metrics as survival tools.
 - question: How does collective intelligence help PrestaShop publishers?
-  answer: The PrestaShop ecosystem with forums, marketplaces and developer communities illustrates the power of collective intelligence where innovation is born from the confrontation of ideas and sharing of experiences. This co-creation and mutual assistance allow anticipating market evolutions and rapidly detecting emerging opportunities.
+  answer: The PrestaShop ecosystem with forums, marketplaces and developer communities
+    illustrates the power of collective intelligence where innovation is born from
+    the confrontation of ideas and sharing of experiences. This co-creation and mutual
+    assistance allow anticipating market evolutions and rapidly detecting emerging
+    opportunities.
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 # When PrestaShop Module Publishing Meets Growth Hacking: Mindset, Methods and Points of Convergence
 
 A few months ago, I was reflecting on the fascinating evolution of the PrestaShop module publisher profession. How did we move from an artisanal logic of custom services to an industrial approach centered on the product? This transformation struck me with its troubling resemblance to another discipline: growth hacking.
