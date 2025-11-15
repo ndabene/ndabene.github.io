@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Grok Code Fast 1 : l''IA de codage rapide signée xAI'
+title: 'Grok Code Fast 1 : IA de codage rapide xAI'
 date: 2025-09-01
 author: Nicolas Dabène
 categories:
@@ -30,7 +30,17 @@ faq:
     globale.
 - question: Quelle est la différence avec GPT-5 Mini ?
   answer: GPT-5 Mini raisonne mieux, Grok est plus rapide et plus abordable.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
+- question: Claude peut-il accéder à Internet?
+  answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
+    MCP pour accéder à des données externes.
 ---
+
 # Grok Code Fast 1 : l'IA de codage rapide signée xAI
 
 ## Introduction

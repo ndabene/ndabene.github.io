@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)'
+title: 'OpenAI Agent Builder : créer des assistants IA'
 date: 2025-10-16
 author: Nicolas Dabène
 categories:
@@ -56,7 +56,11 @@ faq:
     mes campagnes publicitaires et propose 3 actions prioritaires"), l''IA comprend
     et configure automatiquement les connecteurs nécessaires. La création d''un premier
     agent prend environ 30 minutes.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)
 
 Imaginez que vous êtes un artisan capable de créer votre propre robot personnel, sans avoir besoin d'être un ingénieur en robotique. Vous dessinez simplement ce que vous voulez qu'il fasse, et hop ! il prend vie pour vous assister dans votre quotidien professionnel. C'est exactement ce que vient de réaliser OpenAI avec son Agent Builder, lancé le 5 octobre 2025. Une révolution technologique qui démocratise enfin l'automatisation intelligente.

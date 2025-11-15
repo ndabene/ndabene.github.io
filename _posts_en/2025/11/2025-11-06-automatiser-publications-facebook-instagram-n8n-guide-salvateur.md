@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Automate Your Facebook and Instagram Posts with n8n: The Lifesaver Guide'
+title: Automate Facebook & Instagram with n8n
 date: 2025-11-06
 author: Nicolas Dabène
 categories:
@@ -10,7 +10,8 @@ categories:
 tags:
 - API
 - automation
-excerpt: If you thought Meta integration would be child's play, this detailed guide will save you hours of frustration and show you the way.
+excerpt: If you thought Meta integration would be child's play, this detailed guide
+  will save you hours of frustration and show you the way.
 image: /assets/images/blog/2025/11/automatisation-meta-n8n.jpg
 lang: en
 ref: automatiser-publications-facebook-instagram-n8n-guide-salvateur-nov2025
@@ -24,15 +25,32 @@ technologies:
 - No-Code
 estimated_reading_time: 15 minutes
 faq:
-- question: Can I publish to multiple Instagram/Facebook accounts from the same n8n workflow?
-  answer: Absolutely! Simply create multiple credentials in n8n (one per account) and duplicate your publishing branches. However, watch out for rate limits if you manage many accounts.
+- question: Can I publish to multiple Instagram/Facebook accounts from the same n8n
+    workflow?
+  answer: Absolutely! Simply create multiple credentials in n8n (one per account)
+    and duplicate your publishing branches. However, watch out for rate limits if
+    you manage many accounts.
 - question: Does the non-expiring Instagram token need to be renewed?
-  answer: Theoretically no, it's supposed to never expire. In practice, if you modify the permissions of your developer application or system user, you may need to generate a new one. Keep documentation of the procedure so you're not caught off guard.
+  answer: Theoretically no, it's supposed to never expire. In practice, if you modify
+    the permissions of your developer application or system user, you may need to
+    generate a new one. Keep documentation of the procedure so you're not caught off
+    guard.
 - question: Can we schedule publications with this method?
-  answer: Yes! Use n8n's Schedule Trigger node to trigger your workflows at specific times. You can even create a database (Airtable, Notion, etc.) containing your scheduled posts, and n8n publishes them automatically.
+  answer: Yes! Use n8n's Schedule Trigger node to trigger your workflows at specific
+    times. You can even create a database (Airtable, Notion, etc.) containing your
+    scheduled posts, and n8n publishes them automatically.
 - question: Does this configuration comply with Meta's terms of use?
-  answer: Yes, as long as you use the official API (which we're doing here) and respect Meta's content rules. This method is perfectly legal and encouraged by Meta for legitimate business uses.
+  answer: Yes, as long as you use the official API (which we're doing here) and respect
+    Meta's content rules. This method is perfectly legal and encouraged by Meta for
+    legitimate business uses.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 # Automate Your Facebook and Instagram Posts with n8n: The Lifesaver Guide
 
 If like me you use n8n and thought Meta integration for posting would be easy, you probably discovered a very different reality. Between the Facebook developer application, Meta Business Suite, access tokens, system users and multiple endpoints to juggle... you may have found yourself staring at your screen with that familiar feeling of "but why is this so complicated?".

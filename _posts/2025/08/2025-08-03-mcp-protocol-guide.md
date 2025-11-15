@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l''IA et vos
-  Systèmes'
+title: Comment sécuriser un serveur MCP?
 date: 2025-08-03
 author: Nicolas Dabène
 categories:
@@ -63,7 +62,11 @@ faq:
     il peut être intégré avec différentes IA supportant ce protocole comme Gemini,
     VS Code Copilot ou tout autre client implémentant les spécifications MCP. C'est
     justement l'avantage de cette standardisation universelle.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
 ---
+
 # Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l'IA et vos Systèmes
 
 Imaginez pouvoir donner à votre IA préférée un accès direct et sécurisé à vos bases de données, vos fichiers, ou vos systèmes internes. Plus besoin de copier-coller des informations ou de reformuler manuellement vos données. C'est exactement ce que propose le **Model Context Protocol (MCP)** développé par Anthropic.

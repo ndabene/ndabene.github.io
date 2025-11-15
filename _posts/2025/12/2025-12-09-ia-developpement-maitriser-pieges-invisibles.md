@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'IA et Développement : Maîtriser les Pièges Invisibles'
+title: 'IA et développement : éviter les pièges courants'
 date: 2025-12-09
 author: Nicolas Dabène
 categories:
@@ -41,7 +41,14 @@ faq:
   answer: Presque, mais pas tout à fait. Copilot est spécialisé dans la complétion.
     Claude excelle en architecture complexe. ChatGPT est polyvalent. Testez les trois
     et voyez ce qui colle à votre workflow.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
+
 ## Introduction
 
 Imaginez un développeur junior brillant qui écrit du code à la vitesse de la lumière, mais qui n'a aucune notion d'architecture. Voilà ce que peut devenir GitHub Copilot, Claude ou ChatGPT si on les laisse faire sans supervision. Et c'est exactement ce qui se passe dans les équipes qui laissent l'IA conduire.

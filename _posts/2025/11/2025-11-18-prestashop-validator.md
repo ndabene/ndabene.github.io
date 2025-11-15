@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop Validator : Garantir la Qualité de Vos Modules'
+title: 'PrestaShop Validator : garantir la qualité'
 date: 2025-11-18
 author: Nicolas Dabène
 categories:
@@ -41,7 +41,14 @@ faq:
     la communauté PrestaShop est généralement très réactive sur les forums officiels.
     N'hésitez pas à poser votre question en mentionnant exactement quel type d'erreur
     vous avez reçue.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
+- question: PrestaShop convient-il aux débutants?
+  answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
+    les débutants créent leur boutique en quelques semaines.
 ---
+
 # PrestaShop Validator : Garantir la Qualité de Vos Modules
 
 Vous avez développé un magnifique module PrestaShop. Les fonctionnalités fonctionnent parfaitement en local, vos tests sont concluants, et vous vous apprêtez à le publier sur la marketplace... Mais attendez ! Avez-vous vérifié sa conformité technique ? C'est précisément à ce moment crucial qu'intervient **PrestaShop Validator**, un outil qui transforme l'incertitude en confiance et la validation en processus transparent.

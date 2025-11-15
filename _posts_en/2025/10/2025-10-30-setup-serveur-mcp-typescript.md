@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Create Your First MCP Server: TypeScript Project Setup'
+title: 'Create Your First MCP Server: Setup'
 date: 2025-10-30
 author: Nicolas Dabène
 lang: en
@@ -11,7 +11,8 @@ categories:
 tags:
 - AI
 - development
-excerpt: Let's get practical! Discover how to initialize a TypeScript project to create your first MCP server in minutes.
+excerpt: Let's get practical! Discover how to initialize a TypeScript project to create
+  your first MCP server in minutes.
 image: /assets/images/blog/2025/10/2025-10-30-setup-serveur-mcp-typescript.jpg
 featured: false
 difficulty: Beginner
@@ -23,7 +24,8 @@ technologies:
 estimated_reading_time: 8 minutes
 howto:
   name: Create Your First MCP Server with TypeScript
-  description: Step-by-step guide to initialize a TypeScript project and configure the foundations of a functional MCP server in minutes
+  description: Step-by-step guide to initialize a TypeScript project and configure
+    the foundations of a functional MCP server in minutes
   total_time: PT30M
   estimated_cost:
     currency: EUR
@@ -38,28 +40,59 @@ howto:
   - Basic JavaScript/TypeScript knowledge
   steps:
   - name: Create folder and initialize project
-    text: Create a new folder for your project with `mkdir mcp-server` then enter it with `cd mcp-server`. Initialize a Node.js project with `npm init -y` to automatically create the package.json file with default values.
+    text: Create a new folder for your project with `mkdir mcp-server` then enter
+      it with `cd mcp-server`. Initialize a Node.js project with `npm init -y` to
+      automatically create the package.json file with default values.
   - name: Install TypeScript
-    text: Install TypeScript and its development dependencies with `npm install typescript ts-node @types/node --save-dev`. This command installs the TypeScript compiler, ts-node runner and type definitions for Node.js.
+    text: Install TypeScript and its development dependencies with `npm install typescript
+      ts-node @types/node --save-dev`. This command installs the TypeScript compiler,
+      ts-node runner and type definitions for Node.js.
   - name: Configure TypeScript
-    text: 'Generate the TypeScript configuration file with `npx tsc --init`. Modify the generated tsconfig.json file to set target: ES2020, module: commonjs, outDir: ./dist, rootDir: ./src, and enable strict mode for better code security.'
+    text: 'Generate the TypeScript configuration file with `npx tsc --init`. Modify
+      the generated tsconfig.json file to set target: ES2020, module: commonjs, outDir:
+      ./dist, rootDir: ./src, and enable strict mode for better code security.'
   - name: Install Express.js
-    text: Install Express and its TypeScript types with `npm install express` and `npm install @types/express --save-dev`. Express will be the web framework handling HTTP requests for your MCP server.
+    text: Install Express and its TypeScript types with `npm install express` and
+      `npm install @types/express --save-dev`. Express will be the web framework handling
+      HTTP requests for your MCP server.
   - name: Create project structure
-    text: Create the source folder with `mkdir src` then create the main file `src/index.ts`. This structure separates your TypeScript source code (in src/) from compiled JavaScript code (which will go in dist/).
+    text: Create the source folder with `mkdir src` then create the main file `src/index.ts`.
+      This structure separates your TypeScript source code (in src/) from compiled
+      JavaScript code (which will go in dist/).
   - name: Configure npm scripts
-    text: 'Add development and build scripts in package.json: ''dev'' to launch ts-node in watch mode, ''build'' to compile TypeScript, and ''start'' to run compiled code. These scripts facilitate development and deployment.'
+    text: 'Add development and build scripts in package.json: ''dev'' to launch ts-node
+      in watch mode, ''build'' to compile TypeScript, and ''start'' to run compiled
+      code. These scripts facilitate development and deployment.'
   - name: Verify installation
-    text: Create a simple test file in src/index.ts with a console.log('Hello MCP!'). Run `npm run dev` to verify everything works. If you see the message in the terminal, your environment is correctly configured.
+    text: Create a simple test file in src/index.ts with a console.log('Hello MCP!').
+      Run `npm run dev` to verify everything works. If you see the message in the
+      terminal, your environment is correctly configured.
 faq:
 - question: Why use TypeScript rather than JavaScript for an MCP server?
-  answer: TypeScript adds static types that avoid many stupid errors during development. For a server that will handle AI requests and manipulate sensitive data, having this level of verification is reassuring. Moreover, auto-completion in your editor becomes magical with TypeScript, considerably accelerating development.
+  answer: TypeScript adds static types that avoid many stupid errors during development.
+    For a server that will handle AI requests and manipulate sensitive data, having
+    this level of verification is reassuring. Moreover, auto-completion in your editor
+    becomes magical with TypeScript, considerably accelerating development.
 - question: What version of Node.js is needed to create an MCP server?
-  answer: It's recommended to use Node.js version 16 or higher. You can check your version with the command `node --version` in your terminal. If you don't have Node.js installed, download it from the official nodejs.org website.
+  answer: It's recommended to use Node.js version 16 or higher. You can check your
+    version with the command `node --version` in your terminal. If you don't have
+    Node.js installed, download it from the official nodejs.org website.
 - question: What is the --save-dev flag in npm install?
-  answer: The --save-dev flag indicates that installed packages are development dependencies, needed only during development, not in production. These dependencies will be listed in the devDependencies section of package.json. This is the case for TypeScript, ts-node and @types/node which are only used to compile and develop code.
+  answer: The --save-dev flag indicates that installed packages are development dependencies,
+    needed only during development, not in production. These dependencies will be
+    listed in the devDependencies section of package.json. This is the case for TypeScript,
+    ts-node and @types/node which are only used to compile and develop code.
 - question: Why separate src and dist folders?
-  answer: 'This structure separates your TypeScript source code (in src/) from compiled JavaScript code (in dist/). It''s a good practice that keeps your project organized: you develop in src/, TypeScript compiles to dist/, and it''s the dist/ content that runs in production. This avoids mixing source and compiled code.'
+  answer: 'This structure separates your TypeScript source code (in src/) from compiled
+    JavaScript code (in dist/). It''s a good practice that keeps your project organized:
+    you develop in src/, TypeScript compiles to dist/, and it''s the dist/ content
+    that runs in production. This avoids mixing source and compiled code.'
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
 sources:
 - name: TypeScript Official Documentation
   url: https://www.typescriptlang.org/docs/
@@ -74,6 +107,7 @@ sources:
   organization: Express
   type: Documentation
 ---
+
 # Create Your First MCP Server: TypeScript Project Setup
 
 You understood the Model Context Protocol theory in our previous article? Perfect! It's time to get hands-on with code. We'll build together the foundations of a functional MCP server. Don't panic, we'll go step by step, as if we were building a house: first the foundations, then the walls, then the roof.

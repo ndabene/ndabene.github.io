@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Compatibilité PrestaShop 8/9 : maîtriser la transition Command Bus'
+title: 'Compatibilité PrestaShop 8/9 : transition'
 date: 2025-08-13
 author: Nicolas Dabène
 categories:
@@ -61,7 +61,11 @@ faq:
     les deux méthodes (handle et __invoke) et en utilisant les deux tags dans services.yml,
     votre handler fonctionnera automatiquement sur PrestaShop 8 (Tactician) et 9 (Messenger)
     sans modification de code.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Compatibilité PrestaShop 8/9 : maîtriser la transition Command Bus
 
 L'évolution des frameworks web constitue une réalité incontournable de notre métier. Parfois, ces évolutions impliquent des changements architecturaux majeurs qui transforment radicalement notre approche du développement. C'est précisément ce qui s'est produit avec PrestaShop lors du passage de la version 8 à la version 9, particulièrement concernant la gestion des Command Bus.

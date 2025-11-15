@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What if AI Rejected Your Code for the Wrong Reasons? Hidden Biases in Automated Code Review Tools
+title: What if AI Rejected Your Code Wrongly?
 date: 2025-11-13
 author: Nicolas Dabène
 categories:
@@ -11,7 +11,9 @@ tags:
 - AI
 - development
 - security
-excerpt: What if AI rejected your code not because it's bad, but because it *thinks* it is? This article explores the hidden biases of automated code review systems and their consequences on our development practices.
+excerpt: What if AI rejected your code not because it's bad, but because it *thinks*
+  it is? This article explores the hidden biases of automated code review systems
+  and their consequences on our development practices.
 image: /assets/images/blog/2025/11/ia-biais-code-review.jpg
 lang: en
 ref: ia-biais-code-review-nov2025
@@ -25,16 +27,35 @@ technologies:
 - SonarQube
 faq:
 - question: Why aren't AI code review tools neutral?
-  answer: No AI is neutral because every AI reflects its data, designers and training choices. Models learn mainly from Western English-language code in certain dominant languages. If your code doesn't resemble what they know, it will be judged abnormal, not wrong, just non-standard.
+  answer: No AI is neutral because every AI reflects its data, designers and training
+    choices. Models learn mainly from Western English-language code in certain dominant
+    languages. If your code doesn't resemble what they know, it will be judged abnormal,
+    not wrong, just non-standard.
 - question: What are the main types of bias in AI reviewers?
-  answer: Training biases (mostly Western English-language data), evaluation biases (preference for most-seen forms even if not optimal in your context), and context biases (AI doesn't understand your business constraints, technical debt, business priorities).
+  answer: Training biases (mostly Western English-language data), evaluation biases
+    (preference for most-seen forms even if not optimal in your context), and context
+    biases (AI doesn't understand your business constraints, technical debt, business
+    priorities).
 - question: How do AI biases concretely affect developers?
-  answer: 'Developers unconsciously align with majority conventions, avoid atypical structures, write to please the machine rather than humans. In large companies with automated CI/CD review, bias becomes systemic: poorly rated code can delay deployment, distort performance evaluation, influence HR decisions.'
+  answer: 'Developers unconsciously align with majority conventions, avoid atypical
+    structures, write to please the machine rather than humans. In large companies
+    with automated CI/CD review, bias becomes systemic: poorly rated code can delay
+    deployment, distort performance evaluation, influence HR decisions.'
 - question: How to make AI reviewers fairer?
-  answer: Diversify datasets (varied languages, styles, structures), reintroduce humans with human-in-the-loop system to contextualize, document model logic (explain why code is judged problematic), and train developers to detect when AI feedback is legitimate or arbitrary.
+  answer: Diversify datasets (varied languages, styles, structures), reintroduce humans
+    with human-in-the-loop system to contextualize, document model logic (explain
+    why code is judged problematic), and train developers to detect when AI feedback
+    is legitimate or arbitrary.
 - question: Should we trust automated code review tools?
-  answer: AI should assist, not judge alone. Good code isn't what pleases an AI, but what serves its user, respects its context and keeps clear intent. Humans retain final responsibility, machines provide assistance. Delegating judgment entirely risks automating conformism.
+  answer: AI should assist, not judge alone. Good code isn't what pleases an AI, but
+    what serves its user, respects its context and keeps clear intent. Humans retain
+    final responsibility, machines provide assistance. Delegating judgment entirely
+    risks automating conformism.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # What if AI Rejected Your Code for the Wrong Reasons?
 ## Hidden Biases in Automated Code Review Tools
 

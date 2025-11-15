@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9'
+title: Contribuer à l'Admin API PrestaShop 9
 date: 2025-09-12
 author: Nicolas Dabène
 categories:
@@ -38,7 +38,14 @@ faq:
 - question: Où poser mes questions si je bloque sur l'Admin API ?
   answer: 'Le Slack communautaire PrestaShop, canal #cfc-adminapi, est l''endroit
     idéal pour échanger avec d''autres contributeurs et obtenir de l''aide.'
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
+- question: PrestaShop convient-il aux débutants?
+  answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
+    les débutants créent leur boutique en quelques semaines.
 ---
+
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9
 
 ![Carte mentale des 8 concepts essentiels pour l’Admin API PrestaShop 9](/assets/images/blog/article_content/2025-09-12-carte-mental.png)

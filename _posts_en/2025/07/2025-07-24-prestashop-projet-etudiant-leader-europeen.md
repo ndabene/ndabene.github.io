@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop: From Student Project to European E-commerce Leader - The Complete
-  Epic (2005-2025)'
+title: 'PrestaShop: From Student Project to Leader'
 date: 2025-07-24
 author: Nicolas Dabène
 lang: en
@@ -71,7 +70,11 @@ faq:
     European market with 300,000 active shops generating 22 billion euros in annual
     sales. Globally, PrestaShop represents 0.29% to 0.49% of market shares versus
     WooCommerce (66-70%) and Shopify (17-29%).
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 PrestaShop: From Student Project to European E-commerce Leader - The Complete Epic (2005-2025) PrestaShop embodies one of the finest French entrepreneurial successes of the digital era. From an Epitech student project in 2005 to an e-commerce platform generating 22 billion euros in sales for 300,000 merchants worldwide, this 20-year success story perfectly illustrates French innovation capacity against American industry giants. With the recent launch of PrestaShop 9.0 in June 2025, the company begins a new chapter in its history, marked by ambitious technical modernization and renewed competitive challenges.
 
 ## The Roots of a Digital Revolution (2005-2007)

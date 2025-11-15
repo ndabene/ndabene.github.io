@@ -1,47 +1,68 @@
 ---
 layout: post
-title: "PHP 8.5: The Silent Revolution That Transforms Your Code"
+title: 'PHP 8.5: The Silent Web Revolution'
 date: 2025-11-16
 author: Nicolas Dabène
 categories:
-  - PHP
-  - Development
+- PHP
+- Development
 tags:
-  - PHP 8.5
-  - performance
-  - security
-  - pipe operator
-  - new features
-  - modernization
-excerpt: "PHP 8.5 arrives in November 2025 with the pipe operator, smart cloning, and 40+ improvements that transform the way you code. Discover how these innovations revolutionize the performance, security, and readability of your applications."
+- PHP 8.5
+- performance
+- security
+- pipe operator
+- new features
+- modernization
+excerpt: PHP 8.5 arrives in November 2025 with the pipe operator, smart cloning, and
+  40+ improvements that transform the way you code. Discover how these innovations
+  revolutionize the performance, security, and readability of your applications.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.jpeg
 featured: true
-difficulty: "Intermediate"
+difficulty: Intermediate
 technologies:
-  - "PHP 8.5"
-  - "Zend Engine"
-  - "OPcache"
-  - "URI API"
-estimated_reading_time: "15 minutes"
+- PHP 8.5
+- Zend Engine
+- OPcache
+- URI API
+estimated_reading_time: 15 minutes
 lang: en
 faq:
-  - question: "What is the pipe operator introduced in PHP 8.5?"
-    answer: "The pipe operator |> allows you to chain function calls expressively, passing the result from the left as an argument to the right. For example: $result = 'Hello' |> strtoupper(...) |> strlen(...) transforms and counts in a single readable line."
-  - question: "Why is OPcache becoming mandatory in PHP 8.5?"
-    answer: "OPcache is now always compiled and enabled by default to ensure all PHP applications automatically benefit from bytecode acceleration, eliminating suboptimal configurations and ensuring consistent performance everywhere."
-  - question: "How does clone with simplify immutable object management?"
-    answer: "The clone with syntax allows you to create a copy of an object while modifying certain properties in one statement: $newUser = clone $user with ['name' => 'Alice']. This avoids complex factories or reflection to work around readonly."
-  - question: "What performance gains can we expect with PHP 8.5?"
-    answer: "PHP 8.5 brings approximately 5-10% performance improvement on classic web applications thanks to OPcache and JIT optimizations, with a slight reduction in memory usage depending on use cases."
-  - question: "Why is the new URI extension more secure than parse_url?"
-    answer: "The URI extension provides an API compliant with RFC 3986 and WHATWG URL, eliminating known vulnerabilities in parse_url concerning malformed or encoded URLs. It prevents character confusion attacks and guarantees reliable, standardized parsing."
-  - question: "What are the main deprecated functions in PHP 8.5?"
-    answer: "Manual resource closing functions (curl_close, imagedestroy, finfo_close, xml_parser_free) are deprecated because the engine automatically manages their lifecycle. Non-canonical casts (boolean, integer, double) and the backtick operator are also deprecated."
-  - question: "How do backtraces on fatal errors improve debugging?"
-    answer: "In case of a fatal error, PHP 8.5 now provides the complete call stack via error_get_last, allowing you to immediately identify the faulty execution chain rather than just the final line. A huge time saver for diagnosing complex issues."
-  - question: "Can PrestaShop benefit from PHP 8.5?"
-    answer: "Absolutely. PrestaShop would benefit from 5-10% performance gains, the secure URI API for URL processing, Intl improvements for multilingual support, and new attributes like #[Override] to secure its module override system."
+- question: What is the pipe operator introduced in PHP 8.5?
+  answer: 'The pipe operator |> allows you to chain function calls expressively, passing
+    the result from the left as an argument to the right. For example: $result = ''Hello''
+    |> strtoupper(...) |> strlen(...) transforms and counts in a single readable line.'
+- question: Why is OPcache becoming mandatory in PHP 8.5?
+  answer: OPcache is now always compiled and enabled by default to ensure all PHP
+    applications automatically benefit from bytecode acceleration, eliminating suboptimal
+    configurations and ensuring consistent performance everywhere.
+- question: How does clone with simplify immutable object management?
+  answer: 'The clone with syntax allows you to create a copy of an object while modifying
+    certain properties in one statement: $newUser = clone $user with [''name'' =>
+    ''Alice'']. This avoids complex factories or reflection to work around readonly.'
+- question: What performance gains can we expect with PHP 8.5?
+  answer: PHP 8.5 brings approximately 5-10% performance improvement on classic web
+    applications thanks to OPcache and JIT optimizations, with a slight reduction
+    in memory usage depending on use cases.
+- question: Why is the new URI extension more secure than parse_url?
+  answer: The URI extension provides an API compliant with RFC 3986 and WHATWG URL,
+    eliminating known vulnerabilities in parse_url concerning malformed or encoded
+    URLs. It prevents character confusion attacks and guarantees reliable, standardized
+    parsing.
+- question: What are the main deprecated functions in PHP 8.5?
+  answer: Manual resource closing functions (curl_close, imagedestroy, finfo_close,
+    xml_parser_free) are deprecated because the engine automatically manages their
+    lifecycle. Non-canonical casts (boolean, integer, double) and the backtick operator
+    are also deprecated.
+- question: How do backtraces on fatal errors improve debugging?
+  answer: In case of a fatal error, PHP 8.5 now provides the complete call stack via
+    error_get_last, allowing you to immediately identify the faulty execution chain
+    rather than just the final line. A huge time saver for diagnosing complex issues.
+- question: Can PrestaShop benefit from PHP 8.5?
+  answer: 'Absolutely. PrestaShop would benefit from 5-10% performance gains, the
+    secure URI API for URL processing, Intl improvements for multilingual support,
+    and new attributes like #[Override] to secure its module override system.'
 ---
+
 
 # PHP 8.5: The Silent Revolution That Transforms Your Code
 

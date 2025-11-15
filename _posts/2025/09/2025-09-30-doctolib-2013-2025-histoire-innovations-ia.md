@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Doctolib : De l''idée à la licorne française (2013-2025)'
+title: 'Doctolib : de l''idée à la licorne (2013-2025)'
 date: 2025-09-30
 author: Nicolas Dabène
 categories:
@@ -46,7 +46,11 @@ faq:
     France, 10 millions en Allemagne et 5 millions en Italie, pour un total de 60
     millions d'utilisateurs. La plateforme équipe 300 000 professionnels de santé
     et 1 700 établissements à travers l'Europe.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # L'Histoire de Doctolib : De l'Idée Révolutionnaire à la Licorne Française (2013-2025)
 
 Doctolib est devenue en à peine douze ans l'une des success stories les plus remarquables de la French Tech, transformant radicalement la manière dont les Français prennent leurs rendez-vous médicaux. Retour sur l'épopée d'une startup qui a su révolutionner le secteur de la santé numérique.

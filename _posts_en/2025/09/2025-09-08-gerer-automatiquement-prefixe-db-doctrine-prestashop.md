@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automatically Manage DB Prefix in Doctrine for PrestaShop
+title: 'AI & Development: Avoiding Common Traps'
 date: 2025-09-08
 author: Nicolas Dabène
 lang: en
@@ -12,7 +12,8 @@ categories:
 tags:
 - PrestaShop
 - development
-excerpt: Discover how to solve the 'Base table or view not found' error with Doctrine in PrestaShop by automating dynamic table prefix management.
+excerpt: Discover how to solve the 'Base table or view not found' error with Doctrine
+  in PrestaShop by automating dynamic table prefix management.
 image: /assets/images/blog/2025/09/2025-09-08-doctrine-prestashop-prefix.jpg
 featured: false
 difficulty: Intermediate
@@ -24,16 +25,35 @@ technologies:
 estimated_reading_time: 8 minutes
 faq:
 - question: Why doesn't Doctrine find my PrestaShop tables?
-  answer: Doctrine reads annotations literally and searches for exactly the name specified in @ORM\Table(name="trade_in_request") without ever adding the PrestaShop prefix (_DB_PREFIX_). Your table is called ps_trade_in_request but Doctrine searches for trade_in_request, hence the 'Base table or view not found' error.
+  answer: Doctrine reads annotations literally and searches for exactly the name specified
+    in @ORM\Table(name="trade_in_request") without ever adding the PrestaShop prefix
+    (_DB_PREFIX_). Your table is called ps_trade_in_request but Doctrine searches
+    for trade_in_request, hence the 'Base table or view not found' error.
 - question: How to elegantly solve the DB prefix problem with Doctrine?
-  answer: Create a TablePrefixSubscriber that intercepts Doctrine's loadClassMetadata event to automatically add the correct prefix at runtime. Declare it as a Doctrine service with the doctrine.event_subscriber tag and inject %database_prefix%. This centralized solution is maintainable and compatible with all environments.
+  answer: Create a TablePrefixSubscriber that intercepts Doctrine's loadClassMetadata
+    event to automatically add the correct prefix at runtime. Declare it as a Doctrine
+    service with the doctrine.event_subscriber tag and inject %database_prefix%. This
+    centralized solution is maintainable and compatible with all environments.
 - question: Should I hardcode the prefix in Doctrine annotations?
-  answer: No, never hardcode the prefix like @ORM\Table(name="ps_trade_in_request"). This will only work on installations with ps_ prefix, make multi-environment deployment impossible, and violate PrestaShop best practices. Instead, use an event subscriber that dynamically manages the prefix.
+  answer: No, never hardcode the prefix like @ORM\Table(name="ps_trade_in_request").
+    This will only work on installations with ps_ prefix, make multi-environment deployment
+    impossible, and violate PrestaShop best practices. Instead, use an event subscriber
+    that dynamically manages the prefix.
 - question: Does the subscriber also handle ManyToMany join tables?
-  answer: Yes, the TablePrefixSubscriber automatically handles join tables via the prefixJoinTables() method that traverses associations and prefixes joinTable. For a @ManyToMany relationship with joinTable(name="trade_in_request_category"), it will automatically be transformed to {prefix}trade_in_request_category.
+  answer: Yes, the TablePrefixSubscriber automatically handles join tables via the
+    prefixJoinTables() method that traverses associations and prefixes joinTable.
+    For a @ManyToMany relationship with joinTable(name="trade_in_request_category"),
+    it will automatically be transformed to {prefix}trade_in_request_category.
 - question: How to limit the subscriber to my module entities only?
-  answer: In the loadClassMetadata() method, check the entity namespace with str_starts_with($classMetadata->getName(), 'Vendor\\YourModule\\Entity\\'). If the entity doesn't match your module, return immediately. This precaution avoids conflicts with other modules or PrestaShop core.
+  answer: In the loadClassMetadata() method, check the entity namespace with str_starts_with($classMetadata->getName(),
+    'Vendor\\YourModule\\Entity\\'). If the entity doesn't match your module, return
+    immediately. This precaution avoids conflicts with other modules or PrestaShop
+    core.
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 # Automatically Manage DB Prefix in Doctrine for PrestaShop
 
 You're developing a PrestaShop module with Doctrine and encounter this frustrating error: `Base table or view not found`... even though your table definitely exists in the database? The problem likely comes from the dynamic table prefix that PrestaShop adds automatically, but which Doctrine royally ignores.

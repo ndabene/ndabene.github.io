@@ -1,16 +1,62 @@
 ---
 layout: post
-title: "The AI Management Assistant Era: Decoding the PS MCP Server and the Revolutionary MCP Tools Plus Module"
+title: How AI Discovers Your MCP Tools?
 date: 2025-11-20
-categories: [AI, PrestaShop, E-commerce]
-tags: [mcp, prestashop, ai, automation, natural-language, business-intelligence]
-excerpt: >
-  Imagine an AI assistant managing your PrestaShop store like a tireless right-hand: accounting reports in the blink of an eye, automated targeted promotions, and much more. With the PS MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover how these tools transform daily frustrations into growth opportunities for merchants and agencies.
+categories:
+- AI
+- PrestaShop
+- E-commerce
+tags:
+- mcp
+- prestashop
+- ai
+- automation
+- natural-language
+- business-intelligence
+excerpt: 'Imagine an AI assistant managing your PrestaShop store like a tireless right-hand:
+  accounting reports in the blink of an eye, automated targeted promotions, and much
+  more. With the PS MCP Server and the MCP Tools Plus module, this vision becomes
+  reality. Discover how these tools transform daily frustrations into growth opportunities
+  for merchants and agencies.
+
+  '
 image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg
-keywords: [PS MCP Server, MCP Tools Plus, PrestaShop, AI, management assistant, e-commerce, automation, natural language, PrestaShop module]
-difficulty: "⭐️⭐️⭐️"
-technologies: [PrestaShop, MCP, Claude, ChatGPT, Brevo, Qonto]
+keywords:
+- PS MCP Server
+- MCP Tools Plus
+- PrestaShop
+- AI
+- management assistant
+- e-commerce
+- automation
+- natural language
+- PrestaShop module
+difficulty: ⭐️⭐️⭐️
+technologies:
+- PrestaShop
+- MCP
+- Claude
+- ChatGPT
+- Brevo
+- Qonto
+faq:
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
+- question: Do I need programming knowledge?
+  answer: Yes, basic knowledge of JavaScript/TypeScript is recommended to create MCP
+    servers.
+- question: Are MCP servers free?
+  answer: Yes, the MCP protocol is open-source and free. You can create as many servers
+    as you want.
+- question: Can I use MCP in production?
+  answer: 'Yes, make sure to implement all security measures: authentication, validation,
+    rate limiting.'
 ---
+
 
 # The AI Management Assistant Era: Decoding the PS MCP Server and the Revolutionary MCP Tools Plus Module
 

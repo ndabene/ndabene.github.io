@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'L''évolution historique du ''Back to School'' : De la tradition retail au
-  phénomène e-commerce'
+title: 'L''évolution du Back to School : 1850-2025'
 date: 2025-07-17
 categories:
 - Ecommerce
@@ -50,7 +49,11 @@ faq:
     d'ici 2030, porté par la digitalisation accélérée post-COVID, la croissance démographique
     de la population scolaire mondiale, la premiumisation des produits éducatifs et
     l'intégration de technologies IA et IoT dans l'éducation.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
+
 L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affaires de **172,3 milliards de dollars en 2024** et une projection de **230,1 milliards de dollars d'ici 2030**.
 
 ## Les racines historiques d'un phénomène commercial

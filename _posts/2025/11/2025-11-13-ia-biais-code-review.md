@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Et si l'IA rejetait ton code pour de mauvaises raisons ? Les biais cachés des
-  outils de code review automatisés
+title: Et si l'IA refusait votre code à tort?
 date: 2025-11-13
 author: Nicolas Dabène
 categories:
@@ -52,7 +51,11 @@ faq:
     garde une intention claire. L'humain garde la responsabilité finale, la machine
     apporte l'assistance. Déléguer totalement le jugement risque d'automatiser le
     conformisme.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # 🧠 Et si l'IA rejetait ton code pour de mauvaises raisons ?
 ## Les biais cachés des outils de code review automatisés
 

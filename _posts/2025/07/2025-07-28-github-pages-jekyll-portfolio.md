@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et
-  Jekyll'
+title: 'Créez votre portfolio tech en ligne : Guide'
 date: 2025-07-28
 author: Nicolas Dabène
 categories:
@@ -62,7 +61,11 @@ faq:
     de prévisualiser instantanément chaque modification, tester différents designs
     et déboguer avant publication, transformant votre processus créatif en expérience
     plus productive et sereine.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
+
 # Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
 
 

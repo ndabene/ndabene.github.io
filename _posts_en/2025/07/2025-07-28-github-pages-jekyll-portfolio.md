@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'Create Your Tech Portfolio Online: The Complete Guide with GitHub Pages and
-  Jekyll'
+title: 'Create Your Tech Portfolio Online: Guide'
 date: 2025-07-28
 author: Nicolas Dabène
 lang: en
@@ -60,7 +59,10 @@ faq:
     However, installing Jekyll locally is highly recommended as it allows you to instantly
     preview each modification, test different designs, and debug before publishing,
     transforming your creative process into a more productive and serene experience.
+- question: Is this suitable for beginners?
+  answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
+
 # Create Your Tech Portfolio Online: The Complete Guide with GitHub Pages and Jekyll
 
 

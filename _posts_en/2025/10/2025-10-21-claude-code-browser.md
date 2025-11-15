@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Claude Code Online: Agentic AI Transforms Web Development'
+title: 'Claude Code Online: Agentic AI on the Web'
 date: 2025-10-21
 author: Nicolas Dabène
 lang: en
@@ -14,7 +14,8 @@ tags:
 - AI
 - automation
 - development
-excerpt: 'Claude Code arrives in your browser: discover how Anthropic''s agentic AI disrupts PHP and JavaScript developers'' workflow in 2025.'
+excerpt: 'Claude Code arrives in your browser: discover how Anthropic''s agentic AI
+  disrupts PHP and JavaScript developers'' workflow in 2025.'
 image: /assets/images/blog/2025/10/2025-10-21-claude-code-browser.jpg
 featured: true
 difficulty: Intermediate
@@ -27,14 +28,26 @@ technologies:
 estimated_reading_time: 15 minutes
 faq:
 - question: Can I use Claude Code Web without a Pro account?
-  answer: No, Claude Code Web is currently reserved for Pro and Max users. Anthropic offers a limited beta in Early Access, but there is no free access at the moment.
+  answer: No, Claude Code Web is currently reserved for Pro and Max users. Anthropic
+    offers a limited beta in Early Access, but there is no free access at the moment.
 - question: Is my code presented to Claude really kept private?
-  answer: Yes, Claude Code Web doesn't send your code to Anthropic servers for training. Content is processed according to the standard privacy policy but doesn't feed future models.
+  answer: Yes, Claude Code Web doesn't send your code to Anthropic servers for training.
+    Content is processed according to the standard privacy policy but doesn't feed
+    future models.
 - question: Can I use it with private GitHub repos?
-  answer: Yes, authenticated GitHub integration also works with private repos, provided your GitHub token has the proper access permissions.
+  answer: Yes, authenticated GitHub integration also works with private repos, provided
+    your GitHub token has the proper access permissions.
 - question: Does it work with PHP/Laravel or only JavaScript?
-  answer: 'Claude Code Web works with all languages: PHP, Python, JavaScript/Node, Java, Go, Rust, C#. Everything runs in the cloud container.'
+  answer: 'Claude Code Web works with all languages: PHP, Python, JavaScript/Node,
+    Java, Go, Rust, C#. Everything runs in the cloud container.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 # Claude Code Online: Agentic AI Transforms Web Development
 
 Imagine a developer who never needs to open their local terminal, who can fix a bug by simply saying "there's a problem on the login page" and who automatically generates a well-documented pull request. This is no longer science fiction: **Claude Code, Anthropic's coding tool, takes a decisive step by becoming fully accessible from your browser**.

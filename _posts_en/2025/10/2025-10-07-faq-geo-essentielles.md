@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why FAQs Have Become Essential for Your Visibility on AI
+title: 'Google Gemini 3.0: AI for Daily Life'
 date: 2025-10-07
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,9 @@ tags:
 - e-commerce
 - development
 - SEO
-excerpt: AI assistants are radically changing how your customers find you. Discover why well-structured FAQs are your best asset to be recommended by ChatGPT, Gemini, and Perplexity.
+excerpt: AI assistants are radically changing how your customers find you. Discover
+  why well-structured FAQs are your best asset to be recommended by ChatGPT, Gemini,
+  and Perplexity.
 image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.jpg
 featured: true
 difficulty: Intermediate
@@ -25,16 +27,30 @@ technologies:
 estimated_reading_time: 10 minutes
 faq:
 - question: How many FAQs should I create per product?
-  answer: Between 3 and 7 FAQs per product is a good balance. Focus on questions that genuinely influence the purchase decision. Better to have 5 excellent FAQs than 20 mediocre ones.
+  answer: Between 3 and 7 FAQs per product is a good balance. Focus on questions that
+    genuinely influence the purchase decision. Better to have 5 excellent FAQs than
+    20 mediocre ones.
 - question: Should FAQs be visible on the page or can they be hidden?
-  answer: They must absolutely be visible and accessible in the HTML code. AIs crawl the actual content of your pages. Hidden or dynamically loaded content may not be properly indexed.
+  answer: They must absolutely be visible and accessible in the HTML code. AIs crawl
+    the actual content of your pages. Hidden or dynamically loaded content may not
+    be properly indexed.
 - question: Can I use the same FAQ across multiple similar products?
-  answer: Yes, but adapt it with each product's specifics. A FAQ "Is this product machine washable?" can be reused, but the answer must mention specific temperatures and precautions for each item.
+  answer: Yes, but adapt it with each product's specifics. A FAQ "Is this product
+    machine washable?" can be reused, but the answer must mention specific temperatures
+    and precautions for each item.
 - question: How do I know if my FAQs are effective for GEO?
-  answer: Test by asking AIs yourself (ChatGPT, Perplexity, Gemini) questions about your products or domain. See if your site appears in the answers and how your information is used. It's the best field test.
+  answer: Test by asking AIs yourself (ChatGPT, Perplexity, Gemini) questions about
+    your products or domain. See if your site appears in the answers and how your
+    information is used. It's the best field test.
 - question: Do FAQs hurt traditional SEO?
-  answer: On the contrary! Well-structured FAQs also improve your traditional SEO. Google often displays FAQs in featured snippets, and they increase time on page as well as user engagement.
+  answer: On the contrary! Well-structured FAQs also improve your traditional SEO.
+    Google often displays FAQs in featured snippets, and they increase time on page
+    as well as user engagement.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Why FAQs Have Become Essential for Your Visibility on AI
 
 Imagine the scene: a potential customer asks ChatGPT "Which headphones should I choose for sports?" Instead of consulting 15 different sites as they would have with Google, they get a single, direct answer with two or three specific recommendations. If your product isn't in this short list, you just lost a sale. And probably many others.

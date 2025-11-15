@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'L''Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)'
+title: 'Évolution de Google Shopping : Froogle à l''IA'
 date: 2025-09-23
 author: Nicolas Dabène
 categories:
@@ -36,7 +36,17 @@ faq:
   answer: Google Shopping fonctionne comme un comparateur dirigeant vers les sites
     marchands externes, tandis qu'Amazon est une marketplace centralisée. Google mise
     sur la découverte via la recherche, Amazon sur l'achat direct sur sa plateforme.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
+- question: Claude peut-il accéder à Internet?
+  answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
+    MCP pour accéder à des données externes.
 ---
+
 # L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)
 
 Google Shopping représente aujourd'hui l'un des leviers les plus puissants du commerce électronique, responsable de 70% du chiffre d'affaires de la publicité en ligne générée par Google Ads. Cette plateforme, qui a révolutionné la façon dont nous découvrons et comparons les produits en ligne, a connu une évolution remarquable depuis ses humbles débuts. De simple comparateur gratuit lancé en 2002 sous le nom de "Froogle" à plateforme sophistiquée dopée à l'intelligence artificielle en 2025, Google Shopping illustre parfaitement l'adaptation constante de Google aux besoins changeants du commerce numérique.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Grok Code Fast 1: xAI''s Ultra-Fast AI Coding Model'
+title: 'Grok Code Fast 1: xAI''s Ultra-Fast Coding AI'
 date: 2025-09-01
 author: Nicolas Dabène
 lang: en
@@ -11,7 +11,9 @@ categories:
 tags:
 - AI
 - development
-excerpt: 'xAI, Elon Musk''s startup, launches Grok Code Fast 1: an ultra-fast, low-cost coding model integrated with GitHub Copilot. Promises, limitations, and impact for developers.'
+excerpt: 'xAI, Elon Musk''s startup, launches Grok Code Fast 1: an ultra-fast, low-cost
+  coding model integrated with GitHub Copilot. Promises, limitations, and impact for
+  developers.'
 image: /assets/images/blog/2025/09/2025-09-01-grok-code-fast-1.jpg
 featured: false
 difficulty: Intermediate
@@ -23,12 +25,23 @@ technologies:
 estimated_reading_time: 9 minutes
 faq:
 - question: Can Grok Code Fast 1 replace GitHub Copilot?
-  answer: Not entirely. It complements Copilot by offering speed and reduced costs, but remains limited in planning capabilities.
+  answer: Not entirely. It complements Copilot by offering speed and reduced costs,
+    but remains limited in planning capabilities.
 - question: Is it suitable for complex projects?
   answer: No, Grok is optimized for quick fixes, not for global design.
 - question: What's the difference with GPT-5 Mini?
   answer: GPT-5 Mini reasons better, Grok is faster and more affordable.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
+- question: Can Claude access the Internet?
+  answer: No, Claude doesn't have direct Internet access, but can use MCP servers
+    to access external data.
 ---
+
 # Grok Code Fast 1: xAI's Ultra-Fast AI Coding Model
 
 ## Introduction

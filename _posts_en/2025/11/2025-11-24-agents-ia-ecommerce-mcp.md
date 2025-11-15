@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The AI Management Assistant Era: Deep Dive into PS MCP Server and the Revolutionary MCP Tools Plus Module"
+title: How AI Discovers Your MCP Tools?
 date: 2025-11-24
 author: Nicolas Dabène
 categories:
@@ -14,8 +14,13 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: >
-  Imagine an AI assistant managing your PrestaShop store like a tireless right-hand: instant accounting reports, automated targeted promotions, and much more. With PS MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover how these tools transform daily frustrations into growth opportunities for merchants and agencies.
+excerpt: 'Imagine an AI assistant managing your PrestaShop store like a tireless right-hand:
+  instant accounting reports, automated targeted promotions, and much more. With PS
+  MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover
+  how these tools transform daily frustrations into growth opportunities for merchants
+  and agencies.
+
+  '
 image: /assets/images/blog/ps-mcp-server-tools-plus.jpg
 lang: en
 ref: ps-mcp-server-tools-plus-nov2025
@@ -29,7 +34,7 @@ keywords:
 - automation
 - natural language
 - PrestaShop module
-difficulty: "⭐️⭐️⭐️"
+difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop
 - MCP
@@ -40,18 +45,41 @@ technologies:
 estimated_reading_time: 15 minutes
 faq:
 - question: What is PS MCP Server?
-  answer: PS MCP Server is the essential bridge between AI and your PrestaShop store. It connects a large language model (LLM) like ChatGPT or Claude directly to PrestaShop, allowing AI to access tools to query and act on your store. Launched November 19, 2025, it's a secure and consistent infrastructure that normalizes communication between AI and PrestaShop.
+  answer: PS MCP Server is the essential bridge between AI and your PrestaShop store.
+    It connects a large language model (LLM) like ChatGPT or Claude directly to PrestaShop,
+    allowing AI to access tools to query and act on your store. Launched November
+    19, 2025, it's a secure and consistent infrastructure that normalizes communication
+    between AI and PrestaShop.
 - question: What is the MCP Tools Plus module?
-  answer: MCP Tools Plus is a premium module developed by BusinessTech/PrestaModule that extends PS MCP Server's capabilities. It adds advanced tools for enriched communication, allowing your LLM to access more sophisticated queries and integrate with compatible modules like Sales Reports Pro. It's the extension that transforms AI into a versatile management assistant.
+  answer: MCP Tools Plus is a premium module developed by BusinessTech/PrestaModule
+    that extends PS MCP Server's capabilities. It adds advanced tools for enriched
+    communication, allowing your LLM to access more sophisticated queries and integrate
+    with compatible modules like Sales Reports Pro. It's the extension that transforms
+    AI into a versatile management assistant.
 - question: What's the difference between PS MCP Server and MCP Tools Plus?
-  answer: PS MCP Server lays the foundation by creating the communication channel between AI and PrestaShop with basic tools. MCP Tools Plus is a premium extension that enriches these capabilities with advanced features, third-party module integration, and sophisticated management tools. The Server is the road, Tools Plus is the high-performance vehicle.
+  answer: PS MCP Server lays the foundation by creating the communication channel
+    between AI and PrestaShop with basic tools. MCP Tools Plus is a premium extension
+    that enriches these capabilities with advanced features, third-party module integration,
+    and sophisticated management tools. The Server is the road, Tools Plus is the
+    high-performance vehicle.
 - question: Which LLMs are compatible with this solution?
-  answer: MCP-compatible LLMs include Claude (4.5 Sonnet excels in comprehension and quality), ChatGPT (5.1 with dev mode ON), and Le Chat (Mistral). The choice depends on your needs - Claude for precision in complex reports, ChatGPT for versatility, based on desired cost and quality.
+  answer: MCP-compatible LLMs include Claude (4.5 Sonnet excels in comprehension and
+    quality), ChatGPT (5.1 with dev mode ON), and Le Chat (Mistral). The choice depends
+    on your needs - Claude for precision in complex reports, ChatGPT for versatility,
+    based on desired cost and quality.
 - question: How do these tools benefit PrestaShop merchants?
-  answer: These tools eliminate frustrating waits by allowing merchants to get immediate insights via natural language - sales reports in minutes, automated promotions for VIP customers, product updates with dynamic content. They free up time for strategy rather than manual tasks, transforming PrestaShop into an intelligent partner.
+  answer: These tools eliminate frustrating waits by allowing merchants to get immediate
+    insights via natural language - sales reports in minutes, automated promotions
+    for VIP customers, product updates with dynamic content. They free up time for
+    strategy rather than manual tasks, transforming PrestaShop into an intelligent
+    partner.
 - question: What types of actions can be automated with MCP Tools Plus?
-  answer: Actions include generating accounting PDF reports sent automatically, segmenting and rewarding top customers with payment verification (Qonto) and email sending (Brevo), analyzing underperforming products with video generation and automatic updates. Everything is done via natural language prompts.
+  answer: Actions include generating accounting PDF reports sent automatically, segmenting
+    and rewarding top customers with payment verification (Qonto) and email sending
+    (Brevo), analyzing underperforming products with video generation and automatic
+    updates. Everything is done via natural language prompts.
 ---
+
 
 # 🧠 Introduction: Addressing Frustration with Artificial Intelligence
 

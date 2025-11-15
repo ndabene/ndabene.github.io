@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 🍌 TUTORIEL — Comment réduire les erreurs de texte dans Banana (sans promettre
-  l'impossible)
+title: Réduire les erreurs de texte dans Banana
 date: 2025-10-31
 author: Nicolas Dabène
 categories:
@@ -49,7 +48,11 @@ faq:
     un excellent rendu sur une image et une horreur sur la suivante avec le même prompt.
     Cependant, en appliquant les bonnes techniques, vous pouvez atteindre 80 à 90%
     de réussite stable et réduire drastiquement les erreurs.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
+
 # 🍌 TUTORIEL — Comment réduire les erreurs de texte dans Banana (sans promettre l'impossible)
 
 ---

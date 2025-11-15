@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🍌 TUTORIAL — How to Reduce Text Errors in Banana (Without Promising the Impossible)
+title: Reduce Text Errors in Banana Content
 date: 2025-10-31
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ categories:
 tags:
 - AI
 - prompt engineering
-excerpt: No method guarantees perfect text in Banana, but this guide compiles the best tips to minimize letter errors, accent mistakes, and placement issues.
+excerpt: No method guarantees perfect text in Banana, but this guide compiles the
+  best tips to minimize letter errors, accent mistakes, and placement issues.
 image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.jpg
 difficulty: Beginner
 technologies:
@@ -23,16 +24,33 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: Why does Banana often generate text with errors?
-  answer: Banana, like all AI image generators, wasn't designed to write perfectly legible text. It draws letters instead of writing them. French accents are misinterpreted, letters merge or warp, and certain words trigger recurring visual errors.
+  answer: Banana, like all AI image generators, wasn't designed to write perfectly
+    legible text. It draws letters instead of writing them. French accents are misinterpreted,
+    letters merge or warp, and certain words trigger recurring visual errors.
 - question: What are the 5 golden rules to limit text errors in Banana?
-  answer: 1) Describe the scene first, then the text. 2) Specify that the text is printed, not handwritten. 3) Mention the language and typographic style ("text in clear French, perfectly written"). 4) Use a square 1:1 format for stability. 5) Keep text short (less than 25 characters).
+  answer: 1) Describe the scene first, then the text. 2) Specify that the text is
+    printed, not handwritten. 3) Mention the language and typographic style ("text
+    in clear French, perfectly written"). 4) Use a square 1:1 format for stability.
+    5) Keep text short (less than 25 characters).
 - question: How do I handle problematic words like 'besoin' or 'école'?
-  answer: 'Certain words cause recurring errors (fusion, replacement, missing accent). Add to your prompt: "The word [sensitive word] must be perfectly written and legible in the image." Or temporarily generate with a neutral version ("beso1n" for "besoin") then manually correct in Canva or Photoshop.'
+  answer: 'Certain words cause recurring errors (fusion, replacement, missing accent).
+    Add to your prompt: "The word [sensitive word] must be perfectly written and legible
+    in the image." Or temporarily generate with a neutral version ("beso1n" for "besoin")
+    then manually correct in Canva or Photoshop.'
 - question: What image format is recommended for text in Banana?
-  answer: The square 1:1 format (1080×1080) is the most stable for text positioning and perfect for memes. Use a Realistic or Cinematic style for sharp letters, set Sharpness to 0.7-0.8 for typographic clarity, and enable Text emphasis to prioritize text.
+  answer: The square 1:1 format (1080×1080) is the most stable for text positioning
+    and perfect for memes. Use a Realistic or Cinematic style for sharp letters, set
+    Sharpness to 0.7-0.8 for typographic clarity, and enable Text emphasis to prioritize
+    text.
 - question: Can you get 100% perfect text with Banana?
-  answer: No, no method guarantees 100% accurate text. You can get an excellent result on one image and a disaster on the next with the same prompt. However, by applying the right techniques, you can achieve 80 to 90% stable success and drastically reduce errors.
+  answer: No, no method guarantees 100% accurate text. You can get an excellent result
+    on one image and a disaster on the next with the same prompt. However, by applying
+    the right techniques, you can achieve 80 to 90% stable success and drastically
+    reduce errors.
+- question: Is this suitable for beginners?
+  answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
+
 # 🍌 TUTORIAL — How to Reduce Text Errors in Banana (Without Promising the Impossible)
 
 ---

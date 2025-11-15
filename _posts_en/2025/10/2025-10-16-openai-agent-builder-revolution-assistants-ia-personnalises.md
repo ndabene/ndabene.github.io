@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'OpenAI Agent Builder: The Revolution of Personalized AI Assistants (2025)'
+title: 'OpenAI Agent Builder: Create AI Assistants'
 date: 2025-10-16
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,9 @@ tags:
 - ChatGPT
 - AI
 - automation
-excerpt: Discover OpenAI's Agent Builder, the revolutionary platform launched in October 2025 that allows anyone to create personalized AI assistants without coding. A democratization of intelligent automation.
+excerpt: Discover OpenAI's Agent Builder, the revolutionary platform launched in October
+  2025 that allows anyone to create personalized AI assistants without coding. A democratization
+  of intelligent automation.
 image: /assets/images/blog/2025/10/2025-10-16-openai-agent-builder.jpg
 featured: true
 difficulty: Intermediate
@@ -28,16 +30,35 @@ estimated_reading_time: 18 minutes
 is_future: true
 faq:
 - question: What is OpenAI's Agent Builder?
-  answer: The Agent Builder is a revolutionary platform launched on October 5, 2025, that allows anyone to create personalized AI assistants without coding, based on AgentKit. It's like being able to create your own personal robot by simply drawing it, transforming intelligent automation into a tool accessible to all.
+  answer: The Agent Builder is a revolutionary platform launched on October 5, 2025,
+    that allows anyone to create personalized AI assistants without coding, based
+    on AgentKit. It's like being able to create your own personal robot by simply
+    drawing it, transforming intelligent automation into a tool accessible to all.
 - question: What is the difference between AgentKit and ChatKit?
-  answer: AgentKit is the modular engine that transforms AI agent creation into assembling building blocks (reasoning core, connectors, action capabilities). ChatKit is the open-source JavaScript user interface that makes this power accessible through customizable chat components that can be integrated into any web application.
+  answer: AgentKit is the modular engine that transforms AI agent creation into assembling
+    building blocks (reasoning core, connectors, action capabilities). ChatKit is
+    the open-source JavaScript user interface that makes this power accessible through
+    customizable chat components that can be integrated into any web application.
 - question: How does Agent Builder differ from Zapier?
-  answer: Zapier excels at automating predefined linear workflows (like a train on rails), while Agent Builder adds native intelligence enabling autonomous decision-making and context adaptation (like a taxi driver adapting to traffic). Agent Builder reasons where Zapier executes.
+  answer: Zapier excels at automating predefined linear workflows (like a train on
+    rails), while Agent Builder adds native intelligence enabling autonomous decision-making
+    and context adaptation (like a taxi driver adapting to traffic). Agent Builder
+    reasons where Zapier executes.
 - question: What is the Connector Registry and why is it important?
-  answer: The Connector Registry is an official registry of connectors approved by OpenAI guaranteeing data security, GDPR regulatory compliance, and reliability. Only verified connectors can be used in agents, eliminating risks of malicious connectors and reassuring companies about protecting their sensitive information.
+  answer: The Connector Registry is an official registry of connectors approved by
+    OpenAI guaranteeing data security, GDPR regulatory compliance, and reliability.
+    Only verified connectors can be used in agents, eliminating risks of malicious
+    connectors and reassuring companies about protecting their sensitive information.
 - question: Can you create an agent without technical skills?
-  answer: 'Yes, Agent Builder is designed to be accessible without programming. You simply describe what you want in natural language (e.g., "Analyze my advertising campaigns and propose 3 priority actions"), the AI understands and automatically configures the necessary connectors. Creating a first agent takes about 30 minutes.'
+  answer: Yes, Agent Builder is designed to be accessible without programming. You
+    simply describe what you want in natural language (e.g., "Analyze my advertising
+    campaigns and propose 3 priority actions"), the AI understands and automatically
+    configures the necessary connectors. Creating a first agent takes about 30 minutes.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # OpenAI Agent Builder: The Revolution of Personalized AI Assistants (2025)
 
 Imagine being a craftsman capable of creating your own personal robot, without needing to be a robotics engineer. You simply draw what you want it to do, and presto! it comes to life to assist you in your professional daily life. This is exactly what OpenAI has achieved with its Agent Builder, launched on October 5, 2025. A technological revolution that finally democratizes intelligent automation.

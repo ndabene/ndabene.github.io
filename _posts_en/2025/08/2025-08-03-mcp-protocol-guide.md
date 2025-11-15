@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Model Context Protocol (MCP): The Revolutionary Bridge Between AI and Your Systems'
+title: How to Secure MCP Server?
 date: 2025-08-03
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - API
 - AI
 - development
-excerpt: Discover Anthropic's Model Context Protocol, the protocol that allows AI to directly access your external data. Complete guide with practical examples.
+excerpt: Discover Anthropic's Model Context Protocol, the protocol that allows AI
+  to directly access your external data. Complete guide with practical examples.
 image: /assets/images/blog/2025/08/2025-08-03-mcp-protocol-guide.jpg
 featured: true
 difficulty: Intermediate
@@ -24,7 +25,8 @@ technologies:
 - Claude
 - API
 estimated_reading_time: 12 minutes
-llm_summary: Discover Anthropic's Model Context Protocol, the protocol that allows AI to directly access your external data. Complete guide with practical examples.
+llm_summary: Discover Anthropic's Model Context Protocol, the protocol that allows
+  AI to directly access your external data. Complete guide with practical examples.
 llm_topics:
 - MCP
 - Anthropic
@@ -35,16 +37,35 @@ llm_topics:
 - protocols
 faq:
 - question: What is the Model Context Protocol (MCP)?
-  answer: MCP is an open-source protocol developed by Anthropic that allows AI models to directly access external systems to obtain fresh and accurate context. It's an API specifically designed for artificial intelligence that functions as a universal translator between AI and your data.
+  answer: MCP is an open-source protocol developed by Anthropic that allows AI models
+    to directly access external systems to obtain fresh and accurate context. It's
+    an API specifically designed for artificial intelligence that functions as a universal
+    translator between AI and your data.
 - question: What are the three pillars of MCP?
-  answer: 'MCP offers three main types of functionality: Resources for listing and reading read-only documents, Tools for performing interactive operations on your system, and Prompts that help users formulate their requests correctly via predefined templates.'
+  answer: 'MCP offers three main types of functionality: Resources for listing and
+    reading read-only documents, Tools for performing interactive operations on your
+    system, and Prompts that help users formulate their requests correctly via predefined
+    templates.'
 - question: How do you develop an MCP server?
-  answer: An MCP server processes JSON-RPC requests by implementing the initialize, resources/list, resources/read, tools/list, and tools/call methods. You can use official libraries for Node.js, Python, or create your own implementation in PHP or any other language supporting JSON-RPC and HTTP.
+  answer: An MCP server processes JSON-RPC requests by implementing the initialize,
+    resources/list, resources/read, tools/list, and tools/call methods. You can use
+    official libraries for Node.js, Python, or create your own implementation in PHP
+    or any other language supporting JSON-RPC and HTTP.
 - question: What are the security risks of MCP?
-  answer: MCP presents prompt injection risks where a malicious server could inject hidden instructions into its responses. Protection measures include systematic code auditing, the principle of least privilege, execution in isolated environments, and strict validation of all inputs and outputs.
+  answer: MCP presents prompt injection risks where a malicious server could inject
+    hidden instructions into its responses. Protection measures include systematic
+    code auditing, the principle of least privilege, execution in isolated environments,
+    and strict validation of all inputs and outputs.
 - question: Can MCP be used with AIs other than Claude?
-  answer: Yes, since MCP is a standardized open-source protocol based on JSON-RPC, it can be integrated with different AIs supporting this protocol like Gemini, VS Code Copilot, or any other client implementing the MCP specifications. This is precisely the advantage of this universal standardization.
+  answer: Yes, since MCP is a standardized open-source protocol based on JSON-RPC,
+    it can be integrated with different AIs supporting this protocol like Gemini,
+    VS Code Copilot, or any other client implementing the MCP specifications. This
+    is precisely the advantage of this universal standardization.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
 ---
+
 # Model Context Protocol (MCP): The Revolutionary Bridge Between AI and Your Systems
 
 Imagine being able to give your favorite AI direct and secure access to your databases, files, or internal systems. No more copying and pasting information or manually reformatting your data. This is exactly what the **Model Context Protocol (MCP)** developed by Anthropic offers.

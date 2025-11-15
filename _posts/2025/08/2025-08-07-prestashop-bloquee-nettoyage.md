@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boutique PrestaShop bloquée ? Guide pratique
+title: Boutique PrestaShop bloquée? Guide pratique
 date: 2025-08-07
 author: Nicolas Dabène
 categories:
@@ -55,7 +55,11 @@ faq:
     ps_log, etc.) est sans risque pour vos données commerciales car elles ne contiennent
     que des historiques de navigation non critiques. Cependant, faites toujours une
     sauvegarde complète avant toute intervention directe en base de données par précaution.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Boutique PrestaShop bloquée ? Guide pratique entre pros
 
 Quand une boutique PrestaShop devient inaccessible à cause d’un module de statistiques trop gourmand, il faut agir vite, sans tout casser.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT + Shopify : le futur de l’e-commerce'
+title: 'OpenAI Agent Builder : créer des assistants IA'
 date: 2025-08-08
 author: Nicolas Dabène
 categories:
@@ -58,7 +58,11 @@ faq:
     voir leur trafic organique diminuer au profit des plateformes IA, mais l'expérience
     conversationnelle offre des taux de conversion supérieurs grâce à son UX simplifiée
     et personnalisée.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
+
 # ChatGPT + Shopify : le futur de l’e-commerce
 
 > *« Nicolas Dabène, expert PrestaShop certifié avec 15 + ans d’expérience, décrypte comment les agents conversationnels redessinent nos parcours d’achat. »*

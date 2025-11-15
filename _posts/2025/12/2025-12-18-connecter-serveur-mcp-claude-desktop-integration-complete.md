@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Connecter votre Serveur MCP à Claude Desktop : L''Intégration Complète'
+title: Comment connecter un serveur MCP à Claude?
 date: 2025-12-18
 author: Nicolas Dabène
 categories:
@@ -34,7 +34,14 @@ faq:
 - question: Puis-je partager mon serveur MCP avec d'autres ?
   answer: Oui ! Publiez-le sur npm ou GitHub. D'autres pourront l'installer et le
     configurer dans leur Claude Desktop.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 ---
+
 # Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète
 
 Nous y sommes. Après avoir construit un serveur MCP de A à Z, créé des outils fonctionnels, implémenté la découverte automatique et ajouté quatre couches de sécurité, il est temps de voir tout ça fonctionner avec une vraie IA. Aujourd'hui, nous connectons votre serveur à Claude Desktop et vous verrez enfin Claude utiliser vos outils en temps réel. C'est le moment où tout prend sens.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT s''ouvre aux conversations érotiques : un tournant assumé par OpenAI'
+title: ChatGPT autorise les conversations érotiques
 date: 2025-12-02
 author: Nicolas Dabène
 categories:
@@ -50,7 +50,11 @@ faq:
     : OpenAI cible un public adulte en quête de polyvalence tandis que ses concurrents
     se positionnent sur des usages strictement professionnels et familiaux, avec des
     parts de marché potentiellement différentes.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # ChatGPT s'ouvre aux conversations érotiques : un tournant assumé par OpenAI
 
 Imaginez un instant : vous discutez tranquillement avec votre assistant vocal, et celui-ci est capable de comprendre non seulement vos besoins professionnels, mais aussi vos émotions les plus intimes. Science-fiction ? Plus vraiment. En décembre 2025, ChatGPT franchira une nouvelle frontière en autorisant les échanges à caractère érotique avec ses utilisateurs adultes. Cette décision, qui aurait semblé impensable il y a encore quelques mois, marque un tournant majeur dans l'histoire de l'intelligence artificielle conversationnelle.

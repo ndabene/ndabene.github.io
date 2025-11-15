@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop : De projet étudiant à leader européen de l''e-commerce - L''épopée
-  complète (2005-2025)'
+title: 'PrestaShop : de projet étudiant à leader'
 date: 2025-07-24
 author: Nicolas Dabène
 categories:
@@ -70,7 +69,11 @@ faq:
     le marché européen avec 300 000 boutiques actives générant 22 milliards d'euros
     de ventes annuelles. Mondialement, PrestaShop représente 0.29% à 0.49% de parts
     face à WooCommerce (66-70%) et Shopify (17-29%).
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 Prestashop: De projet étudiant à leader européen de l'e-commerce - L'épopée complète (2005-2025) PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success story de 20 ans illustre parfaitement la capacité d'innovation française face aux géants américains du secteur. Avec le lancement récent de PrestaShop 9.0 en juin 2025, l'entreprise entame un nouveau chapitre de son histoire, marqué par une modernisation technique ambitieuse et des défis concurrentiels renouvelés.
 
 ## Les racines d'une révolution numérique (2005-2007)

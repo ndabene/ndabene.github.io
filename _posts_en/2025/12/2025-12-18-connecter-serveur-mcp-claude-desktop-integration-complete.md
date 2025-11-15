@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Connect Your MCP Server to Claude Desktop: The Complete Integration'
+title: How to Connect MCP Server to Claude?
 date: 2025-12-18
 author: Nicolas Dabène
 categories:
@@ -10,7 +10,8 @@ tags:
 - API
 - AI
 - development
-excerpt: 'The long-awaited moment: let''s connect your secured MCP server to Claude Desktop and see the magic happen in real conditions.'
+excerpt: 'The long-awaited moment: let''s connect your secured MCP server to Claude
+  Desktop and see the magic happen in real conditions.'
 image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.jpg
 featured: true
 difficulty: Intermediate
@@ -24,14 +25,25 @@ lang: en
 ref: connect-mcp-server-claude-desktop-2025
 faq:
 - question: Can I have multiple MCP servers at the same time?
-  answer: Yes! Add them in the JSON configuration with multiple entries in mcpServers. Each server will have its own name and configuration.
+  answer: Yes! Add them in the JSON configuration with multiple entries in mcpServers.
+    Each server will have its own name and configuration.
 - question: Can Claude use my tools without asking me?
-  answer: No. Claude ALWAYS asks permission before executing a tool. This is a security guarantee from Anthropic's side.
+  answer: No. Claude ALWAYS asks permission before executing a tool. This is a security
+    guarantee from Anthropic's side.
 - question: Do tools work with Claude on the web?
-  answer: Currently, no. MCP servers only work with Claude Desktop. But Anthropic is working on other integrations.
+  answer: Currently, no. MCP servers only work with Claude Desktop. But Anthropic
+    is working on other integrations.
 - question: Can I share my MCP server with others?
-  answer: Yes! Publish it on npm or GitHub. Others can install and configure it in their Claude Desktop.
+  answer: Yes! Publish it on npm or GitHub. Others can install and configure it in
+    their Claude Desktop.
+- question: What is the MCP protocol?
+  answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
+    to connect data servers to AI assistants like Claude.
+- question: Is MCP compatible with other AIs?
+  answer: Currently, MCP is primarily designed for Claude, but the protocol is open-source
+    and other AIs may adopt it.
 ---
+
 # Connect Your MCP Server to Claude Desktop: The Complete Integration
 
 Here we are. After building an MCP server from A to Z, creating functional tools, implementing automatic discovery, and adding four layers of security, it's time to see it all work with a real AI. Today, we're connecting your server to Claude Desktop and you'll finally see Claude use your tools in real time. This is the moment when everything makes sense.

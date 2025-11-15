@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vibe Coding vs Prompt-Driven Development: Generative AI and Software Development'
+title: 'Coding in AI Era: Adapt Your Methods'
 date: 2025-06-15
 author: Nicolas Dabène
 lang: en
@@ -14,10 +14,14 @@ tags:
 - development
 - prompt engineering
 - security
-excerpt: 'Exploring two approaches to AI-assisted development: spontaneous Vibe Coding versus structured Prompt-Driven Development. Analysis of risks, benefits, and best practices for responsible code generation.'
+excerpt: 'Exploring two approaches to AI-assisted development: spontaneous Vibe Coding
+  versus structured Prompt-Driven Development. Analysis of risks, benefits, and best
+  practices for responsible code generation.'
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.jpg
 featured: true
-llm_summary: 'Exploring two approaches to AI-assisted development: spontaneous Vibe Coding versus structured Prompt-Driven Development. Analysis of risks, benefits, and best practices for responsible code generation.'
+llm_summary: 'Exploring two approaches to AI-assisted development: spontaneous Vibe
+  Coding versus structured Prompt-Driven Development. Analysis of risks, benefits,
+  and best practices for responsible code generation.'
 llm_topics:
 - generative AI
 - software development
@@ -26,16 +30,35 @@ llm_topics:
 - prompt engineering
 faq:
 - question: What is Vibe Coding?
-  answer: Vibe Coding is a spontaneous approach to AI code generation that prioritizes speed with short, generic prompts. This method allows quick functional results but presents risks in terms of security, maintainability, and code quality for production projects.
+  answer: Vibe Coding is a spontaneous approach to AI code generation that prioritizes
+    speed with short, generic prompts. This method allows quick functional results
+    but presents risks in terms of security, maintainability, and code quality for
+    production projects.
 - question: What is the difference between Vibe Coding and Prompt-Driven Development?
-  answer: Vibe Coding uses short prompts for quick results without structure, while Prompt-Driven Development adopts a methodical approach with detailed prompts including technical context, security specifications, defined architecture, and integrated tests. PDD is recommended for professional production projects.
+  answer: Vibe Coding uses short prompts for quick results without structure, while
+    Prompt-Driven Development adopts a methodical approach with detailed prompts including
+    technical context, security specifications, defined architecture, and integrated
+    tests. PDD is recommended for professional production projects.
 - question: Why is Prompt-Driven Development safer?
-  answer: Prompt-Driven Development integrates security best practices from design, uses parameterized queries to prevent SQL injections, implements robust error handling, and follows proven architectural patterns. This approach generates production-ready code unlike Vibe Coding which often neglects these critical aspects.
+  answer: Prompt-Driven Development integrates security best practices from design,
+    uses parameterized queries to prevent SQL injections, implements robust error
+    handling, and follows proven architectural patterns. This approach generates production-ready
+    code unlike Vibe Coding which often neglects these critical aspects.
 - question: How to structure an effective prompt for professional development?
-  answer: An effective prompt should include precise technical context, detailed functional specifications, security and performance constraints, code standards and patterns to respect, as well as testing and documentation requirements. This structure guides AI toward professional-quality code.
+  answer: An effective prompt should include precise technical context, detailed functional
+    specifications, security and performance constraints, code standards and patterns
+    to respect, as well as testing and documentation requirements. This structure
+    guides AI toward professional-quality code.
 - question: Can Vibe Coding be used in professional environments?
-  answer: Vibe Coding is only acceptable for quick prototypes or POCs with strict technical supervision. For production projects, Prompt-Driven Development is essential as it guarantees security, maintainability, and compliance with professional software development standards.
+  answer: Vibe Coding is only acceptable for quick prototypes or POCs with strict
+    technical supervision. For production projects, Prompt-Driven Development is essential
+    as it guarantees security, maintainability, and compliance with professional software
+    development standards.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # Vibe Coding vs Prompt-Driven Development: Generative AI and Software Development, Security and Code Quality
 
 

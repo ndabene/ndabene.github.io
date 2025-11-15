@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Quick Start: Contributing Quickly to PrestaShop 9 Admin API'
+title: Contribute to PrestaShop 9 Admin API
 date: 2025-09-12
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - PrestaShop
 - development
 - security
-excerpt: A pedagogical guide to create your first endpoints in PrestaShop 9 Admin API. Discover the 8 essential concepts and start contributing today.
+excerpt: A pedagogical guide to create your first endpoints in PrestaShop 9 Admin
+  API. Discover the 8 essential concepts and start contributing today.
 image: /assets/images/blog/2025/09/2025-09-12-prestashop-admin-api-quickstart.jpg
 featured: true
 difficulty: Intermediate
@@ -25,14 +26,26 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: Must I create my own Commands and Queries for the Admin API?
-  answer: No, in most cases, Commands and Queries already exist in PrestaShop core. You simply need to wire them correctly in your API resource.
+  answer: No, in most cases, Commands and Queries already exist in PrestaShop core.
+    You simply need to wire them correctly in your API resource.
 - question: What's the difference between Admin API and the old Webservice API?
-  answer: Admin API is built on Symfony and API Platform with OAuth2 and CQRS support, offering a modern approach. The old XML Webservice API is legacy and limited in its features.
+  answer: Admin API is built on Symfony and API Platform with OAuth2 and CQRS support,
+    offering a modern approach. The old XML Webservice API is legacy and limited in
+    its features.
 - question: Can I test my endpoints without a front interface?
-  answer: Yes, you can use HTTP clients like Postman, Insomnia or curl to quickly test your API endpoints and check their functionality.
+  answer: Yes, you can use HTTP clients like Postman, Insomnia or curl to quickly
+    test your API endpoints and check their functionality.
 - question: Where to ask questions if I'm stuck on the Admin API?
-  answer: 'The PrestaShop community Slack, #cfc-adminapi channel, is the ideal place to exchange with other contributors and get help.'
+  answer: 'The PrestaShop community Slack, #cfc-adminapi channel, is the ideal place
+    to exchange with other contributors and get help.'
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
+- question: Is PrestaShop suitable for beginners?
+  answer: PrestaShop has a medium learning curve. With documentation, beginners can
+    create their store in weeks.
 ---
+
 # Quick Start: Contributing Quickly to PrestaShop 9 Admin API
 
 ![Mind map of 8 essential concepts for PrestaShop 9 Admin API](/en/assets/images/blog/article_content/2025-09-12-carte-mental.png)

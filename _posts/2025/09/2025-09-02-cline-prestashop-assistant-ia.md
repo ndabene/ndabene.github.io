@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Cline : L''Assistant IA qui Révolutionne le Développement PrestaShop'
+title: 'Cline : assistant IA pour PrestaShop'
 date: 2025-09-02
 author: Nicolas Dabène
 categories:
@@ -55,7 +55,11 @@ faq:
     et +25% de temps libéré pour l'architecture et vision produit. Cline excelle pour
     automatiser les tâches répétitives comme la génération de modules de paiement
     ou l'intégration d'APIs tierces.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 # Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop
 
 Dans ma pratique de développement e-commerce depuis 2010, j'ai vu émerger de nombreux outils promettant de révolutionner notre façon de coder. Mais Cline (anciennement Claude Dev) se distingue véritablement comme un agent de codage autonome directement intégré dans votre IDE, capable de créer et éditer des fichiers, d'exécuter des commandes, d'utiliser le navigateur et bien plus encore.

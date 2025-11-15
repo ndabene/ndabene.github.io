@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Grok expose ses prompts système : leçons pour la sécurité IA'
+title: 'Grok expose ses prompts : leçons de sécurité'
 date: 2025-08-19
 author: Nicolas Dabène
 categories:
@@ -34,7 +34,17 @@ faq:
   answer: Absolument ! Intégrez des tests de sécurité IA spécifiques dans votre pipeline
     CI/CD, comme vous le feriez pour des tests de vulnérabilités classiques SQL injection
     ou XSS.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
+- question: Claude peut-il accéder à Internet?
+  answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
+    MCP pour accéder à des données externes.
 ---
+
 # Grok expose ses prompts système : leçons pour la sécurité IA
 
 La récente exposition accidentelle des prompts système internes de Grok, le chatbot de xAI, illustre parfaitement pourquoi la sécurité des systèmes d'IA générative ne peut pas être prise à la légère. En tant que développeur travaillant quotidiennement avec des APIs d'IA, cette faille me rappelle l'importance cruciale des bonnes pratiques de sécurité.

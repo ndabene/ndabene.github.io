@@ -11,7 +11,8 @@ categories:
 tags:
 - PrestaShop
 - development
-excerpt: Is your PrestaShop store stuck? Here's a simple professional guide to clean the database, avoid overloads and regain control.
+excerpt: Is your PrestaShop store stuck? Here's a simple professional guide to clean
+  the database, avoid overloads and regain control.
 image: /assets/images/blog/2025/08/2025-08-07-prestashop-bloquee-nettoyage.jpg
 featured: false
 difficulty: Intermediate
@@ -20,7 +21,8 @@ technologies:
 - PrestaShop
 - MySQL
 estimated_reading_time: 7 minutes
-llm_summary: Is your PrestaShop store stuck? Here's a simple professional guide to clean the database, avoid overloads and regain control.
+llm_summary: Is your PrestaShop store stuck? Here's a simple professional guide to
+  clean the database, avoid overloads and regain control.
 llm_topics:
 - database
 - phpmyadmin
@@ -29,16 +31,35 @@ llm_topics:
 - performance
 faq:
 - question: Why is my PrestaShop store stuck?
-  answer: The blockage is often caused by the native statsdata module which massively records visits, page views and logs without maintenance. Without regular cleanup, this data saturates the MySQL database causing severe slowdowns, 500/504 errors and complete front-office and back-office blockage, particularly on shared hosting.
+  answer: The blockage is often caused by the native statsdata module which massively
+    records visits, page views and logs without maintenance. Without regular cleanup,
+    this data saturates the MySQL database causing severe slowdowns, 500/504 errors
+    and complete front-office and back-office blockage, particularly on shared hosting.
 - question: How to unblock a PrestaShop store urgently?
-  answer: Access phpMyAdmin, first make a complete backup, then empty large tables with TRUNCATE on ps_connections, ps_connections_page, ps_guest, ps_pagenotfound, ps_referrer, ps_referrer_cache and ps_log. Access is generally restored immediately. Then temporarily disable the statsdata module.
+  answer: Access phpMyAdmin, first make a complete backup, then empty large tables
+    with TRUNCATE on ps_connections, ps_connections_page, ps_guest, ps_pagenotfound,
+    ps_referrer, ps_referrer_cache and ps_log. Access is generally restored immediately.
+    Then temporarily disable the statsdata module.
 - question: How to prevent my PrestaShop store from getting stuck again?
-  answer: Set up regular automated cleaning with a specialized module allowing scheduled emptying of large tables (guests, stats, logs, cache) via Cron. This preventive maintenance avoids future saturations without manual intervention and guarantees stable performance.
+  answer: Set up regular automated cleaning with a specialized module allowing scheduled
+    emptying of large tables (guests, stats, logs, cache) via Cron. This preventive
+    maintenance avoids future saturations without manual intervention and guarantees
+    stable performance.
 - question: Is there an alternative to the statsdata module?
-  answer: Yes, modules like Op'art Stat use native PrestaShop data without impacting performance. They offer more than 80 clear and useful reports (revenue, margins, carts) with a modern interface, allowing you to track your performance without overloading the database unlike statsdata.
+  answer: Yes, modules like Op'art Stat use native PrestaShop data without impacting
+    performance. They offer more than 80 clear and useful reports (revenue, margins,
+    carts) with a modern interface, allowing you to track your performance without
+    overloading the database unlike statsdata.
 - question: Is it risky to empty PrestaShop tables with TRUNCATE?
-  answer: TRUNCATE on statistics and log tables (ps_connections, ps_guest, ps_log, etc.) is risk-free for your business data as they only contain non-critical browsing histories. However, always make a complete backup before any direct database intervention as a precaution.
+  answer: TRUNCATE on statistics and log tables (ps_connections, ps_guest, ps_log,
+    etc.) is risk-free for your business data as they only contain non-critical browsing
+    histories. However, always make a complete backup before any direct database intervention
+    as a precaution.
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 # PrestaShop Store Stuck? Practical Guide Between Pros
 
 When a PrestaShop store becomes inaccessible due to a too-greedy statistics module, you need to act fast, without breaking everything.

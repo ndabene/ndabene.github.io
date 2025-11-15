@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Perplexity Comet 2025 : Quand Votre Navigateur Devient Votre Assistant Intelligent'
+title: 'Perplexity Comet : navigateur intelligent 2025'
 date: 2025-10-22
 author: Nicolas Dabène
 categories:
@@ -53,6 +53,7 @@ faq:
     les serveurs Perplexity. C'est une limitation des IA génératives actuelles trop
     volumineuses pour tourner entièrement en local.
 ---
+
 # Perplexity Comet 2025 : Quand Votre Navigateur Devient Votre Assistant Intelligent
 
 Imaginez un instant que votre navigateur web comprenne vraiment ce que vous cherchez. Plus besoin de jongler entre quinze onglets ouverts pour comparer des prix, de recopier manuellement des informations d'un site à l'autre, ou de perdre vingt minutes à planifier un simple voyage. C'est exactement ce que propose Perplexity Comet, un navigateur qui ne se contente pas d'afficher des pages web, mais qui pense et agit avec vous.

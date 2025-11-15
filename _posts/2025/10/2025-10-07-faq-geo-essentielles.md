@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
+title: ChatGPT autorise les conversations érotiques
 date: 2025-10-07
 author: Nicolas Dabène
 categories:
@@ -45,7 +45,11 @@ faq:
   answer: Au contraire ! Les FAQ bien structurées améliorent aussi votre SEO traditionnel.
     Google affiche souvent les FAQ dans les featured snippets, et elles augmentent
     le temps passé sur page ainsi que l'engagement utilisateur.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
 
 Imaginez la scène : un client potentiel demande à ChatGPT "Quel casque audio choisir pour faire du sport ?" Au lieu de consulter 15 sites différents comme il l'aurait fait avec Google, il obtient une réponse unique, directe, avec deux ou trois recommandations précises. Si votre produit n'est pas dans cette courte liste, vous venez de perdre une vente. Et probablement bien d'autres.

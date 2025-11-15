@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT + Shopify: The Future of E-commerce'
+title: 'OpenAI Agent Builder: Create AI Assistants'
 date: 2025-08-08
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - ChatGPT
 - AI
 - e-commerce
-excerpt: The native integration of ChatGPT and Shopify enables a fluid purchase journey within conversation, redefining e-commerce experience and models.
+excerpt: The native integration of ChatGPT and Shopify enables a fluid purchase journey
+  within conversation, redefining e-commerce experience and models.
 image: /assets/images/blog/2025/08/2025-08-08-chatgpt-shopify.jpg
 featured: false
 difficulty: Intermediate
@@ -22,7 +23,8 @@ technologies:
 - ChatGPT
 - Shopify
 estimated_reading_time: 10 minutes
-llm_summary: The native integration of ChatGPT and Shopify enables a fluid purchase journey within conversation, redefining e-commerce experience and models.
+llm_summary: The native integration of ChatGPT and Shopify enables a fluid purchase
+  journey within conversation, redefining e-commerce experience and models.
 llm_topics:
 - Shopify
 - ChatGPT
@@ -31,16 +33,35 @@ llm_topics:
 - e-commerce
 faq:
 - question: How does ChatGPT and Shopify integration work?
-  answer: The integration enables a complete purchase journey in ChatGPT via Shopify Storefront API calls. ChatGPT queries the merchant catalog, enriches with reviews and stock, generates dynamic product cards then redirects to Shopify Checkout with secure handoff preserving all product context without additional work for the merchant.
+  answer: The integration enables a complete purchase journey in ChatGPT via Shopify
+    Storefront API calls. ChatGPT queries the merchant catalog, enriches with reviews
+    and stock, generates dynamic product cards then redirects to Shopify Checkout
+    with secure handoff preserving all product context without additional work for
+    the merchant.
 - question: What benefits for Shopify merchants?
-  answer: Merchants instantly access ChatGPT's massive audience without additional development via the existing Storefront API. This expanded distribution offers an unprecedented, more qualified acquisition channel, accelerated conversion with fewer clicks, and significant cart abandonment reduction thanks to the simplified conversational funnel.
+  answer: Merchants instantly access ChatGPT's massive audience without additional
+    development via the existing Storefront API. This expanded distribution offers
+    an unprecedented, more qualified acquisition channel, accelerated conversion with
+    fewer clicks, and significant cart abandonment reduction thanks to the simplified
+    conversational funnel.
 - question: What commission does OpenAI take on sales?
-  answer: OpenAI plans to take approximately 2% commission on each sale concluded via ChatGPT according to private demonstrations. This business model diversifies OpenAI's revenues beyond ChatGPT Plus subscriptions while remaining competitive against traditional marketplaces thanks to better conversion rates.
+  answer: OpenAI plans to take approximately 2% commission on each sale concluded
+    via ChatGPT according to private demonstrations. This business model diversifies
+    OpenAI's revenues beyond ChatGPT Plus subscriptions while remaining competitive
+    against traditional marketplaces thanks to better conversion rates.
 - question: What is AIO (Artificial Intelligence Optimization)?
-  answer: AIO is the SEO equivalent for artificial intelligence. It involves new tactics to structure product sheets to please LLMs that now control product recommendations. Optimizing for AI becomes as crucial as SEO was ten years ago for brand visibility.
+  answer: AIO is the SEO equivalent for artificial intelligence. It involves new tactics
+    to structure product sheets to please LLMs that now control product recommendations.
+    Optimizing for AI becomes as crucial as SEO was ten years ago for brand visibility.
 - question: Does conversational commerce replace e-commerce sites?
-  answer: Conversational commerce doesn't replace but complements traditional e-commerce sites by creating a new distribution channel. Sites might see their organic traffic decrease in favor of AI platforms, but conversational experience offers superior conversion rates thanks to its simplified and personalized UX.
+  answer: Conversational commerce doesn't replace but complements traditional e-commerce
+    sites by creating a new distribution channel. Sites might see their organic traffic
+    decrease in favor of AI platforms, but conversational experience offers superior
+    conversion rates thanks to its simplified and personalized UX.
+- question: Is this suitable for beginners?
+  answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
+
 # ChatGPT + Shopify: The Future of E-commerce
 
 > *"Nicolas Dabène, certified PrestaShop expert with 15+ years of experience, deciphers how conversational agents are redesigning our purchase journeys."*

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '🧩 PrestaShop Puzzle: Can You Find the 5 Errors?'
+title: 'PrestaShop Puzzle: Find the 5 Errors'
 date: 2025-10-21
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ categories:
 tags:
 - PrestaShop
 - development
-excerpt: PrestaShop developers, I challenge you! Discover the 5 common errors in this best-sellers module and improve your development skills.
+excerpt: PrestaShop developers, I challenge you! Discover the 5 common errors in this
+  best-sellers module and improve your development skills.
 image: /assets/images/blog/2025/10/2025-10-21-enigme-prestashop-erreurs.jpg
 featured: true
 difficulty: Intermediate
@@ -27,16 +28,35 @@ estimated_reading_time: 15 minutes
 is_future: true
 faq:
 - question: Why is parent::__construct() essential in a PrestaShop module?
-  answer: parent::__construct() initializes the context ($this->context), configures the Smarty environment, prepares translations ($this->l()), and initializes all essential module properties. Without this call, you'll get fatal errors 'Call to undefined method' or 'Undefined property' as soon as you use these features.
+  answer: parent::__construct() initializes the context ($this->context), configures
+    the Smarty environment, prepares translations ($this->l()), and initializes all
+    essential module properties. Without this call, you'll get fatal errors 'Call
+    to undefined method' or 'Undefined property' as soon as you use these features.
 - question: Why must you call parent::install() when installing a module?
-  answer: parent::install() registers your module in the PrestaShop database (ps_module table), defines the activation status, and allows PrestaShop to 'see' your module. Without this call, the module seems installed but doesn't appear in the module list and hooks don't work.
+  answer: parent::install() registers your module in the PrestaShop database (ps_module
+    table), defines the activation status, and allows PrestaShop to 'see' your module.
+    Without this call, the module seems installed but doesn't appear in the module
+    list and hooks don't work.
 - question: What is the correct way to access PrestaShop context in a hook?
-  answer: 'Best practice is to use Context::getContext() which works everywhere and is more reliable. You can also use $this->context (possible after parent::__construct()). The context contains all information about the current environment: language, shop, customer, currency.'
+  answer: 'Best practice is to use Context::getContext() which works everywhere and
+    is more reliable. You can also use $this->context (possible after parent::__construct()).
+    The context contains all information about the current environment: language,
+    shop, customer, currency.'
 - question: How to correctly assign variables to Smarty in PrestaShop?
-  answer: Use $this->context->smarty->assign(array('products' => $bestSellers)) in array format. Smarty expects a complete associative array with all variables, not individual calls. It's more performant (one call), more readable (all variables in one place), and easier to maintain.
+  answer: Use $this->context->smarty->assign(array('products' => $bestSellers)) in
+    array format. Smarty expects a complete associative array with all variables,
+    not individual calls. It's more performant (one call), more readable (all variables
+    in one place), and easier to maintain.
 - question: What is the correct path structure for hook templates?
-  answer: 'PrestaShop follows a strict convention: views/templates/hook/ for hook templates, views/templates/admin/ for administration, and views/templates/front/ for front-office controllers. The complete path in display() must be: $this->display(__FILE__, ''views/templates/hook/bestsellers.tpl'').'
+  answer: 'PrestaShop follows a strict convention: views/templates/hook/ for hook
+    templates, views/templates/admin/ for administration, and views/templates/front/
+    for front-office controllers. The complete path in display() must be: $this->display(__FILE__,
+    ''views/templates/hook/bestsellers.tpl'').'
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 # 🧩 PrestaShop Puzzle: Can You Find the 5 Errors?
 
 PrestaShop developers, I challenge you! 🚀

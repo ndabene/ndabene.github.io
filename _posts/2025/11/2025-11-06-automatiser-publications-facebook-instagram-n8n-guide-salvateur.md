@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur'
+title: Automatiser Facebook et Instagram avec n8n
 date: 2025-11-06
 author: Nicolas Dabène
 categories:
@@ -42,7 +42,14 @@ faq:
   answer: Oui, tant que vous utilisez l'API officielle (ce que nous faisons ici) et
     que vous respectez les règles de contenu de Meta. Cette méthode est parfaitement
     légale et encouragée par Meta pour les usages business légitimes.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
+- question: Combien de temps pour mettre en place?
+  answer: Selon votre expérience, comptez entre 30 minutes et 2 heures pour une première
+    mise en place.
 ---
+
 # Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur
 
 Si comme moi vous utilisez n8n et que vous pensiez que l'intégration pour poster sur Meta serait facile, vous avez probablement découvert une réalité bien différente. Entre l'application développeur Facebook, le Meta Business Suite, les tokens d'accès, les utilisateurs système et les multiples endpoints à jongler... vous vous êtes peut-être retrouvé à fixer votre écran avec ce sentiment familier de "mais pourquoi c'est si compliqué ?".

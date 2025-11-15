@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT Opens Up to Erotic Conversations: A Bold Turn by OpenAI'
+title: ChatGPT Opens to Erotic Conversations
 date: 2025-12-02
 author: Nicolas Dabène
 categories:
@@ -10,7 +10,8 @@ tags:
 - ChatGPT
 - AI
 - security
-excerpt: 'OpenAI lifts restrictions on ChatGPT: discover the ethical, commercial, and societal stakes of a decision that is transforming conversational AI.'
+excerpt: 'OpenAI lifts restrictions on ChatGPT: discover the ethical, commercial,
+  and societal stakes of a decision that is transforming conversational AI.'
 image: /assets/images/blog/2025/12/chatgpt-conversations-erotiques.jpg
 featured: true
 difficulty: Intermediate
@@ -24,16 +25,37 @@ lang: en
 ref: chatgpt-erotic-conversations-openai-2025
 faq:
 - question: Does ChatGPT now allow erotic conversations?
-  answer: Yes, since December 2025, ChatGPT allows exchanges of an erotic nature for verified adult users. This decision comes with reinforced safeguards including strict age verification, distress detection algorithms, and expert wellness consultation. However, explicit images remain prohibited.
+  answer: Yes, since December 2025, ChatGPT allows exchanges of an erotic nature for
+    verified adult users. This decision comes with reinforced safeguards including
+    strict age verification, distress detection algorithms, and expert wellness consultation.
+    However, explicit images remain prohibited.
 - question: Why did OpenAI make this decision now?
-  answer: OpenAI is responding to a rapidly growing market ($82 million in H1 2025, potential of $70 billion by 2030) where competitors like Character.AI, Replika, and Grok have already invested massively. Sam Altman claims to want to "treat adults like adults" while seeking profitability for a loss-making company valued at $500 billion.
+  answer: OpenAI is responding to a rapidly growing market ($82 million in H1 2025,
+    potential of $70 billion by 2030) where competitors like Character.AI, Replika,
+    and Grok have already invested massively. Sam Altman claims to want to "treat
+    adults like adults" while seeking profitability for a loss-making company valued
+    at $500 billion.
 - question: What are the ethical risks of this evolution?
-  answer: The main risks include difficulty of age verification (protecting minors), risk of addiction and desensitization in vulnerable people, emotional dependence on an artificial relationship, and potential distortion of consent understanding (AI obeys without truly consenting).
+  answer: The main risks include difficulty of age verification (protecting minors),
+    risk of addiction and desensitization in vulnerable people, emotional dependence
+    on an artificial relationship, and potential distortion of consent understanding
+    (AI obeys without truly consenting).
 - question: Will ChatGPT generate pornographic images?
-  answer: No, this opening is limited to textual and voice exchanges. DALL-E will continue to prohibit the creation of explicit nudity images. The choice of the term "erotica" suggests a literary and fantasized dimension rather than pornographic. However, this boundary could evolve with market pressures and technological progress.
+  answer: No, this opening is limited to textual and voice exchanges. DALL-E will
+    continue to prohibit the creation of explicit nudity images. The choice of the
+    term "erotica" suggests a literary and fantasized dimension rather than pornographic.
+    However, this boundary could evolve with market pressures and technological progress.
 - question: How are OpenAI's competitors positioning themselves?
-  answer: 'Google and Anthropic (creator of Claude) maintain total prohibition of all explicit sexual content. This strategic divergence creates market segmentation: OpenAI targets an adult audience seeking versatility while its competitors position themselves on strictly professional and family uses, with potentially different market shares.'
+  answer: 'Google and Anthropic (creator of Claude) maintain total prohibition of
+    all explicit sexual content. This strategic divergence creates market segmentation:
+    OpenAI targets an adult audience seeking versatility while its competitors position
+    themselves on strictly professional and family uses, with potentially different
+    market shares.'
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
 ---
+
 # ChatGPT Opens Up to Erotic Conversations: A Bold Turn by OpenAI
 
 Imagine for a moment: you're chatting casually with your voice assistant, and it's capable of understanding not only your professional needs, but also your most intimate emotions. Science fiction? Not anymore. In December 2025, ChatGPT will cross a new frontier by allowing exchanges of an erotic nature with its adult users. This decision, which would have seemed unthinkable just a few months ago, marks a major turning point in the history of conversational artificial intelligence.

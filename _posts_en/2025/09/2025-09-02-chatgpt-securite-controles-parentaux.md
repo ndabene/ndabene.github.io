@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ChatGPT Strengthens Security: Parental Controls and Reasoning AI for User Protection'
+title: 'ChatGPT Strengthens Security: What''s New'
 date: 2025-09-02
 author: Nicolas Dabène
 lang: en
@@ -13,7 +13,8 @@ tags:
 - ChatGPT
 - AI
 - security
-excerpt: 'OpenAI deploys an ambitious 120-day security plan for ChatGPT: parental controls, distress detection, and routing to advanced reasoning models.'
+excerpt: 'OpenAI deploys an ambitious 120-day security plan for ChatGPT: parental
+  controls, distress detection, and routing to advanced reasoning models.'
 image: /assets/images/blog/2025/09/2025-09-02-chatgpt-securite-controles-parentaux.jpg
 featured: true
 difficulty: Intermediate
@@ -25,14 +26,26 @@ technologies:
 estimated_reading_time: 12 minutes
 faq:
 - question: Do parental controls work retroactively on old conversations?
-  answer: No, parental controls only apply to new conversations created after their activation. Existing conversations are not retroactively affected.
+  answer: No, parental controls only apply to new conversations created after their
+    activation. Existing conversations are not retroactively affected.
 - question: How does AI precisely detect acute distress?
-  answer: Through language analysis, behavioral patterns, and specific requests. The exact technical details remain confidential to prevent circumvention by malicious users.
+  answer: Through language analysis, behavioral patterns, and specific requests. The
+    exact technical details remain confidential to prevent circumvention by malicious
+    users.
 - question: Can parents read their teenagers' conversations?
-  answer: No, the announced features focus on controls and distress notifications, not on direct conversation content monitoring to preserve teenagers' privacy.
+  answer: No, the announced features focus on controls and distress notifications,
+    not on direct conversation content monitoring to preserve teenagers' privacy.
 - question: Will these measures affect ChatGPT's performance?
-  answer: Routing to reasoning models might slightly slow down responses in some distress cases, but this significantly improves their quality and safety.
+  answer: Routing to reasoning models might slightly slow down responses in some distress
+    cases, but this significantly improves their quality and safety.
+- question: Is Claude free?
+  answer: Claude offers a limited free version and Pro ($20/month) and Team ($30/month
+    per user) subscriptions.
+- question: What's the difference between Claude and ChatGPT?
+  answer: Claude excels at long tasks and analysis. ChatGPT is more conversational.
+    Both are complementary.
 ---
+
 # ChatGPT Strengthens Security: Parental Controls and Reasoning AI for User Protection
 
 ## Introduction

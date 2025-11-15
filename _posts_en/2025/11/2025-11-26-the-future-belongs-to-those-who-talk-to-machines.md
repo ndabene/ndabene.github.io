@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Future Belongs to Those Who Talk to Machines, Not to Those Who Code Them"
+title: The Future of Developers with AI
 date: 2025-11-26
 author: Nicolas Dabène
 categories:
@@ -13,8 +13,12 @@ tags:
 - prompt engineering
 - future of work
 - soft skills
-excerpt: >
-  Code is no longer the only language of power in the digital world. A new skill, more human and more accessible, is taking over: the art of "talking" to machines. Discover why the future of innovation, especially in PrestaShop, will belong to communicators, creatives and visionaries, and not just to coders anymore.
+excerpt: 'Code is no longer the only language of power in the digital world. A new
+  skill, more human and more accessible, is taking over: the art of "talking" to machines.
+  Discover why the future of innovation, especially in PrestaShop, will belong to
+  communicators, creatives and visionaries, and not just to coders anymore.
+
+  '
 image: /assets/images/blog/2025/11/parler-aux-machines-futur.jpg
 keywords:
 - AI
@@ -34,17 +38,37 @@ technologies:
 - n8n
 estimated_reading_time: 15 minutes
 faq:
-- question: Why do we say the future belongs to those who talk to machines rather than those who code them?
-  answer: With the arrival of LLMs like GPT-4, machines now understand natural language. Developers are no longer needed as translators between human intention and machine execution. The key skill becomes the ability to formulate clear and precise requests in natural language, thus democratizing digital creation.
+- question: Why do we say the future belongs to those who talk to machines rather
+    than those who code them?
+  answer: With the arrival of LLMs like GPT-4, machines now understand natural language.
+    Developers are no longer needed as translators between human intention and machine
+    execution. The key skill becomes the ability to formulate clear and precise requests
+    in natural language, thus democratizing digital creation.
 - question: What is Prompt Engineering?
-  answer: Prompt Engineering is the art and science of constructing the perfect instruction to get the perfect result from an AI. It's not simply "asking" the AI, but sculpting it, guiding it, and constraining it with structured and precise instructions.
+  answer: Prompt Engineering is the art and science of constructing the perfect instruction
+    to get the perfect result from an AI. It's not simply "asking" the AI, but sculpting
+    it, guiding it, and constraining it with structured and precise instructions.
 - question: What are the 4 key elements for communicating well with an AI?
-  answer: "The 4 pillars are: 1) The Role (Persona) - defining the expert you're invoking, 2) The Objective (Goal) - what the AI must accomplish, 3) The Context (Context) - data, examples and constraints, 4) The Format (Format) - how to structure the result. Mastering these elements allows you to transform AI into a super-powerful tool."
+  answer: 'The 4 pillars are: 1) The Role (Persona) - defining the expert you''re
+    invoking, 2) The Objective (Goal) - what the AI must accomplish, 3) The Context
+    (Context) - data, examples and constraints, 4) The Format (Format) - how to structure
+    the result. Mastering these elements allows you to transform AI into a super-powerful
+    tool.'
 - question: Will developers disappear with AI?
-  answer: No, they're evolving. Developers are becoming AI Systems Architects. Their role is no longer to build every feature, but to create robust APIs, ensure security, build infrastructures and intervene on complex problems where AI fails. Code becomes a meta-skill.
+  answer: No, they're evolving. Developers are becoming AI Systems Architects. Their
+    role is no longer to build every feature, but to create robust APIs, ensure security,
+    build infrastructures and intervene on complex problems where AI fails. Code becomes
+    a meta-skill.
 - question: How does AI change the work of PrestaShop e-merchants?
-  answer: E-merchants can now create complex workflows (automated customer service, data analysis, personalized promotions) without coding, using tools like n8n combined with well-written prompts. They move from reactive mode (depending on a developer) to proactive mode (directly dialoguing with automated systems).
+  answer: E-merchants can now create complex workflows (automated customer service,
+    data analysis, personalized promotions) without coding, using tools like n8n combined
+    with well-written prompts. They move from reactive mode (depending on a developer)
+    to proactive mode (directly dialoguing with automated systems).
+- question: Is PrestaShop free?
+  answer: Yes, PrestaShop is an open-source e-commerce CMS and is free. You only pay
+    for hosting and premium modules.
 ---
+
 
 # The Future Belongs to Those Who Talk to Machines, Not to Those Who Code Them
 

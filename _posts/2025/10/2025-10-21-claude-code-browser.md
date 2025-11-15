@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Claude Code en Ligne : L''IA Agentique Transforme le Développement Web'
+title: 'Claude Code en ligne : IA agentique sur le web'
 date: 2025-10-21
 author: Nicolas Dabène
 categories:
@@ -39,7 +39,14 @@ faq:
 - question: Ça fonctionne avec PHP/Laravel ou seulement JavaScript ?
   answer: 'Claude Code Web fonctionne avec tous les langages : PHP, Python, JavaScript/Node,
     Java, Go, Rust, C#. Tout s''exécute dans le conteneur cloud.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
+
 # Claude Code en Ligne : L'IA Agentique Transforme le Développement Web
 
 Imaginez un développeur qui n'a jamais besoin d'ouvrir son terminal local, qui peut corriger un bug en disant simplement "il y a un problème sur la page de login" et qui génère automatiquement une pull request bien documentée. Cela ne relève plus de la science-fiction : **Claude Code, l'outil de codage d'Anthropic, franchit un cap décisif en devenant totalement accessible depuis votre navigateur**.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "L'Ère de l'Assistant de Gestion IA : Décryptage du PS MCP Server et l'Avènement du Module Révolutionnaire MCP Tools Plus"
+title: Comment l'IA découvre vos outils MCP?
 date: 2025-11-24
 author: Nicolas Dabène
 categories:
@@ -14,8 +14,13 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: >
-  Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras droit infatigable : rapports comptables en un clin d'œil, promos ciblées automatisées, et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient réalité. Découvrez comment ces outils transforment les frustrations quotidiennes en opportunités de croissance pour marchands et agences.
+excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras
+  droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées,
+  et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient
+  réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
+  en opportunités de croissance pour marchands et agences.
+
+  '
 image: /assets/images/blog/ps-mcp-server-tools-plus.jpg
 keywords:
 - PS MCP Server
@@ -27,7 +32,7 @@ keywords:
 - automatisation
 - langage naturel
 - module PrestaShop
-difficulty: "⭐️⭐️⭐️"
+difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop
 - MCP
@@ -38,18 +43,42 @@ technologies:
 estimated_reading_time: 15 minutes
 faq:
 - question: Qu'est-ce que le PS MCP Server ?
-  answer: Le PS MCP Server est le pont essentiel entre l'IA et votre boutique PrestaShop. Il connecte un grand modèle linguistique (LLM) comme ChatGPT ou Claude directement à PrestaShop, permettant à l'IA d'accéder aux outils pour interroger et agir sur votre boutique. Lancé le 19 novembre 2025, c'est une infrastructure sécurisée et cohérente qui normalise la communication entre l'IA et PrestaShop.
+  answer: Le PS MCP Server est le pont essentiel entre l'IA et votre boutique PrestaShop.
+    Il connecte un grand modèle linguistique (LLM) comme ChatGPT ou Claude directement
+    à PrestaShop, permettant à l'IA d'accéder aux outils pour interroger et agir sur
+    votre boutique. Lancé le 19 novembre 2025, c'est une infrastructure sécurisée
+    et cohérente qui normalise la communication entre l'IA et PrestaShop.
 - question: Qu'est-ce que le module MCP Tools Plus ?
-  answer: MCP Tools Plus est un module premium développé par BusinessTech/PrestaModule qui étend les capacités du PS MCP Server. Il ajoute des outils avancés pour une communication enrichie, permettant à votre LLM d'accéder à des requêtes plus sophistiquées et de s'intégrer avec des modules compatibles comme Sales Reports Pro. C'est l'extension qui transforme l'IA en un assistant de gestion polyvalent.
+  answer: MCP Tools Plus est un module premium développé par BusinessTech/PrestaModule
+    qui étend les capacités du PS MCP Server. Il ajoute des outils avancés pour une
+    communication enrichie, permettant à votre LLM d'accéder à des requêtes plus sophistiquées
+    et de s'intégrer avec des modules compatibles comme Sales Reports Pro. C'est l'extension
+    qui transforme l'IA en un assistant de gestion polyvalent.
 - question: Quelle est la différence entre le PS MCP Server et MCP Tools Plus ?
-  answer: Le PS MCP Server pose les fondations en créant le canal de communication entre l'IA et PrestaShop avec des outils de base. MCP Tools Plus est une extension premium qui enrichit ces capacités avec des fonctionnalités avancées, l'intégration de modules tiers et des outils de gestion sophistiqués. Le Server est la route, Tools Plus est le véhicule haute performance.
+  answer: Le PS MCP Server pose les fondations en créant le canal de communication
+    entre l'IA et PrestaShop avec des outils de base. MCP Tools Plus est une extension
+    premium qui enrichit ces capacités avec des fonctionnalités avancées, l'intégration
+    de modules tiers et des outils de gestion sophistiqués. Le Server est la route,
+    Tools Plus est le véhicule haute performance.
 - question: Quels LLM sont compatibles avec cette solution ?
-  answer: Les LLM compatibles MCP incluent Claude (4.5 Sonnet excelle en compréhension et qualité), ChatGPT (5.1 avec mode dev ON) et Le Chat (Mistral). Le choix dépend de vos besoins - Claude pour la précision des rapports complexes, ChatGPT pour la polyvalence, en fonction du coût et de la qualité recherchée.
+  answer: Les LLM compatibles MCP incluent Claude (4.5 Sonnet excelle en compréhension
+    et qualité), ChatGPT (5.1 avec mode dev ON) et Le Chat (Mistral). Le choix dépend
+    de vos besoins - Claude pour la précision des rapports complexes, ChatGPT pour
+    la polyvalence, en fonction du coût et de la qualité recherchée.
 - question: Comment ces outils bénéficient-ils aux marchands PrestaShop ?
-  answer: Ces outils éliminent les attentes frustrantes en permettant aux marchands d'obtenir des insights immédiats via langage naturel - rapports de ventes en minutes, promotions automatisées pour clients VIP, mise à jour de produits avec contenu dynamique. Ils libèrent du temps pour la stratégie plutôt que les tâches manuelles, transformant PrestaShop en partenaire intelligent.
+  answer: Ces outils éliminent les attentes frustrantes en permettant aux marchands
+    d'obtenir des insights immédiats via langage naturel - rapports de ventes en minutes,
+    promotions automatisées pour clients VIP, mise à jour de produits avec contenu
+    dynamique. Ils libèrent du temps pour la stratégie plutôt que les tâches manuelles,
+    transformant PrestaShop en partenaire intelligent.
 - question: Quels types d'actions peut-on automatiser avec MCP Tools Plus ?
-  answer: Les actions incluent la génération de rapports comptables PDF envoyés automatiquement, la segmentation et récompense des meilleurs clients avec vérification de paiement (Qonto) et envoi d'emails (Brevo), l'analyse de produits en perte de vitesse avec génération de vidéos et mise à jour automatique. Tout se fait via prompts en langage naturel.
+  answer: Les actions incluent la génération de rapports comptables PDF envoyés automatiquement,
+    la segmentation et récompense des meilleurs clients avec vérification de paiement
+    (Qonto) et envoi d'emails (Brevo), l'analyse de produits en perte de vitesse avec
+    génération de vidéos et mise à jour automatique. Tout se fait via prompts en langage
+    naturel.
 ---
+
 
 # 🧠 Introduction : Répondre à la Frustration par l'Intelligence Artificielle
 
