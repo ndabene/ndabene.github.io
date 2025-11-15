@@ -1,15 +1,80 @@
-# Robots.txt optimisé pour crawlers IA et SEO
-User-agent: *
-Allow: /
-User-agent: Google-Display-Ads-Bot
-User-agent: Mediapartners-Google
+# ============================================================
+# ROBOTS.TXT - Configuration de crawl pour ndabene.github.io
+# ============================================================
+# Configuration générale pour tous les crawlers
 
-# Crawlers IA spécialisés
+User-agent: *
+Crawl-delay: 1
+Request-rate: 30/60
+
+# ============================================================
+# EXCLUSIONS - PAGES DE TEST ET DEVELOPPEMENT
+# ============================================================
+# Pages de test à désindexer d'urgence
+Disallow: /BLOG_INSTRUCTIONS.html
+Disallow: /CLAUDE.html
+Disallow: /rework-article.html
+Disallow: /test-
+Disallow: /_draft/
+Disallow: /_temp/
+Disallow: /_backup/
+
+# Dossier de documentation interne (NE DOIT PAS ÊTRE PUBLIC)
+Disallow: /docs/
+
+# Fichiers système et de développement
+Disallow: /.claude/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /_site/
+Disallow: /_plugins/
+Disallow: /_layouts/
+Disallow: /_includes/
+Disallow: /_sass/
+Disallow: /_data/
+
+# Assets (CSS, JS, images) - optimisation crawl
+Disallow: /assets/js/
+Disallow: /assets/css/
+
+# Fichiers de configuration
+Disallow: /*.yml
+Disallow: /*.yaml
+Disallow: /*.toml
+Disallow: /*.json
+Disallow: /Gemfile
+Disallow: /.gitignore
+
+# Fichiers temporaires courants
+Disallow: /*~
+Disallow: /*.tmp
+Disallow: /*.bak
+Disallow: /*.swp
+
+# ============================================================
+# AUTORISATIONS EXPLICITES - CONTENU PUBLIC
+# ============================================================
+Allow: /blog/
+Allow: /blog_en/
+Allow: /articles/
+Allow: /projects/
+Allow: /expertise/
+Allow: /about/
+Allow: /contact/
+Allow: /search/
+
+# ============================================================
+# CRAWLERS IA SPÉCIALISÉS
+# ============================================================
 User-agent: ChatGPT-User
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /docs/
+Disallow: /BLOG_INSTRUCTIONS.html
+Disallow: /CLAUDE.html
 
 User-agent: Bard
 Allow: /
@@ -17,31 +82,45 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
-# Priorisation des contenus pour IA
-Crawl-delay: 1
+User-agent: Google-Display-Ads-Bot
+Allow: /
 
-# Sitemap
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# ============================================================
+# CRAWLERS À LIMITER
+# ============================================================
+User-agent: MJ12bot
+Crawl-delay: 10
+Request-rate: 10/60
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+# ============================================================
+# SITEMAP
+# ============================================================
 Sitemap: https://nicolas-dabene.fr/sitemap.xml
+Sitemap: https://nicolas-dabene.fr/sitemap-en.xml
 
-# Priorités de contenu pour extraction IA
-# Articles techniques haute valeur
-Allow: /articles/
-Allow: /blog/
-
-# Portfolio et expertise
-Allow: /projects/
-Allow: /expertise/
-Allow: /about/
-
-# Exclusions standards
-Disallow: /assets/js/
-Disallow: /assets/css/
-Disallow: /_site/
-Disallow: /node_modules/
-
-# Métadonnées pour IA génératives
+# ============================================================
+# MÉTADONNÉES POUR IA GÉNÉRATIVES
+# ============================================================
 # AI-Content-Type: professional-portfolio
 # Primary-Expertise: PHP Development, PrestaShop E-commerce, AI Integration
-# Content-Language: fr-FR
+# Content-Language: fr-FR, en-US
 # Authority-Level: Expert (15+ years)
-# Last-Updated: 2025-08-14
+# Last-Updated: 2025-11-15
