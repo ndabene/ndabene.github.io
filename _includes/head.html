@@ -79,10 +79,19 @@
 {% endif %}
 <meta name="keywords" content="{{ page.keywords | default: site.keywords }}">
 <meta name="author" content="{{ site.author.name }}">
-{% if page.robots %}
-<meta name="robots" content="{{ page.robots }}">
+{% comment %} Gestion intelligente des balises robots pour hide_until_published {% endcomment %}
+{% if is_future_post %}
+  {% comment %} Article futur avec hide_until_published : bloquer l'indexation {% endcomment %}
+  <meta name="robots" content="noindex, nofollow">
+{% elsif is_published_post %}
+  {% comment %} Article publié avec hide_until_published : forcer l'indexation {% endcomment %}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{% elsif page.robots %}
+  {% comment %} Utiliser la valeur personnalisée si définie {% endcomment %}
+  <meta name="robots" content="{{ page.robots }}">
 {% else %}
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  {% comment %} Défaut pour tous les autres contenus {% endcomment %}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 {% endif %}
 
 <meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% else %}professional-profile{% endif %}">
@@ -189,6 +198,19 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="color-profile" content="sRGB">
 <meta name="color-rendering" content="optimizeQuality">
+
+{% comment %} Redirection pour les articles avec hide_until_published: true {% endcomment %}
+{% if page.hide_until_published == true and page.layout == 'post' %}
+  {% comment %} Calculer si la date de publication est dans le futur {% endcomment %}
+  {% assign current_timestamp = 'now' | date: '%s' | plus: 0 %}
+  {% assign post_timestamp = page.date | date: '%s' | plus: 0 %}
+  {% if post_timestamp > current_timestamp %}
+    <meta http-equiv="refresh" content="0; url={{ '/' | absolute_url }}">
+    {% assign is_future_post = true %}
+  {% else %}
+    {% assign is_published_post = true %}
+  {% endif %}
+{% endif %}
 
 <!-- Force le rendu sRGB -->
 <style>

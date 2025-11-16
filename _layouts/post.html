@@ -1,6 +1,23 @@
 ---
 layout: default
 ---
+
+{% comment %} Redirection JavaScript immédiate pour les articles non encore publiés {% endcomment %}
+{% if page.hide_until_published == true %}
+<script>
+  (function() {
+    // Date de publication de l'article
+    var postDate = new Date("{{ page.date | date: '%Y-%m-%d' }}T00:00:00");
+    var currentDate = new Date();
+
+    // Si la date actuelle est avant la date de publication, rediriger
+    if (currentDate < postDate) {
+      window.location.replace("{{ '/' | absolute_url }}");
+    }
+  })();
+</script>
+{% endif %}
+
 <div {% if page.banner_display %}data-banner-display="{{ page.banner_display }}"{% endif %}
      {% if page.banner_position %}data-banner-position="{{ page.banner_position }}"{% endif %}>
 
@@ -8,9 +25,24 @@ layout: default
 {% include blog-post-jsonld.html %}
 
 <article class="post-page">
+    <!-- Message pour les articles non encore publiés -->
+    {% if page.hide_until_published == true %}
+      {% assign current_timestamp = 'now' | date: '%s' | plus: 0 %}
+      {% assign post_timestamp = page.date | date: '%s' | plus: 0 %}
+      {% if post_timestamp > current_timestamp %}
+        <noscript>
+          <div style="padding: 2rem; margin: 2rem; background: #fff3cd; border: 2px solid #ffc107; border-radius: 8px; text-align: center;">
+            <h2>Article non encore publié</h2>
+            <p>Cet article sera disponible le {% include date-fr.html date=page.date %}.</p>
+            <p><a href="{{ '/' | absolute_url }}" style="color: #0066cc; text-decoration: underline;">Retour à l'accueil</a></p>
+          </div>
+        </noscript>
+      {% endif %}
+    {% endif %}
+
     <!-- Barre d'administration pour preview -->
     {% include admin-preview-bar.html %}
-    
+
     <!-- Reading Progress Bar -->
     {% if page.reading_progress != false %}
     <div class="reading-progress">
