@@ -27,7 +27,7 @@
             {% endif %}
             {% assign published_posts = "" | split: "" %}
             {% for post in all_posts %}
-                {% if post.date < site.time %}
+                {% if post.date <= site.time %}
                     {% assign published_posts = published_posts | push: post %}
                 {% endif %}
             {% endfor %}

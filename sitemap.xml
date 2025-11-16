@@ -59,6 +59,9 @@ layout: null
   <!-- Blog Posts FR -->
   {% for post in site.posts %}
     {% unless post.sitemap.exclude == "yes" %}
+    {% assign post_date = post.date | date: "%Y-%m-%d" %}
+    {% assign today = site.time | date: "%Y-%m-%d" %}
+    {% if post_date <= today %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
@@ -82,12 +85,16 @@ layout: null
       </image:image>
       {% endif %}
     </url>
+    {% endif %}
     {% endunless %}
   {% endfor %}
 
   <!-- Blog Posts EN -->
   {% for post in site.posts_en %}
     {% unless post.sitemap.exclude == "yes" %}
+    {% assign post_date = post.date | date: "%Y-%m-%d" %}
+    {% assign today = site.time | date: "%Y-%m-%d" %}
+    {% if post_date <= today %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
@@ -111,6 +118,7 @@ layout: null
       </image:image>
       {% endif %}
     </url>
+    {% endif %}
     {% endunless %}
   {% endfor %}
 
