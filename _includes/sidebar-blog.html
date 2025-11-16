@@ -34,23 +34,6 @@
     </div>
   </div>
 
-  <!-- Widget Catégories -->
-  <div class="sidebar-widget-compact">
-    <h4><i class="fas fa-folder"></i> Catégories</h4>
-    <div class="categories-list">
-      {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-      {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
-      {% for category in all_categories %}
-        {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
-        <a href="/blog/categories/{{ category | slugify }}/" class="category-link">
-          <i class="fas fa-chevron-right"></i>
-          {{ category }}
-          <span class="category-count">({{ category_posts.size }})</span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-
   <!-- Widget Tags Populaires -->
   <div class="sidebar-widget-compact">
     <h4><i class="fas fa-tags"></i> Tags Populaires</h4>
