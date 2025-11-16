@@ -168,10 +168,8 @@
               </span>
               <span class="cross-read-time">
                 <i class="far fa-clock"></i>
-                {% if post.content %}
-                  {% assign words = post.content | strip_html | number_of_words %}
-                  {% assign read_time = words | divided_by: 200 %}
-                  {% if read_time < 1 %}1{% else %}{{ read_time }}{% endif %} min
+                {% if post.estimated_reading_time %}
+                  {{ post.estimated_reading_time | remove: ' minutes' }} min
                 {% else %}
                   5 min
                 {% endif %}
