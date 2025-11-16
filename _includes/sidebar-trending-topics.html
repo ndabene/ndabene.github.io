@@ -26,14 +26,10 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
                         <h5 class="trending-title">{{ post.title | truncate: 60 }}</h5>
 
                         <div class="trending-stats">
-            
-                            {% if post.content %}
-                                {% assign words = post.content | strip_html | number_of_words %}
-                                {% assign read_time = words | divided_by: 200 %}
-                                {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                            {% if post.estimated_reading_time %}
                                 <span class="trending-stat">
                                     <i class="fas fa-clock"></i>
-                                    {{ read_time }} min
+                                    {{ post.estimated_reading_time | remove: ' minutes' }} min
                                 </span>
                             {% endif %}
                         </div>

@@ -34,13 +34,10 @@ Usage: {% include featured-articles-grid.html posts=published_posts count=3 %}
                             {% include date-fr.html date=post.date %}
                         </time>
 
-                        {% if post.content %}
-                            {% assign words = post.content | strip_html | number_of_words %}
-                            {% assign read_time = words | divided_by: 200 %}
-                            {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                        {% if post.estimated_reading_time %}
                             <span class="reading-time">
                                 <i class="fas fa-clock"></i>
-                                {{ read_time }} min
+                                {{ post.estimated_reading_time | remove: ' minutes' }} min
                             </span>
                         {% endif %}
                     </div>

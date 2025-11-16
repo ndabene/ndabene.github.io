@@ -31,13 +31,10 @@ Usage: {% include hero-article.html post=site.posts.first %}
                         {% include date-fr.html date=hero_post.date %}
                     </time>
 
-                    {% if hero_post.content %}
-                        {% assign words = hero_post.content | strip_html | number_of_words %}
-                        {% assign read_time = words | divided_by: 200 %}
-                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                    {% if hero_post.estimated_reading_time %}
                         <span class="reading-time">
                             <i class="fas fa-clock"></i>
-                            {{ read_time }} min
+                            {{ hero_post.estimated_reading_time | remove: ' minutes' }} min
                         </span>
                     {% endif %}
                 </div>
