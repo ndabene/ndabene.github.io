@@ -190,6 +190,17 @@
 <meta name="color-profile" content="sRGB">
 <meta name="color-rendering" content="optimizeQuality">
 
+{% comment %} Redirection pour les articles avec hide_until_published: true {% endcomment %}
+{% if page.hide_until_published == true and page.layout == 'post' %}
+  {% comment %} Calculer si la date de publication est dans le futur {% endcomment %}
+  {% assign current_timestamp = 'now' | date: '%s' | plus: 0 %}
+  {% assign post_timestamp = page.date | date: '%s' | plus: 0 %}
+  {% if post_timestamp > current_timestamp %}
+    <meta http-equiv="refresh" content="0; url={{ '/' | absolute_url }}">
+    <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+{% endif %}
+
 <!-- Force le rendu sRGB -->
 <style>
   * {
