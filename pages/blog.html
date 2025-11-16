@@ -212,21 +212,6 @@ llm_topics:
                         </div>
                     </div>
 
-                    <div class="sidebar-widget-compact">
-                        <h4>Catégories</h4>
-                        <div class="categories-compact">
-                            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-                            {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
-                            {% for category in all_categories %}
-                                {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
-                                <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
-                                    {{ category }} <span>({{ category_posts.size }})</span>
-                                </a>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-
                     {% if site.data.series %}
                         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
                         {% assign has_series_with_posts = false %}
