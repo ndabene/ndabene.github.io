@@ -59,6 +59,8 @@ layout: null
   <!-- Blog Posts FR -->
   {% for post in site.posts %}
     {% unless post.sitemap.exclude == "yes" %}
+    {% comment %} Masquer uniquement si hide_until_published est true ET la date est dans le futur {% endcomment %}
+    {% if post.hide_until_published != true or post.date <= site.time %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
@@ -82,12 +84,15 @@ layout: null
       </image:image>
       {% endif %}
     </url>
+    {% endif %}
     {% endunless %}
   {% endfor %}
 
   <!-- Blog Posts EN -->
   {% for post in site.posts_en %}
     {% unless post.sitemap.exclude == "yes" %}
+    {% comment %} Masquer uniquement si hide_until_published est true ET la date est dans le futur {% endcomment %}
+    {% if post.hide_until_published != true or post.date <= site.time %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
     <url>
       <loc>{{ post.url | prepend: site.url }}</loc>
@@ -111,6 +116,7 @@ layout: null
       </image:image>
       {% endif %}
     </url>
+    {% endif %}
     {% endunless %}
   {% endfor %}
 

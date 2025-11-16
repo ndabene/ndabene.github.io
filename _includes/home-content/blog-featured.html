@@ -27,7 +27,8 @@
             {% endif %}
             {% assign published_posts = "" | split: "" %}
             {% for post in all_posts %}
-                {% if post.date < site.time %}
+                {% comment %} Masquer uniquement si hide_until_published est true ET la date est dans le futur {% endcomment %}
+                {% if post.hide_until_published != true or post.date <= site.time %}
                     {% assign published_posts = published_posts | push: post %}
                 {% endif %}
             {% endfor %}
