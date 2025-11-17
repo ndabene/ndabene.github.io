@@ -1611,28 +1611,6 @@ body.dark-mode {
       animation: heartbeat 2s ease-in-out infinite;
     }
   }
-
-  // Conteneur pour l'IPR de Google Funding Choices
-  .ipr-footer-container {
-    margin-top: $spacing-md;
-    width: 100%;
-
-    // Styles pour l'ipr-container une fois intégré
-    .ipr-container {
-      position: static !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      background: rgba($white, 0.05);
-      border-radius: 8px;
-      padding: $spacing-md;
-      border: 1px solid rgba($white, 0.1);
-
-      // Assurer que le contenu est bien visible
-      * {
-        color: inherit !important;
-      }
-    }
-  }
 }
 
 // Animation pour le coeur
