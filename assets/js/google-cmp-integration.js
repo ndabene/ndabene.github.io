@@ -83,7 +83,7 @@
 
     // Fonction pour ouvrir le CMP de Google
     function openGoogleCMP(e) {
-        e.preventDefault();
+        if (e) e.preventDefault();
 
         console.log('[Google CMP] Tentative d\'ouverture du CMP...');
 
@@ -93,14 +93,14 @@
             window.__tcfapi('displayConsentUi', 2, function(success) {
                 console.log('[Google CMP] TCF displayConsentUi:', success);
             });
-            return;
+            return true;
         }
 
         // Méthode 2 : Via __gpp (Global Privacy Platform)
         if (typeof window.__gpp === 'function') {
             console.log('[Google CMP] Ouverture via __gpp');
             window.__gpp('displayConsentUi');
-            return;
+            return true;
         }
 
         // Méthode 3 : Via l'API Funding Choices
@@ -111,12 +111,13 @@
                     window.googlefc.showRevocationMessage();
                 }
             });
-            return;
+            return true;
         }
 
-        // Si aucune méthode ne fonctionne, afficher un message
+        // Si aucune méthode ne fonctionne, afficher un message informatif
         console.warn('[Google CMP] Impossible d\'ouvrir le CMP - API non disponible');
-        alert('Le gestionnaire de cookies se chargera dans quelques instants. Veuillez réessayer.');
+        alert('Le gestionnaire de cookies Google est en cours de chargement. Veuillez patienter quelques secondes et réessayer.\n\nSi le problème persiste, vous pouvez gérer vos préférences via notre Politique de confidentialité.');
+        return false;
     }
 
     // Écouter les changements de consentement via __tcfapi
