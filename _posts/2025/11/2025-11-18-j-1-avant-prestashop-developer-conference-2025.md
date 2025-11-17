@@ -73,7 +73,7 @@ Une Dev Conf, ce n'est pas juste des présentations PowerPoint et des démos pro
 
 ### Pourquoi cette édition est particulière
 
-2025 marque un tournant pour PrestaShop. La version 9 arrive avec son lot de changements structurels, et les enjeux autour de la performance, de la sécurité et de l'IA n'ont jamais été aussi prégnants.
+2025 marque un tournant pour PrestaShop. La version 9 est là avec son lot de changements structurels, et les enjeux autour de la performance, de la sécurité et de l'IA n'ont jamais été aussi prégnants.
 
 **Cette Dev Conf, c'est votre opportunité de prendre de l'avance.** Pendant que d'autres attendront les documentations officielles, vous aurez déjà compris les nouvelles architectures, testé les nouvelles approches, et échangé directement avec ceux qui les ont conçues.
 
