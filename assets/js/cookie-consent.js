@@ -232,12 +232,21 @@ class CookieConsent {
 
     loadGoogleAnalytics(preferences) {
         // Avec Consent Mode, le script global est déjà inclus dans la page
-        // On se contente d'activer les stockages consentis si l'utilisateur consent
+        // Si consentement déjà donné au chargement, reconfigurer avec stockage activé
+        if (window.gtag && window.GA_MEASUREMENT_ID && preferences.analytics) {
+            window.gtag('config', window.GA_MEASUREMENT_ID, {
+                'client_storage': 'auto',  // Active les cookies pour données enrichies
+                'anonymize_ip': true,
+                'allow_google_signals': false,
+                'allow_ad_personalization_signals': false,
+                'cookie_flags': 'SameSite=Strict;Secure'
+            });
+        }
         this.enableGoogleAnalytics(preferences);
     }
 
     enableGoogleAnalytics(preferences = {}) {
-        if (window.gtag) {
+        if (window.gtag && window.GA_MEASUREMENT_ID) {
             const wasGranted = this.analyticsConsentGranted;
             const update = {};
 
@@ -254,8 +263,19 @@ class CookieConsent {
                 update.ad_personalization = 'granted';
             }
 
+            // Mettre à jour le consentement
             window.gtag('consent', 'update', update);
+
+            // Si analytics accepté, reconfigurer avec stockage activé pour données enrichies
             if (preferences.analytics && !wasGranted) {
+                window.gtag('config', window.GA_MEASUREMENT_ID, {
+                    'client_storage': 'auto',  // Active les cookies pour données enrichies
+                    'anonymize_ip': true,
+                    'allow_google_signals': false,
+                    'allow_ad_personalization_signals': false,
+                    'cookie_flags': 'SameSite=Strict;Secure'
+                });
+                // Envoyer un événement page_view avec le nouveau mode
                 window.gtag('event', 'page_view', {
                     page_location: location.href,
                     page_title: document.title
