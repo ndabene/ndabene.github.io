@@ -23,7 +23,7 @@ technologies:
 - PrestaShop
 - PrestaShop 9
 - Hummingbird
-estimated_reading_time: 8 minutes
+estimated_reading_time: 5 minutes
 faq:
 - question: Qu'est-ce que la PrestaShop Developer Conference et pourquoi est-elle si importante ?
   answer: La PrestaShop Developer Conference est LE rendez-vous annuel de la communauté PrestaShop où développeurs, contributeurs et passionnés se réunissent pour découvrir les futures orientations du projet. C'est là que les retours d'expérience sont partagés (comme sur PrestaShop 9 récemment sorti), que les experts transmettent leurs connaissances et que la communauté se renforce. Après 15 ans dans l'écosystème, je peux affirmer que c'est le meilleur endroit pour comprendre où va PrestaShop et comment en tirer parti.
@@ -77,111 +77,45 @@ Une Dev Conf, ce n'est pas juste des présentations PowerPoint et des démos pro
 
 **Cette Dev Conf, c'est votre opportunité de prendre de l'avance.** Pendant que d'autres attendront les documentations officielles, vous aurez déjà compris les nouvelles architectures, testé les nouvelles approches, et échangé directement avec ceux qui les ont conçues.
 
-## 🚀 Le programme : ce qui va faire vibrer l'écosystème
+## 🚀 Ce qui vous attend demain
 
-J'ai décortiqué le programme, et croyez-moi, il y a de quoi s'enthousiasmer. Voici les grandes lignes.
+J'ai parcouru [le programme officiel](https://events.prestashop.com/e/prestashop-developer-conference-2025/fr/sessions), et franchement, cette édition s'annonce exceptionnelle. Trois grandes thématiques se dessinent :
 
-### 1. PrestaShop 9 : retours d'expérience et bonnes pratiques
+### PrestaShop 9 et la vision produit
 
-**C'est LA session que personne ne veut manquer.**
+**C'est LA session que personne ne veut manquer.** PrestaShop 9 vient de sortir, et l'équipe va partager les retours d'expérience, les bonnes pratiques de migration, les pièges à éviter, et surtout la roadmap pour les prochaines versions. C'est l'occasion d'entendre directement les équipes sur l'avenir de la plateforme.
 
-L'équipe Produit de PrestaShop va partager les **retours d'expérience sur PrestaShop 9**. Sorti récemment, cette version marque un vrai tournant avec ses évolutions architecturales majeures. C'est l'occasion d'entendre directement les équipes sur :
+### Ateliers techniques et bonnes pratiques
 
-- Les **bonnes pratiques de migration** de PS 8 vers PS 9
-- Les **pièges à éviter** lors de la mise à jour
-- Les **nouvelles APIs** et comment en tirer parti
-- La **roadmap** pour les prochaines versions et évolutions
-- Les **retours terrain** des premiers adoptants
+Le cœur d'une Dev Conf ! Des sessions pratiques sur le back-office moderne, le thème Hummingbird, et comment contribuer au projet open source. De quoi monter en compétences concrètement.
 
-Personnellement, c'est la session qui me fait le plus vibrer. PrestaShop 9 marque un vrai virage, et je veux comprendre comment migrer mes projets en toute sécurité, et surtout, **comment exploiter au maximum ses nouvelles capacités.**
+### Sécurité, Performance et IA
 
-Une autre session cruciale portera sur **l'avenir du front-office**. Avec l'évolution du comportement des consommateurs, les attentes en matière d'UX et de performance sont démesurées. Comment PrestaShop compte-t-il poursuivre cette évolution ? Réponse demain.
+Les trois piliers de l'e-commerce moderne. Comment protéger vos boutiques, optimiser les performances, et intégrer l'Intelligence Artificielle dans vos workflows. Des sujets cruciaux qui définissent l'e-commerce de demain.
 
-### 2. Ateliers techniques : monter en compétences concrètement
+**Et une fierté personnelle** : avec BusinessTech et PrestaModule, nous aurons la chance d'intervenir lors de cette édition. C'est un honneur de pouvoir partager notre expérience avec la communauté !
 
-Les Dev Conf brillent par leurs ateliers pratiques. Cette année ne fait pas exception, avec plusieurs sessions qui vont directement améliorer votre quotidien de dev :
-
-**"Building modern back-office pages"**
-Le back-office, c'est l'outil de travail quotidien des marchands. Apprendre à créer des interfaces modernes, fluides et efficaces, c'est un game-changer. Que vous développiez des modules ou des boutiques sur-mesure, cette session va vous donner les clés.
-
-**"Mastering Hummingbird"**
-Hummingbird, c'est le thème par défaut de PrestaShop 8. Mais combien d'entre nous exploitent vraiment tout son potentiel ? Cette session promet de plonger dans ses secrets, ses hooks, ses best practices. De quoi personnaliser comme un pro.
-
-**"How to contribute to PrestaShop"**
-Contribuer à l'open source, c'est intimidant quand on débute. Mais c'est aussi incroyablement enrichissant. Cette session est faite pour tous ceux qui veulent franchir le pas, que vous soyez débutant ou expert. Vous découvrirez comment soumettre votre première PR, naviguer dans le code, et devenir un acteur actif du projet.
-
-### 3. Sécurité, Performance et IA : les piliers de l'e-commerce moderne
-
-Si vous me suivez régulièrement, vous savez que je suis passionné par ces trois sujets. Et pour cause : **ils définissent l'e-commerce de demain**.
-
-**La sécurité** : Avec la multiplication des cyberattaques, sécuriser une boutique PrestaShop n'est plus optionnel. Les sessions dédiées vont vous donner des outils concrets pour protéger vos boutiques et celles de vos clients. RGPD, failles courantes, bonnes pratiques... tout y passera.
-
-**La performance** : Un site lent, c'est un site qui perd des ventes. Point. Les optimisations de performance sont au cœur de la conversion. Comment tirer le meilleur de PrestaShop en termes de vitesse ? Quelles techniques, quels outils ?
-
-**L'IA** : Ah, l'Intelligence Artificielle. Sujet brûlant s'il en est. Comment l'IA peut-elle transformer l'expérience e-commerce ? Recommandations produits, personnalisation, service client, gestion des stocks... Les applications sont infinies. J'ai hâte de voir comment PrestaShop intègre cette dimension.
+Vous pouvez consulter [l'ensemble des sessions et le programme détaillé ici](https://events.prestashop.com/e/prestashop-developer-conference-2025/fr/sessions).
 
 ## 💡 Pourquoi vous ne devez ABSOLUMENT PAS manquer ça
 
-### L'avantage compétitif
+**L'avantage compétitif** : Les informations que vous allez glaner demain ne seront pas dans les blogs avant plusieurs semaines. Vous serez parmi les premiers à savoir, à comprendre, à maîtriser. Et dans notre métier, cette longueur d'avance, c'est de l'or.
 
-Les informations que vous allez glaner demain ne seront pas dans les blogs ni dans les forums avant plusieurs semaines. **Vous serez parmi les premiers à savoir**. Les premiers à comprendre. Les premiers à maîtriser.
+**Le réseau** : La solution à votre prochain problème se trouve peut-être dans une conversation au détour d'un couloir. Ces connexions humaines sont souvent plus précieuses que les sessions elles-mêmes.
 
-Et dans notre métier, cette longueur d'avance, c'est de l'or. Vos clients, vos employeurs, vos partenaires... tous bénéficieront de cette expertise fraîche.
-
-### Le réseau
-
-Je ne le répéterai jamais assez : **le réseau, c'est tout**. La solution à votre prochain problème épineux se trouve peut-être dans une conversation au détour d'un couloir. Cette personne qui galère sur le même module que vous ? Elle sera là. Cet expert dont vous suivez le blog depuis des années ? Il sera là aussi.
-
-Profitez-en pour échanger, pour poser vos questions, pour créer des liens. Ces connexions humaines sont souvent plus précieuses que les sessions elles-mêmes.
-
-### L'inspiration
-
-Parfois, on a besoin de sortir de son quotidien pour retrouver l'enthousiasme. Une Dev Conf, c'est une bouffée d'air frais. Vous allez découvrir de nouvelles approches, de nouveaux outils, de nouvelles façons de penser.
-
-Vous allez repartir avec **une énergie nouvelle** et des idées plein la tête pour vos propres projets. Croyez-moi, ça change tout.
+**L'inspiration** : Une Dev Conf, c'est une bouffée d'air frais. Vous allez repartir avec une énergie nouvelle et des idées plein la tête pour vos projets.
 
 ## 🎯 Dernière ligne droite : comment vous préparer ?
 
-Que vous assistiez en personne ou en ligne, voici mes conseils pour tirer le maximum de cette journée.
+**Consultez le programme** : Identifiez vos 3-4 sessions incontournables sur [le site officiel](https://events.prestashop.com/e/prestashop-developer-conference-2025/fr/sessions) et créez votre planning.
 
-### Préparez votre planning
+**Préparez vos questions** : Les sessions de Q&A sont des moments en or. Notez dès maintenant vos interrogations sur PrestaShop 9, la sécurité, l'IA... Plus elles seront précises, plus les réponses seront utiles.
 
-Le programme est dense. Vous ne pourrez pas tout suivre. Alors **choisissez vos priorités** :
-- Quelles sont les 3-4 sessions que vous ne voulez absolument pas manquer ?
-- Y a-t-il des sessions parallèles ? Laquelle privilégier ?
+**Rejoignez la conversation** : Suivez le hashtag **#PrestaShopDevConf2025** sur les réseaux sociaux. C'est là que la communauté partage en temps réel !
 
-Créez-vous un planning clair. Ça vous évitera de zapper entre les salles et de manquer l'essentiel.
+**Sur place** : Cartes de visite, batterie externe et chaussures confortables sont vos meilleurs alliés.
 
-### Préparez vos questions
-
-Les sessions de **Q&A** sont des moments en or. C'est là que vous pouvez interroger directement les équipes PrestaShop, les speakers, les experts.
-
-Notez dès maintenant vos questions :
-- Comment migrer vers PrestaShop 9 ?
-- Quelle stratégie pour sécuriser une boutique avec 50 000 produits ?
-- Comment intégrer l'IA dans mon workflow de développement ?
-
-Plus vos questions seront précises, plus les réponses seront utiles.
-
-### Rejoignez la conversation
-
-Sur les réseaux sociaux, suivez et utilisez le hashtag **#PrestaShopDevConf2025** (ou **#PSDevConf25**). C'est là que la communauté partage en temps réel ses impressions, ses découvertes, ses coups de cœur.
-
-Participez ! Commentez ! Partagez vos trouvailles !
-
-### Pour les participants sur place
-
-Quelques conseils pratiques d'un habitué des conférences :
-- **Cartes de visite** : Oui, ça existe encore, et c'est super efficace pour garder le contact.
-- **Batterie externe** : Entre les sessions, les photos, les notes sur téléphone, et les échanges sur Slack, votre batterie va fondre. Prévoyez de quoi recharger.
-- **Chaussures confortables** : Vous allez marcher, beaucoup. Croyez-moi.
-
-### Pour les participants en ligne
-
-Le virtuel a ses avantages, mais demande un peu de discipline :
-- **Testez votre connexion** : Rien de pire qu'un streaming qui coupe au moment crucial.
-- **Créez un espace calme** : Fermez la porte, coupez les notifications, plongez-vous dans l'événement.
-- **Préparez de quoi prendre des notes** : Bloc-notes, application, peu importe, mais prenez des notes. Vous ne retiendrez pas tout.
+**En ligne** : Testez votre connexion, créez un espace calme et préparez de quoi prendre des notes.
 
 ## 🌟 À vous de jouer
 
