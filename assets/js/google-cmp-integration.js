@@ -42,8 +42,24 @@
         });
     }
 
+    // Fonction pour synchroniser avec le système local de cookies
+    function syncWithLocalCookieSystem(preferences) {
+        console.log('[Google CMP] Synchronisation avec le système local:', preferences);
+
+        // Attendre que cookie-consent.js soit chargé
+        if (window.cookieConsent) {
+            // Mettre à jour les préférences dans le système local
+            window.cookieConsent.setConsentData(preferences);
+            console.log('[Google CMP] Préférences synchronisées avec le système local');
+        } else {
+            console.warn('[Google CMP] cookie-consent.js pas encore chargé, synchronisation reportée');
+            // Réessayer après 500ms
+            setTimeout(() => syncWithLocalCookieSystem(preferences), 500);
+        }
+    }
+
     // Fonction pour mettre à jour le consentement Google Analytics
-    function updateGoogleAnalyticsConsent(hasConsent) {
+    function updateGoogleAnalyticsConsent(hasConsent, preferences = null) {
         if (window.gtag) {
             if (hasConsent) {
                 console.log('[Google CMP] Activation de Google Analytics');
@@ -78,6 +94,11 @@
                     'ad_personalization': 'denied'
                 });
             }
+        }
+
+        // Synchroniser avec le système local si des préférences sont fournies
+        if (preferences) {
+            syncWithLocalCookieSystem(preferences);
         }
     }
 
@@ -133,16 +154,30 @@
                     if (tcData.eventStatus === 'useractioncomplete' || tcData.eventStatus === 'tcloaded') {
                         console.log('[Google CMP] Consentement mis à jour:', tcData);
 
-                        // Vérifier si le consentement analytics est accordé
+                        // Vérifier si le consentement analytics est accordé (Purpose 1 = Store and/or access information)
                         const hasAnalyticsConsent = tcData.purpose && tcData.purpose.consents &&
                                                    (tcData.purpose.consents[1] || tcData.purpose.consents[7]);
+
+                        // Vérifier le consentement publicité (Purpose 3 = Create a personalised ads profile)
+                        const hasAdConsent = tcData.purpose && tcData.purpose.consents &&
+                                           (tcData.purpose.consents[3] || tcData.purpose.consents[4]);
+
+                        // Construire l'objet de préférences compatible avec cookie-consent.js
+                        const preferences = {
+                            essential: true,
+                            analytics: hasAnalyticsConsent || false,
+                            ad: hasAdConsent || false,
+                            adUserData: hasAdConsent || false,
+                            adPersonalization: hasAdConsent || false
+                        };
 
                         // Si le consentement est refusé, supprimer les cookies
                         if (!hasAnalyticsConsent) {
                             clearGoogleAnalyticsCookies();
                         }
 
-                        updateGoogleAnalyticsConsent(hasAnalyticsConsent);
+                        // Mettre à jour GA et synchroniser avec le système local
+                        updateGoogleAnalyticsConsent(hasAnalyticsConsent, preferences);
                     }
                 }
             });
@@ -162,11 +197,21 @@
                                          pingData.gppData.applicableSections &&
                                          pingData.gppData.applicableSections.length > 0;
 
+                        // Construire l'objet de préférences
+                        const preferences = {
+                            essential: true,
+                            analytics: hasConsent || false,
+                            ad: hasConsent || false,
+                            adUserData: hasConsent || false,
+                            adPersonalization: hasConsent || false
+                        };
+
                         if (!hasConsent) {
                             clearGoogleAnalyticsCookies();
                         }
 
-                        updateGoogleAnalyticsConsent(hasConsent);
+                        // Mettre à jour GA et synchroniser avec le système local
+                        updateGoogleAnalyticsConsent(hasConsent, preferences);
                     });
                 }
             });
