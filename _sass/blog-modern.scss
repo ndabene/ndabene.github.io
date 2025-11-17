@@ -1316,11 +1316,9 @@ $blog-content-bg: $white;
   }
 }
 
-// Nettoyer le flux après l'image (pour que le contenu suivant ne soit pas affecté)
-.post-content > h2:first-of-type {
-  clear: both;
-  padding-top: 1rem;
-}
+// Layout image flottante : le texte s'enroule toujours autour de l'image
+// La règle clear: both a été supprimée pour permettre une mise en page cohérente
+// sur tous les articles (image à gauche, texte à droite)
 
 // Support pour banner_display personnalisé via front-matter dans les articles
 [data-banner-display="cover"] .post-banner-image-container .post-banner-image {
