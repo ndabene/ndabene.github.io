@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'PrestaShop Validator: Ensure Quality'
-date: 2025-11-18
+date: 2025-12-03
 author: Nicolas Dabène
 categories:
 - PrestaShop
@@ -221,4 +221,4 @@ So, what are you waiting for? Launch your next module in the Validator and see t
 
 ---
 
-*Article published November 18, 2025 by Nicolas Dabène - PrestaShop Expert with 15+ years of experience in e-commerce development*
+*Article published December 3, 2025 by Nicolas Dabène - PrestaShop Expert with 15+ years of experience in e-commerce development*
