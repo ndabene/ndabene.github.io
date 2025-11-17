@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ChatGPT autorise les conversations érotiques
+title: "Comprendre le Model Context Protocol (MCP) : Une Conversation Simple"
 date: 2025-10-23
 author: Nicolas Dabène
 categories:
