@@ -13,16 +13,14 @@
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
-  // Configuration GA4 avec pings anonymes sans cookies (même sans consentement)
+  // Configuration GA4 avec Consent Mode v2
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics }}', {
     'anonymize_ip': true,
     'allow_google_signals': false,
     'allow_ad_personalization_signals': false,
     'cookie_flags': 'SameSite=Strict;Secure',
-    // Envoyer des pings de base sans cookies même sans consentement
-    'client_storage': 'none',  // Désactive tous les cookies
-    'send_page_view': true      // Envoie les pages vues même sans stockage
+    'send_page_view': true
   });
   window.GA_MEASUREMENT_ID = '{{ site.google_analytics }}';
 </script>
