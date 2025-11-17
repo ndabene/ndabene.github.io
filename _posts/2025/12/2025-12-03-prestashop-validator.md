@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'PrestaShop Validator : garantir la qualité'
-date: 2025-11-18
+date: 2025-12-03
 author: Nicolas Dabène
 categories:
 - PrestaShop
@@ -220,4 +220,4 @@ Alors, vous attendez quoi ? Lancez votre prochain module dans le Validator et vo
 
 ---
 
-*Article publié le 18 novembre 2025 par Nicolas Dabène - Expert PrestaShop avec 15+ ans d'expérience en développement e-commerce*
+*Article publié le 3 décembre 2025 par Nicolas Dabène - Expert PrestaShop avec 15+ ans d'expérience en développement e-commerce*
