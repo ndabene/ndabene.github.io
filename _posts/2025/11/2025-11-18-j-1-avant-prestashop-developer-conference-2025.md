@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'J-1 avant la PrestaShop Developer Conference 2025 : ce qui vous attend !'
-date: 2025-11-18
+date: 2025-11-18 01:00:00
 author: Nicolas Dabène
 categories:
 - PrestaShop
