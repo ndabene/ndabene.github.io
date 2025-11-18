@@ -292,6 +292,11 @@
                     const title = post.querySelector('.post-news-title')?.textContent.toLowerCase() || '';
                     const content = post.querySelector('.post-news-excerpt')?.textContent.toLowerCase() || '';
 
+                    // Extraire les tags pour la recherche
+                    const tagsRaw = postPreviewElement.getAttribute('data-tags') || '';
+                    const tagsText = tagsRaw ? tagsRaw.toLowerCase() : '';
+                    const categoriesText = categories.join(' ').toLowerCase();
+
                     let visible = true;
 
                     // Filtre catégorie
@@ -300,10 +305,12 @@
                         visible = false;
                     }
 
-                    // Filtre recherche
+                    // Filtre recherche (amélioré : titre, contenu, catégories ET tags)
                     if (state.currentSearch &&
                         !title.includes(state.currentSearch) &&
-                        !content.includes(state.currentSearch)) {
+                        !content.includes(state.currentSearch) &&
+                        !categoriesText.includes(state.currentSearch) &&
+                        !tagsText.includes(state.currentSearch)) {
                         visible = false;
                     }
 

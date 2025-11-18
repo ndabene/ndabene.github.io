@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ChatGPT autorise les conversations érotiques
+title: 'FAQ et GEO : les clés du e-commerce de demain'
 date: 2025-10-07
 author: Nicolas Dabène
 categories:
