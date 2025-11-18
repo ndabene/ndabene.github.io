@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ChatGPT autorise les conversations érotiques
+title: 'Black Friday 2025 : la révolution GEO arrive sur PrestaShop'
 date: 2025-09-16
 author: Nicolas Dabène
 categories:

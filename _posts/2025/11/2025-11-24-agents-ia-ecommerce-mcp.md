@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Comment l'IA découvre vos outils MCP?
+title: 'Agents IA pour e-commerce : PS MCP Server & Tools Plus'
 date: 2025-11-24
 author: Nicolas Dabène
 categories:
