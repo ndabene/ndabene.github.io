@@ -1,0 +1,675 @@
+---
+layout: default
+title: Blog
+permalink: /en/blog/
+description: "Articles and insights on PHP, AI, e-commerce and software engineering by Nicolas Dabène."
+keywords: "php blog, ai blog, ecommerce blog, software engineering, technical articles, prestashop"
+image: /assets/images/hero/profile-hero.jpg
+body_class: "page-blog"
+lang: en
+llm_summary: Articles and insights on PHP, AI, e-commerce and software engineering by Nicolas Dabène.
+llm_topics:
+- php blog
+- ai blog
+- ecommerce blog
+- software engineering
+- technical articles
+- prestashop
+---
+<section class="page-hero-section">
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="/en/">Home</a>
+            <span>{{ page.title }}</span>
+        </nav>
+        <div class="hero-content">
+            <h1>Technical & E-commerce Blog</h1>
+            <p class="section-description">Explore in-depth technical articles on PHP, PrestaShop and e-commerce, discover the latest innovations in artificial intelligence, and master software engineering best practices to boost your digital projects.</p>
+        </div>
+    </div>
+</section>
+
+<section class="blog-content-section">
+    <div class="container">
+        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+        {% if published_posts.size > 0 %}
+
+            <!-- HERO ARTICLE (Most recent article) -->
+            {% if published_posts.size > 0 %}
+                {% assign hero_post = published_posts.first %}
+                {% include hero-article.html post=hero_post %}
+            {% endif %}
+
+            <!-- FEATURED ARTICLES (3 random articles on each load) -->
+            {% if published_posts.size > 1 %}
+                <div id="featured-articles-container">
+                    {% comment %}Store all articles except hero for JS randomization{% endcomment %}
+                    <div class="featured-articles-data" style="display: none;">
+                        {% assign remaining_posts = published_posts | offset: 1 %}
+                        {% for post in remaining_posts %}
+                            <div class="featured-article-data"
+                                 data-url="{{ post.url | relative_url }}"
+                                 data-title="{{ post.title | escape }}"
+                                 data-image="{{ post.image }}"
+                                 data-category="{{ post.categories | first }}"
+                                 data-category-slug="{{ post.categories | first | slugify }}"
+                                 data-date="{{ post.date | date: '%Y-%m-%d' }}"
+                                 data-date-formatted="{{ post.date | date: '%B %d, %Y' }}"
+                                 data-read-time="{% if post.estimated_reading_time %}{{ post.estimated_reading_time | remove: ' minutes' | remove: ' minute' }}{% else %}5{% endif %}"
+                                 data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
+                                 data-tags="{% if post.tags %}{% for tag in post.tags limit: 2 %}{{ tag }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <section class="featured-articles-grid" id="featured-articles-grid"></section>
+                </div>
+            {% endif %}
+
+            <div class="blog-grid-news">
+                <div class="main-blog-content-news">
+                    <!-- Filters and sorting -->
+                    <div class="blog-filters-container">
+                        <div class="blog-filters-header">
+                            <h2 class="section-title">Blog Articles</h2>
+                            <button id="toggle-filters" class="toggle-filters-btn">
+                                <i class="fas fa-filter"></i>
+                                <span>Filters</span>
+                                <i class="fas fa-chevron-down chevron-icon"></i>
+                            </button>
+                        </div>
+
+                        <!-- Filters area (hidden by default) -->
+                        <div id="filters-content" class="filters-content" style="display: none;">
+
+                        <!-- Modern search bar -->
+                        <div class="blog-search-bar">
+                            <div class="search-input-wrapper">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="search-input" placeholder="Search an article...">
+                                <button id="clear-search" class="clear-search-btn" style="display: none;">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Category pills -->
+                        <div class="blog-category-pills">
+                            <button class="category-pill active" data-category="">
+                                <i class="fas fa-home"></i> All articles
+                            </button>
+                            {% assign published_posts_for_categories = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+                            {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
+                            {% for category in all_categories %}
+                                <button class="category-pill" data-category="{{ category }}">
+                                    {{ category }}
+                                </button>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Quick sort -->
+                        <div class="blog-sort-bar">
+                            <span class="sort-label">Sort by:</span>
+                            <div class="sort-pills">
+                                <button class="sort-pill active" data-sort="date-desc">
+                                    <i class="fas fa-fire"></i> Recent
+                                </button>
+                                <button class="sort-pill" data-sort="date-asc">
+                                    <i class="fas fa-history"></i> Old
+                                </button>
+                                <button class="sort-pill" data-sort="reading-time">
+                                    <i class="fas fa-clock"></i> Quick
+                                </button>
+                                <button class="sort-pill" data-sort="title">
+                                    <i class="fas fa-sort-alpha-down"></i> A-Z
+                                </button>
+                            </div>
+                        </div>
+
+                        </div><!-- End filters-content -->
+
+                        <div class="filter-results-info" id="filter-results-info">
+                            {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
+                            <span class="results-count">All articles <span id="filtered-count">({{ published_posts_count }})</span></span>
+                            <div class="active-filters" id="active-filters"></div>
+                        </div>
+
+                        <!-- Admin button to see future posts -->
+                        <div id="admin-toggle-section">
+                            <button onclick="enableAdminPreview()" class="btn btn-admin-toggle" style="display: none;">
+                                <i class="fas fa-eye"></i> Admin Mode (see future posts)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="post-list-news grid-view" id="blog-posts-container">
+                        {% comment %}Load all published articles - pagination is handled by JavaScript{% endcomment %}
+                        {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | offset: 4 %}
+                        {% include blog-post-loop.html posts=published_posts_list %}
+                    </div>
+
+                    <!-- Message when no results -->
+                    <div class="no-results" id="no-results">
+                        <div class="no-results-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>No articles found</h3>
+                        <p>No articles match your search criteria.</p>
+                        <button id="reset-filters" class="btn btn--primary">Reset filters</button>
+                    </div>
+
+                    <!-- Future posts data for admin mode -->
+                    {% include future-posts-data.html %}
+
+                    <!-- Pagination -->
+                    {% assign posts_per_page = 8 %}
+                    {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
+                    {% assign remaining_posts = published_posts_count | minus: 4 %}
+                    {% if remaining_posts > posts_per_page %}
+                        <div class="pagination-container">
+                            <div class="pagination">
+                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Previous</button>
+                                <div id="pagination-numbers"></div>
+                                <button id="next-page" class="pagination-btn">Next &raquo;</button>
+                            </div>
+                            <div class="pagination-info-wrapper">
+                                Showing <span id="showing-range">1-8</span> of <span id="total-posts">{{ remaining_posts }}</span> articles
+                            </div>
+                        </div>
+                    {% endif %}
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar-news">
+                    <!-- Popular Posts Widget -->
+                    {% include sidebar-popular-posts.html limit=5 %}
+
+                    <!-- External Publications Widget -->
+                    {% include sidebar-external-publications.html %}
+
+                    <!-- Trending Topics Widget -->
+                    {% include sidebar-trending-topics.html %}
+
+                    <div class="sidebar-widget-compact">
+                        <h4><i class="fas fa-clock"></i> Recent articles</h4>
+                        <div class="recent-posts-compact">
+                            {% assign recent_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+                            {% for post in recent_posts limit: 5 %}
+                                <article class="recent-post-compact">
+                                    {% if post.image %}
+                                        <div class="recent-thumb-mini">
+                                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                                        </div>
+                                    {% endif %}
+                                    <div class="recent-content-mini">
+                                        <h5><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 45 }}</a></h5>
+                                        <time>{{ post.date | date: '%B %d, %Y' }}</time>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget-compact">
+                        <h4>Categories</h4>
+                        <div class="categories-compact">
+                            {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+                            {% assign all_categories = published_posts | map: 'categories' | flatten | uniq | sort %}
+                            {% for category in all_categories %}
+                                {% assign category_posts = published_posts | where_exp: "post", "post.categories contains category" %}
+                                <a href="javascript:void(0)" class="category-compact" data-category="{{ category }}">
+                                    {{ category }} <span>({{ category_posts.size }})</span>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+
+                    {% if site.data.series %}
+                        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+                        {% assign has_series_with_posts = false %}
+                        {% for series in site.data.series %}
+                            {% assign series_posts = published_posts | where: "series", series[0] %}
+                            {% if series_posts.size > 0 %}
+                                {% assign has_series_with_posts = true %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if has_series_with_posts %}
+                        <div class="sidebar-widget-compact">
+                            <h4>Article series</h4>
+                            <div class="series-compact">
+                                {% for series_entry in site.data.series %}
+                                    {% assign series_key = series_entry[0] %}
+                                    {% assign series_data = series_entry[1] %}
+                                    {% assign series_posts = published_posts | where: "series", series_key %}
+                                    {% if series_posts.size > 0 %}
+                                        <a href="/series/{{ series_key | slugify }}.html" class="series-link-compact">
+                                            {{ series_key }} <span>({{ series_posts.size }})</span>
+                                        </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                </aside>
+            </div>
+
+<!-- External publications now integrated in the main layout above -->
+        {% else %}
+            <div class="no-posts-container">
+                <span class="no-posts-icon">📝</span>
+                <h2>Blog is under construction</h2>
+                <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my publications!</p>
+                <a href="/en/" class="btn btn--primary">Back to homepage</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
+
+<script>
+// Featured articles randomization - Press Portal
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to generate 3 random featured articles
+    function renderRandomFeaturedArticles() {
+        const dataContainer = document.querySelector('.featured-articles-data');
+        const gridContainer = document.getElementById('featured-articles-grid');
+
+        if (!dataContainer || !gridContainer) return;
+
+        const allArticles = Array.from(dataContainer.querySelectorAll('.featured-article-data'));
+        if (allArticles.length === 0) return;
+
+        // Shuffle and take 3 random articles
+        const shuffled = allArticles.sort(() => Math.random() - 0.5);
+        const randomArticles = shuffled.slice(0, 3);
+
+        // Generate HTML
+        let html = '';
+        randomArticles.forEach(article => {
+            const url = article.dataset.url || '#';
+            const title = article.dataset.title || 'Untitled';
+            const image = article.dataset.image || '/assets/images/default-post.jpg';
+            const category = article.dataset.category || '';
+            const categorySlug = article.dataset.categorySlug || '';
+            const dateFormatted = article.dataset.dateFormatted || '';
+            const readTime = article.dataset.readTime || '5';
+            const excerpt = article.dataset.excerpt || '';
+            const tagsStr = article.dataset.tags || '';
+            const tags = tagsStr ? tagsStr.split(',') : [];
+
+            const categoryBadge = category ? '<span class="featured-category-badge" data-category="' + categorySlug + '">' + category + '</span>' : '';
+
+            const tagsHtml = tags.length > 0 ?
+                '<div class="featured-tags">' +
+                    tags.map(tag => '<span class="tag-pill">#' + tag.trim() + '</span>').join('') +
+                '</div>' : '';
+
+            html += '<article class="featured-article-card">' +
+                '<a href="' + url + '" class="featured-card-link">' +
+                    '<div class="featured-card-image">' +
+                        '<img src="' + image + '" alt="' + title + '" loading="lazy">' +
+                        categoryBadge +
+                        '<div class="featured-card-overlay"></div>' +
+                    '</div>' +
+                    '<div class="featured-card-content">' +
+                        '<div class="featured-card-meta">' +
+                            '<time><i class="fas fa-calendar-alt"></i> ' + dateFormatted + '</time>' +
+                            '<span class="reading-time"><i class="fas fa-clock"></i> ' + readTime + ' min</span>' +
+                        '</div>' +
+                        '<h3 class="featured-card-title">' + title + '</h3>' +
+                        '<p class="featured-card-excerpt">' + excerpt + '</p>' +
+                        '<div class="featured-card-footer">' +
+                            tagsHtml +
+                            '<span class="featured-read-more">Read <i class="fas fa-arrow-right"></i></span>' +
+                        '</div>' +
+                    '</div>' +
+                '</a>' +
+            '</article>';
+        });
+
+        gridContainer.innerHTML = html;
+    }
+
+    // Execute on load
+    renderRandomFeaturedArticles();
+
+    // Toggle filters
+    const toggleFiltersBtn = document.getElementById('toggle-filters');
+    const filtersContent = document.getElementById('filters-content');
+
+    if (toggleFiltersBtn && filtersContent) {
+        toggleFiltersBtn.addEventListener('click', function() {
+            const isVisible = filtersContent.style.display !== 'none';
+
+            if (isVisible) {
+                filtersContent.style.display = 'none';
+                this.classList.remove('active');
+            } else {
+                filtersContent.style.display = 'block';
+                this.classList.add('active');
+            }
+        });
+    }
+
+// Article filtering - Press Portal Version (Grid Mode only)
+    const postsContainer = document.getElementById('blog-posts-container');
+    if (!postsContainer) return;
+
+    // Force grid mode
+    postsContainer.classList.add('grid-view');
+
+    // Get DOM elements
+    const searchInput = document.getElementById('search-input');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const categoryPills = document.querySelectorAll('.category-pill');
+    const sortPills = document.querySelectorAll('.sort-pill');
+    const resetFiltersBtn = document.getElementById('reset-filters');
+    const noResultsDiv = document.getElementById('no-results');
+    const filteredCountSpan = document.getElementById('filtered-count');
+    const activeFiltersDiv = document.getElementById('active-filters');
+    const categorySidebarLinks = document.querySelectorAll('.category-compact');
+
+    if (!postsContainer) return;
+
+    // Filter state
+    let currentCategory = '';
+    let currentSort = 'date-desc';
+    let currentSearch = '';
+
+    // Hide "no results" div by default
+    if (noResultsDiv) {
+        noResultsDiv.style.display = 'none';
+    }
+
+    // Clean "intermediate" tags that shouldn't appear
+    setTimeout(function() {
+        const allBadges = document.querySelectorAll('.badge');
+        if (allBadges.length > 0) {
+            allBadges.forEach(badge => {
+                if (badge.classList.contains('badge--intermediaire') ||
+                    badge.textContent.trim().toLowerCase() === 'intermédiaire') {
+
+                    // Check if it's a tag that shouldn't be there
+                    const parentElement = badge.parentElement;
+                    if (!parentElement ||
+                        (!parentElement.classList.contains('series-card-difficulty') &&
+                         !parentElement.classList.contains('difficulty-badge'))) {
+                        badge.remove();
+                    }
+                }
+            });
+        }
+    }, 300);
+
+    // Permanent grid mode
+
+    // Function to apply filters
+    function applyFilters() {
+        // Get all articles
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        if (posts.length === 0) return;
+
+        let visibleCount = 0;
+
+        // Update active filters
+        if (activeFiltersDiv) activeFiltersDiv.innerHTML = '';
+        if (currentCategory) {
+            addActiveFilter(currentCategory, 'category');
+        }
+        if (currentSearch) {
+            addActiveFilter(currentSearch, 'search');
+        }
+
+        // Filter posts
+        posts.forEach(post => {
+            const postPreviewElement = post.querySelector('.post-preview-news');
+            if (!postPreviewElement) return;
+
+            // Get article data
+            const categoriesRaw = postPreviewElement.getAttribute('data-categories') || '';
+            const categories = categoriesRaw ? categoriesRaw.split(' ').filter(Boolean) : [];
+
+            const titleElem = post.querySelector('.post-news-title');
+            const excerptElem = post.querySelector('.post-news-excerpt');
+
+            const title = titleElem ? titleElem.textContent.toLowerCase() : '';
+            const content = excerptElem ? excerptElem.textContent.toLowerCase() : '';
+
+            // Apply filters
+            let visible = true;
+
+            // Category filter
+            if (currentCategory && categories.length > 0 && !categories.includes(currentCategory)) {
+                visible = false;
+            }
+
+            // Search filter
+            if (currentSearch && !title.includes(currentSearch) && !content.includes(currentSearch)) {
+                visible = false;
+            }
+
+            // Show/hide posts
+            post.style.display = visible ? '' : 'none';
+
+            if (visible) {
+                visibleCount++;
+            }
+        });
+
+        // Update counter and show/hide "no results" message
+        if (filteredCountSpan) filteredCountSpan.textContent = `(${visibleCount})`;
+
+        if (noResultsDiv) {
+            noResultsDiv.style.display = visibleCount === 0 ? 'flex' : 'none';
+        }
+
+        // Apply sorting
+        sortPosts(currentSort);
+
+        // Update pagination after filtering
+        if (window.blogPaginationUpdate) {
+            window.blogPaginationUpdate();
+        }
+    }
+
+    // Function to add an active filter
+    function addActiveFilter(value, type) {
+        if (!activeFiltersDiv) return;
+
+        const filterTag = document.createElement('div');
+        filterTag.className = 'active-filter';
+
+        let icon = '';
+        let label = value;
+
+        switch (type) {
+            case 'category':
+                icon = 'fa-folder';
+                label = `Category: ${value}`;
+                break;
+            case 'search':
+                icon = 'fa-search';
+                label = `Search: "${value}"`;
+                break;
+        }
+
+        filterTag.innerHTML = `
+            <i class="fas ${icon}"></i>
+            ${label}
+            <button class="remove-filter" data-type="${type}">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+
+        activeFiltersDiv.appendChild(filterTag);
+
+        // Add event to remove filter
+        filterTag.querySelector('.remove-filter').addEventListener('click', function() {
+            const filterType = this.dataset.type;
+
+            switch (filterType) {
+                case 'category':
+                    currentCategory = '';
+                    categoryPills.forEach(p => p.classList.remove('active'));
+                    categoryPills[0]?.classList.add('active');
+                    break;
+                case 'search':
+                    currentSearch = '';
+                    if (searchInput) searchInput.value = '';
+                    if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+                    break;
+            }
+
+            applyFilters();
+        });
+    }
+
+    // Function to sort posts
+    function sortPosts(sortValue) {
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        if (posts.length <= 1) return;
+
+        posts.sort((a, b) => {
+            const postA = a.querySelector('.post-preview-news');
+            const postB = b.querySelector('.post-preview-news');
+
+            if (!postA || !postB) return 0;
+
+            switch (sortValue) {
+                case 'date-desc':
+                    const dateA = postA.getAttribute('data-date') || '0';
+                    const dateB = postB.getAttribute('data-date') || '0';
+                    return parseInt(dateB) - parseInt(dateA);
+                case 'date-asc':
+                    const dateAsc1 = postA.getAttribute('data-date') || '0';
+                    const dateAsc2 = postB.getAttribute('data-date') || '0';
+                    return parseInt(dateAsc1) - parseInt(dateAsc2);
+                case 'title':
+                    const titleElemA = a.querySelector('.post-news-title');
+                    const titleElemB = b.querySelector('.post-news-title');
+                    const titleA = titleElemA ? titleElemA.textContent : '';
+                    const titleB = titleElemB ? titleElemB.textContent : '';
+                    return titleA.localeCompare(titleB);
+                case 'reading-time':
+                    const readTimeA = parseInt(postA.getAttribute('data-read-time') || '0');
+                    const readTimeB = parseInt(postB.getAttribute('data-read-time') || '0');
+                    return readTimeA - readTimeB;
+                default:
+                    return 0;
+            }
+        });
+
+        // Reorganize posts in the DOM
+        posts.forEach(post => postsContainer.appendChild(post));
+    }
+
+    // Search management
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            currentSearch = this.value.toLowerCase();
+            if (currentSearch) {
+                clearSearchBtn.style.display = 'flex';
+            } else {
+                clearSearchBtn.style.display = 'none';
+            }
+            applyFilters();
+        });
+    }
+
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            currentSearch = '';
+            this.style.display = 'none';
+            applyFilters();
+        });
+    }
+
+    // Category pills management
+    if (categoryPills) {
+        categoryPills.forEach(pill => {
+            pill.addEventListener('click', function() {
+                categoryPills.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                currentCategory = this.dataset.category;
+                applyFilters();
+            });
+        });
+    }
+
+    // Sort pills management
+    if (sortPills) {
+        sortPills.forEach(pill => {
+            pill.addEventListener('click', function() {
+                sortPills.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                currentSort = this.dataset.sort;
+                applyFilters();
+            });
+        });
+    }
+
+    // Event to reset filters
+    if (resetFiltersBtn) resetFiltersBtn.addEventListener('click', function() {
+        currentCategory = '';
+        currentSearch = '';
+        currentSort = 'date-desc';
+        if (searchInput) searchInput.value = '';
+        if (clearSearchBtn) clearSearchBtn.style.display = 'none';
+        categoryPills.forEach(p => p.classList.remove('active'));
+        categoryPills[0]?.classList.add('active');
+        sortPills.forEach(p => p.classList.remove('active'));
+        sortPills[0]?.classList.add('active');
+        applyFilters();
+    });
+
+    // Events for categories in sidebar (variable already declared)
+    if (categorySidebarLinks) {
+        categorySidebarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.dataset.category;
+                currentCategory = category;
+                categoryPills.forEach(p => {
+                    if (p.dataset.category === category) {
+                        p.classList.add('active');
+                    } else {
+                        p.classList.remove('active');
+                    }
+                });
+                applyFilters();
+            });
+        });
+    }
+
+
+    // Switch between list view and grid view
+    const viewListBtn = document.getElementById('view-list');
+    const viewGridBtn = document.getElementById('view-grid');
+
+    // Permanent grid mode - buttons removed
+
+    // Check if posts are visible
+    function checkVisiblePosts() {
+        const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+        const visiblePosts = posts.filter(post => post.style.display !== 'none');
+
+        if (visiblePosts.length === 0 && posts.length > 0) {
+            // No visible posts but there are posts, reset filters
+            if (categoryFilter) categoryFilter.value = '';
+            applyFilters();
+        }
+    }
+
+    // Execute initial filtering and check results
+    setTimeout(applyFilters, 300);
+    setTimeout(checkVisiblePosts, 1000);
+});
+</script>
+
+<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>

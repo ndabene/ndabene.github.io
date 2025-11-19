@@ -63,14 +63,27 @@ $tag-hover-text: #fff;
 
   .featured-card-image {
     position: relative;
-    height: 200px;
+    min-height: 200px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
+    background: #f1f5f9;
 
     img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 0.4s ease;
+
+      // Support pour image_display personnalisé
+      [data-image-display="contain"] & {
+        object-fit: contain;
+      }
+
+      [data-image-display="fill"] & {
+        object-fit: fill;
+      }
     }
 
     .featured-card-overlay {
@@ -211,18 +224,52 @@ $tag-hover-text: #fff;
 
     .hero-article-image {
       position: relative;
-      height: 500px;
+      width: 100%;
+      min-height: 400px;
+      max-height: 600px;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
+      background: #f1f5f9;
 
       @media (max-width: 768px) {
-        height: 350px;
+        min-height: 300px;
+        max-height: 450px;
+        aspect-ratio: 4 / 3;
       }
 
       img {
+        display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         transition: transform 0.5s ease;
+
+        // Support pour image_display personnalisé via front-matter
+        [data-image-display="contain"] & {
+          object-fit: contain;
+        }
+
+        [data-image-display="fill"] & {
+          object-fit: fill;
+        }
+
+        // Support pour image_position personnalisé via front-matter
+        [data-image-position="top"] & {
+          object-position: center top;
+        }
+
+        [data-image-position="bottom"] & {
+          object-position: center bottom;
+        }
+
+        [data-image-position="left"] & {
+          object-position: left center;
+        }
+
+        [data-image-position="right"] & {
+          object-position: right center;
+        }
       }
 
       .hero-article-overlay {
@@ -818,6 +865,10 @@ $tag-hover-text: #fff;
     @media (max-width: 968px) {
       grid-template-columns: 1fr !important;
       gap: 1.5rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -830,6 +881,10 @@ $tag-hover-text: #fff;
 
     @media (max-width: 968px) {
       grid-template-columns: 1fr !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
   }
 
@@ -1064,6 +1119,12 @@ $tag-hover-text: #fff;
     width: 100% !important;
     max-width: none !important;
     grid-column: span 2; // Prend 2 colonnes sur 3
+
+    @media (max-width: 968px) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
   }
 
   //================================================
@@ -1509,24 +1570,37 @@ $tag-hover-text: #fff;
         .post-news-thumb {
           flex-shrink: 0;
           width: 220px;
-          height: 160px;
+          min-height: 160px;
+          aspect-ratio: 16 / 10;
           border-radius: 8px;
           overflow: hidden;
           position: relative;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           align-self: center;
-          
+          background: #f1f5f9;
+
           @media (max-width: 640px) {
             width: 100%;
-            height: 200px;
+            min-height: 200px;
+            aspect-ratio: 16 / 9;
           }
-          
+
           img {
+            display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
             transition: transform 0.3s ease;
+
+            // Support pour image_display personnalisé
+            [data-image-display="contain"] & {
+              object-fit: contain;
+            }
+
+            [data-image-display="fill"] & {
+              object-fit: fill;
+            }
           }
           
           // Nouveau style amélioré pour les badges de catégorie
@@ -1900,7 +1974,13 @@ $tag-hover-text: #fff;
     width: 100% !important;
     max-width: none !important; // Prend 1 colonne = largeur article featured
     grid-column: span 1;
-    
+
+    @media (max-width: 968px) {
+      grid-column: span 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
     .sidebar-widget-compact {
       background: white;
       border: 1px solid $news-border;
@@ -2251,6 +2331,60 @@ $tag-hover-text: #fff;
   //================================================
   // RESPONSIVE MOBILE - PORTAIL PRESSE
   //================================================
+
+  @media (max-width: 968px) {
+    // Fix overflow issues on mobile
+    .container {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .blog-content-section {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    // Prevent all child elements from causing horizontal overflow
+    * {
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    // Fix select dropdowns on mobile
+    select {
+      min-width: 0 !important;
+      width: 100% !important;
+    }
+
+    // Fix search box on mobile
+    .search-box {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    // Fix blog filters on mobile
+    .blog-filters-compact {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0.75rem !important;
+
+      .filter-group {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        select {
+          min-width: 0 !important;
+          width: 100% !important;
+        }
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     // Hero responsive
@@ -2707,15 +2841,6 @@ body.page-blog .blog-filters-compact select:focus,
       }
     }
   }
-}
-
-// Styles pour futurs posts (en dehors du scope .page-blog)
-html:not(.admin-preview-active) .future-post-item {
-  display: none !important;
-}
-
-html.admin-preview-active .future-post-item {
-  display: block !important;
 }
 
 //================================================

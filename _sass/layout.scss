@@ -1215,7 +1215,8 @@ body.dark-mode {
 
       input[type="text"],
       input[type="email"],
-      textarea {
+      textarea,
+      select {
         width: 100%;
         padding: $spacing-sm;
         border: 1px solid $light-gray;
@@ -1228,6 +1229,29 @@ body.dark-mode {
           outline: none;
           border-color: $primary-blue;
           box-shadow: 0 0 0 2px rgba($primary-blue, 0.2);
+        }
+      }
+
+      select {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right $spacing-sm center;
+        background-size: 1.25em;
+        padding-right: 2.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: darken($light-gray, 10%);
+        }
+
+        &:focus {
+          background-color: #f8fafc;
+        }
+
+        option {
+          padding: $spacing-sm;
         }
       }
 
@@ -1430,7 +1454,8 @@ body.dark-mode {
 
         input[type="text"],
         input[type="email"],
-        textarea {
+        textarea,
+        select {
           background-color: $dark-bg;
           border-color: $dark-surface;
           color: $dark-text;
@@ -1438,6 +1463,19 @@ body.dark-mode {
           &:focus {
             border-color: $accent-cyan;
             box-shadow: 0 0 0 2px rgba($accent-cyan, 0.2);
+          }
+        }
+
+        select {
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+
+          &:focus {
+            background-color: lighten($dark-bg, 3%);
+          }
+
+          option {
+            background-color: $dark-bg;
+            color: $dark-text;
           }
         }
       }
@@ -1571,28 +1609,6 @@ body.dark-mode {
     .heart {
       color: $error-color;
       animation: heartbeat 2s ease-in-out infinite;
-    }
-  }
-
-  // Conteneur pour l'IPR de Google Funding Choices
-  .ipr-footer-container {
-    margin-top: $spacing-md;
-    width: 100%;
-
-    // Styles pour l'ipr-container une fois intégré
-    .ipr-container {
-      position: static !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      background: rgba($white, 0.05);
-      border-radius: 8px;
-      padding: $spacing-md;
-      border: 1px solid rgba($white, 0.1);
-
-      // Assurer que le contenu est bien visible
-      * {
-        color: inherit !important;
-      }
     }
   }
 }

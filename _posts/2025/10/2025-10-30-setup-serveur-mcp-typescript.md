@@ -1,74 +1,116 @@
 ---
 layout: post
-title: "Créer son Premier Serveur MCP : Setup du Projet TypeScript"
+title: 'Créer votre premier serveur MCP : Setup'
 date: 2025-10-30
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle]
-tags: [MCP, TypeScript, Node.js, Express, setup, tutorial, développement]
-excerpt: "Passons à la pratique ! Découvrez comment initialiser un projet TypeScript pour créer votre premier serveur MCP en quelques minutes."
+categories:
+- Tutoriel
+- Intelligence Artificielle
+tags:
+- IA
+- développement
+excerpt: Passons à la pratique ! Découvrez comment initialiser un projet TypeScript
+  pour créer votre premier serveur MCP en quelques minutes.
 image: /assets/images/blog/2025/10/2025-10-30-setup-serveur-mcp-typescript.jpg
 featured: false
-difficulty: "Débutant"
-technologies: ["TypeScript", "Node.js", "Express", "MCP"]
-estimated_reading_time: "8 minutes"
-
-# HowTo Schema pour optimisation VEO
+difficulty: Débutant
+technologies:
+- TypeScript
+- Node.js
+- Express
+- MCP
+estimated_reading_time: 8 minutes
 howto:
-  name: "Créer son Premier Serveur MCP avec TypeScript"
-  description: "Guide étape par étape pour initialiser un projet TypeScript et configurer les fondations d'un serveur MCP fonctionnel en quelques minutes"
-  total_time: "PT30M"
+  name: Créer son Premier Serveur MCP avec TypeScript
+  description: Guide étape par étape pour initialiser un projet TypeScript et configurer
+    les fondations d'un serveur MCP fonctionnel en quelques minutes
+  total_time: PT30M
   estimated_cost:
-    currency: "EUR"
-    value: "0"
+    currency: EUR
+    value: '0'
   tools:
-    - "Node.js 16+"
-    - "npm (Node Package Manager)"
-    - "Visual Studio Code ou éditeur de code"
-    - "Terminal (Bash, Zsh, PowerShell)"
+  - Node.js 16+
+  - npm (Node Package Manager)
+  - Visual Studio Code ou éditeur de code
+  - Terminal (Bash, Zsh, PowerShell)
   supplies:
-    - "Connexion internet pour télécharger les packages"
-    - "Connaissances de base en JavaScript/TypeScript"
+  - Connexion internet pour télécharger les packages
+  - Connaissances de base en JavaScript/TypeScript
   steps:
-    - name: "Création du dossier et initialisation du projet"
-      text: "Créez un nouveau dossier pour votre projet avec `mkdir mcp-server` puis entrez dedans avec `cd mcp-server`. Initialisez un projet Node.js avec `npm init -y` pour créer automatiquement le fichier package.json avec les valeurs par défaut."
-    - name: "Installation de TypeScript"
-      text: "Installez TypeScript et ses dépendances de développement avec `npm install typescript ts-node @types/node --save-dev`. Cette commande installe le compilateur TypeScript, l'exécuteur ts-node et les définitions de types pour Node.js."
-    - name: "Configuration de TypeScript"
-      text: "Générez le fichier de configuration TypeScript avec `npx tsc --init`. Modifiez le fichier tsconfig.json généré pour définir target: ES2020, module: commonjs, outDir: ./dist, rootDir: ./src, et activez le mode strict pour une meilleure sécurité du code."
-    - name: "Installation d'Express.js"
-      text: "Installez Express et ses types TypeScript avec `npm install express` et `npm install @types/express --save-dev`. Express sera le framework web qui gérera les requêtes HTTP de votre serveur MCP."
-    - name: "Création de la structure du projet"
-      text: "Créez le dossier source avec `mkdir src` puis créez le fichier principal `src/index.ts`. Cette structure sépare votre code source TypeScript (dans src/) du code compilé JavaScript (qui ira dans dist/)."
-    - name: "Configuration des scripts npm"
-      text: "Ajoutez les scripts de développement et build dans package.json : 'dev' pour lancer ts-node en mode watch, 'build' pour compiler le TypeScript, et 'start' pour exécuter le code compilé. Ces scripts facilitent le développement et le déploiement."
-    - name: "Vérification de l'installation"
-      text: "Créez un fichier de test simple dans src/index.ts avec un console.log('Hello MCP!'). Lancez `npm run dev` pour vérifier que tout fonctionne. Si vous voyez le message dans le terminal, votre environnement est correctement configuré."
-
-# FAQ pour cet article
+  - name: Création du dossier et initialisation du projet
+    text: Créez un nouveau dossier pour votre projet avec `mkdir mcp-server` puis
+      entrez dedans avec `cd mcp-server`. Initialisez un projet Node.js avec `npm
+      init -y` pour créer automatiquement le fichier package.json avec les valeurs
+      par défaut.
+  - name: Installation de TypeScript
+    text: Installez TypeScript et ses dépendances de développement avec `npm install
+      typescript ts-node @types/node --save-dev`. Cette commande installe le compilateur
+      TypeScript, l'exécuteur ts-node et les définitions de types pour Node.js.
+  - name: Configuration de TypeScript
+    text: 'Générez le fichier de configuration TypeScript avec `npx tsc --init`. Modifiez
+      le fichier tsconfig.json généré pour définir target: ES2020, module: commonjs,
+      outDir: ./dist, rootDir: ./src, et activez le mode strict pour une meilleure
+      sécurité du code.'
+  - name: Installation d'Express.js
+    text: Installez Express et ses types TypeScript avec `npm install express` et
+      `npm install @types/express --save-dev`. Express sera le framework web qui gérera
+      les requêtes HTTP de votre serveur MCP.
+  - name: Création de la structure du projet
+    text: Créez le dossier source avec `mkdir src` puis créez le fichier principal
+      `src/index.ts`. Cette structure sépare votre code source TypeScript (dans src/)
+      du code compilé JavaScript (qui ira dans dist/).
+  - name: Configuration des scripts npm
+    text: 'Ajoutez les scripts de développement et build dans package.json : ''dev''
+      pour lancer ts-node en mode watch, ''build'' pour compiler le TypeScript, et
+      ''start'' pour exécuter le code compilé. Ces scripts facilitent le développement
+      et le déploiement.'
+  - name: Vérification de l'installation
+    text: Créez un fichier de test simple dans src/index.ts avec un console.log('Hello
+      MCP!'). Lancez `npm run dev` pour vérifier que tout fonctionne. Si vous voyez
+      le message dans le terminal, votre environnement est correctement configuré.
 faq:
-  - question: "Pourquoi utiliser TypeScript plutôt que JavaScript pour un serveur MCP ?"
-    answer: "TypeScript ajoute des types statiques qui évitent beaucoup d'erreurs stupides lors du développement. Pour un serveur qui va gérer des requêtes d'IA et manipuler des données sensibles, avoir ce niveau de vérification est rassurant. De plus, l'auto-complétion dans votre éditeur devient magique avec TypeScript, accélérant considérablement le développement."
-  - question: "Quelle version de Node.js faut-il pour créer un serveur MCP ?"
-    answer: "Il est recommandé d'utiliser Node.js version 16 ou supérieure. Vous pouvez vérifier votre version avec la commande `node --version` dans votre terminal. Si vous n'avez pas Node.js installé, téléchargez-le depuis le site officiel nodejs.org."
-  - question: "Qu'est-ce que le flag --save-dev dans npm install ?"
-    answer: "Le flag --save-dev indique que les packages installés sont des dépendances de développement, nécessaires uniquement pendant le développement, pas en production. Ces dépendances seront listées dans la section devDependencies du package.json. C'est le cas de TypeScript, ts-node et @types/node qui ne sont utilisés que pour compiler et développer le code."
-  - question: "Pourquoi séparer les dossiers src et dist ?"
-    answer: "Cette structure sépare votre code source TypeScript (dans src/) du code compilé JavaScript (dans dist/). C'est une bonne pratique qui garde votre projet organisé : vous développez dans src/, TypeScript compile vers dist/, et c'est le contenu de dist/ qui est exécuté en production. Cela évite de mélanger code source et code compilé."
-
-# Sources
+- question: Pourquoi utiliser TypeScript plutôt que JavaScript pour un serveur MCP
+    ?
+  answer: TypeScript ajoute des types statiques qui évitent beaucoup d'erreurs stupides
+    lors du développement. Pour un serveur qui va gérer des requêtes d'IA et manipuler
+    des données sensibles, avoir ce niveau de vérification est rassurant. De plus,
+    l'auto-complétion dans votre éditeur devient magique avec TypeScript, accélérant
+    considérablement le développement.
+- question: Quelle version de Node.js faut-il pour créer un serveur MCP ?
+  answer: Il est recommandé d'utiliser Node.js version 16 ou supérieure. Vous pouvez
+    vérifier votre version avec la commande `node --version` dans votre terminal.
+    Si vous n'avez pas Node.js installé, téléchargez-le depuis le site officiel nodejs.org.
+- question: Qu'est-ce que le flag --save-dev dans npm install ?
+  answer: Le flag --save-dev indique que les packages installés sont des dépendances
+    de développement, nécessaires uniquement pendant le développement, pas en production.
+    Ces dépendances seront listées dans la section devDependencies du package.json.
+    C'est le cas de TypeScript, ts-node et @types/node qui ne sont utilisés que pour
+    compiler et développer le code.
+- question: Pourquoi séparer les dossiers src et dist ?
+  answer: 'Cette structure sépare votre code source TypeScript (dans src/) du code
+    compilé JavaScript (dans dist/). C''est une bonne pratique qui garde votre projet
+    organisé : vous développez dans src/, TypeScript compile vers dist/, et c''est
+    le contenu de dist/ qui est exécuté en production. Cela évite de mélanger code
+    source et code compilé.'
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 sources:
-  - name: "TypeScript Official Documentation"
-    url: "https://www.typescriptlang.org/docs/"
-    organization: "Microsoft"
-    type: "Documentation"
-  - name: "Node.js Documentation"
-    url: "https://nodejs.org/docs/"
-    organization: "Node.js Foundation"
-    type: "Documentation"
-  - name: "Express.js Guide"
-    url: "https://expressjs.com/"
-    organization: "Express"
-    type: "Documentation"
+- name: TypeScript Official Documentation
+  url: https://www.typescriptlang.org/docs/
+  organization: Microsoft
+  type: Documentation
+- name: Node.js Documentation
+  url: https://nodejs.org/docs/
+  organization: Node.js Foundation
+  type: Documentation
+- name: Express.js Guide
+  url: https://expressjs.com/
+  organization: Express
+  type: Documentation
 ---
 
 # Créer son Premier Serveur MCP : Setup du Projet TypeScript

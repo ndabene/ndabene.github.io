@@ -5,7 +5,7 @@ Usage: {% include linkedin-preview-helper.html %}
 
 {% assign current_time = site.time | date: "%Y%m%d%H%M%S" %}
 {% assign page_date = page.date | date: "%Y%m%d%H%M%S" %}
-{% if page.admin_preview == true or page_date > current_time %}
+{% if page_date > current_time %}
 <div class="linkedin-preview-helper">
   <h4><i class="fab fa-linkedin"></i> Planification LinkedIn</h4>
   

@@ -1,3 +1,12 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+  {% assign rss_info_text = "Use an RSS reader (Feedly, Inoreader, etc.)" %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+  {% assign rss_info_text = "Utilisez un lecteur RSS (Feedly, Inoreader, etc.)" %}
+{% endif %}
+
 <!-- RSS SUBSCRIBE - S'abonner au flux RSS -->
 <section class="section-creator rss-subscribe" id="rss-subscribe">
     <div class="container-creator">
@@ -7,21 +16,21 @@
             </div>
 
             <div class="rss-subscribe-content">
-                <h2 class="rss-subscribe-title">{{ site.data.home-content.rss_subscribe.title | default: "Suivre le contenu" }}</h2>
+                <h2 class="rss-subscribe-title">{{ content_data.rss_subscribe.title | default: "Suivre le contenu" }}</h2>
                 <p class="rss-subscribe-description">
-                    {{ site.data.home-content.rss_subscribe.description | default: "Abonnez-vous au flux RSS pour recevoir les derniers articles sur l'IA, PrestaShop et l'e-commerce." }}
+                    {{ content_data.rss_subscribe.description | default: "Abonnez-vous au flux RSS pour recevoir les derniers articles sur l'IA, PrestaShop et l'e-commerce." }}
                 </p>
 
                 <div class="rss-subscribe-actions">
                     <a href="/past_post.xml" class="btn-rss btn-rss-primary" target="_blank" rel="noopener" aria-label="S'abonner au flux RSS">
                         <i class="fas fa-rss"></i>
-                        <span>{{ site.data.home-content.rss_subscribe.cta_text | default: "S'abonner au RSS" }}</span>
+                        <span>{{ content_data.rss_subscribe.cta_text | default: "S'abonner au RSS" }}</span>
                     </a>
 
                     <div class="rss-subscribe-info">
                         <small>
                             <i class="fas fa-info-circle"></i>
-                            Utilisez un lecteur RSS (Feedly, Inoreader, etc.)
+                            {{ rss_info_text }}
                         </small>
                     </div>
                 </div>

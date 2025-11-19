@@ -21,6 +21,7 @@ html, body {
 @import "_under-construction";
 @import "layout";
 @import "navigation";
+@import "language-switcher-modern"; // Multilingual language switcher (modern version)
 @import "page-headers";
 @import "projects";
 @import "blog-modern";
@@ -477,10 +478,72 @@ html, body {
   background: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
 
   .adsbygoogle {
     display: block;
     min-height: 100px;
+  }
+
+  // État de chargement - Skeleton loader
+  &[data-adsense-loaded="false"],
+  &[data-adsense-loaded="pending"] {
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+      );
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 4px;
+    }
+  }
+
+  // État chargé - Animation d'apparition
+  &.adsense-loaded {
+    animation: fade-in 0.4s ease-out;
+
+    .adsbygoogle {
+      animation: slide-up 0.4s ease-out;
+    }
+  }
+}
+
+// Animation skeleton
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Animation d'apparition
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -496,5 +559,72 @@ html, body {
   .adsense-container {
     margin: 1rem auto;
     padding: 0.5rem;
+  }
+}
+
+/* ========================================
+   BULLES ANIMÉES - Arrière-plan global
+   ======================================== */
+.animated-bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bubble-element {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.05;
+  animation: float-bubble 20s ease-in-out infinite;
+}
+
+.bubble-element:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  background: #0f172a;
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.bubble-element:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  background: #d4af37;
+  bottom: -50px;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+.bubble-element:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  background: #059669;
+  top: 50%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float-bubble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(50px, -50px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-50px, 50px) rotate(240deg);
+  }
+}
+
+/* Désactiver sur mobile pour performance */
+@media (max-width: 768px) {
+  .bubble-element {
+    display: none;
   }
 } 

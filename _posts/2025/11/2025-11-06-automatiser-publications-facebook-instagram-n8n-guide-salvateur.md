@@ -1,25 +1,53 @@
 ---
 layout: post
-title: "Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur"
+title: Automatiser Facebook et Instagram avec n8n
 date: 2025-11-06
 author: Nicolas Dabène
-categories: [Développement, Intelligence Artificielle, Tutoriel]
-tags: [n8n, automation, Facebook, Instagram, Meta API, no-code, workflow, social media]
-excerpt: "Si vous pensiez que l'intégration Meta serait un jeu d'enfant, ce guide détaillé va vous éviter des heures de frustration et vous montrer la voie."
+categories:
+- Développement
+- Intelligence Artificielle
+- Tutoriel
+tags:
+- API
+- automatisation
+excerpt: Si vous pensiez que l'intégration Meta serait un jeu d'enfant, ce guide détaillé
+  va vous éviter des heures de frustration et vous montrer la voie.
 image: /assets/images/blog/2025/11/automatisation-meta-n8n.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["n8n", "Meta API", "Facebook", "Instagram", "No-Code"]
-estimated_reading_time: "15 minutes"
+difficulty: Intermédiaire
+technologies:
+- n8n
+- Meta API
+- Facebook
+- Instagram
+- No-Code
+estimated_reading_time: 15 minutes
 faq:
-  - question: "Puis-je publier sur plusieurs comptes Instagram/Facebook depuis le même workflow n8n ?"
-    answer: "Absolument ! Créez simplement plusieurs credentials dans n8n (un par compte) et dupliquez vos branches de publication. Attention toutefois aux rate limits si vous gérez de nombreux comptes."
-  - question: "Faut-il renouveler le token Instagram non-expirable ?"
-    answer: "Théoriquement non, il est censé ne jamais expirer. En pratique, si vous modifiez les permissions de votre application développeur ou de l'utilisateur système, vous devrez peut-être en générer un nouveau. Gardez une documentation de la procédure pour ne pas être pris au dépourvu."
-  - question: "Peut-on programmer des publications avec cette méthode ?"
-    answer: "Oui ! Utilisez le node Schedule Trigger de n8n pour déclencher vos workflows à des horaires précis. Vous pouvez même créer une base de données (Airtable, Notion, etc.) qui contient vos posts planifiés, et n8n les publie automatiquement."
-  - question: "Est-ce que cette configuration respecte les conditions d'utilisation de Meta ?"
-    answer: "Oui, tant que vous utilisez l'API officielle (ce que nous faisons ici) et que vous respectez les règles de contenu de Meta. Cette méthode est parfaitement légale et encouragée par Meta pour les usages business légitimes."
+- question: Puis-je publier sur plusieurs comptes Instagram/Facebook depuis le même
+    workflow n8n ?
+  answer: Absolument ! Créez simplement plusieurs credentials dans n8n (un par compte)
+    et dupliquez vos branches de publication. Attention toutefois aux rate limits
+    si vous gérez de nombreux comptes.
+- question: Faut-il renouveler le token Instagram non-expirable ?
+  answer: Théoriquement non, il est censé ne jamais expirer. En pratique, si vous
+    modifiez les permissions de votre application développeur ou de l'utilisateur
+    système, vous devrez peut-être en générer un nouveau. Gardez une documentation
+    de la procédure pour ne pas être pris au dépourvu.
+- question: Peut-on programmer des publications avec cette méthode ?
+  answer: Oui ! Utilisez le node Schedule Trigger de n8n pour déclencher vos workflows
+    à des horaires précis. Vous pouvez même créer une base de données (Airtable, Notion,
+    etc.) qui contient vos posts planifiés, et n8n les publie automatiquement.
+- question: Est-ce que cette configuration respecte les conditions d'utilisation de
+    Meta ?
+  answer: Oui, tant que vous utilisez l'API officielle (ce que nous faisons ici) et
+    que vous respectez les règles de contenu de Meta. Cette méthode est parfaitement
+    légale et encouragée par Meta pour les usages business légitimes.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
+- question: Combien de temps pour mettre en place?
+  answer: Selon votre expérience, comptez entre 30 minutes et 2 heures pour une première
+    mise en place.
 ---
 
 # Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur

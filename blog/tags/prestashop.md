@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: PrestaShop"
 tag: "PrestaShop"
-description: "Tous les articles techniques sur PrestaShop : développement de modules, optimisation, bonnes pratiques, nouveautés et retours d'expérience."
+title: "Articles sur PrestaShop"
+description: "Découvrez tous les articles de blog sur PrestaShop. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/prestashop/
-keywords: "prestashop, tag prestashop, articles prestashop, développement prestashop"
 ---

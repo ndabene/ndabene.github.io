@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr">
+{% assign current_lang = page.lang | default: site.default_lang %}
+<html lang="{{ current_lang }}">
 <head>
     {% include head.html %}
 </head>
@@ -12,6 +13,12 @@
               <div class="particle"></div>
               <div class="particle"></div>
           </div>
+      </div>
+      <!-- Bulles animées globales -->
+      <div class="animated-bubbles">
+          <div class="bubble-element"></div>
+          <div class="bubble-element"></div>
+          <div class="bubble-element"></div>
       </div>
     {% endunless %}
 
@@ -28,22 +35,16 @@
 
     {% include footer.html %}
     {% include analytics.html %}
-    <!-- Cookie banner personnalisé désactivé - Utilisation du banner officiel Google -->
-    <!-- {% include cookie-banner.html %} -->
 
-    <!-- <script src="/assets/js/navigation.js"></script> Navigation moderne intégrée -->
     <script src="/assets/js/modern-animations.js"></script>
-    <!-- Cookie consent personnalisé désactivé - Utilisation du banner officiel Google -->
-    <!-- <script src="/assets/js/cookie-consent.js"></script> -->
-
-    <!-- JavaScript pour le mode admin preview -->
-    <script src="{{ '/assets/js/admin-preview.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/admin-preview-home.js' | relative_url }}"></script>
 
     <!-- JavaScript pour le système de drafts -->
     <script src="{{ '/assets/js/draft-preview.js' | relative_url }}"></script>
 
-    <!-- JavaScript pour l'intégration de l'IPR dans le footer -->
-    <script src="{{ '/assets/js/ipr-footer-integration.js' | relative_url }}"></script>
+    <!-- Système de gestion des cookies RGPD -->
+    <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
+
+    <!-- Intégration Google Funding Choices (CMP) pour la gestion des cookies -->
+    <script src="{{ '/assets/js/google-cmp-integration.js' | relative_url }}"></script>
 </body>
 </html>

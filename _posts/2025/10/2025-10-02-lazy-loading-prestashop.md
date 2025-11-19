@@ -1,27 +1,57 @@
 ---
 layout: post
-title: "Optimiser vos modules PrestaShop avec le lazy loading des services Symfony"
+title: Optimiser PrestaShop avec le lazy loading
 date: 2025-10-02
 author: Nicolas Dabène
-categories: [PrestaShop, Développement, Performance]
-tags: [prestashop, symfony, modules, lazy loading, performance, services, conteneur]
-excerpt: "Découvrez comment améliorer significativement les performances de vos modules PrestaShop grâce au lazy loading des services Symfony."
+categories:
+- PrestaShop
+- Développement
+- Performance
+tags:
+- API
+- PrestaShop
+- développement
+excerpt: Découvrez comment améliorer significativement les performances de vos modules
+  PrestaShop grâce au lazy loading des services Symfony.
 image: /assets/images/blog/2025/10/2025-10-02-lazy-loading-prestashop.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PHP", "PrestaShop", "Symfony", "YAML"]
-estimated_reading_time: "8 minutes"
+difficulty: Intermédiaire
+technologies:
+- PHP
+- PrestaShop
+- Symfony
+- YAML
+estimated_reading_time: 8 minutes
 faq:
-  - question: "Qu'est-ce que le lazy loading des services Symfony ?"
-    answer: "Le lazy loading est une technique où Symfony place un proxy au lieu d'instancier immédiatement votre service au démarrage. Le service réel n'est créé qu'au premier appel effectif. C'est comme un camion de livraison qui ne démarre que quand vous avez réellement un colis à livrer."
-  - question: "Pourquoi le lazy loading est-il important pour les modules PrestaShop ?"
-    answer: "Les modules PrestaShop contiennent souvent des services lourds (clients API, parsers Excel/CSV, générateurs PDF, clients Redis) que la plupart des pages n'utilisent pas. Sans lazy loading, vous gaspillez mémoire et temps de démarrage. Avec le lazy, ces services ne se chargent que quand réellement nécessaires."
-  - question: "Comment activer le lazy loading dans un service PrestaShop ?"
-    answer: "Dans votre fichier config/services.yml, ajoutez simplement lazy: true dans la configuration de votre service. Par exemple : MyVendor\\MyModule\\Infra\\External\\ApiClient: arguments: $apiKey: '%env(MYMODULE_API_KEY)%' lazy: true. Le proxy sera généré automatiquement par Symfony uniquement au besoin."
-  - question: "Quand faut-il éviter le lazy loading ?"
-    answer: "Évitez le lazy loading pour les helpers simples et services légers utilisés partout, les services critiques utilisés dans chaque requête, et les services de logging qui doivent être disponibles immédiatement. Le lazy loading est bénéfique uniquement pour les services lourds utilisés occasionnellement."
-  - question: "Comment résoudre le problème des classes final avec le lazy loading ?"
-    answer: "Si votre service est une classe final, Symfony ne peut pas créer de proxy. Préférez une interface : créez une ApiClientInterface, faites implémenter votre classe final, puis configurez le service avec l'interface en class. Le lazy loading fonctionnera alors sur l'interface."
+- question: Qu'est-ce que le lazy loading des services Symfony ?
+  answer: Le lazy loading est une technique où Symfony place un proxy au lieu d'instancier
+    immédiatement votre service au démarrage. Le service réel n'est créé qu'au premier
+    appel effectif. C'est comme un camion de livraison qui ne démarre que quand vous
+    avez réellement un colis à livrer.
+- question: Pourquoi le lazy loading est-il important pour les modules PrestaShop
+    ?
+  answer: Les modules PrestaShop contiennent souvent des services lourds (clients
+    API, parsers Excel/CSV, générateurs PDF, clients Redis) que la plupart des pages
+    n'utilisent pas. Sans lazy loading, vous gaspillez mémoire et temps de démarrage.
+    Avec le lazy, ces services ne se chargent que quand réellement nécessaires.
+- question: Comment activer le lazy loading dans un service PrestaShop ?
+  answer: 'Dans votre fichier config/services.yml, ajoutez simplement lazy: true dans
+    la configuration de votre service. Par exemple : MyVendor\MyModule\Infra\External\ApiClient:
+    arguments: $apiKey: ''%env(MYMODULE_API_KEY)%'' lazy: true. Le proxy sera généré
+    automatiquement par Symfony uniquement au besoin.'
+- question: Quand faut-il éviter le lazy loading ?
+  answer: Évitez le lazy loading pour les helpers simples et services légers utilisés
+    partout, les services critiques utilisés dans chaque requête, et les services
+    de logging qui doivent être disponibles immédiatement. Le lazy loading est bénéfique
+    uniquement pour les services lourds utilisés occasionnellement.
+- question: Comment résoudre le problème des classes final avec le lazy loading ?
+  answer: 'Si votre service est une classe final, Symfony ne peut pas créer de proxy.
+    Préférez une interface : créez une ApiClientInterface, faites implémenter votre
+    classe final, puis configurez le service avec l''interface en class. Le lazy loading
+    fonctionnera alors sur l''interface.'
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
 
 # Optimiser vos modules PrestaShop avec le lazy loading des services Symfony

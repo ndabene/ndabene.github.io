@@ -14,16 +14,51 @@ class CookieConsent {
     }
 
     init() {
-        // Vérifier si le consentement existe déjà
-        if (!this.hasValidConsent()) {
-            this.showBanner();
-        } else {
-            // Charger les services selon le consentement
-            this.loadServices();
-        }
+        // Vérifier si le CMP Google est actif
+        // Si c'est le cas, ne pas afficher notre propre bannière
+        // car le CMP Google gère déjà le consentement
+        this.checkGoogleCMPStatus().then(hasGoogleCMP => {
+            if (hasGoogleCMP) {
+                console.log('[Cookie Consent] CMP Google détecté, délégation de la gestion du consentement');
+                // Le CMP Google va gérer le consentement et synchroniser avec notre système
+                return;
+            }
+
+            // Vérifier si le consentement existe déjà
+            if (!this.hasValidConsent()) {
+                this.showBanner();
+            } else {
+                // Charger les services selon le consentement
+                this.loadServices();
+            }
+        });
 
         // Écouter les changements de préférences
         this.bindEvents();
+    }
+
+    // Vérifier si le CMP Google est actif
+    checkGoogleCMPStatus() {
+        return new Promise((resolve) => {
+            // Attendre jusqu'à 2 secondes pour que le CMP Google se charge
+            let attempts = 0;
+            const maxAttempts = 8; // 2 secondes max (8 * 250ms)
+
+            const checkInterval = setInterval(() => {
+                attempts++;
+
+                // Vérifier si l'API CMP Google est disponible
+                if (typeof window.__tcfapi === 'function' ||
+                    typeof window.__gpp === 'function' ||
+                    (window.googlefc && window.googlefc.callbackQueue)) {
+                    clearInterval(checkInterval);
+                    resolve(true); // CMP Google détecté
+                } else if (attempts >= maxAttempts) {
+                    clearInterval(checkInterval);
+                    resolve(false); // Pas de CMP Google, utiliser notre système
+                }
+            }, 250);
+        });
     }
 
     hasValidConsent() {
@@ -216,28 +251,47 @@ class CookieConsent {
             preferences.adUserData ||
             preferences.adPersonalization;
 
-        if (anyConsent) {
-            if (window.gtag) {
-                this.enableGoogleAnalytics(preferences);
-            } else {
-                this.loadGoogleAnalytics(preferences);
+        // Si le CMP Google est actif, ne pas gérer Google Analytics ici
+        // car le CMP Google le fait déjà via google-cmp-integration.js
+        this.checkGoogleCMPStatus().then(hasGoogleCMP => {
+            if (hasGoogleCMP) {
+                console.log('[Cookie Consent] CMP Google actif, Google Analytics géré par le CMP');
+                return;
             }
-        } else {
-            this.disableGoogleAnalytics();
-        }
 
-        // Gestion AdSense
+            // Sinon, gérer Google Analytics localement
+            if (anyConsent) {
+                if (window.gtag) {
+                    this.enableGoogleAnalytics(preferences);
+                } else {
+                    this.loadGoogleAnalytics(preferences);
+                }
+            } else {
+                this.disableGoogleAnalytics();
+            }
+        });
+
+        // Gestion AdSense (toujours géré localement)
         this.manageAdSenseConsent(preferences);
     }
 
     loadGoogleAnalytics(preferences) {
         // Avec Consent Mode, le script global est déjà inclus dans la page
-        // On se contente d'activer les stockages consentis si l'utilisateur consent
+        // Si consentement déjà donné au chargement, reconfigurer avec stockage activé
+        if (window.gtag && window.GA_MEASUREMENT_ID && preferences.analytics) {
+            window.gtag('config', window.GA_MEASUREMENT_ID, {
+                'client_storage': 'auto',  // Active les cookies pour données enrichies
+                'anonymize_ip': true,
+                'allow_google_signals': false,
+                'allow_ad_personalization_signals': false,
+                'cookie_flags': 'SameSite=Strict;Secure'
+            });
+        }
         this.enableGoogleAnalytics(preferences);
     }
 
     enableGoogleAnalytics(preferences = {}) {
-        if (window.gtag) {
+        if (window.gtag && window.GA_MEASUREMENT_ID) {
             const wasGranted = this.analyticsConsentGranted;
             const update = {};
 
@@ -254,8 +308,19 @@ class CookieConsent {
                 update.ad_personalization = 'granted';
             }
 
+            // Mettre à jour le consentement
             window.gtag('consent', 'update', update);
+
+            // Si analytics accepté, reconfigurer avec stockage activé pour données enrichies
             if (preferences.analytics && !wasGranted) {
+                window.gtag('config', window.GA_MEASUREMENT_ID, {
+                    'client_storage': 'auto',  // Active les cookies pour données enrichies
+                    'anonymize_ip': true,
+                    'allow_google_signals': false,
+                    'allow_ad_personalization_signals': false,
+                    'cookie_flags': 'SameSite=Strict;Secure'
+                });
+                // Envoyer un événement page_view avec le nouveau mode
                 window.gtag('event', 'page_view', {
                     page_location: location.href,
                     page_title: document.title
@@ -336,49 +401,38 @@ class CookieConsent {
     }
 
     manageAdSenseConsent(preferences) {
-        // Vérifier si AdSense est déjà chargé
-        const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
+        // Le chargement du script AdSense est maintenant géré par adsense-lazy-loader.js
+        // On notifie simplement le changement de consentement
 
         if (preferences.ad || preferences.adUserData || preferences.adPersonalization) {
             // Consentement donné pour au moins un type de publicité
-            if (!adSenseScript) {
-                this.loadAdSense();
-            }
-            // Le Consent Mode gère automatiquement l'état via gtag
+            // Notifier le lazy loader que le consentement est accordé
+            this.notifyAdSenseConsentChange(true);
         } else {
             // Pas de consentement publicitaire
+            // Notifier le lazy loader et nettoyer si nécessaire
+            this.notifyAdSenseConsentChange(false);
+
+            // Supprimer le script AdSense si déjà chargé sans consentement
+            const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
             if (adSenseScript) {
-                // Supprimer le script AdSense si chargé sans consentement
                 adSenseScript.remove();
-                // console.log('AdSense script removed due to lack of consent');
             }
         }
     }
 
-    loadAdSense() {
-        // Vérifier si le script n'est pas déjà présent
-        if (document.querySelector('script[src*="pagead2.googlesyndication.com"]')) {
-            return; // Déjà chargé
+    notifyAdSenseConsentChange(hasConsent) {
+        // Émettre un événement personnalisé pour le lazy loader
+        const event = new CustomEvent('cookieConsentUpdated', {
+            detail: { hasAdConsent: hasConsent }
+        });
+        document.dispatchEvent(event);
+
+        // Si le lazy loader est déjà chargé, mettre à jour directement
+        if (window.adSenseLazyLoader && hasConsent) {
+            window.adSenseLazyLoader.checkConsent();
+            window.adSenseLazyLoader.observeAds();
         }
-
-        // Créer et insérer le script AdSense
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1445021827447908';
-        script.crossOrigin = 'anonymous';
-
-        // Trouver l'emplacement approprié (dans le head)
-        const head = document.head || document.getElementsByTagName('head')[0];
-        head.appendChild(script);
-
-        // console.log('AdSense script loaded with consent');
-
-        // Attendre que AdSense soit chargé puis initialiser
-        script.onload = () => {
-            if (window.adsbygoogle) {
-                // console.log('AdSense loaded successfully');
-            }
-        };
     }
 }
 

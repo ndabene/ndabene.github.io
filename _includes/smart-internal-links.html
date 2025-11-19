@@ -131,6 +131,13 @@
                 {% endif %}
               </div>
 
+              {% comment %} Schema.org author metadata {% endcomment %}
+              {% if post.author %}
+              <span itemprop="author" itemscope itemtype="https://schema.org/Person" style="display: none;">
+                <span itemprop="name">{{ post.author }}</span>
+              </span>
+              {% endif %}
+
               {% if post.tags and post.tags.size > 0 %}
               <div class="link-tags">
                 {% for tag in post.tags limit: 3 %}

@@ -193,6 +193,26 @@ llm_topics:
     background-color: #f8fafc !important;
 }
 
+/* Select improvements */
+.form-group select {
+    font-weight: 500;
+}
+
+.form-group select:not([value=""]):not(:invalid) {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.form-group select option:first-child {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.form-group select option:not(:first-child) {
+    color: #0f172a;
+    font-weight: 500;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .contact-columns {

@@ -51,22 +51,43 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Ensure config flags
         run: |
-          printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
-      
+          printf "\nfuture: true\n" >> _config.yml
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Harmonize tags
+        run: |
+          echo "🏷️  Harmonisation automatique des tags..."
+          python3 harmonize_tags.py --apply
+          echo "✅ Tags harmonisés avec succès"
+
+      - name: Generate tag pages
+        run: |
+          echo "🚀 Génération automatique des pages de tags..."
+          ruby scripts/generate_tag_pages.rb
+          echo "✅ Pages de tags générées avec succès"
+
       - name: Check for future posts
         id: check_posts
         run: |
           # Vérifier s'il y a des articles futurs qui peuvent maintenant être publiés
           current_date=$(date -u +"%Y-%m-%d")
-          future_posts=$(find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null | wc -l)
-          
+          future_posts=$(find _posts _posts_en -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null | wc -l)
+
           echo "Articles potentiellement publiables: $future_posts"
           echo "current_date=$current_date" >> $GITHUB_OUTPUT
           echo "future_posts=$future_posts" >> $GITHUB_OUTPUT
-          
+
           # Lister les articles concernés pour debug
           echo "=== Articles avec dates récentes ==="
-          find _posts -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null || echo "Aucun article trouvé"
+          find _posts _posts_en -name "*.md" -exec grep -l "date: $current_date\|date: $(date -u -d "yesterday" +"%Y-%m-%d")\|date: $(date -u -d "2 days ago" +"%Y-%m-%d")" {} \; 2>/dev/null || echo "Aucun article trouvé"
       
       - name: Build with Jekyll
         run: |

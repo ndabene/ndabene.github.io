@@ -1,27 +1,55 @@
 ---
 layout: post
-title: "Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop"
+title: 'IA et développement : éviter les pièges courants'
 date: 2025-09-08
 author: Nicolas Dabène
-categories: [PrestaShop, PHP, Développement]
-tags: [Doctrine, PrestaShop 9, ORM, database, modules, PHP 8]
-excerpt: "Découvrez comment résoudre l'erreur 'Base table or view not found' avec Doctrine dans PrestaShop en automatisant la gestion des préfixes de tables dynamiques."
+categories:
+- PrestaShop
+- PHP
+- Développement
+tags:
+- PrestaShop
+- développement
+excerpt: Découvrez comment résoudre l'erreur 'Base table or view not found' avec Doctrine
+  dans PrestaShop en automatisant la gestion des préfixes de tables dynamiques.
 image: /assets/images/blog/2025/09/2025-09-08-doctrine-prestashop-prefix.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["PHP", "PrestaShop", "Doctrine", "Symfony"]
-estimated_reading_time: "8 minutes"
+difficulty: Intermédiaire
+technologies:
+- PHP
+- PrestaShop
+- Doctrine
+- Symfony
+estimated_reading_time: 8 minutes
 faq:
-  - question: "Pourquoi Doctrine ne trouve-t-il pas mes tables PrestaShop ?"
-    answer: "Doctrine lit les annotations littéralement et cherche exactement le nom spécifié dans @ORM\\Table(name=\"trade_in_request\") sans jamais ajouter le préfixe PrestaShop (_DB_PREFIX_). Votre table s'appelle ps_trade_in_request mais Doctrine cherche trade_in_request, d'où l'erreur 'Base table or view not found'."
-  - question: "Comment résoudre élégamment le problème de préfixe DB avec Doctrine ?"
-    answer: "Créez un TablePrefixSubscriber qui intercepte l'événement loadClassMetadata de Doctrine pour ajouter automatiquement le bon préfixe au runtime. Déclarez-le comme service Doctrine avec le tag doctrine.event_subscriber et injectez-lui %database_prefix%. Cette solution centralisée est maintenable et compatible tous environnements."
-  - question: "Faut-il mettre le préfixe en dur dans les annotations Doctrine ?"
-    answer: "Non, ne mettez jamais le préfixe en dur comme @ORM\\Table(name=\"ps_trade_in_request\"). Cela ne marchera que sur les installations avec préfixe ps_, rendra impossible le déploiement multi-environnements et violera les bonnes pratiques PrestaShop. Utilisez plutôt un subscriber événementiel qui gère dynamiquement le préfixe."
-  - question: "Le subscriber gère-t-il aussi les tables de jointure ManyToMany ?"
-    answer: "Oui, le TablePrefixSubscriber gère automatiquement les tables de jointure via la méthode prefixJoinTables() qui parcourt les associations et préfixe les joinTable. Pour une relation @ManyToMany avec joinTable(name=\"trade_in_request_category\"), elle sera automatiquement transformée en {prefix}trade_in_request_category."
-  - question: "Comment limiter le subscriber aux entités de mon module uniquement ?"
-    answer: "Dans la méthode loadClassMetadata(), vérifiez le namespace de l'entité avec str_starts_with($classMetadata->getName(), 'Vendor\\\\YourModule\\\\Entity\\\\'). Si l'entité ne correspond pas à votre module, retournez immédiatement. Cette précaution évite les conflits avec autres modules ou le core PrestaShop."
+- question: Pourquoi Doctrine ne trouve-t-il pas mes tables PrestaShop ?
+  answer: Doctrine lit les annotations littéralement et cherche exactement le nom
+    spécifié dans @ORM\Table(name="trade_in_request") sans jamais ajouter le préfixe
+    PrestaShop (_DB_PREFIX_). Votre table s'appelle ps_trade_in_request mais Doctrine
+    cherche trade_in_request, d'où l'erreur 'Base table or view not found'.
+- question: Comment résoudre élégamment le problème de préfixe DB avec Doctrine ?
+  answer: Créez un TablePrefixSubscriber qui intercepte l'événement loadClassMetadata
+    de Doctrine pour ajouter automatiquement le bon préfixe au runtime. Déclarez-le
+    comme service Doctrine avec le tag doctrine.event_subscriber et injectez-lui %database_prefix%.
+    Cette solution centralisée est maintenable et compatible tous environnements.
+- question: Faut-il mettre le préfixe en dur dans les annotations Doctrine ?
+  answer: Non, ne mettez jamais le préfixe en dur comme @ORM\Table(name="ps_trade_in_request").
+    Cela ne marchera que sur les installations avec préfixe ps_, rendra impossible
+    le déploiement multi-environnements et violera les bonnes pratiques PrestaShop.
+    Utilisez plutôt un subscriber événementiel qui gère dynamiquement le préfixe.
+- question: Le subscriber gère-t-il aussi les tables de jointure ManyToMany ?
+  answer: Oui, le TablePrefixSubscriber gère automatiquement les tables de jointure
+    via la méthode prefixJoinTables() qui parcourt les associations et préfixe les
+    joinTable. Pour une relation @ManyToMany avec joinTable(name="trade_in_request_category"),
+    elle sera automatiquement transformée en {prefix}trade_in_request_category.
+- question: Comment limiter le subscriber aux entités de mon module uniquement ?
+  answer: Dans la méthode loadClassMetadata(), vérifiez le namespace de l'entité avec
+    str_starts_with($classMetadata->getName(), 'Vendor\\YourModule\\Entity\\'). Si
+    l'entité ne correspond pas à votre module, retournez immédiatement. Cette précaution
+    évite les conflits avec autres modules ou le core PrestaShop.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
 
 # Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop

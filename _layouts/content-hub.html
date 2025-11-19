@@ -62,7 +62,22 @@ layout: default
             <div class="hub-stats">
                 {% for stat in page.stats %}
                 <div class="stat-item">
-                    <div class="stat-number">{{ stat.number }}</div>
+                    <div class="stat-number">
+                        {% if stat.category or stat.tag %}
+                            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+                            {% assign count = 0 %}
+                            {% for post in published_posts %}
+                                {% if stat.category and post.categories contains stat.category %}
+                                    {% assign count = count | plus: 1 %}
+                                {% elsif stat.tag and post.tags contains stat.tag %}
+                                    {% assign count = count | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+                            {{ count }}+
+                        {% else %}
+                            {{ stat.number }}
+                        {% endif %}
+                    </div>
                     <div class="stat-label">{{ stat.label }}</div>
                 </div>
                 {% endfor %}
@@ -142,10 +157,8 @@ layout: default
                                         </span>
                                         <span class="post-read-time">
                                             <i class="far fa-clock"></i>
-                                            {% if post.content %}
-                                                {% assign words = post.content | strip_html | number_of_words %}
-                                                {% assign read_time = words | divided_by: 200 %}
-                                                {% if read_time < 1 %}1{% else %}{{ read_time }}{% endif %} min
+                                            {% if post.estimated_reading_time %}
+                                                {{ post.estimated_reading_time | remove: ' minutes' }} min
                                             {% else %}
                                                 5 min
                                             {% endif %}

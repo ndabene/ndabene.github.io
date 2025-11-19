@@ -1,27 +1,59 @@
 ---
 layout: post
-title: "Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025"
+title: 'Coder à l''ère de l''IA : adapter ses méthodes'
 date: 2025-09-22
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
-tags: [IA, développement assisté, GitHub Copilot, prompt engineering, méthodologie, junior vs senior]
-excerpt: "84% des développeurs utilisent l'IA, mais seuls 34% maîtrisent réellement cette collaboration. Découvrez les méthodes concrètes pour transformer l'IA d'un simple générateur de code en véritable partenaire de développement."
+categories:
+- Intelligence Artificielle
+- Développement
+- Bonnes Pratiques
+tags:
+- IA
+- développement
+- prompt engineering
+excerpt: 84% des développeurs utilisent l'IA, mais seuls 34% maîtrisent réellement
+  cette collaboration. Découvrez les méthodes concrètes pour transformer l'IA d'un
+  simple générateur de code en véritable partenaire de développement.
 image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["IA", "GitHub Copilot", "Développement", "Méthodologies"]
-estimated_reading_time: "12 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- GitHub Copilot
+- Développement
+- Méthodologies
+estimated_reading_time: 12 minutes
 faq:
-  - question: "Quel pourcentage de développeurs utilise l'IA en 2025 ?"
-    answer: "84% des développeurs utilisent ou planifient d'utiliser des outils d'IA selon les dernières études. Le marché des assistants de code IA explose, passant de 5,5 milliards de dollars en 2024 à une prévision de 47,3 milliards d'ici 2034. Cependant, seuls 34% maîtrisent vraiment cette collaboration efficacement."
-  - question: "Qu'est-ce que la méthodologie PARR pour coder avec l'IA ?"
-    answer: "PARR signifie Plan → Act → Review → Repeat. Plan : discuter avec l'IA sans code pour construire un plan. Act : demander l'exécution en restant vigilant. Review : analyser le code généré avec rigueur. Repeat : itérer en intégrant les apprentissages. Cette approche transforme l'IA d'un simple générateur en véritable partenaire."
-  - question: "Pourquoi les développeurs seniors adoptent plus l'IA que les juniors ?"
-    answer: "33% des développeurs seniors utilisent l'IA pour plus de la moitié de leur code contre seulement 13% des juniors. L'expérience permet aux seniors de détecter immédiatement quand quelque chose \"sonne faux\" dans le code généré, tandis qu'un junior peut passer des heures sur un bug subtil introduit par l'IA."
-  - question: "Quels sont les principaux pièges à éviter avec l'IA en développement ?"
-    answer: "L'Over-Reliance (incapacité à résoudre sans IA), la Black Box Mentality (accepter aveuglément sans comprendre), et le Vibe Coding (utilisation chaotique sans méthodologie). 45% des développeurs passent plus de temps à déboguer le code IA qu'avant, et 66% jugent ce code \"presque correct mais pas tout à fait\"."
-  - question: "Comment l'IA impacte-t-elle la formation des développeurs juniors ?"
-    answer: "Le terrain d'entraînement traditionnel disparaît : les petites tâches répétitives qui forgeaient les réflexes sont maintenant automatisées instantanément par l'IA. C'est comme supprimer l'école primaire en gardant l'université. Les juniors doivent désormais réviser ligne par ligne tout code généré et documenter extensivement chaque bloc IA."
+- question: Quel pourcentage de développeurs utilise l'IA en 2025 ?
+  answer: 84% des développeurs utilisent ou planifient d'utiliser des outils d'IA
+    selon les dernières études. Le marché des assistants de code IA explose, passant
+    de 5,5 milliards de dollars en 2024 à une prévision de 47,3 milliards d'ici 2034.
+    Cependant, seuls 34% maîtrisent vraiment cette collaboration efficacement.
+- question: Qu'est-ce que la méthodologie PARR pour coder avec l'IA ?
+  answer: 'PARR signifie Plan → Act → Review → Repeat. Plan : discuter avec l''IA
+    sans code pour construire un plan. Act : demander l''exécution en restant vigilant.
+    Review : analyser le code généré avec rigueur. Repeat : itérer en intégrant les
+    apprentissages. Cette approche transforme l''IA d''un simple générateur en véritable
+    partenaire.'
+- question: Pourquoi les développeurs seniors adoptent plus l'IA que les juniors ?
+  answer: 33% des développeurs seniors utilisent l'IA pour plus de la moitié de leur
+    code contre seulement 13% des juniors. L'expérience permet aux seniors de détecter
+    immédiatement quand quelque chose "sonne faux" dans le code généré, tandis qu'un
+    junior peut passer des heures sur un bug subtil introduit par l'IA.
+- question: Quels sont les principaux pièges à éviter avec l'IA en développement ?
+  answer: L'Over-Reliance (incapacité à résoudre sans IA), la Black Box Mentality
+    (accepter aveuglément sans comprendre), et le Vibe Coding (utilisation chaotique
+    sans méthodologie). 45% des développeurs passent plus de temps à déboguer le code
+    IA qu'avant, et 66% jugent ce code "presque correct mais pas tout à fait".
+- question: Comment l'IA impacte-t-elle la formation des développeurs juniors ?
+  answer: 'Le terrain d''entraînement traditionnel disparaît : les petites tâches
+    répétitives qui forgeaient les réflexes sont maintenant automatisées instantanément
+    par l''IA. C''est comme supprimer l''école primaire en gardant l''université.
+    Les juniors doivent désormais réviser ligne par ligne tout code généré et documenter
+    extensivement chaque bloc IA.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
 
 # Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025

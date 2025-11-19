@@ -1,25 +1,50 @@
 ---
 layout: post
-title: "Sécuriser votre Serveur MCP : Permissions, Validation et Protection"
+title: Comment sécuriser un serveur MCP?
 date: 2025-12-11
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle, Sécurité]
-tags: [MCP, sécurité, permissions, validation, authentification, TypeScript]
-excerpt: "Votre serveur MCP fonctionne ? Parfait. Maintenant, sécurisons-le pour qu'il soit production-ready avec validation, permissions et protection."
+categories:
+- Tutoriel
+- Intelligence Artificielle
+- Sécurité
+tags:
+- API
+- IA
+- développement
+- sécurité
+excerpt: Votre serveur MCP fonctionne ? Parfait. Maintenant, sécurisons-le pour qu'il
+  soit production-ready avec validation, permissions et protection.
 image: /assets/images/blog/2025/12/2025-12-11-securiser-serveur-mcp.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["TypeScript", "MCP", "Security", "JWT", "Validation"]
-estimated_reading_time: "16 minutes"
+difficulty: Intermédiaire
+technologies:
+- TypeScript
+- MCP
+- Security
+- JWT
+- Validation
+estimated_reading_time: 16 minutes
 faq:
-  - question: "Est-ce que ce système est production-ready ?"
-    answer: "C'est une excellente base, mais pour la production, ajoutez : vrai JWT (avec jsonwebtoken), hash bcrypt, HTTPS obligatoire, logging vers un service externe, et tests de sécurité automatisés."
-  - question: "Comment gérer les permissions plus complexes ?"
-    answer: "Implémentez un système RBAC (Role-Based Access Control) complet avec des rôles composables et des permissions hiérarchiques. Vous pouvez aussi utiliser CASL ou Casbin."
-  - question: "Que faire si un utilisateur abuse du système ?"
-    answer: "Ajoutez un système de bannissement temporaire ou permanent, avec détection automatique des comportements suspects (trop d'erreurs, patterns anormaux)."
-  - question: "Comment protéger contre les attaques DDoS ?"
-    answer: "Utilisez un reverse proxy comme Nginx avec rate limiting, un WAF (Web Application Firewall), et des services comme Cloudflare en frontal."
+- question: Est-ce que ce système est production-ready ?
+  answer: 'C''est une excellente base, mais pour la production, ajoutez : vrai JWT
+    (avec jsonwebtoken), hash bcrypt, HTTPS obligatoire, logging vers un service externe,
+    et tests de sécurité automatisés.'
+- question: Comment gérer les permissions plus complexes ?
+  answer: Implémentez un système RBAC (Role-Based Access Control) complet avec des
+    rôles composables et des permissions hiérarchiques. Vous pouvez aussi utiliser
+    CASL ou Casbin.
+- question: Que faire si un utilisateur abuse du système ?
+  answer: Ajoutez un système de bannissement temporaire ou permanent, avec détection
+    automatique des comportements suspects (trop d'erreurs, patterns anormaux).
+- question: Comment protéger contre les attaques DDoS ?
+  answer: Utilisez un reverse proxy comme Nginx avec rate limiting, un WAF (Web Application
+    Firewall), et des services comme Cloudflare en frontal.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 ---
 
 # Sécuriser votre Serveur MCP : Permissions, Validation et Protection

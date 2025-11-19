@@ -1,7 +1,7 @@
 {% comment %}
-  Renders contextual related resources for blog posts
-  Usage: {% include post-related-resources.html %}
-  Automatically detects post categories and shows relevant resources
+Renders contextual related resources for blog posts
+Usage: {% include post-related-resources.html %}
+Automatically detects post categories and shows relevant resources
 {% endcomment %}
 
 {% comment %}Detect post categories{% endcomment %}
@@ -11,16 +11,16 @@
 {% assign has_ecommerce = false %}
 
 {% for category in page.categories %}
-  {% assign cat_lower = category | downcase %}
-  {% if cat_lower contains "prestashop" %}
-    {% assign has_prestashop = true %}
-  {% elsif cat_lower contains "intelligence" or cat_lower contains "ia" %}
-    {% assign has_ia = true %}
-  {% elsif cat_lower contains "php" %}
-    {% assign has_php = true %}
-  {% elsif cat_lower contains "ecommerce" or cat_lower contains "e-commerce" %}
-    {% assign has_ecommerce = true %}
-  {% endif %}
+{% assign cat_lower = category | downcase %}
+{% if cat_lower contains "prestashop" %}
+{% assign has_prestashop = true %}
+{% elsif cat_lower contains "intelligence" or cat_lower contains "ia" %}
+{% assign has_ia = true %}
+{% elsif cat_lower contains "php" %}
+{% assign has_php = true %}
+{% elsif cat_lower contains "ecommerce" or cat_lower contains "e-commerce" %}
+{% assign has_ecommerce = true %}
+{% endif %}
 {% endfor %}
 
 <div class="related-resources">
@@ -107,145 +107,145 @@
 </div>
 
 <style>
-.related-resources {
-  margin: 3rem 0;
-  padding: 2.5rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-}
-
-.related-resources-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.related-resources-header h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 0.5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-.related-resources-header h3 i {
-  color: #7c3aed;
-}
-
-.related-resources-header p {
-  color: #64748b;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.resources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.resource-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  border: 2px solid #e2e8f0;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.resource-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-color: #0f172a;
-}
-
-.resource-card-highlight {
-  border-color: #7c3aed;
-  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
-}
-
-.resource-card-highlight:hover {
-  border-color: #7c3aed;
-  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
-}
-
-.resource-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.resource-icon i {
-  font-size: 1.75rem;
-  color: white;
-}
-
-.resource-content {
-  flex: 1;
-}
-
-.resource-content h4 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin: 0 0 0.25rem 0;
-}
-
-.resource-content p {
-  font-size: 0.875rem;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.resource-arrow {
-  color: #cbd5e1;
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
-}
-
-.resource-card:hover .resource-arrow {
-  color: #0f172a;
-  transform: translateX(4px);
-}
-
-@media (max-width: 768px) {
   .related-resources {
-    padding: 1.5rem;
+    margin: 3rem 0;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
   }
 
-  .resources-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .resource-card {
-    padding: 1.25rem;
-  }
-
-  .resource-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .resource-icon i {
-    font-size: 1.5rem;
+  .related-resources-header {
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
   .related-resources-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
   }
-}
+
+  .related-resources-header h3 i {
+    color: #7c3aed;
+  }
+
+  .related-resources-header p {
+    color: #64748b;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .resource-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #e2e8f0;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: #0f172a;
+  }
+
+  .resource-card-highlight {
+    border-color: #7c3aed;
+    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  }
+
+  .resource-card-highlight:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
+  }
+
+  .resource-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .resource-icon i {
+    font-size: 1.75rem;
+    color: white;
+  }
+
+  .resource-content {
+    flex: 1;
+  }
+
+  .resource-content h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .resource-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .resource-arrow {
+    color: #cbd5e1;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .resource-card:hover .resource-arrow {
+    color: #0f172a;
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 768px) {
+    .related-resources {
+      padding: 1.5rem;
+    }
+
+    .resources-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .resource-card {
+      padding: 1.25rem;
+    }
+
+    .resource-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .resource-icon i {
+      font-size: 1.5rem;
+    }
+
+    .related-resources-header h3 {
+      font-size: 1.5rem;
+    }
+  }
 </style>

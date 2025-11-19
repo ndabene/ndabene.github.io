@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: API"
 tag: "API"
-description: "Articles sur les APIs : conception, développement REST/GraphQL, intégrations, sécurité et bonnes pratiques API."
+title: "Articles sur API"
+description: "Découvrez tous les articles de blog sur API. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/api/
-keywords: "api, rest api, graphql, tag api, développement api"
 ---

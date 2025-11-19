@@ -1,28 +1,64 @@
 ---
 layout: post
-title: "OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)"
+title: 'OpenAI Agent Builder : créer des assistants IA'
 date: 2025-10-16
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Automatisation]
-tags: [OpenAI, Agent Builder, AgentKit, ChatKit, IA conversationnelle, Automatisation, No-code, Zapier, n8n, Make]
-excerpt: "Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans coder. Une démocratisation de l'automatisation intelligente."
+categories:
+- Intelligence Artificielle
+- Développement
+- Automatisation
+tags:
+- ChatGPT
+- IA
+- automatisation
+excerpt: Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée
+  en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans
+  coder. Une démocratisation de l'automatisation intelligente.
 image: /assets/images/blog/2025/10/2025-10-16-openai-agent-builder.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["OpenAI", "Agent Builder", "AgentKit", "ChatKit", "IA", "Automatisation"]
-estimated_reading_time: "18 minutes"
+difficulty: Intermédiaire
+technologies:
+- OpenAI
+- Agent Builder
+- AgentKit
+- ChatKit
+- IA
+- Automatisation
+estimated_reading_time: 18 minutes
 is_future: true
 faq:
-  - question: "Qu'est-ce que l'Agent Builder d'OpenAI ?"
-    answer: "L'Agent Builder est une plateforme révolutionnaire lancée le 5 octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans coder, basée sur AgentKit. C'est comme pouvoir créer votre propre robot personnel en le dessinant simplement, transformant l'automatisation intelligente en outil accessible à tous."
-  - question: "Quelle est la différence entre AgentKit et ChatKit ?"
-    answer: "AgentKit est le moteur modulaire qui transforme la création d'agents IA en assemblage de briques (noyau de raisonnement, connecteurs, capacités d'action). ChatKit est l'interface utilisateur JavaScript open-source qui rend cette puissance accessible via des composants de chat personnalisables intégrables dans n'importe quelle application web."
-  - question: "Comment l'Agent Builder se différencie-t-il de Zapier ?"
-    answer: "Zapier excelle dans l'automatisation de workflows linéaires prédéfinis (comme un chemin de fer sur des rails), tandis que l'Agent Builder ajoute une intelligence native permettant prise de décision autonome et adaptation au contexte (comme un chauffeur de taxi qui s'adapte au trafic). L'Agent Builder raisonne là où Zapier exécute."
-  - question: "Qu'est-ce que le Connector Registry et pourquoi est-il important ?"
-    answer: "Le Connector Registry est un registre officiel des connecteurs approuvés par OpenAI garantissant sécurité des données, conformité réglementaire RGPD et fiabilité. Seuls les connecteurs vérifiés peuvent être utilisés dans les agents, éliminant les risques de connecteurs malveillants et rassurant les entreprises sur la protection de leurs informations sensibles."
-  - question: "Peut-on créer un agent sans compétences techniques ?"
-    answer: "Oui, l'Agent Builder est conçu pour être accessible sans programmation. Vous décrivez simplement ce que vous voulez en langage naturel (ex : \"Analyse mes campagnes publicitaires et propose 3 actions prioritaires\"), l'IA comprend et configure automatiquement les connecteurs nécessaires. La création d'un premier agent prend environ 30 minutes."
+- question: Qu'est-ce que l'Agent Builder d'OpenAI ?
+  answer: L'Agent Builder est une plateforme révolutionnaire lancée le 5 octobre 2025
+    qui permet à chacun de créer des assistants IA personnalisés sans coder, basée
+    sur AgentKit. C'est comme pouvoir créer votre propre robot personnel en le dessinant
+    simplement, transformant l'automatisation intelligente en outil accessible à tous.
+- question: Quelle est la différence entre AgentKit et ChatKit ?
+  answer: AgentKit est le moteur modulaire qui transforme la création d'agents IA
+    en assemblage de briques (noyau de raisonnement, connecteurs, capacités d'action).
+    ChatKit est l'interface utilisateur JavaScript open-source qui rend cette puissance
+    accessible via des composants de chat personnalisables intégrables dans n'importe
+    quelle application web.
+- question: Comment l'Agent Builder se différencie-t-il de Zapier ?
+  answer: Zapier excelle dans l'automatisation de workflows linéaires prédéfinis (comme
+    un chemin de fer sur des rails), tandis que l'Agent Builder ajoute une intelligence
+    native permettant prise de décision autonome et adaptation au contexte (comme
+    un chauffeur de taxi qui s'adapte au trafic). L'Agent Builder raisonne là où Zapier
+    exécute.
+- question: Qu'est-ce que le Connector Registry et pourquoi est-il important ?
+  answer: Le Connector Registry est un registre officiel des connecteurs approuvés
+    par OpenAI garantissant sécurité des données, conformité réglementaire RGPD et
+    fiabilité. Seuls les connecteurs vérifiés peuvent être utilisés dans les agents,
+    éliminant les risques de connecteurs malveillants et rassurant les entreprises
+    sur la protection de leurs informations sensibles.
+- question: Peut-on créer un agent sans compétences techniques ?
+  answer: 'Oui, l''Agent Builder est conçu pour être accessible sans programmation.
+    Vous décrivez simplement ce que vous voulez en langage naturel (ex : "Analyse
+    mes campagnes publicitaires et propose 3 actions prioritaires"), l''IA comprend
+    et configure automatiquement les connecteurs nécessaires. La création d''un premier
+    agent prend environ 30 minutes.'
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
 
 # OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)

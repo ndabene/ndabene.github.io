@@ -1,0 +1,88 @@
+hero:
+  title: "Nicolas Dabène — AI & E-commerce Content Creator"
+  subtitle: "Senior PHP Developer & AI Orchestrator with 15 years of experience. I share my expertise through technical articles, practical training and PrestaShop modules to master Artificial Intelligence and e-commerce."
+  location: "PrestaShop Expert & AI Trainer"
+  photo: "assets/images/hero/profile-hero.jpg"
+  cta:
+    primary:
+      text: "Read the blog"
+      url: "/en/blog/"
+    secondary:
+      text: "AI Training"
+      url: "/en/shop/"
+    tertiary:
+      text: "My modules"
+      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+
+blog_featured:
+  title: "Latest Articles"
+  subtitle: "Discover my latest articles on Artificial Intelligence, PrestaShop development, MCP protocol and e-commerce best practices. Actionable technical content optimized for generative engines."
+  limit: 3
+  cta:
+    text: "All articles"
+    url: "/en/blog/"
+
+formations_showcase:
+  title: "AI Training"
+  subtitle: "Learn AI step by step with pragmatic training in PDF and Podcast. From beginner to autonomous, master the fundamentals, prompt engineering and adopt a responsible approach."
+  featured:
+    - id: "chapitre-1-ia-debutants"
+      title: "Chapter 1: AI for Beginners"
+      description: "Understand AI in 2h30 without technical jargon"
+      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
+      link: "/en/shop/#chapitre-1"
+      tags: ["Beginner", "AI"]
+    - id: "chapitre-3-art-du-prompt"
+      title: "Chapter 3: The Art of Prompting"
+      description: "C.L.A.I.R method for effective prompts"
+      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
+      link: "/en/shop/#chapitre-3"
+      tags: ["Advanced", "Prompts"]
+    - id: "chapitre-2-impact-ecologique"
+      title: "Chapter 2: Ecological Impact of AI"
+      description: "Understand the environmental impacts of AI"
+      image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
+      link: "/en/shop/#chapitre-2"
+      tags: ["Green AI", "Environment"]
+  cta:
+    text: "View all training"
+    url: "/en/shop/"
+
+modules_showcase:
+  title: "PrestaShop Modules"
+  subtitle: "Professional e-commerce solutions developed with 15 years of expertise. Reliable, maintainable and optimized modules for PrestaShop 8/9. Over 100,000 cumulative installations."
+  featured:
+    - id: "geo-suite"
+      title: "GEO Suite"
+      description: "Optimize your SEO for generative engines (ChatGPT, Gemini, Perplexity). Next-generation SEO to be discovered by AI."
+      image: "assets/images/modules/geo-generative-engine-optimization.png"
+      link: "https://www.businesstech.fr/fr/ia/83-geo-suite.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["SEO", "GEO", "AI"]
+    - id: "google-merchant-center-pro"
+      title: "Google Merchant Center Pro"
+      description: "Complete Google Shopping integration for PrestaShop. Automatic product sync, feed management and boost your sales."
+      image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Google Shopping", "Feed"]
+    - id: "google-analytics-4"
+      title: "Google Analytics 4"
+      description: "Native Google Analytics 4 integration for PrestaShop. Advanced e-commerce tracking, custom events and detailed performance reports."
+      image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
+      link: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
+      tags: ["Analytics", "Tracking", "Performance"]
+  cta:
+    text: "Discover all my modules"
+    url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=view_all_modules"
+
+youtube_featured:
+  title: "Latest Videos"
+  subtitle: "Video tutorials on AI, PrestaShop and e-commerce. Practical and actionable content for developers and e-merchants."
+  limit: 3
+  cta:
+    text: "All videos"
+    url: "/en/youtube/"
+
+rss_subscribe:
+  title: "Follow the content"
+  description: "Subscribe to the RSS feed to never miss an article on Artificial Intelligence, PrestaShop, MCP protocol and e-commerce best practices."
+  cta_text: "Subscribe to RSS"

@@ -3,21 +3,46 @@ layout: post
 title: "Comprendre le Model Context Protocol (MCP) : Une Conversation Simple"
 date: 2025-10-23
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Tutoriel]
-tags: [MCP, Model Context Protocol, IA, architecture, API, TypeScript, ChatGPT, Claude]
-excerpt: "Découvrez comment les IA peuvent accéder à vos fichiers et données grâce au MCP, expliqué à travers une conversation simple et pédagogique."
+categories:
+- Intelligence Artificielle
+- Tutoriel
+tags:
+- API
+- ChatGPT
+- IA
+- développement
+excerpt: Découvrez comment les IA peuvent accéder à vos fichiers et données grâce
+  au MCP, expliqué à travers une conversation simple et pédagogique.
 image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.jpg
 featured: true
-difficulty: "Débutant"
-technologies: ["MCP", "TypeScript", "IA", "JSON"]
-estimated_reading_time: "10 minutes"
+difficulty: Débutant
+technologies:
+- MCP
+- TypeScript
+- IA
+- JSON
+estimated_reading_time: 10 minutes
 faq:
-  - question: "Le MCP remplace-t-il les API traditionnelles ?"
-    answer: "Non, le MCP est une couche au-dessus des API existantes. Il standardise la façon dont les IA interagissent avec ces API, mais les API restent le moyen technique d'accès aux données."
-  - question: "Puis-je créer un serveur MCP sans être expert en IA ?"
-    answer: "Absolument ! Le MCP utilise des technologies web standard (TypeScript, JSON). Si vous savez créer une API REST basique, vous pouvez créer un serveur MCP."
-  - question: "Mes données sont-elles envoyées à l'IA ?"
-    answer: "Oui, mais seulement après votre autorisation explicite. Le serveur MCP lit vos données et les transmet à l'IA pour traitement. C'est pourquoi la question de la confiance envers le fournisseur d'IA reste importante."
+- question: Le MCP remplace-t-il les API traditionnelles ?
+  answer: Non, le MCP est une couche au-dessus des API existantes. Il standardise
+    la façon dont les IA interagissent avec ces API, mais les API restent le moyen
+    technique d'accès aux données.
+- question: Puis-je créer un serveur MCP sans être expert en IA ?
+  answer: Absolument ! Le MCP utilise des technologies web standard (TypeScript, JSON).
+    Si vous savez créer une API REST basique, vous pouvez créer un serveur MCP.
+- question: Mes données sont-elles envoyées à l'IA ?
+  answer: Oui, mais seulement après votre autorisation explicite. Le serveur MCP lit
+    vos données et les transmet à l'IA pour traitement. C'est pourquoi la question
+    de la confiance envers le fournisseur d'IA reste importante.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
+- question: Ai-je besoin de connaissances en programmation?
+  answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
+    des serveurs MCP.
 ---
 
 # Comprendre le Model Context Protocol (MCP) : Une Conversation Simple

@@ -1,25 +1,51 @@
 ---
 layout: post
-title: "AI Act : comprendre la régulation européenne de l’IA"
+title: 'AI Act : comprendre la régulation IA en Europe'
 date: 2025-08-29
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Bonnes Pratiques]
-tags: [AI Act, Europe, régulation, open source, PME, PrestaShop]
-excerpt: "L’AI Act est la première loi mondiale qui encadre l’intelligence artificielle. Découvrez son histoire, ses obligations et ses impacts pour les PME, les startups, les développeurs et l’open source en France."
+categories:
+- Intelligence Artificielle
+- Bonnes Pratiques
+tags:
+- IA
+- PrestaShop
+- développement
+- sécurité
+excerpt: L’AI Act est la première loi mondiale qui encadre l’intelligence artificielle.
+  Découvrez son histoire, ses obligations et ses impacts pour les PME, les startups,
+  les développeurs et l’open source en France.
 image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["Intelligence Artificielle", "Open Source", "PHP", "PrestaShop"]
-estimated_reading_time: "14 minutes"
+difficulty: Intermédiaire
+technologies:
+- Intelligence Artificielle
+- Open Source
+- PHP
+- PrestaShop
+estimated_reading_time: 14 minutes
 faq:
-  - question: "L'AI Act va-t-il freiner l'innovation en France ?"
-    answer: "Pas nécessairement. L'impact dépendra du niveau d'accompagnement. Les sandboxes réglementaires visent à soutenir les startups, mais les coûts initiaux de conformité restent un défi réel pour les petites structures."
-  - question: "Les projets open source sont-ils concernés par l'AI Act ?"
-    answer: "Non, tant qu'ils restent dans le domaine du partage libre et ne sont pas utilisés pour des applications critiques. La responsabilité de la conformité incombe à l'exploitant final qui intègre le composant open source."
-  - question: "Les PME risquent-elles des amendes énormes ?"
-    answer: "Non, les amendes sont modulées selon la taille de l'entreprise. Pour une PME, ce sera le montant le plus faible et non un pourcentage du chiffre d'affaires mondial."
-  - question: "En quoi l'AI Act ressemble-t-il au RGPD ?"
-    answer: "Comme le RGPD en 2018, l'AI Act pourrait devenir un standard mondial. L'Union européenne espère imposer sa vision d'une IA de confiance et éthique au niveau international."
+- question: L'AI Act va-t-il freiner l'innovation en France ?
+  answer: Pas nécessairement. L'impact dépendra du niveau d'accompagnement. Les sandboxes
+    réglementaires visent à soutenir les startups, mais les coûts initiaux de conformité
+    restent un défi réel pour les petites structures.
+- question: Les projets open source sont-ils concernés par l'AI Act ?
+  answer: Non, tant qu'ils restent dans le domaine du partage libre et ne sont pas
+    utilisés pour des applications critiques. La responsabilité de la conformité incombe
+    à l'exploitant final qui intègre le composant open source.
+- question: Les PME risquent-elles des amendes énormes ?
+  answer: Non, les amendes sont modulées selon la taille de l'entreprise. Pour une
+    PME, ce sera le montant le plus faible et non un pourcentage du chiffre d'affaires
+    mondial.
+- question: En quoi l'AI Act ressemble-t-il au RGPD ?
+  answer: Comme le RGPD en 2018, l'AI Act pourrait devenir un standard mondial. L'Union
+    européenne espère imposer sa vision d'une IA de confiance et éthique au niveau
+    international.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
 
 # AI Act : comprendre la régulation européenne de l’IA

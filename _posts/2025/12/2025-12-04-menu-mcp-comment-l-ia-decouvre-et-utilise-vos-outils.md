@@ -1,26 +1,47 @@
 ---
 layout: post
-title: "Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils"
+title: Comment l'IA découvre vos outils MCP?
 date: 2025-12-04
 author: Nicolas Dabène
-categories: [Tutoriel, Intelligence Artificielle]
-tags: [MCP, TypeScript, API, discovery, protocol, outils, architecture]
-excerpt: "Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle vos outils ? Plongeons dans le système de découverte du MCP."
+categories:
+- Tutoriel
+- Intelligence Artificielle
+tags:
+- API
+- IA
+- SEO
+- développement
+excerpt: Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle
+  vos outils ? Plongeons dans le système de découverte du MCP.
 image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["TypeScript", "MCP", "API REST", "JSON"]
-estimated_reading_time: "14 minutes"
-
+difficulty: Intermédiaire
+technologies:
+- TypeScript
+- MCP
+- API REST
+- JSON
+estimated_reading_time: 14 minutes
 faq:
-  - question: "Puis-je avoir plusieurs serveurs MCP avec des outils différents ?"
-    answer: "Absolument ! Chaque serveur peut exposer ses propres outils. L'IA peut même combiner des outils de plusieurs serveurs dans une même conversation."
-  - question: "Comment gérer les outils qui nécessitent une authentification ?"
-    answer: "Le MCP ne spécifie pas d'authentification standard, mais vous pouvez implémenter JWT, API keys, ou OAuth selon vos besoins. L'endpoint de découverte peut être protégé."
-  - question: "Les outils peuvent-ils communiquer entre eux ?"
-    answer: "Oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels. Cependant, vos outils peuvent appeler d'autres outils via le registre si nécessaire."
-  - question: "Comment versionner mes outils ?"
-    answer: "Incluez la version dans la description de l'outil et dans les métadonnées du serveur. L'IA peut alors décider si elle supporte cette version."
+- question: Puis-je avoir plusieurs serveurs MCP avec des outils différents ?
+  answer: Absolument ! Chaque serveur peut exposer ses propres outils. L'IA peut même
+    combiner des outils de plusieurs serveurs dans une même conversation.
+- question: Comment gérer les outils qui nécessitent une authentification ?
+  answer: Le MCP ne spécifie pas d'authentification standard, mais vous pouvez implémenter
+    JWT, API keys, ou OAuth selon vos besoins. L'endpoint de découverte peut être
+    protégé.
+- question: Les outils peuvent-ils communiquer entre eux ?
+  answer: Oui, mais c'est généralement le rôle de l'IA d'orchestrer les appels. Cependant,
+    vos outils peuvent appeler d'autres outils via le registre si nécessaire.
+- question: Comment versionner mes outils ?
+  answer: Incluez la version dans la description de l'outil et dans les métadonnées
+    du serveur. L'IA peut alors décider si elle supporte cette version.
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 ---
 
 # Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils

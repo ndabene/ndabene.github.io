@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: IA"
 tag: "IA"
-description: "Articles sur l'intelligence artificielle : IA générative, LLM, ChatGPT, Claude, intégration d'IA dans vos projets et automatisation."
+title: "Articles sur IA"
+description: "Découvrez tous les articles de blog sur IA. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/ia/
-keywords: "ia, intelligence artificielle, tag ia, articles ia, llm"
 ---

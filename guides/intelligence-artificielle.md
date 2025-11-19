@@ -19,7 +19,7 @@ articles_limit: 20
 show_resources: true
 keywords: "guide ia, intelligence artificielle développeurs, chatgpt développeurs, llm intégration, mcp protocol"
 stats:
-  - number: "{{ site.posts | where_exp: 'post', 'post.tags contains \"IA\"' | size }}+"
+  - tag: "IA"
     label: "Articles IA"
   - number: "5+"
     label: "LLM explorés"

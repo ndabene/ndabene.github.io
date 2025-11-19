@@ -202,7 +202,8 @@
   overflow-x: auto;
   margin: 1.5rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  
+  max-width: 100%;
+
   pre {
     background: transparent;
     color: inherit;
@@ -213,14 +214,19 @@
     font-size: 0.9rem;
     line-height: 1.6;
     overflow-x: auto;
+    max-width: 100%;
+    white-space: pre;
+    word-wrap: normal;
   }
-  
+
   code {
     background: transparent;
     color: inherit;
     padding: 0;
     border: none;
     font-size: inherit;
+    white-space: pre;
+    word-wrap: normal;
   }
 }
 

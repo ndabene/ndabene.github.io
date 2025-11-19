@@ -1,33 +1,67 @@
 ---
 layout: post
-title: "Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel"
+title: 'Vibe Coding vs Prompt-Driven : IA générative'
 date: 2025-06-15
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
-tags: [IA générative, développement logiciel, qualité du code, sécurité, prompt 
-    engineering]
-excerpt: "Exploration de deux approches du développement assisté par IA : le Vibe
+categories:
+- Intelligence Artificielle
+- Développement
+- Bonnes Pratiques
+tags:
+- IA
+- développement
+- prompt engineering
+- sécurité
+excerpt: 'Exploration de deux approches du développement assisté par IA : le Vibe
   Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques,
-  bénéfices et bonnes pratiques pour une génération de code responsable."
+  bénéfices et bonnes pratiques pour une génération de code responsable.'
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.jpg
 featured: true
 llm_summary: 'Exploration de deux approches du développement assisté par IA : le Vibe
   Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques,
   bénéfices et bonnes pratiques pour une génération de code responsable.'
-llm_topics: [IA générative, développement logiciel, qualité du code, sécurité,
-    prompt engineering]
+llm_topics:
+- IA générative
+- développement logiciel
+- qualité du code
+- sécurité
+- prompt engineering
 faq:
-  - question: "Qu'est-ce que le Vibe Coding ?"
-    answer: "Le Vibe Coding est une approche spontanée de génération de code par IA qui privilégie la rapidité d'exécution avec des prompts courts et génériques. Cette méthode permet d'obtenir rapidement des résultats fonctionnels mais présente des risques en termes de sécurité, maintenabilité et qualité du code pour des projets de production."
-  - question: "Quelle est la différence entre Vibe Coding et Prompt-Driven Development ?"
-    answer: "Le Vibe Coding utilise des prompts courts pour des résultats rapides sans structure, tandis que le Prompt-Driven Development adopte une démarche méthodique avec des prompts détaillés incluant contexte technique, spécifications de sécurité, architecture définie et tests intégrés. Le PDD est recommandé pour les projets professionnels de production."
-  - question: "Pourquoi le Prompt-Driven Development est-il plus sûr ?"
-    answer: "Le Prompt-Driven Development intègre dès la conception les bonnes pratiques de sécurité dans les prompts, utilise des requêtes paramétrées pour éviter les injections SQL, implémente une gestion d'erreurs robuste et suit des patterns architecturaux éprouvés. Cette approche génère du code production-ready contrairement au Vibe Coding qui néglige souvent ces aspects critiques."
-  - question: "Comment structurer un prompt efficace pour du développement professionnel ?"
-    answer: "Un prompt efficace doit inclure le contexte technique précis de votre projet, les spécifications fonctionnelles détaillées, les contraintes de sécurité et performance, les standards de code et patterns à respecter, ainsi que les exigences de tests et documentation. Cette structure guide l'IA vers du code de qualité professionnelle."
-  - question: "Peut-on utiliser le Vibe Coding en environnement professionnel ?"
-    answer: "Le Vibe Coding peut être acceptable uniquement pour des prototypes rapides ou POCs avec supervision technique stricte. Pour les projets de production, le Prompt-Driven Development est indispensable car il garantit sécurité, maintenabilité et conformité aux standards professionnels du développement logiciel."
+- question: Qu'est-ce que le Vibe Coding ?
+  answer: Le Vibe Coding est une approche spontanée de génération de code par IA qui
+    privilégie la rapidité d'exécution avec des prompts courts et génériques. Cette
+    méthode permet d'obtenir rapidement des résultats fonctionnels mais présente des
+    risques en termes de sécurité, maintenabilité et qualité du code pour des projets
+    de production.
+- question: Quelle est la différence entre Vibe Coding et Prompt-Driven Development
+    ?
+  answer: Le Vibe Coding utilise des prompts courts pour des résultats rapides sans
+    structure, tandis que le Prompt-Driven Development adopte une démarche méthodique
+    avec des prompts détaillés incluant contexte technique, spécifications de sécurité,
+    architecture définie et tests intégrés. Le PDD est recommandé pour les projets
+    professionnels de production.
+- question: Pourquoi le Prompt-Driven Development est-il plus sûr ?
+  answer: Le Prompt-Driven Development intègre dès la conception les bonnes pratiques
+    de sécurité dans les prompts, utilise des requêtes paramétrées pour éviter les
+    injections SQL, implémente une gestion d'erreurs robuste et suit des patterns
+    architecturaux éprouvés. Cette approche génère du code production-ready contrairement
+    au Vibe Coding qui néglige souvent ces aspects critiques.
+- question: Comment structurer un prompt efficace pour du développement professionnel
+    ?
+  answer: Un prompt efficace doit inclure le contexte technique précis de votre projet,
+    les spécifications fonctionnelles détaillées, les contraintes de sécurité et performance,
+    les standards de code et patterns à respecter, ainsi que les exigences de tests
+    et documentation. Cette structure guide l'IA vers du code de qualité professionnelle.
+- question: Peut-on utiliser le Vibe Coding en environnement professionnel ?
+  answer: Le Vibe Coding peut être acceptable uniquement pour des prototypes rapides
+    ou POCs avec supervision technique stricte. Pour les projets de production, le
+    Prompt-Driven Development est indispensable car il garantit sécurité, maintenabilité
+    et conformité aux standards professionnels du développement logiciel.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
 ---
+
 # Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel, sécurité et qualité du code
 
 

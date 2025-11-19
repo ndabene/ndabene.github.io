@@ -96,10 +96,8 @@ layout: default
                                             </span>
                                             <span class="post-read-time">
                                                 <i class="far fa-clock"></i>
-                                                {% if post.content %}
-                                                    {% assign words = post.content | strip_html | number_of_words %}
-                                                    {% assign read_time = words | divided_by: 200 %}
-                                                    {% if read_time < 1 %}1{% else %}{{ read_time }}{% endif %} min
+                                                {% if post.estimated_reading_time %}
+                                                    {{ post.estimated_reading_time | remove: ' minutes' }} min
                                                 {% else %}
                                                     5 min
                                                 {% endif %}
@@ -152,38 +150,24 @@ layout: default
 </section>
 
 <style>
-.tag-hero {
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
-}
-
-.tag-hero .hero-content {
-    text-align: center;
-}
-
-.tag-hero h1,
-.tag-hero .section-description,
-.tag-hero .breadcrumb a,
-.tag-hero .breadcrumb span {
-    color: white;
-}
-
 .tag-badge-hero {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(37, 99, 235, 0.1);
     backdrop-filter: blur(10px);
     padding: 1rem 2rem;
     border-radius: 50px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: white;
+    color: #2563EB;
     margin-bottom: 1.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(37, 99, 235, 0.2);
 }
 
 .tag-badge-hero i {
     font-size: 1.75rem;
+    color: #2563EB;
 }
 
 .posts-grid {

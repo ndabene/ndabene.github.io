@@ -1,27 +1,57 @@
 ---
 layout: post
-title: "Évolution des Compétences des Développeurs : de l'Expertise Technique à l'Hybride Visionnaire"
+title: Évolution des compétences des développeurs
 date: 2025-11-10
 author: Nicolas Dabène
-categories: [Développement, Intelligence Artificielle]
-tags: [IA, compétences, développeur, automatisation, documentation]
-excerpt: "En quelques mois seulement, l'intelligence artificielle a redéfini le métier de développeur : moins de technique répétitive, plus de conception, de vision et d'humain. Voici comment cette mutation s'est opérée."
+categories:
+- Développement
+- Intelligence Artificielle
+tags:
+- IA
+- automatisation
+- développement
+excerpt: 'En quelques mois seulement, l''intelligence artificielle a redéfini le métier
+  de développeur : moins de technique répétitive, plus de conception, de vision et
+  d''humain. Voici comment cette mutation s''est opérée.'
 image: /assets/images/blog/2025/11/2025-11-10-evolution-competences-developpeurs.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["IA", "ChatGPT", "Copilot"]
-estimated_reading_time: "10 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- ChatGPT
+- Copilot
+estimated_reading_time: 10 minutes
 faq:
-  - question: "Comment l'IA a-t-elle transformé le métier de développeur en quelques mois ?"
-    answer: "L'IA a permis de libérer du temps pour penser produit, stratégie et communauté plutôt que s'enliser dans les tâches répétitives. La rédaction de documents est 40% plus rapide (HBR) et le temps de développement réduit de 56% (MIT/Microsoft/GitHub). C'est un passage d'apprenti sorcier à véritable magicien."
-  - question: "Quels types de tâches techniques l'IA peut-elle automatiser ?"
-    answer: "L'IA peut prendre en charge la rédaction et mise à jour de documentation technique, la correction automatique des PHPDoc, la génération de commentaires conformes PSR-12, la création de snippets et boilerplates réutilisables, et la relecture syntaxique/fonctionnelle de classes avant commit."
-  - question: "Comment l'IA accélère-t-elle l'apprentissage des développeurs ?"
-    answer: "83,5% des apprenants estiment que l'IA accélère leur montée en compétence (MDPI). ChatGPT agit comme un assistant pédagogique 24/7 capable d'expliquer concepts obscurs, générer exemples de code, pointer erreurs invisibles. Les cycles d'apprentissage sont plus courts, fluides et la compréhension plus profonde."
-  - question: "Quelles compétences humaines deviennent plus importantes avec l'IA ?"
-    answer: "Avec l'IA prenant en charge le technique répétitif, les compétences humaines gagnent en importance : empathie, communication, leadership communautaire, capacité à relier technique à vision humaine du produit, animation de communautés et partage de connaissances. 69% des professionnels jugent que l'IA libère du temps pour tâches de haut niveau."
-  - question: "Le développeur du futur sera-t-il remplacé par l'IA ?"
-    answer: "Non, le développeur du futur n'est pas celui qui code le plus vite, mais celui qui sait collaborer intelligemment avec l'IA pour créer plus de valeur. L'IA n'a pas remplacé le travail — elle l'a augmenté, permettant de recentrer le rôle sur créativité, stratégie et communication tout en progressant techniquement."
+- question: Comment l'IA a-t-elle transformé le métier de développeur en quelques
+    mois ?
+  answer: L'IA a permis de libérer du temps pour penser produit, stratégie et communauté
+    plutôt que s'enliser dans les tâches répétitives. La rédaction de documents est
+    40% plus rapide (HBR) et le temps de développement réduit de 56% (MIT/Microsoft/GitHub).
+    C'est un passage d'apprenti sorcier à véritable magicien.
+- question: Quels types de tâches techniques l'IA peut-elle automatiser ?
+  answer: L'IA peut prendre en charge la rédaction et mise à jour de documentation
+    technique, la correction automatique des PHPDoc, la génération de commentaires
+    conformes PSR-12, la création de snippets et boilerplates réutilisables, et la
+    relecture syntaxique/fonctionnelle de classes avant commit.
+- question: Comment l'IA accélère-t-elle l'apprentissage des développeurs ?
+  answer: 83,5% des apprenants estiment que l'IA accélère leur montée en compétence
+    (MDPI). ChatGPT agit comme un assistant pédagogique 24/7 capable d'expliquer concepts
+    obscurs, générer exemples de code, pointer erreurs invisibles. Les cycles d'apprentissage
+    sont plus courts, fluides et la compréhension plus profonde.
+- question: Quelles compétences humaines deviennent plus importantes avec l'IA ?
+  answer: 'Avec l''IA prenant en charge le technique répétitif, les compétences humaines
+    gagnent en importance : empathie, communication, leadership communautaire, capacité
+    à relier technique à vision humaine du produit, animation de communautés et partage
+    de connaissances. 69% des professionnels jugent que l''IA libère du temps pour
+    tâches de haut niveau.'
+- question: Le développeur du futur sera-t-il remplacé par l'IA ?
+  answer: Non, le développeur du futur n'est pas celui qui code le plus vite, mais
+    celui qui sait collaborer intelligemment avec l'IA pour créer plus de valeur.
+    L'IA n'a pas remplacé le travail — elle l'a augmenté, permettant de recentrer
+    le rôle sur créativité, stratégie et communication tout en progressant techniquement.
+- question: Est-ce adapté aux débutants?
+  answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
+    pas.
 ---
 
 # Évolution des Compétences des Développeurs : de l'Expertise Technique à l'Hybride Visionnaire

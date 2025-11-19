@@ -1,0 +1,46 @@
+# Mapping des catégories FR → EN
+# Utilisé pour traduire automatiquement les catégories entre les langues
+
+mappings:
+  # AI & Tech
+  "Intelligence Artificielle": "Artificial Intelligence"
+  "Développement": "Development"
+  "Architecture": "Architecture"
+  "Performance": "Performance"
+  "Sécurité": "Security"
+
+  # E-commerce
+  "E-commerce": "E-commerce"
+  "PrestaShop": "PrestaShop"
+
+  # Content
+  "SEO": "SEO"
+  "Tutoriels": "Tutorials"
+
+  # Programming
+  "PHP": "PHP"
+
+# Slugs des catégories (pour les URLs)
+slugs:
+  fr:
+    "Intelligence Artificielle": "intelligence-artificielle"
+    "Développement": "developpement"
+    "Architecture": "architecture"
+    "Performance": "performance"
+    "Sécurité": "securite"
+    "E-commerce": "ecommerce"
+    "PrestaShop": "prestashop"
+    "SEO": "seo"
+    "Tutoriels": "tutoriels"
+    "PHP": "php"
+  en:
+    "Artificial Intelligence": "artificial-intelligence"
+    "Development": "development"
+    "Architecture": "architecture"
+    "Performance": "performance"
+    "Security": "security"
+    "E-commerce": "ecommerce"
+    "PrestaShop": "prestashop"
+    "SEO": "seo"
+    "Tutorials": "tutorials"
+    "PHP": "php"

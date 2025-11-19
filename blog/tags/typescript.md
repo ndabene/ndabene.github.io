@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: TypeScript"
 tag: "TypeScript"
-description: "Articles TypeScript : développement moderne, types avancés, intégration avec frameworks, bonnes pratiques et patterns."
+title: "Articles sur TypeScript"
+description: "Découvrez tous les articles de blog sur TypeScript. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/typescript/
-keywords: "typescript, ts, tag typescript, développement typescript, javascript typé"
 ---

@@ -1,27 +1,63 @@
 ---
 layout: post
-title: "Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop"
+title: 'Cline : assistant IA pour PrestaShop'
 date: 2025-09-02
 author: Nicolas Dabène
-categories: [Développement, PHP, PrestaShop, Intelligence Artificielle]
-tags: [Cline, VSCode, IA locale, PrestaShop, développement, assistant coding, LM Studio, Ollama]
-excerpt: "Découvrez Cline, l'extension VSCode qui transforme votre IDE en assistant de développement autonome. Focus sur l'intégration de modèles IA locaux pour les agences PrestaShop."
+categories:
+- Développement
+- PHP
+- PrestaShop
+- Intelligence Artificielle
+tags:
+- IA
+- PrestaShop
+- développement
+excerpt: Découvrez Cline, l'extension VSCode qui transforme votre IDE en assistant
+  de développement autonome. Focus sur l'intégration de modèles IA locaux pour les
+  agences PrestaShop.
 image: /assets/images/blog/2025/09/2025-09-02-cline-prestashop-assistant-ia.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["VSCode", "Cline", "PrestaShop", "PHP", "IA"]
-estimated_reading_time: "12 minutes"
+difficulty: Intermédiaire
+technologies:
+- VSCode
+- Cline
+- PrestaShop
+- PHP
+- IA
+estimated_reading_time: 12 minutes
 faq:
-  - question: "Qu'est-ce que Cline et comment diffère-t-il de GitHub Copilot ?"
-    answer: "Cline (anciennement Claude Dev) est un agent de codage autonome intégré dans VSCode, capable de créer et éditer des fichiers, d'exécuter des commandes et d'utiliser le navigateur. Contrairement à GitHub Copilot qui autocomplète le code, Cline gère des tâches complètes étape par étape en tant qu'agent agentique utilisant Claude 3.7 Sonnet."
-  - question: "Peut-on utiliser Cline avec des modèles IA locaux ?"
-    answer: "Oui, Cline fonctionne avec des modèles locaux via LM Studio et Ollama. Cette approche garantit le cloisonnement total de vos projets clients, aucune donnée ne quitte votre infrastructure, des coûts prévisibles et le respect absolu des clauses de confidentialité. Cependant, les modèles locaux nécessitent généralement plus de 32768 tokens de contexte."
-  - question: "Quelles sont les compétences PrestaShop de Cline ?"
-    answer: "Cline comprend remarquablement bien le PHP moderne (7.4 à 8.1) et l'architecture PrestaShop. Il respecte automatiquement les standards PSR-2/PSR-4, l'architecture Symfony intégrée depuis PrestaShop 1.7+, les bonnes pratiques de sécurité e-commerce et la structure des modules et thèmes PrestaShop."
-  - question: "Comment personnaliser Cline pour les projets PrestaShop ?"
-    answer: "Cline supporte les règles personnalisées et l'extensibilité MCP (Model Context Protocol). Vous pouvez définir des instructions spécifiques appliquées automatiquement : respect PSR-2/PSR-4, utilisation systématique des hooks PrestaShop, documentation PHPDoc complète, et validation automatique des inputs. Le MCP permet de créer des serveurs pour interroger la documentation PrestaShop."
-  - question: "Quel gain de productivité peut-on attendre avec Cline sur PrestaShop ?"
-    answer: "Dans notre agence, nous avons mesuré +40% de vitesse sur la génération de code boilerplate et structures standards, -60% d'erreurs de syntaxe et conventions, et +25% de temps libéré pour l'architecture et vision produit. Cline excelle pour automatiser les tâches répétitives comme la génération de modules de paiement ou l'intégration d'APIs tierces."
+- question: Qu'est-ce que Cline et comment diffère-t-il de GitHub Copilot ?
+  answer: Cline (anciennement Claude Dev) est un agent de codage autonome intégré
+    dans VSCode, capable de créer et éditer des fichiers, d'exécuter des commandes
+    et d'utiliser le navigateur. Contrairement à GitHub Copilot qui autocomplète le
+    code, Cline gère des tâches complètes étape par étape en tant qu'agent agentique
+    utilisant Claude 3.7 Sonnet.
+- question: Peut-on utiliser Cline avec des modèles IA locaux ?
+  answer: Oui, Cline fonctionne avec des modèles locaux via LM Studio et Ollama. Cette
+    approche garantit le cloisonnement total de vos projets clients, aucune donnée
+    ne quitte votre infrastructure, des coûts prévisibles et le respect absolu des
+    clauses de confidentialité. Cependant, les modèles locaux nécessitent généralement
+    plus de 32768 tokens de contexte.
+- question: Quelles sont les compétences PrestaShop de Cline ?
+  answer: Cline comprend remarquablement bien le PHP moderne (7.4 à 8.1) et l'architecture
+    PrestaShop. Il respecte automatiquement les standards PSR-2/PSR-4, l'architecture
+    Symfony intégrée depuis PrestaShop 1.7+, les bonnes pratiques de sécurité e-commerce
+    et la structure des modules et thèmes PrestaShop.
+- question: Comment personnaliser Cline pour les projets PrestaShop ?
+  answer: 'Cline supporte les règles personnalisées et l''extensibilité MCP (Model
+    Context Protocol). Vous pouvez définir des instructions spécifiques appliquées
+    automatiquement : respect PSR-2/PSR-4, utilisation systématique des hooks PrestaShop,
+    documentation PHPDoc complète, et validation automatique des inputs. Le MCP permet
+    de créer des serveurs pour interroger la documentation PrestaShop.'
+- question: Quel gain de productivité peut-on attendre avec Cline sur PrestaShop ?
+  answer: Dans notre agence, nous avons mesuré +40% de vitesse sur la génération de
+    code boilerplate et structures standards, -60% d'erreurs de syntaxe et conventions,
+    et +25% de temps libéré pour l'architecture et vision produit. Cline excelle pour
+    automatiser les tâches répétitives comme la génération de modules de paiement
+    ou l'intégration d'APIs tierces.
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
 
 # Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop

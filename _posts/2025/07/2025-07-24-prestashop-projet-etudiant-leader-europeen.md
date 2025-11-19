@@ -1,43 +1,79 @@
 ---
 layout: post
-title: "PrestaShop : De projet étudiant à leader européen de l'e-commerce - L'épopée
-  complète (2005-2025)"
+title: 'PrestaShop : de projet étudiant à leader'
 date: 2025-07-24
 author: Nicolas Dabène
-categories: [Ecommerce, Entrepreneuriat, Success Story]
-tags: [PrestaShop, startup, ecommerce, entrepreneuriat, plateforme, open source, 
-    success story, Bruno Levesque, Epitech]
-excerpt: "PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises
+categories:
+- Ecommerce
+- Entrepreneuriat
+- Success Story
+tags:
+- PrestaShop
+- développement
+- e-commerce
+excerpt: PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises
   de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce
   générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success
   story de 20 ans illustre parfaitement la capacité d'innovation française face aux
-  géants américains du secteur."
-image: 
-  /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
+  géants américains du secteur.
+image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
 featured: true
-difficulty: "Intermédiaire"
-technologies: ["PrestaShop", "E-commerce", "PHP", "Open Source", "Symfony", "MBE Worldwide"]
-estimated_reading_time: "18 minutes"
-llm_summary: PrestaShop incarne l'une des plus belles réussites 
-  entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech 
-  en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 
-  300 000 marchands mondiaux, cette success story de 20 ans illustre 
-  parfaitement la capacité d'innovation française face aux géants américains du 
-  secteur.
-llm_topics: [PrestaShop, startup, ecommerce, entrepreneuriat, plateforme, open
-    source, success story, Bruno Levesque, Epitech]
+difficulty: Intermédiaire
+technologies:
+- PrestaShop
+- E-commerce
+- PHP
+- Open Source
+- Symfony
+- MBE Worldwide
+estimated_reading_time: 18 minutes
+llm_summary: PrestaShop incarne l'une des plus belles réussites entrepreneuriales
+  françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme
+  e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux,
+  cette success story de 20 ans illustre parfaitement la capacité d'innovation française
+  face aux géants américains du secteur.
+llm_topics:
+- PrestaShop
+- startup
+- ecommerce
+- entrepreneuriat
+- plateforme
+- open source
+- success story
+- Bruno Levesque
+- Epitech
 faq:
-  - question: "Qui a créé PrestaShop et quand ?"
-    answer: "PrestaShop a été créé en 2005 par Bruno Lévêque, alors étudiant de 19 ans à Epitech, accompagné de quatre camarades et guidé par Igor Schlumberger. Le projet a démarré comme un projet de fin d'études avant de devenir l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique."
-  - question: "Pourquoi PrestaShop a-t-il choisi le modèle open source ?"
-    answer: "Le modèle open source a permis à PrestaShop de se différencier de la concurrence en offrant un logiciel gratuit financé par une marketplace de modules et thèmes payants. Cette stratégie a favorisé une adoption massive avec 1000 téléchargements dès le premier mois et une traduction spontanée en 13 langues par la communauté en trois mois."
-  - question: "PrestaShop a-t-il été racheté par PayPal ?"
-    answer: "Non, contrairement aux rumeurs, PrestaShop n'a jamais été acquis par PayPal. En novembre 2021, c'est MBE Worldwide, groupe italien spécialisé dans la logistique et services aux entreprises, qui a acquis PrestaShop pour créer une plateforme de commerce globale intégrant digital et services logistiques."
-  - question: "Quelles sont les nouveautés de PrestaShop 9.0 ?"
-    answer: "PrestaShop 9.0, lancé en juin 2025, introduit une modernisation technique majeure avec Symfony 6.4 LTS, support PHP 8.4, nouvelle API d'administration basée sur API Platform 3.4.8 avec OAuth et CQRS, et des gains de performance de 50% sur le TTFB grâce à l'optimisation du rendu."
-  - question: "Quelle est la part de marché de PrestaShop en 2025 ?"
-    answer: "En 2025, PrestaShop maintient 35% de part de marché en France et domine le marché européen avec 300 000 boutiques actives générant 22 milliards d'euros de ventes annuelles. Mondialement, PrestaShop représente 0.29% à 0.49% de parts face à WooCommerce (66-70%) et Shopify (17-29%)."
+- question: Qui a créé PrestaShop et quand ?
+  answer: PrestaShop a été créé en 2005 par Bruno Lévêque, alors étudiant de 19 ans
+    à Epitech, accompagné de quatre camarades et guidé par Igor Schlumberger. Le projet
+    a démarré comme un projet de fin d'études avant de devenir l'une des plus belles
+    réussites entrepreneuriales françaises de l'ère numérique.
+- question: Pourquoi PrestaShop a-t-il choisi le modèle open source ?
+  answer: Le modèle open source a permis à PrestaShop de se différencier de la concurrence
+    en offrant un logiciel gratuit financé par une marketplace de modules et thèmes
+    payants. Cette stratégie a favorisé une adoption massive avec 1000 téléchargements
+    dès le premier mois et une traduction spontanée en 13 langues par la communauté
+    en trois mois.
+- question: PrestaShop a-t-il été racheté par PayPal ?
+  answer: Non, contrairement aux rumeurs, PrestaShop n'a jamais été acquis par PayPal.
+    En novembre 2021, c'est MBE Worldwide, groupe italien spécialisé dans la logistique
+    et services aux entreprises, qui a acquis PrestaShop pour créer une plateforme
+    de commerce globale intégrant digital et services logistiques.
+- question: Quelles sont les nouveautés de PrestaShop 9.0 ?
+  answer: PrestaShop 9.0, lancé en juin 2025, introduit une modernisation technique
+    majeure avec Symfony 6.4 LTS, support PHP 8.4, nouvelle API d'administration basée
+    sur API Platform 3.4.8 avec OAuth et CQRS, et des gains de performance de 50%
+    sur le TTFB grâce à l'optimisation du rendu.
+- question: Quelle est la part de marché de PrestaShop en 2025 ?
+  answer: En 2025, PrestaShop maintient 35% de part de marché en France et domine
+    le marché européen avec 300 000 boutiques actives générant 22 milliards d'euros
+    de ventes annuelles. Mondialement, PrestaShop représente 0.29% à 0.49% de parts
+    face à WooCommerce (66-70%) et Shopify (17-29%).
+- question: PrestaShop est-il gratuit?
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
 ---
+
 Prestashop: De projet étudiant à leader européen de l'e-commerce - L'épopée complète (2005-2025) PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success story de 20 ans illustre parfaitement la capacité d'innovation française face aux géants américains du secteur. Avec le lancement récent de PrestaShop 9.0 en juin 2025, l'entreprise entame un nouveau chapitre de son histoire, marqué par une modernisation technique ambitieuse et des défis concurrentiels renouvelés.
 
 ## Les racines d'une révolution numérique (2005-2007)

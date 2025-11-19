@@ -150,7 +150,6 @@ elif [ -n "$FUTURE_DATE" ]; then
     echo ""
     echo "⏰ Article programmé pour le $DATE"
     echo "📅 Il apparaîtra automatiquement à cette date grâce à l'Action GitHub quotidienne"
-    echo "🔍 Pour prévisualiser en local: ./scripts/admin-preview.sh start"
 else
     echo ""
     echo "🔄 Mise à jour du sitemap..."

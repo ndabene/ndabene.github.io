@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: MCP"
 tag: "MCP"
-description: "Articles sur MCP (Model Context Protocol) : création de serveurs MCP, intégration avec Claude, développement de tools et bonnes pratiques."
+title: "Articles sur MCP"
+description: "Découvrez tous les articles de blog sur MCP. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/mcp/
-keywords: "mcp, model context protocol, tag mcp, serveurs mcp, claude mcp"
 ---

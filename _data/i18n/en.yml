@@ -1,0 +1,147 @@
+# English translation file
+lang_code: en
+lang_name: English
+lang_name_en: English
+
+# Navigation
+nav:
+  home: "Home"
+  about: "About"
+  skills: "Skills"
+  training: "Training"
+  videos: "Videos"
+  blog: "Blog"
+  sponsors: "Sponsors"
+  contact: "Contact"
+  services: "Services"
+  expertise: "Expertise"
+  projects: "Projects"
+  case_studies: "Case Studies"
+
+# Blog
+blog:
+  title: "Blog"
+  latest_articles: "Latest articles"
+  all_articles: "All articles"
+  read_more: "Read more"
+  min_read: "min read"
+  published_on: "Published on"
+  updated_on: "Updated on"
+  last_updated: "Last updated"
+  author: "Author"
+  categories: "Categories"
+  tags: "Tags"
+  share: "Share"
+  related_posts: "Related posts"
+  in_category: "in"
+  back_to_blog: "Back to blog"
+  no_posts: "No posts yet"
+
+# Categories
+categories:
+  all: "All categories"
+  title: "Categories"
+  browse: "Browse by category"
+
+# Tags
+tags:
+  all: "All tags"
+  title: "Tags"
+  browse: "Browse by tag"
+
+# Footer
+footer:
+  rights: "All rights reserved"
+  privacy: "Privacy Policy"
+  cookies: "Cookie Policy"
+  legal: "Legal Notice"
+  about_me: "About me"
+  follow_me: "Follow me"
+  newsletter: "Newsletter"
+  subscribe: "Subscribe"
+
+# Common UI elements
+common:
+  back: "Back"
+  next: "Next"
+  previous: "Previous"
+  search: "Search"
+  language: "Language"
+  menu: "Menu"
+  close: "Close"
+  open: "Open"
+  toggle_menu: "Toggle menu"
+  skip_to_content: "Skip to content"
+  home: "Home"
+  page_not_found: "Page not found"
+  error_404: "Error 404"
+
+# Forms
+forms:
+  name: "Name"
+  email: "Email"
+  message: "Message"
+  send: "Send"
+  required: "Required"
+  submit: "Submit"
+
+# Time & Dates
+time:
+  today: "Today"
+  yesterday: "Yesterday"
+  days_ago: "days ago"
+  weeks_ago: "weeks ago"
+  months_ago: "months ago"
+  years_ago: "years ago"
+  minute: "minute"
+  minutes: "minutes"
+  hour: "hour"
+  hours: "hours"
+  day: "day"
+  days: "days"
+
+# SEO & Meta
+seo:
+  read_time: "Read time"
+  table_of_contents: "Table of contents"
+  share_on: "Share on"
+  copy_link: "Copy link"
+
+# E-commerce / Shop
+shop:
+  title: "Shop"
+  buy_now: "Buy now"
+  add_to_cart: "Add to cart"
+  price: "Price"
+  free: "Free"
+  soon: "Coming soon"
+
+# Projects
+projects:
+  title: "Projects"
+  view_project: "View project"
+  github: "View on GitHub"
+  demo: "Demo"
+
+# Case Studies
+case_study:
+  title: "Case Studies"
+  read_case_study: "Read case study"
+  challenge: "Challenge"
+  solution: "Solution"
+  results: "Results"
+
+# Skills / Expertise
+skills:
+  title: "Skills"
+  years_experience: "years of experience"
+  expertise_in: "Expertise in"
+
+# Social
+social:
+  follow: "Follow"
+  share: "Share"
+  youtube: "YouTube"
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  twitter: "Twitter"

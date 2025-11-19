@@ -1,25 +1,52 @@
 ---
 layout: post
-title: "IA et Développement : Maîtriser les Pièges Invisibles"
+title: 'IA et développement : éviter les pièges courants'
 date: 2025-12-09
 author: Nicolas Dabène
-categories: [Intelligence Artificielle, Développement, Bonnes Pratiques]
-tags: [IA, productivité, code quality, architecture, ChatGPT, Copilot, prompt engineering]
-excerpt: "L'IA nous rend plus rapides… mais aussi plus dangereux. Découvrez les 8 pièges invisibles du code généré et comment les transformer en super-pouvoirs."
+categories:
+- Intelligence Artificielle
+- Développement
+- Bonnes Pratiques
+tags:
+- IA
+- développement
+- sécurité
+- automatisation
+excerpt: L'IA nous rend plus rapides… mais aussi plus dangereux. Découvrez les 8 pièges
+  invisibles du code généré et comment les transformer en super-pouvoirs.
 image: /assets/images/blog/2025/12/ia-pieges-developpeurs.jpg
 featured: false
-difficulty: "Intermédiaire"
-technologies: ["IA", "GitHub Copilot", "Claude", "ChatGPT", "Développement"]
-estimated_reading_time: "10 minutes"
+difficulty: Intermédiaire
+technologies:
+- IA
+- GitHub Copilot
+- Claude
+- ChatGPT
+- Développement
+estimated_reading_time: 10 minutes
 faq:
-  - question: "L'IA va vraiment remplacer les développeurs ?"
-    answer: "Non. L'IA va remplacer les développeurs qui utilisent l'IA de manière passive. Elle va amplifier les développeurs qui l'utilisent de manière stratégique. Le choix est vôtre."
-  - question: "Comment convaincre mon manager qu'il faut du temps pour relire le code IA ?"
-    answer: "Montrez-lui les chiffres : 40% du temps en relecture, c'est 40% de temps gagné en corrections ultérieures. C'est du ROI."
-  - question: "Par où commencer si je n'ai jamais utilisé d'IA pour coder ?"
-    answer: "Commencez petit. Une fonction. Relisez-la comme si c'était le code du junior le plus brillant mais inexpérimenté. Notez ce que vous avez corrigé. Ça vous apprendra à mieux prompter."
-  - question: "Est-ce que GitHub Copilot, Claude et ChatGPT font la même chose ?"
-    answer: "Presque, mais pas tout à fait. Copilot est spécialisé dans la complétion. Claude excelle en architecture complexe. ChatGPT est polyvalent. Testez les trois et voyez ce qui colle à votre workflow."
+- question: L'IA va vraiment remplacer les développeurs ?
+  answer: Non. L'IA va remplacer les développeurs qui utilisent l'IA de manière passive.
+    Elle va amplifier les développeurs qui l'utilisent de manière stratégique. Le
+    choix est vôtre.
+- question: Comment convaincre mon manager qu'il faut du temps pour relire le code
+    IA ?
+  answer: 'Montrez-lui les chiffres : 40% du temps en relecture, c''est 40% de temps
+    gagné en corrections ultérieures. C''est du ROI.'
+- question: Par où commencer si je n'ai jamais utilisé d'IA pour coder ?
+  answer: Commencez petit. Une fonction. Relisez-la comme si c'était le code du junior
+    le plus brillant mais inexpérimenté. Notez ce que vous avez corrigé. Ça vous apprendra
+    à mieux prompter.
+- question: Est-ce que GitHub Copilot, Claude et ChatGPT font la même chose ?
+  answer: Presque, mais pas tout à fait. Copilot est spécialisé dans la complétion.
+    Claude excelle en architecture complexe. ChatGPT est polyvalent. Testez les trois
+    et voyez ce qui colle à votre workflow.
+- question: Claude est-il gratuit?
+  answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
+    et Team (30$/mois par utilisateur).
+- question: Différence entre Claude et ChatGPT?
+  answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
+    Les deux sont complémentaires.
 ---
 
 ## Introduction

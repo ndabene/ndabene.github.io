@@ -1,8 +1,7 @@
 ---
 layout: tag
-title: "Tag: IA générative"
 tag: "IA générative"
-description: "Tout sur l'IA générative : ChatGPT, Claude, Midjourney, création de contenu, automatisation et intégration dans vos workflows."
+title: "Articles sur IA générative"
+description: "Découvrez tous les articles de blog sur IA générative. Guides techniques, tutoriels et analyses approfondies."
 permalink: /blog/tags/ia-generative/
-keywords: "ia générative, generative ai, llm, chatgpt, claude ai"
 ---

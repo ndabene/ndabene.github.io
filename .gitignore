@@ -4,6 +4,10 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+# Pages de tags générées automatiquement (par scripts/generate_tag_pages.rb)
+# Le fichier index.html reste versionné
+blog/tags/*/
+
 # Dépendances
 vendor/
 node_modules/
@@ -11,3 +15,12 @@ node_modules/
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Fichiers d'analyse temporaires
+analyze_tags.py
+tag_analysis_report.txt
+
+# Images WebP générées automatiquement par GitHub Actions
+# Ces fichiers sont créés lors du build CI et ne doivent PAS être committés
+assets/images/**/*.webp
+*.webp
