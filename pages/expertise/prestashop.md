@@ -251,41 +251,6 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
   </div>
 </section>
 
-<!-- TÉMOIGNAGES -->
-<section class="section-unified" style="background-color: #f8fafc;">
-  <div class="container">
-    <div class="section-header-clean">
-      <h2 class="section-title-clean">Ils Me Font Confiance</h2>
-    </div>
-
-    <div class="grid-unified">
-      <div class="testimonial-modern">
-        <div class="testimonial-content">
-          "Nicolas a transformé notre boutique PrestaShop avec des modules sur-mesure qui ont multiplié nos ventes. Son expertise technique et sa vision business sont exceptionnelles."
-        </div>
-        <div class="testimonial-author">
-          <div class="author-info">
-            <p class="author-name">Directeur E-commerce</p>
-            <p class="author-role">Société Française Leader</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-modern">
-        <div class="testimonial-content">
-          "Après avoir travaillé avec plusieurs développeurs, Nicolas est le seul qui a réellement compris nos enjeux métier. Ses solutions sont non seulement techniques mais aussi business-oriented."
-        </div>
-        <div class="testimonial-author">
-          <div class="author-info">
-            <p class="author-name">CTO</p>
-            <p class="author-role">Entreprise Tech</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CTA FINAL -->
 <section class="section-unified publications-cta">
   <div class="container">
