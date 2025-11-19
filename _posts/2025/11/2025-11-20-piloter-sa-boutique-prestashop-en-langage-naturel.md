@@ -2,7 +2,6 @@
 layout: post
 title: 'Piloter sa boutique PrestaShop en langage naturel'
 date: 2025-11-20
-hide_until_published: true
 categories:
 - IA
 - PrestaShop
