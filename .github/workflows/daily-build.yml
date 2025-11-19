@@ -51,7 +51,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Ensure config flags
         run: |
-          printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
+          printf "\nfuture: true\n" >> _config.yml
 
       - name: Setup Python
         uses: actions/setup-python@v5

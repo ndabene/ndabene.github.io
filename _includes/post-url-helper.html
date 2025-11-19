@@ -6,11 +6,4 @@ Retourne l'URL complète de production même en local
 
 {% assign post_url = include.post.url | absolute_url %}
 
-{% comment %}
-En mode admin preview local, on veut l'URL de production pour LinkedIn
-{% endcomment %}
-{% if jekyll.environment == "development" and site.admin_preview_mode %}
-  {% assign post_url = site.url | append: include.post.url %}
-{% endif %}
-
 {{ post_url }}

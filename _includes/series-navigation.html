@@ -32,7 +32,7 @@ Usage: {% include series-navigation.html %}
               <span class="current-marker">📍</span>
               <strong>{{ post.title }}</strong>
               <span class="current-label">(Article actuel)</span>
-            {% elsif post.date > site.time and page.admin_preview != true %}
+            {% elsif post.date > site.time %}
               <span class="future-marker">🔒</span>
               <span class="future-post">{{ post.title }}</span>
               <small class="future-date">Publié le {% include date-fr.html date=post.date %}</small>
@@ -64,7 +64,7 @@ Usage: {% include series-navigation.html %}
         
         {% if current_index < series_posts.size | minus: 1 %}
           {% assign next_post = series_posts[current_index | plus: 1] %}
-          {% if next_post.date <= site.time or page.admin_preview == true %}
+          {% if next_post.date <= site.time %}
             <a href="{{ next_post.url | relative_url }}" class="btn btn-nav btn-next">
               Article suivant <i class="fas fa-chevron-right"></i>
             </a>

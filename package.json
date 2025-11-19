@@ -10,8 +10,6 @@
     "new-post": "bash scripts/new-post.sh",
     "new-draft": "bash scripts/new-post.sh \"$npm_config_title\" --draft",
     "new-future": "bash scripts/new-post.sh \"$npm_config_title\" --future \"$npm_config_date\"",
-    "preview": "bash scripts/admin-preview.sh start",
-    "preview-stop": "bash scripts/admin-preview.sh stop",
     "test-sitemap": "bash scripts/test-sitemap.sh",
     "deploy": "bash scripts/deploy.sh",
     "validate:produits": "ruby scripts/validate_produits.rb"

@@ -132,7 +132,7 @@ jobs:
 
       - name: Enable future posts for preview
         run: |
-          printf "\nfuture: true\nadmin_preview: true\n" >> _config.yml
+          printf "\nfuture: true\n" >> _config.yml
 
       - name: Setup Python
         uses: actions/setup-python@v5

@@ -2843,15 +2843,6 @@ body.page-blog .blog-filters-compact select:focus,
   }
 }
 
-// Styles pour futurs posts (en dehors du scope .page-blog)
-html:not(.admin-preview-active) .future-post-item {
-  display: none !important;
-}
-
-html.admin-preview-active .future-post-item {
-  display: block !important;
-}
-
 //================================================
 // PAGINATION STYLES
 //================================================
