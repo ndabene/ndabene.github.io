@@ -32,17 +32,23 @@ end
 tags = Set.new
 
 Dir.glob('{_posts,_posts_en}/**/*.md').each do |post_file|
-  content = File.read(post_file)
+  begin
+    content = File.read(post_file)
 
-  # Extrait le front matter
-  if content =~ /\A---\s*\n(.*?)\n---\s*\n/m
-    front_matter = YAML.safe_load($1, permitted_classes: [Date, Time, Symbol])
+    # Extrait le front matter
+    if content =~ /\A---\s*\n(.*?)\n---\s*\n/m
+      front_matter = YAML.safe_load($1, permitted_classes: [Date, Time, Symbol])
 
-    if front_matter && front_matter['tags']
-      post_tags = front_matter['tags']
-      post_tags = [post_tags] unless post_tags.is_a?(Array)
-      post_tags.each { |tag| tags.add(tag.to_s.strip) }
+      if front_matter && front_matter['tags']
+        post_tags = front_matter['tags']
+        post_tags = [post_tags] unless post_tags.is_a?(Array)
+        post_tags.each { |tag| tags.add(tag.to_s.strip) }
+      end
     end
+  rescue Psych::SyntaxError => e
+    puts "⚠️  ERREUR YAML dans le fichier: #{post_file}"
+    puts "    #{e.message}"
+    exit 1
   end
 end
 
