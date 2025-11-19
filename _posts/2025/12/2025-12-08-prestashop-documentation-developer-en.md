@@ -16,7 +16,7 @@ tags:
 - software-architecture
 - symfony
 excerpt: '80% of "PrestaShop bugs" are actually implementation errors. Discover how official documentation can transform your code and your career.'
-image: /assets/images/blog/2025/11/2025-11-16-prestashop-documentation-developer.jpg
+image: /assets/images/blog/2025/12/2025-12-08-prestashop-documentation-developer.jpg
 featured: false
 difficulty: Advanced
 technologies:
