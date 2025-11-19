@@ -2,6 +2,8 @@
 layout: post
 title: 'PrestaShop vs Hype : Pourquoi la stabilité bat la "modernité" en 2025'
 date: 2025-12-05
+lang: fr
+ref: prestashop-stability-vs-modernity-2025
 author: Nicolas Dabène
 categories:
 - PrestaShop
@@ -14,7 +16,7 @@ tags:
 - dette-technique
 - mcp-protocol
 excerpt: '300 000 boutiques actives ne se trompent pas : découvrez pourquoi l architecture éprouvée de PrestaShop surpasse souvent les solutions "modernes". Stabilité, Symfony et ROI.'
-image: /assets/images/blog/2025/11/2025-11-15-prestashop-vs-modernite.jpg
+image: /assets/images/blog/2025/12/2025-12-05-prestashop-vs-modernite.jpg
 featured: true
 difficulty: Intermédiaire
 technologies:
