@@ -69,7 +69,7 @@ layout: default
               
               <div class="article-content">
                 <h3 class="article-title">
-                  {% if post.date <= site.time or page.admin_preview == true %}
+                  {% if post.date <= site.time %}
                     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                   {% else %}
                     <span class="future-title">{{ post.title }}</span>

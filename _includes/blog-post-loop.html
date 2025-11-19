@@ -6,35 +6,6 @@ Usage: {% include blog-post-loop.html posts=site.posts limit=6 %}
 {% assign posts_to_show = include.posts | default: site.posts %}
 {% assign post_limit = include.limit | default: 999 %}
 
-<!-- Script pour détecter le mode admin avant le rendu -->
-<script>
-// Fonction pour vérifier le mode admin dès le chargement
-(function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const isAdmin = urlParams.get('admin_preview') === 'true' ||
-                    sessionStorage.getItem('admin_preview') === 'true' ||
-                    isLocalhost; // Auto-activer en local
-
-    if (isAdmin) {
-        // Marquer le mode admin avant que la page soit complètement rendue
-        document.documentElement.classList.add('admin-preview-active');
-        sessionStorage.setItem('admin_preview', 'true');
-    }
-})();
-</script>
-
-<style>
-/* Styles pour afficher les futurs posts en mode admin */
-html:not(.admin-preview-active) .future-post-item {
-    display: none !important;
-}
-
-html.admin-preview-active .future-post-item {
-    display: block !important;
-}
-</style>
-
 {% for post in posts_to_show limit: post_limit %}
     <div class="post-preview-wrapper 
         {% if post.date > site.time %}future-post-item{% endif %}

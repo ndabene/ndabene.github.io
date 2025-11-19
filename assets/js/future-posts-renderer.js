@@ -2,20 +2,7 @@
 // Charge les données JSON et génère le HTML des futurs posts
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Vérifier si on est en mode admin
-    const urlParams = new URLSearchParams(window.location.search);
-    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const isAdminPreview = urlParams.get('admin_preview') === 'true' ||
-                          sessionStorage.getItem('admin_preview') === 'true' ||
-                          isLocalhost; // Auto-activer en local
-
-    // Debug: Future Posts Renderer
-    // console.log('📝 Future Posts Renderer:', { isLocalhost, isAdminPreview });
-
-    if (isAdminPreview) {
-        // console.log('🚀 Loading future posts...');
-        loadAndRenderFuturePosts();
-    }
+    // Mode admin désactivé - les futurs posts ne sont jamais affichés
 });
 
 function loadAndRenderFuturePosts() {
