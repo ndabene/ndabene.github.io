@@ -33,502 +33,283 @@ ai_primary_action: "contacter_expert"
 ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"]
 ---
 
-<div class="expertise-header-prestashop">
+<!-- HERO SECTION -->
+<div class="hero-section-modern">
+  <div class="hero-background-pattern"></div>
   <div class="container">
-    <div class="expertise-hero-prestashop">
-      <div class="expertise-badges-prestashop">
-        <div class="badge-prestashop-award">
-          <span class="badge-icon">🏆</span>
-          <span class="badge-text">5 PrestaShop Awards</span>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="hero-badges-modern">
+          <div class="badge-modern">
+            <span class="badge-icon">🏆</span>
+            <span>5 PrestaShop Awards</span>
+          </div>
+          <div class="badge-modern">
+            <span class="badge-icon">🛠️</span>
+            <span>Créateur MCP Tools</span>
+          </div>
         </div>
-        <div class="badge-prestashop-experience">
-          <span class="badge-icon">⭐</span>
-          <span class="badge-text">15+ ans expérience</span>
+
+        <h1 class="hero-title">
+          Expert PrestaShop <span class="text-gradient-animated">Certifié</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Développeur Elite et créateur de <strong>MCP Tools Plus</strong>, la boîte à outils ultime pour administrateurs PrestaShop. 15 ans d'excellence technique au service de votre e-commerce.
+        </p>
+
+        <div class="hero-metrics-compact">
+          <div class="metric-inline">
+            <span class="metric-value">5</span>
+            <span class="metric-label">Awards</span>
+          </div>
+          <div class="metric-inline">
+            <span class="metric-value">100k+</span>
+            <span class="metric-label">Installations</span>
+          </div>
+          <div class="metric-inline">
+            <span class="metric-value">15</span>
+            <span class="metric-label">Ans d'Exp.</span>
+          </div>
         </div>
-        <div class="badge-prestashop-modules">
-          <span class="badge-icon">📦</span>
-          <span class="badge-text">30+ modules développés</span>
-        </div>
-        <div class="badge-prestashop-installations">
-          <span class="badge-icon">📈</span>
-          <span class="badge-text">100k+ installations</span>
+
+        <div class="hero-actions" style="margin-top: 2rem;">
+          <a href="https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html" target="_blank" class="btn btn--primary btn--large">
+            <span>🚀 Découvrir MCP Tools</span>
+          </a>
+          <a href="#projets" class="btn btn--ghost">
+            <span>Voir mes réalisations</span>
+          </a>
         </div>
       </div>
 
-      <h1 class="expertise-title-prestashop">
-        Expert PrestaShop <span class="highlight-certifie">Certifié</span>
-      </h1>
-
-      <p class="expertise-subtitle-prestashop">
-        Reconnu par la communauté PrestaShop pour mon excellence technique et mes contributions
-        à l'écosystème e-commerce depuis 2010.
-      </p>
-
-      <div class="expertise-credentials-prestashop">
-        <div class="credential-item">
-          <h3>5 PrestaShop Awards</h3>
-          <p>Récompenses officielles pour l'innovation et la qualité technique (2011-2020)</p>
-        </div>
-        <div class="credential-item">
-          <h3>100 000+ Installations</h3>
-          <p>Mes modules sont utilisés par des milliers de marchands à travers le monde</p>
-        </div>
-        <div class="credential-item">
-          <h3>Top Marketplace France</h3>
-          <p>Position de leader chez <a href="https://www.businesstech.fr/landing/?utm_source=nicolas-dabene-site&utm_medium=expertise-page&utm_campaign=prestashop-expertise" target="_blank">BusinessTech</a>, plus ancienne entreprise éditrice de modules PrestaShop</p>
+      <div class="hero-visual">
+        <div>
+          <img src="/assets/images/modules/mcp-tools-plus-prestashop.jpg" alt="MCP Tools Plus PrestaShop" class="profile-image-modern" style="border-radius: 12px; object-fit: cover; aspect-ratio: 1/1; width: 100%; max-width: 400px;" onerror="this.src='/assets/images/logo.png'">
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="expertise-content-prestashop">
+<!-- EXPERTISE TECHNIQUE -->
+<section class="section-unified expertise-section-clean">
+  <div class="container">
+    <div class="section-header-clean">
+      <h2 class="section-title-clean">Expertise Technique Approfondie</h2>
+      <p class="section-subtitle-clean">Une maîtrise complète de l'écosystème PrestaShop, du cœur du CMS aux modules les plus complexes.</p>
+    </div>
 
-    <!-- Section Expertise Technique -->
-    <section class="expertise-section">
-      <h2>🛠️ Expertise Technique Approfondie</h2>
-
-      <div class="expertise-grid">
-        <div class="expertise-card">
-          <h3>Architecture PrestaShop Moderne</h3>
-          <p>Maîtrise de l'évolution de PrestaShop vers l'architecture Symfony moderne,
-          permettant des développements plus robustes et maintenables.</p>
-          <ul>
-            <li>Migration legacy vers architecture moderne</li>
-            <li>Intégration Symfony dans modules PrestaShop</li>
-            <li>Optimisation performances et sécurité</li>
-          </ul>
+    <div class="grid-unified">
+      <div class="glass-card">
+        <div class="card-header">
+          <h3>🏗️ Architecture Moderne</h3>
         </div>
-
-        <div class="expertise-card">
-          <h3>Développement de Modules Complexes</h3>
-          <p>Création de modules haute performance répondant aux besoins complexes
-          des marchands e-commerce modernes.</p>
-          <ul>
-            <li>Modules multi-boutiques et multi-devises</li>
-            <li>Intégrations ERP/CRM/Marketplace</li>
-            <li>Solutions sur-mesure personnalisées</li>
-          </ul>
-        </div>
-
-        <div class="expertise-card">
-          <h3>Optimisation Back-Office</h3>
-          <p>Spécialisation dans l'optimisation des interfaces d'administration
-          pour améliorer la productivité des équipes e-commerce.</p>
-          <ul>
-            <li>Ergonomie et UX optimisée</li>
-            <li>Automatisation des tâches répétitives</li>
-            <li>Tableaux de bord personnalisés</li>
+        <div class="card-body">
+          <p>Maîtrise de l'évolution de PrestaShop vers l'architecture Symfony moderne, permettant des développements plus robustes et maintenables.</p>
+          <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">✅ Migration legacy vers Symfony</li>
+            <li style="margin-bottom: 0.5rem;">✅ Architecture Hexagonale</li>
+            <li style="margin-bottom: 0.5rem;">✅ Optimisation performances</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Section Projets Phares -->
-    <section class="expertise-section">
-      <h2>🌟 Projets PrestaShop Réalisés</h2>
+      <div class="glass-card">
+        <div class="card-header">
+          <h3>📦 Modules Complexes</h3>
+        </div>
+        <div class="card-body">
+          <p>Création de modules haute performance répondant aux besoins complexes des marchands e-commerce modernes.</p>
+          <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">✅ Multi-boutiques & Multi-devises</li>
+            <li style="margin-bottom: 0.5rem;">✅ Intégrations ERP/CRM/Marketplace</li>
+            <li style="margin-bottom: 0.5rem;">✅ Solutions sur-mesure</li>
+          </ul>
+        </div>
+      </div>
 
-      <div class="projects-showcase">
-        {% for project in site.data.projects limit: 6 %}
-          {% if project.categories contains 'prestashop' %}
-        <div class="project-card-prestashop">
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description | truncate: 150 }}</p>
-          <div class="project-meta">
-            <span class="project-date">{{ project.date | date: "%B %Y" }}</span>
-            {% if project.company %}
-            <span class="project-company">{{ project.company }}</span>
-            {% endif %}
+      <div class="glass-card">
+        <div class="card-header">
+          <h3>⚡ Optimisation Back-Office</h3>
+        </div>
+        <div class="card-body">
+          <p>Spécialisation dans l'optimisation des interfaces d'administration pour améliorer la productivité des équipes e-commerce.</p>
+          <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">✅ Ergonomie et UX optimisée</li>
+            <li style="margin-bottom: 0.5rem;">✅ Automatisation des tâches</li>
+            <li style="margin-bottom: 0.5rem;">✅ Dashboards personnalisés</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="glass-card">
+        <div class="card-header">
+          <h3>🤖 IA & E-commerce</h3>
+        </div>
+        <div class="card-body">
+          <p>Pionnier dans l'intégration de l'Intelligence Artificielle au sein de l'écosystème PrestaShop.</p>
+          <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;">✅ Génération de contenu auto</li>
+            <li style="margin-bottom: 0.5rem;">✅ Assistants virtuels</li>
+            <li style="margin-bottom: 0.5rem;">✅ Analyse prédictive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS PHARES -->
+<section id="projets" class="section-unified modules-section-modern">
+  <div class="container">
+    <div class="section-header-clean">
+      <h2 class="section-title-clean">Projets PrestaShop Réalisés</h2>
+      <p class="section-subtitle-clean">Une sélection de réalisations techniques et de modules innovants.</p>
+    </div>
+
+    <div class="projects-grid-modern">
+      {% for project in site.data.projects limit: 6 %}
+        {% if project.categories contains 'prestashop' %}
+      <div class="project-card-modern">
+        <div class="project-header-visual">
+          <span class="project-category-badge">PrestaShop</span>
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <div class="project-meta">
+              <span class="project-company">{{ project.company | default: "Client Confidentiel" }}</span>
+              <span class="project-role">{{ project.date | date: "%Y" }}</span>
+            </div>
           </div>
-          <a href="/projects/{{ project.title | slugify }}/" class="btn-project-link">Voir le projet</a>
-        </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </section>
-
-    <!-- Section Pourquoi Me Choisir -->
-    <section class="expertise-section">
-      <h2>🎯 Pourquoi Me Choisir pour Votre Projet PrestaShop ?</h2>
-
-      <div class="why-choose-grid">
-        <div class="why-choose-item">
-          <h3>✅ Expertise Reconnue</h3>
-          <p>5 Awards officiels et 15 ans d'expérience font de moi une référence
-          dans l'écosystème PrestaShop français.</p>
-        </div>
-
-        <div class="why-choose-item">
-          <h3>🚀 Performance Prouvée</h3>
-          <p>100 000+ installations actives de mes modules témoignent de la
-          qualité et de la fiabilité de mes développements.</p>
-        </div>
-
-        <div class="why-choose-item">
-          <h3>🔧 Approche Pragmatique</h3>
-          <p>Je privilégie les solutions simples et efficaces aux architectures
-          complexes, assurant maintenabilité et évolutivité.</p>
-        </div>
-
-        <div class="why-choose-item">
-          <h3>📈 Vision Business</h3>
-          <p>Ma compréhension des enjeux e-commerce me permet de développer
-          des solutions qui génèrent des résultats business mesurables.</p>
+          <div class="project-description">
+            {{ project.description | truncate: 120 }}
+          </div>
+          <div class="project-links">
+            <a href="{{ project.project_url | default: '/projects/' | append: project.title | slugify | append: '/' }}" class="project-link demo-link" target="_blank">
+              Voir le projet
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
+    <div class="view-all-section">
+      <a href="/projects/" class="view-all-btn">
+        Voir tous les projets
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <!-- Section Témoignages -->
-    <section class="expertise-section">
-      <h2>💬 Ils Me Font Confiance</h2>
+<!-- POURQUOI ME CHOISIR -->
+<section class="section-unified">
+  <div class="container">
+    <div class="section-header-clean">
+      <h2 class="section-title-clean">Pourquoi Me Choisir ?</h2>
+    </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <p>"Nicolas a transformé notre boutique PrestaShop avec des modules
-          sur-mesure qui ont multiplié nos ventes. Son expertise technique
-          et sa vision business sont exceptionnelles."</p>
-          <cite>- Directeur E-commerce, Société Française</cite>
-        </div>
-
-        <div class="testimonial-card">
-          <p>"Après avoir travaillé avec plusieurs développeurs, Nicolas est
-          le seul qui a réellement compris nos enjeux métier. Ses solutions
-          sont non seulement techniques mais aussi business-oriented."</p>
-          <cite>- CTO, Entreprise Tech</cite>
+    <div class="grid-unified">
+      <div class="glass-card">
+        <div class="card-body text-center">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+          <h3 style="margin-bottom: 0.5rem;">Expertise Reconnue</h3>
+          <p>5 Awards officiels et 15 ans d'expérience font de moi une référence dans l'écosystème PrestaShop français.</p>
         </div>
       </div>
-    </section>
 
-    <!-- Section Contact CTA -->
-    <section class="expertise-section contact-cta">
-      <h2>🎯 Prêt à Booster Votre Boutique PrestaShop ?</h2>
+      <div class="glass-card">
+        <div class="card-body text-center">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+          <h3 style="margin-bottom: 0.5rem;">Performance Prouvée</h3>
+          <p>100 000+ installations actives de mes modules témoignent de la qualité et de la fiabilité de mes développements.</p>
+        </div>
+      </div>
 
-      <p class="cta-description">
-        Discutons de votre projet et découvrons comment mon expertise peut
-        transformer votre e-commerce.
+      <div class="glass-card">
+        <div class="card-body text-center">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔧</div>
+          <h3 style="margin-bottom: 0.5rem;">Approche Pragmatique</h3>
+          <p>Je privilégie les solutions simples et efficaces aux architectures complexes, assurant maintenabilité et évolutivité.</p>
+        </div>
+      </div>
+
+      <div class="glass-card">
+        <div class="card-body text-center">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
+          <h3 style="margin-bottom: 0.5rem;">Vision Business</h3>
+          <p>Ma compréhension des enjeux e-commerce me permet de développer des solutions qui génèrent des résultats business mesurables.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="section-unified" style="background-color: #f8fafc;">
+  <div class="container">
+    <div class="section-header-clean">
+      <h2 class="section-title-clean">Ils Me Font Confiance</h2>
+    </div>
+
+    <div class="grid-unified">
+      <div class="testimonial-modern">
+        <div class="testimonial-content">
+          "Nicolas a transformé notre boutique PrestaShop avec des modules sur-mesure qui ont multiplié nos ventes. Son expertise technique et sa vision business sont exceptionnelles."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <p class="author-name">Directeur E-commerce</p>
+            <p class="author-role">Société Française Leader</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-modern">
+        <div class="testimonial-content">
+          "Après avoir travaillé avec plusieurs développeurs, Nicolas est le seul qui a réellement compris nos enjeux métier. Ses solutions sont non seulement techniques mais aussi business-oriented."
+        </div>
+        <div class="testimonial-author">
+          <div class="author-info">
+            <p class="author-name">CTO</p>
+            <p class="author-role">Entreprise Tech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section-unified publications-cta">
+  <div class="container">
+    <div class="cta-content-modern glass-card">
+      <h3>Prêt à Booster Votre Boutique PrestaShop ?</h3>
+      <p>
+        Discutons de votre projet et découvrons comment mon expertise peut transformer votre e-commerce.
+        Consultation gratuite pour évaluer vos besoins.
       </p>
-
-      <div class="cta-buttons">
-        <a href="/contact/" class="btn-primary-large">
+      
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="/contact/" class="btn btn--primary btn--large">
           <span>📞 Me Contacter</span>
         </a>
-        <a href="/boutique/" class="btn-secondary-large">
+        <a href="/boutique/" class="btn btn--secondary btn--large">
           <span>🛍️ Voir les Formations</span>
         </a>
       </div>
-
-      <div class="cta-guarantee">
-        <p>✨ <strong>Consultation gratuite</strong> pour évaluer votre projet</p>
-        <p>⚡ <strong>Livraison rapide</strong> grâce à mon expérience éprouvée</p>
-        <p>🛡️ <strong>Garantie satisfaction</strong> sur tous mes développements</p>
+      
+      <div style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+        <span>✨ Consultation gratuite</span> • 
+        <span>⚡ Livraison rapide</span> • 
+        <span>🛡️ Garantie satisfaction</span>
       </div>
-    </section>
-
+    </div>
   </div>
-</div>
-
-<style>
-.expertise-header-prestashop {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
-  padding: 4rem 0 2rem;
-  margin: -2rem -2rem 0;
-}
-
-.expertise-hero-prestashop {
-  text-align: center;
-}
-
-.expertise-badges-prestashop {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.badge-prestashop-award, .badge-prestashop-experience,
-.badge-prestashop-modules, .badge-prestashop-installations {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  backdrop-filter: blur(10px);
-}
-
-.expertise-title-prestashop {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #fff, #fbbf24);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.highlight-certifie {
-  color: #fbbf24;
-}
-
-.expertise-subtitle-prestashop {
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.expertise-credentials-prestashop {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.credential-item {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.credential-item h3 {
-  color: #fbbf24;
-  margin-bottom: 0.5rem;
-}
-
-.expertise-section {
-  margin-bottom: 4rem;
-}
-
-.expertise-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #1a1a2e;
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.expertise-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e5e7eb;
-}
-
-.expertise-card h3 {
-  color: #1a1a2e;
-  margin-bottom: 1rem;
-}
-
-.expertise-card ul {
-  margin-top: 1rem;
-}
-
-.expertise-card li {
-  margin-bottom: 0.5rem;
-  color: #6b7280;
-}
-
-.projects-showcase {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.project-card-prestashop {
-  background: #f8fafc;
-  padding: 2rem;
-  border-radius: 12px;
-  border: 1px solid #e2e8f0;
-}
-
-.project-card-prestashop h3 {
-  color: #1a1a2e;
-  margin-bottom: 1rem;
-}
-
-.project-meta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-}
-
-.btn-project-link {
-  display: inline-block;
-  background: #1a1a2e;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
-
-.btn-project-link:hover {
-  background: #16213e;
-}
-
-.why-choose-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.why-choose-item {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border-radius: 12px;
-  border: 1px solid #cbd5e1;
-}
-
-.why-choose-item h3 {
-  color: #1a1a2e;
-  margin-bottom: 1rem;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #fbbf24;
-}
-
-.testimonial-card p {
-  font-style: italic;
-  margin-bottom: 1rem;
-  color: #374151;
-}
-
-.testimonial-card cite {
-  color: #6b7280;
-  font-weight: 600;
-}
-
-.contact-cta {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
-  padding: 4rem 2rem;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.contact-cta h2 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.cta-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary-large, .btn-secondary-large {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-.btn-primary-large {
-  background: #fbbf24;
-  color: #1a1a2e;
-}
-
-.btn-primary-large:hover {
-  background: #f59e0b;
-  transform: translateY(-2px);
-}
-
-.btn-secondary-large {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-secondary-large:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-.cta-guarantee {
-  margin-top: 2rem;
-}
-
-.cta-guarantee p {
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-  .expertise-title-prestashop {
-    font-size: 2rem;
-  }
-
-  .expertise-badges-prestashop {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .expertise-credentials-prestashop {
-    grid-template-columns: 1fr;
-  }
-
-  .expertise-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-showcase {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-choose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-</style>
+</section>
