@@ -2,6 +2,8 @@
 layout: post
 title: 'Pourquoi PrestaShop gagne justement parce qu'il n'est PAS un SaaS'
 date: 2025-12-15
+lang: fr
+ref: prestashop-vs-saas-strategy
 author: Nicolas Dabène
 categories:
 - Stratégie E-commerce
