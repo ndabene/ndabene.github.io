@@ -258,20 +258,20 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
   align-items: center;
   gap: 0.5rem;
   backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .expertise-title-prestashop {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #fff, #fbbf24);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .highlight-certifie {
   color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
 }
 
 .expertise-subtitle-prestashop {
@@ -300,6 +300,11 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
 .credential-item h3 {
   color: #fbbf24;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.credential-item p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .expertise-section {
