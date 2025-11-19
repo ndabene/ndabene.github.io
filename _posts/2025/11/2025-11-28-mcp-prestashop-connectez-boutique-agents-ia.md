@@ -2,7 +2,6 @@
 layout: post
 title: Comment connecter PrestaShop aux agents IA?
 date: 2025-11-28
-hide_until_published: true
 author: Nicolas Dabène
 categories:
 - PrestaShop

@@ -2,7 +2,6 @@
 layout: post
 title: 'Comment l''IA découvre vos outils MCP ?'
 date: 2025-11-19
-hide_until_published: true
 categories:
 - IA
 - PrestaShop
