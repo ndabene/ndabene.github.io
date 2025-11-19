@@ -52,7 +52,7 @@ faq:
 - question: Est-ce adapté aux débutants?
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
-excerpt: 'L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affa...'
+excerpt: 'L''événement commercial "Back to School" représente aujourd''hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d''affa...'
 ---
 
 L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affaires de **172,3 milliards de dollars en 2024** et une projection de **230,1 milliards de dollars d'ici 2030**.
