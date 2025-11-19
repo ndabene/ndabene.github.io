@@ -2,6 +2,7 @@
 layout: post
 title: 'Comment l''IA découvre vos outils MCP ?'
 date: 2025-11-19
+author: Nicolas Dabène
 categories:
 - IA
 - PrestaShop
