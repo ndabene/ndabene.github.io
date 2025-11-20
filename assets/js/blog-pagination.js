@@ -1,4 +1,4 @@
-// Blog pagination simple - gère uniquement la pagination
+// Blog pagination simple - gère uniquement la pagination avec chargement lazy
 document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('blog-posts-container');
     const prevButton = document.getElementById('prev-page');
@@ -11,6 +11,82 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsPerPage = 8;
     let currentPage = 1;
+    let lazyPostsLoaded = false;
+
+    // Fonction pour charger les posts lazy
+    function loadLazyPosts() {
+        if (lazyPostsLoaded) return;
+
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        if (!lazyPostsData) {
+            lazyPostsLoaded = true; // Pas de posts lazy à charger
+            return;
+        }
+
+        const lazyPosts = Array.from(lazyPostsData.querySelectorAll('.lazy-post-data'));
+        if (lazyPosts.length === 0) {
+            lazyPostsLoaded = true;
+            return;
+        }
+
+        console.log('🔄 Chargement de', lazyPosts.length, 'articles supplémentaires...');
+
+        // Créer un fragment pour éviter les reflows multiples
+        const fragment = document.createDocumentFragment();
+
+        lazyPosts.forEach(postData => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'post-preview-wrapper';
+
+            const article = document.createElement('article');
+            article.className = 'post-preview-news';
+            article.setAttribute('data-categories', postData.dataset.categories || '');
+            article.setAttribute('data-tags', postData.dataset.tags || '');
+            article.setAttribute('data-date', postData.dataset.date || '');
+            article.setAttribute('data-read-time', postData.dataset.readTime || '5');
+
+            const seriesHtml = postData.dataset.series ?
+                `<span class="series-indicator">${postData.dataset.series}</span>` : '';
+
+            article.innerHTML = `
+                <div class="post-news-content">
+                    ${postData.dataset.image ? `
+                    <div class="post-news-thumb">
+                        <img src="${postData.dataset.image}" alt="${postData.dataset.title}" loading="lazy" width="200" height="150" decoding="async">
+                    </div>
+                    ` : ''}
+                    <div class="post-news-text">
+                        <div class="post-news-meta">
+                            <time>${postData.dataset.dateFormatted}</time>
+                            <span class="reading-time">${postData.dataset.readTime} min</span>
+                            ${seriesHtml}
+                        </div>
+                        <h3 class="post-news-title">
+                            <a href="${postData.dataset.url}">${postData.dataset.title}</a>
+                        </h3>
+                        <p class="post-news-excerpt">${postData.dataset.excerpt}</p>
+                    </div>
+                    <div class="post-news-actions">
+                        <a href="${postData.dataset.url}" class="read-more-compact">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            wrapper.appendChild(article);
+            fragment.appendChild(wrapper);
+        });
+
+        // Insérer avant le div lazy-posts-data
+        lazyPostsData.parentNode.insertBefore(fragment, lazyPostsData);
+
+        // Retirer le container de données
+        lazyPostsData.remove();
+
+        lazyPostsLoaded = true;
+        console.log('✅ Articles supplémentaires chargés');
+    }
 
     // Fonction pour obtenir tous les articles visibles (non masqués par les filtres)
     function getVisiblePosts() {
@@ -142,6 +218,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Aller à une page spécifique
     function goToPage(pageNum) {
         currentPage = pageNum;
+
+        // Charger les posts lazy si on va sur une page > 2
+        if (pageNum > 2 && !lazyPostsLoaded) {
+            loadLazyPosts();
+        }
+
         updateDisplay();
 
         // Scroll vers le haut de la liste

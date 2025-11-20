@@ -26,7 +26,7 @@
         }
     }
 
-    // Randomisation des articles featured - Optimisée
+    // Randomisation des articles featured - Optimisée avec cache
     function renderRandomFeaturedArticles() {
         const dataContainer = document.querySelector('.featured-articles-data');
         const gridContainer = document.getElementById('featured-articles-grid');
@@ -36,13 +36,53 @@
         const allArticles = Array.from(dataContainer.querySelectorAll('.featured-article-data'));
         if (allArticles.length === 0) return;
 
-        // Optimisation: Fisher-Yates shuffle (plus performant que sort + random)
-        const shuffled = [...allArticles];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        // Vérifier si on a des articles en cache (session en cours)
+        const CACHE_KEY = 'blog_featured_articles_cache';
+        const CACHE_VERSION_KEY = 'blog_featured_articles_version';
+        const currentVersion = allArticles.length.toString(); // Version basée sur le nombre d'articles
+
+        let randomArticles;
+        try {
+            const cachedVersion = sessionStorage.getItem(CACHE_VERSION_KEY);
+            const cachedIndices = sessionStorage.getItem(CACHE_KEY);
+
+            // Utiliser le cache si la version correspond
+            if (cachedVersion === currentVersion && cachedIndices) {
+                const indices = JSON.parse(cachedIndices);
+                randomArticles = indices.map(i => allArticles[i]).filter(Boolean);
+
+                // Si le cache est valide, l'utiliser
+                if (randomArticles.length === 3) {
+                    console.log('📦 Articles featured chargés depuis le cache');
+                } else {
+                    randomArticles = null; // Cache invalide, regénérer
+                }
+            }
+        } catch (e) {
+            console.warn('Erreur lecture cache featured articles:', e);
+            randomArticles = null;
         }
-        const randomArticles = shuffled.slice(0, 3);
+
+        // Générer de nouveaux articles si pas de cache valide
+        if (!randomArticles) {
+            // Optimisation: Fisher-Yates shuffle (plus performant que sort + random)
+            const shuffled = [...allArticles];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            randomArticles = shuffled.slice(0, 3);
+
+            // Sauvegarder les indices dans le cache
+            try {
+                const indices = randomArticles.map(article => allArticles.indexOf(article));
+                sessionStorage.setItem(CACHE_KEY, JSON.stringify(indices));
+                sessionStorage.setItem(CACHE_VERSION_KEY, currentVersion);
+                console.log('💾 Articles featured mis en cache');
+            } catch (e) {
+                console.warn('Erreur sauvegarde cache featured articles:', e);
+            }
+        }
 
         // Utiliser DocumentFragment pour minimiser les reflows
         const fragment = document.createDocumentFragment();
@@ -72,7 +112,7 @@
                 <article class="featured-article-card">
                     <a href="${url}" class="featured-card-link">
                         <div class="featured-card-image">
-                            <img src="${image}" alt="${title}" loading="lazy">
+                            <img src="${image}" alt="${title}" loading="lazy" width="400" height="250" decoding="async">
                             ${categoryBadge}
                             <div class="featured-card-overlay"></div>
                         </div>

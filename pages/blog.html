@@ -144,9 +144,30 @@ llm_topics:
                     </div>
                     
                     <div class="post-list-news grid-view" id="blog-posts-container">
-                        {% comment %}Charger tous les articles publiés - la pagination est gérée par JavaScript{% endcomment %}
+                        {% comment %}Charger initialement 2 pages d'articles (16 posts) pour de meilleures performances - le reste se charge à la demande{% endcomment %}
                         {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: 4 %}
-                        {% include blog-post-loop.html posts=published_posts_list %}
+                        {% assign initial_load_count = 16 %}
+                        {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
+
+                        {% comment %}Stocker le reste des posts pour chargement à la demande{% endcomment %}
+                        {% if published_posts_list.size > initial_load_count %}
+                            <div id="lazy-posts-data" style="display: none;">
+                                {% for post in published_posts_list offset: 16 %}
+                                    <div class="lazy-post-data"
+                                         data-url="{{ post.url | relative_url }}"
+                                         data-title="{{ post.title | escape }}"
+                                         data-image="{{ post.image }}"
+                                         data-categories="{{ post.categories | join: ' ' }}"
+                                         data-tags="{{ post.tags | join: ' ' }}"
+                                         data-date="{{ post.date | date: '%s' }}"
+                                         data-date-formatted="{% include date-fr.html date=post.date %}"
+                                         data-read-time="{{ post.read_time_minutes | default: 5 }}"
+                                         data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
+                                         data-series="{% if post.series %}{{ post.series }}{% endif %}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
                     </div>
                     
                     <!-- Message quand aucun résultat -->
@@ -256,7 +277,7 @@ llm_topics:
     </div>
 </section>
 
-<!-- Scripts optimisés pour de meilleures performances -->
-<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/blog-filters.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>
+<!-- Scripts optimisés pour de meilleures performances avec chargement différé -->
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>
