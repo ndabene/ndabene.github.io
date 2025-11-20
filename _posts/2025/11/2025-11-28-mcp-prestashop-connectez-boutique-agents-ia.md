@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Comment connecter PrestaShop aux agents IA?
+title: 'MCP Server PrestaShop : Connecter votre boutique aux agents IA (Guide 2025)'
 date: 2025-11-28
+ref: mcp-server-prestashop-setup-guide
 author: Nicolas Dabène
 categories:
 - PrestaShop
@@ -14,8 +15,9 @@ tags:
 - PHP 8
 - Agent IA
 - Model Context Protocol
-excerpt: Découvrez comment ps_mcp_server transforme votre boutique PrestaShop en plateforme
-  IA-ready. Guide complet d'installation et développement avec exemples pratiques.
+excerpt: 'Découvrez comment ps_mcp_server transforme votre boutique PrestaShop en
+  plateforme IA-ready. Guide complet d''installation du MCP Server pour PrestaShop
+  avec exemples pratiques et intégration Claude, ChatGPT, Gemini.'
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
 featured: true
 difficulty: Avancé
@@ -25,6 +27,17 @@ technologies:
 - MCP
 - IA
 estimated_reading_time: 10 minutes
+keywords:
+- MCP Server PrestaShop
+- ps_mcp_server
+- PrestaShop MCP integration
+- Model Context Protocol PrestaShop
+- PrestaShop AI automation
+- MCP protocol e-commerce
+- PrestaShop agent IA
+- PHP MCP server
+- PrestaShop 8 MCP
+- Claude PrestaShop integration
 faq:
 - question: Qu'est-ce que le Model Context Protocol (MCP) ?
   answer: MCP est un protocole qui permet aux agents IA de communiquer avec des systèmes

@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How AI Discovers Your MCP Tools?
+title: 'PrestaShop MCP Server & MCP Tools Plus: Complete AI Assistant Guide'
 date: 2025-11-20
+ref: mcp-tools-plus-prestashop-assistant
 categories:
 - AI
 - PrestaShop
@@ -13,18 +14,20 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: 'Imagine an AI assistant managing your PrestaShop store like a tireless right-hand:
-  accounting reports in the blink of an eye, automated targeted promotions, and much
-  more. With the PS MCP Server and the MCP Tools Plus module, this vision becomes
-  reality. Discover how these tools transform daily frustrations into growth opportunities
-  for merchants and agencies.
-
-  '
+excerpt: 'PS MCP Server & MCP Tools Plus transform your PrestaShop store into an AI-powered
+  platform. Automate reports, promotions, and analytics with natural language commands.
+  Complete guide 2025.'
 image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg
+featured: true
 keywords:
 - PS MCP Server
 - MCP Tools Plus
-- PrestaShop
+- MCP Server PrestaShop
+- PrestaShop MCP integration
+- PrestaShop AI assistant
+- Model Context Protocol PrestaShop
+- MCP protocol e-commerce
+- PrestaShop automation AI
 - AI
 - management assistant
 - e-commerce
