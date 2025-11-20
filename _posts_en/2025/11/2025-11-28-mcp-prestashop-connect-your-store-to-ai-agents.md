@@ -1,7 +1,8 @@
 ---
 layout: post
-title: How to Connect MCP Server to Claude?
+title: 'PrestaShop MCP Server Setup: Connect Your Store to AI Agents (2025 Guide)'
 date: 2025-11-28
+ref: mcp-server-prestashop-setup-guide
 author: Nicolas Dabène
 categories:
 - PrestaShop
@@ -14,8 +15,9 @@ tags:
 - PHP 8
 - AI Agent
 - Model Context Protocol
-excerpt: Discover how ps_mcp_server transforms your PrestaShop store into an AI-ready
-  platform. Complete guide to installation and development with practical examples.
+excerpt: 'Discover how ps_mcp_server transforms your PrestaShop store into an AI-ready
+  platform. Complete MCP Server installation guide for PrestaShop with practical examples
+  and Claude, ChatGPT, Gemini integration.'
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
 featured: true
 difficulty: Advanced
@@ -25,6 +27,17 @@ technologies:
 - MCP
 - AI
 estimated_reading_time: 10 minutes
+keywords:
+- MCP Server PrestaShop
+- ps_mcp_server
+- PrestaShop MCP integration
+- Model Context Protocol PrestaShop
+- PrestaShop AI automation
+- MCP protocol e-commerce
+- PrestaShop AI agent
+- PHP MCP server
+- PrestaShop 8 MCP
+- Claude PrestaShop integration
 faq:
 - question: What is the Model Context Protocol (MCP)?
   answer: MCP is a protocol that allows AI agents to communicate with business systems

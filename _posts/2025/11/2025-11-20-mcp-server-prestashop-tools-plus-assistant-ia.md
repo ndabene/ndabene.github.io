@@ -1,7 +1,8 @@
 ---
 layout: post
-title: 'Piloter sa boutique PrestaShop en langage naturel'
+title: 'MCP Server PrestaShop : Piloter votre boutique avec MCP Tools Plus'
 date: 2025-11-20
+ref: mcp-tools-plus-prestashop-assistant
 categories:
 - IA
 - PrestaShop
@@ -13,18 +14,20 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras
-  droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées,
-  et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient
-  réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
-  en opportunités de croissance pour marchands et agences.
-
-  '
+excerpt: 'Découvrez le PS MCP Server et MCP Tools Plus pour PrestaShop : transformez
+  votre boutique avec un assistant IA capable de gérer rapports, promotions et analyses
+  en langage naturel. Guide complet 2025.'
 image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg
+featured: true
 keywords:
 - PS MCP Server
 - MCP Tools Plus
-- PrestaShop
+- MCP Server PrestaShop
+- PrestaShop MCP integration
+- PrestaShop AI assistant
+- Model Context Protocol PrestaShop
+- MCP protocol e-commerce
+- PrestaShop automation IA
 - IA
 - assistant gestion
 - e-commerce
