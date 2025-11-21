@@ -1463,6 +1463,8 @@ $blog-content-bg: $white;
   border: 1px solid rgba(226, 232, 240, 0.8);
   width: 100%;
   flex: 1;
+  min-width: 0; // Permet au contenu de se rétrécir correctement dans un flex container
+  overflow-x: hidden; // Empêche le débordement horizontal du contenu principal
 
   &.has-sidebar {
     @media (min-width: 1025px) {
@@ -1586,6 +1588,7 @@ $blog-content-bg: $white;
     margin: 2rem 0;
     border: 1px solid #334155;
     position: relative;
+    max-width: 100%; // Empêche le débordement des blocs de code
     
     code {
       background: none;
