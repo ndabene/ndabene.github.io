@@ -2,6 +2,8 @@
 layout: post
 title: 'Comment l''IA découvre vos outils MCP ?'
 date: 2025-11-19
+lang: fr
+ref: how-ai-discovers-mcp-tools
 author: Nicolas Dabène
 categories:
 - IA

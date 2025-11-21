@@ -2,6 +2,8 @@
 layout: post
 title: 'Agents IA pour e-commerce : PS MCP Server & Tools Plus'
 date: 2025-11-24
+lang: fr
+ref: ai-agents-ecommerce-mcp
 author: Nicolas Dabène
 categories:
 - IA

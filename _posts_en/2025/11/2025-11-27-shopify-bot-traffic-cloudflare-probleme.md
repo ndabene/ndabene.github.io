@@ -2,6 +2,8 @@
 layout: post
 title: Why Shopify Can't Track Campaigns Properly?
 date: 2025-11-27
+lang: en
+ref: shopify-bot-traffic-cloudflare-problem
 author: Nicolas Dabène
 categories:
 - Ecommerce

@@ -2,6 +2,8 @@
 layout: post
 title: L'avenir des développeurs avec l'IA
 date: 2025-11-26
+lang: fr
+ref: future-belongs-to-those-who-talk-to-machines
 author: Nicolas Dabène
 categories:
 - IA

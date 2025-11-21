@@ -1,7 +1,9 @@
 ---
 layout: post
-title: How AI Discovers Your MCP Tools?
+title: 'AI Agents for E-commerce: PS MCP Server & Tools Plus'
 date: 2025-11-24
+lang: en
+ref: ai-agents-ecommerce-mcp
 author: Nicolas Dabène
 categories:
 - AI
@@ -14,16 +16,8 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: 'Imagine an AI assistant managing your PrestaShop store like a tireless right-hand:
-  instant accounting reports, automated targeted promotions, and much more. With PS
-  MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover
-  how these tools transform daily frustrations into growth opportunities for merchants
-  and agencies.
-
-  '
+excerpt: 'Imagine an AI assistant managing your PrestaShop store like a tireless right-hand: instant accounting reports, automated targeted promotions, and much more. With PS MCP Server and the MCP Tools Plus module, this vision becomes reality. Discover how these tools transform daily frustrations into growth opportunities for merchants and agencies.'
 image: /assets/images/blog/ps-mcp-server-tools-plus.jpg
-lang: en
-ref: ps-mcp-server-tools-plus-nov2025
 keywords:
 - PS MCP Server
 - MCP Tools Plus

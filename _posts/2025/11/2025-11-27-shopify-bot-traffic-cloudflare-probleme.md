@@ -2,6 +2,8 @@
 layout: post
 title: Pourquoi Shopify ne suit pas bien vos campagnes?
 date: 2025-11-27
+lang: fr
+ref: shopify-bot-traffic-cloudflare-problem
 author: Nicolas Dabène
 categories:
 - Ecommerce
