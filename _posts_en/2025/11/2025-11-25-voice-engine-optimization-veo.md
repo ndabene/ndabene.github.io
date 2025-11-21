@@ -2,6 +2,8 @@
 layout: post
 title: 'VEO 2025: Voice Optimization Transforms SEO'
 date: 2025-11-25
+lang: en
+ref: voice-engine-optimization-veo
 author: Nicolas Dabène
 categories:
 - Artificial Intelligence

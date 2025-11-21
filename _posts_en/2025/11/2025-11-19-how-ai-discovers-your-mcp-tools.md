@@ -2,6 +2,8 @@
 layout: post
 title: 'How AI Discovers Your MCP Tools?'
 date: 2025-11-19
+lang: en
+ref: how-ai-discovers-mcp-tools
 author: Nicolas Dabène
 categories:
 - AI

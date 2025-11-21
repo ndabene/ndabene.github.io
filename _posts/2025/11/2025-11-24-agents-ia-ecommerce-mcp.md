@@ -2,6 +2,8 @@
 layout: post
 title: 'Agents IA pour e-commerce : PS MCP Server & Tools Plus'
 date: 2025-11-24
+lang: fr
+ref: ai-agents-ecommerce-mcp
 author: Nicolas Dabène
 categories:
 - IA
@@ -14,13 +16,7 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras
-  droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées,
-  et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient
-  réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
-  en opportunités de croissance pour marchands et agences.
-
-  '
+excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées, et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient réalité. Découvrez comment ces outils transforment les frustrations quotidiennes en opportunités de croissance pour marchands et agences.'
 image: /assets/images/blog/ps-mcp-server-tools-plus.jpg
 keywords:
 - PS MCP Server

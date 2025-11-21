@@ -2,6 +2,8 @@
 layout: post
 title: The Future of Developers with AI
 date: 2025-11-26
+lang: en
+ref: future-belongs-to-those-who-talk-to-machines
 author: Nicolas Dabène
 categories:
 - AI
@@ -13,12 +15,7 @@ tags:
 - prompt engineering
 - future of work
 - soft skills
-excerpt: 'Code is no longer the only language of power in the digital world. A new
-  skill, more human and more accessible, is taking over: the art of "talking" to machines.
-  Discover why the future of innovation, especially in PrestaShop, will belong to
-  communicators, creatives and visionaries, and not just to coders anymore.
-
-  '
+excerpt: 'Code is no longer the only language of power in the digital world. A new skill, more human and more accessible, is taking over: the art of "talking" to machines. Discover why the future of innovation, especially in PrestaShop, will belong to communicators, creatives and visionaries, and not just to coders anymore.'
 image: /assets/images/blog/2025/11/parler-aux-machines-futur.jpg
 keywords:
 - AI
