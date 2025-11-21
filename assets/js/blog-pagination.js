@@ -1,4 +1,4 @@
-// Blog pagination simple - gère uniquement la pagination
+// Blog pagination simple - gère uniquement la pagination avec chargement lazy
 document.addEventListener('DOMContentLoaded', function() {
     const postsContainer = document.getElementById('blog-posts-container');
     const prevButton = document.getElementById('prev-page');
@@ -11,6 +11,82 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsPerPage = 8;
     let currentPage = 1;
+    let lazyPostsLoaded = false;
+
+    // Fonction pour charger les posts lazy
+    function loadLazyPosts() {
+        if (lazyPostsLoaded) return;
+
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        if (!lazyPostsData) {
+            lazyPostsLoaded = true; // Pas de posts lazy à charger
+            return;
+        }
+
+        const lazyPosts = Array.from(lazyPostsData.querySelectorAll('.lazy-post-data'));
+        if (lazyPosts.length === 0) {
+            lazyPostsLoaded = true;
+            return;
+        }
+
+        console.log('🔄 Chargement de', lazyPosts.length, 'articles supplémentaires...');
+
+        // Créer un fragment pour éviter les reflows multiples
+        const fragment = document.createDocumentFragment();
+
+        lazyPosts.forEach(postData => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'post-preview-wrapper';
+
+            const article = document.createElement('article');
+            article.className = 'post-preview-news';
+            article.setAttribute('data-categories', postData.dataset.categories || '');
+            article.setAttribute('data-tags', postData.dataset.tags || '');
+            article.setAttribute('data-date', postData.dataset.date || '');
+            article.setAttribute('data-read-time', postData.dataset.readTime || '5');
+
+            const seriesHtml = postData.dataset.series ?
+                `<span class="series-indicator">${postData.dataset.series}</span>` : '';
+
+            article.innerHTML = `
+                <div class="post-news-content">
+                    ${postData.dataset.image ? `
+                    <div class="post-news-thumb">
+                        <img src="${postData.dataset.image}" alt="${postData.dataset.title}" loading="lazy" width="200" height="150" decoding="async">
+                    </div>
+                    ` : ''}
+                    <div class="post-news-text">
+                        <div class="post-news-meta">
+                            <time>${postData.dataset.dateFormatted}</time>
+                            <span class="reading-time">${postData.dataset.readTime} min</span>
+                            ${seriesHtml}
+                        </div>
+                        <h3 class="post-news-title">
+                            <a href="${postData.dataset.url}">${postData.dataset.title}</a>
+                        </h3>
+                        <p class="post-news-excerpt">${postData.dataset.excerpt}</p>
+                    </div>
+                    <div class="post-news-actions">
+                        <a href="${postData.dataset.url}" class="read-more-compact">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            wrapper.appendChild(article);
+            fragment.appendChild(wrapper);
+        });
+
+        // Insérer avant le div lazy-posts-data
+        lazyPostsData.parentNode.insertBefore(fragment, lazyPostsData);
+
+        // Retirer le container de données
+        lazyPostsData.remove();
+
+        lazyPostsLoaded = true;
+        console.log('✅ Articles supplémentaires chargés');
+    }
 
     // Fonction pour obtenir tous les articles visibles (non masqués par les filtres)
     function getVisiblePosts() {
@@ -20,10 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Fonction pour obtenir le nombre total de posts (y compris lazy non encore chargés)
+    function getTotalPostsCount() {
+        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper');
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        const lazyCount = lazyPostsData ? lazyPostsData.querySelectorAll('.lazy-post-data').length : 0;
+        return renderedPosts.length + lazyCount;
+    }
+
     // Mettre à jour l'affichage de la pagination
     function updateDisplay() {
         const visiblePosts = getVisiblePosts();
-        const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+        const allPostsCount = getTotalPostsCount();
+
+        // Si des filtres sont actifs (visiblePosts < posts rendus), utiliser visiblePosts
+        // Sinon, utiliser le total incluant les posts lazy
+        const renderedPostsCount = postsContainer.querySelectorAll('.post-preview-wrapper').length;
+        const hasActiveFilters = visiblePosts.length < renderedPostsCount;
+        const totalPosts = hasActiveFilters ? visiblePosts.length : allPostsCount;
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
 
         // Réinitialiser à la page 1 si on dépasse
         if (currentPage > totalPages && totalPages > 0) {
@@ -61,13 +152,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (totalPostsSpan) {
-            totalPostsSpan.textContent = visiblePosts.length;
+            // Afficher le nombre total (incluant les posts lazy et les posts filtrés)
+            totalPostsSpan.textContent = totalPosts;
         }
 
         // Masquer le container de pagination si pas assez d'articles
         const paginationContainer = document.querySelector('.pagination-container');
         if (paginationContainer) {
-            if (visiblePosts.length <= postsPerPage) {
+            // Utiliser totalPosts pour décider si on affiche la pagination
+            if (totalPosts <= postsPerPage) {
                 paginationContainer.style.display = 'none';
             } else {
                 paginationContainer.style.display = 'block';
@@ -142,7 +235,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Aller à une page spécifique
     function goToPage(pageNum) {
         currentPage = pageNum;
-        updateDisplay();
+
+        // Charger les posts lazy si nécessaire pour afficher cette page
+        // On charge dès qu'on atteint la page 2 (posts 9-16) car la page 3 aura besoin des posts lazy
+        const startIndex = (pageNum - 1) * postsPerPage;
+        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper').length;
+
+        if (startIndex >= renderedPosts - postsPerPage && !lazyPostsLoaded) {
+            // On approche de la fin des posts rendus, charger les lazy
+            loadLazyPosts();
+            // Attendre un peu que les posts soient insérés dans le DOM
+            setTimeout(() => updateDisplay(), 50);
+        } else {
+            updateDisplay();
+        }
 
         // Scroll vers le haut de la liste
         const blogContent = document.querySelector('.blog-filters-container');
@@ -162,8 +268,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (nextButton) {
         nextButton.addEventListener('click', function() {
-            const visiblePosts = getVisiblePosts();
-            const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+            const totalPosts = getTotalPostsCount();
+            const totalPages = Math.ceil(totalPosts / postsPerPage);
             if (currentPage < totalPages) {
                 goToPage(currentPage + 1);
             }
@@ -187,8 +293,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const visiblePosts = getVisiblePosts();
-        const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+        const totalPosts = getTotalPostsCount();
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
 
         if (e.key === 'ArrowLeft' && currentPage > 1) {
             e.preventDefault();

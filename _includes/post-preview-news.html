@@ -15,7 +15,12 @@ Usage: {% include post-preview-news.html post=post %}
         <!-- Vignette compacte -->
         {% if post.image %}
             <div class="post-news-thumb">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                <img src="{{ post.image | relative_url }}"
+                     alt="{{ post.title }}"
+                     loading="lazy"
+                     width="200"
+                     height="150"
+                     decoding="async">
                 {% if post.categories and post.categories.size > 0 %}
                     <span class="post-category-mini" data-category="{{ post.categories | first | slugify }}">
                         {{ post.categories | first }}
