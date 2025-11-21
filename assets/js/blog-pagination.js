@@ -96,10 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Fonction pour obtenir le nombre total de posts (y compris lazy non encore chargés)
+    function getTotalPostsCount() {
+        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper');
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        const lazyCount = lazyPostsData ? lazyPostsData.querySelectorAll('.lazy-post-data').length : 0;
+        return renderedPosts.length + lazyCount;
+    }
+
     // Mettre à jour l'affichage de la pagination
     function updateDisplay() {
         const visiblePosts = getVisiblePosts();
-        const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+        const allPostsCount = getTotalPostsCount();
+
+        // Si des filtres sont actifs (visiblePosts < posts rendus), utiliser visiblePosts
+        // Sinon, utiliser le total incluant les posts lazy
+        const renderedPostsCount = postsContainer.querySelectorAll('.post-preview-wrapper').length;
+        const hasActiveFilters = visiblePosts.length < renderedPostsCount;
+        const totalPosts = hasActiveFilters ? visiblePosts.length : allPostsCount;
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
 
         // Réinitialiser à la page 1 si on dépasse
         if (currentPage > totalPages && totalPages > 0) {
@@ -137,13 +152,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (totalPostsSpan) {
-            totalPostsSpan.textContent = visiblePosts.length;
+            // Afficher le nombre total (incluant les posts lazy et les posts filtrés)
+            totalPostsSpan.textContent = totalPosts;
         }
 
         // Masquer le container de pagination si pas assez d'articles
         const paginationContainer = document.querySelector('.pagination-container');
         if (paginationContainer) {
-            if (visiblePosts.length <= postsPerPage) {
+            // Utiliser totalPosts pour décider si on affiche la pagination
+            if (totalPosts <= postsPerPage) {
                 paginationContainer.style.display = 'none';
             } else {
                 paginationContainer.style.display = 'block';
@@ -219,12 +236,19 @@ document.addEventListener('DOMContentLoaded', function() {
     function goToPage(pageNum) {
         currentPage = pageNum;
 
-        // Charger les posts lazy si on va sur une page > 2
-        if (pageNum > 2 && !lazyPostsLoaded) {
-            loadLazyPosts();
-        }
+        // Charger les posts lazy si nécessaire pour afficher cette page
+        // On charge dès qu'on atteint la page 2 (posts 9-16) car la page 3 aura besoin des posts lazy
+        const startIndex = (pageNum - 1) * postsPerPage;
+        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper').length;
 
-        updateDisplay();
+        if (startIndex >= renderedPosts - postsPerPage && !lazyPostsLoaded) {
+            // On approche de la fin des posts rendus, charger les lazy
+            loadLazyPosts();
+            // Attendre un peu que les posts soient insérés dans le DOM
+            setTimeout(() => updateDisplay(), 50);
+        } else {
+            updateDisplay();
+        }
 
         // Scroll vers le haut de la liste
         const blogContent = document.querySelector('.blog-filters-container');
@@ -244,8 +268,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (nextButton) {
         nextButton.addEventListener('click', function() {
-            const visiblePosts = getVisiblePosts();
-            const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+            const totalPosts = getTotalPostsCount();
+            const totalPages = Math.ceil(totalPosts / postsPerPage);
             if (currentPage < totalPages) {
                 goToPage(currentPage + 1);
             }
@@ -269,8 +293,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        const visiblePosts = getVisiblePosts();
-        const totalPages = Math.ceil(visiblePosts.length / postsPerPage);
+        const totalPosts = getTotalPostsCount();
+        const totalPages = Math.ceil(totalPosts / postsPerPage);
 
         if (e.key === 'ArrowLeft' && currentPage > 1) {
             e.preventDefault();
