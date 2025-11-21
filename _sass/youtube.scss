@@ -137,7 +137,7 @@
 // Grille des articles comme le blog
 .post-list-news {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 400px)"}, 1fr));
   gap: $space-xl;
   margin-bottom: $space-4xl;
   position: relative;
@@ -165,14 +165,14 @@
 // Grille d'articles comme le blog
 .blog-articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 380px)"}, 1fr));
   gap: $space-2xl;
   margin-bottom: $space-4xl;
   position: relative;
   z-index: 1;
 
   @media (max-width: $breakpoint-lg) {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 320px)"}, 1fr));
     gap: $space-xl;
   }
 

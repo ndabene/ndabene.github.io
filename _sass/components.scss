@@ -499,7 +499,7 @@ body.dark-mode {
 
   .perplexity-blog-benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 250px)"}, 1fr));
     gap: $spacing-lg;
     margin: 0;
 
@@ -860,7 +860,7 @@ body.dark-mode {
 
   .hostinger-blog-benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 250px)"}, 1fr));
     gap: $spacing-lg;
     margin: 0;
 
@@ -1033,7 +1033,7 @@ body.dark-mode {
 
   .sponsors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 350px)"}, 1fr));
     gap: $spacing-xl;
     margin-bottom: $spacing-xxl;
 
@@ -1263,7 +1263,7 @@ body.dark-mode {
 
   .sponsors-info-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 300px)"}, 1fr));
     gap: $spacing-lg;
     margin-top: $spacing-xxl;
     padding-top: $spacing-xxl;
