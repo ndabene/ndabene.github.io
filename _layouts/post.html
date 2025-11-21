@@ -122,7 +122,14 @@ layout: default
                     <!-- Image de bannière dans le contenu -->
                     {% if page.image %}
                     <div class="post-banner-image-container">
-                        <img src="{{ page.image }}" alt="{{ page.title }}" class="post-banner-image">
+                        <img src="{{ page.image }}"
+                             alt="{{ page.title }}"
+                             class="post-banner-image"
+                             loading="eager"
+                             fetchpriority="high"
+                             width="1200"
+                             height="630"
+                             decoding="async">
                     </div>
                     {% endif %}
 
@@ -236,9 +243,9 @@ layout: default
             </div>
     </div>
     
-    <!-- Scripts -->
-    <script src="{{ '/assets/js/code-highlighting.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/social-sharing.js' | relative_url }}"></script>
+    <!-- Scripts différés pour performance -->
+    <script src="{{ '/assets/js/code-highlighting.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/social-sharing.js' | relative_url }}" defer></script>
     
     <!-- Reading Progress & TOC Script -->
     <script>
