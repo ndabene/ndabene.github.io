@@ -1,16 +1,27 @@
 const CACHE_NAME = 'ndabene-image-cache-v1';
 const ASSETS_TO_CACHE = [
-    '/assets/images/logo.png',
-    '/assets/images/default-post.jpg'
+    '/assets/images/logo.png'
+    // Only cache critical assets that are guaranteed to exist
+    // Other images will be cached on-demand via the fetch handler
 ];
 
-// Install event: cache critical assets
+// Install event: cache critical assets (don't fail if some are missing)
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(ASSETS_TO_CACHE);
+            // Use Promise.all with error handling to prevent install failure
+            return Promise.all(
+                ASSETS_TO_CACHE.map(url => {
+                    return cache.add(url).catch(err => {
+                        console.warn('Failed to cache:', url, err);
+                        // Don't fail the entire installation if one asset fails
+                    });
+                })
+            );
         })
     );
+    // Force the waiting service worker to become the active service worker
+    self.skipWaiting();
 });
 
 // Activate event: clean up old caches
@@ -26,6 +37,8 @@ self.addEventListener('activate', (event) => {
             );
         })
     );
+    // Claim all clients immediately
+    return self.clients.claim();
 });
 
 // Fetch event: Stale-while-revalidate for images
@@ -43,9 +56,12 @@ self.addEventListener('fetch', (event) => {
                             cache.put(event.request, networkResponse.clone());
                         }
                         return networkResponse;
+                    }).catch(() => {
+                        // If network fails, return cached response or a fallback
+                        return cachedResponse;
                     });
 
-                    // Return cached response if available, otherwise wait for network
+                    // Return cached response immediately if available, otherwise wait for network
                     return cachedResponse || fetchPromise;
                 });
             })
