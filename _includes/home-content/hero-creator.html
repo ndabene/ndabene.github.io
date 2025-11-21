@@ -12,9 +12,16 @@
             <!-- Photo professionnelle -->
             <div class="hero-creator-visual">
                 <div class="hero-photo-card">
-                    <img src="/assets/images/hero/profile-hero.jpg"
-                         alt="Nicolas Dabène - Créateur de Contenu IA & E-commerce"
-                         class="hero-photo">
+                    <picture>
+                        <source srcset="/assets/images/hero/profile-hero.webp" type="image/webp">
+                        <img src="/assets/images/hero/profile-hero.jpg"
+                             alt="Nicolas Dabène - Créateur de Contenu IA & E-commerce"
+                             class="hero-photo"
+                             fetchpriority="high"
+                             loading="eager"
+                             width="800"
+                             height="800">
+                    </picture>
                 </div>
             </div>
 

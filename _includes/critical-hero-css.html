@@ -1,0 +1,135 @@
+<style>
+    /* Critical CSS - Hero section uniquement pour améliorer LCP mobile */
+    .hero-creator {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+    }
+
+    .hero-creator-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%
+    }
+
+    .hero-creator-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    .hero-photo-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        position: relative
+    }
+
+    .hero-photo {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        object-fit: cover
+    }
+
+    .hero-creator-content {
+        text-align: center;
+        color: #fff
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        margin-bottom: 1rem
+    }
+
+    .hero-creator-title {
+        font-size: clamp(1.75rem, 5vw, 3rem);
+        font-weight: 800;
+        margin: 0 0 1rem;
+        line-height: 1.2;
+        color: #fff
+    }
+
+    .hero-creator-subtitle {
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        line-height: 1.6;
+        margin: 0 0 2rem;
+        color: rgba(255, 255, 255, 0.95);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .hero-creator-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center
+    }
+
+    .btn-creator {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.875rem 1.75rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        font-size: 1rem;
+        border: 2px solid transparent
+    }
+
+    .btn-creator-primary {
+        background: #fff;
+        color: #667eea;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15)
+    }
+
+    .btn-creator-secondary {
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px)
+    }
+
+    .btn-creator-outline {
+        background: transparent;
+        border-color: #fff;
+        color: #fff
+    }
+
+    @media(min-width:768px) {
+        .hero-creator-grid {
+            flex-direction: row;
+            align-items: center;
+            gap: 4rem
+        }
+
+        .hero-creator-content {
+            text-align: left
+        }
+
+        .hero-photo-card {
+            max-width: 500px
+        }
+
+        .hero-creator-cta {
+            justify-content: flex-start
+        }
+    }
+</style>

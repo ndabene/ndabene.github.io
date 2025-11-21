@@ -222,6 +222,13 @@
 
 {% include critical-css.html %}
 
+<!-- Critical CSS for Hero section - Mobile LCP optimization -->
+{% include critical-hero-css.html %}
+
+<!-- Preload critical LCP image (hero) with highest priority -->
+<link rel="preload" as="image" href="/assets/images/hero/profile-hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/images/hero/profile-hero.jpg" type="image/jpeg" fetchpriority="high">
+
 <!-- Styles - Preload pour CSS critiques -->
 {% if site.cache_busting %}
   {% assign cache_buster = site.time | date: '%s' %}
