@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 {% assign current_lang = page.lang | default: site.default_lang %}
 <html lang="{{ current_lang }}">
+
 <head>
-    {% include head.html %}
+  {% include head.html %}
 </head>
+
 <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
-    {% unless page.no_bg %}
-      <div class="gradient-background"></div>
-      <!-- Animations différées après LCP pour ne pas impacter les Core Web Vitals -->
-      <div class="animated-background" style="opacity: 0; will-change: opacity;">
-          <div class="floating-particles">
-              <div class="particle"></div>
-              <div class="particle"></div>
-          </div>
-      </div>
-      <!-- Bulles animées réduites pour performance -->
-      <div class="animated-bubbles" style="opacity: 0; will-change: opacity;">
-          <div class="bubble-element"></div>
-          <div class="bubble-element"></div>
-      </div>
-      <!-- Activation des animations après le chargement initial -->
-      <script>
-        window.addEventListener('load', function() {
-          setTimeout(function() {
-            var animBg = document.querySelector('.animated-background');
-            var animBubbles = document.querySelector('.animated-bubbles');
-            if (animBg) {
-              animBg.style.transition = 'opacity 0.5s ease-in';
-              animBg.style.opacity = '1';
-            }
-            if (animBubbles) {
-              animBubbles.style.transition = 'opacity 0.5s ease-in';
-              animBubbles.style.opacity = '1';
-            }
-          }, 500);
-        });
-      </script>
-    {% endunless %}
-
-    {% if site.under_construction %}
-    <div class="under-construction-banner">
-        <p>🚧 Ce site est actuellement en construction. Certaines sections peuvent être incomplètes ou en cours de mise à jour. Merci de votre compréhension ! 🚧</p>
+  {% unless page.no_bg %}
+  <div class="gradient-background"></div>
+  <!-- Animations différées après LCP pour ne pas impacter les Core Web Vitals -->
+  <div class="animated-background" style="opacity: 0; will-change: opacity;">
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
     </div>
-    {% endif %}
-    {% include header-modern.html %}
+  </div>
+  <!-- Bulles animées réduites pour performance -->
+  <div class="animated-bubbles" style="opacity: 0; will-change: opacity;">
+    <div class="bubble-element"></div>
+    <div class="bubble-element"></div>
+  </div>
+  <!-- Activation des animations après le chargement initial -->
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var animBg = document.querySelector('.animated-background');
+        var animBubbles = document.querySelector('.animated-bubbles');
+        if (animBg) {
+          animBg.style.transition = 'opacity 0.5s ease-in';
+          animBg.style.opacity = '1';
+        }
+        if (animBubbles) {
+          animBubbles.style.transition = 'opacity 0.5s ease-in';
+          animBubbles.style.opacity = '1';
+        }
+      }, 500);
+    });
+  </script>
+  {% endunless %}
 
-    <main class="content" style="margin-top:0;">
-        {{ content }}
-    </main>
+  {% if site.under_construction %}
+  <div class="under-construction-banner">
+    <p>🚧 Ce site est actuellement en construction. Certaines sections peuvent être incomplètes ou en cours de mise à
+      jour. Merci de votre compréhension ! 🚧</p>
+  </div>
+  {% endif %}
+  {% include header-modern.html %}
 
-    {% include footer.html %}
-    {% include analytics.html %}
+  <main class="content" style="margin-top:0;">
+    {{ content }}
+  </main>
 
-    <!-- Scripts différés pour performance - Chargés après le contenu -->
-    <script src="/assets/js/modern-animations.js" defer></script>
-    <script src="{{ '/assets/js/expertise-tabs.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/draft-preview.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/google-cmp-integration.js' | relative_url }}" defer></script>
+  {% include footer.html %}
+  {% include analytics.html %}
 
-    <!-- Google Funding Choices - Chargé après le contenu pour ne pas bloquer le LCP -->
-    <script async src="https://fundingchoicesmessages.google.com/i/pub-1445021827447908?ers=1"></script>
-    <script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+  <!-- Scripts différés pour performance - Chargés après le contenu -->
+  <script src="/assets/js/modern-animations.js" defer></script>
+  <script src="{{ '/assets/js/expertise-tabs.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/draft-preview.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/google-cmp-integration.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/image-optimization.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/sw-register.js' | relative_url }}" defer></script>
 
-    <!-- Google AdSense - Lazy loading -->
-    <script src="{{ '/assets/js/adsense-lazy-loader.js' | relative_url }}" defer></script>
+  <!-- Google Funding Choices - Chargé après le contenu pour ne pas bloquer le LCP -->
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-1445021827447908?ers=1"></script>
+  <script>(function () { function signalGooglefcPresent() { if (!window.frames['googlefcPresent']) { if (document.body) { const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe); } else { setTimeout(signalGooglefcPresent, 0); } } } signalGooglefcPresent(); })();</script>
+
+  <!-- Google AdSense - Lazy loading -->
+  <script src="{{ '/assets/js/adsense-lazy-loader.js' | relative_url }}" defer></script>
 </body>
+
 </html>
