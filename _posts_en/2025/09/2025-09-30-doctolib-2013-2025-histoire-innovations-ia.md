@@ -51,8 +51,6 @@ faq:
     per user) subscriptions.
 ---
 
-# Doctolib's Story: From Revolutionary Idea to French Unicorn (2013-2025)
-
 Doctolib has become in barely twelve years one of French Tech's most remarkable success stories, radically transforming how French people make their medical appointments. Look back at the epic of a startup that revolutionized the digital health sector.
 
 ## Origins: A Vision Born from Experience
