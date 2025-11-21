@@ -51,8 +51,6 @@ faq:
     et Team (30$/mois par utilisateur).
 ---
 
-# L'Histoire de Doctolib : De l'Idée Révolutionnaire à la Licorne Française (2013-2025)
-
 Doctolib est devenue en à peine douze ans l'une des success stories les plus remarquables de la French Tech, transformant radicalement la manière dont les Français prennent leurs rendez-vous médicaux. Retour sur l'épopée d'une startup qui a su révolutionner le secteur de la santé numérique.
 
 ## Les Origines : Une Vision Née de l'Expérience

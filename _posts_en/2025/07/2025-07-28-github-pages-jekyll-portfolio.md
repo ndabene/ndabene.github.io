@@ -63,9 +63,6 @@ faq:
   answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
 
-# Create Your Tech Portfolio Online: The Complete Guide with GitHub Pages and Jekyll
-
-
 ## Introduction
 
 Imagine you're a digital craftsman. You create beautiful applications, elegant websites, or innovative designs. But here's the problem: all these masterpieces remain hidden in your computer, like paintings in a dusty attic. How do you show them to the world? How do you prove your expertise to a recruiter or attract new clients?

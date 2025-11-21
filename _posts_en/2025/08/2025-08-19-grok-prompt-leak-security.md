@@ -45,8 +45,6 @@ faq:
     to access external data.
 ---
 
-# Grok Exposes Its System Prompts: Lessons for AI Security
-
 The recent accidental exposure of Grok's internal system prompts, xAI's chatbot, perfectly illustrates why generative AI system security cannot be taken lightly. As a developer working daily with AI APIs, this breach reminds me of the crucial importance of security best practices.
 
 ## Introduction

@@ -45,8 +45,6 @@ faq:
     MCP pour accéder à des données externes.
 ---
 
-# Grok expose ses prompts système : leçons pour la sécurité IA
-
 La récente exposition accidentelle des prompts système internes de Grok, le chatbot de xAI, illustre parfaitement pourquoi la sécurité des systèmes d'IA générative ne peut pas être prise à la légère. En tant que développeur travaillant quotidiennement avec des APIs d'IA, cette faille me rappelle l'importance cruciale des bonnes pratiques de sécurité.
 
 ## Introduction

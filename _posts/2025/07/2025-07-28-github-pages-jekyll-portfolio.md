@@ -66,9 +66,6 @@ faq:
     pas.
 ---
 
-# Créez Votre Portfolio Tech en Ligne : Le Guide Complet avec GitHub Pages et Jekyll
-
-
 ## Introduction
 
 Imaginez que vous êtes un artisan du numérique. Vous créez de magnifiques applications, des sites web élégants, ou des designs innovants. Mais voilà le problème : tous ces chefs-d'œuvre restent cachés dans votre ordinateur, comme des toiles dans un grenier poussiéreux. Comment les montrer au monde ? Comment prouver votre expertise à un recruteur ou attirer de nouveaux clients ?
