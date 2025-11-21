@@ -63,7 +63,6 @@ $tag-hover-text: #fff;
 
   .featured-card-image {
     position: relative;
-    min-height: 200px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #f1f5f9;
@@ -1586,7 +1585,6 @@ $tag-hover-text: #fff;
 
           @media (max-width: 640px) {
             width: 100%;
-            min-height: 200px;
             aspect-ratio: 16 / 9;
           }
 

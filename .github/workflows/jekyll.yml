@@ -33,6 +33,14 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
+      - name: Cache Jekyll
+        uses: actions/cache@v3
+        with:
+          path: .jekyll-cache
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-
+
       - name: Install dependencies
         run: bundle install
 
