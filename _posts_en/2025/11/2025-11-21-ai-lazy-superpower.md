@@ -13,16 +13,21 @@ tags:
 - llm
 - philosophy
 - future
-excerpt: 'What if the AI revolution was based on a huge misunderstanding? Models like
-  GPT don''t "think," they avoid thinking. Discover why this "algorithmic laziness"
-  is actually a superpower and how, as developers and creators, we must change our
-  relationship with this tool to unleash its full potential.
-
-  '
+excerpt: 'What if the AI revolution was based on a huge misunderstanding? Models like GPT don''t "think," they avoid thinking. Discover why this "algorithmic laziness" is actually a superpower and how, as developers and creators, we must change our relationship with this tool to unleash its full potential.'
 image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.jpg
+keywords:
+- AI
+- artificial intelligence
+- LLM
+- laziness
+- PrestaShop
+- developer
+- prompt engineering
+- future of work
+- e-commerce
 lang: en
-ref: ia-paresseuse-superpouvoir
-difficulty: Advanced
+ref: ai-lazy-superpower
+difficulty: ⭐️⭐️⭐️
 technologies:
 - AI
 - LLM
