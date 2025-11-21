@@ -222,233 +222,42 @@
 
 {% include critical-css.html %}
 
-<!-- Styles -->
+<!-- Styles - Preload pour CSS critiques -->
 {% if site.cache_busting %}
   {% assign cache_buster = site.time | date: '%s' %}
 {% endif %}
+<link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<link rel="preload" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
 
-<!-- Google Fonts - Optimisé pour performance -->
+<!-- Google Fonts - Optimisé pour performance mobile -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<!-- Réduit aux poids essentiels + font-display swap pour éviter FOIT -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
 
 <!-- FontAwesome pour les icônes sociales - Chargement optimisé -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
-<!-- Scripts -->
-<script src="{{ '/assets/js/expertise-tabs.js' | relative_url }}" defer></script>
+<!-- Scripts critiques uniquement - Autres scripts chargés dans body -->
 
-<!-- Schema.org Markup - Enrichi pour GEO -->
+<!-- Schema.org Markup - Optimisé pour performance -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.author.name }}",
-  "url": "{{ site.url }}",
-  "image": "{{ site.url }}/assets/images/hero/profile-hero.jpg",
-  "description": "Senior PHP FullStack Developer & AI Orchestrator avec plus de 15 années d'expérience professionnelle depuis 2010, spécialisé en développement e-commerce PrestaShop et intégration d'intelligence artificielle",
-  "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
-  "email": "{{ site.author.email }}",
-  "telephone": "+33-XXX-XXX-XXX",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "FR",
-    "addressRegion": "France"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/nicolas-dabene/",
-    "https://github.com/ndabene",
-    "https://www.businesstech.fr/landing/articles/index.html"
-  ],
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "Formation Continue Technologique"
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Consultant Indépendant",
-    "description": "Services de développement web et intégration IA"
-  },
-  "startDate": "2010",
-  "experienceYears": "15+",
-  "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "name": "PrestaShop Certified Developer",
-      "credentialCategory": "Professional Certification"
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      "name": "AWS Solutions Architect Associate",
-      "credentialCategory": "Cloud Certification"
-    }
-  ],
-  "knowsAbout": [
-    "PHP Development",
-    "PrestaShop E-commerce",
-    "Artificial Intelligence Integration",
-    "Symfony Framework",
-    "E-commerce Architecture",
-    "AI-Assisted Development",
-    "Machine Learning",
-    "Web Performance Optimization",
-    "Database Optimization",
-    "Technical Leadership"
-  ],
-  "seeks": {
-    "@type": "Demand",
-    "name": "Projets de développement e-commerce et intégration IA"
-  }
-}
+{"@context":"https://schema.org","@type":"Person","name":"{{ site.author.name }}","url":"{{ site.url }}","image":"{{ site.url }}/assets/images/hero/profile-hero.jpg","jobTitle":"Senior PHP FullStack Developer & AI Orchestrator","email":"{{ site.author.email }}","address":{"@type":"PostalAddress","addressCountry":"FR"},"sameAs":["https://www.linkedin.com/in/nicolas-dabene/","https://github.com/ndabene"],"knowsAbout":["PHP Development","PrestaShop E-commerce","AI Integration","Web Performance Optimization"]}
 </script>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["ProfessionalService", "LocalBusiness"],
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "description": "{{ site.description }}",
-  "providerMobility": "France entière et remote",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "FR",
-    "addressRegion": "France"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "43.616667",
-    "longitude": "7.066667"
-  },
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "France"
-    },
-    {
-      "@type": "Place",
-      "name": "Europe (Remote)"
-    },
-    {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.616667",
-        "longitude": "7.066667"
-      },
-      "geoRadius": "1000000"
-    }
-  ],
-  "priceRange": "€€€",
-  "telephone": "+33-XXX-XXX-XXX",
-  "email": "{{ site.author.email }}",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
-  ],
-  "serviceType": [
-    "Développement Web PHP",
-    "Architecture E-commerce PrestaShop",
-    "Intégration Intelligence Artificielle",
-    "Optimisation Performance Web",
-    "Conseil Technique et Stratégique",
-    "Formation Développement",
-    "Audit Code et Sécurité"
-  ],
-  "availableChannel": {
-    "@type": "ServiceChannel",
-    "serviceUrl": "{{ site.url }}/contact",
-    "availableLanguage": ["French", "English"]
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Portfolio de Services Techniques",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Développement E-commerce PrestaShop",
-        "description": "Création et customisation de boutiques PrestaShop haute performance",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Développement PrestaShop",
-          "serviceType": "E-commerce Development",
-          "category": "Web Development"
-        },
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "EUR",
-          "price": "Sur devis"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": "Intégration Intelligence Artificielle",
-        "description": "Implémentation d'IA dans les workflows existants pour automatisation et optimisation",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI Integration Services",
-          "serviceType": "Artificial Intelligence",
-          "category": "Technology Consulting"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": "Architecture & Performance Web",
-        "description": "Optimisation et refactoring d'applications web pour haute performance",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Web Performance Optimization",
-          "serviceType": "Technical Optimization",
-          "category": "Software Architecture"
-        }
-      }
-    ]
-  },
-  "award": [
-    "PrestaShop Certified Developer",
-    "15+ années d'expertise technique",
-    "50+ projets e-commerce réalisés"
-  ],
-  "slogan": "Expert PHP & AI Orchestrator - Transformez votre vision en réalité digitale"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "{{ page.title | escape }}",
-  "description": "{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description | escape }}",
-  "url": "{{ page.url | absolute_url }}",
-  "inLanguage": "{% if current_lang == 'fr' %}fr-FR{% else %}en-US{% endif %}",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "{{ site.title | escape }}",
-    "url": "{{ site.url }}"
-  }
-}
+{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title | escape }}","description":"{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 20 | default: site.description | escape }}","url":"{{ page.url | absolute_url }}","inLanguage":"{% if current_lang == 'fr' %}fr-FR{% else %}en-US{% endif %}"}
 </script>
 
 {% include breadcrumb-jsonld.html %}
 
-<!-- Resource hints pour optimiser AdSense (preconnect avant chargement) -->
-<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
-<link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+<!-- Resource hints pour optimiser AdSense (dns-prefetch seulement, pas preconnect pour éviter overhead) -->
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
 <link rel="dns-prefetch" href="https://adservice.google.com">
 <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com">
-
-<!-- Google Funding Choices - Gestion du consentement pour la monétisation -->
-<script async src="https://fundingchoicesmessages.google.com/i/pub-1445021827447908?ers=1"></script>
-<script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-
-<!-- Google AdSense - Chargé avec lazy loading via adsense-lazy-loader.js -->
-<!-- Le script sera chargé uniquement quand nécessaire et avec consentement -->
-<script src="{{ '/assets/js/adsense-lazy-loader.js' | relative_url }}" defer></script>

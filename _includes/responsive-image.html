@@ -24,6 +24,7 @@
 {% assign width = include.width | default: "1200" %}
 {% assign height = include.height | default: "630" %}
 {% assign loading = include.loading | default: "lazy" %}
+{% assign fetchpriority = include.fetchpriority | default: "" %}
 {% assign css_class = include.class | default: "" %}
 {% assign itemprop = include.itemprop %}
 
@@ -38,6 +39,7 @@
     width="{{ width }}"
     height="{{ height }}"
     loading="{{ loading }}"
+    {% if fetchpriority != "" %}fetchpriority="{{ fetchpriority }}"{% endif %}
     decoding="async"
     {% if itemprop %}itemprop="{{ itemprop }}"{% endif %}
   >
