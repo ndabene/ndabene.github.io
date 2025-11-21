@@ -327,7 +327,7 @@ $linkedin-color: #0077B5;
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 
   @media (max-width: 768px) {
@@ -337,7 +337,7 @@ $linkedin-color: #0077B5;
 }
 
 .products-grid-formations {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
