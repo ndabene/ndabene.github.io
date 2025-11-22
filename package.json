@@ -12,7 +12,8 @@
     "new-future": "bash scripts/new-post.sh \"$npm_config_title\" --future \"$npm_config_date\"",
     "test-sitemap": "bash scripts/test-sitemap.sh",
     "deploy": "bash scripts/deploy.sh",
-    "validate:produits": "ruby scripts/validate_produits.rb"
+    "validate:produits": "ruby scripts/validate_produits.rb",
+    "validate:frontmatter": "ruby scripts/validate_frontmatter.rb"
   },
   "repository": {
     "type": "git",
