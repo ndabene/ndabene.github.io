@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Évolution de Google Shopping : Froogle à l''IA'
+title: 'Google Shopping & Gemini : la révolution IA en e-commerce'
 date: 2025-09-18
 author: Nicolas Dabène
 categories:
