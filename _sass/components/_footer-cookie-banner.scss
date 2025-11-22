@@ -1,41 +1,40 @@
 /**
- * Cookie Banner intégré dans le footer
+ * Cookie Banner flottant en bas de l'écran
  * Design harmonisé avec le footer existant
- * PAS d'overlay, PAS de position fixed, PAS de z-index élevé
+ * Position fixed pour être toujours visible
  */
 
 .footer-cookies {
-    // Pas de position fixed, intégré dans le flux du footer
-    position: relative;
+    // Position fixed en bas de l'écran pour être toujours visible
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    margin-top: $spacing-xl;
-    margin-bottom: $spacing-lg;
+    max-height: 90vh;
+    overflow-y: auto;
     padding: $spacing-lg;
-    background: rgba($white, 0.05);
-    border-radius: $border-radius;
-    border: 1px solid rgba($white, 0.1);
+    background: rgba($dark-bg, 0.98);
     backdrop-filter: blur(10px);
+    border-top: 2px solid rgba($primary-color, 0.3);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
 
     // Apparition en douceur quand le banner est affiché
+    transform: translateY(100%);
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out, padding 0.4s ease-in-out, margin 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 
     // Classe ajoutée par JS quand le banner doit être visible
     &[style*="display: block"],
     &.show {
+        transform: translateY(0);
         opacity: 1;
-        max-height: 1000px;
-
-        @media (max-width: $tablet) {
-            max-height: 2000px;
-        }
     }
 
     @media (max-width: $tablet) {
-        margin-top: $spacing-lg;
         padding: $spacing-md;
+        max-height: 95vh;
     }
 }
 

@@ -57,15 +57,12 @@ class CookieConsent {
     }
 
     showBanner() {
-        // Utiliser le banner intégré dans le footer
+        // Afficher la bannière flottante en bas de l'écran
         const banner = document.getElementById('cookie-consent');
         if (banner) {
             banner.style.display = 'block';
-            // Animation d'entrée
+            // Animation d'entrée avec un léger délai pour que la transition fonctionne
             setTimeout(() => banner.classList.add('show'), 100);
-
-            // Scroll vers le footer pour rendre le banner visible
-            banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     }
 
