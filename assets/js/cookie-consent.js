@@ -14,51 +14,16 @@ class CookieConsent {
     }
 
     init() {
-        // Vérifier si le CMP Google est actif
-        // Si c'est le cas, ne pas afficher notre propre bannière
-        // car le CMP Google gère déjà le consentement
-        this.checkGoogleCMPStatus().then(hasGoogleCMP => {
-            if (hasGoogleCMP) {
-                console.log('[Cookie Consent] CMP Google détecté, délégation de la gestion du consentement');
-                // Le CMP Google va gérer le consentement et synchroniser avec notre système
-                return;
-            }
-
-            // Vérifier si le consentement existe déjà
-            if (!this.hasValidConsent()) {
-                this.showBanner();
-            } else {
-                // Charger les services selon le consentement
-                this.loadServices();
-            }
-        });
+        // Vérifier si le consentement existe déjà
+        if (!this.hasValidConsent()) {
+            this.showBanner();
+        } else {
+            // Charger les services selon le consentement
+            this.loadServices();
+        }
 
         // Écouter les changements de préférences
         this.bindEvents();
-    }
-
-    // Vérifier si le CMP Google est actif
-    checkGoogleCMPStatus() {
-        return new Promise((resolve) => {
-            // Attendre jusqu'à 2 secondes pour que le CMP Google se charge
-            let attempts = 0;
-            const maxAttempts = 8; // 2 secondes max (8 * 250ms)
-
-            const checkInterval = setInterval(() => {
-                attempts++;
-
-                // Vérifier si l'API CMP Google est disponible
-                if (typeof window.__tcfapi === 'function' ||
-                    typeof window.__gpp === 'function' ||
-                    (window.googlefc && window.googlefc.callbackQueue)) {
-                    clearInterval(checkInterval);
-                    resolve(true); // CMP Google détecté
-                } else if (attempts >= maxAttempts) {
-                    clearInterval(checkInterval);
-                    resolve(false); // Pas de CMP Google, utiliser notre système
-                }
-            }, 250);
-        });
     }
 
     hasValidConsent() {
@@ -251,25 +216,16 @@ class CookieConsent {
             preferences.adUserData ||
             preferences.adPersonalization;
 
-        // Si le CMP Google est actif, ne pas gérer Google Analytics ici
-        // car le CMP Google le fait déjà via google-cmp-integration.js
-        this.checkGoogleCMPStatus().then(hasGoogleCMP => {
-            if (hasGoogleCMP) {
-                console.log('[Cookie Consent] CMP Google actif, Google Analytics géré par le CMP');
-                return;
-            }
-
-            // Sinon, gérer Google Analytics localement
-            if (anyConsent) {
-                if (window.gtag) {
-                    this.enableGoogleAnalytics(preferences);
-                } else {
-                    this.loadGoogleAnalytics(preferences);
-                }
+        // Gérer Google Analytics localement
+        if (anyConsent) {
+            if (window.gtag) {
+                this.enableGoogleAnalytics(preferences);
             } else {
-                this.disableGoogleAnalytics();
+                this.loadGoogleAnalytics(preferences);
             }
-        });
+        } else {
+            this.disableGoogleAnalytics();
+        }
     }
 
     loadGoogleAnalytics(preferences) {
