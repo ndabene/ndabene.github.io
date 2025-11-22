@@ -270,9 +270,6 @@ class CookieConsent {
                 this.disableGoogleAnalytics();
             }
         });
-
-        // Gestion AdSense (toujours géré localement)
-        this.manageAdSenseConsent(preferences);
     }
 
     loadGoogleAnalytics(preferences) {
@@ -398,41 +395,6 @@ class CookieConsent {
     deleteCookie(name) {
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-    }
-
-    manageAdSenseConsent(preferences) {
-        // Le chargement du script AdSense est maintenant géré par adsense-lazy-loader.js
-        // On notifie simplement le changement de consentement
-
-        if (preferences.ad || preferences.adUserData || preferences.adPersonalization) {
-            // Consentement donné pour au moins un type de publicité
-            // Notifier le lazy loader que le consentement est accordé
-            this.notifyAdSenseConsentChange(true);
-        } else {
-            // Pas de consentement publicitaire
-            // Notifier le lazy loader et nettoyer si nécessaire
-            this.notifyAdSenseConsentChange(false);
-
-            // Supprimer le script AdSense si déjà chargé sans consentement
-            const adSenseScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
-            if (adSenseScript) {
-                adSenseScript.remove();
-            }
-        }
-    }
-
-    notifyAdSenseConsentChange(hasConsent) {
-        // Émettre un événement personnalisé pour le lazy loader
-        const event = new CustomEvent('cookieConsentUpdated', {
-            detail: { hasAdConsent: hasConsent }
-        });
-        document.dispatchEvent(event);
-
-        // Si le lazy loader est déjà chargé, mettre à jour directement
-        if (window.adSenseLazyLoader && hasConsent) {
-            window.adSenseLazyLoader.checkConsent();
-            window.adSenseLazyLoader.observeAds();
-        }
     }
 }
 
