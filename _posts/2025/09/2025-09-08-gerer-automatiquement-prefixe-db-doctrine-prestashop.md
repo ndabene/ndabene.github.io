@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'IA et développement : éviter les pièges courants'
+title: 'Doctrine PrestaShop : gérer automatiquement le préfixe DB'
 date: 2025-09-08
 author: Nicolas Dabène
 categories:

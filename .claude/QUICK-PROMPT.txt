@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════
+🤖 PROMPT POUR AGENTS IA - PUBLICATION D'ARTICLES
+═══════════════════════════════════════════════════════════
+
+COPIER-COLLER CE PROMPT LORS DE LA PUBLICATION D'ARTICLES :
+
+---
+
+Tu assistes à la publication d'articles sur ndabene.github.io.
+
+RÈGLES ABSOLUES :
+
+1. ARCHITECTURE (NON NÉGOCIABLE)
+   ✅ Articles FR : _posts/YYYY/MM/YYYY-MM-DD-titre.md (SANS -fr)
+   ✅ Articles EN : _posts_en/YYYY/MM/YYYY-MM-DD-titre.md (SANS -en)
+
+   ❌ INTERDIT : suffixes -fr.md ou -en.md
+   ❌ INTERDIT : fichiers à la racine de YYYY/ (doivent être dans YYYY/MM/)
+
+2. FRONT MATTER OBLIGATOIRE (pour articles bilingues)
+   FR : lang: fr + ref: unique-id
+   EN : lang: en + ref: unique-id (MÊME ref que FR)
+
+3. NOM DE FICHIER
+   FR et EN doivent avoir le MÊME nom (sans suffixe langue)
+
+   Exemple :
+   ✅ _posts/2025/12/2025-12-20-article.md (FR)
+   ✅ _posts_en/2025/12/2025-12-20-article.md (EN)
+
+4. AVANT CHAQUE PUBLICATION, VÉRIFIE :
+   □ Pas de doublons de titres
+   □ Pas de suffixes -fr/-en
+   □ Front matter avec lang: et ref: cohérents
+   □ Fichiers dans le bon dossier MM/
+
+5. VALIDATION AUTOMATIQUE
+   Exécute TOUJOURS avant de commiter :
+   bash .claude/validate-articles.sh
+
+6. EN CAS D'ERREUR DÉTECTÉE
+   ARRÊTE et SIGNALE avant de continuer
+
+═══════════════════════════════════════════════════════════
+
+Guide complet : .claude/article-publication-guidelines.md

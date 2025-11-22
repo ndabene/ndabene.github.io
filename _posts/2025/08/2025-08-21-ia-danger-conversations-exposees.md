@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'VEO 2025 : l''optimisation vocale transforme le SEO'
+title: 'Quand l''IA devient un danger : 370 000 conversations Grok exposées'
 date: 2025-08-21
 author: Nicolas Dabène
 categories:
