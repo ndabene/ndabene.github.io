@@ -16,15 +16,17 @@
       category: prestashop
     - tech: Payment
       category: payment
-- title: "Facebook Dynamic Ads + Pixel PRO"
-  description: "Ciblez vos clients avec des publicités dynamiques sur Facebook."
-  link: "https://www.businesstech.fr/fr/modules-prestashop-reseaux-sociaux-facebook/50-facebook-dynamic-ads-pixel-pro-0656272916497.html"
-  image: "assets/images/modules/facebook-dynamic-ads-prestashop-module-interface.png"
+- title: "MCP Tools Plus"
+  description: "Pilotez votre boutique PrestaShop avec l'IA en langage naturel grâce au protocole MCP."
+  link: "https://addons.prestashop.com/fr/outils-administration-modules-prestashop/96638-mcp-tools-plus.html"
+  image: "assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg"
   tags:
     - tech: PrestaShop
       category: prestashop
-    - tech: Marketing
-      category: marketing 
+    - tech: AI
+      category: ai
+    - tech: Automation
+      category: automation 
 - title: "Google Merchant Center PRO (Google Shopping)"
   description: "Intégrez Google Shopping pour augmenter vos ventes."
   link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"
