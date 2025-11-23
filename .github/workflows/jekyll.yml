@@ -44,7 +44,11 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      # Validation steps disabled temporarily
+      - name: Validate blog posts frontmatter
+        run: |
+          echo "🔍 Validation du frontmatter des articles..."
+          ruby scripts/validate_frontmatter.rb
+          echo "✅ Frontmatter validé avec succès"
 
       - name: Setup Pages
         id: pages

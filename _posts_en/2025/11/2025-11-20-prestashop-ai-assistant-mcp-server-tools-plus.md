@@ -2,6 +2,7 @@
 layout: post
 title: 'PrestaShop MCP Server & MCP Tools Plus: Complete AI Assistant Guide'
 date: 2025-11-20
+author: Nicolas Dabène
 ref: mcp-tools-plus-prestashop-assistant
 categories:
 - AI

@@ -2,6 +2,7 @@
 layout: post
 title: Stratégie packs produits pour maximiser Noël
 date: 2025-11-17
+author: Nicolas Dabène
 categories:
 - PrestaShop
 - E-commerce
