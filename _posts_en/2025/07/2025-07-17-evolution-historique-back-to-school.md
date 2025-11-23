@@ -2,6 +2,7 @@
 layout: post
 title: 'Back to School Evolution: 1850-2025'
 date: 2025-07-17
+author: Nicolas Dabène
 lang: en
 ref: back-to-school-evolution-2025
 categories:
@@ -14,6 +15,7 @@ tags:
 description: Analysis of the evolution of the 'Back to School' market from $172.3
   billion in 2024 to $230.1 billion projected in 2030, exploring the transformation
   from traditional retail to e-commerce.
+excerpt: Analysis of the evolution of the 'Back to School' market from $172.3 billion in 2024 to $230.1 billion projected in 2030, exploring the transformation from traditional retail to e-commerce.
 image: /assets/images/blog/2025/07/back-to-school-evolution.jpg
 llm_summary: Analysis of the evolution of the 'Back to School' market from $172.3
   billion in 2024 to $230.1 billion projected in 2030, exploring the transformation

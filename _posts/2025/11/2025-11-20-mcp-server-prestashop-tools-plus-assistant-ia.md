@@ -2,6 +2,7 @@
 layout: post
 title: 'MCP Server PrestaShop : Piloter votre boutique avec MCP Tools Plus'
 date: 2025-11-20
+author: Nicolas Dabène
 ref: mcp-tools-plus-prestashop-assistant
 categories:
 - IA
