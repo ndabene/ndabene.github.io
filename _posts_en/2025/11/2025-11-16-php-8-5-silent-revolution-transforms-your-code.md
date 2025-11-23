@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PHP 8.5: The Silent Web Revolution'
+title: 'PHP 8.5: Boost Your App Performance – Essential Features Developers Need'
 date: 2025-11-16
 author: Nicolas Dabène
 categories:
@@ -13,9 +13,9 @@ tags:
 - pipe operator
 - new features
 - modernization
-excerpt: PHP 8.5 arrives in November 2025 with the pipe operator, smart cloning, and
-  40+ improvements that transform the way you code. Discover how these innovations
-  revolutionize the performance, security, and readability of your applications.
+excerpt: Discover how PHP 8.5's pipe operator, mandatory OPcache, and 40+ improvements
+  deliver 5-10% faster apps, 10x faster debugging, and bulletproof security. Everything
+  developers need for high-performance applications.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.jpeg
 featured: true
 difficulty: Intermediate

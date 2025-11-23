@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PHP 8.5 : la révolution silencieuse du web'
+title: 'PHP 8.5 : Boostez vos performances – La révolution qui transforme votre code'
 date: 2025-11-16
 author: Nicolas Dabène
 categories:
@@ -13,9 +13,9 @@ tags:
 - opérateur pipe
 - nouvelles fonctionnalités
 - modernisation
-excerpt: PHP 8.5 arrive en novembre 2025 avec l'opérateur pipe, le clone intelligent,
-  et 40+ améliorations qui transforment votre façon de coder. Découvrez comment ces
-  innovations révolutionnent la performance, la sécurité et la lisibilité de vos applications.
+excerpt: Découvrez comment PHP 8.5 booste vos applications de 5-10%, accélère le
+  debugging x10 et sécurise votre code avec l'opérateur pipe, OPcache obligatoire
+  et 40+ améliorations essentielles pour des apps haute performance.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.jpeg
 featured: true
 difficulty: Intermédiaire
