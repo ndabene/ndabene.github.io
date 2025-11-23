@@ -10,7 +10,37 @@ class CookieConsent {
         this.analyticsConsentGranted = this.consentData &&
             this.consentData.preferences &&
             this.consentData.preferences.analytics === true;
+        this.lang = this.detectLanguage();
+        this.messages = this.getMessages();
         this.init();
+    }
+
+    detectLanguage() {
+        // Detect language from the banner data-lang attribute
+        const banner = document.getElementById('cookie-consent');
+        if (banner && banner.dataset.lang) {
+            return banner.dataset.lang;
+        }
+        // Fallback to HTML lang attribute or default to French
+        return document.documentElement.lang || 'fr';
+    }
+
+    getMessages() {
+        const translations = {
+            fr: {
+                saved: 'Préférences cookies sauvegardées.',
+                essential: 'Seuls les cookies essentiels sont activés.',
+                updated: 'Préférences cookies mises à jour.',
+                revoked: 'Consentement révoqué. Rechargez la page.'
+            },
+            en: {
+                saved: 'Cookie preferences saved.',
+                essential: 'Only essential cookies are enabled.',
+                updated: 'Cookie preferences updated.',
+                revoked: 'Consent revoked. Please reload the page.'
+            }
+        };
+        return translations[this.lang] || translations.fr;
     }
 
     init() {
@@ -127,7 +157,7 @@ class CookieConsent {
         this.setConsentData(preferences);
         this.enableGoogleAnalytics(preferences);
         this.hideBanner();
-        this.showNotification('Préférences cookies sauvegardées.');
+        this.showNotification(this.messages.saved);
     }
 
     refuseAll() {
@@ -140,7 +170,7 @@ class CookieConsent {
         });
         this.disableGoogleAnalytics();
         this.hideBanner();
-        this.showNotification('Seuls les cookies essentiels sont activés.');
+        this.showNotification(this.messages.essential);
     }
 
     showSettings() {
@@ -201,7 +231,7 @@ class CookieConsent {
 
         this.hideSettings();
         this.hideBanner();
-        this.showNotification('Préférences cookies mises à jour.');
+        this.showNotification(this.messages.updated);
     }
 
     loadServices() {
@@ -318,11 +348,11 @@ class CookieConsent {
     revokeConsent() {
         localStorage.removeItem(this.cookieName);
         this.consentData = null;
-        
+
         // Nettoyer les cookies GA existants
         this.clearGoogleAnalyticsCookies();
-        
-        this.showNotification('Consentement révoqué. Rechargez la page.');
+
+        this.showNotification(this.messages.revoked);
     }
 
     clearGoogleAnalyticsCookies() {
