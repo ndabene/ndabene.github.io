@@ -181,4 +181,56 @@ If you want to contribute to MCP Tools Plus enrichment, contribution mechanisms 
 
 ---
 
+## 🛒 Discover the MCP Addons for PrestaShop
+
+Ready to transform your PrestaShop store with AI? The modules mentioned in this article are now available on the official PrestaShop Addons marketplace:
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
+  <div style="border: 2px solid #25b9d7; border-radius: 8px; padding: 20px; background: #f8f9fa;">
+    <h3 style="margin-top: 0; color: #25b9d7;">🔌 PrestaShop MCP Server</h3>
+    <p>The essential bridge between AI and your PrestaShop store. Connect large language models like Claude or ChatGPT directly to your e-commerce platform.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Secure AI-PrestaShop communication</li>
+      <li>Access to store data via natural language</li>
+      <li>Foundation for advanced automation</li>
+    </ul>
+    <a href="https://addons.prestashop.com/fr/outils-administration/96617-prestashop-mcp-server.html"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="if (typeof gtag !== 'undefined') { gtag('event', 'conversion', { 'event_category': 'addon_click', 'event_label': 'prestashop-mcp-server', 'value': 1 }); }"
+       style="display: inline-block; background: #25b9d7; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px;">
+      Discover MCP Server →
+    </a>
+  </div>
+
+  <div style="border: 2px solid #ff6f61; border-radius: 8px; padding: 20px; background: #f8f9fa;">
+    <h3 style="margin-top: 0; color: #ff6f61;">⚡ MCP Tools Plus</h3>
+    <p>The premium extension that supercharges your AI assistant with advanced capabilities. Turn your store into an intelligent management platform.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Advanced analytics and reporting</li>
+      <li>Third-party module integration</li>
+      <li>Sophisticated automation workflows</li>
+    </ul>
+    <a href="https://addons.prestashop.com/fr/outils-administration-modules-prestashop/96638-mcp-tools-plus.html"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="if (typeof gtag !== 'undefined') { gtag('event', 'conversion', { 'event_category': 'addon_click', 'event_label': 'mcp-tools-plus', 'value': 1 }); }"
+       style="display: inline-block; background: #ff6f61; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 10px;">
+      Discover MCP Tools Plus →
+    </a>
+  </div>
+</div>
+
+<p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
+💡 <strong>Pro Tip:</strong> Start with MCP Server to establish the foundation, then upgrade to MCP Tools Plus for advanced features and seamless integrations.
+</p>
+
+---
+
+**What will be your first query to this AI assistant?**
+
+---
+
 *Article published November 24, 2025 by Nicolas Dabène - E-commerce and AI expert with 15+ years of experience*
