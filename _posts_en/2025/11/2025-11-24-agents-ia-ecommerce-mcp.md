@@ -34,8 +34,6 @@ technologies:
 - MCP
 - Claude
 - ChatGPT
-- Brevo
-- Qonto
 estimated_reading_time: 15 minutes
 faq:
 - question: What is PS MCP Server?
@@ -69,9 +67,9 @@ faq:
     partner.
 - question: What types of actions can be automated with MCP Tools Plus?
   answer: Actions include generating accounting PDF reports sent automatically, segmenting
-    and rewarding top customers with payment verification (Qonto) and email sending
-    (Brevo), analyzing underperforming products with video generation and automatic
-    updates. Everything is done via natural language prompts.
+    and rewarding top customers with payment verification and email sending, analyzing
+    underperforming products with video generation and automatic updates. Everything
+    is done via natural language prompts.
 ---
 
 
@@ -135,9 +133,9 @@ Enough theory! Let's see how PS MCP Server and MCP Tools Plus solve concrete pro
 
 **The case:** Reward your top customers to boost loyalty, while verifying payments.
 
-**Your prompt:** "I want to reward my top 10 customers of the month located in Europe. Identify them; ensure their orders were paid to my Qonto account; generate a 10% discount voucher valid for 30 days for their next order; send an email to these customers with their discount code via Brevo."
+**Your prompt:** "I want to reward my top 10 customers of the month located in Europe. Identify them; ensure their orders were paid; generate a 10% discount voucher valid for 30 days for their next order; send an email to these customers with their discount code."
 
-**In action:** MCP Tools Plus handles customer segmentation and voucher generation via PrestaShop. The Server facilitates data access. Third-party connectors verify Qonto and send via Brevo. It's a smooth sequential workflow – a client saw their recurring sales jump 15% thanks to this.
+**In action:** MCP Tools Plus handles customer segmentation and voucher generation via PrestaShop. The Server facilitates data access. Third-party connectors verify payments and send emails. It's a smooth sequential workflow – a client saw their recurring sales jump 15% thanks to this.
 
 ### 📉 Scenario 3: Improving Product Visibility
 
@@ -226,10 +224,6 @@ Ready to transform your PrestaShop store with AI? The modules mentioned in this 
 <p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
 💡 <strong>Pro Tip:</strong> Start with MCP Server to establish the foundation, then upgrade to MCP Tools Plus for advanced features and seamless integrations.
 </p>
-
----
-
-**What will be your first query to this AI assistant?**
 
 ---
 

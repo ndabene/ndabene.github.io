@@ -34,8 +34,6 @@ technologies:
 - MCP
 - Claude
 - ChatGPT
-- Brevo
-- Qonto
 estimated_reading_time: 15 minutes
 faq:
 - question: Qu'est-ce que le PS MCP Server ?
@@ -70,7 +68,7 @@ faq:
 - question: Quels types d'actions peut-on automatiser avec MCP Tools Plus ?
   answer: Les actions incluent la génération de rapports comptables PDF envoyés automatiquement,
     la segmentation et récompense des meilleurs clients avec vérification de paiement
-    (Qonto) et envoi d'emails (Brevo), l'analyse de produits en perte de vitesse avec
+    et envoi d'emails, l'analyse de produits en perte de vitesse avec
     génération de vidéos et mise à jour automatique. Tout se fait via prompts en langage
     naturel.
 ---
@@ -136,9 +134,9 @@ Assez de théorie ! Voyons comment le PS MCP Server et MCP Tools Plus résolvent
 
 **Le cas :** Récompenser vos top clients pour booster la fidélité, en vérifiant les paiements.
 
-**Votre prompt :** "Je souhaite récompenser mes 10 meilleurs clients du mois situés en Europe. Identifiez-les ; assurez-vous que leurs commandes ont été payées sur mon compte Qonto ; générez un bon de réduction de 10% valable 30 jours pour leur prochaine commande ; envoyez un e-mail à ces clients avec leur code de réduction via Brevo."
+**Votre prompt :** "Je souhaite récompenser mes 10 meilleurs clients du mois situés en Europe. Identifiez-les ; assurez-vous que leurs commandes ont été payées ; générez un bon de réduction de 10% valable 30 jours pour leur prochaine commande ; envoyez un e-mail à ces clients avec leur code de réduction."
 
-**En action :** MCP Tools Plus gère la segmentation clients et la génération de vouchers via PrestaShop. Le Server facilite l'accès aux données. Des connecteurs tiers vérifient Qonto et envoient via Brevo. C'est un workflow séquentiel fluide – un client a vu ses ventes récurrentes grimper de 15% grâce à ça.
+**En action :** MCP Tools Plus gère la segmentation clients et la génération de vouchers via PrestaShop. Le Server facilite l'accès aux données. Des connecteurs tiers vérifient les paiements et envoient les emails. C'est un workflow séquentiel fluide – un client a vu ses ventes récurrentes grimper de 15% grâce à ça.
 
 ### 📉 Scénario 3 : Amélioration de la visibilité produit
 
@@ -227,10 +225,6 @@ Prêt à transformer votre boutique PrestaShop avec l'IA ? Les modules mentionn�
 <p style="text-align: center; margin-top: 20px; font-style: italic; color: #666;">
 💡 <strong>Astuce Pro :</strong> Commencez avec MCP Server pour établir les fondations, puis passez à MCP Tools Plus pour des fonctionnalités avancées et des intégrations fluides.
 </p>
-
----
-
-**Quelle sera votre première requête à cet assistant IA ?**
 
 ---
 
