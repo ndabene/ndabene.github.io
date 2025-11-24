@@ -1,8 +1,14 @@
-const CACHE_NAME = 'ndabene-image-cache-v1';
+const CACHE_NAME = 'ndabene-cache-v2';
 const ASSETS_TO_CACHE = [
     '/assets/images/logo.png'
     // Only cache critical assets that are guaranteed to exist
     // Other images will be cached on-demand via the fetch handler
+];
+
+// Pages that should use network-first strategy to always get fresh content
+const DYNAMIC_PAGES = [
+    '/blog/',
+    '/en/blog/'
 ];
 
 // Install event: cache critical assets (don't fail if some are missing)
@@ -41,11 +47,46 @@ self.addEventListener('activate', (event) => {
     return self.clients.claim();
 });
 
-// Fetch event: Stale-while-revalidate for images
+// Fetch event: Different strategies based on resource type
 self.addEventListener('fetch', (event) => {
     const requestUrl = new URL(event.request.url);
 
-    // Only handle image requests
+    // Network-first strategy for blog pages to always get fresh content
+    const isDynamicPage = DYNAMIC_PAGES.some(page => requestUrl.pathname === page || requestUrl.pathname === page + 'index.html');
+    if (isDynamicPage) {
+        event.respondWith(
+            fetch(event.request)
+                .then((networkResponse) => {
+                    // Cache the fresh response
+                    if (networkResponse && networkResponse.status === 200) {
+                        const responseClone = networkResponse.clone();
+                        caches.open(CACHE_NAME).then((cache) => {
+                            cache.put(event.request, responseClone);
+                        });
+                    }
+                    return networkResponse;
+                })
+                .catch(() => {
+                    // If network fails, fallback to cache
+                    return caches.match(event.request).then((cachedResponse) => {
+                        if (cachedResponse) {
+                            return cachedResponse;
+                        }
+                        // Return a basic offline page if nothing in cache
+                        return new Response('Page non disponible hors ligne', {
+                            status: 503,
+                            statusText: 'Service Unavailable',
+                            headers: new Headers({
+                                'Content-Type': 'text/plain'
+                            })
+                        });
+                    });
+                })
+        );
+        return;
+    }
+
+    // Stale-while-revalidate for images
     if (requestUrl.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)) {
         event.respondWith(
             caches.open(CACHE_NAME).then((cache) => {
