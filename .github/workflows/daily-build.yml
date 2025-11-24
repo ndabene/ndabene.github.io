@@ -2,9 +2,9 @@ name: Daily Build - Publication automatique des articles futurs
 
 # Déclencheurs
 on:
-  # Build quotidien à 6h UTC (8h Paris)
+  # Build quotidien à 0h UTC (1h Paris en hiver, 2h Paris en été)
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 0 * * *'
   
   # Déclenchement manuel via GitHub UI
   workflow_dispatch:
