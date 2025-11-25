@@ -136,7 +136,7 @@ Voice optimization requires structuring your content so that it is directly "con
 
 ## Pillar 1: Adopt Conversational "Long-Tail" Language
 
-VEO is the consecration of the long tail. Instead of targeting "iPhone price," you must answer "What is the best price for the iPhone 16 Pro in Paris?" This difference is not cosmetic; it changes everything.
+VEO is the consecration of the long tail. Instead of targeting "iPhone price," you must answer "What is the best price to buy the iPhone 16 Pro right now?" This difference is not cosmetic; it changes everything.
 
 ### Identify Real Questions
 

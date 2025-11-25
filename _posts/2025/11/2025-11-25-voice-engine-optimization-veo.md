@@ -140,7 +140,7 @@ L'optimisation vocale requiert de structurer votre contenu pour qu'il soit direc
 
 ## Pilier 1 : Adopter le langage de la « longue traîne » conversationnelle
 
-Le VEO est la consécration de la longue traîne. Au lieu de cibler « iPhone prix », vous devez répondre à « Quel est le meilleur prix pour l'iPhone 16 Pro à Paris ? ». Cette différence n'est pas cosmétique ; elle change tout.
+Le VEO est la consécration de la longue traîne. Au lieu de cibler « iPhone prix », vous devez répondre à « Quel est le meilleur prix pour acheter l'iPhone 16 Pro en ce moment ? ». Cette différence n'est pas cosmétique ; elle change tout.
 
 ### Identifier les questions réelles
 
