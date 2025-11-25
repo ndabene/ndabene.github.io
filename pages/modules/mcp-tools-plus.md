@@ -537,7 +537,7 @@ product:
             </div>
         </div>
         <div class="pt-8 border-t border-white/10 text-center">
-            <p class="text-white/40 text-sm">© 2025 MCP Tools Plus by Nicolas Dabène. Tous droits réservés.</p>
+            <p class="text-white/40 text-sm">© 2025 MCP Tools Plus by BusinessTech & PrestaModule. Tous droits réservés.</p>
         </div>
     </div>
 </footer>
