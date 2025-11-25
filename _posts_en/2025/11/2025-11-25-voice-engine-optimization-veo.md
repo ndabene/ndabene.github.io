@@ -237,9 +237,9 @@ Vital since 58% of voice searches concern local needs. It guarantees NAP (Name, 
   "name": "Restaurant Le Sophora",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "42 rue de la Paix",
-    "addressLocality": "Paris",
-    "postalCode": "75000",
+    "streetAddress": "42 rue de la République",
+    "addressLocality": "Lyon",
+    "postalCode": "69001",
     "addressCountry": "FR"
   },
   "telephone": "+33123456789",
