@@ -140,7 +140,7 @@ L'optimisation vocale requiert de structurer votre contenu pour qu'il soit direc
 
 ## Pilier 1 : Adopter le langage de la « longue traîne » conversationnelle
 
-Le VEO est la consécration de la longue traîne. Au lieu de cibler « iPhone prix », vous devez répondre à « Quel est le meilleur prix pour l'iPhone 16 Pro à Paris ? ». Cette différence n'est pas cosmétique ; elle change tout.
+Le VEO est la consécration de la longue traîne. Au lieu de cibler « iPhone prix », vous devez répondre à « Quel est le meilleur prix pour acheter l'iPhone 16 Pro en ce moment ? ». Cette différence n'est pas cosmétique ; elle change tout.
 
 ### Identifier les questions réelles
 
@@ -230,29 +230,31 @@ En PrestaShop e-commerce, cette structuration est devenue critique. C'est pourqu
 
 **Pour ceux qui codent en PHP :** La validation Schema se fait simplement via [Google Structured Data Testing Tool](https://schema.org/docs/gs.html) ou [JSON-LD.org](https://json-ld.org/). Mais l'automatisation reste le gain majeur.
 
-### Local Business Schema
+### Product Schema
 
-Vital puisque 58% des recherches vocales concernent des besoins locaux. Il garantit la cohérence des informations NAP (Name, Address, Phone), pierre angulaire du SEO local vocal. Voici un exemple pour un restaurant :
+Essentiel pour l'e-commerce et la GEO. Le Product Schema permet aux IA génératives de comprendre précisément votre offre : caractéristiques, prix, disponibilité, avis clients. C'est le format privilégié pour que ChatGPT, Claude ou Gemini recommandent vos produits. Voici un exemple :
 
 ```json
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Restaurant Le Sophora",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "42 rue de la Paix",
-    "addressLocality": "Paris",
-    "postalCode": "75000",
-    "addressCountry": "FR"
+  "@type": "Product",
+  "name": "iPhone 16 Pro",
+  "description": "Smartphone haut de gamme avec puce A18 Pro et autonomie de 27h",
+  "brand": {
+    "@type": "Brand",
+    "name": "Apple"
   },
-  "telephone": "+33123456789",
-  "priceRange": "€€€",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Monday",
-    "opens": "12:00",
-    "closes": "23:00"
+  "offers": {
+    "@type": "Offer",
+    "price": "1229",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://example.com/iphone-16-pro"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "2547"
   }
 }
 ```

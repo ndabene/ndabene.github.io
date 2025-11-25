@@ -136,7 +136,7 @@ Voice optimization requires structuring your content so that it is directly "con
 
 ## Pillar 1: Adopt Conversational "Long-Tail" Language
 
-VEO is the consecration of the long tail. Instead of targeting "iPhone price," you must answer "What is the best price for the iPhone 16 Pro in Paris?" This difference is not cosmetic; it changes everything.
+VEO is the consecration of the long tail. Instead of targeting "iPhone price," you must answer "What is the best price to buy the iPhone 16 Pro right now?" This difference is not cosmetic; it changes everything.
 
 ### Identify Real Questions
 
@@ -226,29 +226,31 @@ In PrestaShop e-commerce, this structuring has become critical. That's why we of
 
 **For those who code in PHP:** Schema validation is done simply via [Google Structured Data Testing Tool](https://schema.org/docs/gs.html) or [JSON-LD.org](https://json-ld.org/). But automation remains the major gain.
 
-### Local Business Schema
+### Product Schema
 
-Vital since 58% of voice searches concern local needs. It guarantees NAP (Name, Address, Phone) information consistency, the cornerstone of local voice SEO. Here's an example for a restaurant:
+Essential for e-commerce and GEO. Product Schema allows generative AIs to precisely understand your offer: features, price, availability, customer reviews. It's the preferred format for ChatGPT, Claude, or Gemini to recommend your products. Here's an example:
 
 ```json
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Restaurant Le Sophora",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "42 rue de la Paix",
-    "addressLocality": "Paris",
-    "postalCode": "75000",
-    "addressCountry": "FR"
+  "@type": "Product",
+  "name": "iPhone 16 Pro",
+  "description": "Premium smartphone with A18 Pro chip and 27h battery life",
+  "brand": {
+    "@type": "Brand",
+    "name": "Apple"
   },
-  "telephone": "+33123456789",
-  "priceRange": "€€€",
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": "Monday",
-    "opens": "12:00",
-    "closes": "23:00"
+  "offers": {
+    "@type": "Offer",
+    "price": "1229",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://example.com/iphone-16-pro"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "2547"
   }
 }
 ```
