@@ -72,7 +72,7 @@ product:
                 <!-- PrestaShop Platinum Partner Banner -->
                 <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-[#DF3163]/10 border border-[#DF3163]/30 rounded-full">
                     <i class="fab fa-prestashop text-[#DF3163] text-xl"></i>
-                    <span class="text-[#DF3163] font-semibold">Par BusinessTech — Platinum Partner PrestaShop</span>
+                    <span class="text-[#DF3163] font-semibold">Par BusinessTech & PrestaModule — Platinum Partner PrestaShop</span>
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-6">
@@ -473,7 +473,7 @@ product:
     <div class="max-w-4xl mx-auto px-6 lg:px-4 text-center">
         <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full">
             <i class="fab fa-prestashop text-[#DF3163]"></i>
-            <span class="text-white/90 font-medium">Par BusinessTech — Platinum Partner depuis 2009</span>
+            <span class="text-white/90 font-medium">Par BusinessTech & PrestaModule — Platinum Partner depuis 2009</span>
         </div>
         <h2 class="text-[2rem] font-bold mb-6 text-white">Prêt à booster votre boutique PrestaShop avec l'IA ?</h2>
         <p class="text-xl text-white/80 mb-6 leading-relaxed">
@@ -565,7 +565,7 @@ product:
   },
   "author": {
     "@type": "Organization",
-    "name": "BusinessTech",
+    "name": "BusinessTech & PrestaModule",
     "url": "{{ site.url }}"
   },
   "softwareRequirements": "{{ page.product.requirements | join: ', ' }}",

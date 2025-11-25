@@ -72,7 +72,7 @@ product:
                 <!-- PrestaShop Platinum Partner Banner -->
                 <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-[#DF3163]/10 border border-[#DF3163]/30 rounded-full">
                     <i class="fab fa-prestashop text-[#DF3163] text-xl"></i>
-                    <span class="text-[#DF3163] font-semibold">By BusinessTech — PrestaShop Platinum Partner</span>
+                    <span class="text-[#DF3163] font-semibold">By BusinessTech & PrestaModule — PrestaShop Platinum Partner</span>
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-6">
@@ -214,7 +214,7 @@ product:
   },
   "author": {
     "@type": "Organization",
-    "name": "BusinessTech",
+    "name": "BusinessTech & PrestaModule",
     "url": "{{ site.url }}"
   },
   "softwareRequirements": "{{ page.product.requirements | join: ', ' }}",
