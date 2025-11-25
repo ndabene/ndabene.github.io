@@ -1,0 +1,63 @@
+{% comment %}
+  CTA Section modulaire
+
+  Paramètres:
+    - include.title: Titre du CTA
+    - include.subtitle: Sous-titre
+    - include.banner_text: Texte bannière (optionnel)
+    - include.banner_icon: Icône bannière (optionnel)
+    - include.price: Prix à afficher (optionnel)
+    - include.price_period: Période du prix (optionnel)
+    - include.cta_text: Texte du bouton
+    - include.cta_url: URL du bouton
+    - include.cta_icon: Icône du bouton (optionnel)
+    - include.style: 'gradient' | 'solid' | 'outlined' (défaut: gradient)
+{% endcomment %}
+
+{% assign style = include.style | default: 'gradient' %}
+
+{% if style == 'gradient' %}
+  {% assign section_class = 'primary-gradient' %}
+  {% assign text_color = 'text-white' %}
+{% elsif style == 'solid' %}
+  {% assign section_class = 'bg-[#0F172A]' %}
+  {% assign text_color = 'text-white' %}
+{% else %}
+  {% assign section_class = 'bg-[#FAFAFA] border-y border-[#E2E8F0]' %}
+  {% assign text_color = 'text-[#111827]' %}
+{% endif %}
+
+<section class="py-24 {{ section_class }}">
+    <div class="max-w-4xl mx-auto px-6 lg:px-4 text-center">
+        {% if include.banner_text %}
+        <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full">
+            {% if include.banner_icon %}<i class="{{ include.banner_icon }} text-[#DF3163]"></i>{% endif %}
+            <span class="text-white/90 font-medium">{{ include.banner_text }}</span>
+        </div>
+        {% endif %}
+
+        <h2 class="text-[2rem] font-bold mb-6 {{ text_color }}">{{ include.title }}</h2>
+
+        {% if include.subtitle %}
+        <p class="text-xl {{ text_color }}/80 mb-6 leading-relaxed">
+            {{ include.subtitle }}
+        </p>
+        {% endif %}
+
+        {% if include.price %}
+        <div class="inline-flex items-center gap-3 mb-10 px-6 py-3 bg-white/10 border border-[#D4AF37]/50 rounded-xl">
+            <span class="text-3xl font-bold text-[#D4AF37]">{{ include.price }}</span>
+            {% if include.price_period %}
+            <span class="{{ text_color }}/70">{{ include.price_period }}</span>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{{ include.cta_url }}" target="_blank" rel="noopener" class="gold-gradient text-[#0F172A] px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition flex items-center gap-2">
+                {% if include.cta_icon %}<i class="{{ include.cta_icon }}"></i>{% endif %}
+                {{ include.cta_text }}
+            </a>
+        </div>
+    </div>
+</section>
