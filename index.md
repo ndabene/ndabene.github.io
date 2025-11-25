@@ -32,8 +32,6 @@ faq:
 
 {% include home-content/blog-featured.html %}
 
-{# {% include home-content/formations-showcase.html %} #}
-
 {% include home-content/modules-showcase.html %}
 
 {% include home-content/youtube-featured.html %}
