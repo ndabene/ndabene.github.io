@@ -237,3 +237,46 @@
     - "Méthodes de travail éprouvées pour intégrer l'IA dans votre quotidien de développeur"
     - "Adaptation des pratiques pour tous niveaux d'expérience"
     - "Approche méthodologique rigoureuse face aux révolutions technologiques"
+
+-
+  nom: "MCP Tools Plus"
+  description: "Module PrestaShop prêt pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps réel aux agents IA. Suivi des ventes, déclarations fiscales, alertes stock et métriques de rentabilité—le tout accessible en langage naturel."
+  image: "assets/images/produits/mcp-tools-plus-og.jpg"
+  lien_paiement: "https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html"
+  categorie: "Module PrestaShop"
+  prix: "9,90€ HT / Mois"
+  type: "module"
+  format: "Module PrestaShop"
+  univers: "E-commerce"
+  niveau: "Intermédiaire"
+  garantie: "30 jours"
+  active: true
+  mots_cles: ["prestashop", "mcp", "ia", "analytics", "module", "e-commerce", "api"]
+  resultats:
+    - "Connexion directe entre PrestaShop et agents IA via protocole MCP"
+    - "Analytics ventes en temps réel accessible en langage naturel"
+    - "Automatisation des déclarations fiscales et rapports TVA"
+    - "Alertes intelligentes sur stock et marges produits"
+    - "Intégration complète Google Analytics 4"
+  support: "Support technique BusinessTech sous 48h"
+  last_update: "2025-01-25"
+  programme:
+    - "40+ outils MCP pour analytics commerce"
+    - "Dashboard ventes avec regroupement temporel flexible"
+    - "Suivi fiscal multi-pays et déclarations automatisées"
+    - "Monitoring inventaire et alertes rupture stock"
+    - "Segmentation clients et analyse comportementale"
+    - "Intégration GA4 avec tracking e-commerce complet"
+    - "Outils SEO et monitoring bots IA"
+  micro_extraits:
+    - "Interrogez vos données commerce en langage naturel via agents IA"
+    - "Conformité fiscale automatique avec résumés TVA prêts pour déclaration"
+    - "Prévention ruptures stock avec alertes intelligentes et planification réapprovisionnement"
+  promo_enabled: true
+  promo_description: "Par BusinessTech — Platinum Partner PrestaShop depuis 2009"
+  external_url: "https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html"
+  prenom: 
+    prestashop_8_2: true
+    php_8_1: true
+    multistore: true
+    mcp_server: true
