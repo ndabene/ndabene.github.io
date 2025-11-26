@@ -1440,7 +1440,7 @@ body {
   }
 }
 
-// Animation gradient de fond subtile
+// Animation gradient de fond subtile avec dégradés bleus
 .gradient-background {
   position: fixed;
   top: 0;
@@ -1448,15 +1448,94 @@ body {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: linear-gradient(45deg,
-    rgba(249, 250, 251, 0.8) 0%,
-    rgba(243, 244, 246, 0.9) 25%,
-    rgba(249, 250, 251, 0.8) 50%,
-    rgba(245, 247, 250, 0.9) 75%,
-    rgba(249, 250, 251, 0.8) 100%
-  );
-  background-size: 400% 400%;
+  background:
+    linear-gradient(135deg,
+      rgba(15, 23, 42, 0.03) 0%,
+      rgba(30, 41, 59, 0.05) 20%,
+      rgba(71, 85, 105, 0.04) 40%,
+      rgba(15, 23, 42, 0.06) 60%,
+      rgba(30, 41, 59, 0.04) 80%,
+      rgba(15, 23, 42, 0.03) 100%
+    ),
+    linear-gradient(45deg,
+      rgba(212, 175, 55, 0.02) 0%,
+      transparent 50%,
+      rgba(212, 175, 55, 0.02) 100%
+    );
+  background-size: 400% 400%, 200% 200%;
   animation: gradient-shift 30s ease infinite;
+
+  // Ajout d'icônes SVG flottantes
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  // Icônes SVG géométriques - Code, Settings, Database
+  &::before {
+    background-image:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230f172a" stroke-width="1"><path d="M16 18L22 12L16 6M8 6L2 12L8 18"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e293b" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M1 12h6m6 0h6"/><path d="m4.22 4.22 4.24 4.24m5.08 5.08 4.24 4.24M4.22 19.78l4.24-4.24m5.08-5.08 4.24-4.24"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23475569" stroke-width="1"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>');
+    background-position: 10% 20%, 85% 60%, 50% 85%;
+    background-size: 120px, 150px, 100px;
+    animation: float-icons 40s ease-in-out infinite;
+  }
+
+  // Icônes SVG - Analytics, Cloud, API
+  &::after {
+    background-image:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230f172a" stroke-width="1"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d4af37" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e293b" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>');
+    background-position: 75% 15%, 25% 70%, 90% 40%;
+    background-size: 80px, 130px, 90px;
+    animation: float-icons-reverse 35s ease-in-out infinite;
+  }
+}
+
+@keyframes float-icons {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.03;
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(-10px) rotate(-3deg);
+    opacity: 0.04;
+  }
+  75% {
+    transform: translateY(-30px) rotate(3deg);
+    opacity: 0.06;
+  }
+}
+
+@keyframes float-icons-reverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.03;
+  }
+  25% {
+    transform: translateY(20px) rotate(-5deg);
+    opacity: 0.04;
+  }
+  50% {
+    transform: translateY(10px) rotate(3deg);
+    opacity: 0.05;
+  }
+  75% {
+    transform: translateY(25px) rotate(-3deg);
+    opacity: 0.06;
+  }
 }
 
 @keyframes gradient-shift {
@@ -3201,7 +3280,7 @@ body {
   }
 }
 
-// Animation gradient de fond subtile
+// Animation gradient de fond subtile avec dégradés bleus
 .gradient-background {
   position: fixed;
   top: 0;
@@ -3209,15 +3288,94 @@ body {
   width: 100%;
   height: 100%;
   z-index: -2;
-  background: linear-gradient(45deg,
-    rgba(249, 250, 251, 0.8) 0%,
-    rgba(243, 244, 246, 0.9) 25%,
-    rgba(249, 250, 251, 0.8) 50%,
-    rgba(245, 247, 250, 0.9) 75%,
-    rgba(249, 250, 251, 0.8) 100%
-  );
-  background-size: 400% 400%;
+  background:
+    linear-gradient(135deg,
+      rgba(15, 23, 42, 0.03) 0%,
+      rgba(30, 41, 59, 0.05) 20%,
+      rgba(71, 85, 105, 0.04) 40%,
+      rgba(15, 23, 42, 0.06) 60%,
+      rgba(30, 41, 59, 0.04) 80%,
+      rgba(15, 23, 42, 0.03) 100%
+    ),
+    linear-gradient(45deg,
+      rgba(212, 175, 55, 0.02) 0%,
+      transparent 50%,
+      rgba(212, 175, 55, 0.02) 100%
+    );
+  background-size: 400% 400%, 200% 200%;
   animation: gradient-shift 30s ease infinite;
+
+  // Ajout d'icônes SVG flottantes
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  // Icônes SVG géométriques - Code, Settings, Database
+  &::before {
+    background-image:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230f172a" stroke-width="1"><path d="M16 18L22 12L16 6M8 6L2 12L8 18"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e293b" stroke-width="1"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M1 12h6m6 0h6"/><path d="m4.22 4.22 4.24 4.24m5.08 5.08 4.24 4.24M4.22 19.78l4.24-4.24m5.08-5.08 4.24-4.24"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23475569" stroke-width="1"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>');
+    background-position: 10% 20%, 85% 60%, 50% 85%;
+    background-size: 120px, 150px, 100px;
+    animation: float-icons 40s ease-in-out infinite;
+  }
+
+  // Icônes SVG - Analytics, Cloud, API
+  &::after {
+    background-image:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%230f172a" stroke-width="1"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23d4af37" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e293b" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>');
+    background-position: 75% 15%, 25% 70%, 90% 40%;
+    background-size: 80px, 130px, 90px;
+    animation: float-icons-reverse 35s ease-in-out infinite;
+  }
+}
+
+@keyframes float-icons {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.03;
+  }
+  25% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(-10px) rotate(-3deg);
+    opacity: 0.04;
+  }
+  75% {
+    transform: translateY(-30px) rotate(3deg);
+    opacity: 0.06;
+  }
+}
+
+@keyframes float-icons-reverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.03;
+  }
+  25% {
+    transform: translateY(20px) rotate(-5deg);
+    opacity: 0.04;
+  }
+  50% {
+    transform: translateY(10px) rotate(3deg);
+    opacity: 0.05;
+  }
+  75% {
+    transform: translateY(25px) rotate(-3deg);
+    opacity: 0.06;
+  }
 }
 
 @keyframes gradient-shift {

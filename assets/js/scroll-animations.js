@@ -42,23 +42,50 @@
     });
   }
 
-  // Ajouter automatiquement la classe fade-in-up aux cartes
+  // Ajouter automatiquement la classe fade-in-up aux cartes et autres éléments
   function autoAddAnimationClasses() {
     // Cartes de blog
-    document.querySelectorAll('.blog-featured-card, .article-card').forEach((card, index) => {
+    document.querySelectorAll('.blog-featured-card, .article-card, .post-card').forEach((card, index) => {
       card.classList.add('fade-in-up');
       card.style.transitionDelay = `${index * 0.1}s`;
     });
 
     // Cartes de modules
-    document.querySelectorAll('.module-card').forEach((card, index) => {
+    document.querySelectorAll('.module-card, .formation-card, .youtube-video-card').forEach((card, index) => {
       card.classList.add('fade-in-up');
       card.style.transitionDelay = `${index * 0.1}s`;
     });
 
     // Headers de section
-    document.querySelectorAll('.section-header-creator, .section-header').forEach(header => {
+    document.querySelectorAll('.section-header-creator, .section-header, .section-title, .section-title-creator').forEach(header => {
       header.classList.add('fade-in-up');
+    });
+
+    // Sections complètes
+    document.querySelectorAll('.section-creator, section[class*="section"]').forEach((section, index) => {
+      // Ne pas ajouter l'animation si l'élément a déjà une classe d'animation
+      if (!section.classList.contains('fade-in-up') && !section.classList.contains('fade-in')) {
+        const children = section.querySelectorAll('.fade-in-up, .fade-in');
+        // Seulement si la section n'a pas d'enfants avec animation
+        if (children.length === 0) {
+          section.classList.add('fade-in');
+        }
+      }
+    });
+
+    // Éléments de grille
+    document.querySelectorAll('.blog-featured-grid > *, .modules-grid > *, .formations-grid > *, .youtube-featured-grid > *').forEach((item, index) => {
+      if (!item.classList.contains('fade-in-up')) {
+        item.classList.add('fade-in-up');
+        item.style.transitionDelay = `${index * 0.1}s`;
+      }
+    });
+
+    // Contenus principaux
+    document.querySelectorAll('.hero-creator-content, .hero-content').forEach(hero => {
+      if (!hero.classList.contains('fade-in-up')) {
+        hero.classList.add('fade-in');
+      }
     });
   }
 
