@@ -143,3 +143,13 @@
   channel: ndabene06
   duration: PT4M34S
   category: Technique
+- title: Gérer Automatiquement les Préfixes DB avec Doctrine dans PrestaShop
+  video_id: hjgKs1AgUlg
+  url: https://www.youtube.com/watch?v=hjgKs1AgUlg
+  thumbnail: https://i.ytimg.com/vi/hjgKs1AgUlg/hqdefault.jpg
+  description: Découvrez comment automatiser la gestion des préfixes de base de données
+    avec Doctrine dans PrestaShop ! Dans cette vidéo ...
+  published_at: '2025-11-25T23:01:03Z'
+  channel: ndabene06
+  duration: PT6M7S
+  category: PrestaShop & E-commerce
