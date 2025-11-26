@@ -1,0 +1,500 @@
+// _sass/modern-enhancements.scss
+// Améliorations visuelles modernes pour un design plus contrasté et élégant
+// ============================================================================
+
+//================================================
+// 1. PATTERN DE FOND GLOBAL - Grille de points subtile
+//================================================
+
+body {
+  position: relative;
+
+  // Pattern SVG en background
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+}
+
+// Pattern alternatif avec lignes diagonales (optionnel, commenté par défaut)
+// body::after {
+//   content: '';
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: -1;
+//   pointer-events: none;
+//   background-image:
+//     linear-gradient(45deg, rgba(15, 23, 42, 0.02) 25%, transparent 25%),
+//     linear-gradient(-45deg, rgba(15, 23, 42, 0.02) 25%, transparent 25%);
+//   background-size: 60px 60px;
+//   opacity: 0.5;
+// }
+
+//================================================
+// 2. SECTIONS ALTERNÉES - Fond coloré subtil
+//================================================
+
+// Section avec fond blanc pur (par défaut)
+section {
+  position: relative;
+  z-index: 1;
+}
+
+// Section avec fond bleu ultra-léger
+.section-alt,
+.homepage-creator section:nth-of-type(even) {
+  background-color: #f8fafc;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(15, 23, 42, 0.08) 50%,
+      transparent 100%
+    );
+  }
+}
+
+// Section avec fond bleu marine (pour sections importantes)
+.section-dark {
+  background: linear-gradient(135deg, $primary-color 0%, $gray-dark 100%);
+  color: $white;
+
+  h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+
+  p, li {
+    color: rgba($white, 0.9);
+  }
+
+  a {
+    color: $accent-color-1;
+
+    &:hover {
+      color: lighten($accent-color-1, 10%);
+    }
+  }
+}
+
+//================================================
+// 3. BLOBS DÉCORATIFS ANIMÉS - Style moderne
+//================================================
+
+.hero-section,
+.hero-creator {
+  position: relative;
+  overflow: hidden;
+
+  // Container pour les blobs
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+    animation: float-blob 20s ease-in-out infinite;
+  }
+
+  // Blob 1 - Bleu marine (coin supérieur gauche)
+  &::before {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, $primary-color 0%, $gray-dark 100%);
+    top: -200px;
+    left: -200px;
+    animation-delay: 0s;
+  }
+
+  // Blob 2 - Or (coin inférieur droit)
+  &::after {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, $accent-color-1 0%, #b8941f 100%);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 5s;
+  }
+
+  // Assurer que le contenu reste au-dessus
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Blob additionnel pour les sections hero
+.hero-section .hero-content,
+.hero-creator .container {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, $accent-color-2 0%, #047857 100%);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: float-blob 25s ease-in-out infinite;
+    animation-delay: 10s;
+  }
+}
+
+@keyframes float-blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+}
+
+// Désactiver sur mobile pour performance
+@media (max-width: 768px) {
+  .hero-section,
+  .hero-creator {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .hero-section .hero-content::before,
+  .hero-creator .container::before {
+    display: none;
+  }
+}
+
+//================================================
+// 4. CARTES AVEC PLUS DE CONTRASTE
+//================================================
+
+// Amélioration des cartes existantes
+.card,
+.module-card,
+.blog-card,
+.project-card,
+.article-card,
+.featured-article {
+  position: relative;
+  border-left: 3px solid transparent;
+  box-shadow: $shadow-sm;
+  transition: all $transition-normal;
+
+  // Bordure colorée au hover
+  &:hover {
+    border-left-color: $primary-color;
+    box-shadow: $shadow-lg;
+    transform: translateY(-4px);
+  }
+
+  // Variantes de couleurs pour les bordures
+  &.card-primary {
+    border-left-color: $primary-color;
+  }
+
+  &.card-gold {
+    border-left-color: $accent-color-1;
+  }
+
+  &.card-green {
+    border-left-color: $accent-color-2;
+  }
+}
+
+// Cartes avec fond légèrement teinté
+.card-tinted {
+  background: linear-gradient(135deg, $white 0%, #f8fafc 100%);
+
+  &:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, $white 100%);
+  }
+}
+
+// Amélioration des ombres sur les cartes importantes
+.module-card,
+.featured-article {
+  box-shadow: $shadow-md;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+  }
+}
+
+//================================================
+// 5. ICÔNES DÉCORATIVES EN WATERMARK
+//================================================
+
+// Container pour les icônes décoratives
+.section-with-icons {
+  position: relative;
+  overflow: hidden;
+
+  // Icônes en arrière-plan
+  &::before,
+  &::after {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-weight: 900;
+    position: absolute;
+    font-size: 150px;
+    color: $primary-color;
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// Icône code (brackets) - coin supérieur droit
+.section-code-icon {
+  &::before {
+    content: '\f121'; // fa-code
+    top: -30px;
+    right: -30px;
+    transform: rotate(-15deg);
+  }
+}
+
+// Icône terminal - coin inférieur gauche
+.section-terminal-icon {
+  &::after {
+    content: '\f120'; // fa-terminal
+    bottom: -30px;
+    left: -30px;
+    transform: rotate(15deg);
+  }
+}
+
+// Icône module/puzzle - centre
+.section-module-icon {
+  &::before {
+    content: '\f12e'; // fa-puzzle-piece
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    font-size: 200px;
+    opacity: 0.015;
+  }
+}
+
+// Icône blog/edit
+.section-blog-icon {
+  &::before {
+    content: '\f044'; // fa-edit
+    top: 20px;
+    right: 20px;
+    transform: rotate(10deg);
+  }
+}
+
+// Icône e-commerce/shopping
+.section-ecommerce-icon {
+  &::before {
+    content: '\f07a'; // fa-shopping-cart
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(-10deg);
+  }
+}
+
+//================================================
+// 6. AMÉLIORATIONS GÉNÉRALES DU CONTRASTE
+//================================================
+
+// Ombres plus prononcées pour les boutons
+.btn,
+.button,
+.cta-button,
+a.btn {
+  box-shadow: $shadow-sm;
+  transition: all $transition-normal;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Boutons CTA avec plus de présence
+.btn-primary,
+.btn-cta,
+.cta-button {
+  background: $gradient-primary;
+  color: $white;
+  box-shadow: $shadow-colored;
+
+  &:hover {
+    box-shadow: 0 15px 35px rgba($primary-color, 0.25);
+    transform: translateY(-3px);
+  }
+}
+
+// Boutons dorés
+.btn-gold {
+  background: $gradient-gold;
+  color: $white;
+  box-shadow: 0 10px 25px rgba($accent-color-1, 0.15);
+
+  &:hover {
+    box-shadow: 0 15px 35px rgba($accent-color-1, 0.25);
+    transform: translateY(-3px);
+  }
+}
+
+// Headers de section avec plus de contraste
+.section-header,
+.page-header {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: $gradient-gold;
+    border-radius: $rounded-full;
+  }
+}
+
+//================================================
+// 7. GLASSMORPHISM AMÉLIORÉ
+//================================================
+
+.glass-card,
+.card-glass {
+  background: rgba($white, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.3);
+  box-shadow: $shadow-lg;
+
+  &:hover {
+    background: rgba($white, 0.8);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// Glassmorphism dark
+.glass-card-dark {
+  background: rgba($primary-color, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba($white, 0.1);
+  color: $white;
+
+  &:hover {
+    background: rgba($primary-color, 0.8);
+  }
+}
+
+//================================================
+// 8. ANIMATIONS AU SCROLL (optionnel)
+//================================================
+
+// Classe pour animations au scroll (à ajouter via JS)
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+//================================================
+// 9. RESPONSIVE ADJUSTMENTS
+//================================================
+
+@media (max-width: $breakpoint-md) {
+  // Réduire l'opacité du pattern sur mobile
+  body::before {
+    opacity: 0.5;
+  }
+
+  // Simplifier les sections alternées sur mobile
+  .section-alt {
+    background-color: rgba($gray-ultra-light, 0.5);
+  }
+
+  // Réduire la taille des icônes décoratives
+  .section-with-icons {
+    &::before,
+    &::after {
+      font-size: 80px;
+    }
+  }
+}
+
+//================================================
+// 10. UTILITAIRES DE COULEUR
+//================================================
+
+// Background utilities
+.bg-white { background-color: $white; }
+.bg-light { background-color: $gray-ultra-light; }
+.bg-alt { background-color: #f8fafc; }
+.bg-dark { background: $gradient-primary; color: $white; }
+.bg-gold { background: $gradient-gold; color: $white; }
+
+// Text utilities
+.text-primary { color: $primary-color; }
+.text-gold { color: $accent-color-1; }
+.text-green { color: $accent-color-2; }
+
+// Border utilities
+.border-primary { border-color: $primary-color; }
+.border-gold { border-color: $accent-color-1; }
+.border-green { border-color: $accent-color-2; }
+.border-left-thick { border-left-width: 3px; }
