@@ -182,7 +182,7 @@ Voici l'email : {contenu_de_l'email}
 
 #### 3. Action 2 - La Recherche d'Infos
 
-- Si la catégorie est "Suivi de commande" et qu'un order_id a été trouvé, le workflow interroge l'API PrestaShop pour récupérer le statut de la commande (ex: "Expédié", "En préparation").
+- Si la catégorie est "Suivi de commande" et qu'un order_id a été trouvé, le workflow interroge PrestaShop via notre [serveur MCP PrestaShop](/articles/2025/11/20/assistant-ia-prestashop-serveur-mcp-outils-plus/) pour récupérer le statut de la commande (ex: "Expédié", "En préparation").
 - Si la catégorie est "Question produit", le workflow cherche l'info dans une base de connaissances (un simple Google Sheet).
 
 #### 4. Action 3 - La Rédaction par l'IA
