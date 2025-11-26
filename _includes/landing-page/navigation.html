@@ -1,0 +1,90 @@
+{% comment %}
+  Navigation modulaire pour landing pages produits
+
+  Paramètres:
+    - include.logo: URL du logo
+    - include.product_name: Nom du produit
+    - include.badge_text: Texte du badge (optionnel)
+    - include.badge_icon: Icône du badge (optionnel)
+    - include.nav_links: Array de liens [{text, href}, ...]
+    - include.cta_text: Texte du CTA
+    - include.cta_url: URL du CTA
+    - include.style: 'modern' | 'minimal' | 'glassmorphism' (défaut: modern)
+    - include.sticky: true | false (défaut: true)
+{% endcomment %}
+
+{% assign style = include.style | default: 'modern' %}
+{% assign sticky_class = '' %}
+{% if include.sticky != false %}
+  {% assign sticky_class = 'fixed top-0 z-50' %}
+{% endif %}
+
+{% if style == 'glassmorphism' %}
+  {% assign nav_class = 'glass-effect' %}
+{% elsif style == 'minimal' %}
+  {% assign nav_class = 'bg-white border-b border-gray-200' %}
+{% else %}
+  {% assign nav_class = 'glass-effect' %}
+{% endif %}
+
+<nav class="{{ sticky_class }} w-full {{ nav_class }}">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+                {% if include.logo %}
+                <img src="{{ include.logo }}" alt="{{ include.product_name }} Logo" class="w-10 h-10 rounded-lg">
+                {% endif %}
+                <span class="text-xl font-bold text-[#0F172A]">{{ include.product_name }}</span>
+                {% if include.badge_text %}
+                <span class="hidden sm:inline-block badge badge-prestashop text-xs">
+                    {% if include.badge_icon %}<i class="{{ include.badge_icon }} mr-1"></i>{% endif %}
+                    {{ include.badge_text }}
+                </span>
+                {% endif %}
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                {% for link in include.nav_links %}
+                <a href="{{ link.href }}" class="text-[#475569] hover:text-[#0F172A] transition font-medium">{{ link.text }}</a>
+                {% endfor %}
+                {% if include.cta_url %}
+                <a href="{{ include.cta_url }}" target="_blank" rel="noopener" class="btn-primary text-sm py-2.5 px-5 flex items-center gap-2">
+                    <i class="fas fa-shopping-cart"></i>
+                    {{ include.cta_text | default: "Get Now" }}
+                </a>
+                {% endif %}
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-[#0F172A]">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-[#E2E8F0]">
+        <div class="px-6 py-4 space-y-3">
+            {% for link in include.nav_links %}
+            <a href="{{ link.href }}" class="block text-[#475569] hover:text-[#0F172A] font-medium">{{ link.text }}</a>
+            {% endfor %}
+            {% if include.cta_url %}
+            <a href="{{ include.cta_url }}" target="_blank" rel="noopener" class="btn-primary inline-block text-center w-full text-sm py-2.5">
+                {{ include.cta_text | default: "Get Now" }}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle (ne s'exécute qu'une fois)
+    if (!window.mobileMenuInitialized) {
+        window.mobileMenuInitialized = true;
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    }
+</script>

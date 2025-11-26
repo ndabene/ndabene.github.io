@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'fr' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Nicolas Dabène">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/images/produits/mcp-tools-plus-og.jpg' }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="{{ page.description }}">
+    <meta property="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/images/produits/mcp-tools-plus-og.jpg' }}">
+
+    <!-- Hreflang for multilingual -->
+    {% if page.lang == 'fr' %}
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/modules/mcp-tools-plus/">
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}/modules/mcp-tools-plus/">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/modules/mcp-tools-plus/">
+    {% else %}
+    <link rel="alternate" hreflang="fr" href="{{ site.url }}/modules/mcp-tools-plus/">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}/en/modules/mcp-tools-plus/">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/modules/mcp-tools-plus/">
+    {% endif %}
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics -->
+    {% include analytics.html %}
+
+    <style>
+        :root {
+            /* Base colors */
+            --white: #FFFFFF;
+            --black-journal: #111827;
+            --gray-anthracite: #1E293B;
+            --gray-slate: #475569;
+            --gray-light: #E2E8F0;
+            --bg-paper: #FAFAFA;
+
+            /* Primary */
+            --marine-deep: #0F172A;
+            --marine-darker: #020617;
+
+            /* Secondary */
+            --gray-reading: #374151;
+
+            /* Accent */
+            --gold-muted: #D4AF37;
+            --gold-dark: #B8941F;
+            --green-tech: #059669;
+
+            /* Feedback */
+            --red-pro: #DC2626;
+
+            /* Tech tags */
+            --prestashop: #DF3163;
+            --ecommerce: #F59E0B;
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+        }
+
+        .card {
+            background: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary {
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background: #020617;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: #FFFFFF;
+            color: #0F172A;
+            border: 1px solid #E2E8F0;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            border-color: #0F172A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .badge-prestashop {
+            background: rgba(223, 49, 99, 0.1);
+            color: #DF3163;
+        }
+
+        .badge-api {
+            background: rgba(15, 23, 42, 0.1);
+            color: #0F172A;
+        }
+
+        .badge-ecommerce {
+            background: rgba(245, 158, 11, 0.1);
+            color: #F59E0B;
+        }
+
+        .badge-integration {
+            background: rgba(5, 150, 105, 0.1);
+            color: #059669;
+        }
+
+        .code-block {
+            background: #0F172A;
+            border-radius: 8px;
+            border: 1px solid #1E293B;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .category-tab {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: white;
+        }
+
+        .tool-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .tool-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gold {
+            color: #D4AF37;
+        }
+
+        .bg-gold {
+            background: #D4AF37;
+        }
+
+        .border-gold {
+            border-color: #D4AF37;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #CBD5E1;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#111827]">
+    {{ content }}
+
+    {% include cookie-banner.html %}
+</body>
+</html>

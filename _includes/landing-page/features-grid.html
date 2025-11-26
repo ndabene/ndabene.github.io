@@ -1,0 +1,59 @@
+{% comment %}
+  Features Grid modulaire
+
+  Paramètres:
+    - include.title: Titre de la section
+    - include.subtitle: Sous-titre
+    - include.features: Array de features [{icon, icon_color, title, description}, ...]
+    - include.columns: 2 | 3 | 4 (défaut: 3)
+    - include.style: 'cards' | 'minimal' | 'bordered' (défaut: cards)
+    - include.bg: 'white' | 'gray' (défaut: white)
+{% endcomment %}
+
+{% assign columns = include.columns | default: 3 %}
+{% assign style = include.style | default: 'cards' %}
+{% assign bg = include.bg | default: 'white' %}
+
+{% if bg == 'gray' %}
+  {% assign section_bg = 'bg-[#FAFAFA]' %}
+{% else %}
+  {% assign section_bg = 'bg-white' %}
+{% endif %}
+
+{% if columns == 2 %}
+  {% assign grid_class = 'grid md:grid-cols-2 gap-8' %}
+{% elsif columns == 4 %}
+  {% assign grid_class = 'grid md:grid-cols-2 lg:grid-cols-4 gap-8' %}
+{% else %}
+  {% assign grid_class = 'grid md:grid-cols-2 lg:grid-cols-3 gap-8' %}
+{% endif %}
+
+<section id="features" class="py-24 {{ section_bg }}">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">{{ include.title }}</h2>
+            {% if include.subtitle %}
+            <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
+                {{ include.subtitle }}
+            </p>
+            {% endif %}
+        </div>
+        <div class="{{ grid_class }}">
+            {% for feature in include.features %}
+            {% if style == 'cards' %}
+            <div class="card p-6">
+            {% elsif style == 'bordered' %}
+            <div class="p-6 border border-[#E2E8F0] rounded-lg hover:border-[#D4AF37] transition">
+            {% else %}
+            <div class="p-6">
+            {% endif %}
+                <div class="w-14 h-14 rounded-lg bg-[{{ feature.icon_color | default: '#0F172A' }}]/10 flex items-center justify-center mb-5">
+                    <i class="{{ feature.icon }} text-2xl text-[{{ feature.icon_color | default: '#0F172A' }}]"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">{{ feature.title }}</h3>
+                <p class="text-[#374151] leading-relaxed">{{ feature.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
