@@ -36,6 +36,8 @@ product:
                 </span>
             </div>
             <div class="hidden md:flex items-center gap-8">
+                <a href="/" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Accueil</a>
+                <a href="/blog" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Blog</a>
                 <a href="#features" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Features</a>
                 <a href="#tools" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Outils</a>
                 <a href="#requirements" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Prérequis</a>
@@ -53,6 +55,8 @@ product:
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-[#E2E8F0]">
         <div class="px-6 py-4 space-y-3">
+            <a href="/" class="block text-[#475569] hover:text-[#0F172A] font-medium">Accueil</a>
+            <a href="/blog" class="block text-[#475569] hover:text-[#0F172A] font-medium">Blog</a>
             <a href="#features" class="block text-[#475569] hover:text-[#0F172A] font-medium">Features</a>
             <a href="#tools" class="block text-[#475569] hover:text-[#0F172A] font-medium">Outils</a>
             <a href="#requirements" class="block text-[#475569] hover:text-[#0F172A] font-medium">Prérequis</a>
