@@ -184,7 +184,7 @@ product:
                 <div class="text-[#475569]">Catégories</div>
             </div>
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">GA4</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">Google Analytics</div>
                 <div class="text-[#475569]">Intégration</div>
             </div>
             <div class="text-center">
@@ -260,7 +260,7 @@ product:
                 <div class="w-14 h-14 rounded-lg bg-[#0F172A]/10 flex items-center justify-center mb-5">
                     <i class="fab fa-google text-2xl text-[#0F172A]"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Intégration GA4</h3>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Intégration Google Analytics</h3>
                 <p class="text-[#374151] leading-relaxed">
                     Intégration complète Google Analytics 4 avec tracking e-commerce, analyse trafic et tunnels de conversion.
                 </p>
@@ -294,7 +294,7 @@ product:
                 <i class="fas fa-warehouse mr-2"></i>Inventaire
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="ga4">
-                <i class="fab fa-google mr-2"></i>GA4
+                <i class="fab fa-google mr-2"></i>Google Analytics
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="support">
                 <i class="fas fa-headset mr-2"></i>Support
@@ -457,7 +457,7 @@ product:
             <div class="code-block rounded-xl p-5">
                 <div class="flex items-center gap-2 mb-3 text-[#0F172A] bg-white/10 inline-block px-2 py-1 rounded">
                     <i class="fab fa-google text-white"></i>
-                    <span class="font-medium text-white">Analytics GA4</span>
+                    <span class="font-medium text-white">Analytics Google Analytics</span>
                 </div>
                 <p class="text-white font-mono text-sm">"Donne-moi les taux d'abandon ajout panier et checkout par appareil pour les 30 derniers jours."</p>
             </div>
@@ -655,8 +655,8 @@ product:
         { name: 'Order Tracking', desc: 'Suivi des commandes par statut pour détecter les blocages.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
         { name: 'Stock Alerts', desc: 'Alerte sur les produits en rupture ou stock critique.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
         { name: 'Margin Monitor', desc: 'Détection des produits avec marges insuffisantes.', category: 'inventory', icon: 'fa-percent', color: 'green' },
-        { name: 'GA4 E-commerce', desc: 'Revenus, transactions, taux de conversion depuis GA4.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
-        { name: 'GA4 Top Products', desc: 'Meilleurs produits par vues, achats et revenus GA4.', category: 'ga4', icon: 'fa-trophy', color: 'marine' },
+        { name: 'Google Analytics E-commerce', desc: 'Revenus, transactions, taux de conversion depuis Google Analytics.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
+        { name: 'Google Analytics Top Products', desc: 'Meilleurs produits par vues, achats et revenus Google Analytics.', category: 'ga4', icon: 'fa-trophy', color: 'marine' },
         { name: 'Conversion Funnel', desc: 'Tunnel de conversion avec taux d\'abandon par étape.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
         { name: 'Traffic Sources', desc: 'Acquisition par source, medium et campagne.', category: 'ga4', icon: 'fa-chart-line', color: 'marine' },
         { name: 'Inbox Overview', desc: 'Compteurs de threads et messages en attente de réponse.', category: 'support', icon: 'fa-inbox', color: 'prestashop' },

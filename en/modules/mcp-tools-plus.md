@@ -184,7 +184,7 @@ product:
                 <div class="text-[#475569]">Tool Categories</div>
             </div>
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">GA4</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">Google Analytics</div>
                 <div class="text-[#475569]">Integration</div>
             </div>
             <div class="text-center">
