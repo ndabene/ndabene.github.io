@@ -11,8 +11,8 @@ hero:
       text: "Formations IA"
       url: "/boutique/"
     tertiary:
-      text: "Mes modules"
-      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+      text: "Connectez votre PrestaShop avec l'IA"
+      url: "https://nicolas-dabene.fr/modules/mcp-tools-plus/"
 
 blog_featured:
   title: "Derniers Articles"

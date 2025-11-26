@@ -11,8 +11,8 @@ hero:
       text: "AI Training"
       url: "/en/shop/"
     tertiary:
-      text: "My modules"
-      url: "https://www.businesstech.fr/landing/?utm_source=portfolio&utm_medium=homepage&utm_campaign=hero_cta"
+      text: "Connect your PrestaShop with AI"
+      url: "https://nicolas-dabene.fr/en/modules/mcp-tools-plus/"
 
 blog_featured:
   title: "Latest Articles"
