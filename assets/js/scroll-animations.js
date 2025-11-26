@@ -82,7 +82,14 @@
     });
 
     // Contenus principaux
-    document.querySelectorAll('.hero-creator-content, .hero-content').forEach(hero => {
+    const heroElements = document.querySelectorAll('.hero-creator-visual, .hero-creator-content');
+    heroElements.forEach((hero, index) => {
+      hero.classList.remove('fade-in');
+      hero.classList.add('fade-in-up');
+      hero.style.transitionDelay = `${index * 0.12}s`;
+    });
+
+    document.querySelectorAll('.hero-content').forEach(hero => {
       if (!hero.classList.contains('fade-in-up')) {
         hero.classList.add('fade-in');
       }
