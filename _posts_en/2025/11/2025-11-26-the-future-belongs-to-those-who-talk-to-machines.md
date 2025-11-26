@@ -180,7 +180,7 @@ Here's the email: {email_content}
 
 #### 3. Action 2 - Information Retrieval
 
-- If the category is "Order tracking" and an order_id has been found, the workflow queries PrestaShop via our [MCP PrestaShop server](/en/articles/2025/11/20/prestashop-ai-assistant-mcp-server-tools-plus/) to retrieve the order status (e.g., "Shipped", "In preparation").
+- If the category is "Order tracking" and an order_id has been found, the workflow queries PrestaShop via our [MCP PrestaShop & MCP Tools Plus server](/en/articles/2025/11/20/prestashop-ai-assistant-mcp-server-tools-plus/) to retrieve the order status (e.g., "Shipped", "In preparation").
 - If the category is "Product question", the workflow searches for info in a knowledge base (a simple Google Sheet).
 
 #### 4. Action 3 - AI Writing
