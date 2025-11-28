@@ -85,7 +85,9 @@ Le Model Context Protocol n'est pas qu'une énième API. C'est un protocole à �
 
 **ps_mcp_server** est le pont entre ce protocole révolutionnaire et l'écosystème PrestaShop. Développé pour PHP 8.1+ et PrestaShop 8+, ce module expose votre logique métier sous forme d'outils que les LLM (Large Language Models) peuvent découvrir et utiliser automatiquement.
 
-L'avantage ? Vous définissez vos outils métier une seule fois, et tous les agents IA compatibles MCP (Claude, ChatGPT, Gemini, Dust) peuvent les utiliser. Plus besoin de développer des intégrations spécifiques pour chaque plateforme IA.
+> **Note de compatibilité actuelle** : À l'heure de la publication de cet article, le MCP Server de PrestaShop est officiellement compatible avec ChatGPT. Cependant, le protocole MCP étant open-source et standardisé, cet article anticipe les futures compatibilités avec d'autres LLM majeurs (Claude, Gemini, Dust). L'architecture décrite ici est conçue pour fonctionner avec tous les agents IA compatibles MCP.
+
+L'avantage de cette approche standardisée ? Vous définissez vos outils métier une seule fois, et tous les agents IA compatibles MCP peuvent les utiliser à mesure que le support s'étend. Plus besoin de développer des intégrations spécifiques pour chaque plateforme IA.
 
 ## Pourquoi MCP Change la Donne pour PrestaShop
 
@@ -605,6 +607,25 @@ class OrderManagementTool
 ```
 
 Cet outil illustre toutes les bonnes pratiques : validation stricte, description claire, typage fort, formatage structuré des résultats.
+
+## Aller Plus Loin : MCP Tools Plus
+
+Si vous souhaitez exploiter pleinement le potentiel du MCP Server de PrestaShop sans développer vos propres outils depuis zéro, **MCP Tools Plus** est une solution clé en main qui étend considérablement les capacités de base du serveur MCP.
+
+### Une Implémentation Avancée Prête à l'Emploi
+
+Développé par BusinessTech/PrestaModule, **MCP Tools Plus** est un module premium qui enrichit le PS MCP Server avec des outils de gestion avancés. Il transforme votre assistant IA en véritable partenaire de gestion capable de :
+
+- **Générer des rapports comptables automatisés** - Extraction et formatage de données de vente pour votre comptabilité, avec export PDF et envoi email intégrés.
+- **Orchestrer des actions marketing complexes** - Segmentation clients avancée, génération de codes promo personnalisés, et workflows multi-étapes.
+- **Analyser et optimiser votre catalogue** - Détection automatique des produits à fort potentiel ou en perte de vitesse, avec suggestions d'actions concrètes.
+- **Intégrer des services tiers** - Connexion native avec Qonto (vérification paiements), Brevo (campagnes email), et autres outils métier.
+
+### Une Approche Modulaire et Évolutive
+
+L'architecture de MCP Tools Plus illustre parfaitement la vision modulaire de MCP : chaque fonctionnalité est exposée comme un outil indépendant que votre agent IA peut découvrir et combiner intelligemment. Cette approche permet une évolution continue et une personnalisation en fonction de vos besoins spécifiques.
+
+Pour découvrir en détail les cas d'usage concrets, les scénarios réels d'automatisation et comprendre comment MCP Tools Plus peut transformer votre gestion quotidienne, consultez notre article dédié : [MCP Server PrestaShop : Piloter votre boutique avec MCP Tools Plus](/2025/11/20/mcp-server-prestashop-tools-plus-assistant-ia).
 
 ## Références et Ressources
 
