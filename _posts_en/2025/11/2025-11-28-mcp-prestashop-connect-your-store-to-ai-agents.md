@@ -625,7 +625,7 @@ Developed by BusinessTech/PrestaModule, **MCP Tools Plus** is a premium module t
 
 MCP Tools Plus architecture perfectly illustrates the modular vision of MCP: each feature is exposed as an independent tool that your AI agent can discover and combine intelligently. This approach enables continuous evolution and customization based on your specific needs.
 
-To discover in detail the concrete use cases, real automation scenarios and understand how MCP Tools Plus can transform your daily management, check out our dedicated article: [PrestaShop MCP Server & MCP Tools Plus: Complete AI Assistant Guide](/en/2025/11/20/prestashop-ai-assistant-mcp-server-tools-plus).
+To discover in detail the concrete use cases, real automation scenarios and understand how MCP Tools Plus can transform your daily management, check out our dedicated article: [PrestaShop MCP Server & MCP Tools Plus: Complete AI Assistant Guide](/en/articles/2025/11/24/agents-ia-ecommerce-mcp/).
 
 ## References and Resources
 
