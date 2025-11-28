@@ -85,7 +85,9 @@ The Model Context Protocol is not just another API. It's a stateful protocol des
 
 **ps_mcp_server** is the bridge between this revolutionary protocol and the PrestaShop ecosystem. Developed for PHP 8.1+ and PrestaShop 8+, this module exposes your business logic as tools that LLMs (Large Language Models) can discover and use automatically.
 
-The advantage? You define your business tools once, and all MCP-compatible AI agents (Claude, ChatGPT, Gemini, Dust) can use them. No need to develop specific integrations for each AI platform.
+> **Current Compatibility Note**: At the time of this article's publication, PrestaShop's MCP Server is officially compatible with ChatGPT. However, since the MCP protocol is open-source and standardized, this article anticipates future compatibilities with other major LLMs (Claude, Gemini, Dust). The architecture described here is designed to work with all MCP-compatible AI agents.
+
+The advantage of this standardized approach? You define your business tools once, and all MCP-compatible AI agents can use them as support expands. No need to develop specific integrations for each AI platform.
 
 ## Why MCP is a Game-Changer for PrestaShop
 
@@ -605,6 +607,25 @@ class OrderManagementTool
 ```
 
 This tool illustrates all best practices: strict validation, clear description, strong typing, structured result formatting.
+
+## Going Further: MCP Tools Plus
+
+If you want to fully exploit the potential of PrestaShop's MCP Server without developing your own tools from scratch, **MCP Tools Plus** is a turnkey solution that significantly extends the base MCP server capabilities.
+
+### An Advanced Implementation Ready to Use
+
+Developed by BusinessTech/PrestaModule, **MCP Tools Plus** is a premium module that enriches the PS MCP Server with advanced management tools. It transforms your AI assistant into a true management partner capable of:
+
+- **Generating automated accounting reports** - Sales data extraction and formatting for your accounting, with integrated PDF export and email sending.
+- **Orchestrating complex marketing actions** - Advanced customer segmentation, personalized promo code generation, and multi-step workflows.
+- **Analyzing and optimizing your catalog** - Automatic detection of high-potential or struggling products, with concrete action suggestions.
+- **Integrating third-party services** - Native connection with Qonto (payment verification), Brevo (email campaigns), and other business tools (pending MCP protocol adoption by these services).
+
+### A Modular and Scalable Approach
+
+MCP Tools Plus architecture perfectly illustrates the modular vision of MCP: each feature is exposed as an independent tool that your AI agent can discover and combine intelligently. This approach enables continuous evolution and customization based on your specific needs.
+
+To discover in detail the concrete use cases, real automation scenarios and understand how MCP Tools Plus can transform your daily management, check out our dedicated article: [PrestaShop MCP Server & MCP Tools Plus: Complete AI Assistant Guide](/en/2025/11/20/prestashop-ai-assistant-mcp-server-tools-plus).
 
 ## References and Resources
 
