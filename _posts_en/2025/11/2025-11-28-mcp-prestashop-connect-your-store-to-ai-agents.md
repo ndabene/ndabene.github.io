@@ -635,6 +635,8 @@ To discover in detail the concrete use cases, real automation scenarios and unde
 
 **PHP-MCP**: Server and client libraries are documented at [github.com/php-mcp](https://github.com/php-mcp). You'll find examples of advanced attributes and development patterns.
 
+{% include blog-mcp-tools-plus-block-en.html %}
+
 ## Conclusion
 
 MCP represents a revolution in how our PrestaShop stores interact with artificial intelligence. By exposing your business logic through well-defined tools, you create an ecosystem where AI agents become true assistants capable of automating complex tasks.
