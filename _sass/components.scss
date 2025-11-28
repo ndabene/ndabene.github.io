@@ -1006,6 +1006,244 @@ body.dark-mode {
 }
 
 //================================================
+// MCP TOOLS PLUS BLOG BLOCK
+//================================================
+.blog-mcp-tools-plus-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+  padding: $spacing-xxl 0;
+  border-top: 1px solid #bfdbfe;
+  border-bottom: 1px solid #bfdbfe;
+
+  .mcp-tools-plus-blog-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $spacing-xxl;
+    align-items: center;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: $spacing-xl;
+      text-align: center;
+    }
+  }
+
+  .mcp-tools-plus-blog-text {
+    h2 {
+      font-size: $h1-size;
+      font-weight: $font-weight-bold;
+      color: $text-color;
+      margin: 0 0 $spacing-lg 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      color: $text-color-light;
+      line-height: 1.6;
+      margin: 0 0 $spacing-xl 0;
+      max-width: 600px;
+
+      @media (max-width: $tablet) {
+        max-width: none;
+      }
+    }
+  }
+
+  .mcp-tools-plus-blog-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 250px)"}, 1fr));
+    gap: $spacing-lg;
+    margin: 0;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    padding: $spacing-lg;
+    background: $white;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #bfdbfe;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .benefit-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 20px;
+  }
+
+  .benefit-text {
+    h4 {
+      font-size: $h4-size;
+      font-weight: $font-weight-bold;
+      color: $text-color;
+      margin: 0 0 $spacing-xs 0;
+    }
+
+    p {
+      font-size: $font-size-base;
+      color: $text-color-light;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+
+  .mcp-tools-plus-blog-cta {
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+    border-radius: 20px;
+    padding: $spacing-xxl;
+    color: $white;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="white" opacity="0.05"/><circle cx="60" cy="40" r="0.5" fill="white" opacity="0.08"/></svg>');
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+
+      h3 {
+        font-size: $h2-size;
+        font-weight: $font-weight-bold;
+        margin: 0 0 $spacing-md 0;
+        color: $white;
+      }
+
+      p {
+        font-size: $font-size-base;
+        color: rgba($white, 0.9);
+        line-height: 1.6;
+        margin: 0 0 $spacing-xl 0;
+      }
+    }
+
+    .mcp-tools-plus-blog-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: $spacing-sm;
+      background: $white;
+      color: #0ea5e9;
+      padding: $spacing-md $spacing-xl;
+      border-radius: $border-radius;
+      text-decoration: none;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-base;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      border: 2px solid $white;
+
+      &:hover {
+        background: rgba($white, 0.95);
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      &:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    .cta-note {
+      font-size: $font-size-sm;
+      color: rgba($white, 0.8);
+      margin: $spacing-md 0 0 0;
+      font-style: italic;
+    }
+
+    @media (max-width: $tablet) {
+      padding: $spacing-xl;
+      margin-top: $spacing-xl;
+
+      .cta-content {
+        h3 {
+          font-size: $h3-size;
+        }
+      }
+    }
+  }
+}
+
+// Dark mode support
+body.dark-mode {
+  .blog-mcp-tools-plus-section {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    border-color: #4a5568;
+
+    .mcp-tools-plus-blog-text {
+      h2 {
+        color: $dark-text;
+      }
+
+      p {
+        color: $dark-text-muted;
+      }
+    }
+
+    .benefit-item {
+      background: $dark-surface;
+      border-color: #4a5568;
+
+      .benefit-text {
+        h4 {
+          color: $dark-text;
+        }
+
+        p {
+          color: $dark-text-muted;
+        }
+      }
+    }
+
+    .mcp-tools-plus-blog-cta {
+      background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+
+      .mcp-tools-plus-blog-btn {
+        background: #0ea5e9;
+        color: $white;
+        border-color: #0ea5e9;
+
+        &:hover {
+          background: lighten(#0ea5e9, 10%);
+        }
+      }
+    }
+  }
+}
+
+//================================================
 // SPONSORS SECTION (Homepage & Dedicated Page)
 //================================================
 .sponsors-section {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop MCP Server Setup: Connect Your Store to AI Agents (2025 Guide)'
+title: 'PrestaShop MCP Server Tutorial: How to Connect Your Store to AI Agents (2025)'
 date: 2025-11-28
 ref: mcp-server-prestashop-setup-guide
 author: Nicolas Dabène
@@ -15,9 +15,7 @@ tags:
 - PHP 8
 - AI Agent
 - Model Context Protocol
-excerpt: 'Discover how ps_mcp_server transforms your PrestaShop store into an AI-ready
-  platform. Complete MCP Server installation guide for PrestaShop with practical examples
-  and Claude, ChatGPT, Gemini integration.'
+excerpt: 'Complete step-by-step tutorial to install and configure ps_mcp_server on PrestaShop. Learn how to create your first MCP tools, expose your business logic to AI agents, and automate your e-commerce with Claude, ChatGPT or Gemini.'
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
 featured: true
 difficulty: Advanced
@@ -28,16 +26,18 @@ technologies:
 - AI
 estimated_reading_time: 10 minutes
 keywords:
-- MCP Server PrestaShop
-- ps_mcp_server
-- PrestaShop MCP integration
-- Model Context Protocol PrestaShop
-- PrestaShop AI automation
-- MCP protocol e-commerce
-- PrestaShop AI agent
-- PHP MCP server
-- PrestaShop 8 MCP
-- Claude PrestaShop integration
+- PrestaShop MCP tutorial
+- how to install MCP Server PrestaShop
+- ps_mcp_server guide
+- PrestaShop MCP setup tutorial
+- install Model Context Protocol PrestaShop
+- create MCP tools PrestaShop
+- PrestaShop AI agent tutorial
+- how to connect PrestaShop to AI
+- ps_mcp_server installation guide
+- PHP MCP server tutorial
+- PrestaShop 8 MCP guide
+- learn MCP PrestaShop
 faq:
 - question: What is the Model Context Protocol (MCP)?
   answer: MCP is a protocol that allows AI agents to communicate with business systems
@@ -70,6 +70,22 @@ sources:
   url: https://github.com/php-mcp
 - title: ps_mcp_boilerplate Repository
   url: https://github.com/prestashop/ps_mcp_boilerplate
+schema_type: HowTo
+how_to_steps:
+- name: Check technical prerequisites
+  text: Ensure you have PrestaShop 8.x minimum and PHP 8.1 or higher installed on your server.
+- name: Declare your module MCP-compatible
+  text: Add the isMcpCompliant() method to your PrestaShop module's main class to enable automatic tool discovery.
+- name: Create your first MCP tool
+  text: Create a class in src/Mcp/Tools with the #[McpTool] attribute to expose functionality to AI agents.
+- name: Define the parameter schema
+  text: Use the #[Schema] attribute to describe the parameters accepted by your tool, their types and default values.
+- name: Test with MCP Inspector
+  text: Use MCP Inspector to verify your tools are correctly discovered and test calls with different parameters.
+- name: Configure HTTP connection
+  text: Configure your MCP client (Claude, ChatGPT, Gemini) with your server URL and authentication token.
+- name: Deploy to production
+  text: Enable HTTPS, renew tokens regularly, and monitor logs to ensure your MCP server's security.
 ---
 
 
@@ -634,6 +650,8 @@ To discover in detail the concrete use cases, real automation scenarios and unde
 **Model Context Protocol**: The complete protocol specification is available at [modelcontextprotocol.io](https://modelcontextprotocol.io). Consult it to understand advanced concepts like resources, prompts, and sampling.
 
 **PHP-MCP**: Server and client libraries are documented at [github.com/php-mcp](https://github.com/php-mcp). You'll find examples of advanced attributes and development patterns.
+
+{% include blog-mcp-tools-plus-block-en.html %}
 
 ## Conclusion
 
