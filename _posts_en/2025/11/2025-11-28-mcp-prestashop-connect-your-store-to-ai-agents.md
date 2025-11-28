@@ -619,7 +619,7 @@ Developed by BusinessTech/PrestaModule, **MCP Tools Plus** is a premium module t
 - **Generating automated accounting reports** - Sales data extraction and formatting for your accounting, with integrated PDF export and email sending.
 - **Orchestrating complex marketing actions** - Advanced customer segmentation, personalized promo code generation, and multi-step workflows.
 - **Analyzing and optimizing your catalog** - Automatic detection of high-potential or struggling products, with concrete action suggestions.
-- **Integrating third-party services** - Native connection with Qonto (payment verification), Brevo (email campaigns), and other business tools.
+- **Integrating third-party services** - Native connection with Qonto (payment verification), Brevo (email campaigns), and other business tools (pending MCP protocol adoption by these services).
 
 ### A Modular and Scalable Approach
 
