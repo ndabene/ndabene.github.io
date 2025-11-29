@@ -406,7 +406,7 @@ product:
                         <div>
                             <h4 class="font-bold text-[#B8941F] mb-1">Modules Optionnels</h4>
                             <p class="text-[#475569] text-sm">
-                                Pour toutes les fonctionnalités, installez <code class="bg-white px-1.5 py-0.5 rounded text-[#0F172A]">pm_advancedpack</code> pour la gestion packs et <code class="bg-white px-1.5 py-0.5 rounded text-[#0F172A]">llmseo</code> pour les outils SEO.
+                                Pour toutes les fonctionnalités, installez <a href="https://www.presta-module.com/fr/3-modules-prestashop/8-ventes/9-advanced-pack.html" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">Advanced Pack</a> pour la gestion packs et <a href="https://www.businesstech.fr/fr/ia/83-geo-suite.html?srsltid=AfmBOoqQgX8gUlM9dLeBDepK0i93VEdkvLefxl5a392Hd0JiSf5ly4lQ" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">LLM SEO</a> pour les outils SEO.
                             </p>
                         </div>
                     </div>
