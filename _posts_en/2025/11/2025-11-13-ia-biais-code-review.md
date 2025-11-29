@@ -14,7 +14,7 @@ tags:
 excerpt: What if AI rejected your code not because it's bad, but because it *thinks*
   it is? This article explores the hidden biases of automated code review systems
   and their consequences on our development practices.
-image: /assets/images/blog/2025/11/ia-biais-code-review.jpg
+image: /assets/images/blog/2025/11/ia-biais-code-review.webp
 lang: en
 ref: ia-biais-code-review-nov2025
 featured: true

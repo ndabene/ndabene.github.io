@@ -16,7 +16,7 @@ tags:
 excerpt: The AI Act is the world's first law regulating artificial intelligence. Discover
   its history, obligations and impacts for SMEs, startups, developers and open source
   in France.
-image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.jpg
+image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.webp
 featured: false
 difficulty: Intermediate
 technologies:

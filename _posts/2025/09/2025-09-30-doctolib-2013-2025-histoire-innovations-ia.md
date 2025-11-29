@@ -12,7 +12,7 @@ tags:
 - automatisation
 excerpt: 'De la prise de rendez-vous en ligne à un écosystème e-santé dopé à l’IA
   : retour sur 12 ans d’hyper-croissance, de controverses et d’innovations chez Doctolib.'
-image: /assets/images/blog/2025/09/2025-09-30-doctolib-histoire-innovation.jpg
+image: /assets/images/blog/2025/09/2025-09-30-doctolib-histoire-innovation.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

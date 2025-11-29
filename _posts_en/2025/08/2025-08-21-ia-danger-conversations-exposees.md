@@ -13,7 +13,7 @@ tags:
 - security
 excerpt: A major breach reveals disturbing content and highlights the hidden risks
   of artificial intelligence chatbots.
-image: /assets/images/blog/2025/08/2025-08-21-ia-danger-conversations-exposees.jpg
+image: /assets/images/blog/2025/08/2025-08-21-ia-danger-conversations-exposees.webp
 featured: true
 difficulty: Intermediate
 technologies:

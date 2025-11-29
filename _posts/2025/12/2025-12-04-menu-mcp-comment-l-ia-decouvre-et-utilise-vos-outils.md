@@ -13,7 +13,7 @@ tags:
 - développement
 excerpt: Votre IA sait maintenant lire des fichiers. Mais comment découvre-t-elle
   vos outils ? Plongeons dans le système de découverte du MCP.
-image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.jpg
+image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

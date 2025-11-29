@@ -14,7 +14,7 @@ tags:
 excerpt: Shopify Plus ou PrestaShop Enterprise ? Derrière le tarif mensuel, le vrai
   enjeu est la maîtrise du code, des coûts et des données. Analyse complète pour choisir
   durablement.
-image: /assets/images/blog/2025/09/2025-09-05-prestashop-enterprise-vs-shopify-plus.jpg
+image: /assets/images/blog/2025/09/2025-09-05-prestashop-enterprise-vs-shopify-plus.webp
 featured: false
 difficulty: Avancé
 technologies:

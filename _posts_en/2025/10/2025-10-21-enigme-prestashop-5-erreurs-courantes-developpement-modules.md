@@ -15,7 +15,7 @@ tags:
 - development
 excerpt: PrestaShop developers, I challenge you! Discover the 5 common errors in this
   best-sellers module and improve your development skills.
-image: /assets/images/blog/2025/10/2025-10-21-enigme-prestashop-erreurs.jpg
+image: /assets/images/blog/2025/10/2025-10-21-enigme-prestashop-erreurs.webp
 featured: true
 difficulty: Intermediate
 technologies:

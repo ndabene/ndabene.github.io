@@ -15,7 +15,7 @@ tags:
 - e-commerce
 excerpt: The native integration of ChatGPT and Shopify enables a fluid purchase journey
   within conversation, redefining e-commerce experience and models.
-image: /assets/images/blog/2025/08/2025-08-08-chatgpt-shopify.jpg
+image: /assets/images/blog/2025/08/2025-08-08-chatgpt-shopify.webp
 featured: false
 difficulty: Intermediate
 technologies:

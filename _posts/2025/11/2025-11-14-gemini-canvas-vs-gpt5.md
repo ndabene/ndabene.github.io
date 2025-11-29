@@ -15,7 +15,7 @@ tags:
 excerpt: J'ai testé la nouvelle fonction Canvas de Google Gemini face à GPT-5 pour
   générer une présentation à partir de mon article sur l'évolution des compétences
   développeurs. Voici les résultats, le prompt exact et mon verdict.
-image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.jpg
+image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

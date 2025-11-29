@@ -11,7 +11,7 @@ tags:
 - sécurité
 excerpt: Une faille majeure révèle des contenus troublants et met en lumière les risques
   cachés des chatbots d'intelligence artificielle.
-image: /assets/images/blog/2025/08/2025-08-21-ia-danger-conversations-exposees.jpg
+image: /assets/images/blog/2025/08/2025-08-21-ia-danger-conversations-exposees.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

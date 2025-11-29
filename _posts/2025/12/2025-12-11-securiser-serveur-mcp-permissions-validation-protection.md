@@ -14,7 +14,7 @@ tags:
 - sécurité
 excerpt: Votre serveur MCP fonctionne ? Parfait. Maintenant, sécurisons-le pour qu'il
   soit production-ready avec validation, permissions et protection.
-image: /assets/images/blog/2025/12/2025-12-11-securiser-serveur-mcp.jpg
+image: /assets/images/blog/2025/12/2025-12-11-securiser-serveur-mcp.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

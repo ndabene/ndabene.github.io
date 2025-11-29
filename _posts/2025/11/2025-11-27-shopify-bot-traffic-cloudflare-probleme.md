@@ -20,7 +20,7 @@ excerpt: En 2025, jusqu'à 73% du trafic sur certaines boutiques Shopify provien
   crée une distorsion massive dans les données analytiques et fausse les campagnes
   publicitaires. Un constat documenté, aux conséquences économiques majeures pour
   les marchands.
-image: /assets/images/blog/2025/11/shopify-bot-traffic-problem.jpg
+image: /assets/images/blog/2025/11/shopify-bot-traffic-problem.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

@@ -12,7 +12,7 @@ tags:
 excerpt: 'xAI, la startup d''Elon Musk, lance Grok Code Fast 1 : un modèle de codage
   ultra-rapide et low cost intégré à GitHub Copilot. Promesses, limites et impact
   pour les développeurs.'
-image: /assets/images/blog/2025/09/2025-09-01-grok-code-fast-1.jpg
+image: /assets/images/blog/2025/09/2025-09-01-grok-code-fast-1.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

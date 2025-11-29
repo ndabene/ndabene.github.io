@@ -13,7 +13,7 @@ tags:
 - development
 excerpt: Your AI can now read files. But how does it discover your tools? Let's dive
   into the MCP discovery system.
-image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.jpg
+image: /assets/images/blog/2025/12/2025-12-04-menu-mcp-decouverte-outils.webp
 featured: true
 difficulty: Intermediate
 technologies:

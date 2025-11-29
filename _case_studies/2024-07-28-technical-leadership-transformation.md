@@ -43,9 +43,9 @@ results_metrics: |
   - **Enhanced Code Quality:** Static analysis reports showed a 40% reduction in code complexity and an increase in test coverage.
   - **Improved Collaboration:** Cross-team dependencies and communication breakdowns were significantly reduced.
 metrics_charts:
-- image: /assets/images/case-studies/leadership-delivery-speed.png
+- image: /assets/images/case-studies/leadership-delivery-speed.webp
   alt: "Delivery Speed Improvement Chart"
-- image: /assets/images/case-studies/leadership-team-satisfaction.png
+- image: /assets/images/case-studies/leadership-team-satisfaction.webp
   alt: "Team Satisfaction Increase Chart"
 team_leadership: |
   As the technical lead for this transformation, my responsibilities included:
@@ -61,9 +61,9 @@ key_learnings: |
   - **Empowerment:** Empowering teams to own their processes and solutions leads to greater engagement and better outcomes.
   - **Patience & Persistence:** Significant organizational change takes time and requires consistent effort and reinforcement.
 screenshots:
-- image: /assets/images/case-studies/leadership-agile-board.jpg
+- image: /assets/images/case-studies/leadership-agile-board.webp
   alt: "Agile Team Board"
-- image: /assets/images/case-studies/leadership-code-review.jpg
+- image: /assets/images/case-studies/leadership-code-review.webp
   alt: "Code Review Session"
 llm_summary: Leading a comprehensive refactoring of engineering culture, 
   processes, and team structure.

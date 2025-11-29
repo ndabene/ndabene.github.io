@@ -16,7 +16,7 @@ tags:
 - prestashop-9
 - performance-web
 excerpt: 'Un module de 50 Ko peut-il valoir plus cher qu une usine à gaz de 10 Mo ? Avec PrestaShop 9, découvrez pourquoi la valeur d un module réside dans ce qu il ne fait pas.'
-image: /assets/images/blog/2025/12/2025-12-16-module-minimaliste-ps9.jpg
+image: /assets/images/blog/2025/12/2025-12-16-module-minimaliste-ps9.webp
 featured: false
 difficulty: Avancé
 technologies:

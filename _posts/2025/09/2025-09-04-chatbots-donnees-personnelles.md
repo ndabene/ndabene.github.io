@@ -13,7 +13,7 @@ tags:
 excerpt: 'Deux études internationales tirent la sonnette d''alarme : les chatbots
   et assistants de navigation basés sur l''IA poussent les internautes à divulguer
   des informations sensibles à des niveaux sans précédent.'
-image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.jpg
+image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

@@ -13,7 +13,8 @@
     "test-sitemap": "bash scripts/test-sitemap.sh",
     "deploy": "bash scripts/deploy.sh",
     "validate:produits": "ruby scripts/validate_produits.rb",
-    "validate:frontmatter": "ruby scripts/validate_frontmatter.rb"
+    "validate:frontmatter": "ruby scripts/validate_frontmatter.rb",
+    "generate:webp": "bash scripts/generate-webp.sh"
   },
   "repository": {
     "type": "git",

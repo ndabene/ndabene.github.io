@@ -15,7 +15,7 @@ tags:
 - e-commerce
 excerpt: Discover how to optimize your Google Shopping presence for Black Friday 2025
   in Europe and maximize your revenue with PrestaShop.
-image: /assets/images/blog/2025/10/google-shopping-black-friday-2025.jpg
+image: /assets/images/blog/2025/10/google-shopping-black-friday-2025.webp
 featured: false
 difficulty: Intermediate
 technologies:
@@ -62,7 +62,7 @@ You've surely noticed: each year, Black Friday arrives with the eagerness of a c
 
 In the 15 years I've accompanied e-commerce projects, I've observed a remarkable transformation: Google Shopping has evolved from a simple price comparison tool to a true platform where most purchase decisions are made. In 2025, **70% of Google Ads advertising revenue comes directly from Google Shopping**. This isn't a coincidence - it's a reality you must master.
 
-![Key Black Friday 2025 statistics in Europe - Average budget per consumer and participation rate](/assets/images/blog/2025/10/black_friday_budget_chart.png "Black Friday 2025 trends in Europe")
+![Key Black Friday 2025 statistics in Europe - Average budget per consumer and participation rate](/assets/images/blog/2025/10/black_friday_budget_chart.webp "Black Friday 2025 trends in Europe")
 
 ## Introduction
 

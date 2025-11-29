@@ -16,7 +16,7 @@ tags:
 - e-commerce
 excerpt: 'From software craftsmanship to scalability: why module publishers are the
   first growth hackers without knowing it. A reflection on deep philosophical convergences.'
-image: /assets/images/blog/2025/07/2025-07-31-prestashop-growth-hacking-mindset.jpg
+image: /assets/images/blog/2025/07/2025-07-31-prestashop-growth-hacking-mindset.webp
 featured: true
 difficulty: Intermediate
 technologies:

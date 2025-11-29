@@ -17,7 +17,7 @@ excerpt: L'optimisation vocale (VEO) transforme la recherche en 2025. Avec 8,4 m
   d'assistants vocaux actifs et 20% des utilisateurs qui adoptent la voix, ignorer
   le VEO revient à perdre votre audience. Découvrez les 3 piliers techniques pour
   dominer la recherche vocale.
-image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.jpg
+image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.webp
 featured: false
 difficulty: Intermédiaire
 technologies:
@@ -176,7 +176,7 @@ Les assistants vocaux aiment les informations faciles à lire. Utilisez des list
 
 1. Réduire la taille de fichier (sous 100 KB si possible)
 2. Utiliser l'attribut alt descriptif et naturel
-3. Nommer le fichier de manière descriptive (pas image1.jpg)
+3. Nommer le fichier de manière descriptive (pas image1.webp)
 4. Placer l'image près du texte qu'elle illustre
 ```
 

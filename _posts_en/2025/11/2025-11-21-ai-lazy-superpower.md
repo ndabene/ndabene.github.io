@@ -16,7 +16,7 @@ tags:
 - philosophy
 - future
 excerpt: 'What if the AI revolution is based on a huge misunderstanding? Models like GPT don''t "think", they avoid thinking. Discover why this "algorithmic laziness" is actually a superpower and how, as developers and creators, we must change our relationship with this tool to unlock its full potential.'
-image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.jpg
+image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.webp
 keywords:
 - AI
 - artificial intelligence

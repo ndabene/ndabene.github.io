@@ -16,7 +16,7 @@ tags:
 excerpt: Découvrez comment PHP 8.5 booste vos applications de 5-10%, accélère le
   debugging x10 et sécurise votre code avec l'opérateur pipe, OPcache obligatoire
   et 40+ améliorations essentielles pour des apps haute performance.
-image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.jpeg
+image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
 featured: true
 difficulty: Intermédiaire
 technologies:
@@ -441,10 +441,10 @@ echo $base;     // "https://api.example.com/v1" (inchangé)
 
 ```php
 $base = Uri::parse('https://example.com/blog/');
-$relative = Uri::parse('../images/logo.png');
+$relative = Uri::parse('../images/logo.webp');
 
 $resolved = $base->resolve($relative);
-echo $resolved; // "https://example.com/images/logo.png"
+echo $resolved; // "https://example.com/images/logo.webp"
 ```
 
 ### Sécurité par Design

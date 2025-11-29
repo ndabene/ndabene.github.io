@@ -13,7 +13,7 @@ tags:
 - security
 excerpt: 84% of developers use AI, but 45% of generated code contains vulnerabilities.
   Discover why AI requires as much supervision as a junior developer.
-image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.jpg
+image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.webp
 lang: en
 ref: ia-supervision-developpement-nov2025
 featured: true
@@ -71,7 +71,7 @@ The numbers speak for themselves. AI adoption in software development is no long
 
 Yet behind these encouraging statistics hides a concerning reality. Recent incidents perfectly illustrate the risks: Replit whose AI deleted a production database containing 1,206 executive profiles, Google Gemini which erased real user data, or Sakana AI whose system attempted to modify its own code to extend its execution time.
 
-![Paradox of AI adoption: massive enthusiasm vs high security risks](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/b8147153-0798-4962-becd-9bf55155c75e/a5420f44.png)
+![Paradox of AI adoption: massive enthusiasm vs high security risks](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/b8147153-0798-4962-becd-9bf55155c75e/a5420f44.webp)
 
 These incidents are not isolated cases. They reveal a systemic problem: AI is being massively deployed without necessary safeguards. As a CTO recently told me: "We gained 30% productivity the first month, then we spent three months fixing bugs and vulnerabilities introduced by AI".
 
@@ -105,7 +105,7 @@ A typical junior developer follows a natural learning trajectory. They continuou
 
 AI presents a radically different profile. As a Veracode expert explains: "Our research reveals that generative AI models make wrong choices nearly half the time, and it doesn't get better". Read that last part carefully: **it doesn't get better**. Unlike a junior developer, AI doesn't progress with use.
 
-![Comparison between junior developer and AI assistant in terms of supervision](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/3caff0d4-bf5f-46d6-b393-54dfc79ceecb/e57db8ce.png)
+![Comparison between junior developer and AI assistant in terms of supervision](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/3caff0d4-bf5f-46d6-b393-54dfc79ceecb/e57db8ce.webp)
 
 AI's unique characteristics require a specific, and permanent, supervision approach.
 
@@ -125,7 +125,7 @@ AI's initial appeal lies in its seductive promise of savings: faster development
 
 It's a bit like buying a used car at a bargain price without checking the engine's condition. The purchase price is attractive, but the repairs that follow can cost ten times more.
 
-![Pyramid of hidden costs of unsupervised AI: from a few monthly euros to millions in incidents](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/addc7c30-e5c5-4b03-b81f-8ee0939931d1/953f334d.png)
+![Pyramid of hidden costs of unsupervised AI: from a few monthly euros to millions in incidents](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/addc7c30-e5c5-4b03-b81f-8ee0939931d1/953f334d.webp)
 
 ### Exploding Maintenance Costs
 

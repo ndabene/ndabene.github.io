@@ -18,7 +18,7 @@ tags:
 excerpt: 'PS MCP Server & MCP Tools Plus transform your PrestaShop store into an AI-powered
   platform. Automate reports, promotions, and analytics with natural language commands.
   Complete guide 2025.'
-image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg
+image: /assets/images/blog/2025/11/ps-mcp-server-tools-plus.webp
 featured: true
 keywords:
 - PS MCP Server

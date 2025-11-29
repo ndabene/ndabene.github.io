@@ -16,7 +16,7 @@ excerpt: PrestaShop incarne l'une des plus belles réussites entrepreneuriales f
   générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success
   story de 20 ans illustre parfaitement la capacité d'innovation française face aux
   géants américains du secteur.
-image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
+image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

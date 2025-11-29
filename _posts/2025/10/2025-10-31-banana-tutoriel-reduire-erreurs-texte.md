@@ -14,7 +14,7 @@ tags:
 excerpt: Aucune méthode ne garantit un texte parfait dans Banana, mais ce guide rassemble
   les meilleures astuces pour réduire au maximum les erreurs de lettres, d'accents
   et de placement.
-image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.jpg
+image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.webp
 difficulty: Débutant
 technologies:
 - Banana
@@ -119,7 +119,7 @@ Dans ce cas, ajoute à ton prompt :
 Ou génère temporairement avec une version neutre :
 > "beso1n" → à corriger ensuite dans Canva ou Photoshop.
 
-![Exemple d'image générée avec Banana](/assets/images/blog/article_content/2025-10-31-banana-exemple-1.jpg)
+![Exemple d'image générée avec Banana](/assets/images/blog/article_content/2025-10-31-banana-exemple-1.webp)
 *Exemple de génération avec texte optimisé*
 
 ---
@@ -151,7 +151,7 @@ Utilise du **blanc avec contour noir** pour maximiser la lisibilité.
 
 Cette phrase réduit les hallucinations et les fontes artistiques aléatoires.
 
-![Comparaison avant/après optimisation](/assets/images/blog/article_content/2025-10-31-banana-exemple-2.jpg)
+![Comparaison avant/après optimisation](/assets/images/blog/article_content/2025-10-31-banana-exemple-2.webp)
 *Comparaison : prompt basique vs prompt optimisé*
 
 ---
@@ -196,7 +196,7 @@ Avant d'exporter ton image, vérifie ces points :
 - [ ] Le texte est bien centré
 - [ ] Format carré (1080×1080) respecté
 
-![Check-list visuelle de validation](/assets/images/blog/article_content/2025-10-31-banana-exemple-3.jpg)
+![Check-list visuelle de validation](/assets/images/blog/article_content/2025-10-31-banana-exemple-3.webp)
 *Check-list visuelle : points à vérifier sur chaque génération*
 
 ---

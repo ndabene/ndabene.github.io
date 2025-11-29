@@ -13,7 +13,7 @@ tags:
 excerpt: 'In just a few months, artificial intelligence has redefined the developer
   profession: less repetitive technical work, more design, vision and human focus.
   Here''s how this mutation occurred.'
-image: /assets/images/blog/2025/11/2025-11-10-evolution-competences-developpeurs.jpg
+image: /assets/images/blog/2025/11/2025-11-10-evolution-competences-developpeurs.webp
 lang: en
 ref: evolution-competences-developpeurs-nov2025
 featured: false

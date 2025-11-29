@@ -20,7 +20,7 @@ excerpt: With just weeks until Christmas, the pressure is on. Rather than giving
   Advanced Pack, a powerful tool to increase your average basket, guide your customers,
   and strategically clear your inventory. Transform last-minute stress into an exceptional
   sales opportunity.
-image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.jpg
+image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.webp
 lang: en
 ref: strategie-pack-produit-prestashop-noel-2025
 difficulty: Intermediate

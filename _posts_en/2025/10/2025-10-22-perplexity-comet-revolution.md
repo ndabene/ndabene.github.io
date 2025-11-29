@@ -13,7 +13,7 @@ tags:
 - automation
 excerpt: Discover how Perplexity Comet radically transforms our way of using the internet
   by making an AI-powered browser freely accessible.
-image: /assets/images/blog/2025/10/2025-10-22-perplexity-comet-revolution.jpg
+image: /assets/images/blog/2025/10/2025-10-22-perplexity-comet-revolution.webp
 featured: true
 difficulty: Beginner
 technologies:

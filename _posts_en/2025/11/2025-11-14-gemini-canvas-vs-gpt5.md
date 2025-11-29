@@ -15,7 +15,7 @@ tags:
 excerpt: I tested Google Gemini's new Canvas feature against GPT-5 to generate a presentation
   from my article on developer skills evolution. Here are the results, the exact prompt,
   and my verdict.
-image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.jpg
+image: /assets/images/blog/2025/11/2025-11-14-gemini-canvas-vs-gpt5.webp
 lang: en
 ref: gemini-canvas-vs-gpt5-nov2025
 featured: true

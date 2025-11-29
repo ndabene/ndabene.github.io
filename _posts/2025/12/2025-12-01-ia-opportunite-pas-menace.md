@@ -16,7 +16,7 @@ tags:
 - avenir-travail
 excerpt: "92% des professionnels craignent l'IA, mais seuls 22% l'ont vraiment testée.
   Découvrez pourquoi l'IA est une opportunité de croissance, pas une menace. Guide pratique et retours d'expérience."
-image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.jpg
+image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.webp
 featured: true
 difficulty: Débutant
 estimated_reading_time: 12 minutes

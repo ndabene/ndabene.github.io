@@ -14,7 +14,7 @@ tags:
 - automation
 excerpt: 'From online appointment booking to an AI-powered e-health ecosystem: look
   back at 12 years of hyper-growth, controversies and innovations at Doctolib.'
-image: /assets/images/blog/2025/09/2025-09-30-doctolib-histoire-innovation.jpg
+image: /assets/images/blog/2025/09/2025-09-30-doctolib-histoire-innovation.webp
 featured: false
 difficulty: Intermediate
 technologies:

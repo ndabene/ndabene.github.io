@@ -16,7 +16,7 @@ tags:
 - future of work
 - soft skills
 excerpt: 'Code is no longer the only language of power in the digital world. A new skill, more human and more accessible, is taking over: the art of "talking" to machines. Discover why the future of innovation, especially in PrestaShop, will belong to communicators, creatives and visionaries, and not just to coders anymore.'
-image: /assets/images/blog/2025/11/parler-aux-machines-futur.jpg
+image: /assets/images/blog/2025/11/parler-aux-machines-futur.webp
 keywords:
 - AI
 - PrestaShop

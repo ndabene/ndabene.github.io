@@ -16,7 +16,7 @@ tags:
 - addons
 - strategie-digitale
 excerpt: 'Avec plus de 4 000 modules disponibles, PrestaShop est souvent critiqué pour son foisonnement. Découvrez pourquoi cette "jungle" est en réalité supérieure aux écosystèmes fermés.'
-image: /assets/images/blog/2025/12/2025-12-10-modules-prestashop-ecosysteme.jpg
+image: /assets/images/blog/2025/12/2025-12-10-modules-prestashop-ecosysteme.webp
 featured: false
 difficulty: Débutant
 technologies:

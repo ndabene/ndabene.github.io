@@ -14,7 +14,7 @@ tags:
 excerpt: Les assistants IA changent radicalement la façon dont vos clients vous trouvent.
   Découvrez pourquoi les FAQ bien structurées sont votre meilleur atout pour être
   recommandé par ChatGPT, Gemini et Perplexity.
-image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.jpg
+image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

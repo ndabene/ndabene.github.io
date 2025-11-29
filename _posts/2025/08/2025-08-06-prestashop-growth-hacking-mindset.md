@@ -15,7 +15,7 @@ tags:
 excerpt: 'De l''artisanat logiciel à la scalabilité : pourquoi les éditeurs de modules
   sont les premiers growth hackers sans le savoir. Une réflexion sur les convergences
   philosophiques profondes.'
-image: /assets/images/blog/2025/07/2025-07-31-prestashop-growth-hacking-mindset.jpg
+image: /assets/images/blog/2025/07/2025-07-31-prestashop-growth-hacking-mindset.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

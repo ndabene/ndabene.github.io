@@ -17,7 +17,7 @@ tags:
 - resilience
 excerpt: >
   On nous répète que le "code propre" doit être strictement typé. C'est faux. À l'heure où nous devons intégrer des IA imprévisibles qui génèrent des données imparfaites, la souplesse native de PHP n'est pas une faiblesse, c'est un super-pouvoir de résilience.
-image: /assets/images/blog/2025/12/2025-12-12-php-flexible-typing-ai.jpg
+image: /assets/images/blog/2025/12/2025-12-12-php-flexible-typing-ai.webp
 difficulty: Avancé
 technologies:
 - PHP 8.x

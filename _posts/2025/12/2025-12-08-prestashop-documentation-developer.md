@@ -16,7 +16,7 @@ tags:
 - architecture-logicielle
 - symfony
 excerpt: '80% des "bugs" PrestaShop sont en réalité des erreurs d implémentation. Découvrez comment la documentation officielle peut transformer votre code et votre carrière.'
-image: /assets/images/blog/2025/12/2025-12-08-prestashop-documentation-developer.jpg
+image: /assets/images/blog/2025/12/2025-12-08-prestashop-documentation-developer.webp
 featured: false
 difficulty: Avancé
 technologies:

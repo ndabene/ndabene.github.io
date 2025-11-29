@@ -12,7 +12,7 @@ tags:
 excerpt: Découvrez Gemini 3.0, la nouvelle génération d'IA de Google qui repousse
   les limites du possible avec son raisonnement avancé et ses capacités multimodales
   révolutionnaires.
-image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.jpg
+image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

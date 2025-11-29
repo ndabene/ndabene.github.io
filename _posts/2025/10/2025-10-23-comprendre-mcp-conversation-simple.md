@@ -13,7 +13,7 @@ tags:
 - développement
 excerpt: Découvrez comment les IA peuvent accéder à vos fichiers et données grâce
   au MCP, expliqué à travers une conversation simple et pédagogique.
-image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.jpg
+image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.webp
 featured: true
 difficulty: Débutant
 technologies:

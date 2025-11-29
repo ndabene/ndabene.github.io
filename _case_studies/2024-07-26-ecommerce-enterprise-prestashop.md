@@ -42,9 +42,9 @@ results_metrics: |
   - **Enhanced Scalability:** The platform successfully handled a 5x increase in concurrent users without performance degradation.
   - **Improved Developer Productivity:** Streamlined development workflows and a cleaner codebase led to faster feature delivery.
 metrics_charts:
-- image: /assets/images/case-studies/ecommerce-perf-chart.png
+- image: /assets/images/case-studies/ecommerce-perf-chart.webp
   alt: "Performance Improvement Chart"
-- image: /assets/images/case-studies/ecommerce-revenue-chart.png
+- image: /assets/images/case-studies/ecommerce-revenue-chart.webp
   alt: "Revenue Increase Chart"
 team_leadership: |
   As the technical lead, I was responsible for:
@@ -58,9 +58,9 @@ key_learnings: |
   - **Team Empowerment:** Empowering developers with clear goals and the right tools leads to higher quality and faster delivery.
   - **Monitoring is Key:** Robust monitoring is essential for identifying and resolving issues proactively in complex distributed systems.
 screenshots:
-- image: /assets/images/case-studies/ecommerce-cs-1.jpg
+- image: /assets/images/case-studies/ecommerce-cs-1.webp
   alt: "PrestaShop Multi-store Dashboard"
-- image: /assets/images/case-studies/ecommerce-cs-2.jpg
+- image: /assets/images/case-studies/ecommerce-cs-2.webp
   alt: "Optimized Product Page"
 llm_summary: Architecting and optimizing a multi-store PrestaShop platform for a
   Fortune 500 retail client.
