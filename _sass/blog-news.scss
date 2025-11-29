@@ -226,15 +226,15 @@ $tag-hover-text: #fff;
     .hero-article-image {
       position: relative;
       width: 100%;
-      min-height: 400px;
-      max-height: 600px;
+      min-height: 267px;
+      max-height: 400px;
       aspect-ratio: 16 / 9;
       overflow: hidden;
       background: #f1f5f9;
 
       @media (max-width: 768px) {
-        min-height: 300px;
-        max-height: 450px;
+        min-height: 200px;
+        max-height: 300px;
         aspect-ratio: 4 / 3;
       }
 
@@ -2235,7 +2235,7 @@ $tag-hover-text: #fff;
       margin-bottom: 2rem;
 
       .hero-article-image {
-        height: 300px;
+        height: 200px;
       }
 
       .hero-article-content {
