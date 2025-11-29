@@ -16,7 +16,7 @@ tags:
 - future-of-work
 excerpt: "92% of professionals fear AI, but only 22% have actually tested it.
   Discover why AI is a growth opportunity, not a threat. Practical guide and real experiences."
-image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.jpg
+image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.webp
 featured: true
 difficulty: Beginner
 estimated_reading_time: 12 minutes

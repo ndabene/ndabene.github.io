@@ -14,7 +14,7 @@ tags:
 - automation
 excerpt: AI makes us faster... but also more dangerous. Discover the 8 invisible traps
   of generated code and how to transform them into superpowers.
-image: /assets/images/blog/2025/12/ia-pieges-developpeurs.jpg
+image: /assets/images/blog/2025/12/ia-pieges-developpeurs.webp
 featured: false
 difficulty: Intermediate
 technologies:

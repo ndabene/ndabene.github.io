@@ -16,7 +16,7 @@ description: Analysis of the evolution of the 'Back to School' market from $172.
   billion in 2024 to $230.1 billion projected in 2030, exploring the transformation
   from traditional retail to e-commerce.
 excerpt: Analysis of the evolution of the 'Back to School' market from $172.3 billion in 2024 to $230.1 billion projected in 2030, exploring the transformation from traditional retail to e-commerce.
-image: /assets/images/blog/2025/07/back-to-school-evolution.jpg
+image: /assets/images/blog/2025/07/back-to-school-evolution.webp
 llm_summary: Analysis of the evolution of the 'Back to School' market from $172.3
   billion in 2024 to $230.1 billion projected in 2030, exploring the transformation
   from traditional retail to e-commerce.

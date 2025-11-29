@@ -16,7 +16,7 @@ tags:
 excerpt: Shopify Plus or PrestaShop Enterprise? Behind the monthly price, the real
   issue is control over code, costs, and data. Complete analysis for a sustainable
   choice.
-image: /assets/images/blog/2025/09/2025-09-05-prestashop-enterprise-vs-shopify-plus.jpg
+image: /assets/images/blog/2025/09/2025-09-05-prestashop-enterprise-vs-shopify-plus.webp
 featured: false
 difficulty: Advanced
 technologies:

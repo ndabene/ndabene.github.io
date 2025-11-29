@@ -16,7 +16,7 @@ tags:
 excerpt: AI assistants are radically changing how your customers find you. Discover
   why well-structured FAQs are your best asset to be recommended by ChatGPT, Gemini,
   and Perplexity.
-image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.jpg
+image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.webp
 featured: true
 difficulty: Intermediate
 technologies:

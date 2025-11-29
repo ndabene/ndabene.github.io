@@ -11,7 +11,7 @@ tags:
 - développement
 excerpt: Votre boutique PrestaShop est bloquée ? Voici un guide simple entre pros
   pour nettoyer la base de données, éviter les surcharges et reprendre le contrôle.
-image: /assets/images/blog/2025/08/2025-08-07-prestashop-bloquee-nettoyage.jpg
+image: /assets/images/blog/2025/08/2025-08-07-prestashop-bloquee-nettoyage.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

@@ -17,7 +17,7 @@ tags:
 excerpt: The emergence of generative engines has catalyzed a fundamental transformation
   in digital marketing. Discover the complete hybrid framework for measuring GEO and
   transforming your digital strategy.
-image: /assets/images/blog/2025/11/2025-11-03-guide-complet-mesurer-geo.jpg
+image: /assets/images/blog/2025/11/2025-11-03-guide-complet-mesurer-geo.webp
 lang: en
 ref: guide-complet-mesurer-geo-nov2025
 featured: true

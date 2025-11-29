@@ -16,7 +16,7 @@ tags:
 - prestashop 9
 - formation
 excerpt: 'Demain, c''est le jour J ! La PrestaShop Developer Conference 2025 ouvre ses portes et, franchement, je ne tiens plus en place. Après 15 ans dans l''écosystème PrestaShop, je peux vous dire que ces Dev Conf sont bien plus que des conférences : ce sont les moments où l''avenir de la plateforme se dessine sous nos yeux. Retours d''expérience sur PrestaShop 9, bonnes pratiques de migration, IA, sécurité... Cette édition s''annonce exceptionnelle. Alors à la veille du grand jour, faisons ensemble le tour de ce qui nous attend !'
-image: /assets/images/blog/2025/11/j-1-avant-prestashop-developer-conference-2025.jpg
+image: /assets/images/blog/2025/11/j-1-avant-prestashop-developer-conference-2025.webp
 featured: true
 difficulty: Débutant
 technologies:

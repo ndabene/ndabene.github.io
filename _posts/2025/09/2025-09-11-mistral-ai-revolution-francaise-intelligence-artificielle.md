@@ -15,7 +15,7 @@ tags:
 excerpt: En moins de deux ans, Mistral AI est devenue la première décacorne française,
   transformant le paysage de l'intelligence artificielle européenne avec une valorisation
   atteignant 11,7 milliards d'euros.
-image: /assets/images/blog/2025/09/2025-09-11-mistral-ai-revolution.jpg
+image: /assets/images/blog/2025/09/2025-09-11-mistral-ai-revolution.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

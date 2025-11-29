@@ -12,7 +12,7 @@ tags:
 - sécurité
 excerpt: 'OpenAI lève les restrictions sur ChatGPT : découvrez les enjeux éthiques,
   commerciaux et sociétaux d''une décision qui bouleverse l''IA conversationnelle.'
-image: /assets/images/blog/2025/12/chatgpt-conversations-erotiques.jpg
+image: /assets/images/blog/2025/12/chatgpt-conversations-erotiques.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

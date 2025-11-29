@@ -14,7 +14,7 @@ tags:
 - sécurité
 excerpt: Découvrez comment PrestaShop Extension Validator transforme la création de
   modules en processus fiable et professionnel, garantissant qualité et sécurité.
-image: /assets/images/blog/2025/11/2025-01-24-prestashop-extension-validator.jpg
+image: /assets/images/blog/2025/11/2025-01-24-prestashop-extension-validator.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

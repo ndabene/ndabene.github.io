@@ -17,7 +17,7 @@ tags:
 - backend
 excerpt: >
   Vous pensez que le "Clean Code" est la seule voie ? Détrompez-vous. Parfois, l'efficacité brutale se cache dans les vieux greniers. J'ai fouillé le fichier Tools.php pour vous : voici 5 fonctions natives à utiliser absolument avant de recoder quoi que ce soit.
-image: /assets/images/blog/2025/12/2025-12-17-prestashop-tools-legacy.jpg
+image: /assets/images/blog/2025/12/2025-12-17-prestashop-tools-legacy.webp
 difficulty: Intermédiaire
 technologies:
 - PrestaShop 9

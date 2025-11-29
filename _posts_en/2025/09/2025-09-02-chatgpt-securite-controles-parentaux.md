@@ -15,7 +15,7 @@ tags:
 - security
 excerpt: 'OpenAI deploys an ambitious 120-day security plan for ChatGPT: parental
   controls, distress detection, and routing to advanced reasoning models.'
-image: /assets/images/blog/2025/09/2025-09-02-chatgpt-securite-controles-parentaux.jpg
+image: /assets/images/blog/2025/09/2025-09-02-chatgpt-securite-controles-parentaux.webp
 featured: true
 difficulty: Intermediate
 technologies:

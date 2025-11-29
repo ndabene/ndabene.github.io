@@ -17,7 +17,7 @@ tags:
 - resilience
 excerpt: >
   We're told that "clean code" must be strictly typed. That's wrong. At a time when we must integrate unpredictable AIs that generate imperfect data, PHP's native flexibility isn't a weakness—it's a resilience superpower.
-image: /assets/images/blog/2025/12/2025-12-12-php-flexible-typing-ai.jpg
+image: /assets/images/blog/2025/12/2025-12-12-php-flexible-typing-ai.webp
 difficulty: Advanced
 technologies:
 - PHP 8.x

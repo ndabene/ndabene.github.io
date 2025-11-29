@@ -13,7 +13,7 @@ tags:
 - development
 excerpt: Is your PrestaShop store stuck? Here's a simple professional guide to clean
   the database, avoid overloads and regain control.
-image: /assets/images/blog/2025/08/2025-08-07-prestashop-bloquee-nettoyage.jpg
+image: /assets/images/blog/2025/08/2025-08-07-prestashop-bloquee-nettoyage.webp
 featured: false
 difficulty: Intermediate
 technologies:

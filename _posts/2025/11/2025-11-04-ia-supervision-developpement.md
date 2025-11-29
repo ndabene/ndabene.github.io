@@ -14,7 +14,7 @@ tags:
 excerpt: 84% des développeurs utilisent l'IA, mais 45% du code généré contient des
   vulnérabilités. Découvrez pourquoi l'IA nécessite autant de supervision qu'un développeur
   junior.
-image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.jpg
+image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.webp
 featured: true
 difficulty: Intermédiaire
 technologies:
@@ -75,7 +75,7 @@ Les chiffres parlent d'eux-mêmes. L'adoption de l'IA dans le développement log
 
 Pourtant, derrière ces statistiques encourageantes se cache une réalité préoccupante. Des incidents récents illustrent parfaitement les risques : Replit dont l'IA a supprimé une base de données de production contenant 1 206 profils d'executives, Google Gemini qui a effacé des données utilisateur réelles, ou encore Sakana AI dont le système tentait de modifier son propre code pour étendre son temps d'exécution.
 
-![Paradoxe de l'adoption de l'IA : enthousiasme massif vs risques de sécurité élevés](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/b8147153-0798-4962-becd-9bf55155c75e/a5420f44.png)
+![Paradoxe de l'adoption de l'IA : enthousiasme massif vs risques de sécurité élevés](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/b8147153-0798-4962-becd-9bf55155c75e/a5420f44.webp)
 
 Ces incidents ne sont pas des cas isolés. Ils révèlent un problème systémique : l'IA est déployée massivement sans les garde-fous nécessaires. Comme me le confiait récemment un CTO : "Nous avons gagné 30% de productivité le premier mois, puis nous avons passé trois mois à corriger les bugs et vulnérabilités introduits par l'IA".
 
@@ -109,7 +109,7 @@ Un développeur junior typique suit une trajectoire d'apprentissage naturelle. I
 
 L'IA présente un profil radicalement différent. Comme l'explique un expert de Veracode : "Nos recherches révèlent que les modèles d'IA génératifs font les mauvais choix près de la moitié du temps, et cela ne s'améliore pas". Lisez bien cette dernière partie : **cela ne s'améliore pas**. Contrairement au développeur junior, l'IA ne progresse pas avec l'usage.
 
-![Comparaison entre développeur junior et assistant IA en termes de supervision](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/3caff0d4-bf5f-46d6-b393-54dfc79ceecb/e57db8ce.png)
+![Comparaison entre développeur junior et assistant IA en termes de supervision](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/3caff0d4-bf5f-46d6-b393-54dfc79ceecb/e57db8ce.webp)
 
 Les caractéristiques uniques de l'IA nécessitent une approche de supervision spécifique, et permanente.
 
@@ -129,7 +129,7 @@ L'attrait initial de l'IA réside dans sa promesse d'économies séduisante : d�
 
 C'est un peu comme acheter une voiture d'occasion à prix cassé sans vérifier l'état du moteur. Le prix d'achat est attractif, mais les réparations qui suivent peuvent coûter dix fois plus cher.
 
-![Pyramide des coûts cachés de l'IA non supervisée : de quelques euros mensuels à des millions en incidents](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/addc7c30-e5c5-4b03-b81f-8ee0939931d1/953f334d.png)
+![Pyramide des coûts cachés de l'IA non supervisée : de quelques euros mensuels à des millions en incidents](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d33b70db489fd1872147cbe340b5f440/addc7c30-e5c5-4b03-b81f-8ee0939931d1/953f334d.webp)
 
 ### L'Explosion des Coûts de Maintenance
 

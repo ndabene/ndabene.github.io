@@ -11,7 +11,7 @@ tags:
 - development
 excerpt: From setup to action! Create your first functional MCP tool that allows an
   AI to read files. Complete and explained code.
-image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.jpg
+image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.webp
 lang: en
 ref: creer-votre-premier-outil-mcp-l-outil-readfile-explique-nov2025
 featured: true

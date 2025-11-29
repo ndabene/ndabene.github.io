@@ -15,7 +15,7 @@ tags:
 - e-commerce
 excerpt: 'Discover PHP''s paradoxical history: maligned yet essential, this language
   still powers Facebook, WordPress, and millions of sites in 2025.'
-image: /assets/images/blog/2025/07/2025-07-30-php-histoire-langage.jpg
+image: /assets/images/blog/2025/07/2025-07-30-php-histoire-langage.webp
 featured: true
 difficulty: Intermediate
 technologies:

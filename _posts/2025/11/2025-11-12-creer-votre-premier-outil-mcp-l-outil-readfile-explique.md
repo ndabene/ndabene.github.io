@@ -11,7 +11,7 @@ tags:
 - développement
 excerpt: Du setup à l'action ! Créez votre premier outil MCP fonctionnel qui permet
   à une IA de lire des fichiers. Code complet et expliqué.
-image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.jpg
+image: /assets/images/blog/2025/11/2025-11-12-creer-outil-readfile-mcp.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

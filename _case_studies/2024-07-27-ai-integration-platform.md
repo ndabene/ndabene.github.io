@@ -41,9 +41,9 @@ results_metrics: |
   - **30% Faster Feature Delivery:** Streamlined data processing enabled quicker development and deployment of new AI-powered features.
   - **Enhanced Product Value:** Improved accuracy and speed of automated services led to higher customer satisfaction and retention.
 metrics_charts:
-- image: /assets/images/case-studies/ai-automation-chart.png
+- image: /assets/images/case-studies/ai-automation-chart.webp
   alt: "Automation Rate Increase Chart"
-- image: /assets/images/case-studies/ai-cost-reduction-chart.png
+- image: /assets/images/case-studies/ai-cost-reduction-chart.webp
   alt: "Operational Cost Reduction Chart"
 team_leadership: |
   My role involved:
@@ -57,9 +57,9 @@ key_learnings: |
   - **Cross-functional Collaboration:** Close collaboration between backend, ML, and DevOps teams is crucial for seamless integration.
   - **Observability:** Comprehensive monitoring of AI models in production is essential for performance, bias detection, and continuous improvement.
 screenshots:
-- image: /assets/images/case-studies/ai-platform-cs-1.jpg
+- image: /assets/images/case-studies/ai-platform-cs-1.webp
   alt: "AI-powered content moderation dashboard"
-- image: /assets/images/case-studies/ai-platform-cs-2.jpg
+- image: /assets/images/case-studies/ai-platform-cs-2.webp
   alt: "Data processing pipeline visualization"
 llm_summary: Seamlessly integrating machine learning capabilities into an 
   existing PHP SaaS application.

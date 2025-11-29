@@ -13,7 +13,7 @@ tags:
 - développement
 excerpt: Découvrez comment améliorer significativement les performances de vos modules
   PrestaShop grâce au lazy loading des services Symfony.
-image: /assets/images/blog/2025/10/2025-10-02-lazy-loading-prestashop.jpg
+image: /assets/images/blog/2025/10/2025-10-02-lazy-loading-prestashop.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

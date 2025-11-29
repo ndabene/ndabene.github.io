@@ -13,7 +13,7 @@ tags:
 - e-commerce
 excerpt: 'Découvrez l''histoire paradoxale de PHP : mal-aimé mais incontournable,
   ce langage propulse encore Facebook, WordPress et des millions de sites en 2025.'
-image: /assets/images/blog/2025/07/2025-07-30-php-histoire-langage.jpg
+image: /assets/images/blog/2025/07/2025-07-30-php-histoire-langage.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

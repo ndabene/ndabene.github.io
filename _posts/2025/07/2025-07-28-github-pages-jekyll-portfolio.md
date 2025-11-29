@@ -11,7 +11,7 @@ tags:
 - développement
 excerpt: Découvrez comment créer gratuitement un portfolio professionnel en ligne
   avec GitHub Pages et Jekyll. Guide complet pour développeurs et créatifs.
-image: /assets/images/blog/2025/07/2025-07-28-github-pages-jekyll-portfolio.jpg
+image: /assets/images/blog/2025/07/2025-07-28-github-pages-jekyll-portfolio.webp
 featured: false
 difficulty: Débutant
 technologies:
@@ -270,7 +270,7 @@ title: "Application E-commerce Moderne"
 date: 2025-01-15
 categories: [Projet, Ecommerce]
 tags: [PHP, JavaScript, MySQL]
-image: /assets/images/ecommerce-project.jpg
+image: /assets/images/ecommerce-project.webp
 demo_url: "https://demo-ecommerce.com"
 github_url: "https://github.com/vous/projet-ecommerce"
 ---

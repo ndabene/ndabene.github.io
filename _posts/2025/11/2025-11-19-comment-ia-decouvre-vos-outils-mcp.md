@@ -21,7 +21,7 @@ excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un 
   et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient
   réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
   en opportunités de croissance pour marchands et agences.'
-image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
+image: /assets/images/blog/2025/11/mcp-prestashop-banner.webp
 keywords:
 - PS MCP Server
 - MCP Tools Plus

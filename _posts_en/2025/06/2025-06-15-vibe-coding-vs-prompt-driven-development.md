@@ -17,7 +17,7 @@ tags:
 excerpt: 'Exploring two approaches to AI-assisted development: spontaneous Vibe Coding
   versus structured Prompt-Driven Development. Analysis of risks, benefits, and best
   practices for responsible code generation.'
-image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.jpg
+image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.webp
 featured: true
 llm_summary: 'Exploring two approaches to AI-assisted development: spontaneous Vibe
   Coding versus structured Prompt-Driven Development. Analysis of risks, benefits,

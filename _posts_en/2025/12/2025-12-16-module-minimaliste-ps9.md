@@ -16,7 +16,7 @@ tags:
 - prestashop-9
 - web-performance
 excerpt: 'Can a 50 KB module be worth more than a 10 MB behemoth? With PrestaShop 9, discover why a module''s value lies in what it doesn''t do.'
-image: /assets/images/blog/2025/12/2025-12-16-module-minimaliste-ps9.jpg
+image: /assets/images/blog/2025/12/2025-12-16-module-minimaliste-ps9.webp
 featured: false
 difficulty: Advanced
 technologies:

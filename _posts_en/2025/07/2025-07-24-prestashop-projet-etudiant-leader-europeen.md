@@ -18,7 +18,7 @@ excerpt: PrestaShop embodies one of the finest French entrepreneurial successes 
   generating 22 billion euros in sales for 300,000 merchants worldwide, this 20-year
   success story perfectly illustrates French innovation capacity against American
   industry giants.
-image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.jpg
+image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.webp
 featured: true
 difficulty: Intermediate
 technologies:

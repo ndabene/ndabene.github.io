@@ -14,7 +14,7 @@ tags:
 - développement
 excerpt: 'Claude Code débarque dans votre navigateur : découvrez comment l''IA agentique
   d''Anthropic bouleverse le workflow des développeurs PHP et JavaScript en 2025.'
-image: /assets/images/blog/2025/10/2025-10-21-claude-code-browser.jpg
+image: /assets/images/blog/2025/10/2025-10-21-claude-code-browser.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

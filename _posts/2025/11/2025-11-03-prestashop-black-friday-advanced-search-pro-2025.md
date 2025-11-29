@@ -14,7 +14,7 @@ tags:
 excerpt: Découvrez comment le module Advanced Search Pro peut transformer votre boutique
   PrestaShop en machine à ventes pour le Black Friday 2025 grâce à une recherche avancée
   et des facettes SEO optimisées.
-image: /assets/images/blog/2025/11/prestashop-advanced-search-black-friday-2025.jpg
+image: /assets/images/blog/2025/11/prestashop-advanced-search-black-friday-2025.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

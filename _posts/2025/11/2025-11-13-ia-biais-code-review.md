@@ -14,7 +14,7 @@ tags:
 excerpt: Et si l'IA rejetait ton code non pas parce qu'il est mauvais, mais parce
   qu'elle *pense* qu'il l'est ? Cet article explore les biais cachés des systèmes
   de code review automatisés et leurs conséquences sur nos pratiques de développement.
-image: /assets/images/blog/2025/11/ia-biais-code-review.jpg
+image: /assets/images/blog/2025/11/ia-biais-code-review.webp
 featured: true
 difficulty: Avancé
 estimated_reading_time: 10 minutes

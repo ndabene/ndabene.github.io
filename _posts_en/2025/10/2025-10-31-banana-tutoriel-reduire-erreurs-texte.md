@@ -15,7 +15,7 @@ tags:
 - prompt engineering
 excerpt: No method guarantees perfect text in Banana, but this guide compiles the
   best tips to minimize letter errors, accent mistakes, and placement issues.
-image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.jpg
+image: /assets/images/blog/2025/10/2025-10-31-banana-tutoriel.webp
 difficulty: Beginner
 technologies:
 - Banana
@@ -117,7 +117,7 @@ In this case, add to your prompt:
 Or temporarily generate with a neutral version:
 > "beso1n" → to correct later in Canva or Photoshop.
 
-![Example image generated with Banana](/assets/images/blog/article_content/2025-10-31-banana-exemple-1.jpg)
+![Example image generated with Banana](/assets/images/blog/article_content/2025-10-31-banana-exemple-1.webp)
 *Example of generation with optimized text*
 
 ---
@@ -149,7 +149,7 @@ Use **white with black outline** to maximize legibility.
 
 This sentence reduces hallucinations and random artistic fonts.
 
-![Before/after optimization comparison](/assets/images/blog/article_content/2025-10-31-banana-exemple-2.jpg)
+![Before/after optimization comparison](/assets/images/blog/article_content/2025-10-31-banana-exemple-2.webp)
 *Comparison: basic prompt vs optimized prompt*
 
 ---
@@ -194,7 +194,7 @@ Before exporting your image, check these points:
 - [ ] Text is well centered
 - [ ] Square format (1080×1080) respected
 
-![Visual validation checklist](/assets/images/blog/article_content/2025-10-31-banana-exemple-3.jpg)
+![Visual validation checklist](/assets/images/blog/article_content/2025-10-31-banana-exemple-3.webp)
 *Visual checklist: points to verify on each generation*
 
 ---

@@ -16,7 +16,7 @@ tags:
 excerpt: 84% of developers use AI, but only 34% truly master this collaboration. Discover
   concrete methods to transform AI from a simple code generator into a true development
   partner.
-image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.jpg
+image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.webp
 featured: true
 difficulty: Intermediate
 technologies:

@@ -16,7 +16,7 @@ tags:
 - technical-debt
 - mcp-protocol
 excerpt: '300,000 active stores can''t be wrong: discover why PrestaShop''s proven architecture often outperforms "modern" solutions. Stability, Symfony, and ROI.'
-image: /assets/images/blog/2025/12/2025-12-05-prestashop-vs-modernite.jpg
+image: /assets/images/blog/2025/12/2025-12-05-prestashop-vs-modernite.webp
 featured: true
 difficulty: Intermediate
 technologies:

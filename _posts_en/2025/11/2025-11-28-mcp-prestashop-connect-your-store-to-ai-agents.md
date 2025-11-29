@@ -16,7 +16,7 @@ tags:
 - AI Agent
 - Model Context Protocol
 excerpt: 'Complete step-by-step tutorial to install and configure ps_mcp_server on PrestaShop. Learn how to create your first MCP tools, expose your business logic to AI agents, and automate your e-commerce with Claude, ChatGPT or Gemini.'
-image: /assets/images/blog/2025/11/mcp-prestashop-banner.jpg
+image: /assets/images/blog/2025/11/mcp-prestashop-banner.webp
 featured: true
 difficulty: Advanced
 technologies:

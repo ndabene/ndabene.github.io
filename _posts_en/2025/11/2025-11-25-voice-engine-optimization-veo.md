@@ -16,7 +16,7 @@ tags:
 excerpt: Voice optimization (VEO) is transforming search in 2025. With 8.4 billion
   active voice assistants and 20% of users adopting voice, ignoring VEO means losing
   your audience. Discover the 3 technical pillars to dominate voice search.
-image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.jpg
+image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.webp
 featured: false
 difficulty: Intermediate
 technologies:
@@ -172,7 +172,7 @@ Voice assistants like information that is easy to read. Use bulleted or numbered
 
 1. Reduce file size (under 100 KB if possible)
 2. Use descriptive and natural alt attribute
-3. Name the file descriptively (not image1.jpg)
+3. Name the file descriptively (not image1.webp)
 4. Place the image near the text it illustrates
 ```
 

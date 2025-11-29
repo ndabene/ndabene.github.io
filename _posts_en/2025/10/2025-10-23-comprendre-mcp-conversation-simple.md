@@ -15,7 +15,7 @@ tags:
 - development
 excerpt: Discover how AIs can access your files and data through MCP, explained through
   a simple and educational conversation.
-image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.jpg
+image: /assets/images/blog/2025/10/2025-10-23-comprendre-mcp-conversation-simple.webp
 featured: true
 difficulty: Beginner
 technologies:

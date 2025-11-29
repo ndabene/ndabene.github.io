@@ -14,7 +14,7 @@ tags:
 - e-commerce
 excerpt: Découvrez comment Gemini révolutionne Google Shopping avec l'essayage virtuel,
   les briefings IA et le suivi intelligent des prix. Guide complet 2025.
-image: /assets/images/blog/2025/09/2025-09-18-google-shopping-gemini-revolution.jpg
+image: /assets/images/blog/2025/09/2025-09-18-google-shopping-gemini-revolution.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

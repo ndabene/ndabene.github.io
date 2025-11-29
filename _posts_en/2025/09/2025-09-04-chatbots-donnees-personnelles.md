@@ -15,7 +15,7 @@ tags:
 excerpt: 'Two international studies sound the alarm: AI-based chatbots and browsing
   assistants push internet users to disclose sensitive information at unprecedented
   levels.'
-image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.jpg
+image: /assets/images/blog/2025/09/2025-09-04-chatbots-donnees-personnelles.webp
 featured: true
 difficulty: Intermediate
 technologies:

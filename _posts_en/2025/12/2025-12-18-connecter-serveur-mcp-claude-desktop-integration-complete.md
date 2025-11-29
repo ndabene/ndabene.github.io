@@ -12,7 +12,7 @@ tags:
 - development
 excerpt: 'The long-awaited moment: let''s connect your secured MCP server to Claude
   Desktop and see the magic happen in real conditions.'
-image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.jpg
+image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.webp
 featured: true
 difficulty: Intermediate
 technologies:

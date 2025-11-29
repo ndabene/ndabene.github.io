@@ -16,7 +16,7 @@ tags:
 - souverainete-numerique
 - hebergement-web
 excerpt: 'Le SaaS est-il un piège doré ? Découvrez pourquoi le modèle "propriétaire" de PrestaShop offre un meilleur ROI à long terme que la location logicielle.'
-image: /assets/images/blog/2025/12/2025-12-15-prestashop-vs-saas-strategy.jpg
+image: /assets/images/blog/2025/12/2025-12-15-prestashop-vs-saas-strategy.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

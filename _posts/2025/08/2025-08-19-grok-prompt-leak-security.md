@@ -13,7 +13,7 @@ tags:
 - sécurité
 excerpt: L'exposition accidentelle des prompts système de Grok révèle des failles
   critiques de sécurité. Analyse technique des risques et bonnes pratiques.
-image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.jpg
+image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

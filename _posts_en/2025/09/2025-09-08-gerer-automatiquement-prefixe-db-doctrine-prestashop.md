@@ -14,7 +14,7 @@ tags:
 - development
 excerpt: Discover how to solve the 'Base table or view not found' error with Doctrine
   in PrestaShop by automating dynamic table prefix management.
-image: /assets/images/blog/2025/09/2025-09-08-doctrine-prestashop-prefix.jpg
+image: /assets/images/blog/2025/09/2025-09-08-doctrine-prestashop-prefix.webp
 featured: false
 difficulty: Intermediate
 technologies:

@@ -15,7 +15,7 @@ tags:
 excerpt: Découvrez Cline, l'extension VSCode qui transforme votre IDE en assistant
   de développement autonome. Focus sur l'intégration de modèles IA locaux pour les
   agences PrestaShop.
-image: /assets/images/blog/2025/09/2025-09-02-cline-prestashop-assistant-ia.jpg
+image: /assets/images/blog/2025/09/2025-09-02-cline-prestashop-assistant-ia.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

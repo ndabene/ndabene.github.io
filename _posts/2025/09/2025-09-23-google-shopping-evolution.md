@@ -13,7 +13,7 @@ tags:
 - e-commerce
 excerpt: 'De simple comparateur gratuit à plateforme IA sophistiquée : découvrez 23
   ans d''évolution révolutionnaire de Google Shopping.'
-image: /assets/images/blog/2025/09/2025-09-23-google-shopping-evolution.jpg
+image: /assets/images/blog/2025/09/2025-09-23-google-shopping-evolution.webp
 featured: true
 difficulty: Intermédiaire
 technologies:
@@ -51,7 +51,7 @@ faq:
 
 Google Shopping représente aujourd'hui l'un des leviers les plus puissants du commerce électronique, responsable de 70% du chiffre d'affaires de la publicité en ligne générée par Google Ads. Cette plateforme, qui a révolutionné la façon dont nous découvrons et comparons les produits en ligne, a connu une évolution remarquable depuis ses humbles débuts. De simple comparateur gratuit lancé en 2002 sous le nom de "Froogle" à plateforme sophistiquée dopée à l'intelligence artificielle en 2025, Google Shopping illustre parfaitement l'adaptation constante de Google aux besoins changeants du commerce numérique.
 
-![Timeline de l'évolution de Google Shopping de ses débuts à 2025](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/87a0785ce4cd4d054ebd6371c895dd09/7f6565d1-3271-479c-a746-f4fee2d651b8/9803d130.png "Timeline de l'évolution de Google Shopping de ses débuts à 2025")
+![Timeline de l'évolution de Google Shopping de ses débuts à 2025](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/87a0785ce4cd4d054ebd6371c895dd09/7f6565d1-3271-479c-a746-f4fee2d651b8/9803d130.webp "Timeline de l'évolution de Google Shopping de ses débuts à 2025")
 
 ## Introduction
 
@@ -69,7 +69,7 @@ Le fonctionnement était rudimentaire mais révolutionnaire pour l'époque : les
 
 Cette approche tranchait radicalement avec les modèles économiques des comparateurs de prix traditionnels de l'époque comme Kelkoo. Google privilégiait alors la pertinence des résultats basée sur son algorithme de recherche, proche de celui du moteur de recherche principal, plutôt que sur la capacité de paiement des marchands. Cette philosophie reflétait les valeurs originelles de Google : organiser l'information mondiale et la rendre universellement accessible et utile.
 
-![Google Shopping free listings emphasize ranking first on product searches in 2024](https://img.youtube.com/vi/bkXhgvLXPKc/maxresdefault.jpg "Google Shopping free listings emphasize ranking first on product searches in 2024")
+![Google Shopping free listings emphasize ranking first on product searches in 2024](https://img.youtube.com/vi/bkXhgvLXPKc/maxresdefault.webp "Google Shopping free listings emphasize ranking first on product searches in 2024")
 
 ## La Professionnalisation : Google Product Search (2007-2012)
 
@@ -105,7 +105,7 @@ La monétisation de Google Shopping transforme radicalement le paysage du commer
 
 Cette période voit s'intensifier la rivalité entre Google et Amazon. En 2018, Amazon représente déjà une menace sérieuse pour Google avec 55% des recherches de produits aux États-Unis initiées directement sur sa plateforme. Pour contrer cette montée en puissance, Google lance discrètement Shopping Actions en France, transformant progressivement son comparateur en véritable marketplace.
 
-![Parts de marché publicitaires Google vs Amazon 2018-2019](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/495c4b97030463f0ff05abf2d047c73d9ce89832.png "Parts de marché publicitaires Google vs Amazon 2018-2019")
+![Parts de marché publicitaires Google vs Amazon 2018-2019](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/495c4b97030463f0ff05abf2d047c73d9ce89832.webp "Parts de marché publicitaires Google vs Amazon 2018-2019")
 
 ## Le Retour aux Sources : Listings Gratuits (2020-2023)
 
@@ -125,7 +125,7 @@ Le nouveau Google Shopping adopte un modèle hybride inédit combinant listings 
 
 Parallèlement, Google déploie le programme "Surfaces Across Google", permettant aux produits d'apparaître sur l'ensemble de l'écosystème : Google Search, Google Images, Google Lens, YouTube et Google Maps. Cette omniprésence renforce considérablement la portée des annonces produits, transformant Google Shopping en véritable hub du commerce électronique.
 
-![Interface Google Shopping avec listings payants et gratuits](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/f915658df376367306f9ac39091d75987f26d20c.png "Interface Google Shopping avec listings payants et gratuits")
+![Interface Google Shopping avec listings payants et gratuits](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/f915658df376367306f9ac39091d75987f26d20c.webp "Interface Google Shopping avec listings payants et gratuits")
 
 ## L'Ère de l'Intelligence Artificielle : La Transformation 2024
 
@@ -141,7 +141,7 @@ Google introduit Product Studio, une suite d'outils permettant de **générer de
 
 Les essais virtuels font également leur apparition pour les vêtements masculins et féminins, permettant aux consommateurs de **visualiser les produits sur différents mannequins**. Cette innovation réduit considérablement les retours et améliore l'expérience d'achat en ligne.
 
-![Comparaison Google Merchant Center Classic vs Next](https://i0.wp.com/blog.adnabu.com/wp-content/uploads/image-91.png?resize=876%2C645\&ssl=1 "Comparaison Google Merchant Center Classic vs Next")
+![Comparaison Google Merchant Center Classic vs Next](https://i0.wp.com/blog.adnabu.com/wp-content/uploads/image-91.webp?resize=876%2C645\&ssl=1 "Comparaison Google Merchant Center Classic vs Next")
 
 ## L'Avenir Immédiat : Google Shopping 2025
 
@@ -161,7 +161,7 @@ La page d'accueil de Google Shopping devient entièrement personnalisée, prése
 
 Google Shopping 2025 introduit des **outils sophistiqués de comparaison de prix et de suivi des fluctuations**. Une section dédiée aux "deals personnalisés" permet de consulter rapidement les offres correspondant aux habitudes de chaque utilisateur. Les alertes automatiques informent les consommateurs des baisses de prix sur leurs produits favoris, optimisant leurs décisions d'achat.
 
-![Merchant Center Dashboard](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/7546ceea932eb7b7923f85f0c0705da87064988b.png)
+![Merchant Center Dashboard](https://pplx-res.cloudinary.com/image/upload/v1756967555/pplx_project_search_images/7546ceea932eb7b7923f85f0c0705da87064988b.webp)
 
 ## Impact Économique et Statistiques Clés
 

@@ -12,7 +12,7 @@ tags:
 - développement
 excerpt: Guide pratique pour développer des modules PrestaShop compatibles versions
   8 et 9 malgré la migration Tactician vers Symfony Messenger.
-image: /assets/images/blog/2025/08/2025-08-13-prestashop-command-bus-compatibility.jpg
+image: /assets/images/blog/2025/08/2025-08-13-prestashop-command-bus-compatibility.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

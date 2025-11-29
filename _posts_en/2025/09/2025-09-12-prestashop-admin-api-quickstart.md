@@ -15,7 +15,7 @@ tags:
 - security
 excerpt: A pedagogical guide to create your first endpoints in PrestaShop 9 Admin
   API. Discover the 8 essential concepts and start contributing today.
-image: /assets/images/blog/2025/09/2025-09-12-prestashop-admin-api-quickstart.jpg
+image: /assets/images/blog/2025/09/2025-09-12-prestashop-admin-api-quickstart.webp
 featured: true
 difficulty: Intermediate
 technologies:
@@ -48,7 +48,7 @@ faq:
 
 # Quick Start: Contributing Quickly to PrestaShop 9 Admin API
 
-![Mind map of 8 essential concepts for PrestaShop 9 Admin API](/en/assets/images/blog/article_content/2025-09-12-carte-mental.png)
+![Mind map of 8 essential concepts for PrestaShop 9 Admin API](/en/assets/images/blog/article_content/2025-09-12-carte-mental.webp)
 
 Contributing to **PrestaShop 9's new Admin API** can seem intimidating.
 We read words like **CQRS**, **API Platform**, **OAuth2**... and many developers think:

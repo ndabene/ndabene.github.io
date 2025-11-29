@@ -14,7 +14,7 @@ tags:
 excerpt: Découvrez l'Agent Builder d'OpenAI, la plateforme révolutionnaire lancée
   en octobre 2025 qui permet à chacun de créer des assistants IA personnalisés sans
   coder. Une démocratisation de l'automatisation intelligente.
-image: /assets/images/blog/2025/10/2025-10-16-openai-agent-builder.jpg
+image: /assets/images/blog/2025/10/2025-10-16-openai-agent-builder.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

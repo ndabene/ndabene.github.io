@@ -14,7 +14,7 @@ tags:
 excerpt: 84% des développeurs utilisent l'IA, mais seuls 34% maîtrisent réellement
   cette collaboration. Découvrez les méthodes concrètes pour transformer l'IA d'un
   simple générateur de code en véritable partenaire de développement.
-image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.jpg
+image: /assets/images/blog/2025/09/2025-09-22-coder-era-ia.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

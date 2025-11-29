@@ -17,7 +17,7 @@ tags:
 - prestashop
 excerpt: >
   Think you need to learn Python and complex mathematics to work with AI? Wrong. Python is the language of researchers who create models. PHP is the language of "Makers" who sell them. Discover why your current expertise is worth gold.
-image: /assets/images/blog/php-vs-python-ai.jpg
+image: /assets/images/blog/php-vs-python-ai.webp
 difficulty: Beginner
 technologies:
 - PHP

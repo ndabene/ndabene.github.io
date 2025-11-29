@@ -11,7 +11,7 @@ tags:
 - développement
 excerpt: Passons à la pratique ! Découvrez comment initialiser un projet TypeScript
   pour créer votre premier serveur MCP en quelques minutes.
-image: /assets/images/blog/2025/10/2025-10-30-setup-serveur-mcp-typescript.jpg
+image: /assets/images/blog/2025/10/2025-10-30-setup-serveur-mcp-typescript.webp
 featured: false
 difficulty: Débutant
 technologies:

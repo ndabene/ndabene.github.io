@@ -13,7 +13,7 @@ tags:
 - automatisation
 excerpt: 'Google lance Gemini 2.5 Flash Image : édition visuelle par simple conversation,
   fusion intelligente d''images et créativité décuplée pour développeurs et créateurs.'
-image: /assets/images/blog/2025/08/2025-08-27-gemini-flash-image-revolution.jpg
+image: /assets/images/blog/2025/08/2025-08-27-gemini-flash-image-revolution.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

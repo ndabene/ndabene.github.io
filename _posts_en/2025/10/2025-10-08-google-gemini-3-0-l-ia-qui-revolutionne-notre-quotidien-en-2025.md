@@ -13,7 +13,7 @@ tags:
 - development
 excerpt: Discover Gemini 3.0, Google's new generation of AI that pushes the boundaries
   of what's possible with its advanced reasoning and revolutionary multimodal capabilities.
-image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.jpg
+image: /assets/images/blog/2025/10/2025-10-08-google-gemini-3.webp
 featured: true
 difficulty: Intermediate
 technologies:

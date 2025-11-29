@@ -14,7 +14,7 @@ tags:
 - automatisation
 excerpt: L'IA nous rend plus rapides… mais aussi plus dangereux. Découvrez les 8 pièges
   invisibles du code généré et comment les transformer en super-pouvoirs.
-image: /assets/images/blog/2025/12/ia-pieges-developpeurs.jpg
+image: /assets/images/blog/2025/12/ia-pieges-developpeurs.webp
 featured: false
 difficulty: Intermédiaire
 technologies:

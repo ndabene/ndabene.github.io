@@ -15,7 +15,7 @@ tags:
 - development
 excerpt: Discover Anthropic's Model Context Protocol, the protocol that allows AI
   to directly access your external data. Complete guide with practical examples.
-image: /assets/images/blog/2025/08/2025-08-03-mcp-protocol-guide.jpg
+image: /assets/images/blog/2025/08/2025-08-03-mcp-protocol-guide.webp
 featured: true
 difficulty: Intermediate
 technologies:

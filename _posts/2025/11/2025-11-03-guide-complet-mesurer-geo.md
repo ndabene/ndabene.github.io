@@ -17,7 +17,7 @@ tags:
 excerpt: L'émergence des moteurs génératifs a catalysé une transformation fondamentale
   du marketing numérique. Découvrez le cadre hybride complet pour mesurer le GEO et
   transformer votre stratégie digitale.
-image: /assets/images/blog/2025/11/2025-11-03-guide-complet-mesurer-geo.jpg
+image: /assets/images/blog/2025/11/2025-11-03-guide-complet-mesurer-geo.webp
 featured: true
 difficulty: Avancé
 technologies:

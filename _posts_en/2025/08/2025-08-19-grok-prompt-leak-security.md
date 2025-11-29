@@ -15,7 +15,7 @@ tags:
 - security
 excerpt: Grok's accidental exposure of system prompts reveals critical security flaws.
   Technical analysis of risks and best practices.
-image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.jpg
+image: /assets/images/blog/2025/08/2025-08-19-grok-prompt-leak-security.webp
 featured: true
 difficulty: Intermediate
 technologies:

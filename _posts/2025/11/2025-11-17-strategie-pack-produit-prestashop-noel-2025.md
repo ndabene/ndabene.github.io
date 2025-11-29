@@ -22,7 +22,7 @@ excerpt: 'À quelques semaines de Noël, la pression monte. Plutôt que de céde
   de dernière minute en une opportunité de vente exceptionnelle.
 
   '
-image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.jpg
+image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.webp
 keywords:
 - prestashop
 - pack produit

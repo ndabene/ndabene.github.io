@@ -12,7 +12,7 @@ tags:
 - développement
 excerpt: 'Le moment tant attendu : connectons votre serveur MCP sécurisé à Claude
   Desktop et voyons la magie opérer en conditions réelles.'
-image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.jpg
+image: /assets/images/blog/2025/12/2025-12-18-connecter-serveur-mcp-claude-desktop.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

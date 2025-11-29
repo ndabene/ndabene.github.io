@@ -19,7 +19,7 @@ excerpt: In 2025, up to 73% of traffic on some Shopify stores comes from bots. T
   explosion, combined with the inability to activate Cloudflare proxy, creates massive
   distortion in analytics data and corrupts ad campaigns. A documented finding with
   major economic consequences for merchants.
-image: /assets/images/blog/2025/11/shopify-bot-traffic-problem.jpg
+image: /assets/images/blog/2025/11/shopify-bot-traffic-problem.webp
 featured: false
 difficulty: Intermediate
 technologies:

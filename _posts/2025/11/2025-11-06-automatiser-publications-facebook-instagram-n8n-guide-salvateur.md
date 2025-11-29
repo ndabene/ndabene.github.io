@@ -12,7 +12,7 @@ tags:
 - automatisation
 excerpt: Si vous pensiez que l'intégration Meta serait un jeu d'enfant, ce guide détaillé
   va vous éviter des heures de frustration et vous montrer la voie.
-image: /assets/images/blog/2025/11/automatisation-meta-n8n.jpg
+image: /assets/images/blog/2025/11/automatisation-meta-n8n.webp
 featured: true
 difficulty: Intermédiaire
 technologies:

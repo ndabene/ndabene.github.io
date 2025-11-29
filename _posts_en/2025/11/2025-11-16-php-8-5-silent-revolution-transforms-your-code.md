@@ -16,7 +16,7 @@ tags:
 excerpt: Discover how PHP 8.5's pipe operator, mandatory OPcache, and 40+ improvements
   deliver 5-10% faster apps, 10x faster debugging, and bulletproof security. Everything
   developers need for high-performance applications.
-image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.jpeg
+image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
 featured: true
 difficulty: Intermediate
 technologies:
@@ -435,10 +435,10 @@ echo $base;     // "https://api.example.com/v1" (unchanged)
 
 ```php
 $base = Uri::parse('https://example.com/blog/');
-$relative = Uri::parse('../images/logo.png');
+$relative = Uri::parse('../images/logo.webp');
 
 $resolved = $base->resolve($relative);
-echo $resolved; // "https://example.com/images/logo.png"
+echo $resolved; // "https://example.com/images/logo.webp"
 ```
 
 ### Security by Design

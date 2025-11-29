@@ -16,7 +16,7 @@ tags:
 - e-commerce
 excerpt: In less than two years, Mistral AI became France's first decacorn, transforming
   the European artificial intelligence landscape with a valuation reaching €11.7 billion.
-image: /assets/images/blog/2025/09/2025-09-11-mistral-ai-revolution.jpg
+image: /assets/images/blog/2025/09/2025-09-11-mistral-ai-revolution.webp
 featured: true
 difficulty: Intermediate
 technologies:

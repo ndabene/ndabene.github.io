@@ -12,7 +12,7 @@ tags:
 - automation
 excerpt: If you thought Meta integration would be child's play, this detailed guide
   will save you hours of frustration and show you the way.
-image: /assets/images/blog/2025/11/automatisation-meta-n8n.jpg
+image: /assets/images/blog/2025/11/automatisation-meta-n8n.webp
 lang: en
 ref: automatiser-publications-facebook-instagram-n8n-guide-salvateur-nov2025
 featured: true
