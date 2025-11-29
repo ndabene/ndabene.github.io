@@ -40,56 +40,6 @@ llm_topics:
                 {% include hero-article.html post=hero_post %}
             {% endif %}
 
-            <!-- FEATURED ARTICLES (3 random articles randomized at build time, except the most recent) -->
-            {% if published_posts.size > 1 %}
-                {% assign shuffled_posts = published_posts | shuffle_except_first %}
-                <section class="featured-articles-grid">
-                    {% for post in shuffled_posts limit: 3 %}
-                        <article class="featured-article-card">
-                            <a href="{{ post.url | relative_url }}" class="featured-card-link">
-                                <div class="featured-card-image">
-                                    {% if post.image %}
-                                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-                                    {% endif %}
-                                    <div class="featured-card-overlay"></div>
-                                    {% if post.categories.size > 0 %}
-                                        <span class="featured-category-badge">{{ post.categories | first }}</span>
-                                    {% endif %}
-                                </div>
-                                <div class="featured-card-content">
-                                    <div class="featured-card-meta">
-                                        <time datetime="{{ post.date | date_to_xmlschema }}">
-                                            {{ post.date | date: '%B %d, %Y' }}
-                                        </time>
-                                        {% if post.estimated_reading_time %}
-                                            <span class="reading-time">
-                                                {{ post.estimated_reading_time | remove: ' minutes' | remove: ' minute' }} min
-                                            </span>
-                                        {% endif %}
-                                    </div>
-                                    <h3 class="featured-card-title">{{ post.title }}</h3>
-                                    {% if post.excerpt %}
-                                        <p class="featured-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-                                    {% endif %}
-                                    <div class="featured-card-footer">
-                                        {% if post.tags %}
-                                            <div class="featured-tags">
-                                                {% for tag in post.tags limit: 2 %}
-                                                    <span class="tag-pill">{{ tag }}</span>
-                                                {% endfor %}
-                                            </div>
-                                        {% endif %}
-                                        <span class="featured-read-more">
-                                            Read <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    {% endfor %}
-                </section>
-            {% endif %}
-
             <div class="blog-grid-news">
                 <div class="main-blog-content-news">
                     <!-- Filters and sorting -->
@@ -297,72 +247,7 @@ llm_topics:
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
 
 <script>
-// Featured articles randomization - Press Portal
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to generate 3 random featured articles
-    function renderRandomFeaturedArticles() {
-        const dataContainer = document.querySelector('.featured-articles-data');
-        const gridContainer = document.getElementById('featured-articles-grid');
-
-        if (!dataContainer || !gridContainer) return;
-
-        const allArticles = Array.from(dataContainer.querySelectorAll('.featured-article-data'));
-        if (allArticles.length === 0) return;
-
-        // Shuffle and take 3 random articles
-        const shuffled = allArticles.sort(() => Math.random() - 0.5);
-        const randomArticles = shuffled.slice(0, 3);
-
-        // Generate HTML
-        let html = '';
-        randomArticles.forEach(article => {
-            const url = article.dataset.url || '#';
-            const title = article.dataset.title || 'Untitled';
-            const image = article.dataset.image || '/assets/images/default-post.jpg';
-            const category = article.dataset.category || '';
-            const categorySlug = article.dataset.categorySlug || '';
-            const dateFormatted = article.dataset.dateFormatted || '';
-            const readTime = article.dataset.readTime || '5';
-            const excerpt = article.dataset.excerpt || '';
-            const tagsStr = article.dataset.tags || '';
-            const tags = tagsStr ? tagsStr.split(',') : [];
-
-            const categoryBadge = category ? '<span class="featured-category-badge" data-category="' + categorySlug + '">' + category + '</span>' : '';
-
-            const tagsHtml = tags.length > 0 ?
-                '<div class="featured-tags">' +
-                    tags.map(tag => '<span class="tag-pill">#' + tag.trim() + '</span>').join('') +
-                '</div>' : '';
-
-            html += '<article class="featured-article-card">' +
-                '<a href="' + url + '" class="featured-card-link">' +
-                    '<div class="featured-card-image">' +
-                        '<img src="' + image + '" alt="' + title + '" loading="lazy">' +
-                        categoryBadge +
-                        '<div class="featured-card-overlay"></div>' +
-                    '</div>' +
-                    '<div class="featured-card-content">' +
-                        '<div class="featured-card-meta">' +
-                            '<time><i class="fas fa-calendar-alt"></i> ' + dateFormatted + '</time>' +
-                            '<span class="reading-time"><i class="fas fa-clock"></i> ' + readTime + ' min</span>' +
-                        '</div>' +
-                        '<h3 class="featured-card-title">' + title + '</h3>' +
-                        '<p class="featured-card-excerpt">' + excerpt + '</p>' +
-                        '<div class="featured-card-footer">' +
-                            tagsHtml +
-                            '<span class="featured-read-more">Read <i class="fas fa-arrow-right"></i></span>' +
-                        '</div>' +
-                    '</div>' +
-                '</a>' +
-            '</article>';
-        });
-
-        gridContainer.innerHTML = html;
-    }
-
-    // Execute on load
-    renderRandomFeaturedArticles();
-
     // Toggle filters
     const toggleFiltersBtn = document.getElementById('toggle-filters');
     const filtersContent = document.getElementById('filters-content');
