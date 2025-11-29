@@ -19,8 +19,3 @@ Thumbs.db
 # Fichiers d'analyse temporaires
 analyze_tags.py
 tag_analysis_report.txt
-
-# Images WebP générées automatiquement par GitHub Actions
-# Ces fichiers sont créés lors du build CI et ne doivent PAS être committés
-assets/images/**/*.webp
-*.webp
