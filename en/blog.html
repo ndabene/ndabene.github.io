@@ -40,10 +40,9 @@ llm_topics:
                 {% include hero-article.html post=hero_post %}
             {% endif %}
 
-            <!-- FEATURED ARTICLES (3 random articles randomized at build time) -->
+            <!-- FEATURED ARTICLES (3 random articles randomized at build time, except the most recent) -->
             {% if published_posts.size > 1 %}
-                {% assign remaining_posts = published_posts | offset: 1 %}
-                {% assign shuffled_posts = remaining_posts | shuffle %}
+                {% assign shuffled_posts = published_posts | shuffle_except_first %}
                 <section class="featured-articles-grid">
                     {% for post in shuffled_posts limit: 3 %}
                         <article class="featured-article-card">

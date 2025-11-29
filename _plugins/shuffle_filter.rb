@@ -21,6 +21,16 @@ module Jekyll
       return input unless input.respond_to?(:shuffle)
       input.shuffle
     end
+
+    # Shuffle all items except the first one
+    # Useful for randomizing articles while keeping the most recent one separate
+    def shuffle_except_first(input)
+      return input unless input.respond_to?(:shuffle)
+      return input if input.size <= 1
+
+      # Take all elements except the first and shuffle them
+      input[1..-1].shuffle
+    end
   end
 end
 
