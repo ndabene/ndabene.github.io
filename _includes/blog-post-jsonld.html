@@ -145,13 +145,13 @@
       "author": {
         "@type": "{% if citation.author_type %}{{ citation.author_type }}{% else %}Person{% endif %}",
         "name": "{{ citation.author }}"
-      },
+      }{% if citation.publisher or citation.date %},{% endif %}
       {% endif %}
       {% if citation.publisher %}
       "publisher": {
         "@type": "Organization",
         "name": "{{ citation.publisher }}"
-      },
+      }{% if citation.date %},{% endif %}
       {% endif %}
       {% if citation.date %}
       "datePublished": "{{ citation.date }}"
@@ -170,11 +170,9 @@
       {% if source.organization %}
       "sourceOrganization": {
         "@type": "Organization",
-        "name": "{{ source.organization }}",
-        {% if source.organization_url %}
-        "url": "{{ source.organization_url }}"
-        {% endif %}
-      },
+        "name": "{{ source.organization }}"{% if source.organization_url %},
+        "url": "{{ source.organization_url }}"{% endif %}
+      }{% if source.date %},{% endif %}
       {% endif %}
       {% if source.date %}
       "datePublished": "{{ source.date }}"

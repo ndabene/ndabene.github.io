@@ -43,6 +43,7 @@
     "value": "{{ page.howto.estimated_cost.value | default: '0' }}"
   },
   {% endif %}
+  {% if page.howto.tools and page.howto.tools.size > 0 %}
   "tool": [
     {% for tool in page.howto.tools %}
     {
@@ -51,6 +52,8 @@
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
+  {% endif %}
+  {% if page.howto.supplies and page.howto.supplies.size > 0 %}
   "supply": [
     {% for supply in page.howto.supplies %}
     {
@@ -59,16 +62,15 @@
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
+  {% endif %}
   "step": [
     {% for step in page.howto.steps %}
     {
       "@type": "HowToStep",
       "position": {{ forloop.index }},
       "name": "{{ step.name | escape }}",
-      "text": "{{ step.text | strip_html | escape }}",
-      {% if step.image %}
-      "image": "{{ step.image | prepend: site.url }}",
-      {% endif %}
+      "text": "{{ step.text | strip_html | escape }}"{% if step.image %},
+      "image": "{{ step.image | prepend: site.url }}"{% endif %},
       "url": "{{ page.url | prepend: site.url }}#step-{{ forloop.index }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
