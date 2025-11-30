@@ -1,0 +1,63 @@
+## Cache-Control headers optimisés pour performance mobile
+## Objectif : Lighthouse mobile 85-95+
+
+# Images - Cache agressif (1 an)
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# CSS et JS - Cache moyen (30 jours)
+/assets/css/*
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+
+/assets/js/*
+  Cache-Control: public, max-age=2592000
+  X-Content-Type-Options: nosniff
+
+# Fonts - Cache long (1 an)
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# HTML pages - Pas de cache ou très court
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Page d'accueil
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Blog pages
+/blog/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+
+# Manifest et service worker - Cache court
+/manifest.json
+  Cache-Control: public, max-age=86400
+  X-Content-Type-Options: nosniff
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
+  X-Content-Type-Options: nosniff
+
+# Feed RSS - Cache 1 heure
+/feed*.xml
+  Cache-Control: public, max-age=3600
+  X-Content-Type-Options: nosniff
+
+# Security headers globaux
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

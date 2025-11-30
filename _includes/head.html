@@ -238,6 +238,10 @@
 <link rel="preload" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" as="style">
 <link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
 
+<!-- Preconnect optimisé pour ressources tierces critiques -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
 <!-- Google Fonts - Optimisé pour performance mobile -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

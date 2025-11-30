@@ -1,5 +1,24 @@
 <style>
-    /* Critical CSS - Hero section uniquement pour améliorer LCP mobile */
+    /* Critical CSS - Hero section et Post Banner pour améliorer LCP mobile */
+
+    /* Post banner image - Éviter layout shift et optimiser LCP */
+    .post-banner-image-container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 2rem;
+        overflow: hidden;
+    }
+
+    .post-banner-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
     .hero-creator {
         display: flex;
         align-items: center;

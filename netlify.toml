@@ -1,0 +1,69 @@
+# Netlify configuration pour optimisation performance mobile
+# Objectif Lighthouse : 85-95+ mobile
+
+[build]
+  publish = "_site"
+  command = "jekyll build"
+
+# Compression Brotli pour tous les assets
+[[plugins]]
+  package = "@netlify/plugin-brotli"
+
+# Headers de performance et sécurité
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Redirections pour les URLs sans trailing slash
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+  force = false
+
+# Cache aggressive pour assets statiques
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
