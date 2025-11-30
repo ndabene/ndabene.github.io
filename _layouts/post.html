@@ -146,7 +146,7 @@ layout: default
                             <div class="perplexity-sidebar-content">
                                 <p><strong>30 jours gratuits</strong></p>
                                 <p class="sidebar-perplexity-text">Téléchargez Comet, connectez votre compte et posez votre première question.</p>
-                                <a href="https://pplx.ai/ndabene28081991" class="perplexity-sidebar-btn" target="_blank" rel="noopener">
+                                <a href="https://pplx.ai/ndabene28081991?utm_source=nicolas-dabene&utm_medium=article-sidebar&utm_campaign=perplexity-pro-offer" class="perplexity-sidebar-btn" target="_blank" rel="noopener">
                                     Activer l'offre →
                                 </a>
                             </div>
@@ -191,42 +191,42 @@ layout: default
                             Partager cet article
                         </h3>
                         <div class="social-sharing-buttons">
-                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}" 
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing&title={{ page.title | url_encode }}&summary={{ page.description | default: page.excerpt | strip_html | url_encode }}"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--linkedin" aria-label="Partager sur LinkedIn" title="Partager sur LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            
-                            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}&hashtags=développement,php,prestashop&via=ndabene" 
+
+                            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing&text={{ page.title | url_encode }}&hashtags=développement,php,prestashop&via=ndabene"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--twitter" aria-label="Partager sur X/Twitter" title="Partager sur X/Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" 
+
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--facebook" aria-label="Partager sur Facebook" title="Partager sur Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            
-                            <a href="https://reddit.com/submit?url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}" 
+
+                            <a href="https://reddit.com/submit?url={{ page.url | absolute_url }}%3Futm_source%3Dreddit%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing&title={{ page.title | url_encode }}"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--reddit" aria-label="Partager sur Reddit" title="Partager sur Reddit">
                                 <i class="fab fa-reddit-alien"></i>
                             </a>
-                            
-                            <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" 
+
+                            <a href="https://api.whatsapp.com/send?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}%3Futm_source%3Dwhatsapp%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--whatsapp" aria-label="Partager sur WhatsApp" title="Partager sur WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
-                            
-                            <a href="https://t.me/share/url?url={{ page.url | absolute_url }}&text={{ page.title | url_encode }}" 
+
+                            <a href="https://t.me/share/url?url={{ page.url | absolute_url }}%3Futm_source%3Dtelegram%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing&text={{ page.title | url_encode }}"
                                target="_blank" rel="noopener noreferrer" class="social-btn social-btn--telegram" aria-label="Partager sur Telegram" title="Partager sur Telegram">
                                 <i class="fab fa-telegram"></i>
                             </a>
-                            
-                            <a href="mailto:?subject={{ page.title | url_encode }}&body=Découvrez cet article : {{ page.title | url_encode }}%0A%0A{{ page.url | absolute_url }}" 
+
+                            <a href="mailto:?subject={{ page.title | url_encode }}&body=Découvrez cet article : {{ page.title | url_encode }}%0A%0A{{ page.url | absolute_url }}%3Futm_source%3Demail%26utm_medium%3Dsocial%26utm_campaign%3Dsocial-sharing"
                                class="social-btn social-btn--email" aria-label="Partager par email" title="Partager par email">
                                 <i class="fas fa-envelope"></i>
                             </a>
-                            
-                            <button onclick="copyToClipboard('{{ page.url | absolute_url }}')" class="social-btn social-btn--copy" aria-label="Copier le lien" title="Copier le lien">
+
+                            <button onclick="copyToClipboard('{{ page.url | absolute_url }}?utm_source=copy-link&utm_medium=social&utm_campaign=social-sharing')" class="social-btn social-btn--copy" aria-label="Copier le lien" title="Copier le lien">
                                 <i class="fas fa-link"></i>
                             </button>
                         </div>

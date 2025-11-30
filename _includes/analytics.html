@@ -23,5 +23,44 @@
     'send_page_view': true
   });
   window.GA_MEASUREMENT_ID = '{{ site.google_analytics }}';
+
+  // Tracking des clics sortants (outbound links)
+  document.addEventListener('DOMContentLoaded', function() {
+    // Tracker tous les liens externes
+    document.addEventListener('click', function(event) {
+      var link = event.target.closest('a');
+
+      // Vérifier si c'est un lien externe
+      if (link && link.hostname && link.hostname !== window.location.hostname) {
+        var linkUrl = link.href;
+        var linkText = link.textContent || link.getAttribute('aria-label') || 'No text';
+
+        // Déterminer le type de lien sortant
+        var linkType = 'external';
+        if (linkUrl.includes('pplx.ai')) {
+          linkType = 'sponsor-perplexity';
+        } else if (linkUrl.includes('hostinger.fr')) {
+          linkType = 'sponsor-hostinger';
+        } else if (linkUrl.includes('businesstech.fr')) {
+          linkType = 'external-publication';
+        } else if (linkUrl.includes('linkedin.com') || linkUrl.includes('twitter.com') ||
+                   linkUrl.includes('facebook.com') || linkUrl.includes('x.com') ||
+                   linkUrl.includes('github.com') || linkUrl.includes('youtube.com') ||
+                   linkUrl.includes('dev.to') || linkUrl.includes('reddit.com') ||
+                   linkUrl.includes('whatsapp.com') || linkUrl.includes('t.me')) {
+          linkType = 'social';
+        }
+
+        // Envoyer l'événement à GA4
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': linkUrl,
+          'link_type': linkType,
+          'link_text': linkText.substring(0, 100), // Limiter à 100 caractères
+          'transport_type': 'beacon'
+        });
+      }
+    });
+  });
 </script>
 {% endif %}
