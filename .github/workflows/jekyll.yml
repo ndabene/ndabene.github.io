@@ -92,6 +92,19 @@ jobs:
           bash scripts/generate-webp.sh
           echo "✅ Images WebP générées avec succès"
 
+      - name: Install ImageMagick for responsive images
+        run: |
+          echo "📦 Installation d'ImageMagick pour images responsive..."
+          sudo apt-get install -y imagemagick
+          convert -version
+          echo "✅ ImageMagick installé avec succès"
+
+      - name: Generate responsive images
+        run: |
+          echo "🖼️  Génération des images responsive (480px, 720px, 1080px)..."
+          bash scripts/generate-responsive-images.sh
+          echo "✅ Images responsive générées avec succès"
+
       - name: Build with Jekyll
         run: |
           BASE_PATH="${{ steps.pages.outputs.base_path }}"

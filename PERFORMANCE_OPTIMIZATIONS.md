@@ -164,12 +164,27 @@ Referrer-Policy: strict-origin-when-cross-origin
 
 ## 🔧 Utilisation
 
-### Générer versions responsive pour nouvelles images
+### Génération Automatique via GitHub Actions ✨
+
+Les images responsive sont **générées automatiquement** lors de chaque déploiement via GitHub Actions.
+
+**Workflow modifié :** `.github/workflows/jekyll.yml`
+
+Étapes ajoutées :
+1. Installation d'ImageMagick
+2. Exécution de `scripts/generate-responsive-images.sh`
+3. Les images sont générées à la volée et incluses dans le build
+
+**Avantage :** Pas besoin de commiter les 252 fichiers responsive → **repository plus léger** !
+
+### Générer manuellement (développement local)
 
 ```bash
 cd /home/user/ndabene.github.io
 ./scripts/generate-responsive-images.sh
 ```
+
+**⚠️ Note :** Les images générées localement ne doivent PAS être commitées (elles sont dans `.gitignore`).
 
 ### Utiliser l'include responsive dans un article
 

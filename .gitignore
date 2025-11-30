@@ -19,3 +19,9 @@ Thumbs.db
 # Fichiers d'analyse temporaires
 analyze_tags.py
 tag_analysis_report.txt
+
+# Images responsive générées automatiquement lors du build GitHub Actions
+# Ne PAS commiter ces fichiers - ils sont générés à la volée
+assets/images/blog/**/*-480.webp
+assets/images/blog/**/*-720.webp
+assets/images/blog/**/*-1080.webp
