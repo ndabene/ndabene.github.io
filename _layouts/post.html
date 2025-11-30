@@ -119,17 +119,18 @@ layout: default
 
                 <!-- Main Content -->
                 <main class="post-main-content{% if page.table_of_contents != false %} has-sidebar{% endif %}">
-                    <!-- Image de bannière dans le contenu -->
+                    <!-- Image de bannière dans le contenu - Optimisée pour mobile LCP -->
                     {% if page.image %}
                     <div class="post-banner-image-container">
-                        <img src="{{ page.image }}"
-                             alt="{{ page.title }}"
-                             class="post-banner-image"
-                             loading="eager"
-                             fetchpriority="high"
-                             width="1200"
-                             height="900"
-                             decoding="async">
+                        {% include responsive-image.html
+                           src=page.image
+                           alt=page.title
+                           width="1024"
+                           height="1024"
+                           loading="eager"
+                           fetchpriority="high"
+                           class="post-banner-image"
+                        %}
                     </div>
                     {% endif %}
 
