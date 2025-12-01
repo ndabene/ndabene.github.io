@@ -22,35 +22,18 @@ Disallow: /_backup/
 # Dossier de documentation interne (NE DOIT PAS ÊTRE PUBLIC)
 Disallow: /docs/
 
-# Fichiers système et de développement
+# Fichiers système et de développement (non publiés par GitHub Pages)
 Disallow: /.claude/
 Disallow: /.git/
 Disallow: /.github/
-Disallow: /node_modules/
-Disallow: /_site/
-Disallow: /_plugins/
-Disallow: /_layouts/
-Disallow: /_includes/
-Disallow: /_sass/
-Disallow: /_data/
 
-# Assets (CSS, JS, images) - optimisation crawl
-Disallow: /assets/js/
-Disallow: /assets/css/
+# Assets - AUTORISÉS pour permettre l'indexation correcte par Google
+# Google a besoin d'accéder aux CSS/JS pour comprendre le rendu des pages
+Allow: /assets/
 
-# Fichiers de configuration
-Disallow: /*.yml
-Disallow: /*.yaml
-Disallow: /*.toml
-Disallow: /*.json
+# Fichiers de configuration à la racine (non publiés par GitHub Pages)
+Disallow: /_config.yml
 Disallow: /Gemfile
-Disallow: /.gitignore
-
-# Fichiers temporaires courants
-Disallow: /*~
-Disallow: /*.tmp
-Disallow: /*.bak
-Disallow: /*.swp
 
 # ============================================================
 # AUTORISATIONS EXPLICITES - CONTENU PUBLIC
