@@ -2,6 +2,8 @@
   link: /
 - name: "Compétences"
   link: /skills/
+- name: "Quiz"
+  link: /quizz/prestashop-9-developpeur-certifie/
 - name: "Vidéos"
   link: /youtube/
 - name: "Blog"

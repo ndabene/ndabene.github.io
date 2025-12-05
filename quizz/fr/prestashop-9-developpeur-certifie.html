@@ -1,0 +1,271 @@
+---
+layout: default
+title: "Quiz PrestaShop 9 : Développeur Certifié - Testez vos compétences"
+permalink: /quizz/prestashop-9-developpeur-certifie/
+description: "Testez vos connaissances en développement PrestaShop 9 avec ce quiz de 20 questions techniques sur Symfony, CQRS, les hooks et l'architecture moderne. Êtes-vous prêt pour la certification ?"
+keywords: "quiz prestashop 9, certification prestashop, développeur prestashop, test compétences prestashop, symfony prestashop, cqrs prestashop, quiz technique prestashop"
+lang: fr
+body_class: "page-quiz"
+---
+
+<link rel="stylesheet" href="/assets/css/quiz.css">
+
+<div id="quiz-app"></div>
+
+<script src="/assets/js/quiz-engine.js"></script>
+<script>
+// Configuration du quiz PrestaShop 9 FR
+const quizConfig = {
+  i18n: {
+    logoTitle: "Dev Quiz",
+    logoSubtitle: "PRESTASHOP 9 EDITION",
+    title: "Testez vos connaissances",
+    description: "20 questions techniques sur l'architecture moderne de PrestaShop (Symfony, CQRS, Hooks, Services).<br/><br/>Êtes-vous prêt pour la certification ?",
+    startButton: "Commencer le Quiz",
+    nextQuestion: "Question suivante",
+    seeResults: "Voir les résultats",
+    explanation: "Explication",
+    finalResult: "Résultat Final",
+    resultExpert: "Expert PrestaShop ! 🏆",
+    resultGood: "Bon niveau, continuez ! 🚀",
+    resultNeedWork: "Encore quelques révisions... 📚",
+    shareButton: "Défier mon réseau",
+    restartButton: "Recommencer",
+    footer: "DESIGN SYSTEM v1.0 • NICOLAS DABENE",
+    shareText: `Je viens de tester mes compétences techniques sur PrestaShop 9 !
+Score : {score}/{total} ({percentage}%).
+
+Je vous mets au défi de faire mieux ! 👇
+{url}
+
+#PrestaShop #Developer #Symfony #TechSkills #Challenge`
+  },
+  questions: [
+    {
+      id: 1,
+      question: "Dans un module moderne PrestaShop 9, quelle est la méthode recommandée pour gérer les dépendances PHP externes ?",
+      options: [
+        { id: 'a', text: "Inclure les fichiers manuellement avec require_once", isCorrect: false },
+        { id: 'b', text: "Utiliser Composer et le fichier composer.json à la racine du module", isCorrect: true },
+        { id: 'c', text: "Copier les bibliothèques dans le dossier /lib du cœur", isCorrect: false },
+        { id: 'd', text: "Utiliser le gestionnaire de paquets npm", isCorrect: false }
+      ],
+      explanation: "Composer est le standard pour gérer les dépendances et l'autoloading (PSR-4) dans les modules modernes."
+    },
+    {
+      id: 2,
+      question: "Quelle classe devez-vous étendre pour un contrôleur Back-Office moderne (Symfony) ?",
+      options: [
+        { id: 'a', text: "ModuleAdminController", isCorrect: false },
+        { id: 'b', text: "PrestaShopBundle\\Controller\\Admin\\FrameworkBundleAdminController", isCorrect: true },
+        { id: 'c', text: "AdminController", isCorrect: false },
+        { id: 'd', text: "Symfony\\Component\\HttpKernel\\Controller", isCorrect: false }
+      ],
+      explanation: "C'est la classe de base recommandée pour bénéficier des fonctionnalités Symfony (DI, Routing, Twig)."
+    },
+    {
+      id: 3,
+      question: "Comment injecter un service personnalisé dans votre module ?",
+      options: [
+        { id: 'a', text: "Avec 'new' dans le constructeur", isCorrect: false },
+        { id: 'b', text: "Via Context::getContext()", isCorrect: false },
+        { id: 'c', text: "En le déclarant dans config/services.yml", isCorrect: true },
+        { id: 'd', text: "Dans la table ps_configuration", isCorrect: false }
+      ],
+      explanation: "Le fichier services.yml permet d'enregistrer des services dans le conteneur Symfony."
+    },
+    {
+      id: 4,
+      question: "Dans l'architecture CQRS, quel est le rôle d'une 'Command' ?",
+      options: [
+        { id: 'a', text: "Récupérer des données (Lecture)", isCorrect: false },
+        { id: 'b', text: "Représenter une intention de modifier l'état (Écriture)", isCorrect: true },
+        { id: 'c', text: "Gérer l'affichage Twig", isCorrect: false },
+        { id: 'd', text: "Exécuter la logique directement dans le contrôleur", isCorrect: false }
+      ],
+      explanation: "CQRS sépare la lecture (Query) de l'écriture. Une Command modifie l'état."
+    },
+    {
+      id: 5,
+      question: "Pour modifier une Grid existante (ex: liste produits), quel Hook utiliser ?",
+      options: [
+        { id: 'a', text: "displayBackOfficeHeader", isCorrect: false },
+        { id: 'b', text: "actionObjectUpdate", isCorrect: false },
+        { id: 'c', text: "action{GridDefinition}Modifier", isCorrect: true },
+        { id: 'd', text: "Il est impossible de modifier les grilles", isCorrect: false }
+      ],
+      explanation: "Ces hooks permettent de manipuler l'objet GridDefinition (colonnes, filtres)."
+    },
+    {
+      id: 6,
+      question: "Quelle interface un module doit-il implémenter pour les widgets Front-Office (Hummingbird) ?",
+      options: [
+        { id: 'a', text: "WidgetInterface", isCorrect: true },
+        { id: 'b', text: "ModuleInterface", isCorrect: false },
+        { id: 'c', text: "ControllerInterface", isCorrect: false },
+        { id: 'd', text: "FrontControllerInterface", isCorrect: false }
+      ],
+      explanation: "WidgetInterface standardise le rendu des blocs de contenu en front."
+    },
+    {
+      id: 7,
+      question: "Méthode recommandée pour l'accès BDD dans un Service moderne ?",
+      options: [
+        { id: 'a', text: "Db::getInstance()->executeS()", isCorrect: false },
+        { id: 'b', text: "Injection de 'Doctrine\\DBAL\\Connection'", isCorrect: true },
+        { id: 'c', text: "mysql_query()", isCorrect: false },
+        { id: 'd', text: "Via l'objet Smarty", isCorrect: false }
+      ],
+      explanation: "L'injection de la connexion DBAL est plus propre et testable que les appels statiques."
+    },
+    {
+      id: 8,
+      question: "Quel est le rôle d'un 'Data Provider' dans les formulaires Symfony ?",
+      options: [
+        { id: 'a', text: "Définir le HTML", isCorrect: false },
+        { id: 'b', text: "Valider les données", isCorrect: false },
+        { id: 'c', text: "Fournir les données initiales pour pré-remplir le formulaire", isCorrect: true },
+        { id: 'd', text: "Sauvegarder en base", isCorrect: false }
+      ],
+      explanation: "Il injecte les données (ex: produit existant) dans le formulaire avant affichage."
+    },
+    {
+      id: 9,
+      question: "Comment traduire du texte dans un template Twig ?",
+      options: [
+        { id: 'a', text: "{l s='Text'}", isCorrect: false },
+        { id: 'b', text: "{{ 'Text'|trans({}, 'Domain') }}", isCorrect: true },
+        { id: 'c', text: "Translate::get('Text')", isCorrect: false },
+        { id: 'd', text: "$this->l('Text')", isCorrect: false }
+      ],
+      explanation: "Le filtre |trans est le standard Symfony/PrestaShop dans Twig."
+    },
+    {
+      id: 10,
+      question: "Où placer le fichier routes.yml dans un module ?",
+      options: [
+        { id: 'a', text: "À la racine", isCorrect: false },
+        { id: 'b', text: "Dans /controllers", isCorrect: false },
+        { id: 'c', text: "Dans /config", isCorrect: true },
+        { id: 'd', text: "Dans /src", isCorrect: false }
+      ],
+      explanation: "PrestaShop charge automatiquement config/routes.yml."
+    },
+    {
+      id: 11,
+      question: "Avantage principal du 'Repository Pattern' ?",
+      options: [
+        { id: 'a', text: "Écrire du SQL dans les contrôleurs", isCorrect: false },
+        { id: 'b', text: "Centraliser et découpler la logique d'accès aux données", isCorrect: true },
+        { id: 'c', text: "Remplacer les Hooks", isCorrect: false },
+        { id: 'd', text: "Améliorer la vitesse de chargement CSS", isCorrect: false }
+      ],
+      explanation: "Il isole la logique de récupération des données du reste de l'application."
+    },
+    {
+      id: 12,
+      question: "À quoi sert le fichier theme.yml ?",
+      options: [
+        { id: 'a', text: "Traductions du thème", isCorrect: false },
+        { id: 'b', text: "CSS Global", isCorrect: false },
+        { id: 'c', text: "Configuration (meta, layout, modules) du thème", isCorrect: true },
+        { id: 'd', text: "Liste des produits accueil", isCorrect: false }
+      ],
+      explanation: "C'est la carte d'identité technique et structurelle du thème."
+    },
+    {
+      id: 13,
+      question: "Commande CLI pour vider le cache et régénérer le conteneur ?",
+      options: [
+        { id: 'a', text: "php bin/console cache:clear", isCorrect: true },
+        { id: 'b', text: "php bin/console module:install", isCorrect: false },
+        { id: 'c', text: "rm -rf /var/cache", isCorrect: false },
+        { id: 'd', text: "index.php?clear_cache=1", isCorrect: false }
+      ],
+      explanation: "Commande standard Symfony pour nettoyer l'application."
+    },
+    {
+      id: 14,
+      question: "Pourquoi utiliser des Value Objects (ex: CustomerId) dans une Command ?",
+      options: [
+        { id: 'a', text: "Réduire la mémoire", isCorrect: false },
+        { id: 'b', text: "Garantir le typage fort et l'intégrité des données", isCorrect: true },
+        { id: 'c', text: "Compatibilité PHP 5", isCorrect: false },
+        { id: 'd', text: "Affichage Smarty direct", isCorrect: false }
+      ],
+      explanation: "Cela assure la Type Safety et évite les données invalides."
+    },
+    {
+      id: 15,
+      question: "Où déclarer la compatibilité stricte PrestaShop 8+ ?",
+      options: [
+        { id: 'a', text: "config.xml", isCorrect: false },
+        { id: 'b', text: "Propriété $ps_versions_compliancy dans le constructeur", isCorrect: true },
+        { id: 'c', text: "Dans install()", isCorrect: false },
+        { id: 'd', text: "composer.json uniquement", isCorrect: false }
+      ],
+      explanation: "C'est la propriété standard du module pour définir le min/max version."
+    },
+    {
+      id: 16,
+      question: "Rôle de Webpack/Laravel Mix ?",
+      options: [
+        { id: 'a', text: "Compiler le PHP", isCorrect: false },
+        { id: 'b', text: "Gérer la base de données", isCorrect: false },
+        { id: 'c', text: "Compiler et minifier les assets (JS/SCSS)", isCorrect: true },
+        { id: 'd', text: "Servir les pages HTML", isCorrect: false }
+      ],
+      explanation: "Outil indispensable pour le JS moderne et le SCSS."
+    },
+    {
+      id: 17,
+      question: "Différence entre Hook Display et Action ?",
+      options: [
+        { id: 'a', text: "Aucune", isCorrect: false },
+        { id: 'b', text: "Display = Affichage (HTML), Action = Logique/Événement", isCorrect: true },
+        { id: 'c', text: "Action est asynchrone", isCorrect: false },
+        { id: 'd', text: "Display est déprécié", isCorrect: false }
+      ],
+      explanation: "L'un montre (Vue), l'autre réagit (Logique)."
+    },
+    {
+      id: 18,
+      question: "Comment sécuriser un contrôleur Admin Symfony ?",
+      options: [
+        { id: 'a', text: "If/Else dans la méthode", isCorrect: false },
+        { id: 'b', text: "Fichier .htaccess", isCorrect: false },
+        { id: 'c', text: "Annotation/Attribut de sécurité (@AdminSecurity)", isCorrect: true },
+        { id: 'd', text: "Rien, c'est automatique", isCorrect: false }
+      ],
+      explanation: "Les attributs permettent de définir les permissions requises par route."
+    },
+    {
+      id: 19,
+      question: "Pourquoi Module::getInstanceByName() plutôt que new MyModule() ?",
+      options: [
+        { id: 'a', text: "Pour avoir l'instance initialisée et gérée par le Core", isCorrect: true },
+        { id: 'b', text: "Constructeur privé", isCorrect: false },
+        { id: 'c', text: "Gain de performance énorme", isCorrect: false },
+        { id: 'd', text: "Obligatoire en PHP 8", isCorrect: false }
+      ],
+      explanation: "Garantit que le module est correctement chargé avec son contexte."
+    },
+    {
+      id: 20,
+      question: "Composant Symfony pour les événements système (hors Hooks) ?",
+      options: [
+        { id: 'a', text: "HookManager", isCorrect: false },
+        { id: 'b', text: "EventDispatcher", isCorrect: true },
+        { id: 'c', text: "SignalSlot", isCorrect: false },
+        { id: 'd', text: "Observer", isCorrect: false }
+      ],
+      explanation: "Standard Symfony pour la communication événementielle interne."
+    }
+  ]
+};
+
+// Initialiser le quiz
+document.addEventListener('DOMContentLoaded', function() {
+  window.quiz = new QuizEngine('quiz-app', quizConfig);
+});
+</script>
