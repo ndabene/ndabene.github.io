@@ -13,6 +13,7 @@ body_class: "page-quiz"
 <div id="quiz-app"></div>
 
 <script src="/assets/js/quiz-engine.js"></script>
+{% raw %}
 <script>
 // Expert PrestaShop 9 Quiz Configuration - English
 const quizConfig = {
@@ -160,3 +161,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.quiz = new QuizEngine('quiz-app', quizConfig);
 });
 </script>
+{% endraw %}
