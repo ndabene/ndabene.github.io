@@ -14,6 +14,7 @@ body_class: "page-quiz"
 
 <script src="/assets/js/quiz-engine.js"></script>
 <script>
+{% raw %}
 // PrestaShop 9 Quiz Configuration - English
 const quizConfig = {
   i18n: {
@@ -268,4 +269,5 @@ I challenge you to do better! 👇
 document.addEventListener('DOMContentLoaded', function() {
   window.quiz = new QuizEngine('quiz-app', quizConfig);
 });
+{% endraw %}
 </script>
