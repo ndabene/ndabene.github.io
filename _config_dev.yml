@@ -16,7 +16,7 @@ google_analytics: ""
 
 # Boost perf en dev
 future: true
-limit_posts: 20
+limit_posts: 5
 
 # LiveReload
 livereload: true

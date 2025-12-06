@@ -1,10 +1,10 @@
-- name: "À propos"
+﻿- name: "A propos"
   link: /
-- name: "Compétences"
+- name: "Competences"
   link: /skills/
 - name: "Quiz"
   link: /quizz/
-- name: "Vidéos"
+- name: "Videos"
   link: /youtube/
 - name: "Blog"
   link: /blog/

@@ -58,6 +58,9 @@ collections:
   case_studies:
     output: true
     permalink: "/case-studies/:path/"
+  quizz:
+    output: true
+    permalink: "/quizz/:path/"
   # English collections
   projects_en:
     output: true
@@ -68,6 +71,9 @@ collections:
   case_studies_en:
     output: true
     permalink: "/en/case-studies/:path/"
+  quizz_en:
+    output: true
+    permalink: "/en/quiz/:path/"
 
 # Fichiers à exclure de la génération
 exclude:
@@ -153,6 +159,15 @@ defaults:
       sitemap:
         changefreq: "yearly"
         priority: 0.5
+  - scope:
+      path: ""
+      type: "quizz"
+    values:
+      layout: quiz
+      lang: fr
+      sitemap:
+        changefreq: "monthly"
+        priority: 0.6
   # English content
   - scope:
       path: ""
@@ -187,6 +202,15 @@ defaults:
       sitemap:
         changefreq: "yearly"
         priority: 0.5
+  - scope:
+      path: ""
+      type: "quizz_en"
+    values:
+      layout: quiz
+      lang: en
+      sitemap:
+        changefreq: "monthly"
+        priority: 0.6
   # Specific pages
   - scope:
       path: "index.md"
