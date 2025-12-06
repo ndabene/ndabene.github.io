@@ -1,10 +1,10 @@
-- name: "À propos"
+﻿- name: "A propos"
   link: /
-- name: "Compétences"
+- name: "Competences"
   link: /skills/
 - name: "Quiz"
-  link: /quizz/prestashop-9-developpeur-certifie/
-- name: "Vidéos"
+  link: /quizz/
+- name: "Videos"
   link: /youtube/
 - name: "Blog"
   link: /blog/

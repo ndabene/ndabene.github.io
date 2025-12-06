@@ -3,9 +3,7 @@
 - name: "Skills"
   link: /en/skills/
 - name: "Quiz"
-  link: /en/quiz/prestashop-9-certified-developer/
-- name: "Training"
-  link: /en/shop/
+  link: /en/quiz/
 - name: "Videos"
   link: /en/youtube/
 - name: "Blog"
