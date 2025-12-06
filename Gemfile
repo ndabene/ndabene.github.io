@@ -3,10 +3,9 @@ source "https://rubygems.org"
 # Gem GitHub Pages - assure la compatibilité avec la version exacte
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-last-modified-at", group: :jekyll_plugins
-# jekyll-sitemap est déjà inclus dans github-pages, pas besoin de le spécifier
 
 # Gem pour Windows (optionnel)
 gem "wdm", ">= 0.1.0", platforms: [:mingw, :x64_mingw, :mswin]
 
 # Ne pas spécifier de versions pour les gems incluses dans github-pages
-# Laissons github-pages gérer les versions compatibles
+# jekyll-sitemap est déjà inclus dans github-pages, pas besoin de le déclarer séparément
