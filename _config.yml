@@ -4,6 +4,11 @@ author:
   email: ndabene2807@gmail.com
 description: "Blog et formations de Nicolas Dabène, créateur de contenu spécialisé en Intelligence Artificielle et e-commerce PrestaShop. Articles techniques, formations pratiques et modules professionnels. Expert PrestaShop depuis 2010."
 
+# Social Media
+github_username: ndabene
+linkedin_username: nicolas-dabène-473a43b8
+reddit_username: Angelesse06
+
 # URL & Base URL
 url: "https://nicolas-dabene.fr" # le domaine de votre site
 baseurl: "" # le sous-dossier de votre site, e.g. /blog. Laissez vide si à la racine.
