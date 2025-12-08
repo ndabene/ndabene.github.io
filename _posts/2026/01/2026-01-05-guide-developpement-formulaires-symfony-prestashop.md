@@ -475,8 +475,8 @@ Pour des formulaires plus sophistiqués, vous pouvez utiliser :
 
 **Rôle** : Ce fichier définit l'interface utilisateur de notre formulaire en utilisant le moteur de template Twig.
 
-```twig
 {% raw %}
+```twig
 {% extends '@PrestaShop/Admin/layout.html.twig' %}
 
 {% block content %}
@@ -512,8 +512,8 @@ Pour des formulaires plus sophistiqués, vous pouvez utiliser :
         </div>
     </div>
 {% endblock %}
-{% endraw %}
 ```
+{% endraw %}
 
 Le template Twig représente la couche de présentation de notre module, séparant complètement l'interface utilisateur de la logique métier :
 
@@ -656,8 +656,8 @@ Voici quelques conseils importants pour la gestion des formulaires et des traduc
 
 #### 1. Utilisation du filtre trans de Twig
 
-```twig
 {% raw %}
+```twig
 {# Incorrect - Texte en dur #}
 Envoyer le formulaire
 
@@ -666,8 +666,8 @@ Envoyer le formulaire
 
 {# Avec des paramètres #}
 {{ 'Hello %name%'|trans({'%name%': username}) }}
-{% endraw %}
 ```
+{% endraw %}
 
 #### 2. Gestion des erreurs de formulaire
 
