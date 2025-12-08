@@ -18,7 +18,7 @@ tags:
 - back-office
 - mvc
 - psr-4
-excerpt: 'Ce tutoriel s'adresse aux développeurs déjà familiers avec la création de modules PrestaShop classiques (legacy) et qui souhaitent passer à l'approche moderne utilisant Symfony et Twig pour les formulaires d'administration.'
+excerpt: "Ce tutoriel s'adresse aux développeurs déjà familiers avec la création de modules PrestaShop classiques (legacy) et qui souhaitent passer à l'approche moderne utilisant Symfony et Twig pour les formulaires d'administration."
 image: /assets/images/blog/2026/prestashop-symfony-form-guide.webp
 keywords:
 - PrestaShop Symfony
@@ -475,6 +475,7 @@ Pour des formulaires plus sophistiqués, vous pouvez utiliser :
 
 **Rôle** : Ce fichier définit l'interface utilisateur de notre formulaire en utilisant le moteur de template Twig.
 
+{% raw %}
 ```twig
 {% extends '@PrestaShop/Admin/layout.html.twig' %}
 
@@ -512,6 +513,7 @@ Pour des formulaires plus sophistiqués, vous pouvez utiliser :
     </div>
 {% endblock %}
 ```
+{% endraw %}
 
 Le template Twig représente la couche de présentation de notre module, séparant complètement l'interface utilisateur de la logique métier :
 
@@ -654,6 +656,7 @@ Voici quelques conseils importants pour la gestion des formulaires et des traduc
 
 #### 1. Utilisation du filtre trans de Twig
 
+{% raw %}
 ```twig
 {# Incorrect - Texte en dur #}
 Envoyer le formulaire
@@ -664,6 +667,7 @@ Envoyer le formulaire
 {# Avec des paramètres #}
 {{ 'Hello %name%'|trans({'%name%': username}) }}
 ```
+{% endraw %}
 
 #### 2. Gestion des erreurs de formulaire
 
