@@ -19,7 +19,7 @@ tags:
 - mvc
 - psr-4
 excerpt: 'This tutorial is designed for developers already familiar with creating classic PrestaShop modules (legacy) who want to transition to the modern approach using Symfony and Twig for administration forms.'
-image: /assets/images/blog/2026/01/prestashop-symfony-form-guide.webp
+image: /assets/images/blog/2026/prestashop-symfony-form-guide.webp
 keywords:
 - PrestaShop Symfony
 - Symfony Forms

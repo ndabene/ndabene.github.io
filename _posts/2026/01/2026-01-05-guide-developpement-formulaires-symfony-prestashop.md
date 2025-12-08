@@ -19,7 +19,7 @@ tags:
 - mvc
 - psr-4
 excerpt: 'Ce tutoriel s'adresse aux développeurs déjà familiers avec la création de modules PrestaShop classiques (legacy) et qui souhaitent passer à l'approche moderne utilisant Symfony et Twig pour les formulaires d'administration.'
-image: /assets/images/blog/2026/01/prestashop-symfony-form-guide.webp
+image: /assets/images/blog/2026/prestashop-symfony-form-guide.webp
 keywords:
 - PrestaShop Symfony
 - Formulaires Symfony
