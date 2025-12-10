@@ -163,3 +163,13 @@
   channel: ndabene06
   duration: PT4M40S
   category: Technique
+- title: Les Pièges du Code IA
+  video_id: ouRxJWmeVbo
+  url: https://www.youtube.com/watch?v=ouRxJWmeVbo
+  thumbnail: https://i.ytimg.com/vi/ouRxJWmeVbo/hqdefault.jpg
+  description: 'IA et Développement : Maîtriser les Pièges Invisibles Imaginez un
+    développeur junior brillant qui écrit du code à la vitesse de la ...'
+  published_at: '2025-12-09T23:01:15Z'
+  channel: ndabene06
+  duration: PT5M43S
+  category: Technique
