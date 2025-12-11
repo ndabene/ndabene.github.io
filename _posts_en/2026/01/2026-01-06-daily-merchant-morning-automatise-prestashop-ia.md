@@ -72,7 +72,7 @@ To build our "Daily Merchant Morning", we need a precise architecture on the Pre
 
 ### 1. The Foundation: PrestaShop MCP Server 🛡️
 
-This is the essential foundation. Developed by the **PrestaShop Team** (and free on Addons), this module transforms your store into an "MCP Server".
+This is the essential foundation. Developed by the **PrestaShop Team** (and [free on Addons](https://addons.prestashop.com/fr/outils-administration/96617-prestashop-mcp-server.html)), this module transforms your store into an "MCP Server".
 
 Concretely? It opens a secure and standardized door. It manages authentication and allows an AI agent to connect to your store without you having to manually manage complex OAuth tokens.
 
@@ -82,7 +82,7 @@ Concretely? It opens a secure and standardized door. It manages authentication a
 
 Once the pipe is laid, you need to pass interesting things through it. The base server is great, but for advanced business analysis, we need **specific tools**.
 
-That's where **MCP Tools Plus** (the BusinessTech/PrestaModule module) comes in. It plugs into the server to add advanced "Tools" that the AI can call:
+That's where **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article&utm_campaign=daily-merchant-morning)** comes in. It plugs into the server to add advanced "Tools" that the AI can call:
 
 - `get_advanced_sales_stats`: To get revenue, average cart, Y-1 comparison.
 - `get_best_sellers`: To identify yesterday's star products.
@@ -188,8 +188,8 @@ It's ready to use. It contains:
 
 To get started, just follow these 3 steps:
 
-1. Install the free **PrestaShop MCP Server** module to secure the connection.
-2. Add the **MCP Tools Plus** module to unlock AI analysis tools.
+1. Install the free **[PrestaShop MCP Server](https://addons.prestashop.com/fr/outils-administration/96617-prestashop-mcp-server.html)** module to secure the connection.
+2. Add the **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article&utm_campaign=daily-merchant-morning)** module to unlock AI analysis tools.
 3. Download the JSON file below and import it into n8n.
 
 👉 [**Download the "Daily Merchant Morning" JSON Workflow here**](https://ndabene.lemonsqueezy.com/buy/715fe7f7-8e2e-41af-8683-8b4a7178bd7c)

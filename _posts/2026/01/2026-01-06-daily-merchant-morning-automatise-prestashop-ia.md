@@ -72,7 +72,7 @@ Pour réaliser notre "Daily Merchant Morning", nous avons besoin d'une architect
 
 ### 1. Le Socle : PrestaShop MCP Server 🛡️
 
-C'est la fondation indispensable. Développé par la **Team PrestaShop** (et gratuit sur Addons), ce module transforme votre boutique en un "Serveur MCP".
+C'est la fondation indispensable. Développé par la **Team PrestaShop** (et [gratuit sur Addons](https://addons.prestashop.com/fr/outils-administration/96617-prestashop-mcp-server.html)), ce module transforme votre boutique en un "Serveur MCP".
 
 Concrètement ? Il ouvre une porte sécurisée et standardisée. Il gère l'authentification et permet à un agent IA de se connecter à votre boutique sans que vous ayez à gérer des tokens OAuth complexes manuellement.
 
@@ -82,7 +82,7 @@ Concrètement ? Il ouvre une porte sécurisée et standardisée. Il gère l'auth
 
 Une fois le tuyau posé, il faut faire passer des choses intéressantes dedans. Le serveur de base est génial, mais pour une analyse business poussée, il nous faut des **outils spécifiques**.
 
-C'est là qu'intervient **MCP Tools Plus** (le module BusinessTech/PrestaModule). Il vient se greffer sur le serveur pour ajouter des "Tools" avancés que l'IA va pouvoir appeler :
+C'est là qu'intervient **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article&utm_campaign=daily-merchant-morning)**. Il vient se greffer sur le serveur pour ajouter des "Tools" avancés que l'IA va pouvoir appeler :
 
 - `get_advanced_sales_stats` : Pour avoir le CA, le panier moyen, la comparaison N-1.
 - `get_best_sellers` : Pour identifier les produits stars de la veille.
@@ -188,8 +188,8 @@ Il est prêt à l'emploi. Il contient :
 
 Pour démarrer, il vous suffit de suivre ces 3 étapes :
 
-1. Installer le module gratuit **PrestaShop MCP Server** pour sécuriser la connexion.
-2. Ajouter le module **MCP Tools Plus** pour débloquer les outils d'analyse IA.
+1. Installer le module gratuit **[PrestaShop MCP Server](https://addons.prestashop.com/fr/outils-administration/96617-prestashop-mcp-server.html)** pour sécuriser la connexion.
+2. Ajouter le module **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article&utm_campaign=daily-merchant-morning)** pour débloquer les outils d'analyse IA.
 3. Télécharger le fichier JSON ci-dessous et l'importer dans n8n.
 
 👉 [**Télécharger le Workflow JSON "Daily Merchant Morning" ici**](https://ndabene.lemonsqueezy.com/buy/715fe7f7-8e2e-41af-8683-8b4a7178bd7c)
