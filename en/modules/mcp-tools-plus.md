@@ -211,11 +211,6 @@ product:
     "availability": "{{ page.product.availability }}",
     "url": "{{ page.product.addons_url }}"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "ratingCount": "1"
-  },
   "author": {
     "@type": "Organization",
     "name": "BusinessTech & PrestaModule",
