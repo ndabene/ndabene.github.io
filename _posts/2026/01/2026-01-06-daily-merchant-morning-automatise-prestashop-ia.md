@@ -19,7 +19,7 @@ tags:
 - GPT-4
 - E-commerce
 excerpt: Découvrez comment transformer votre routine matinale e-commerce en recevant chaque matin un briefing stratégique complet généré par l'IA pendant que vous dormez. Un workflow n8n + MCP + PrestaShop qui change la donne.
-image: /assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.jpg
+image: /assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.webp
 featured: true
 difficulty: Intermédiaire
 technologies:
@@ -98,7 +98,7 @@ Passons au concret. Voici comment j'ai orchestré tout ça dans n8n.
 
 ### Le Workflow en un coup d'œil
 
-![Workflow n8n Daily Merchant Morning](/assets/images/blog/2026/01/2026-01-06-workflow-n8n.jpg)
+![Workflow n8n Daily Merchant Morning](/assets/images/blog/2026/01/2026-01-06-workflow-n8n.webp)
 *Le schéma de mon workflow actuel*
 
 Voici la mécanique, étape par étape :
@@ -135,7 +135,7 @@ L'agent me renvoie un bloc de code HTML parfaitement structuré. Je n'ai plus qu
 
 Et voilà ce qui arrive dans ma poche au réveil :
 
-![Exemple de mail Daily Merchant Morning](/assets/images/blog/2026/01/2026-01-06-mail-demo.jpg)
+![Exemple de mail Daily Merchant Morning](/assets/images/blog/2026/01/2026-01-06-mail-demo.webp)
 *Le rendu du mail matinal généré par l'IA*
 
 Regardez le niveau de détail :

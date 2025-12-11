@@ -5,24 +5,24 @@ Article : `2026-01-06-daily-merchant-morning-automatise-prestashop-ia.md`
 ## 📸 Images nécessaires
 
 ### 1. Image de cover (obligatoire)
-**Nom du fichier :** `2026-01-06-daily-merchant-morning.jpg`
+**Nom du fichier :** `2026-01-06-daily-merchant-morning.webp`
 **Description :** Image principale de l'article (affichée dans la liste des articles et en haut de l'article)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.jpg`
+**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.webp`
 
 ---
 
 ### 2. Screenshot du workflow n8n
-**Nom du fichier :** `2026-01-06-workflow-n8n.jpg`
+**Nom du fichier :** `2026-01-06-workflow-n8n.webp`
 **Description :** Capture d'écran du workflow n8n complet montrant les différents nœuds (Schedule Trigger, AI Agent, MCP Client, Gmail)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-workflow-n8n.jpg`
+**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-workflow-n8n.webp`
 **Utilisée dans l'article :** Section "Partie 3 : La mise en pratique (Votre Workflow n8n)"
 
 ---
 
 ### 3. Screenshot du mail de démo
-**Nom du fichier :** `2026-01-06-mail-demo.jpg`
+**Nom du fichier :** `2026-01-06-mail-demo.webp`
 **Description :** Capture d'écran du rendu final du mail HTML généré par l'IA (montrant les KPIs, l'analyse sémantique, et les actions prioritaires)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-mail-demo.jpg`
+**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-mail-demo.webp`
 **Utilisée dans l'article :** Section "Le Rendu Final"
 
 ---
@@ -31,7 +31,7 @@ Article : `2026-01-06-daily-merchant-morning-automatise-prestashop-ia.md`
 
 1. Placez les 3 images dans ce dossier (`/assets/images/blog/2026/01/`)
 2. Respectez exactement les noms de fichiers indiqués ci-dessus
-3. Format recommandé : JPG ou PNG
+3. **Format obligatoire : WebP** (meilleure compression et performance web)
 4. Optimisez les images pour le web (compression sans perte de qualité)
 5. Résolution recommandée :
    - Image de cover : 1200x630px (ratio 16:9)
