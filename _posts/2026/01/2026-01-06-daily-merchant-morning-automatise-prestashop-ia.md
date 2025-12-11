@@ -192,6 +192,10 @@ Pour démarrer, il vous suffit de suivre ces 3 étapes :
 2. Ajouter le module **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article&utm_campaign=daily-merchant-morning)** pour débloquer les outils d'analyse IA.
 3. Télécharger le fichier JSON ci-dessous et l'importer dans n8n.
 
+### 🚀 Besoin d'héberger n8n sur un VPS ?
+
+Si vous cherchez où héberger vos workflows n8n de manière fiable et abordable, **[Hostinger](https://www.hostinger.com/fr/referral?REFERRALCODE=NFWNDABENI2P)** propose des VPS performants à excellent rapport qualité/prix. C'est justement là que tournent certains de mes propres workflows d'automatisation. L'interface est intuitive, le déploiement est rapide, et vous pouvez facilement installer n8n sur leur infrastructure. En utilisant mon code parrain, vous bénéficiez de **-20%** sur votre premier hébergement.
+
 👉 [**Télécharger le Workflow JSON "Daily Merchant Morning" ici**](https://ndabene.lemonsqueezy.com/buy/715fe7f7-8e2e-41af-8683-8b4a7178bd7c)
 
 **À vous de jouer.** Faites travailler votre boutique pour vous, pas l'inverse !
