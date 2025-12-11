@@ -139,6 +139,13 @@
 <!-- Open Graph / Facebook -->
 {% if page.layout == 'product' and page.product %}
   {% assign _og_image = page.product.image | absolute_url %}
+{% elsif page.layout == 'quiz' %}
+  {% comment %} Image spécifique pour les quiz, ou image par défaut des quiz {% endcomment %}
+  {% if page.image %}
+    {% assign _og_image = page.image | absolute_url %}
+  {% else %}
+    {% assign _og_image = '/assets/images/quiz-og-default.jpg' | absolute_url %}
+  {% endif %}
 {% elsif page.image %}
   {% assign _og_image = page.image | absolute_url %}
 {% else %}
