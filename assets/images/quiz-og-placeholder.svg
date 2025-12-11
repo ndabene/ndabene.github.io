@@ -1,0 +1,42 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="150" cy="120" r="80" fill="#06B6D4" opacity="0.1"/>
+  <circle cx="1050" cy="510" r="100" fill="#8B5CF6" opacity="0.1"/>
+  <polygon points="950,150 1000,120 1050,150 1000,180" fill="#06B6D4" opacity="0.15"/>
+  <polygon points="200,450 250,420 300,450 250,480" fill="#8B5CF6" opacity="0.15"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#475569" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.2"/>
+
+  <!-- Main title -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="96" font-weight="800" fill="#FFFFFF" text-anchor="middle">
+    QUIZ TECHNIQUE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="36" fill="#94A3B8" text-anchor="middle">
+    Testez vos compétences
+  </text>
+
+  <!-- Code brackets decoration -->
+  <text x="380" y="240" font-family="monospace" font-size="120" fill="#06B6D4" opacity="0.2" text-anchor="middle">{</text>
+  <text x="820" y="240" font-family="monospace" font-size="120" fill="#06B6D4" opacity="0.2" text-anchor="middle">}</text>
+
+  <!-- Bottom accent -->
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="24" fill="#64748B" text-anchor="middle">
+    Nicolas Dabène • Expert PrestaShop &amp; PHP
+  </text>
+</svg>

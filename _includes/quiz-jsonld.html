@@ -1,0 +1,51 @@
+{% if page.layout == 'quiz' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.subtitle | default: page.description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "inLanguage": "{% if page.lang == 'fr' %}fr-FR{% else %}en-US{% endif %}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  },
+  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
+  {% if page.last_modified_at %}
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  {% endif %}
+  "educationalLevel": "{{ page.difficulty }}",
+  "numberOfQuestions": {{ page.questions_count }},
+  {% if page.topics %}
+  "about": [
+    {% for topic in page.topics %}
+    {
+      "@type": "Thing",
+      "name": "{{ topic }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "keywords": "{{ page.topics | join: ', ' }}",
+  {% endif %}
+  "hasPart": [
+    {% for question in page.quiz.questions %}
+    {
+      "@type": "Question",
+      "text": "{{ question.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{% for option in question.options %}{% if option.isCorrect %}{{ option.text | escape }}{% endif %}{% endfor %}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

@@ -3,7 +3,11 @@
 
 <!-- Métadonnées optimisées pour IA génératives (GEO) -->
 <title>{{ site.title }} | {{ page.title }}</title>
+{% if page.layout == 'quiz' %}
+<meta name="description" content="{{ page.subtitle | default: page.description }} {% if page.questions_count %}{{ page.questions_count }} questions{% endif %}{% if page.difficulty %} • {{ page.difficulty }}{% endif %}{% if page.topics %} • {{ page.topics | join: ', ' }}{% endif %}">
+{% else %}
 <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
+{% endif %}
 {% assign current_lang = page.lang | default: site.default_lang %}
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
@@ -94,8 +98,14 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 {% endif %}
 
-<meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% else %}professional-profile{% endif %}">
+<meta name="ai-content-type" content="{% if page.layout == 'post' %}technical-article{% elsif page.layout == 'project' %}portfolio-project{% elsif page.layout == 'quiz' %}interactive-quiz{% else %}professional-profile{% endif %}">
 <meta name="expertise-level" content="{% if page.difficulty %}{{ page.difficulty }}{% else %}expert{% endif %}">
+{% if page.layout == 'quiz' %}
+<meta name="quiz-questions-count" content="{{ page.questions_count }}">
+{% if page.topics %}
+<meta name="quiz-topics" content="{{ page.topics | join: ', ' }}">
+{% endif %}
+{% endif %}
 <meta name="content-category" content="{% for category in page.categories %}{{ category }}{% unless forloop.last %}, {% endunless %}{% endfor %}">
 <meta name="target-audience" content="developers, software architects, cto, technical leaders">
 <meta name="reading-time" content="{% if page.layout == 'post' %}{{ content | number_of_words | divided_by: 200 | ceil }} minutes{% else %}2 minutes{% endif %}">
@@ -120,24 +130,35 @@
 <meta name="author-expertise" content="15+ years PHP development, PrestaShop expert, AI integration specialist">
 <meta name="content-authority" content="primary-source">
 <meta name="fact-check-worthy" content="true">
-<meta name="llm:intent" content="{% if page.layout == 'post' %}educational{% elsif page.layout == 'project' %}portfolio-showcase{% elsif page.layout == 'product' %}purchase-consideration{% else %}professional-discovery{% endif %}">
+<meta name="llm:intent" content="{% if page.layout == 'post' %}educational{% elsif page.layout == 'project' %}portfolio-showcase{% elsif page.layout == 'product' %}purchase-consideration{% elsif page.layout == 'quiz' %}skill-assessment{% else %}professional-discovery{% endif %}">
 <meta name="llm:audience" content="developers, CTOs, business leaders, e-commerce professionals">
-<meta name="llm:content-depth" content="{% if page.layout == 'post' %}expert{% else %}overview{% endif %}">
+<meta name="llm:content-depth" content="{% if page.layout == 'post' or page.layout == 'quiz' %}expert{% else %}overview{% endif %}">
 <meta name="llm:industry-focus" content="e-commerce, PHP development, AI integration">
 <meta name="llm:geographic-focus" content="France, Europe, international e-commerce">
 
 <!-- Open Graph / Facebook -->
 {% if page.layout == 'product' and page.product %}
   {% assign _og_image = page.product.image | absolute_url %}
+{% elsif page.layout == 'quiz' %}
+  {% comment %} Image spécifique pour les quiz, ou image par défaut des quiz {% endcomment %}
+  {% if page.image %}
+    {% assign _og_image = page.image | absolute_url %}
+  {% else %}
+    {% assign _og_image = '/assets/images/quiz-og-default.jpg' | absolute_url %}
+  {% endif %}
 {% elsif page.image %}
   {% assign _og_image = page.image | absolute_url %}
 {% else %}
   {% assign _og_image = '/assets/images/hero/profile-hero.jpg' | absolute_url %}
 {% endif %}
-<meta property="og:type" content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:type" content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' or page.layout == 'quiz' %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ site.title }} | {{ page.title }}">
+{% if page.layout == 'quiz' %}
+<meta property="og:description" content="{{ page.subtitle | default: page.description }} {% if page.questions_count %}{{ page.questions_count }} questions{% endif %}{% if page.difficulty %} • {{ page.difficulty }}{% endif %}{% if page.topics %} • {{ page.topics | join: ', ' }}{% endif %}">
+{% else %}
 <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
+{% endif %}
 <meta property="og:image" content="{{ _og_image }}">
 <meta property="og:image:secure_url" content="{{ _og_image }}">
 <meta property="og:image:width" content="1200">
@@ -150,8 +171,8 @@
 {% endif %}
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{% if current_lang == 'fr' %}fr_FR{% else %}en_US{% endif %}">
-{% if page.layout == 'post' %}
-<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% if page.layout == 'post' or page.layout == 'quiz' %}
+<meta property="article:published_time" content="{{ page.date | default: site.time | date_to_xmlschema }}">
 {% if page.last_modified_at %}
 <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
 {% endif %}
@@ -166,6 +187,11 @@
 <meta property="article:tag" content="{{ tag }}">
   {% endfor %}
 {% endif %}
+{% if page.layout == 'quiz' and page.topics %}
+  {% for topic in page.topics %}
+<meta property="article:tag" content="{{ topic }}">
+  {% endfor %}
+{% endif %}
 {% endif %}
 
 <!-- Twitter -->
@@ -174,7 +200,11 @@
 <meta name="twitter:creator" content="@nicolasdabene">
 <meta name="twitter:url" content="{{ page.url | absolute_url }}">
 <meta name="twitter:title" content="{{ site.title }} | {{ page.title }}">
+{% if page.layout == 'quiz' %}
+<meta name="twitter:description" content="{{ page.subtitle | default: page.description }} {% if page.questions_count %}{{ page.questions_count }} questions{% endif %}{% if page.difficulty %} • {{ page.difficulty }}{% endif %}{% if page.topics %} • {{ page.topics | join: ', ' }}{% endif %}">
+{% else %}
 <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 30 | default: site.description }}">
+{% endif %}
 <meta name="twitter:image" content="{{ _og_image }}">
 <meta name="twitter:image:alt" content="{{ page.title | escape }}">
 
@@ -266,6 +296,7 @@
 </script>
 
 {% include breadcrumb-jsonld.html %}
+{% include quiz-jsonld.html %}
 
 <!-- Resource hint pour le cookie banner Google Funding Choices -->
 <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com">
