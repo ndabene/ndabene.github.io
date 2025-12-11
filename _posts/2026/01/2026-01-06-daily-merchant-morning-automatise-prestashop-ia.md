@@ -2,6 +2,8 @@
 layout: post
 title: 'Fini le café devant Excel : Votre "Daily Merchant Morning" 100% automatisé avec PrestaShop et l''IA 🚀'
 date: 2026-01-06
+lang: fr
+ref: daily-merchant-morning-automation
 author: Nicolas Dabène
 categories:
 - IA
