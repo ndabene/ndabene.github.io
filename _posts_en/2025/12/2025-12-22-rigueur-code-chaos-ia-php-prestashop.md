@@ -21,7 +21,7 @@ tags:
 - Software Architecture
 - LLM
 excerpt: The arrival of AI in the PrestaShop ecosystem challenges developers' certainties. Should we sacrifice PHP's strict typing rigor to adapt to LLM chaos? Discover why the answer isn't to regress, but to adopt a "diplomatic" architecture capable of transforming fuzzy AI data into robust code.
-image: /assets/images/blog/2025/12/2025-12-22-rigueur-code-chaos-ia-php-prestashop.jpg
+image: /assets/images/blog/2025/12/2025-12-22-rigueur-code-chaos-ia-php-prestashop.webp
 featured: false
 difficulty: Advanced
 technologies:
