@@ -74,6 +74,32 @@ jobs:
           ruby scripts/generate_tag_pages.rb
           echo "✅ Pages de tags générées avec succès"
 
+      - name: Install webp tools
+        run: |
+          echo "📦 Installation des outils de conversion WebP..."
+          sudo apt-get update -qq
+          sudo apt-get install -y webp
+          echo "✅ webp installé avec succès"
+
+      - name: Generate WebP images
+        run: |
+          echo "🖼️  Génération des images WebP manquantes..."
+          bash scripts/generate-webp.sh
+          echo "✅ Images WebP générées avec succès"
+
+      - name: Install ImageMagick for responsive images
+        run: |
+          echo "📦 Installation d'ImageMagick pour images responsive..."
+          sudo apt-get install -y imagemagick
+          convert -version
+          echo "✅ ImageMagick installé avec succès"
+
+      - name: Generate responsive images
+        run: |
+          echo "🖼️  Génération des images responsive (480px, 720px, 1080px)..."
+          bash scripts/generate-responsive-images.sh
+          echo "✅ Images responsive générées avec succès"
+
       - name: Check for future posts
         id: check_posts
         run: |
