@@ -78,13 +78,21 @@ The conference was organized around **more than 18 presentations** distributed a
 
 The **PrestaShop MCP Server**, launched on **November 19, 2025**, represents a decisive technological innovation for the e-commerce ecosystem[15]. I was fascinated by this standardized connector available for free for PrestaShop 8+, which establishes a secure bridge between PrestaShop stores and commercial AI agents. The MCP protocol allows agents to recognize business objects such as products, customers, and orders, and to automatically execute tasks in natural language, transforming simple queries like "show me my ten biggest customers this month" or "rewrite all product descriptions marked as 'declining'" into concrete back-office actions[15]. This approach preserves merchants' **data sovereignty** while opening automation possibilities previously reserved for large proprietary platforms.
 
+## The PrestaShop Acquisition: A Historic Turning Point
+
+**December 11, 2025** marked the announcement of an absolutely historic event for the PrestaShop ecosystem: **CyberFolks and Sylius signed an agreement to acquire PrestaShop**, one of the world's largest open-source e-commerce platforms[16]. This strategic acquisition represents a major turning point in the European e-commerce technology landscape. The transaction, structured around the acquisition of **79% of cyber_Pixel by CyberFolks** (with the remaining 21% held by family foundations of Sylius founders), will allow cyber_Pixel to acquire **100% of PrestaShop**, **100% of Sylius**, and **100% of BitBag**[17]. The expected sale price for all PrestaShop shares amounts to **53.765 million euros**.
+
+This merger creates a European e-commerce giant combining three complementary models: the **SaaS model** represented by Shoper, the **open-source model** embodied by PrestaShop, and the **headless architecture** of Sylius. The scale of this new entity is impressive: PrestaShop serves **230,000 active stores worldwide** that generated **22 billion euros in GMV in 2024**, while Sylius supports enterprise and mid-market projects representing approximately **7 billion euros in annual GMV**[18]. After the merger, the CyberFolks ecosystem will total approximately **35 billion euros in GMV**, positioning the group as **Europe's most powerful e-commerce technology provider**. PrestaShop's key markets include France, Spain, Italy, the USA, and the UK, while Sylius focuses on France, the USA, Italy, Poland, and Germany, creating extensive and complementary geographical coverage[19].
+
+This acquisition ensures the sustainability of the PrestaShop project while preserving its open-source character, a crucial point for the developer and merchant community. It also opens new innovation perspectives by combining PrestaShop's expertise in accessible e-commerce solutions with Sylius's enterprise capabilities and Shoper's SaaS approach, offering a complete portfolio covering all market segments.
+
 ## Cross-cutting Themes of 2025: AI, Sovereignty, and Modernization
 
 I observed that the year 2025 was marked by three major cross-cutting themes throughout the events. First, the **rise of artificial intelligence** manifested through the announcement of the MCP Server, discussions on business process automation, and exploration of AI agents in the payment ecosystem. Second, **digital sovereignty** became a central issue, both at PrestaShop Day and FOP Days, with a clear message addressed to merchants: regain control of their data and technological infrastructure against siloed proprietary solutions. Third, **technological modernization** materialized through the launch of PrestaShop 9.0, the arrival of Hummingbird 2.0, improvements to the update system, and continuous evolution of the Admin API, progressively transforming PrestaShop into a truly modern platform adapted to contemporary e-commerce challenges.
 
 ***
 
-**In summary**, 2025 was a pivotal year for PrestaShop, marked by the launch of a revolutionary major version, the announcement of a transformative AI integration, and the strengthening of the developer and merchant community through large-scale events. These achievements position PrestaShop as a modern, sovereign, and future-proof e-commerce solution, capable of competing with the biggest market players while preserving the values of openness and flexibility that characterize the open-source ecosystem.
+**In summary**, 2025 was a pivotal year for PrestaShop, marked by the launch of a revolutionary major version, the announcement of a transformative AI integration, the historic acquisition by CyberFolks and Sylius, and the strengthening of the developer and merchant community through large-scale events. These achievements position PrestaShop as a modern, sovereign, and future-proof e-commerce solution, capable of competing with the biggest market players while preserving the values of openness and flexibility that characterize the open-source ecosystem.
 
 ***
 
@@ -105,6 +113,10 @@ I observed that the year 2025 was marked by three major cross-cutting themes thr
 [13] PrestaShop Developer Conference 2025 - Event Recap https://build.prestashop-project.org/news/2025/prestashop-developer-conference-2025-event-recap/
 [14] PrestaShop MCP : quand l'IA conversationnelle transforme ... https://www.cibleweb.com/2025/11/21/prestashop-mcp-lia-conversationnelle-transforme-la-gestion-e-commerce-1028264348
 [15] PrestaShop lance son serveur MCP et connecte l'IA au ... https://itsocial.fr/intelligence-artificielle/intelligence-artificielle-actualites/prestashop-lance-son-serveur-mcp-et-connecte-lia-au-back-office/
+[16] cyber_Folks i Sylius przejmą platformę dla e-commerce PrestaShop https://pl.investing.com/news/stock-market-news/cyberfolks-i-sylius-przejma-platforme-dla-ecommerce-prestashop-1206137
+[17] Grupa cyber_Folks podpisała porozumienia dotyczące nabycia PrestaShop https://strefainwestorow.pl/wiadomosci/20251211/grupa-cyberfolks-podpisala-porozumienia-dotyczace-nabycia-prestashop-opis
+[18] Cyber_Folks signs term sheet with MBE Worldwide to acquire 100% stake in Prestashop https://www.marketscreener.com/news/cyberfolks-signs-term-sheet-with-mbe-worldwide-to-acquire-100-stake-in-prestashop-ce7d50dbd989f625
+[19] cyber_Folks staje się najpotężniejszym europejskim dostawcą technologii e-commerce https://strefainwestorow.pl/wiadomosci/20251211/cyberfolks-staje-sie-najpotezniejszym-europejskim-dostawca-technologii-e
 
 ---
 
