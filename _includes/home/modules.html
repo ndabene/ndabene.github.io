@@ -13,7 +13,7 @@
             <div class="module-card-simple animate-item">
                 {% if module.image %}
                 <div class="module-image-simple">
-                    <img src="{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                    <img src="{{ module.image }}" alt="{{ module.title | escape }}" loading="lazy">
                 </div>
                 {% else %}
                 <div class="module-image-simple"></div>

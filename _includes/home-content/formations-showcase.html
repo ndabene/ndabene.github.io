@@ -22,7 +22,7 @@
             <div class="formation-card">
                 <div class="formation-image">
                     <a href="{{ formation.link }}">
-                        <img src="/{{ formation.image }}" alt="{{ formation.title }}" loading="lazy">
+                        <img src="/{{ formation.image }}" alt="{{ formation.title | escape }}" loading="lazy">
                     </a>
                 </div>
 

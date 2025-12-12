@@ -12,7 +12,7 @@ Widget Random External Publication - Affiche une publication externe aléatoire
             <article class="external-pub-item">
                 {% if random_pub.image %}
                     <div class="external-pub-thumb">
-                        <img src="{{ random_pub.image | relative_url }}" alt="{{ random_pub.title }}" loading="lazy">
+                        <img src="{{ random_pub.image | relative_url }}" alt="{{ random_pub.title | escape }}" loading="lazy">
                     </div>
                 {% endif %}
 

@@ -5,7 +5,7 @@
     data-read-time="{{ post.read_time_minutes | default: 5 }}">
     {% if post.image %}
         <div class="post-image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
             <div class="post-category-badge">
                 {% if post.categories %}
                     {% for category in post.categories limit: 1 %}

@@ -41,7 +41,7 @@
                     <a href="{{ post.url }}">
                         <picture>
                             <source srcset="{{ post.image }}" type="image/webp">
-                            <img src="{{ post.image | replace: '.webp', '.jpg' | replace: '.WEBP', '.JPG' }}" alt="{{ post.title }}" loading="lazy">
+                            <img src="{{ post.image | replace: '.webp', '.png' | replace: '.WEBP', '.PNG' }}" alt="{{ post.title | escape }}" loading="lazy">
                         </picture>
                     </a>
                 </div>

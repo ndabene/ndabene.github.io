@@ -173,7 +173,7 @@ llm_topics:
                                 <article class="recent-post-compact">
                                     {% if post.image %}
                                         <div class="recent-thumb-mini">
-                                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                                            <img src="{{ post.image }}" alt="{{ post.title | escape }}" loading="lazy">
                                         </div>
                                     {% endif %}
                                     <div class="recent-content-mini">

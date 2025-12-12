@@ -33,7 +33,7 @@ llm_topics:
                 <div class="case-study-card card">
                     <a href="{{ case_study.url | relative_url }}">
                         {% if case_study.thumbnail %}
-                            <img src="{{ case_study.thumbnail }}" alt="{{ case_study.title }}" class="case-study-thumbnail">
+                            <img src="{{ case_study.thumbnail }}" alt="{{ case_study.title | escape }}" class="case-study-thumbnail">
                         {% endif %}
                         <div class="card-content">
                             <h3>{{ case_study.title }}</h3>

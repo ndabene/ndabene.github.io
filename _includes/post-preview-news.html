@@ -16,7 +16,7 @@ Usage: {% include post-preview-news.html post=post %}
         {% if post.image %}
             <div class="post-news-thumb">
                 <img src="{{ post.image | relative_url }}"
-                     alt="{{ post.title }}"
+                     alt="{{ post.title | escape }}"
                      loading="lazy"
                      width="200"
                      height="150"
