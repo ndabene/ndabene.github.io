@@ -58,7 +58,9 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez uniquement l'hébergement et les modules premium.
 ---
 
-Rigueur du Code vs Chaos de l'IA : Faut-il réinventer nos standards PHP pour les marchands PrestaShop ?
+# Rigueur du Code vs Chaos de l'IA : Faut-il réinventer nos standards PHP pour les marchands PrestaShop ?
+
+## 🎯 Introduction : L'art du développement PHP moderne
 
 On ne va pas se mentir, le développement PHP moderne est devenu une forme d'art.
 
@@ -78,7 +80,7 @@ Sa remarque est excellente. Elle pose la vraie question qui nous anime aujourd'h
 
 Spoiler : La réponse n'est pas binaire. C'est une troisième voie.
 
-Partie 1 : Le Choc des Cultures (L'Ingénieur vs Le Robot)
+## ⚔️ Partie 1 : Le Choc des Cultures (L'Ingénieur vs Le Robot)
 
 Pour comprendre la friction actuelle, il faut regarder d'où l'on vient.
 
@@ -102,7 +104,7 @@ Pour le marchand PrestaShop, l'exception est une perte de productivité.
 
 Le marchand se fiche que votre DTO soit pur. Il veut que ses 10 000 descriptions produits soient générées et importées pendant qu'il dort. Si l'IA envoie "10 euros" au lieu de 10.0, il ne veut pas que le script plante. Il veut que le système "comprenne".
 
-Partie 2 : Le Retour du "PHP Diplomate"
+## 🤝 Partie 2 : Le Retour du "PHP Diplomate"
 
 C'est là que ma théorie du PHP Diplomate entre en jeu. Et c'est là qu'on doit nuancer nos "bonnes pratiques".
 
@@ -124,27 +126,30 @@ Le Pont-Levis (L'Input Layer / L'IA) : C'est là que l'IA arrive avec ses bottes
 
 La solution n'est pas d'ouvrir le pont-levis et de laisser la boue entrer dans la salle du trône (ce que craignait Francescu). La solution est de créer un sas où l'on utilise la souplesse de PHP pour nettoyer les bottes avant d'entrer.
 
-Partie 3 : Application Concrète (Le "Fuzzy DTO")
+## 🔧 Partie 3 : Application Concrète (Le "Fuzzy DTO")
 
 Comment cela se traduit-il dans le code d'un module PrestaShop moderne ?
 
 Au lieu de faire entrer la donnée de l'IA directement dans un ProductPriceVO strict, nous allons passer par un intermédiaire que j'appelle le Fuzzy DTO (Data Transfer Object "Flou").
 
-Le scénario classique qui échoue
+### Le scénario classique qui échoue
 
 L'IA génère un JSON pour un produit.
 
+```json
 {
   "price": "19,90 €",
   "stock": "in stock (50)"
 }
+```
 
 Si vous mappez ça directement dans PrestaShop avec du typage strict... Fatal Error. Le marchand vous appelle, furieux.
 
-L'approche "Orchestrateur"
+### L'approche "Orchestrateur"
 
 Nous allons utiliser la souplesse de PHP à l'entrée pour "masser" la donnée.
 
+```php
 // Ce n'est pas du "sale code", c'est de la "résilience par design"
 
 class AiProductInput {
@@ -165,6 +170,7 @@ class AiProductInput {
         return new ProductDTO($sanitizedPrice, $sanitizedStock);
     }
 }
+```
 
 Voyez la nuance ?
 
@@ -172,7 +178,7 @@ On ne sacrifie pas la qualité du modèle final (ProductDTO restera strict). Mai
 
 C'est ça, répondre au besoin du marchand. C'est créer un système qui ne plante pas à la première hallucination mineure de ChatGPT, mais qui la corrige silencieusement pour que le business continue de tourner.
 
-Partie 4 : Vision & Avenir (De Développeur à Architecte de Flux)
+## 🚀 Partie 4 : Vision & Avenir (De Développeur à Architecte de Flux)
 
 Cette discussion dépasse largement le cadre du declare(strict_types=1). Elle touche à l'évolution même de notre métier.
 
@@ -189,7 +195,7 @@ L'IA ne va pas remplacer le besoin de rigueur. Au contraire, elle rend la rigueu
 
 C'est là toute la différence entre un système fragile et un système antifragile.
 
-Conclusion
+## 🎯 Conclusion
 
 Alors, mon confrère a-t-il raison ? Absolument. On ne jette pas 10 ans de sécurité à la poubelle.
 
@@ -200,18 +206,6 @@ Pour nos marchands PrestaShop, l'objectif est clair : l'efficacité. Ils ont bes
 Notre job, c'est de faire en sorte que cette magie opère sans jamais compromettre l'intégrité de la base de données. C'est un nouvel équilibre à trouver. Un équilibre entre le gardien du temple (le code strict) et le diplomate (l'interface IA).
 
 Et vous, dans vos modules, vous êtes plutôt Forteresse imprenable ou Sas de décompression ? Venez on en parle en commentaire, le débat est loin d'être clos ! 👇
-
-Résumé (Excerpt)
-
-L'arrivée de l'IA dans l'écosystème PrestaShop bouscule nos certitudes de développeurs. Faut-il sacrifier la rigueur du typage strict de PHP pour s'adapter au chaos des LLM ? Découvrez pourquoi la réponse n'est pas de régresser, mais d'adopter une architecture "diplomate" capable de transformer les données floues de l'IA en code robuste.
-
-Mots-clés (Keywords)
-
-PrestaShop, Intelligence Artificielle, PHP 8, Loose Typing, Automatisation E-commerce, Développement Module, n8n, Best Practices, Architecture Logicielle, LLM.
-
----
-
-*Article publié le 22 décembre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience*
 
 ---
 
