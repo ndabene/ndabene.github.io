@@ -16,7 +16,7 @@ layout: default
             {% endif %}
             {% if page.hero_image %}
                 <div class="project-hero-image">
-                    <img src="{{ page.hero_image }}" alt="{{ page.title }}" class="hero-image-modern" loading="lazy">
+                    <img src="{{ page.hero_image }}" alt="{{ page.title | escape }}" class="hero-image-modern" loading="lazy">
                 </div>
             {% endif %}
         </div>

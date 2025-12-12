@@ -138,7 +138,7 @@
         <a href="{{ post.url | relative_url }}" class="cross-card-link">
           {% if post.image %}
           <div class="cross-card-image">
-            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            <img src="{{ post.image }}" alt="{{ post.title | escape }}" loading="lazy">
             <div class="cross-card-overlay">
               <span class="cross-card-cta">
                 <i class="fas fa-arrow-right"></i>

@@ -6,7 +6,7 @@
 
 <div class="project-card-v2" data-categories="{{ project.categories | join: ' ' }}" data-tech="{{ project.technologies | join: ' ' | downcase }}">
     <div class="card-header">
-        <img src="{{ project.hero_image | default: '/assets/images/placeholder.jpg' }}" alt="{{ project.title }}" class="project-image" loading="lazy">
+        <img src="{{ project.hero_image | default: '/assets/images/placeholder.jpg' }}" alt="{{ project.title | escape }}" class="project-image" loading="lazy">
         <div class="project-categories-overlay">
             {% for category in project.categories limit: 3 %}
                 <span class="category-badge">{{ category | replace: '-', ' ' | capitalize }}</span>

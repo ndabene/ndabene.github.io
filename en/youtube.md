@@ -230,7 +230,7 @@ twitter_site: "@nicolasdabene"
                             <article class="post-preview-card" data-categories="{% if video.category %}{{ video.category | slugify }}{% endif %}" data-date="{{ video.published_at | date: '%s' }}" data-title="{{ video.title }}" data-channel="{{ video.channel }}">
                                 <div class="post-preview-image">
                                     <a href="{{ video.url }}" target="_blank" class="post-image-link">
-                                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy" itemprop="thumbnailUrl">
+                                        <img src="{{ video.thumbnail }}" alt="{{ video.title | escape }}" loading="lazy" itemprop="thumbnailUrl">
                                         <div class="post-preview-overlay">
                                             <div class="play-icon-large">
                                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -357,7 +357,7 @@ twitter_site: "@nicolasdabene"
                             <article class="recent-post-compact">
                                 {% if video.thumbnail %}
                                     <div class="recent-thumb-mini">
-                                        <img src="{{ video.thumbnail }}" alt="{{ video.title }}" loading="lazy">
+                                        <img src="{{ video.thumbnail }}" alt="{{ video.title | escape }}" loading="lazy">
                                         <div class="recent-play-overlay">
                                             <i class="fas fa-play"></i>
                                         </div>

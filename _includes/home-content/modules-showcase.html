@@ -22,7 +22,7 @@
             <div class="module-card">
                 <div class="module-image">
                     <a href="{{ module.link }}" target="_blank" rel="noopener">
-                        <img src="/{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                        <img src="/{{ module.image }}" alt="{{ module.title | escape }}" loading="lazy">
                     </a>
                 </div>
 

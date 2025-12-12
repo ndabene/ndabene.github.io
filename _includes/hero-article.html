@@ -13,7 +13,7 @@ Usage: {% include hero-article.html post=site.posts.first %}
         <div class="hero-article-image">
             {% if hero_post.image %}
                 <img src="{{ hero_post.image }}"
-                     alt="{{ hero_post.title }}"
+                     alt="{{ hero_post.title | escape }}"
                      loading="eager"
                      width="1600"
                      height="900"
@@ -21,7 +21,7 @@ Usage: {% include hero-article.html post=site.posts.first %}
                      fetchpriority="high">
             {% else %}
                 <img src="/assets/images/default-hero.jpg"
-                     alt="{{ hero_post.title }}"
+                     alt="{{ hero_post.title | escape }}"
                      loading="eager"
                      width="1600"
                      height="900"

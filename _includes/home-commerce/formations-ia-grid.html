@@ -17,7 +17,7 @@
 
                     <!-- Image de la formation -->
                     <div class="product-card-image">
-                        <img src="/{{ formation.image }}" alt="{{ formation.title }}" loading="lazy">
+                        <img src="/{{ formation.image }}" alt="{{ formation.title | escape }}" loading="lazy">
                     </div>
 
                     <!-- Contenu -->

@@ -18,7 +18,7 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
                 <a href="{{ post.url | relative_url }}" class="trending-link">
                     {% if post.image %}
                         <div class="trending-thumb">
-                            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                            <img src="{{ post.image }}" alt="{{ post.title | escape }}" loading="lazy">
                         </div>
                     {% endif %}
 

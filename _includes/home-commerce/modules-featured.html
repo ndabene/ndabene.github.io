@@ -11,7 +11,7 @@
             <article class="featured-article-card">
                 <a href="{{ module.link }}" target="_blank" rel="noopener noreferrer" class="featured-card-link">
                     <div class="featured-card-image">
-                        <img src="/{{ module.image }}" alt="{{ module.title }}" loading="lazy">
+                        <img src="/{{ module.image }}" alt="{{ module.title | escape }}" loading="lazy">
 
                         {% if module.category %}
                             <span class="featured-category-badge">

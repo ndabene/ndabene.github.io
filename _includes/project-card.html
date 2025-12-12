@@ -1,7 +1,7 @@
 <div class="project-card card" data-categories="{{ project.categories | join: ' ' | slugify }}" data-technologies="{% for tag in project.tags %}{{ tag.tech | slugify }}{% unless forloop.last %} {% endunless %}{% endfor %}" data-date="{{ project.date | date: "%s" }}" data-impact="{{ project.business_impact_score }}">
     <a href="{{ project.project_url }}" class="project-link" target="_blank">
         {% if project.hero_image %}
-            <img src="{{ project.hero_image }}" alt="{{ project.title }}" class="project-thumbnail" loading="lazy">
+            <img src="{{ project.hero_image }}" alt="{{ project.title | escape }}" class="project-thumbnail" loading="lazy">
         {% endif %}
         <div class="card-content">
             <h3>{{ project.title }}</h3>
