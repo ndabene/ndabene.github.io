@@ -67,19 +67,6 @@ llm_topics:
                             </div>
                         </div>
 
-                        <!-- Category pills -->
-                        <div class="blog-category-pills">
-                            <button class="category-pill active" data-category="">
-                                <i class="fas fa-home"></i> All articles
-                            </button>
-                            {% assign published_posts_for_categories = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
-                            {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
-                            {% for category in all_categories %}
-                                <button class="category-pill" data-category="{{ category }}">
-                                    {{ category }}
-                                </button>
-                            {% endfor %}
-                        </div>
 
                         <!-- Quick sort -->
                         <div class="blog-sort-bar">
@@ -244,7 +231,14 @@ llm_topics:
     </div>
 </section>
 
-<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}"></script>
+<!-- Scripts optimized for better performance with deferred loading -->
+<!-- Fuse.js CDN for modern fuzzy search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
+<!-- Modern Search System -->
+<script src="{{ '/assets/js/blog-search-modern.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -581,5 +575,3 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(checkVisiblePosts, 1000);
 });
 </script>
-
-<script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}"></script>

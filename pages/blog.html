@@ -69,19 +69,6 @@ llm_topics:
                             </div>
                         </div>
 
-                        <!-- Pills de catégories -->
-                        <div class="blog-category-pills">
-                            <button class="category-pill active" data-category="">
-                                <i class="fas fa-home"></i> Tous les articles
-                            </button>
-                            {% assign published_posts_for_categories = site.posts | where_exp: "post", "post.date <= site.time" %}
-                            {% assign all_categories = published_posts_for_categories | map: 'categories' | flatten | uniq | sort %}
-                            {% for category in all_categories %}
-                                <button class="category-pill" data-category="{{ category }}">
-                                    {{ category }}
-                                </button>
-                            {% endfor %}
-                        </div>
 
                         <!-- Tri rapide -->
                         <div class="blog-sort-bar">
