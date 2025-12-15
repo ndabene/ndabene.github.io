@@ -174,9 +174,10 @@
         postsContainer.classList.add('grid-view');
 
         // Cache des éléments DOM (évite les querySelectorAll répétés)
+        // Note: La recherche est maintenant gérée par blog-search-modern.js
         const domCache = {
-            searchInput: document.getElementById('search-input'),
-            clearSearchBtn: document.getElementById('clear-search'),
+            // searchInput: document.getElementById('search-input'), // DÉSACTIVÉ - Géré par blog-search-modern.js
+            // clearSearchBtn: document.getElementById('clear-search'), // DÉSACTIVÉ - Géré par blog-search-modern.js
             categoryPills: document.querySelectorAll('.category-pill'),
             sortPills: document.querySelectorAll('.sort-pill'),
             resetFiltersBtn: document.getElementById('reset-filters'),
@@ -187,10 +188,11 @@
         };
 
         // État des filtres
+        // Note: currentSearch retiré - géré par blog-search-modern.js
         const state = {
             currentCategory: '',
-            currentSort: 'date-desc',
-            currentSearch: ''
+            currentSort: 'date-desc'
+            // currentSearch: '' // DÉSACTIVÉ - Géré par blog-search-modern.js
         };
 
         // Masquer par défaut le div "pas de résultats"
@@ -257,11 +259,12 @@
                             domCache.categoryPills[0].classList.add('active');
                         }
                         break;
-                    case 'search':
-                        state.currentSearch = '';
-                        if (domCache.searchInput) domCache.searchInput.value = '';
-                        if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
-                        break;
+                    // Note: search case désactivé - géré par blog-search-modern.js
+                    // case 'search':
+                    //     state.currentSearch = '';
+                    //     if (domCache.searchInput) domCache.searchInput.value = '';
+                    //     if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
+                    //     break;
                 }
 
                 applyFilters();
@@ -316,9 +319,10 @@
             if (state.currentCategory) {
                 addActiveFilter(state.currentCategory, 'category');
             }
-            if (state.currentSearch) {
-                addActiveFilter(state.currentSearch, 'search');
-            }
+            // Note: Recherche gérée par blog-search-modern.js
+            // if (state.currentSearch) {
+            //     addActiveFilter(state.currentSearch, 'search');
+            // }
 
             // Batch DOM updates avec requestAnimationFrame
             scheduleUpdate(() => {
@@ -345,14 +349,15 @@
                         visible = false;
                     }
 
-                    // Filtre recherche (amélioré : titre, contenu, catégories ET tags)
-                    if (state.currentSearch &&
-                        !title.includes(state.currentSearch) &&
-                        !content.includes(state.currentSearch) &&
-                        !categoriesText.includes(state.currentSearch) &&
-                        !tagsText.includes(state.currentSearch)) {
-                        visible = false;
-                    }
+                    // Note: Recherche maintenant gérée par blog-search-modern.js avec Fuse.js
+                    // Filtre recherche (amélioré : titre, contenu, catégories ET tags) - DÉSACTIVÉ
+                    // if (state.currentSearch &&
+                    //     !title.includes(state.currentSearch) &&
+                    //     !content.includes(state.currentSearch) &&
+                    //     !categoriesText.includes(state.currentSearch) &&
+                    //     !tagsText.includes(state.currentSearch)) {
+                    //     visible = false;
+                    // }
 
                     post.style.display = visible ? '' : 'none';
 
@@ -380,31 +385,32 @@
             });
         }
 
-        // Gestion de la recherche avec debouncing (300ms)
-        if (domCache.searchInput) {
-            const debouncedSearch = debounce((value) => {
-                state.currentSearch = value.toLowerCase();
-                applyFilters();
-            }, 300);
+        // Note: La recherche est maintenant gérée par blog-search-modern.js
+        // Gestion de la recherche avec debouncing (300ms) - DÉSACTIVÉ
+        // if (domCache.searchInput) {
+        //     const debouncedSearch = debounce((value) => {
+        //         state.currentSearch = value.toLowerCase();
+        //         applyFilters();
+        //     }, 300);
 
-            domCache.searchInput.addEventListener('input', function() {
-                if (this.value) {
-                    domCache.clearSearchBtn.style.display = 'flex';
-                } else {
-                    domCache.clearSearchBtn.style.display = 'none';
-                }
-                debouncedSearch(this.value);
-            });
-        }
+        //     domCache.searchInput.addEventListener('input', function() {
+        //         if (this.value) {
+        //             domCache.clearSearchBtn.style.display = 'flex';
+        //         } else {
+        //             domCache.clearSearchBtn.style.display = 'none';
+        //         }
+        //         debouncedSearch(this.value);
+        //     });
+        // }
 
-        if (domCache.clearSearchBtn) {
-            domCache.clearSearchBtn.addEventListener('click', function() {
-                domCache.searchInput.value = '';
-                state.currentSearch = '';
-                this.style.display = 'none';
-                applyFilters();
-            });
-        }
+        // if (domCache.clearSearchBtn) {
+        //     domCache.clearSearchBtn.addEventListener('click', function() {
+        //         domCache.searchInput.value = '';
+        //         state.currentSearch = '';
+        //         this.style.display = 'none';
+        //         applyFilters();
+        //     });
+        // }
 
         // Gestion des pills de catégories
         domCache.categoryPills.forEach(pill => {
@@ -430,11 +436,21 @@
         if (domCache.resetFiltersBtn) {
             domCache.resetFiltersBtn.addEventListener('click', function() {
                 state.currentCategory = '';
-                state.currentSearch = '';
+                // state.currentSearch = ''; // DÉSACTIVÉ - Géré par blog-search-modern.js
                 state.currentSort = 'date-desc';
 
-                if (domCache.searchInput) domCache.searchInput.value = '';
-                if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
+                // Note: La recherche est réinitialisée par blog-search-modern.js
+                // if (domCache.searchInput) domCache.searchInput.value = '';
+                // if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
+
+                // Déclencher la réinitialisation de la recherche moderne
+                const searchInput = document.getElementById('search-input');
+                const clearSearchBtn = document.getElementById('clear-search');
+                if (searchInput) {
+                    searchInput.value = '';
+                    searchInput.dispatchEvent(new Event('input'));
+                }
+                if (clearSearchBtn) clearSearchBtn.style.display = 'none';
 
                 domCache.categoryPills.forEach(p => p.classList.remove('active'));
                 if (domCache.categoryPills[0]) {
