@@ -25,6 +25,7 @@ $search-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1); // Ombres plus prononcées
 .search-input-wrapper {
   position: relative;
   width: 100%;
+  z-index: 100; // Créer un contexte d'empilement pour les suggestions
 
   // Search icon
   > .fa-search {
@@ -105,7 +106,7 @@ $search-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1); // Ombres plus prononcées
   border: 2px solid $search-border;
   max-height: 480px; // Augmenté pour afficher plus de suggestions
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 9999; // Z-index très élevé pour passer au-dessus de tout contenu
   display: none;
   animation: slideDown 0.2s ease;
 
@@ -307,6 +308,8 @@ $search-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1); // Ombres plus prononcées
 
 .blog-search-bar {
   margin-bottom: 24px;
+  position: relative; // Nécessaire pour le contexte d'empilement
+  z-index: 50; // S'assurer que toute la zone de recherche est au-dessus
 
   // Add keyboard hint
   .search-input-wrapper::after {
