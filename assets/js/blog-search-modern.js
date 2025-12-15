@@ -8,6 +8,7 @@
     const CONFIG = {
         DEBOUNCE_DELAY: 200,
         MAX_HISTORY_ITEMS: 5,
+        MAX_SUGGESTIONS: 10, // Augmenté de 5 à 10 pour plus de résultats
         HISTORY_KEY: 'blog_search_history',
         FUSE_OPTIONS: {
             threshold: 0.4, // 0 = exact match, 1 = match anything
@@ -126,7 +127,7 @@
 
         // Perform fuzzy search for suggestions
         if (fuse) {
-            const results = fuse.search(query).slice(0, 5);
+            const results = fuse.search(query).slice(0, CONFIG.MAX_SUGGESTIONS);
 
             if (results.length > 0) {
                 suggestionsContainer.innerHTML = `
@@ -163,7 +164,7 @@
         }
     }
 
-    // Build search index from DOM
+    // Build search index from DOM (includes paginated content)
     function buildSearchIndex() {
         const postsContainer = document.getElementById('blog-posts-container');
         if (!postsContainer) return;
@@ -171,6 +172,7 @@
         const posts = postsContainer.querySelectorAll('.post-preview-wrapper');
         searchIndex = [];
 
+        // Index visible posts
         posts.forEach((wrapper, index) => {
             const postElement = wrapper.querySelector('.post-preview-news');
             if (!postElement) return;
@@ -186,32 +188,56 @@
                 excerpt: excerptElement ? excerptElement.textContent.trim() : '',
                 categories: postElement.getAttribute('data-categories') || '',
                 tags: postElement.getAttribute('data-tags') || '',
-                url: titleLink ? titleLink.getAttribute('href') : ''
+                url: titleLink ? titleLink.getAttribute('href') : '',
+                isPaginated: false
             });
         });
+
+        // NOUVEAU: Index aussi le contenu paginé (lazy-loaded posts)
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        if (lazyPostsData) {
+            const lazyPosts = lazyPostsData.querySelectorAll('.lazy-post-data');
+            lazyPosts.forEach((lazyPost, index) => {
+                searchIndex.push({
+                    id: searchIndex.length,
+                    element: null, // Pas encore dans le DOM
+                    title: lazyPost.getAttribute('data-title') || '',
+                    excerpt: lazyPost.getAttribute('data-excerpt') || '',
+                    categories: lazyPost.getAttribute('data-categories') || '',
+                    tags: lazyPost.getAttribute('data-tags') || '',
+                    url: lazyPost.getAttribute('data-url') || '',
+                    isPaginated: true,
+                    lazyElement: lazyPost
+                });
+            });
+            console.log('📄 Articles paginés indexés:', lazyPosts.length);
+        }
 
         // Initialize Fuse.js with the search index
         if (window.Fuse) {
             fuse = new window.Fuse(searchIndex, CONFIG.FUSE_OPTIONS);
-            console.log('🔍 Index de recherche créé:', searchIndex.length, 'articles');
+            console.log('🔍 Index de recherche créé:', searchIndex.length, 'articles (dont',
+                searchIndex.filter(item => item.isPaginated).length, 'paginés)');
         } else {
             console.warn('⚠️ Fuse.js non chargé, utilisation de la recherche basique');
         }
     }
 
-    // Perform fuzzy search
+    // Perform fuzzy search (improved to handle paginated content)
     function performFuzzySearch(query) {
         if (!query || query.length < 2) {
-            // Show all posts
+            // Show all visible posts (not paginated ones)
             searchIndex.forEach(item => {
-                item.element.style.display = '';
-                // Remove highlights
-                const titleElement = item.element.querySelector('.post-news-title a');
-                const excerptElement = item.element.querySelector('.post-news-excerpt');
-                if (titleElement) titleElement.innerHTML = item.title;
-                if (excerptElement) excerptElement.innerHTML = item.excerpt;
+                if (!item.isPaginated && item.element) {
+                    item.element.style.display = '';
+                    // Remove highlights
+                    const titleElement = item.element.querySelector('.post-news-title a');
+                    const excerptElement = item.element.querySelector('.post-news-excerpt');
+                    if (titleElement) titleElement.innerHTML = item.title;
+                    if (excerptElement) excerptElement.innerHTML = item.excerpt;
+                }
             });
-            return searchIndex.length;
+            return searchIndex.filter(item => !item.isPaginated).length;
         }
 
         if (!fuse) {
@@ -222,33 +248,42 @@
         const results = fuse.search(query);
         let visibleCount = 0;
 
-        // Hide all posts first
+        // Hide all visible posts first
         searchIndex.forEach(item => {
-            item.element.style.display = 'none';
-            // Remove previous highlights
-            const titleElement = item.element.querySelector('.post-news-title a');
-            const excerptElement = item.element.querySelector('.post-news-excerpt');
-            if (titleElement) titleElement.innerHTML = item.title;
-            if (excerptElement) excerptElement.innerHTML = item.excerpt;
+            if (!item.isPaginated && item.element) {
+                item.element.style.display = 'none';
+                // Remove previous highlights
+                const titleElement = item.element.querySelector('.post-news-title a');
+                const excerptElement = item.element.querySelector('.post-news-excerpt');
+                if (titleElement) titleElement.innerHTML = item.title;
+                if (excerptElement) excerptElement.innerHTML = item.excerpt;
+            }
         });
 
-        // Show matching results with highlights
+        // Show matching results with highlights (only for visible posts)
         results.forEach(result => {
             const item = result.item;
-            item.element.style.display = '';
-            visibleCount++;
 
-            // Highlight matches
-            if (result.matches) {
-                result.matches.forEach(match => {
-                    const element = item.element.querySelector(
-                        match.key === 'title' ? '.post-news-title a' : '.post-news-excerpt'
-                    );
-                    if (element && match.indices) {
-                        const highlighted = highlightText(match.value, match.indices);
-                        element.innerHTML = highlighted;
-                    }
-                });
+            // Only show/highlight if it's a visible (non-paginated) post
+            if (!item.isPaginated && item.element) {
+                item.element.style.display = '';
+                visibleCount++;
+
+                // Highlight matches
+                if (result.matches) {
+                    result.matches.forEach(match => {
+                        const element = item.element.querySelector(
+                            match.key === 'title' ? '.post-news-title a' : '.post-news-excerpt'
+                        );
+                        if (element && match.indices) {
+                            const highlighted = highlightText(match.value, match.indices);
+                            element.innerHTML = highlighted;
+                        }
+                    });
+                }
+            } else if (item.isPaginated) {
+                // Compte les résultats paginés mais ne les affiche pas (ils sont dans les suggestions)
+                visibleCount++;
             }
         });
 
