@@ -137,7 +137,7 @@
                         const item = result.item;
                         const score = (1 - result.score) * 100;
                         return `
-                            <div class="search-suggestion" data-query="${item.title}">
+                            <a href="${item.url}" class="search-suggestion" data-url="${item.url}">
                                 <i class="fas fa-file-alt"></i>
                                 <div class="suggestion-content">
                                     <div class="suggestion-title">${item.title}</div>
@@ -146,7 +146,7 @@
                                         <span class="suggestion-score">${Math.round(score)}% pertinent</span>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         `;
                     }).join('')}
                 `;
@@ -176,6 +176,7 @@
             if (!postElement) return;
 
             const titleElement = wrapper.querySelector('.post-news-title');
+            const titleLink = wrapper.querySelector('.post-news-title a');
             const excerptElement = wrapper.querySelector('.post-news-excerpt');
 
             searchIndex.push({
@@ -184,7 +185,8 @@
                 title: titleElement ? titleElement.textContent.trim() : '',
                 excerpt: excerptElement ? excerptElement.textContent.trim() : '',
                 categories: postElement.getAttribute('data-categories') || '',
-                tags: postElement.getAttribute('data-tags') || ''
+                tags: postElement.getAttribute('data-tags') || '',
+                url: titleLink ? titleLink.getAttribute('href') : ''
             });
         });
 
@@ -360,11 +362,19 @@
             suggestionsContainer.addEventListener('click', function(e) {
                 const suggestion = e.target.closest('.search-suggestion');
                 if (suggestion) {
+                    // Si c'est un lien vers un article, laisser la navigation se faire naturellement
+                    if (suggestion.dataset.url) {
+                        // La navigation se fera via le href du <a>
+                        return;
+                    }
+                    // Sinon, pour les recherches récentes, remplir l'input
                     const query = suggestion.dataset.query;
-                    searchInput.value = query;
-                    searchInput.dispatchEvent(new Event('input'));
-                    suggestionsContainer.style.display = 'none';
-                    searchInput.focus();
+                    if (query) {
+                        searchInput.value = query;
+                        searchInput.dispatchEvent(new Event('input'));
+                        suggestionsContainer.style.display = 'none';
+                        searchInput.focus();
+                    }
                 }
             });
         }
