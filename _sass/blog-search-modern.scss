@@ -101,7 +101,7 @@ $search-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0
   border: 1px solid $search-border;
   max-height: 400px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 1100;
   display: none;
   animation: slideDown 0.2s ease;
 
@@ -411,72 +411,75 @@ $search-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0
 }
 
 // ========================================
-// Dark Mode Support (Optional)
+// Dark Mode Support (Désactivé)
 // ========================================
+// Le mode sombre automatique a été désactivé pour maintenir une cohérence
+// avec le design clair du site. Si vous souhaitez réactiver le mode sombre,
+// décommentez la section ci-dessous.
 
-@media (prefers-color-scheme: dark) {
-  .search-input-wrapper {
-    #search-input {
-      background: #1f2937;
-      border-color: #374151;
-      color: #f9fafb;
-
-      &:focus {
-        border-color: $search-primary-light;
-        box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
-      }
-
-      &::placeholder {
-        color: #6b7280;
-      }
-    }
-  }
-
-  .search-suggestions {
-    background: #1f2937;
-    border-color: #374151;
-
-    &::-webkit-scrollbar-track {
-      background: #111827;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #4b5563;
-
-      &:hover {
-        background: #6b7280;
-      }
-    }
-  }
-
-  .search-suggestions-header {
-    background: #111827;
-    color: #9ca3af;
-    border-color: #374151;
-  }
-
-  .search-suggestion {
-    border-color: #374151;
-
-    &:hover {
-      background: #374151;
-    }
-
-    .suggestion-title {
-      color: #f9fafb;
-    }
-
-    .suggestion-category {
-      background: #1e3a8a;
-      color: $search-primary-light;
-    }
-  }
-
-  .search-highlight {
-    background: #78350f;
-    color: #fef3c7;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   .search-input-wrapper {
+//     #search-input {
+//       background: #1f2937;
+//       border-color: #374151;
+//       color: #f9fafb;
+//
+//       &:focus {
+//         border-color: $search-primary-light;
+//         box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+//       }
+//
+//       &::placeholder {
+//         color: #6b7280;
+//       }
+//     }
+//   }
+//
+//   .search-suggestions {
+//     background: #1f2937;
+//     border-color: #374151;
+//
+//     &::-webkit-scrollbar-track {
+//       background: #111827;
+//     }
+//
+//     &::-webkit-scrollbar-thumb {
+//       background: #4b5563;
+//
+//       &:hover {
+//         background: #6b7280;
+//       }
+//     }
+//   }
+//
+//   .search-suggestions-header {
+//     background: #111827;
+//     color: #9ca3af;
+//     border-color: #374151;
+//   }
+//
+//   .search-suggestion {
+//     border-color: #374151;
+//
+//     &:hover {
+//       background: #374151;
+//     }
+//
+//     .suggestion-title {
+//       color: #f9fafb;
+//     }
+//
+//     .suggestion-category {
+//       background: #1e3a8a;
+//       color: $search-primary-light;
+//     }
+//   }
+//
+//   .search-highlight {
+//     background: #78350f;
+//     color: #fef3c7;
+//   }
+// }
 
 // ========================================
 // Performance Optimizations
