@@ -10,17 +10,22 @@
         MAX_HISTORY_ITEMS: 5,
         HISTORY_KEY: 'blog_search_history',
         FUSE_OPTIONS: {
-            threshold: 0.4, // 0 = exact match, 1 = match anything
-            distance: 100,
+            threshold: 0.3, // 0 = exact match, 1 = match anything (diminué pour meilleure pertinence)
+            distance: 50, // Distance réduite pour des résultats plus précis
             minMatchCharLength: 2,
+            ignoreLocation: false, // Prendre en compte la position du match
+            location: 0, // Privilégier les matchs au début
             keys: [
-                { name: 'title', weight: 0.4 },
-                { name: 'excerpt', weight: 0.2 },
-                { name: 'categories', weight: 0.2 },
-                { name: 'tags', weight: 0.2 }
+                { name: 'title', weight: 0.5 }, // Poids augmenté pour le titre (plus important)
+                { name: 'excerpt', weight: 0.25 }, // Poids augmenté pour l'extrait
+                { name: 'categories', weight: 0.15 }, // Poids diminué pour les catégories
+                { name: 'tags', weight: 0.1 } // Poids diminué pour les tags
             ],
             includeScore: true,
-            includeMatches: true
+            includeMatches: true,
+            shouldSort: true, // Trier les résultats par pertinence
+            findAllMatches: false, // Arrêter à la première bonne correspondance
+            useExtendedSearch: false // Recherche standard (plus rapide)
         }
     };
 
@@ -126,24 +131,32 @@
 
         // Perform fuzzy search for suggestions
         if (fuse) {
-            const results = fuse.search(query).slice(0, 5);
+            const results = fuse.search(query).slice(0, 6);
 
             if (results.length > 0) {
                 suggestionsContainer.innerHTML = `
                     <div class="search-suggestions-header">
-                        <i class="fas fa-search"></i> Suggestions
+                        <i class="fas fa-sparkles"></i> ${results.length} résultat${results.length > 1 ? 's' : ''} pertinent${results.length > 1 ? 's' : ''}
                     </div>
-                    ${results.map(result => {
+                    ${results.map((result, index) => {
                         const item = result.item;
                         const score = (1 - result.score) * 100;
+
+                        // Extraire un court extrait avec le match
+                        let excerpt = item.excerpt;
+                        if (excerpt.length > 80) {
+                            excerpt = excerpt.substring(0, 80) + '...';
+                        }
+
                         return `
                             <a href="${item.url}" class="search-suggestion" data-url="${item.url}">
-                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-${index === 0 ? 'star' : 'file-alt'}"></i>
                                 <div class="suggestion-content">
                                     <div class="suggestion-title">${item.title}</div>
+                                    <div class="suggestion-excerpt">${excerpt}</div>
                                     <div class="suggestion-meta">
-                                        ${item.categories ? `<span class="suggestion-category">${item.categories}</span>` : ''}
-                                        <span class="suggestion-score">${Math.round(score)}% pertinent</span>
+                                        ${item.categories ? `<span class="suggestion-category"><i class="fas fa-tag"></i> ${item.categories}</span>` : ''}
+                                        <span class="suggestion-score"><i class="fas fa-check-circle"></i> ${Math.round(score)}%</span>
                                     </div>
                                 </div>
                             </a>
@@ -155,7 +168,7 @@
                 suggestionsContainer.innerHTML = `
                     <div class="search-no-suggestions">
                         <i class="fas fa-search"></i>
-                        Aucune suggestion trouvée
+                        <div>Aucune suggestion trouvée</div>
                     </div>
                 `;
                 suggestionsContainer.style.display = 'block';
