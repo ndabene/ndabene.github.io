@@ -107,7 +107,7 @@ product:
                     <div class="text-sm text-[#374151]">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
-                            <span>40+ outils MCP inclus</span>
+                            <span>77+ outils MCP inclus</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
@@ -176,11 +176,11 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">40+</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">77+</div>
                 <div class="text-[#475569]">Outils MCP</div>
             </div>
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">7</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">10</div>
                 <div class="text-[#475569]">Catégories</div>
             </div>
             <div class="text-center">
@@ -284,17 +284,29 @@ product:
             <button class="category-tab active px-5 py-2.5 rounded-lg font-medium" data-category="all">
                 Tous les outils
             </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="helpers">
+                <i class="fas fa-tools mr-2"></i>Helpers
+            </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="sales">
-                <i class="fas fa-chart-pie mr-2"></i>Ventes & Revenus
+                <i class="fas fa-chart-pie mr-2"></i>Ventes
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="customer">
                 <i class="fas fa-users mr-2"></i>Clients
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="inventory">
-                <i class="fas fa-warehouse mr-2"></i>Inventaire
+                <i class="fas fa-warehouse mr-2"></i>Stock
+            </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="marketing">
+                <i class="fas fa-bullhorn mr-2"></i>Marketing
+            </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="cms">
+                <i class="fas fa-file-alt mr-2"></i>CMS
+            </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="images">
+                <i class="fas fa-image mr-2"></i>Images
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="ga4">
-                <i class="fab fa-google mr-2"></i>Google Analytics
+                <i class="fab fa-google mr-2"></i>Analytics
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="support">
                 <i class="fas fa-headset mr-2"></i>Support
@@ -640,26 +652,101 @@ product:
 
     // Tools data
     const tools = [
-        { name: 'Sales Dashboard', desc: 'Vue complète des commandes, revenus et paniers moyens sur une période donnée.', category: 'sales', icon: 'fa-chart-bar', color: 'marine' },
-        { name: 'Product Performance', desc: 'Classement des produits par CA et quantités avec filtres pays/catégorie.', category: 'sales', icon: 'fa-ranking-star', color: 'marine' },
-        { name: 'Business Reports', desc: 'Rapports personnalisés avec colonnes flexibles et filtres avancés.', category: 'sales', icon: 'fa-file-alt', color: 'marine' },
-        { name: 'Tax Summary', desc: 'Totaux HT/TTC/TVA prêts pour vos déclarations fiscales.', category: 'sales', icon: 'fa-file-invoice-dollar', color: 'gold' },
-        { name: 'Multi-Country Tax', desc: 'Ventilation TVA par pays ou taux pour le multi-marché.', category: 'sales', icon: 'fa-globe', color: 'gold' },
-        { name: 'Customer Segments', desc: 'Segmentation clients par pays, groupe et fréquence d\'achat.', category: 'customer', icon: 'fa-user-group', color: 'ecommerce' },
-        { name: 'Behavior Analytics', desc: 'Analyse des clients : panier moyen, fidélité, top acheteurs.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
-        { name: 'Order Tracking', desc: 'Suivi des commandes par statut pour détecter les blocages.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
-        { name: 'Stock Alerts', desc: 'Alerte sur les produits en rupture ou stock critique.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
-        { name: 'Margin Monitor', desc: 'Détection des produits avec marges insuffisantes.', category: 'inventory', icon: 'fa-percent', color: 'green' },
-        { name: 'Google Analytics E-commerce', desc: 'Revenus, transactions, taux de conversion depuis Google Analytics.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
-        { name: 'Google Analytics Top Products', desc: 'Meilleurs produits par vues, achats et revenus Google Analytics.', category: 'ga4', icon: 'fa-trophy', color: 'marine' },
-        { name: 'Conversion Funnel', desc: 'Tunnel de conversion avec taux d\'abandon par étape.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
-        { name: 'Traffic Sources', desc: 'Acquisition par source, medium et campagne.', category: 'ga4', icon: 'fa-chart-line', color: 'marine' },
-        { name: 'Inbox Overview', desc: 'Compteurs de threads et messages en attente de réponse.', category: 'support', icon: 'fa-inbox', color: 'prestashop' },
-        { name: 'SLA Monitor', desc: 'Alertes sur les tickets dépassant le délai de réponse.', category: 'support', icon: 'fa-clock', color: 'prestashop' },
-        { name: 'Smart Priority', desc: 'Classement intelligent des tickets par urgence et valeur.', category: 'support', icon: 'fa-sort', color: 'prestashop' },
-        { name: 'FAQ Manager', desc: 'Gestion des FAQs avec filtres par type et langue.', category: 'seo', icon: 'fa-question-circle', color: 'green' },
-        { name: 'AI Bot Analytics', desc: 'Statistiques de trafic des bots IA sur votre site.', category: 'seo', icon: 'fa-robot', color: 'green' },
-        { name: 'IndexNow Status', desc: 'État de la file d\'indexation IndexNow.', category: 'seo', icon: 'fa-paper-plane', color: 'green' },
+        // Helpers & Messaging
+        { name: 'get_prompt_examples', desc: 'Liste les outils MCP disponibles avec exemples de prompts, groupés par catégorie/module.', category: 'helpers', icon: 'fa-lightbulb', color: 'gold' },
+        { name: 'get_country_codes', desc: 'Retourne les IDs pays PrestaShop pour filtrage (ex: France = 8). Toujours appeler en premier pour filtrer par pays.', category: 'helpers', icon: 'fa-flag', color: 'gold' },
+        { name: 'send_email_from_shop', desc: 'Envoie un email via la boutique en utilisant du contenu HTML (pas de Markdown).', category: 'helpers', icon: 'fa-envelope', color: 'gold' },
+
+        // Sales & Revenue Analytics
+        { name: 'sales_analytics_dashboard', desc: 'Totaux commandes, CA, min/max/moyenne panier pour une période avec groupement.', category: 'sales', icon: 'fa-chart-bar', color: 'marine' },
+        { name: 'product_performance_tracker', desc: 'Classement produits par CA/quantité avec filtres pays/catégorie/fabricant et détails variantes.', category: 'sales', icon: 'fa-ranking-star', color: 'marine' },
+        { name: 'advanced_business_reports', desc: 'Rapports niveau commande avec colonnes flexibles (shipping, wrapping, discounts, status, invoice).', category: 'sales', icon: 'fa-file-chart-line', color: 'marine' },
+        { name: 'order_charges_breakdown', desc: 'Vue d\'ensemble charges HT/TTC/TVA shipping, wrapping, réductions avec ratio livraison gratuite/payante.', category: 'sales', icon: 'fa-receipt', color: 'marine' },
+        { name: 'tax_declaration_summary', desc: 'Agrégation totaux HT/TTC/TVA pour déclarations fiscales.', category: 'sales', icon: 'fa-file-invoice-dollar', color: 'gold' },
+        { name: 'multi_market_tax_analyzer', desc: 'Groupement HT/TTC/TVA par pays ou taux de taxe pour déclarations multi-pays.', category: 'sales', icon: 'fa-globe', color: 'gold' },
+        { name: 'returns_and_credits_tracker', desc: 'Retourne avoirs/remboursements avec totaux HT/TTC pour réconciliation comptable.', category: 'sales', icon: 'fa-undo', color: 'marine' },
+
+        // Customer Insights & Operations
+        { name: 'customer_insights_analyzer', desc: 'Segmente clients (pays/groupe/fréquence) et liste top acheteurs.', category: 'customer', icon: 'fa-user-chart', color: 'ecommerce' },
+        { name: 'customer_behavior_summary', desc: 'Total clients, dépense moyenne, clients récurrents, top 10, distribution pays.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
+        { name: 'customer_demographics_breakdown', desc: 'Distribution acheteurs par genre et tranches d\'âge (avec filtres pays optionnels).', category: 'customer', icon: 'fa-users-demographic', color: 'ecommerce' },
+        { name: 'order_fulfillment_tracker', desc: 'Compte commandes et CA par statut PrestaShop pour détecter blocages fulfillment.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
+
+        // Inventory & Stock
+        { name: 'inventory_alerts_monitor', desc: 'Liste produits avec stock au/sous seuil avec détails variantes en rupture.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
+        { name: 'margin_performance_alerts', desc: 'Détecte produits avec marges sous seuil (ou négatives) avec breakdown variantes.', category: 'inventory', icon: 'fa-percent', color: 'green' },
+        { name: 'get_product_stock', desc: 'Obtient stock disponible pour un produit avec breakdown par combinaison si applicable.', category: 'inventory', icon: 'fa-box', color: 'green' },
+        { name: 'set_product_stock', desc: 'Définit quantité stock pour produit/combinaison avec enregistrement mouvement optionnel.', category: 'inventory', icon: 'fa-edit', color: 'green' },
+        { name: 'adjust_product_stock', desc: 'Ajuste stock par delta (positif/négatif) avec enregistrement mouvement.', category: 'inventory', icon: 'fa-plus-minus', color: 'green' },
+        { name: 'list_stock_movement_reasons', desc: 'Liste raisons mouvements stock (filtrables par signe: augmentation/diminution).', category: 'inventory', icon: 'fa-list', color: 'green' },
+        { name: 'get_stock_movements', desc: 'Obtient derniers mouvements stock pour produit/combinaison avec dates, deltas, raisons.', category: 'inventory', icon: 'fa-history', color: 'green' },
+
+        // Promotions & Marketing
+        { name: 'voucher_overview', desc: 'Liste bons existants avec statut, validité et type de réduction.', category: 'marketing', icon: 'fa-ticket', color: 'prestashop' },
+        { name: 'create_voucher', desc: 'Crée nouveau bon via webservices avec paramètres simples (code, dates, réduction).', category: 'marketing', icon: 'fa-plus-circle', color: 'prestashop' },
+        { name: 'update_voucher', desc: 'Met à jour champs clés bon (code, validité, réduction, activation) via webservice.', category: 'marketing', icon: 'fa-pen', color: 'prestashop' },
+        { name: 'get_packs', desc: 'Liste tous packs Advanced Pack avec nom, état, prix, quantité disponible et contenu.', category: 'marketing', icon: 'fa-box-open', color: 'prestashop' },
+        { name: 'get_pack_available_quantity', desc: 'Retourne quantité disponible pour un pack Advanced Pack spécifique.', category: 'marketing', icon: 'fa-warehouse', color: 'prestashop' },
+        { name: 'generate_add_to_cart_link', desc: 'Génère URL ajout panier PrestaShop avec résolution variante et vérification stock.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
+
+        // CMS
+        { name: 'cms_list_pages', desc: 'Liste pages CMS avec filtres optionnels (shop, langue, catégorie, actif) et URL front.', category: 'cms', icon: 'fa-file-alt', color: 'marine' },
+        { name: 'cms_get_page', desc: 'Obtient détails page CMS (contenu + champs SEO) avec traductions optionnelles.', category: 'cms', icon: 'fa-file', color: 'marine' },
+        { name: 'cms_update_page_fields', desc: 'Met à jour champs traduisibles CMS pour une langue (meta title/description/SEO).', category: 'cms', icon: 'fa-edit', color: 'marine' },
+        { name: 'cms_set_page_content', desc: 'Remplace contenu HTML CMS pour une langue (peut être vide pour effacer).', category: 'cms', icon: 'fa-file-code', color: 'marine' },
+        { name: 'cms_create_page', desc: 'Crée page CMS dans catégorie pour un shop et langue (contenu initial + champs SEO).', category: 'cms', icon: 'fa-plus-square', color: 'marine' },
+        { name: 'cms_set_page_publication', desc: 'Publie/dépublie page CMS (toggle actif).', category: 'cms', icon: 'fa-toggle-on', color: 'marine' },
+        { name: 'cms_set_page_indexation', desc: 'Définit index/noindex pour page CMS (toggle indexation).', category: 'cms', icon: 'fa-search', color: 'marine' },
+        { name: 'cms_move_or_reorder_page', desc: 'Déplace page CMS vers autre catégorie et/ou réordonne position dans catégorie.', category: 'cms', icon: 'fa-arrows-alt', color: 'marine' },
+        { name: 'cms_list_categories_tree', desc: 'Liste catégories CMS en arborescence (lite) avec liens.', category: 'cms', icon: 'fa-folder-tree', color: 'marine' },
+        { name: 'cms_seo_audit_report', desc: 'Audit SEO lecture seule pages CMS (meta manquantes/longues, contenu vide, doublons).', category: 'cms', icon: 'fa-clipboard-check', color: 'marine' },
+
+        // Product Images
+        { name: 'product_images_full_overview', desc: 'Vue complète images produit et images preview variantes (si combinaisons).', category: 'images', icon: 'fa-images', color: 'ecommerce' },
+        { name: 'add_product_image', desc: 'Attache fichier image existant à produit, optionnellement cover et lié à combinaison.', category: 'images', icon: 'fa-plus', color: 'ecommerce' },
+        { name: 'replace_product_image', desc: 'Remplace contenu fichier image produit existante en conservant ID/position/cover.', category: 'images', icon: 'fa-sync', color: 'ecommerce' },
+        { name: 'set_product_cover_image', desc: 'Définit image cover produit vers image existante spécifique.', category: 'images', icon: 'fa-star', color: 'ecommerce' },
+        { name: 'upload_image_from_url', desc: 'Télécharge image depuis URL dans répertoire upload module et retourne file_path.', category: 'images', icon: 'fa-cloud-download', color: 'ecommerce' },
+        { name: 'attach_image_to_combination', desc: 'Associe image produit existante avec combinaison/variante spécifique.', category: 'images', icon: 'fa-link', color: 'ecommerce' },
+
+        // Google Analytics 4
+        { name: 'google_analytics_connection_checker', desc: 'Vérifie statut OAuth GA4 et IDs propriété, retourne status/message + suggestions setup.', category: 'ga4', icon: 'fa-plug', color: 'marine' },
+        { name: 'google_analytics_traffic_report', desc: 'GA4 runReport trafic/engagement avec dimensions, métriques, filtres et tri personnalisés.', category: 'ga4', icon: 'fa-chart-line', color: 'marine' },
+        { name: 'google_analytics_realtime_report', desc: 'Snapshot temps réel GA4 (30 dernières minutes) groupé par dimensions choisies.', category: 'ga4', icon: 'fa-clock', color: 'marine' },
+        { name: 'google_analytics_ecommerce_summary', desc: 'Revenus, transactions, AOV, conversion et comparaison période précédente optionnelle.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
+        { name: 'google_analytics_top_products_report', desc: 'Classement produits par revenus/vues/ajouts panier/achats avec filtre nom optionnel.', category: 'ga4', icon: 'fa-trophy', color: 'marine' },
+        { name: 'google_analytics_traffic_sources_report', desc: 'Breakdown sessions/engagement (et revenus optionnels) par source/medium/campagne/canal.', category: 'ga4', icon: 'fa-users', color: 'marine' },
+        { name: 'google_analytics_compare_analytics_periods', desc: 'Compare deux périodes pour métriques sélectionnées et retourne deltas/tendances.', category: 'ga4', icon: 'fa-balance-scale', color: 'marine' },
+        { name: 'google_analytics_product_page_performance', desc: 'Trafic/engagement pages produits avec métriques e-commerce optionnelles et filtre path.', category: 'ga4', icon: 'fa-chart-area', color: 'marine' },
+        { name: 'google_analytics_user_demographics', desc: 'Breakdown visiteurs par pays/ville/langue/appareil/navigateur/OS avec métriques revenus.', category: 'ga4', icon: 'fa-globe', color: 'marine' },
+        { name: 'google_analytics_conversion_funnel', desc: 'Construit tunnel conversion de sessions à achat avec taux abandon par étape.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
+
+        // Customer Service
+        { name: 'inbox_status_snapshot', desc: 'Compte threads par statut et liste ceux en attente réponse marchand avec fenêtre jours récente.', category: 'support', icon: 'fa-inbox', color: 'prestashop' },
+        { name: 'sla_breach_radar', desc: 'Liste threads dont dernier message client dépasse seuil et attend toujours réponse.', category: 'support', icon: 'fa-exclamation-triangle', color: 'prestashop' },
+        { name: 'open_threads_brief', desc: 'Liste threads par statut (défaut: open/pending) avec nom/email client et ref commande.', category: 'support', icon: 'fa-list', color: 'prestashop' },
+        { name: 'order_context_enricher', desc: 'Pour un thread donné, retourne contexte commande (état, tracking, transporteur) + messages récents.', category: 'support', icon: 'fa-info-circle', color: 'prestashop' },
+        { name: 'language_template_suggestion', desc: 'Détecte langue thread et suggère clé réponse pré-définie selon mots-clés dernier message client.', category: 'support', icon: 'fa-language', color: 'prestashop' },
+        { name: 'priority_routing', desc: 'Classe et score threads en attente par SLA, temps attente et valeur commande pour prioriser urgences.', category: 'support', icon: 'fa-sort', color: 'prestashop' },
+        { name: 'messages_by_date', desc: 'Recherche messages pour un jour, plage ou X derniers jours avec filtres statut thread et expéditeur.', category: 'support', icon: 'fa-calendar', color: 'prestashop' },
+        { name: 'reply_drafter', desc: 'Génère prompt (et fallback) pour rédiger réponse contextuelle au dernier message client (draft uniquement).', category: 'support', icon: 'fa-pen-square', color: 'prestashop' },
+
+        // SEO & Settings
+        { name: 'get_settings_insights', desc: 'Audit paramètres PrestaShop clés groupés par catégorie (sécurité, perfs, SEO) vs recommandés.', category: 'seo', icon: 'fa-cog', color: 'green' },
+        { name: 'get_blocked_modules', desc: 'Liste modules bloqués par Advanced Cookie Banner, groupés par allowed/analytics/marketing.', category: 'seo', icon: 'fa-ban', color: 'green' },
+        { name: 'set_module_category', desc: 'Déplace module dans allowed/analytics/marketing pour bloquer ou autoriser selon catégorie.', category: 'seo', icon: 'fa-cogs', color: 'green' },
+        { name: 'list_faqs', desc: 'Liste FAQs avec filtres optionnels par type entité, langue et statut actif.', category: 'seo', icon: 'fa-question-circle', color: 'green' },
+        { name: 'get_faq', desc: 'Obtient détails complets FAQ par ID incluant texte réponse et métadonnées.', category: 'seo', icon: 'fa-question', color: 'green' },
+        { name: 'get_faq_statistics', desc: 'Obtient statistiques FAQ incluant comptages totaux, breakdown par type, langue et statut.', category: 'seo', icon: 'fa-chart-pie', color: 'green' },
+        { name: 'list_products_missing_alt_texts', desc: 'Liste produits ayant images sans texte alt (méthode legacy).', category: 'seo', icon: 'fa-image', color: 'green' },
+        { name: 'get_alt_text_status', desc: 'Obtient statut couverture alt text pour produit spécifique incluant comptage images et alts manquants.', category: 'seo', icon: 'fa-align-left', color: 'green' },
+        { name: 'list_products_alt_text_status', desc: 'Liste produits avec statut couverture alt text sur toutes langues.', category: 'seo', icon: 'fa-list-alt', color: 'green' },
+        { name: 'get_geo_content', desc: 'Obtient contenu GEO (phrases citation IA, contenu frais, URLs custom) pour produit spécifique.', category: 'seo', icon: 'fa-map-marker', color: 'green' },
+        { name: 'list_products_with_geo_content', desc: 'Liste produits ayant contenu GEO configuré (phrases citation IA ou contenu frais).', category: 'seo', icon: 'fa-globe-americas', color: 'green' },
+        { name: 'get_indexnow_queue_status', desc: 'Obtient statut file soumission IndexNow incluant comptages pending, processed, failed.', category: 'seo', icon: 'fa-paper-plane', color: 'green' },
+        { name: 'get_indexnow_history', desc: 'Obtient historique soumissions IndexNow récentes avec URLs, statut et timestamps.', category: 'seo', icon: 'fa-history', color: 'green' },
+        { name: 'get_sitemap_status', desc: 'Obtient statut génération sitemap XML incluant date dernière génération et types contenu inclus.', category: 'seo', icon: 'fa-sitemap', color: 'green' },
+        { name: 'get_ai_bot_traffic_stats', desc: 'Obtient analytics trafic bots IA incluant visites par type bot et patterns user agent.', category: 'seo', icon: 'fa-robot', color: 'green' },
     ];
 
     const colorClasses = {
