@@ -183,3 +183,13 @@
   channel: ndabene06
   duration: PT5M55S
   category: PrestaShop & E-commerce
+- title: Les Biais de la Revue IA
+  video_id: TZOJ8ukF_-M
+  url: https://www.youtube.com/watch?v=TZOJ8ukF_-M
+  thumbnail: https://i.ytimg.com/vi/TZOJ8ukF_-M/hqdefault.jpg
+  description: Les modèles d'IA sont partout, mais sont-ils vraiment fiables ? Les
+    revues de code assistées par IA peuvent contenir des biais ...
+  published_at: '2025-12-16T23:00:38Z'
+  channel: ndabene06
+  duration: PT6M5S
+  category: IA & Automatisation
