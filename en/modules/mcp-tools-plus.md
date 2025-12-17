@@ -675,11 +675,11 @@ product:
         // Inventory & Stock
         { name: 'inventory_alerts_monitor', desc: 'Lists products with stock at/below threshold with low-stock variant details.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
         { name: 'margin_performance_alerts', desc: 'Detects products with margins below threshold (or negative) with variant breakdown.', category: 'inventory', icon: 'fa-percent', color: 'green' },
-        { name: 'get_product_stock', desc: 'Gets available stock for a product with per-combination breakdown if applicable.', category: 'inventory', icon: 'fa-box', color: 'green' },
-        { name: 'set_product_stock', desc: 'Sets stock quantity for product/combination with optional movement recording.', category: 'inventory', icon: 'fa-edit', color: 'green' },
-        { name: 'adjust_product_stock', desc: 'Adjusts stock by delta (positive/negative) with movement recording.', category: 'inventory', icon: 'fa-plus-minus', color: 'green' },
-        { name: 'list_stock_movement_reasons', desc: 'Lists stock movement reasons (filterable by sign: increase/decrease).', category: 'inventory', icon: 'fa-list', color: 'green' },
-        { name: 'get_stock_movements', desc: 'Gets latest stock movements for product/combination with dates, deltas, reasons.', category: 'inventory', icon: 'fa-history', color: 'green' },
+        { name: 'get_product_stock', desc: 'Gets available stock for a product with per-combination breakdown if applicable.', category: 'inventory', icon: 'fa-box', color: 'green', comingSoon: true },
+        { name: 'set_product_stock', desc: 'Sets stock quantity for product/combination with optional movement recording.', category: 'inventory', icon: 'fa-edit', color: 'green', comingSoon: true },
+        { name: 'adjust_product_stock', desc: 'Adjusts stock by delta (positive/negative) with movement recording.', category: 'inventory', icon: 'fa-plus-minus', color: 'green', comingSoon: true },
+        { name: 'list_stock_movement_reasons', desc: 'Lists stock movement reasons (filterable by sign: increase/decrease).', category: 'inventory', icon: 'fa-list', color: 'green', comingSoon: true },
+        { name: 'get_stock_movements', desc: 'Gets latest stock movements for product/combination with dates, deltas, reasons.', category: 'inventory', icon: 'fa-history', color: 'green', comingSoon: true },
 
         // Promotions & Marketing
         { name: 'voucher_overview', desc: 'Lists existing vouchers with status, validity and reduction type.', category: 'marketing', icon: 'fa-ticket', color: 'prestashop' },
@@ -690,24 +690,24 @@ product:
         { name: 'generate_add_to_cart_link', desc: 'Generates add-to-cart URL for PrestaShop with variant resolution and stock check.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
 
         // CMS
-        { name: 'cms_list_pages', desc: 'Lists CMS pages with optional filters (shop, language, category, active) and front URL.', category: 'cms', icon: 'fa-file-alt', color: 'marine' },
-        { name: 'cms_get_page', desc: 'Gets CMS page details (content + SEO fields) with optional translations.', category: 'cms', icon: 'fa-file', color: 'marine' },
-        { name: 'cms_update_page_fields', desc: 'Updates CMS translatable fields for one language (meta title/description/SEO).', category: 'cms', icon: 'fa-edit', color: 'marine' },
-        { name: 'cms_set_page_content', desc: 'Replaces CMS HTML content for one language (can be empty to clear).', category: 'cms', icon: 'fa-file-code', color: 'marine' },
-        { name: 'cms_create_page', desc: 'Creates CMS page in category for one shop and language (initial content + SEO fields).', category: 'cms', icon: 'fa-plus-square', color: 'marine' },
-        { name: 'cms_set_page_publication', desc: 'Publishes/unpublishes CMS page (toggle active).', category: 'cms', icon: 'fa-toggle-on', color: 'marine' },
-        { name: 'cms_set_page_indexation', desc: 'Sets index/noindex for CMS page (toggle indexation).', category: 'cms', icon: 'fa-search', color: 'marine' },
-        { name: 'cms_move_or_reorder_page', desc: 'Moves CMS page to another category and/or reorders position within category.', category: 'cms', icon: 'fa-arrows-alt', color: 'marine' },
-        { name: 'cms_list_categories_tree', desc: 'Lists CMS categories as tree (lite) with links.', category: 'cms', icon: 'fa-folder-tree', color: 'marine' },
-        { name: 'cms_seo_audit_report', desc: 'Read-only SEO audit for CMS pages (missing/long meta, empty content, duplicates).', category: 'cms', icon: 'fa-clipboard-check', color: 'marine' },
+        { name: 'cms_list_pages', desc: 'Lists CMS pages with optional filters (shop, language, category, active) and front URL.', category: 'cms', icon: 'fa-file-alt', color: 'marine', comingSoon: true },
+        { name: 'cms_get_page', desc: 'Gets CMS page details (content + SEO fields) with optional translations.', category: 'cms', icon: 'fa-file', color: 'marine', comingSoon: true },
+        { name: 'cms_update_page_fields', desc: 'Updates CMS translatable fields for one language (meta title/description/SEO).', category: 'cms', icon: 'fa-edit', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_content', desc: 'Replaces CMS HTML content for one language (can be empty to clear).', category: 'cms', icon: 'fa-file-code', color: 'marine', comingSoon: true },
+        { name: 'cms_create_page', desc: 'Creates CMS page in category for one shop and language (initial content + SEO fields).', category: 'cms', icon: 'fa-plus-square', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_publication', desc: 'Publishes/unpublishes CMS page (toggle active).', category: 'cms', icon: 'fa-toggle-on', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_indexation', desc: 'Sets index/noindex for CMS page (toggle indexation).', category: 'cms', icon: 'fa-search', color: 'marine', comingSoon: true },
+        { name: 'cms_move_or_reorder_page', desc: 'Moves CMS page to another category and/or reorders position within category.', category: 'cms', icon: 'fa-arrows-alt', color: 'marine', comingSoon: true },
+        { name: 'cms_list_categories_tree', desc: 'Lists CMS categories as tree (lite) with links.', category: 'cms', icon: 'fa-folder-tree', color: 'marine', comingSoon: true },
+        { name: 'cms_seo_audit_report', desc: 'Read-only SEO audit for CMS pages (missing/long meta, empty content, duplicates).', category: 'cms', icon: 'fa-clipboard-check', color: 'marine', comingSoon: true },
 
         // Product Images
-        { name: 'product_images_full_overview', desc: 'Full overview of product images and variant preview images (if combinations).', category: 'images', icon: 'fa-images', color: 'ecommerce' },
-        { name: 'add_product_image', desc: 'Attaches existing image file to product, optionally cover and linked to combination.', category: 'images', icon: 'fa-plus', color: 'ecommerce' },
-        { name: 'replace_product_image', desc: 'Replaces existing product image file content while keeping ID/position/cover.', category: 'images', icon: 'fa-sync', color: 'ecommerce' },
-        { name: 'set_product_cover_image', desc: 'Sets product cover image to specific existing image.', category: 'images', icon: 'fa-star', color: 'ecommerce' },
-        { name: 'upload_image_from_url', desc: 'Downloads image from URL into module upload dir and returns file_path.', category: 'images', icon: 'fa-cloud-download', color: 'ecommerce' },
-        { name: 'attach_image_to_combination', desc: 'Associates existing product image with specific combination/variant.', category: 'images', icon: 'fa-link', color: 'ecommerce' },
+        { name: 'product_images_full_overview', desc: 'Full overview of product images and variant preview images (if combinations).', category: 'images', icon: 'fa-images', color: 'ecommerce', comingSoon: true },
+        { name: 'add_product_image', desc: 'Attaches existing image file to product, optionally cover and linked to combination.', category: 'images', icon: 'fa-plus', color: 'ecommerce', comingSoon: true },
+        { name: 'replace_product_image', desc: 'Replaces existing product image file content while keeping ID/position/cover.', category: 'images', icon: 'fa-sync', color: 'ecommerce', comingSoon: true },
+        { name: 'set_product_cover_image', desc: 'Sets product cover image to specific existing image.', category: 'images', icon: 'fa-star', color: 'ecommerce', comingSoon: true },
+        { name: 'upload_image_from_url', desc: 'Downloads image from URL into module upload dir and returns file_path.', category: 'images', icon: 'fa-cloud-download', color: 'ecommerce', comingSoon: true },
+        { name: 'attach_image_to_combination', desc: 'Associates existing product image with specific combination/variant.', category: 'images', icon: 'fa-link', color: 'ecommerce', comingSoon: true },
 
         // Google Analytics 4
         { name: 'google_analytics_connection_checker', desc: 'Checks GA4 OAuth status and property IDs, returns status/message + setup suggestions.', category: 'ga4', icon: 'fa-plug', color: 'marine' },
@@ -722,31 +722,31 @@ product:
         { name: 'google_analytics_conversion_funnel', desc: 'Builds conversion funnel from sessions to purchase with drop-off per step.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
 
         // Customer Service
-        { name: 'inbox_status_snapshot', desc: 'Counts threads by status and lists those awaiting merchant reply with recent-days window.', category: 'support', icon: 'fa-inbox', color: 'prestashop' },
-        { name: 'sla_breach_radar', desc: 'Lists threads whose last customer message exceeds threshold and still awaits reply.', category: 'support', icon: 'fa-exclamation-triangle', color: 'prestashop' },
-        { name: 'open_threads_brief', desc: 'Lists threads by status (defaults to open/pending) with customer name/email and order ref.', category: 'support', icon: 'fa-list', color: 'prestashop' },
-        { name: 'order_context_enricher', desc: 'For a given thread, returns order context (state, tracking, carrier) + recent messages.', category: 'support', icon: 'fa-info-circle', color: 'prestashop' },
-        { name: 'language_template_suggestion', desc: 'Detects thread language and suggests canned response key based on latest customer message keywords.', category: 'support', icon: 'fa-language', color: 'prestashop' },
-        { name: 'priority_routing', desc: 'Ranks and scores pending threads by SLA, wait time and order value to prioritize urgencies.', category: 'support', icon: 'fa-sort', color: 'prestashop' },
-        { name: 'messages_by_date', desc: 'Searches messages for a day, range or last X days with filters on thread status and sender.', category: 'support', icon: 'fa-calendar', color: 'prestashop' },
-        { name: 'reply_drafter', desc: 'Generates prompt (and fallback) to craft contextual reply to latest customer message (draft only).', category: 'support', icon: 'fa-pen-square', color: 'prestashop' },
+        { name: 'inbox_status_snapshot', desc: 'Counts threads by status and lists those awaiting merchant reply with recent-days window.', category: 'support', icon: 'fa-inbox', color: 'prestashop', comingSoon: true },
+        { name: 'sla_breach_radar', desc: 'Lists threads whose last customer message exceeds threshold and still awaits reply.', category: 'support', icon: 'fa-exclamation-triangle', color: 'prestashop', comingSoon: true },
+        { name: 'open_threads_brief', desc: 'Lists threads by status (defaults to open/pending) with customer name/email and order ref.', category: 'support', icon: 'fa-list', color: 'prestashop', comingSoon: true },
+        { name: 'order_context_enricher', desc: 'For a given thread, returns order context (state, tracking, carrier) + recent messages.', category: 'support', icon: 'fa-info-circle', color: 'prestashop', comingSoon: true },
+        { name: 'language_template_suggestion', desc: 'Detects thread language and suggests canned response key based on latest customer message keywords.', category: 'support', icon: 'fa-language', color: 'prestashop', comingSoon: true },
+        { name: 'priority_routing', desc: 'Ranks and scores pending threads by SLA, wait time and order value to prioritize urgencies.', category: 'support', icon: 'fa-sort', color: 'prestashop', comingSoon: true },
+        { name: 'messages_by_date', desc: 'Searches messages for a day, range or last X days with filters on thread status and sender.', category: 'support', icon: 'fa-calendar', color: 'prestashop', comingSoon: true },
+        { name: 'reply_drafter', desc: 'Generates prompt (and fallback) to craft contextual reply to latest customer message (draft only).', category: 'support', icon: 'fa-pen-square', color: 'prestashop', comingSoon: true },
 
         // SEO & Settings
         { name: 'get_settings_insights', desc: 'Audits key PrestaShop settings grouped by category (security, performance, SEO) vs recommended.', category: 'seo', icon: 'fa-cog', color: 'green' },
-        { name: 'get_blocked_modules', desc: 'Lists modules blocked by Advanced Cookie Banner, grouped by allowed/analytics/marketing.', category: 'seo', icon: 'fa-ban', color: 'green' },
-        { name: 'set_module_category', desc: 'Moves module into allowed/analytics/marketing to block or allow accordingly.', category: 'seo', icon: 'fa-cogs', color: 'green' },
-        { name: 'list_faqs', desc: 'Lists FAQs with optional filters by entity type, language and active status.', category: 'seo', icon: 'fa-question-circle', color: 'green' },
-        { name: 'get_faq', desc: 'Gets complete FAQ details by ID including full answer text and metadata.', category: 'seo', icon: 'fa-question', color: 'green' },
-        { name: 'get_faq_statistics', desc: 'Gets FAQ statistics including total counts, breakdown by type, language and status.', category: 'seo', icon: 'fa-chart-pie', color: 'green' },
-        { name: 'list_products_missing_alt_texts', desc: 'Lists products that have images without alt text (legacy method).', category: 'seo', icon: 'fa-image', color: 'green' },
-        { name: 'get_alt_text_status', desc: 'Gets alt text coverage status for specific product including image count and missing alts.', category: 'seo', icon: 'fa-align-left', color: 'green' },
-        { name: 'list_products_alt_text_status', desc: 'Lists products with their alt text coverage status across all languages.', category: 'seo', icon: 'fa-list-alt', color: 'green' },
-        { name: 'get_geo_content', desc: 'Gets GEO content (AI citation phrases, fresh content, custom URLs) for specific product.', category: 'seo', icon: 'fa-map-marker', color: 'green' },
-        { name: 'list_products_with_geo_content', desc: 'Lists products that have GEO content configured (AI citation phrases or fresh content).', category: 'seo', icon: 'fa-globe-americas', color: 'green' },
-        { name: 'get_indexnow_queue_status', desc: 'Gets IndexNow submission queue status including pending, processed and failed counts.', category: 'seo', icon: 'fa-paper-plane', color: 'green' },
-        { name: 'get_indexnow_history', desc: 'Gets recent IndexNow submission history with URLs, status and timestamps.', category: 'seo', icon: 'fa-history', color: 'green' },
-        { name: 'get_sitemap_status', desc: 'Gets XML sitemap generation status including last generation date and included content types.', category: 'seo', icon: 'fa-sitemap', color: 'green' },
-        { name: 'get_ai_bot_traffic_stats', desc: 'Gets AI bot traffic analytics including visits by bot type and user agent patterns.', category: 'seo', icon: 'fa-robot', color: 'green' },
+        { name: 'get_blocked_modules', desc: 'Lists modules blocked by Advanced Cookie Banner, grouped by allowed/analytics/marketing.', category: 'seo', icon: 'fa-ban', color: 'green', comingSoon: true },
+        { name: 'set_module_category', desc: 'Moves module into allowed/analytics/marketing to block or allow accordingly.', category: 'seo', icon: 'fa-cogs', color: 'green', comingSoon: true },
+        { name: 'list_faqs', desc: 'Lists FAQs with optional filters by entity type, language and active status.', category: 'seo', icon: 'fa-question-circle', color: 'green', comingSoon: true },
+        { name: 'get_faq', desc: 'Gets complete FAQ details by ID including full answer text and metadata.', category: 'seo', icon: 'fa-question', color: 'green', comingSoon: true },
+        { name: 'get_faq_statistics', desc: 'Gets FAQ statistics including total counts, breakdown by type, language and status.', category: 'seo', icon: 'fa-chart-pie', color: 'green', comingSoon: true },
+        { name: 'list_products_missing_alt_texts', desc: 'Lists products that have images without alt text (legacy method).', category: 'seo', icon: 'fa-image', color: 'green', comingSoon: true },
+        { name: 'get_alt_text_status', desc: 'Gets alt text coverage status for specific product including image count and missing alts.', category: 'seo', icon: 'fa-align-left', color: 'green', comingSoon: true },
+        { name: 'list_products_alt_text_status', desc: 'Lists products with their alt text coverage status across all languages.', category: 'seo', icon: 'fa-list-alt', color: 'green', comingSoon: true },
+        { name: 'get_geo_content', desc: 'Gets GEO content (AI citation phrases, fresh content, custom URLs) for specific product.', category: 'seo', icon: 'fa-map-marker', color: 'green', comingSoon: true },
+        { name: 'list_products_with_geo_content', desc: 'Lists products that have GEO content configured (AI citation phrases or fresh content).', category: 'seo', icon: 'fa-globe-americas', color: 'green', comingSoon: true },
+        { name: 'get_indexnow_queue_status', desc: 'Gets IndexNow submission queue status including pending, processed and failed counts.', category: 'seo', icon: 'fa-paper-plane', color: 'green', comingSoon: true },
+        { name: 'get_indexnow_history', desc: 'Gets recent IndexNow submission history with URLs, status and timestamps.', category: 'seo', icon: 'fa-history', color: 'green', comingSoon: true },
+        { name: 'get_sitemap_status', desc: 'Gets XML sitemap generation status including last generation date and included content types.', category: 'seo', icon: 'fa-sitemap', color: 'green', comingSoon: true },
+        { name: 'get_ai_bot_traffic_stats', desc: 'Gets AI bot traffic analytics including visits by bot type and user agent patterns.', category: 'seo', icon: 'fa-robot', color: 'green', comingSoon: true },
     ];
 
     const colorClasses = {
@@ -768,7 +768,10 @@ product:
                         <i class="fas ${tool.icon} ${colorClasses[tool.color].text}"></i>
                     </div>
                     <div class="flex-1 min-w-0">
-                        <h4 class="font-mono text-sm font-semibold mb-2 text-[#111827] truncate">${tool.name}</h4>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h4 class="font-mono text-sm font-semibold text-[#111827] truncate">${tool.name}</h4>
+                            ${tool.comingSoon ? '<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 whitespace-nowrap">Available early 2026</span>' : ''}
+                        </div>
                         <p class="text-[#475569] text-sm leading-relaxed">${tool.desc}</p>
                     </div>
                 </div>
