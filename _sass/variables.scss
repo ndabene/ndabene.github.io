@@ -5,13 +5,19 @@
 // PALETTE DE COULEURS - NOUVELLE IDENTITÉ
 //================================================
 
-// Couleurs de base - Palette Expert Senior
-$white: #ffffff; // Blanc pur uniforme cross-device
+// Couleurs de base - Palette Expert Senior avec nuances bleu marine
+$white: #ffffff; // Blanc pur pour contrastes
 $black: #111827; // Noir journal professionnel
 $gray-dark: #1e293b; // Gris anthracite
 $gray-medium: #475569; // Gris ardoise
 $gray-light: #e2e8f0; // Gris clair
-$gray-ultra-light: #fafafa; // Fond papier léger
+$gray-ultra-light: #f1f5f9; // Fond bleu marine très clair
+
+// Nuances de bleu marine pour les fonds
+$navy-ultra-light: #f8fafc; // Bleu marine ultra-léger (fond principal)
+$navy-very-light: #f1f5f9; // Bleu marine très léger (sections alternées)
+$navy-light: #e2e8f0; // Bleu marine léger (cards)
+$navy-soft: #cbd5e1; // Bleu marine doux (borders subtiles)
 
 // Couleurs primaires - Style Expert
 $primary-color: #0f172a; // Bleu marine profond
@@ -139,17 +145,17 @@ $dark-card: #334155;
 $dark-text: #111827;
 $dark-text-muted: #111827;
 
-// Modern Gradients - Style Expert
+// Modern Gradients - Style Expert avec nuances bleu marine
 $gradient-primary: linear-gradient(135deg, #{$primary-color} 0%, #{$gray-dark} 100%);
-$gradient-hero: linear-gradient(135deg, #{$white} 0%, #{$gray-ultra-light} 100%);
+$gradient-hero: linear-gradient(135deg, #{$navy-ultra-light} 0%, #{$navy-very-light} 100%);
 $gradient-dark: linear-gradient(135deg, #{$dark-bg} 0%, #{$dark-surface} 100%);
 $gradient-gold: linear-gradient(135deg, #{$accent-color-1} 0%, #b8941f 100%);
 
-// Advanced Shadows
-$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+// Advanced Shadows - Adaptées au schéma bleu marine
+$shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+$shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
 $shadow-colored: 0 10px 25px rgba($primary-color, 0.15);
 
 // Modern Border Radius

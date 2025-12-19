@@ -10,12 +10,12 @@
   padding-bottom: $space-md;
 }
 
-// Background moderne unifié pour la homepage
+// Background moderne unifié pour la homepage - Nuances bleu marine
 body.homepage-modern {
   background:
-    radial-gradient(60vw 40vh at -10% -20%, rgba(59,130,246,.06), transparent 60%),
-    radial-gradient(50vw 35vh at 110% -10%, rgba(147,51,234,.05), transparent 60%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    radial-gradient(60vw 40vh at -10% -20%, rgba(15,23,42,.04), transparent 60%),
+    radial-gradient(50vw 35vh at 110% -10%, rgba(30,41,59,.03), transparent 60%),
+    linear-gradient(180deg, $navy-ultra-light 0%, $navy-very-light 100%);
 }
 
 // Sticky jump vers Formations (mobile)
@@ -43,7 +43,7 @@ body.homepage-modern {
   box-shadow: $shadow-lg;
 }
 
-.sticky-jump .btn-secondary { background: #fff; border-width: 2px; }
+.sticky-jump .btn-secondary { background: $white; border-width: 2px; }
 .sticky-jump .btn-primary { color: #fff; }
 
 // Hide sticky when hero is visible to avoid covering metrics
@@ -93,8 +93,8 @@ body.homepage-modern {
   .home-formation-item,
   .project-card-v2 {
     border-radius: $rounded-xl;
-    background: #fff;
-    border: 1px solid #e5e7eb;
+    background: $white;
+    border: 1px solid $navy-soft;
     box-shadow: $shadow-md;
     transition: $transition-normal;
   }

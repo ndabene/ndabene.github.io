@@ -141,7 +141,7 @@
 
 .header-nav a:hover,
 .header-nav a.active {
-  background-color: #F7FAFC;
+  background-color: $navy-very-light;
   color: $primary-color;
   text-decoration: none;
 }
@@ -2030,7 +2030,7 @@ body.dark-mode {
 //================================================
 .hero-section {
   padding: 3rem 0;
-  background: linear-gradient(135deg, #ffffff 0%, #F7FAFC 100%);
+  background: linear-gradient(135deg, $navy-ultra-light 0%, $navy-very-light 100%);
 }
 
 .hero-grid {
@@ -2166,7 +2166,7 @@ body.dark-mode {
 }
 
 .section:nth-child(even) {
-  background-color: #F7FAFC;
+  background-color: $navy-very-light;
 }
 
 .section-header {
@@ -2465,7 +2465,7 @@ body.dark-mode {
 // PARTNERSHIP SECTION
 //================================================
 .partnership-section {
-  background-color: #F7FAFC;
+  background-color: $navy-very-light;
 }
 
 .partnership-grid {

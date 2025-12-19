@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    background-color: $white;
+    background-color: $navy-ultra-light;
     color: $text-color;
     font-family: $font-family-primary;
     font-size: $font-size-base;
@@ -106,11 +106,11 @@ img {
 //================================================
 .section {
   padding: $space-xxl 0;
-  
+
   &:nth-child(even) {
-    background-color: $gray-ultra-light;
+    background-color: $navy-very-light;
   }
-  
+
   &:last-of-type {
     padding-bottom: 0; // Supprime le padding en bas de la dernière section
     margin-bottom: 0; // Supprime la marge en bas
