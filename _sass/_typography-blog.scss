@@ -1,0 +1,58 @@
+// ==========================================
+// TYPOGRAPHIE BLOG - Conforme à la CHARTE
+// ==========================================
+
+// Import Google Fonts (si pas déjà fait globalement)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@600;700;800;900&display=swap');
+
+// Application de la typographie selon la charte
+.page-blog {
+
+  // Tous les titres utilisent Poppins (charte)
+  h1, h2, h3, h4, h5, h6,
+  .section-title,
+  .featured-section-title,
+  .hero-article-title,
+  .featured-card-title,
+  .post-news-title,
+  .theme-card h3,
+  .themes-header h2,
+  .popular-tags-cloud h3,
+  .series-horizontal h3 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  // Corps de texte utilise Inter (charte)
+  p, span, div, a, time, label, button,
+  .featured-card-excerpt,
+  .post-news-excerpt,
+  .theme-card p,
+  .themes-subtitle,
+  .post-news-meta,
+  .featured-card-meta {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+// Application globale sur featured (aussi utilisé en home)
+.featured-articles-grid {
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p, span, time {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.featured-article-card {
+  .featured-card-title {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .featured-card-excerpt,
+  .featured-card-meta,
+  .featured-read-more {
+    font-family: 'Inter', sans-serif;
+  }
+}
