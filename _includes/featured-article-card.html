@@ -1,0 +1,80 @@
+{% comment %}
+Featured Article Card - Article à la une format carte
+Usage: {% include featured-article-card.html post=post %}
+{% endcomment %}
+
+{% assign featured_post = include.post %}
+
+{% if featured_post %}
+<article class="featured-article-card"
+    {% if featured_post.image_display %}data-image-display="{{ featured_post.image_display }}"{% endif %}
+    {% if featured_post.image_position %}data-image-position="{{ featured_post.image_position }}"{% endif %}>
+    <a href="{{ featured_post.url | relative_url }}" class="featured-card-link">
+        <div class="featured-card-image">
+            {% if featured_post.image %}
+                <img src="{{ featured_post.image }}"
+                     alt="{{ featured_post.title | escape }}"
+                     loading="lazy"
+                     width="600"
+                     height="400"
+                     decoding="async">
+            {% else %}
+                <img src="/assets/images/default-featured.jpg"
+                     alt="{{ featured_post.title | escape }}"
+                     loading="lazy"
+                     width="600"
+                     height="400"
+                     decoding="async">
+            {% endif %}
+            <div class="featured-card-overlay"></div>
+            {% if featured_post.categories.size > 0 %}
+                <span class="featured-category-badge">{{ featured_post.categories | first }}</span>
+            {% endif %}
+        </div>
+
+        <div class="featured-card-content">
+            <div class="featured-card-meta">
+                <time datetime="{{ featured_post.date | date_to_xmlschema }}">
+                    <i class="fas fa-calendar-alt"></i>
+                    {% include date-fr.html date=featured_post.date %}
+                </time>
+
+                {% if featured_post.estimated_reading_time %}
+                    <span class="reading-time">
+                        <i class="fas fa-clock"></i>
+                        {{ featured_post.estimated_reading_time | remove: ' minutes' }} min
+                    </span>
+                {% endif %}
+
+                {% if featured_post.difficulty %}
+                    <span class="difficulty-badge difficulty-{{ featured_post.difficulty | slugify }}">{{ featured_post.difficulty }}</span>
+                {% endif %}
+
+                {% if featured_post.content_type %}
+                    <span class="content-type-badge content-type-{{ featured_post.content_type | slugify }}">{{ featured_post.content_type }}</span>
+                {% endif %}
+            </div>
+
+            <h3 class="featured-card-title">{{ featured_post.title }}</h3>
+
+            {% if featured_post.excerpt %}
+                <p class="featured-card-excerpt">{{ featured_post.excerpt | strip_html | truncate: 120 }}</p>
+            {% endif %}
+
+            <div class="featured-card-footer">
+                {% if featured_post.tags and featured_post.tags.size > 0 %}
+                    <div class="featured-tags">
+                        {% for tag in featured_post.tags limit: 2 %}
+                            <span class="tag-pill">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <span class="featured-read-more">
+                    Lire l'article <i class="fas fa-arrow-right"></i>
+                </span>
+            </div>
+        </div>
+    </a>
+</article>
+{% endif %}
