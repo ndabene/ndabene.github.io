@@ -2058,6 +2058,18 @@ $tag-hover-text: $blanc-pur;
   }
 
   //================================================
+  // POPULAR TAGS SECTION - ZONE 3
+  //================================================
+
+  .popular-tags-section {
+    margin: 3rem 0;
+
+    .popular-tags-cloud {
+      // Styles already defined above at line 2183
+    }
+  }
+
+  //================================================
   // THEMES & TOPICS SECTION - ZONE 4 (remplace sidebar)
   //================================================
 
