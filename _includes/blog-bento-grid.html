@@ -1,0 +1,118 @@
+{% comment %}
+Bento Grid - Layout moderne pour la page blog avec Hero + CTA Boxes
+Usage: {% include blog-bento-grid.html %}
+{% endcomment %}
+
+{% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+
+{% comment %}Calculer les top 2 catégories par nombre d'articles{% endcomment %}
+{% assign category_counts = "" | split: "" %}
+{% assign all_categories = "" | split: "" %}
+
+{% for post in published_posts %}
+  {% for category in post.categories %}
+    {% assign all_categories = all_categories | push: category %}
+  {% endfor %}
+{% endfor %}
+
+{% comment %}Compter les occurrences de chaque catégorie{% endcomment %}
+{% assign unique_categories = all_categories | uniq %}
+{% assign categories_with_count = "" | split: "" %}
+
+{% for category in unique_categories %}
+  {% assign count = 0 %}
+  {% for cat in all_categories %}
+    {% if cat == category %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign category_data = category | append: "|" | append: count %}
+  {% assign categories_with_count = categories_with_count | push: category_data %}
+{% endfor %}
+
+{% comment %}Trier par count (approximation avec array sort){% endcomment %}
+{% assign sorted_categories = categories_with_count | sort | reverse %}
+
+<div class="bento-grid-container">
+
+  <!-- Hero Article (Left Block - 60%) -->
+  <div class="bento-hero-block">
+    {% if published_posts.size > 0 %}
+      {% assign hero_post = published_posts.first %}
+      {% include hero-article.html post=hero_post %}
+    {% endif %}
+  </div>
+
+  <!-- CTA Boxes (Right Block - 40%) -->
+  <div class="bento-cta-blocks">
+
+    {% comment %}CTA Box 1 - Top catégorie{% endcomment %}
+    {% if sorted_categories.size > 0 %}
+      {% assign top_cat_1_data = sorted_categories[0] | split: "|" %}
+      {% assign top_cat_1_name = top_cat_1_data[0] %}
+      {% assign top_cat_1_count = top_cat_1_data[1] %}
+
+      <div class="bento-cta-box bento-cta-primary">
+        <div class="cta-icon">
+          {% if top_cat_1_name contains "IA" or top_cat_1_name contains "Intelligence" %}
+            <i class="fas fa-brain"></i>
+          {% elsif top_cat_1_name contains "E-commerce" or top_cat_1_name contains "Commerce" %}
+            <i class="fas fa-shopping-cart"></i>
+          {% elsif top_cat_1_name contains "Développement" or top_cat_1_name contains "Dev" %}
+            <i class="fas fa-code"></i>
+          {% elsif top_cat_1_name contains "Architecture" %}
+            <i class="fas fa-project-diagram"></i>
+          {% else %}
+            <i class="fas fa-folder"></i>
+          {% endif %}
+        </div>
+
+        <h3 class="cta-title">{{ top_cat_1_name }}</h3>
+
+        <p class="cta-count">
+          <span class="count-number">{{ top_cat_1_count }}</span> article{% if top_cat_1_count != "1" %}s{% endif %}
+        </p>
+
+        <a href="/categories/{{ top_cat_1_name | slugify }}.html" class="cta-link">
+          Explorer <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    {% endif %}
+
+    {% comment %}CTA Box 2 - Deuxième catégorie{% endcomment %}
+    {% if sorted_categories.size > 1 %}
+      {% assign top_cat_2_data = sorted_categories[1] | split: "|" %}
+      {% assign top_cat_2_name = top_cat_2_data[0] %}
+      {% assign top_cat_2_count = top_cat_2_data[1] %}
+
+      <div class="bento-cta-box bento-cta-secondary">
+        <div class="cta-icon">
+          {% if top_cat_2_name contains "IA" or top_cat_2_name contains "Intelligence" %}
+            <i class="fas fa-brain"></i>
+          {% elsif top_cat_2_name contains "E-commerce" or top_cat_2_name contains "Commerce" %}
+            <i class="fas fa-shopping-cart"></i>
+          {% elsif top_cat_2_name contains "Développement" or top_cat_2_name contains "Dev" %}
+            <i class="fas fa-code"></i>
+          {% elsif top_cat_2_name contains "Architecture" %}
+            <i class="fas fa-project-diagram"></i>
+          {% else %}
+            <i class="fas fa-folder"></i>
+          {% endif %}
+        </div>
+
+        <h3 class="cta-title">{{ top_cat_2_name }}</h3>
+
+        <p class="cta-count">
+          <span class="count-number">{{ top_cat_2_count }}</span> article{% if top_cat_2_count != "1" %}s{% endif %}
+        </p>
+
+        <a href="/categories/{{ top_cat_2_name | slugify }}.html" class="cta-link">
+          Explorer <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>

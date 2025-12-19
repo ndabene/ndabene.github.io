@@ -36,11 +36,8 @@ llm_topics:
         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
         {% if published_posts.size > 0 %}
 
-            <!-- HERO ARTICLE PRINCIPAL (Article le plus récent) -->
-            {% if published_posts.size > 0 %}
-                {% assign hero_post = published_posts.first %}
-                {% include hero-article.html post=hero_post %}
-            {% endif %}
+            <!-- BENTO GRID : Hero Article + CTA Boxes dynamiques -->
+            {% include blog-bento-grid.html %}
 
             <div class="blog-grid-news">
                 <div class="main-blog-content-news">
