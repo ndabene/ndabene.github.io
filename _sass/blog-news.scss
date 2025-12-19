@@ -2065,7 +2065,63 @@ $tag-hover-text: $blanc-pur;
     margin: 3rem 0;
 
     .popular-tags-cloud {
-      // Styles already defined above at line 2183
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $news-primary;
+        margin: 0 0 1.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        i {
+          color: $marine-profond;
+        }
+      }
+
+      .tags-cloud-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+
+        .tag-pill-large {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.6rem 1.2rem;
+          background: $tag-bg;
+          border: 2px solid $tag-border;
+          border-radius: 24px;
+          color: $tag-text;
+          text-decoration: none;
+          font-size: 0.9rem;
+          font-weight: 600;
+          transition: all 0.3s ease;
+
+          span {
+            color: #94a3b8;
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            background: $news-accent;
+            color: white;
+            border-color: $news-accent;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+
+            span {
+              color: rgba(255, 255, 255, 0.8);
+            }
+          }
+        }
+      }
     }
   }
 
