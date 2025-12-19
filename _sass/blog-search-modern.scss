@@ -1,22 +1,22 @@
 // Modern Blog Search Styles
 // Styles pour la recherche moderne avec suggestions et mise en évidence
+// Harmonisé avec le design "site de presse"
 
 // ========================================
-// Variables
+// Variables - Harmonisées avec blog-news
 // ========================================
 
-$search-primary: #2563eb;
-$search-primary-light: #3b82f6;
-$search-primary-dark: #1e40af;
-$search-accent: #8b5cf6;
+// Utiliser les mêmes variables que le thème news pour cohérence
+$search-primary: #0f172a; // Marine profond du thème news
+$search-primary-light: #374151; // Gris lecture
+$search-primary-dark: #111827; // Noir journal
 $search-highlight-bg: #fef3c7;
 $search-highlight-text: #92400e;
 $search-suggestion-bg: #ffffff;
-$search-suggestion-hover: #f1f5f9;
-$search-border: #e5e7eb;
-$search-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-$search-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-$search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+$search-suggestion-hover: #f3f4f6;
+$search-border: #e2e8f0; // Bordures discrètes du thème news
+$search-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); // Ombres douces
+$search-shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1); // Ombres plus prononcées
 
 // ========================================
 // Search Input Container
@@ -25,7 +25,7 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 .search-input-wrapper {
   position: relative;
   width: 100%;
-  margin-bottom: 8px;
+  z-index: 100; // Créer un contexte d'empilement pour les suggestions
 
   // Search icon
   > .fa-search {
@@ -40,36 +40,26 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
     transition: all 0.3s ease;
   }
 
-  // Search input
+  // Search input - Style "site de presse"
   #search-input {
     width: 100%;
-    padding: 18px 56px 18px 56px;
+    padding: 12px 48px 12px 48px;
     border: 2px solid $search-border;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(to bottom, #ffffff, #f9fafb);
+    border-radius: 50px; // Arrondi complet pour cohérence avec le design
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #ffffff;
     box-shadow: $search-shadow;
-    letter-spacing: 0.01em;
-
-    &:hover {
-      border-color: $search-primary-light;
-      background: #ffffff;
-      box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.12);
-    }
 
     &:focus {
       outline: none;
       border-color: $search-primary;
-      background: #ffffff;
-      box-shadow: $search-glow, 0 12px 24px -8px rgba(37, 99, 235, 0.25);
-      transform: translateY(-2px);
+      box-shadow: $search-shadow-lg;
     }
 
     &::placeholder {
       color: #9ca3af;
-      font-weight: 400;
+      opacity: 0.6;
     }
   }
 
@@ -124,12 +114,12 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
   left: 0;
   right: 0;
   background: $search-suggestion-bg;
-  border-radius: 16px;
-  box-shadow: $search-shadow-lg, 0 0 0 1px rgba(0, 0, 0, 0.05);
+  border-radius: 16px; // Légèrement plus arrondi pour cohérence
+  box-shadow: $search-shadow-lg;
   border: 2px solid $search-border;
-  max-height: 480px;
+  max-height: 480px; // Augmenté pour afficher plus de suggestions
   overflow-y: auto;
-  z-index: 1100;
+  z-index: 9999; // Z-index très élevé pour passer au-dessus de tout contenu
   display: none;
   animation: slideDownBounce 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   backdrop-filter: blur(10px);
@@ -274,13 +264,14 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
   }
 
   .suggestion-category {
-    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    background: #f1f5f9;
     color: $search-primary;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 11px;
-    border: 1px solid #bfdbfe;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .suggestion-score {
@@ -429,28 +420,9 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 // ========================================
 
 .blog-search-bar {
-  margin-bottom: 28px;
-  position: relative;
-
-  // Decorative gradient border
-  &::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    right: -8px;
-    bottom: -8px;
-    background: linear-gradient(135deg, $search-primary, $search-accent, $search-primary-light);
-    border-radius: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-    filter: blur(12px);
-  }
-
-  &:has(#search-input:focus)::before {
-    opacity: 0.3;
-  }
+  margin-bottom: 24px;
+  position: relative; // Nécessaire pour le contexte d'empilement
+  z-index: 50; // S'assurer que toute la zone de recherche est au-dessus
 
   // Add keyboard hint
   .search-input-wrapper::after {
@@ -495,14 +467,12 @@ $search-glow: 0 0 0 3px rgba(37, 99, 235, 0.15);
   padding: 4px 14px;
   background: linear-gradient(135deg, $search-primary 0%, $search-accent 100%);
   color: white;
-  border-radius: 14px;
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 8px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  animation: searchPulse 2s ease-in-out infinite;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.2);
 
   &:empty::before {
     content: '0';
