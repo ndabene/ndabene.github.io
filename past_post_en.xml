@@ -12,11 +12,11 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     <language>en</language>
+    {% comment %} English articles published (not future ones or those hidden with hide_until_published) {% endcomment %}
     {% assign all_posts = site.posts_en | sort: "date" | reverse %}
     {% for post in all_posts %}
-      {% assign post_date = post.date | date: "%Y-%m-%d" %}
-      {% assign today = site.time | date: "%Y-%m-%d" %}
-      {% if post_date < today %}
+      {% comment %} Hide only if hide_until_published is true AND the date is in the future {% endcomment %}
+      {% if post.hide_until_published != true or post.date <= site.time %}
         <item>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape }}</description>
