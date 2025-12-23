@@ -20,14 +20,16 @@ html {
 }
 
 body {
-    background-color: $gray-ultra-light;
-    color: $text-color;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); /* Marine profond gradient */
+    background-attachment: fixed; /* Innovation: Fixed background for depth */
+    color: $gray-light;
     font-family: $font-family-primary;
     font-size: $font-size-base;
     line-height: $line-height-base;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 //================================================
@@ -38,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-bold;
   line-height: $line-height-headings;
   margin-bottom: 1rem;
-  color: $text-color;
+  color: $white;
 }
 
 h1 { font-size: 2.5rem; } // 40px
@@ -62,7 +64,7 @@ a:hover {
 
 p {
   margin-bottom: $space-lg;
-  color: $text-color-light;
+  color: $gray-light;
   line-height: $line-height-base;
 }
 
@@ -76,7 +78,7 @@ ul, ol {
 
 li {
   margin-bottom: $space-sm;
-  color: $text-color-light;
+  color: $gray-light;
 }
 
 //================================================

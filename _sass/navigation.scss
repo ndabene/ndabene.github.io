@@ -5,17 +5,24 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1050;
-  background: $primary-navy; /* Marine profond from charter */
+  background: transparent; /* Transparent initially */
   color: $white;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  margin: 0; /* collé en haut sur tous médias */
-  padding-top: env(safe-area-inset-top, 0); /* iOS notch */
+  backdrop-filter: blur(0px); /* No blur initially */
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+  padding-top: env(safe-area-inset-top, 0);
 }
-.nav-modern.scrolled { background: rgba(15, 23, 42, 0.95) !important; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3); }
+
+.nav-modern.scrolled {
+  background: rgba(15, 23, 42, 0.85) !important; /* Marine profond glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
 
 :root { --nav-offset: 72px; }
 html { scroll-padding-top: var(--nav-offset, 72px); }

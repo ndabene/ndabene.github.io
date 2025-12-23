@@ -10,29 +10,42 @@
 
 .content {
   padding: 0 0 $spacing-lg;
-  background-color: $gray-ultra-light; // Fond papier léger pour toute la zone de contenu
+  background-color: transparent; // Transparent to show body gradient
 }
 
 .page-header {
-  background: linear-gradient(135deg, $primary-navy 0%, $primary-color-dark 100%); // Marine profond / très sombre
-  padding: $spacing-lg 0;
+  background: transparent; // Transparent for modern look
+  padding: $spacing-xl 0;
   text-align: center;
   color: $white;
   margin-bottom: $spacing-lg;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  }
 
   h1 {
     font-size: $h1-size;
     color: $white;
     margin-bottom: $spacing-sm;
     font-family: $font-family-headings;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3); // Depth
   }
 
   .hero-image {
     max-width: 100%;
     height: auto;
     margin-top: $spacing-md;
-    border-radius: 8px;
-    box-shadow: $box-shadow;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3); // Deep shadow
+    border: 1px solid rgba(255,255,255,0.1);
   }
 }
 
@@ -74,17 +87,20 @@
 
   .main-content {
     flex: 3;
-    background: $white;
-    border-radius: $border-radius;
+    background: rgba(255, 255, 255, 0.03); // Glassmorphism
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px; // More rounded
     padding: $spacing-lg;
-    box-shadow: $box-shadow; // Card style
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); // Glass shadow
+    border: 1px solid rgba(255, 255, 255, 0.05); // Subtle border
     transition: $transition-base;
   }
 
   .sidebar {
     flex: 1;
     padding-left: $spacing-md;
-    border-left: 1px solid $light-gray;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 
     @media (max-width: $tablet) {
       border-left: none;
