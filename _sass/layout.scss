@@ -10,17 +10,21 @@
 
 .content {
   padding: 0 0 $spacing-lg;
+  background-color: $gray-ultra-light; // Fond papier léger pour toute la zone de contenu
 }
 
 .page-header {
-  background-color: $light-gray;
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-color-dark 100%); // Marine profond / très sombre
   padding: $spacing-lg 0;
   text-align: center;
+  color: $white;
+  margin-bottom: $spacing-lg;
 
   h1 {
     font-size: $h1-size;
-    color: $primary-navy;
+    color: $white;
     margin-bottom: $spacing-sm;
+    font-family: $font-family-headings;
   }
 
   .hero-image {
@@ -28,32 +32,35 @@
     height: auto;
     margin-top: $spacing-md;
     border-radius: 8px;
+    box-shadow: $box-shadow;
   }
 }
 
 .breadcrumb {
   margin-top: $spacing-sm;
   font-size: $small-size;
-  color: $secondary-gray;
+  color: rgba($white, 0.7);
 
   a {
-    color: $secondary-gray;
+    color: rgba($white, 0.9);
     text-decoration: none;
 
     &:hover {
-      color: $primary-blue;
+      color: $white;
+      text-decoration: underline;
     }
   }
 
   span {
     font-weight: $font-medium;
-    color: $primary-navy;
+    color: $white;
   }
 
   a + span::before,
   a + a::before {
     content: '/ ';
     margin: 0 5px;
+    color: rgba($white, 0.5);
   }
 }
 
@@ -67,6 +74,11 @@
 
   .main-content {
     flex: 3;
+    background: $white;
+    border-radius: $border-radius;
+    padding: $spacing-lg;
+    box-shadow: $box-shadow; // Card style
+    transition: $transition-base;
   }
 
   .sidebar {
