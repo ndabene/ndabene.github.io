@@ -33,6 +33,7 @@
     let fuse = null;
     let searchIndex = [];
     let searchHistory = [];
+    let lazyPostsLoadedForSearch = false;
 
     // Utility: Debounce function
     function debounce(func, wait) {
@@ -177,7 +178,81 @@
         }
     }
 
-    // Build search index from DOM (includes paginated content)
+    // Load lazy posts into the DOM for search
+    function loadLazyPostsForSearch() {
+        if (lazyPostsLoadedForSearch) return;
+
+        const lazyPostsData = document.getElementById('lazy-posts-data');
+        if (!lazyPostsData) {
+            lazyPostsLoadedForSearch = true;
+            return;
+        }
+
+        const lazyPosts = Array.from(lazyPostsData.querySelectorAll('.lazy-post-data'));
+        if (lazyPosts.length === 0) {
+            lazyPostsLoadedForSearch = true;
+            return;
+        }
+
+        console.log('🔍 Chargement de', lazyPosts.length, 'articles paginés pour la recherche...');
+
+        const postsContainer = document.getElementById('blog-posts-container');
+        const fragment = document.createDocumentFragment();
+
+        lazyPosts.forEach(postData => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'post-preview-wrapper';
+            wrapper.setAttribute('data-lazy-loaded', 'true'); // Marquer comme chargé pour la recherche
+
+            const article = document.createElement('article');
+            article.className = 'post-preview-news';
+            article.setAttribute('data-categories', postData.dataset.categories || '');
+            article.setAttribute('data-tags', postData.dataset.tags || '');
+            article.setAttribute('data-date', postData.dataset.date || '');
+            article.setAttribute('data-read-time', postData.dataset.readTime || '5');
+
+            const seriesHtml = postData.dataset.series ?
+                `<span class="series-indicator">${postData.dataset.series}</span>` : '';
+
+            article.innerHTML = `
+                <div class="post-news-content">
+                    ${postData.dataset.image ? `
+                    <div class="post-news-thumb">
+                        <img src="${postData.dataset.image}" alt="${postData.dataset.title}" loading="lazy" width="200" height="150" decoding="async">
+                    </div>
+                    ` : ''}
+                    <div class="post-news-text">
+                        <div class="post-news-meta">
+                            <time>${postData.dataset.dateFormatted}</time>
+                            <span class="reading-time">${postData.dataset.readTime} min</span>
+                            ${seriesHtml}
+                        </div>
+                        <h3 class="post-news-title">
+                            <a href="${postData.dataset.url}">${postData.dataset.title}</a>
+                        </h3>
+                        <p class="post-news-excerpt">${postData.dataset.excerpt}</p>
+                    </div>
+                    <div class="post-news-actions">
+                        <a href="${postData.dataset.url}" class="read-more-compact">
+                            Lire l'article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            wrapper.appendChild(article);
+            fragment.appendChild(wrapper);
+        });
+
+        // Insérer avant le div lazy-posts-data
+        lazyPostsData.parentNode.insertBefore(fragment, lazyPostsData);
+        lazyPostsData.remove();
+
+        lazyPostsLoadedForSearch = true;
+        console.log('✅ Articles paginés chargés pour la recherche');
+    }
+
+    // Build search index from DOM (includes all content)
     function buildSearchIndex() {
         const postsContainer = document.getElementById('blog-posts-container');
         if (!postsContainer) return;
@@ -185,7 +260,7 @@
         const posts = postsContainer.querySelectorAll('.post-preview-wrapper');
         searchIndex = [];
 
-        // Index visible posts
+        // Index all visible posts (including lazy-loaded ones)
         posts.forEach((wrapper, index) => {
             const postElement = wrapper.querySelector('.post-preview-news');
             if (!postElement) return;
@@ -202,46 +277,25 @@
                 categories: postElement.getAttribute('data-categories') || '',
                 tags: postElement.getAttribute('data-tags') || '',
                 url: titleLink ? titleLink.getAttribute('href') : '',
-                isPaginated: false
+                isLazyLoaded: wrapper.getAttribute('data-lazy-loaded') === 'true'
             });
         });
-
-        // NOUVEAU: Index aussi le contenu paginé (lazy-loaded posts)
-        const lazyPostsData = document.getElementById('lazy-posts-data');
-        if (lazyPostsData) {
-            const lazyPosts = lazyPostsData.querySelectorAll('.lazy-post-data');
-            lazyPosts.forEach((lazyPost, index) => {
-                searchIndex.push({
-                    id: searchIndex.length,
-                    element: null, // Pas encore dans le DOM
-                    title: lazyPost.getAttribute('data-title') || '',
-                    excerpt: lazyPost.getAttribute('data-excerpt') || '',
-                    categories: lazyPost.getAttribute('data-categories') || '',
-                    tags: lazyPost.getAttribute('data-tags') || '',
-                    url: lazyPost.getAttribute('data-url') || '',
-                    isPaginated: true,
-                    lazyElement: lazyPost
-                });
-            });
-            console.log('📄 Articles paginés indexés:', lazyPosts.length);
-        }
 
         // Initialize Fuse.js with the search index
         if (window.Fuse) {
             fuse = new window.Fuse(searchIndex, CONFIG.FUSE_OPTIONS);
-            console.log('🔍 Index de recherche créé:', searchIndex.length, 'articles (dont',
-                searchIndex.filter(item => item.isPaginated).length, 'paginés)');
+            console.log('🔍 Index de recherche créé:', searchIndex.length, 'articles');
         } else {
             console.warn('⚠️ Fuse.js non chargé, utilisation de la recherche basique');
         }
     }
 
-    // Perform fuzzy search (improved to handle paginated content)
+    // Perform fuzzy search (simplified - all posts are loaded)
     function performFuzzySearch(query) {
         if (!query || query.length < 2) {
-            // Show all visible posts (not paginated ones)
+            // Show all posts
             searchIndex.forEach(item => {
-                if (!item.isPaginated && item.element) {
+                if (item.element) {
                     item.element.style.display = '';
                     // Remove highlights
                     const titleElement = item.element.querySelector('.post-news-title a');
@@ -250,7 +304,7 @@
                     if (excerptElement) excerptElement.innerHTML = item.excerpt;
                 }
             });
-            return searchIndex.filter(item => !item.isPaginated).length;
+            return searchIndex.length;
         }
 
         if (!fuse) {
@@ -261,9 +315,9 @@
         const results = fuse.search(query);
         let visibleCount = 0;
 
-        // Hide all visible posts first
+        // Hide all posts first
         searchIndex.forEach(item => {
-            if (!item.isPaginated && item.element) {
+            if (item.element) {
                 item.element.style.display = 'none';
                 // Remove previous highlights
                 const titleElement = item.element.querySelector('.post-news-title a');
@@ -273,12 +327,11 @@
             }
         });
 
-        // Show matching results with highlights (only for visible posts)
+        // Show matching results with highlights
         results.forEach(result => {
             const item = result.item;
 
-            // Only show/highlight if it's a visible (non-paginated) post
-            if (!item.isPaginated && item.element) {
+            if (item.element) {
                 item.element.style.display = '';
                 visibleCount++;
 
@@ -294,9 +347,6 @@
                         }
                     });
                 }
-            } else if (item.isPaginated) {
-                // Compte les résultats paginés mais ne les affiche pas (ils sont dans les suggestions)
-                visibleCount++;
             }
         });
 
@@ -350,6 +400,15 @@
 
         // Debounced search function
         const debouncedSearch = debounce((value) => {
+            // Load lazy posts if searching (ensures all posts are searchable)
+            if (value.trim().length >= 2) {
+                loadLazyPostsForSearch();
+                // Rebuild index if lazy posts were just loaded
+                if (lazyPostsLoadedForSearch && searchIndex.length < document.querySelectorAll('.post-preview-wrapper').length) {
+                    buildSearchIndex();
+                }
+            }
+
             const visibleCount = performFuzzySearch(value);
 
             // Update UI
@@ -374,6 +433,15 @@
 
         // Debounced suggestions
         const debouncedSuggestions = debounce((input) => {
+            // Load lazy posts if user is typing for suggestions
+            const value = input.value.trim();
+            if (value.length >= 2) {
+                loadLazyPostsForSearch();
+                // Rebuild index if lazy posts were just loaded
+                if (lazyPostsLoadedForSearch && searchIndex.length < document.querySelectorAll('.post-preview-wrapper').length) {
+                    buildSearchIndex();
+                }
+            }
             showSearchSuggestions(input, suggestionsContainer);
         }, 150);
 

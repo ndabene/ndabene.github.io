@@ -147,15 +147,15 @@ llm_topics:
                     </div>
                     
                     <div class="post-list-news grid-view" id="blog-posts-container">
-                        {% comment %}Charger initialement 2 pages d'articles (16 posts) - skip hero + 3 featured = offset 4{% endcomment %}
+                        {% comment %}Charger initialement 2 pages d'articles (12 posts) - skip hero + 3 featured = offset 4{% endcomment %}
                         {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" | offset: 4 %}
-                        {% assign initial_load_count = 16 %}
+                        {% assign initial_load_count = 12 %}
                         {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
 
                         {% comment %}Stocker le reste des posts pour chargement à la demande{% endcomment %}
                         {% if published_posts_list.size > initial_load_count %}
                             <div id="lazy-posts-data" style="display: none;">
-                                {% for post in published_posts_list offset: 16 %}
+                                {% for post in published_posts_list offset: 12 %}
                                     <div class="lazy-post-data"
                                          data-url="{{ post.url | relative_url }}"
                                          data-title="{{ post.title | escape }}"
@@ -187,7 +187,7 @@ llm_topics:
                     {% include future-posts-data.html %}
 
                     <!-- Pagination -->
-                    {% assign posts_per_page = 8 %}
+                    {% assign posts_per_page = 6 %}
                     {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time" | size %}
                     {% assign remaining_posts = published_posts_count | minus: 4 %}
                     {% if remaining_posts > posts_per_page %}
@@ -198,7 +198,7 @@ llm_topics:
                                 <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
                             </div>
                             <div class="pagination-info-wrapper">
-                                Affichage <span id="showing-range">1-8</span> sur <span id="total-posts">{{ remaining_posts }}</span> articles
+                                Affichage <span id="showing-range">1-6</span> sur <span id="total-posts">{{ remaining_posts }}</span> articles
                             </div>
                         </div>
                     {% endif %}

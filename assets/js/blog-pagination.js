@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!postsContainer) return;
 
-    const postsPerPage = 8;
+    const postsPerPage = 6;
     let currentPage = 1;
     let lazyPostsLoaded = false;
 
