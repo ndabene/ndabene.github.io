@@ -30,7 +30,6 @@ $search-highlight-text: #92400e;
 .search-input-wrapper {
   position: relative;
   width: 100%;
-  z-index: 100;
 
   // Icône de recherche
   > .fa-search {
@@ -160,7 +159,7 @@ $search-highlight-text: #92400e;
   border: 1px solid rgba(226, 232, 240, 0.8);
   max-height: 520px;
   overflow-y: auto;
-  z-index: 9999;
+  z-index: 1300; // Au-dessus de tous les éléments (modals: 1200, nav: 1050)
   display: none;
   animation: slideDownFade 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   backdrop-filter: blur(12px);
