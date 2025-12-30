@@ -28,6 +28,7 @@ estimated_reading_time: 45 minutes
 keywords: [intelligence artificielle 2025, GPT-5 OpenAI, Gemini 3 Google, Claude 4 Anthropic, DeepSeek R1, Mistral AI, IA e-commerce, automatisation PrestaShop, productivité IA, AGI timeline, AI Act Europe, guerre des IA]
 technologies: [GPT-5, Gemini 3, Claude 4, DeepSeek R1, Mistral AI, Llama 4, Grok 4, Microsoft Copilot, PrestaShop, n8n]
 featured: true
+lang: fr
 faq:
 - question: "Quel modèle d'IA est le meilleur en 2025 ?"
   answer: "Il n'y a pas de 'meilleur' modèle universel. GPT-5 excelle en performance globale et vibe coding, Claude 4 en raisonnement éthique, Gemini 3 en intégration écosystémique, DeepSeek en efficacité algorithmique, et Mistral en multilinguisme. Le choix dépend de vos besoins spécifiques."
