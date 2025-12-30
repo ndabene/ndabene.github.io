@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: gemini-flash-image-revolution
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Innovation
 - Design
 tags:

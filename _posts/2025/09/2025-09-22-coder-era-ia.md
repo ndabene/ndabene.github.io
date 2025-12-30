@@ -5,7 +5,7 @@ date: 2025-09-22
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 - Bonnes Pratiques
 tags:
 - IA
@@ -20,7 +20,7 @@ difficulty: Intermédiaire
 technologies:
 - IA
 - GitHub Copilot
-- Développement
+- développement
 - Méthodologies
 estimated_reading_time: 12 minutes
 faq:

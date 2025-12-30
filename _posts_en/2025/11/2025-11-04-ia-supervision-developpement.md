@@ -4,9 +4,9 @@ title: Would You Let Junior Dev Code Without Supervision?
 date: 2025-11-04
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
-- Development
-- Security
+- artificial intelligence
+- development
+- security
 tags:
 - AI
 - development
@@ -21,7 +21,7 @@ difficulty: Intermediate
 technologies:
 - AI
 - GitHub Copilot
-- Security
+- security
 - DevOps
 estimated_reading_time: 12 minutes
 faq:

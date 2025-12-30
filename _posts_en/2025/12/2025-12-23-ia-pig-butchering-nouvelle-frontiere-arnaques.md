@@ -7,7 +7,7 @@ ref: ia-pig-butchering-scam-frontier
 author: Nicolas Dabène
 categories:
 - AI
-- Security
+- security
 - BusinessTech
 tags:
 - artificial intelligence
@@ -24,7 +24,7 @@ technologies:
 - AI
 - LLM
 - Deepfake
-- Security
+- security
 estimated_reading_time: 15 minutes
 ---
 

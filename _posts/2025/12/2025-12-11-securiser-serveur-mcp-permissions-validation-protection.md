@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories:
 - Tutoriel
 - Intelligence Artificielle
-- Sécurité
+- sécurité
 tags:
 - API
 - IA
@@ -20,7 +20,7 @@ difficulty: Intermédiaire
 technologies:
 - TypeScript
 - MCP
-- Security
+- security
 - JWT
 - Validation
 estimated_reading_time: 16 minutes

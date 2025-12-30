@@ -7,7 +7,7 @@ lang: en
 ref: prestashop-admin-api-quickstart
 categories:
 - PrestaShop
-- Development
+- development
 tags:
 - API
 - PrestaShop

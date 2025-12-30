@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: mistral-ai-revolution-francaise-intelligence-artificielle
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Startups
 - Innovation
 - Europe

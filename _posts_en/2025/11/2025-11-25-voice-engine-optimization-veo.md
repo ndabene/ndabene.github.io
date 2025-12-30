@@ -6,7 +6,7 @@ lang: en
 ref: voice-engine-optimization-veo
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - SEO
 - Tutorial
 tags:

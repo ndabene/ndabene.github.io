@@ -8,7 +8,7 @@ ref: prestashop-growth-hacking-mindset
 categories:
 - PrestaShop
 - Entrepreneurship
-- Best Practices
+- best practices
 tags:
 - PrestaShop
 - SEO

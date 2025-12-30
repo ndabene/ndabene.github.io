@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: google-gemini-3-0-ai-revolution-2025
 categories:
-- Artificial Intelligence
-- Development
+- artificial intelligence
+- development
 tags:
 - AI
 - development

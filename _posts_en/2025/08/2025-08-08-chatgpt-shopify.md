@@ -7,7 +7,7 @@ lang: en
 ref: chatgpt-shopify
 categories:
 - Ecommerce
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - API
 - ChatGPT

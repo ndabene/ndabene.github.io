@@ -20,7 +20,7 @@ technologies:
 - Google Shopping
 - PrestaShop
 - Google Merchant Center
-- E-commerce
+- e-commerce
 estimated_reading_time: 12 minutes
 faq:
 - question: Pourquoi Google Shopping est-il crucial pour le Black Friday 2025 ?

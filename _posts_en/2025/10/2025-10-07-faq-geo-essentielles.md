@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: faq-geo-essentielles-2025-10
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Ecommerce
 tags:
 - AI
@@ -22,7 +22,7 @@ difficulty: Intermediate
 technologies:
 - AI
 - GEO
-- E-commerce
+- e-commerce
 - PrestaShop
 estimated_reading_time: 10 minutes
 faq:

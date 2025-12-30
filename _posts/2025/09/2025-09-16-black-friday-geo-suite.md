@@ -21,7 +21,7 @@ technologies:
 - PrestaShop
 - IA
 - SEO
-- E-commerce
+- e-commerce
 estimated_reading_time: 8 minutes
 faq:
 - question: GEO Suite remplace-t-il le SEO traditionnel ?

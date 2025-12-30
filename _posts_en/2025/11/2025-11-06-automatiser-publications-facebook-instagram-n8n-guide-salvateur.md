@@ -4,8 +4,8 @@ title: Automate Facebook & Instagram with n8n
 date: 2025-11-06
 author: Nicolas Dabène
 categories:
-- Development
-- Artificial Intelligence
+- development
+- artificial intelligence
 - Tutorial
 tags:
 - API

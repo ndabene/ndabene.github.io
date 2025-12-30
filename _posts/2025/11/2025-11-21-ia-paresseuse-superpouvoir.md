@@ -8,11 +8,11 @@ author: Nicolas Dabène
 categories:
 - IA
 - Philosophie
-- E-commerce
+- e-commerce
 tags:
-- ai
-- prestashop
-- llm
+- AI
+- PrestaShop
+- LLM
 - philosophy
 - future
 excerpt: 'Et si la révolution de l''IA reposait sur un immense malentendu ? Les modèles comme GPT ne "pensent" pas, ils évitent de réfléchir. Découvrez pourquoi cette "paresse algorithmique" est en réalité un super-pouvoir et comment, en tant que développeurs et créateurs, nous devons changer notre rapport à cet outil pour en libérer le plein potentiel.'

@@ -14,7 +14,7 @@ tags:
 - php vs python
 - api integration
 - web development
-- prestashop
+- PrestaShop
 excerpt: >
   Think you need to learn Python and complex mathematics to work with AI? Wrong. Python is the language of researchers who create models. PHP is the language of "Makers" who sell them. Discover why your current expertise is worth gold.
 image: /assets/images/blog/2025/12/php-vs-python-ai.webp

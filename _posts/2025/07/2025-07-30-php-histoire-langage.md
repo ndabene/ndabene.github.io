@@ -5,7 +5,7 @@ date: 2025-07-30
 author: Nicolas Dabène
 categories:
 - PHP
-- Développement
+- développement
 tags:
 - PrestaShop
 - automatisation

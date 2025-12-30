@@ -5,7 +5,7 @@ date: 2025-10-22
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 tags:
 - IA
 - automatisation
@@ -18,7 +18,7 @@ technologies:
 - IA
 - Navigateur Web
 - Chromium
-- Automation
+- automation
 estimated_reading_time: 15 minutes
 faq:
 - question: Comet est-il vraiment gratuit ou y a-t-il des limitations cachées ?

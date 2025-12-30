@@ -19,7 +19,7 @@ difficulty: Intermédiaire
 technologies:
 - Google Ads
 - IA
-- E-commerce
+- e-commerce
 - SEO
 estimated_reading_time: 12 minutes
 faq:

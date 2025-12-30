@@ -5,7 +5,7 @@ date: 2025-11-12
 author: Nicolas Dabène
 categories:
 - Tutorial
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - AI
 - development

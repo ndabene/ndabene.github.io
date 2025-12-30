@@ -8,10 +8,10 @@ author: Nicolas Dabène
 categories:
 - Développement PrestaShop
 - Qualité Code
-- Architecture
+- architecture
 tags:
 - modules-prestashop
-- symfony
+- Symfony
 - clean-code
 - prestashop-9
 - performance-web

@@ -7,8 +7,8 @@ lang: en
 ref: prestashop-command-bus-compatibility
 categories:
 - PrestaShop
-- Architecture
-- Development
+- architecture
+- development
 tags:
 - PrestaShop
 - development

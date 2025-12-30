@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: prestashop-student-project-european-leader-2025
 categories:
-- E-commerce
+- e-commerce
 - Entrepreneurship
 - Success Story
 tags:
@@ -23,7 +23,7 @@ featured: true
 difficulty: Intermediate
 technologies:
 - PrestaShop
-- E-commerce
+- e-commerce
 - PHP
 - Open Source
 - Symfony

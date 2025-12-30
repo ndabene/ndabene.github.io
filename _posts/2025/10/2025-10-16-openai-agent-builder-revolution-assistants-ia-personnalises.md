@@ -5,8 +5,8 @@ date: 2025-10-16
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
-- Automatisation
+- développement
+- automatisation
 tags:
 - ChatGPT
 - IA
@@ -23,7 +23,7 @@ technologies:
 - AgentKit
 - ChatKit
 - IA
-- Automatisation
+- automatisation
 estimated_reading_time: 18 minutes
 is_future: true
 faq:

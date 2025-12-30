@@ -21,7 +21,7 @@ technologies:
 - PrestaShop
 - Advanced Search Pro
 - SEO
-- E-commerce
+- e-commerce
 estimated_reading_time: 15 minutes
 faq:
 - question: Pourquoi la recherche est-elle cruciale pendant le Black Friday ?

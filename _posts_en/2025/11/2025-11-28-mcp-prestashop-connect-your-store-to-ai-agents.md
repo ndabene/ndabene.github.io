@@ -6,8 +6,8 @@ ref: mcp-server-prestashop-setup-guide
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Artificial Intelligence
-- Development
+- artificial intelligence
+- development
 tags:
 - MCP
 - PrestaShop

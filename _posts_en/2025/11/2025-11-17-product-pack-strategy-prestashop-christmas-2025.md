@@ -5,10 +5,10 @@ date: 2025-11-17
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- E-commerce
+- e-commerce
 - Marketing
 tags:
-- prestashop
+- PrestaShop
 - advanced pack
 - christmas
 - sales

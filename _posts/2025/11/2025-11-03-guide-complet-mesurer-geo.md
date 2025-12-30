@@ -5,7 +5,7 @@ date: 2025-11-03
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 - Performance
 - Bonnes Pratiques
 - Analyse Marché

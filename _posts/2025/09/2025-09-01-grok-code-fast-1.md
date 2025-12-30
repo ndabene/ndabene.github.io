@@ -5,7 +5,7 @@ date: 2025-09-01
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 tags:
 - IA
 - développement
@@ -17,7 +17,7 @@ featured: false
 difficulty: Intermédiaire
 technologies:
 - IA
-- Développement
+- développement
 - GitHub Copilot
 - PrestaShop
 estimated_reading_time: 9 minutes

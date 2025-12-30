@@ -6,9 +6,9 @@ author: Nicolas Dabène
 lang: en
 ref: vibe-coding-prompt-driven-development-2025
 categories:
-- Artificial Intelligence
-- Development
-- Best Practices
+- artificial intelligence
+- development
+- best practices
 tags:
 - AI
 - development

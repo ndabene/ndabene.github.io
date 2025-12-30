@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories:
 - PrestaShop
 - PHP
-- Développement
+- développement
 tags:
 - PrestaShop
 - développement

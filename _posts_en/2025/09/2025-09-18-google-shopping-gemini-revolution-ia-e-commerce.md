@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: google-shopping-gemini-revolution-ia-e-commerce
 categories:
-- Artificial Intelligence
-- E-commerce
+- artificial intelligence
+- e-commerce
 - PrestaShop
 tags:
 - AI

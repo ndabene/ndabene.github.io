@@ -4,7 +4,7 @@ title: ChatGPT Opens to Erotic Conversations
 date: 2025-12-02
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Entrepreneurship
 tags:
 - ChatGPT

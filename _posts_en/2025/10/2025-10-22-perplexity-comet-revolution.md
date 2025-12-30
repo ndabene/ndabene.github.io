@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: perplexity-comet-revolution-ai-browser
 categories:
-- Artificial Intelligence
-- Development
+- artificial intelligence
+- development
 tags:
 - AI
 - automation
@@ -20,7 +20,7 @@ technologies:
 - AI
 - Web Browser
 - Chromium
-- Automation
+- automation
 estimated_reading_time: 15 minutes
 faq:
 - question: Is Comet really free or are there hidden limitations?

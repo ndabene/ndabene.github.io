@@ -5,7 +5,7 @@ date: 2025-10-21
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Développement
+- développement
 - PHP
 - Tutoriel
 tags:

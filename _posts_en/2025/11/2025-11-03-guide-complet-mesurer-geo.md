@@ -4,10 +4,10 @@ title: Definitive Guide to Measuring GEO
 date: 2025-11-03
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
-- Development
+- artificial intelligence
+- development
 - Performance
-- Best Practices
+- best practices
 - Market Analysis
 tags:
 - AI

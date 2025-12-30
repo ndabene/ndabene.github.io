@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: github-pages-jekyll-portfolio-2025
 categories:
-- Development
+- development
 - Tutorials
 tags:
 - automation

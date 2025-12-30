@@ -8,24 +8,24 @@ author: Nicolas Dabène
 categories:
 - IA
 - PrestaShop
-- Développement
+- développement
 tags:
 - Intelligence Artificielle
 - MCP
-- Agents IA
-- Architecture
+- agents IA
+- architecture
 - PrestaShop
 - Small Language Models
 - MoE
-- E-commerce
-- Développement
+- e-commerce
+- développement
 excerpt: L'ère du "Léviathan" (une seule IA géante qui fait tout) est une illusion. L'avenir du e-commerce et du développement PrestaShop se jouera avec une équipe d'agents spécialisés. Découvrez comment transformer votre boutique en machine de guerre grâce aux architectures agentiques et au protocole MCP.
 image: /assets/images/blog/2026/01/2026-01-27-orchestrateur-ia-developpeurs-futur.webp
 featured: false
 difficulty: Avancé
 technologies:
 - MCP
-- Agents IA
+- agents IA
 - PrestaShop
 - Small Language Models
 - Architecture Agentique
@@ -38,7 +38,7 @@ llm_topics:
 - Small Language Models
 - Mixture of Experts (MoE)
 - PrestaShop
-- E-commerce
+- e-commerce
 - Agents IA Spécialisés
 - Latence et Performance
 - Détection de Fraude

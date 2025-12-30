@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: chatbots-donnees-personnelles
 categories:
-- Security
-- Artificial Intelligence
+- security
+- artificial intelligence
 tags:
 - AI
 - prompt engineering
@@ -20,7 +20,7 @@ featured: true
 difficulty: Intermediate
 technologies:
 - AI
-- Security
+- security
 - GDPR
 - Privacy
 estimated_reading_time: 6 minutes

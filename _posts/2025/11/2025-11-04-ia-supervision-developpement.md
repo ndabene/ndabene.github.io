@@ -5,8 +5,8 @@ date: 2025-11-04
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
-- Sécurité
+- développement
+- sécurité
 tags:
 - IA
 - développement
@@ -20,7 +20,7 @@ difficulty: Intermédiaire
 technologies:
 - IA
 - GitHub Copilot
-- Sécurité
+- sécurité
 - DevOps
 estimated_reading_time: 12 minutes
 faq:

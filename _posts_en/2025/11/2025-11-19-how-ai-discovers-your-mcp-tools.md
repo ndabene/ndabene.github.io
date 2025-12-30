@@ -8,11 +8,11 @@ author: Nicolas Dabène
 categories:
 - AI
 - PrestaShop
-- E-commerce
+- e-commerce
 tags:
-- mcp
-- prestashop
-- ai
+- MCP
+- PrestaShop
+- AI
 - automation
 - natural-language
 - business-intelligence

@@ -6,9 +6,9 @@ author: Nicolas Dabène
 lang: en
 ref: chatgpt-securite-controles-parentaux
 categories:
-- Artificial Intelligence
-- Security
-- Best Practices
+- artificial intelligence
+- security
+- best practices
 tags:
 - ChatGPT
 - AI

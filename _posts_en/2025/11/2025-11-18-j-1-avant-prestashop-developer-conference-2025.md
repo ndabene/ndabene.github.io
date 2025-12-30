@@ -6,9 +6,9 @@ author: Nicolas Dabène
 categories:
 - PrestaShop
 - Events
-- Development
+- development
 tags:
-- prestashop
+- PrestaShop
 - developer conference
 - dev conf
 - community

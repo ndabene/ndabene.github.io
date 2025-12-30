@@ -7,7 +7,7 @@ lang: en
 ref: lazy-loading-prestashop-2025-10
 categories:
 - PrestaShop
-- Development
+- development
 - Performance
 tags:
 - API

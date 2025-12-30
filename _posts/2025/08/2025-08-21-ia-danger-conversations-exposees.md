@@ -4,7 +4,7 @@ title: 'Quand l''IA devient un danger : 370 000 conversations Grok exposées'
 date: 2025-08-21
 author: Nicolas Dabène
 categories:
-- Sécurité
+- sécurité
 - Intelligence Artificielle
 tags:
 - IA
@@ -16,7 +16,7 @@ featured: true
 difficulty: Intermédiaire
 technologies:
 - IA
-- Sécurité
+- sécurité
 - Confidentialité
 estimated_reading_time: 6 minutes
 faq:

@@ -7,22 +7,22 @@ ref: rapport-securite-modules-prestashop
 author: Nicolas Dabene
 categories:
 - PrestaShop
-- Security
-- Development
+- security
+- development
 tags:
-- prestashop
+- PrestaShop
 - security
 - modules
 - development
 - best-practices
 - compliance
 - php
-- symfony
+- Symfony
 excerpt: Comprehensive reference to harden PrestaShop 1.7 and 8 modules against SQLi, XSS, CSRF, and path traversal.
 image: /assets/images/blog/2026/01/securite-prestashop.webp
 keywords:
 - PrestaShop
-- Security
+- security
 - PrestaShop modules
 - Development standards
 - Data validation

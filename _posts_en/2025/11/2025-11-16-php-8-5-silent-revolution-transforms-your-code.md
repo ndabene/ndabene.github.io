@@ -5,7 +5,7 @@ date: 2025-11-16
 author: Nicolas Dabène
 categories:
 - PHP
-- Development
+- development
 tags:
 - PHP 8.5
 - performance

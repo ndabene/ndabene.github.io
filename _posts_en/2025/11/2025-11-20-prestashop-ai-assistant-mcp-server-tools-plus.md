@@ -7,11 +7,11 @@ ref: mcp-tools-plus-prestashop-assistant
 categories:
 - AI
 - PrestaShop
-- E-commerce
+- e-commerce
 tags:
-- mcp
-- prestashop
-- ai
+- MCP
+- PrestaShop
+- AI
 - automation
 - natural-language
 - business-intelligence

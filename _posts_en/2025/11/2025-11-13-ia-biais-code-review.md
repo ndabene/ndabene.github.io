@@ -5,7 +5,7 @@ date: 2025-11-13
 author: Nicolas Dabène
 categories:
 - AI
-- Development
+- development
 - Ethics
 tags:
 - AI

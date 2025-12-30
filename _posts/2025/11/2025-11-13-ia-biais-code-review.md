@@ -5,7 +5,7 @@ date: 2025-11-13
 author: Nicolas Dabène
 categories:
 - IA
-- Développement
+- développement
 - Éthique
 tags:
 - IA

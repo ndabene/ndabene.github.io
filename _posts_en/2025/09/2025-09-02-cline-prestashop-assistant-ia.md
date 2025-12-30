@@ -6,10 +6,10 @@ author: Nicolas Dabène
 lang: en
 ref: cline-prestashop-assistant-ia
 categories:
-- Development
+- development
 - PHP
 - PrestaShop
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - AI
 - PrestaShop

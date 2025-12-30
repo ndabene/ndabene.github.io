@@ -5,8 +5,8 @@ date: 2025-08-03
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
-- Architecture
+- développement
+- architecture
 tags:
 - API
 - IA

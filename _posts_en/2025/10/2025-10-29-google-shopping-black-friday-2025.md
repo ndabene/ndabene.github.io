@@ -8,7 +8,7 @@ ref: google-shopping-black-friday-2025-prestashop
 categories:
 - Ecommerce
 - PrestaShop
-- Best Practices
+- best practices
 tags:
 - PrestaShop
 - SEO
@@ -22,7 +22,7 @@ technologies:
 - Google Shopping
 - PrestaShop
 - Google Merchant Center
-- E-commerce
+- e-commerce
 estimated_reading_time: 12 minutes
 faq:
 - question: Why is Google Shopping crucial for Black Friday 2025?

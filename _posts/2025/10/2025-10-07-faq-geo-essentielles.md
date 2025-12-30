@@ -20,7 +20,7 @@ difficulty: Intermédiaire
 technologies:
 - IA
 - GEO
-- E-commerce
+- e-commerce
 - PrestaShop
 estimated_reading_time: 10 minutes
 faq:

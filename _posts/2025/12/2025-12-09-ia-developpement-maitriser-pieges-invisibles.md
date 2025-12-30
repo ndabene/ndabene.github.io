@@ -5,7 +5,7 @@ date: 2025-12-09
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 - Bonnes Pratiques
 tags:
 - IA
@@ -22,7 +22,7 @@ technologies:
 - GitHub Copilot
 - Claude
 - ChatGPT
-- Développement
+- développement
 estimated_reading_time: 10 minutes
 faq:
 - question: L'IA va vraiment remplacer les développeurs ?

@@ -8,16 +8,16 @@ author: Nicolas Dabène
 categories:
 - IA
 - PrestaShop
-- E-commerce
-- Automatisation
+- e-commerce
+- automatisation
 tags:
 - IA
 - PrestaShop
 - n8n
 - MCP
-- Automatisation
+- automatisation
 - GPT-4
-- E-commerce
+- e-commerce
 excerpt: Découvrez comment transformer votre routine matinale e-commerce en recevant chaque matin un briefing stratégique complet généré par l'IA pendant que vous dormez. Un workflow n8n + MCP + PrestaShop qui change la donne.
 image: /assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.webp
 featured: true

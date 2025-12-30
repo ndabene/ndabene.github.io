@@ -4,7 +4,7 @@ title: Les chatbots IA incitent au partage de données
 date: 2025-09-04
 author: Nicolas Dabène
 categories:
-- Sécurité
+- sécurité
 - Intelligence Artificielle
 tags:
 - IA
@@ -18,7 +18,7 @@ featured: true
 difficulty: Intermédiaire
 technologies:
 - IA
-- Sécurité
+- sécurité
 - RGPD
 - Confidentialité
 estimated_reading_time: 6 minutes

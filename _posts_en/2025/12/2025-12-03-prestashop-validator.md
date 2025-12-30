@@ -5,7 +5,7 @@ date: 2025-12-03
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Best Practices
+- best practices
 - Tutorial
 tags:
 - PrestaShop

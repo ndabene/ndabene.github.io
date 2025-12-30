@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: ai-act-europe
 categories:
-- Artificial Intelligence
-- Best Practices
+- artificial intelligence
+- best practices
 tags:
 - AI
 - PrestaShop
@@ -20,7 +20,7 @@ image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.webp
 featured: false
 difficulty: Intermediate
 technologies:
-- Artificial Intelligence
+- artificial intelligence
 - Open Source
 - PHP
 - PrestaShop

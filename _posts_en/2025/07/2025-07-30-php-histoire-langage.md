@@ -7,7 +7,7 @@ lang: en
 ref: php-history-language-2025
 categories:
 - PHP
-- Development
+- development
 tags:
 - PrestaShop
 - automation
