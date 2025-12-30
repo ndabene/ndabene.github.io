@@ -280,34 +280,45 @@ The time is no longer for panic, but for **lucid reconstruction**. The security 
 
 ## References
 
-[1] https://www.globalsecuritymag.fr/Retour-sur-les-cyberattaques-de-l.html
-[2] https://www.cnil.fr/fr/notifications-de-violations-de-donnees-personnelles-2025
-[3] https://www.cnil.fr/fr/violation-de-donnees-personnelles-sanctions-2025
-[4] https://www.undernews.fr/reseau-securite/auchan-victime-dune-cyberattaque.html
-[5] https://www.undernews.fr/reseau-securite/ldlc-victime-cyberattaque-2025.html
-[6] https://www.undernews.fr/reseau-securite/boulanger-cyberattaque-septembre-2025.html
-[7] https://www.akamai.com/fr/resources/state-of-the-internet/retail-attack-economy-report-2025
-[8] https://www.globalsecuritymag.fr/cyberattaque-salesforce-google-2025.html
-[9] https://www.undernews.fr/reseau-securite/leroy-merlin-fuite-donnees-decembre-2025.html
-[10] https://www.akamai.com/resources/state-of-the-internet/soti-security-retail-attack-economy-report
-[11] https://www.cnil.fr/fr/publicite-par-courrier-electronique-la-cnil-sanctionne-google-ireland-limited-325-millions-deuros
-[12] https://www.lefigaro.fr/secteur/high-tech/google-sanctionne-a-325-millions-d-euros-par-la-cnil-pour-publicite-abusive-20250901
-[13] https://www.cnil.fr/fr/cookies-la-cnil-sanctionne-shein-150-millions-deuros
-[14] https://www.usine-digitale.fr/article/shein-sanctionne-a-150-millions-d-euros-par-la-cnil-pour-manquements-aux-regles-sur-les-cookies.N2249785
-[15] https://www.cnil.fr/fr/demarchage-telephonique-la-cnil-sanctionne-american-express-15-million-deuros
-[16] https://www.cyber.gouv.fr/actualites/directive-nis-2-transposition-france-2025
-[17] https://www.journaldunet.com/ebusiness/commerce/1531456-nis-2-compliance-retail-2025/
-[18] https://x.com/karpathy/status/1747314296579383620
-[19] https://www.wired.com/story/vibecoding-ai-development-2025/
-[20] https://techcrunch.com/2025/02/14/vibecoding-natural-language-programming/
-[21] https://stackoverflow.blog/2025/03/21/ai-code-generation-non-developers-2025/
-[22] https://replit.com/blog/agent-mode-evolution-2025
-[23] https://www.theverge.com/2025/4/10/mark-zuckerberg-ai-code-generation-meta
-[24] https://twitter.com/svembu/status/1763892451234567890
-[25] https://www.darkreading.com/application-security/ai-generated-code-vulnerabilities-2025
-[26] https://www.csoonline.com/article/2025/05/15/ai-coding-security-risks-business-logic-flaws/
-[27] https://www.schneier.com/blog/archives/2025/06/shadow-ai-development-security-nightmare.html
-[28] https://www.cnil.fr/fr/bilan-notifications-violations-2025
+### Cyberattacks and Data Breaches
+
+1. [Review of 2025 Cyberattacks - Global Security Mag](https://www.globalsecuritymag.fr/Retour-sur-les-cyberattaques-de-l.html)
+2. [Personal Data Breach Notifications 2025 - CNIL](https://www.cnil.fr/fr/notifications-de-violations-de-donnees-personnelles-2025)
+3. [Personal Data Breaches: 2025 Sanctions - CNIL](https://www.cnil.fr/fr/violation-de-donnees-personnelles-sanctions-2025)
+4. [Auchan Victim of a Cyberattack - UnderNews](https://www.undernews.fr/reseau-securite/auchan-victime-dune-cyberattaque.html)
+5. [LDLC Victim of 2025 Cyberattack - UnderNews](https://www.undernews.fr/reseau-securite/ldlc-victime-cyberattaque-2025.html)
+6. [Boulanger: Cyberattack in September 2025 - UnderNews](https://www.undernews.fr/reseau-securite/boulanger-cyberattaque-septembre-2025.html)
+7. [Retail Attack Economy Report 2025 - Akamai](https://www.akamai.com/fr/resources/state-of-the-internet/retail-attack-economy-report-2025)
+8. [Massive Cyberattack via Salesforce and Google 2025 - Global Security Mag](https://www.globalsecuritymag.fr/cyberattaque-salesforce-google-2025.html)
+9. [Leroy Merlin: Data Leak in December 2025 - UnderNews](https://www.undernews.fr/reseau-securite/leroy-merlin-fuite-donnees-decembre-2025.html)
+10. [State of the Internet Security: Retail Attack Economy Report - Akamai](https://www.akamai.com/resources/state-of-the-internet/soti-security-retail-attack-economy-report)
+
+### CNIL Sanctions and GDPR Compliance
+
+11. [Google Ireland Limited Sanction: €325 Million - CNIL](https://www.cnil.fr/fr/publicite-par-courrier-electronique-la-cnil-sanctionne-google-ireland-limited-325-millions-deuros)
+12. [Google Fined €325 Million by CNIL - Le Figaro](https://www.lefigaro.fr/secteur/high-tech/google-sanctionne-a-325-millions-d-euros-par-la-cnil-pour-publicite-abusive-20250901)
+13. [Cookies: CNIL Fines Shein €150 Million - CNIL](https://www.cnil.fr/fr/cookies-la-cnil-sanctionne-shein-150-millions-deuros)
+14. [Shein Fined €150 Million for Cookie Violations - L'Usine Digitale](https://www.usine-digitale.fr/article/shein-sanctionne-a-150-millions-d-euros-par-la-cnil-pour-manquements-aux-regles-sur-les-cookies.N2249785)
+15. [Telemarketing: CNIL Sanctions American Express - CNIL](https://www.cnil.fr/fr/demarchage-telephonique-la-cnil-sanctionne-american-express-15-million-deuros)
+16. [NIS 2 Directive: Transposition in France 2025 - ANSSI](https://www.cyber.gouv.fr/actualites/directive-nis-2-transposition-france-2025)
+17. [NIS 2: Retail Compliance 2025 - Journal du Net](https://www.journaldunet.com/ebusiness/commerce/1531456-nis-2-compliance-retail-2025/)
+
+### Vibecoding and Generative AI
+
+18. [Andrej Karpathy's Tweet on Vibecoding - X (Twitter)](https://x.com/karpathy/status/1747314296579383620)
+19. [Vibecoding: AI Development in 2025 - Wired](https://www.wired.com/story/vibecoding-ai-development-2025/)
+20. [Vibecoding and Natural Language Programming - TechCrunch](https://techcrunch.com/2025/02/14/vibecoding-natural-language-programming/)
+21. [AI Code Generation: Non-Developers in 2025 - Stack Overflow Blog](https://stackoverflow.blog/2025/03/21/ai-code-generation-non-developers-2025/)
+22. [Agent Mode Evolution 2025 - Replit Blog](https://replit.com/blog/agent-mode-evolution-2025)
+23. [Mark Zuckerberg on AI Code Generation at Meta - The Verge](https://www.theverge.com/2025/4/10/mark-zuckerberg-ai-code-generation-meta)
+24. [Sridhar Vembu's Tweet (Zoho) on AI Code - Twitter](https://twitter.com/svembu/status/1763892451234567890)
+
+### AI-Generated Code Vulnerabilities
+
+25. [AI-Generated Code Vulnerabilities 2025 - Dark Reading](https://www.darkreading.com/application-security/ai-generated-code-vulnerabilities-2025)
+26. [AI Coding Security Risks: Business Logic Flaws - CSO Online](https://www.csoonline.com/article/2025/05/15/ai-coding-security-risks-business-logic-flaws/)
+27. [Shadow AI Development: A Security Nightmare - Bruce Schneier](https://www.schneier.com/blog/archives/2025/06/shadow-ai-development-security-nightmare.html)
+28. [2025 Breach Notifications Report - CNIL](https://www.cnil.fr/fr/bilan-notifications-violations-2025)
 
 ***
 
