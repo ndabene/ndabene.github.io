@@ -17,7 +17,7 @@ tags:
 - anthropic
 excerpt: >
   Loin des effets d'annonce explosifs, le premier trimestre 2026 marque le début de l'industrialisation de l'IA. Entre agents autonomes, multimodalité native et souveraineté européenne avec Mistral, voici l'analyse des tendances concrètes pour les développeurs et e-commerçants.
-image: /assets/images/blog/ia-trends-q1-2026.jpg
+image: /assets/images/blog/2026/01/2026-01-22-ia-q1-2026-industrialisation-agents-autonomes.webp
 difficulty: ⭐️⭐️
 technologies:
 - AI
