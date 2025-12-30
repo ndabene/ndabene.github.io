@@ -165,6 +165,37 @@
         }
     }
 
+    // Toggle tags populaires
+    function initializeTagsToggle() {
+        const toggleTagsBtn = document.getElementById('toggle-tags');
+        const tagsContent = document.getElementById('tags-content');
+
+        if (toggleTagsBtn && tagsContent) {
+            toggleTagsBtn.addEventListener('click', function() {
+                const isVisible = tagsContent.style.display !== 'none';
+                const chevronIcon = this.querySelector('.chevron-icon');
+
+                scheduleUpdate(() => {
+                    if (isVisible) {
+                        tagsContent.style.display = 'none';
+                        if (chevronIcon) {
+                            chevronIcon.classList.remove('fa-chevron-up');
+                            chevronIcon.classList.add('fa-chevron-down');
+                        }
+                        this.classList.remove('active');
+                    } else {
+                        tagsContent.style.display = 'block';
+                        if (chevronIcon) {
+                            chevronIcon.classList.remove('fa-chevron-down');
+                            chevronIcon.classList.add('fa-chevron-up');
+                        }
+                        this.classList.add('active');
+                    }
+                });
+            });
+        }
+    }
+
     // Filtrage des articles - Version optimisée
     function initializeBlogFilters() {
         const postsContainer = document.getElementById('blog-posts-container');
@@ -503,6 +534,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         renderRandomFeaturedArticles();
         initializeFiltersToggle();
+        initializeTagsToggle();
         initializeBlogFilters();
     });
 

@@ -54,11 +54,29 @@ llm_topics:
             </section>
             {% endif %}
 
+            <!-- Global search bar -->
+            <section class="global-search-section">
+                <div class="blog-search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search by title, topic, category...">
+                        <button id="clear-search" class="clear-search-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <!-- Popular Tags Cloud -->
             <section class="popular-tags-section">
                 <div class="popular-tags-cloud">
-                    <h3><i class="fas fa-tags"></i> Popular Tags</h3>
-                    <div class="tags-cloud-horizontal">
+                    <div class="tags-header">
+                        <h3><i class="fas fa-tags"></i> Popular Tags</h3>
+                        <button id="toggle-tags" class="toggle-tags-btn">
+                            <i class="fas fa-chevron-up chevron-icon"></i>
+                        </button>
+                    </div>
+                    <div id="tags-content" class="tags-cloud-horizontal">
                         {% assign all_tags = "" | split: "" %}
                         {% for post in published_posts %}
                             {% if post.tags %}
@@ -78,6 +96,7 @@ llm_topics:
                             <a href="/en/blog/tags/{{ tag | slugify }}/" class="tag-pill-large">#{{ tag }} <span>({{ count }})</span></a>
                         {% endfor %}
                     </div>
+                    </div>
                 </div>
             </section>
 
@@ -96,18 +115,6 @@ llm_topics:
 
                         <!-- Filters area (hidden by default) -->
                         <div id="filters-content" class="filters-content" style="display: none;">
-
-                        <!-- Modern search bar -->
-                        <div class="blog-search-bar">
-                            <div class="search-input-wrapper">
-                                <i class="fas fa-search"></i>
-                                <input type="text" id="search-input" placeholder="🔍 Search by title, topic, category...">
-                                <button id="clear-search" class="clear-search-btn" style="display: none;">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-
 
                         <!-- Quick sort -->
                         <div class="blog-sort-bar">
