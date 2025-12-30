@@ -770,7 +770,6 @@ product:
                     <div class="flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-2">
                             <h4 class="font-mono text-sm font-semibold text-[#111827] truncate">${tool.name}</h4>
-                            ${tool.comingSoon ? '<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20 whitespace-nowrap">Coming soon</span>' : ''}
                         </div>
                         <p class="text-[#475569] text-sm leading-relaxed">${tool.desc}</p>
                     </div>
