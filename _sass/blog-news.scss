@@ -839,7 +839,9 @@ $tag-hover-text: $blanc-pur;
   .blog-content-full-width {
     width: 100%;
     max-width: 100%;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
   }
 
   .main-blog-content-full {
@@ -848,7 +850,7 @@ $tag-hover-text: $blanc-pur;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     width: 100%;
-    max-width: none;
+    max-width: 1400px;
   }
 
   //================================================
