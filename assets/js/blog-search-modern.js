@@ -104,16 +104,17 @@
         }
     }
 
-    // Show search suggestions
-    function showSearchSuggestions(input, suggestionsContainer) {
-        if (!suggestionsContainer) return;
+    // Show search suggestions in modal
+    function showSearchSuggestions(input, suggestionsModal) {
+        if (!suggestionsModal) return;
 
         const query = input.value.trim().toLowerCase();
+        const modalContent = suggestionsModal.querySelector('.search-modal-content');
 
         if (query.length < 2) {
             // Show history if available
             if (searchHistory.length > 0) {
-                suggestionsContainer.innerHTML = `
+                modalContent.innerHTML = `
                     <div class="search-suggestions-header">
                         <i class="fas fa-history"></i> Recherches récentes
                     </div>
@@ -124,9 +125,9 @@
                         </div>
                     `).join('')}
                 `;
-                suggestionsContainer.style.display = 'block';
+                suggestionsModal.classList.add('active');
             } else {
-                suggestionsContainer.style.display = 'none';
+                suggestionsModal.classList.remove('active');
             }
             return;
         }
@@ -136,7 +137,7 @@
             const results = fuse.search(query).slice(0, CONFIG.MAX_SUGGESTIONS);
 
             if (results.length > 0) {
-                suggestionsContainer.innerHTML = `
+                modalContent.innerHTML = `
                     <div class="search-suggestions-header">
                         <i class="fas fa-sparkles"></i> ${results.length} résultat${results.length > 1 ? 's' : ''} pertinent${results.length > 1 ? 's' : ''}
                     </div>
@@ -165,15 +166,15 @@
                         `;
                     }).join('')}
                 `;
-                suggestionsContainer.style.display = 'block';
+                suggestionsModal.classList.add('active');
             } else {
-                suggestionsContainer.innerHTML = `
+                modalContent.innerHTML = `
                     <div class="search-no-suggestions">
                         <i class="fas fa-search"></i>
                         <div>Aucune suggestion trouvée</div>
                     </div>
                 `;
-                suggestionsContainer.style.display = 'block';
+                suggestionsModal.classList.add('active');
             }
         }
     }
@@ -387,15 +388,42 @@
         // Build search index
         buildSearchIndex();
 
-        // Create suggestions container
-        const searchWrapper = searchInput.closest('.search-input-wrapper');
-        let suggestionsContainer = document.getElementById('search-suggestions');
+        // Create suggestions modal
+        let suggestionsModal = document.getElementById('search-modal');
 
-        if (!suggestionsContainer && searchWrapper) {
-            suggestionsContainer = document.createElement('div');
-            suggestionsContainer.id = 'search-suggestions';
-            suggestionsContainer.className = 'search-suggestions';
-            searchWrapper.appendChild(suggestionsContainer);
+        if (!suggestionsModal) {
+            suggestionsModal = document.createElement('div');
+            suggestionsModal.id = 'search-modal';
+            suggestionsModal.className = 'search-modal';
+            suggestionsModal.innerHTML = `
+                <div class="search-modal-overlay"></div>
+                <div class="search-modal-box">
+                    <button class="search-modal-close" aria-label="Fermer">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="search-modal-content"></div>
+                </div>
+            `;
+            document.body.appendChild(suggestionsModal);
+
+            // Close modal on overlay click
+            const overlay = suggestionsModal.querySelector('.search-modal-overlay');
+            overlay.addEventListener('click', () => {
+                suggestionsModal.classList.remove('active');
+            });
+
+            // Close modal on close button click
+            const closeBtn = suggestionsModal.querySelector('.search-modal-close');
+            closeBtn.addEventListener('click', () => {
+                suggestionsModal.classList.remove('active');
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && suggestionsModal.classList.contains('active')) {
+                    suggestionsModal.classList.remove('active');
+                }
+            });
         }
 
         // Debounced search function
@@ -442,7 +470,7 @@
                     buildSearchIndex();
                 }
             }
-            showSearchSuggestions(input, suggestionsContainer);
+            showSearchSuggestions(input, suggestionsModal);
         }, 150);
 
         // Search input handler
@@ -457,29 +485,21 @@
             debouncedSuggestions(this);
         });
 
-        // Focus handler - show suggestions
+        // Focus handler - show suggestions modal
         searchInput.addEventListener('focus', function() {
-            if (suggestionsContainer) {
+            if (suggestionsModal) {
                 debouncedSuggestions(this);
             }
         });
 
-        // Blur handler - hide suggestions (with delay for click)
-        searchInput.addEventListener('blur', function() {
-            setTimeout(() => {
-                if (suggestionsContainer) {
-                    suggestionsContainer.style.display = 'none';
-                }
-            }, 200);
-        });
-
-        // Click handler for suggestions
-        if (suggestionsContainer) {
-            suggestionsContainer.addEventListener('click', function(e) {
+        // Click handler for suggestions in modal
+        if (suggestionsModal) {
+            suggestionsModal.addEventListener('click', function(e) {
                 const suggestion = e.target.closest('.search-suggestion');
                 if (suggestion) {
                     // Si c'est un lien vers un article, laisser la navigation se faire naturellement
                     if (suggestion.dataset.url) {
+                        suggestionsModal.classList.remove('active');
                         // La navigation se fera via le href du <a>
                         return;
                     }
@@ -488,7 +508,7 @@
                     if (query) {
                         searchInput.value = query;
                         searchInput.dispatchEvent(new Event('input'));
-                        suggestionsContainer.style.display = 'none';
+                        suggestionsModal.classList.remove('active');
                         searchInput.focus();
                     }
                 }
@@ -516,13 +536,6 @@
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 searchInput.focus();
-            }
-
-            // Escape to clear and blur
-            if (e.key === 'Escape' && document.activeElement === searchInput) {
-                searchInput.value = '';
-                searchInput.dispatchEvent(new Event('input'));
-                searchInput.blur();
             }
         });
 
