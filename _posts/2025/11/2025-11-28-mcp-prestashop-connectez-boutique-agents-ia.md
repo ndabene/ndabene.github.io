@@ -7,13 +7,13 @@ author: Nicolas Dabène
 categories:
 - PrestaShop
 - Intelligence Artificielle
-- Développement
+- développement
 tags:
 - MCP
 - PrestaShop
 - IA
 - PHP 8
-- Agent IA
+- agent IA
 - Model Context Protocol
 excerpt: 'Tutoriel complet pour installer et configurer ps_mcp_server sur PrestaShop. Apprenez étape par étape comment créer vos premiers outils MCP, exposer votre logique métier aux agents IA, et automatiser votre e-commerce avec Claude, ChatGPT ou Gemini.'
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.webp

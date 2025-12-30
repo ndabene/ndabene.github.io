@@ -7,7 +7,7 @@ lang: en
 ref: setup-serveur-mcp-typescript-2025-10
 categories:
 - Tutorial
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - AI
 - development

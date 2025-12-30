@@ -5,17 +5,17 @@ date: 2025-12-30
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- E-commerce
+- e-commerce
 - Stratégie
 - Technologie
 tags:
-- ai
-- gpt-5
+- AI
+- GPT-5
 - gemini-3
 - claude-4
 - deepseek
 - mistral
-- prestashop
+- PrestaShop
 - automation
 - productivité
 - AGI

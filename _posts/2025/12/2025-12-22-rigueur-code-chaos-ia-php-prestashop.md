@@ -6,7 +6,7 @@ lang: fr
 ref: code-rigor-vs-ai-chaos-php-prestashop
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - IA
 - PrestaShop
 tags:
@@ -15,10 +15,10 @@ tags:
 - PHP 8
 - Loose Typing
 - Automatisation E-commerce
-- Développement Module
+- développement module
 - n8n
-- Best Practices
-- Architecture Logicielle
+- best practices
+- architecture logicielle
 - LLM
 excerpt: L'arrivée de l'IA dans l'écosystème PrestaShop bouscule nos certitudes de développeurs. Faut-il sacrifier la rigueur du typage strict de PHP pour s'adapter au chaos des LLM ? Découvrez pourquoi la réponse n'est pas de régresser, mais d'adopter une architecture "diplomate" capable de transformer les données floues de l'IA en code robuste.
 image: /assets/images/blog/2025/12/2025-12-22-rigueur-code-chaos-ia-php-prestashop.webp
@@ -29,7 +29,7 @@ technologies:
 - PHP
 - IA
 - n8n
-- Architecture
+- architecture
 estimated_reading_time: 15 minutes
 llm_summary: Exploration du débat entre rigueur du typage strict PHP et flexibilité nécessaire pour l'intégration d'IA générative dans PrestaShop. Proposition d'une architecture "diplomate" avec des Fuzzy DTO pour réconcilier stabilité technique et automatisation intelligente.
 llm_topics:
@@ -38,7 +38,7 @@ llm_topics:
 - PHP 8
 - Typage strict
 - Loose Typing
-- Automatisation
+- automatisation
 - LLM
 - Architecture logicielle
 - Value Objects

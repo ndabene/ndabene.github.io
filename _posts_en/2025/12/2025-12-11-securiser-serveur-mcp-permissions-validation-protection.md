@@ -5,8 +5,8 @@ date: 2025-12-11
 author: Nicolas Dabène
 categories:
 - Tutorial
-- Artificial Intelligence
-- Security
+- artificial intelligence
+- security
 tags:
 - API
 - AI
@@ -20,7 +20,7 @@ difficulty: Intermediate
 technologies:
 - TypeScript
 - MCP
-- Security
+- security
 - JWT
 - Validation
 estimated_reading_time: 16 minutes

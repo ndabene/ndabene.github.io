@@ -7,8 +7,8 @@ ref: cybersecurity-ecommerce-retrospective-2025
 author: Nicolas Dabène
 categories:
 - Cybersecurity
-- E-commerce
-- Artificial Intelligence
+- e-commerce
+- artificial intelligence
 tags:
 - cybersecurity
 - e-commerce

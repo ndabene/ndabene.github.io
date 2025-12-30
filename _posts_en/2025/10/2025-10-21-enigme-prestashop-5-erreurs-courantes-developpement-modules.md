@@ -7,7 +7,7 @@ lang: en
 ref: prestashop-puzzle-5-common-module-errors
 categories:
 - PrestaShop
-- Development
+- development
 - PHP
 - Tutorial
 tags:

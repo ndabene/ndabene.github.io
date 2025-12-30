@@ -5,7 +5,7 @@ date: 2025-10-08
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 tags:
 - IA
 - développement

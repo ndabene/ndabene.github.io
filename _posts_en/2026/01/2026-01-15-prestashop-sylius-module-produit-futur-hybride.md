@@ -6,9 +6,9 @@ lang: en
 ref: prestashop-sylius-hybrid-future
 author: Nicolas Dabène
 categories:
-- E-commerce
-- Development
-- Architecture
+- e-commerce
+- development
+- architecture
 tags:
 - PrestaShop
 - Sylius

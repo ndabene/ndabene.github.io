@@ -6,13 +6,13 @@ lang: fr
 ref: prestashop-cyberfolks-sylius-alliance
 author: Nicolas Dabène
 categories:
-- E-commerce
+- e-commerce
 - Tech Watch
 - PrestaShop
 tags:
-- prestashop
-- sylius
-- symfony
+- PrestaShop
+- Sylius
+- Symfony
 - opensource
 - ecosystem
 - business

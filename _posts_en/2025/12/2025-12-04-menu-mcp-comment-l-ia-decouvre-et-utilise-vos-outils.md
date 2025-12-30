@@ -5,7 +5,7 @@ date: 2025-12-04
 author: Nicolas Dabène
 categories:
 - Tutorial
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - API
 - AI

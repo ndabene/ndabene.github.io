@@ -7,11 +7,11 @@ ref: prestashop-stability-vs-modernity-2025
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- E-commerce
+- e-commerce
 - Technical Architecture
 tags:
 - prestashop-8
-- symfony
+- Symfony
 - ecommerce-strategy
 - technical-debt
 - mcp-protocol

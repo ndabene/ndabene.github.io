@@ -5,7 +5,7 @@ date: 2025-09-12
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Développement
+- développement
 tags:
 - API
 - PrestaShop

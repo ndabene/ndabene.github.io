@@ -4,7 +4,7 @@ title: 'Claude Code en ligne : IA agentique sur le web'
 date: 2025-10-21
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - Intelligence Artificielle
 - Tutoriel
 tags:

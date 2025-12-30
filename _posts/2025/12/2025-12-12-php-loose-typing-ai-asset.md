@@ -8,7 +8,7 @@ author: Nicolas Dabène
 categories:
 - PHP
 - IA
-- Architecture
+- architecture
 tags:
 - php
 - artificial intelligence

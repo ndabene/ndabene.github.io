@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: comprendre-mcp-conversation-simple-2025-10
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Tutorial
 tags:
 - API

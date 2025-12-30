@@ -8,7 +8,7 @@ ref: doctolib-2013-2025-histoire-innovations-ia
 categories:
 - Success Story
 - Market Analysis
-- Artificial Intelligence
+- artificial intelligence
 tags:
 - AI
 - automation

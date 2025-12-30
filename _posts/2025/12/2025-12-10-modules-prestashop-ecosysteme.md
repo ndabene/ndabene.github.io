@@ -7,7 +7,7 @@ ref: prestashop-modules-jungle-ecosystem
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- E-commerce
+- e-commerce
 - Stratégie
 tags:
 - modules-prestashop

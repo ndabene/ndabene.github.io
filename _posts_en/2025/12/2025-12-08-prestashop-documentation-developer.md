@@ -8,13 +8,13 @@ author: Nicolas Dabène
 categories:
 - PrestaShop
 - Web Development
-- Best Practices
+- best practices
 tags:
 - prestashop-8
 - documentation
 - hooks
 - software-architecture
-- symfony
+- Symfony
 excerpt: '80% of "PrestaShop bugs" are actually implementation errors. Discover how official documentation can transform your code and your career.'
 image: /assets/images/blog/2025/12/2025-12-08-prestashop-documentation-developer.webp
 featured: false

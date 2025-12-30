@@ -4,7 +4,7 @@ title: Évolution des compétences des développeurs
 date: 2025-11-10
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - Intelligence Artificielle
 tags:
 - IA

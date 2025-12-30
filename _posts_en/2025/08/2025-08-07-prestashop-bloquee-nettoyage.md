@@ -7,7 +7,7 @@ lang: en
 ref: prestashop-bloquee-nettoyage
 categories:
 - PrestaShop
-- Best Practices
+- best practices
 tags:
 - PrestaShop
 - development

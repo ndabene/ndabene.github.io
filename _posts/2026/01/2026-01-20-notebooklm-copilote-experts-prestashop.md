@@ -8,17 +8,17 @@ author: Nicolas Dabène
 categories:
 - IA
 - PrestaShop
-- Productivité
+- productivité
 tags:
 - NotebookLM
 - Google
 - Intelligence Artificielle
 - RAG
 - PrestaShop
-- Documentation
-- Productivité
-- E-commerce
-- Développement
+- documentation
+- productivité
+- e-commerce
+- développement
 excerpt: ChatGPT hallucine sur votre code PrestaShop ? Découvrez NotebookLM, l'outil Google qui révolutionne la façon dont les développeurs et e-commerçants exploitent leur documentation technique. Une IA qui analyse vos sources au lieu d'inventer des réponses.
 image: /assets/images/blog/2026/01/2026-01-20-notebooklm-copilote-experts-prestashop.webp
 featured: false
@@ -28,7 +28,7 @@ technologies:
 - Google AI
 - PrestaShop
 - RAG
-- Documentation
+- documentation
 estimated_reading_time: 12 minutes
 llm_summary: Découvrez NotebookLM, l'outil Google basé sur la technologie RAG qui transforme la façon dont les experts PrestaShop travaillent avec leur documentation. Contrairement aux LLM classiques qui hallucinent, NotebookLM analyse vos documents spécifiques pour fournir des réponses fiables et contextualisées. L'article présente des cas d'usage concrets pour les développeurs et e-commerçants, de la migration de modules à l'optimisation de catalogues produits.
 llm_topics:
@@ -37,9 +37,9 @@ llm_topics:
 - RAG (Retrieval-Augmented Generation)
 - PrestaShop
 - Documentation Technique
-- Productivité
-- E-commerce
-- Développement
+- productivité
+- e-commerce
+- développement
 - Migration de Code
 - Catalogues Produits
 - Hallucination IA

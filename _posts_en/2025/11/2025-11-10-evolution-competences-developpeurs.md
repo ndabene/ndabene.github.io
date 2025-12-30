@@ -4,8 +4,8 @@ title: Evolution of Developer Skills
 date: 2025-11-10
 author: Nicolas Dabène
 categories:
-- Development
-- Artificial Intelligence
+- development
+- artificial intelligence
 tags:
 - AI
 - automation

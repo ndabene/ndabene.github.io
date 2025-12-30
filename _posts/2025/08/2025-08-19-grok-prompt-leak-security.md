@@ -5,7 +5,7 @@ date: 2025-08-19
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Sécurité
+- sécurité
 tags:
 - ChatGPT
 - IA
@@ -19,7 +19,7 @@ difficulty: Intermédiaire
 technologies:
 - IA
 - Prompt Engineering
-- Sécurité
+- sécurité
 estimated_reading_time: 7 minutes
 faq:
 - question: Comment protéger mes prompts système en production ?

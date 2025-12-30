@@ -7,10 +7,10 @@ ref: prestashop-tools-hidden-gems
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Développement
-- Best Practices
+- développement
+- best practices
 tags:
-- prestashop
+- PrestaShop
 - legacy-code
 - productivity
 - php

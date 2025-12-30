@@ -6,9 +6,9 @@ author: Nicolas Dabène
 lang: en
 ref: mcp-protocol-guide
 categories:
-- Artificial Intelligence
-- Development
-- Architecture
+- artificial intelligence
+- development
+- architecture
 tags:
 - API
 - AI

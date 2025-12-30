@@ -8,24 +8,24 @@ author: Nicolas Dabène
 categories:
 - AI
 - PrestaShop
-- Development
+- development
 tags:
-- Artificial Intelligence
+- artificial intelligence
 - MCP
-- AI Agents
-- Architecture
+- AI agents
+- architecture
 - PrestaShop
 - Small Language Models
 - MoE
-- E-commerce
-- Development
+- e-commerce
+- development
 excerpt: The era of the "Leviathan" (one giant AI that does everything) is an illusion. The future of e-commerce and PrestaShop development will be played out with a team of specialized agents. Discover how to transform your store into a war machine thanks to agentic architectures and the MCP protocol.
 image: /assets/images/blog/2026/01/2026-01-27-orchestrateur-ia-developpeurs-futur.webp
 featured: false
 difficulty: Advanced
 technologies:
 - MCP
-- AI Agents
+- AI agents
 - PrestaShop
 - Small Language Models
 - Agentic Architecture
@@ -33,12 +33,12 @@ estimated_reading_time: 15 minutes
 llm_summary: Discover why agentic architecture with specialized AIs outperforms giant generalist models for e-commerce. The article explains the concept of MoE (Mixture of Experts), the advantages of Small Language Models, and how to concretely implement this approach on PrestaShop with the MCP protocol and MCP Tools Plus. A pragmatic vision of AI applied to development.
 llm_topics:
 - Agentic Architecture
-- Artificial Intelligence
+- artificial intelligence
 - MCP (Model Context Protocol)
 - Small Language Models
 - Mixture of Experts (MoE)
 - PrestaShop
-- E-commerce
+- e-commerce
 - Specialized AI Agents
 - Latency and Performance
 - Fraud Detection

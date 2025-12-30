@@ -5,10 +5,10 @@ date: 2025-11-17
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- E-commerce
+- e-commerce
 - Marketing
 tags:
-- prestashop
+- PrestaShop
 - advanced pack
 - noel
 - ventes
@@ -24,7 +24,7 @@ excerpt: 'À quelques semaines de Noël, la pression monte. Plutôt que de céde
   '
 image: /assets/images/blog/2025/11/strategie-pack-produit-prestashop-noel-2025.webp
 keywords:
-- prestashop
+- PrestaShop
 - pack produit
 - advanced pack
 - ventes de noël

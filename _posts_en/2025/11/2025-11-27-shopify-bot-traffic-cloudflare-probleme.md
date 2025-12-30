@@ -8,7 +8,7 @@ author: Nicolas Dabène
 categories:
 - Ecommerce
 - Data
-- Security
+- security
 - Advertising
 tags:
 - PrestaShop

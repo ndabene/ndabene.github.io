@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: grok-prompt-leak-security
 categories:
-- Artificial Intelligence
-- Security
+- artificial intelligence
+- security
 tags:
 - ChatGPT
 - AI
@@ -21,7 +21,7 @@ difficulty: Intermediate
 technologies:
 - AI
 - Prompt Engineering
-- Security
+- security
 estimated_reading_time: 7 minutes
 faq:
 - question: How to protect my system prompts in production?

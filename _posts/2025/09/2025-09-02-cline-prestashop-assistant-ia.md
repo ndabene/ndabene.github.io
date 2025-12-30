@@ -4,7 +4,7 @@ title: 'Cline : assistant IA pour PrestaShop'
 date: 2025-09-02
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - PHP
 - PrestaShop
 - Intelligence Artificielle

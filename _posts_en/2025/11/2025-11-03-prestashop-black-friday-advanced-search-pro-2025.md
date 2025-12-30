@@ -6,7 +6,7 @@ author: Nicolas Dabène
 categories:
 - Ecommerce
 - PrestaShop
-- Best Practices
+- best practices
 tags:
 - PrestaShop
 - SEO
@@ -23,7 +23,7 @@ technologies:
 - PrestaShop
 - Advanced Search Pro
 - SEO
-- E-commerce
+- e-commerce
 estimated_reading_time: 15 minutes
 faq:
 - question: Why is search crucial during Black Friday?

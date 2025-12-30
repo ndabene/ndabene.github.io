@@ -8,10 +8,10 @@ author: Nicolas Dabène
 categories:
 - AI
 - PrestaShop
-- E-commerce
+- e-commerce
 tags:
-- ai
-- prestashop
+- AI
+- PrestaShop
 - prompt engineering
 - future of work
 - soft skills

@@ -5,8 +5,8 @@ date: 2025-08-13
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Architecture
-- Développement
+- architecture
+- développement
 tags:
 - PrestaShop
 - développement

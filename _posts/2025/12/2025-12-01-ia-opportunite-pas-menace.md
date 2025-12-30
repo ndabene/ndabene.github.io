@@ -11,7 +11,7 @@ tags:
 - ia-emploi
 - transformation-digitale
 - competences-2025
-- chatgpt
+- ChatGPT
 - adaptation-professionnelle
 - avenir-travail
 excerpt: "92% des professionnels craignent l'IA, mais seuls 22% l'ont vraiment testée.

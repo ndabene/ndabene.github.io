@@ -6,9 +6,9 @@ author: Nicolas Dabène
 lang: en
 ref: openai-agent-builder-personalized-ai-assistants
 categories:
-- Artificial Intelligence
-- Development
-- Automation
+- artificial intelligence
+- development
+- automation
 tags:
 - ChatGPT
 - AI
@@ -25,7 +25,7 @@ technologies:
 - AgentKit
 - ChatKit
 - AI
-- Automation
+- automation
 estimated_reading_time: 18 minutes
 is_future: true
 faq:

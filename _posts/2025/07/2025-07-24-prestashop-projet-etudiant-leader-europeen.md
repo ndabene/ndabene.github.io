@@ -21,7 +21,7 @@ featured: true
 difficulty: Intermédiaire
 technologies:
 - PrestaShop
-- E-commerce
+- e-commerce
 - PHP
 - Open Source
 - Symfony

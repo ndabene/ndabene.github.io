@@ -4,7 +4,7 @@ title: 'Créez votre portfolio tech en ligne : Guide'
 date: 2025-07-28
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - Tutoriel
 tags:
 - automatisation

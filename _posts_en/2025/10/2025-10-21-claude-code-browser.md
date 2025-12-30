@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: claude-code-browser-agentic-ai-development
 categories:
-- Development
-- Artificial Intelligence
+- development
+- artificial intelligence
 - Tutorial
 tags:
 - API

@@ -5,7 +5,7 @@ date: 2025-06-15
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Développement
+- développement
 - Bonnes Pratiques
 tags:
 - IA

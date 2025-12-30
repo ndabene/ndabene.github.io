@@ -5,7 +5,7 @@ date: 2025-09-02
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
-- Sécurité
+- sécurité
 - Bonnes Pratiques
 tags:
 - ChatGPT

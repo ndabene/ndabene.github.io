@@ -7,14 +7,14 @@ ref: retrospective-prestashop-2025
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- E-commerce
+- e-commerce
 - Events
 tags:
-- prestashop
+- PrestaShop
 - events
 - community
 - prestashop-9
-- mcp
+- MCP
 - developer-conference
 - fop-days
 - prestashop-day

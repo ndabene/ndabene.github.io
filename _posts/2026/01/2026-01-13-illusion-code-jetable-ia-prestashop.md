@@ -6,20 +6,20 @@ lang: fr
 ref: disposable-code-illusion-ai-prestashop
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - IA
 - PrestaShop
 tags:
 - PrestaShop
 - Intelligence Artificielle
-- Architecture Logicielle
-- Code Jetable
+- architecture logicielle
+- code jetable
 - SOLID
 - Vibe Coding
 - Symfony
 - Doctrine
-- Sécurité
-- Dette Technique
+- sécurité
+- dette technique
 excerpt: En 2025, le Vibe Coding et l'IA générative créent l'illusion du code gratuit. Mais derrière cette facilité se cache une dette technique explosive pour PrestaShop. Découvrez pourquoi l'architecture logicielle n'a jamais été aussi cruciale et comment passer de "copiste IA" à "architecte orchestrateur".
 image: /assets/images/blog/2026/01/2026-01-13-illusion-code-jetable-ia-prestashop.webp
 featured: false
@@ -30,18 +30,18 @@ technologies:
 - Symfony
 - Doctrine
 - IA
-- Architecture
+- architecture
 estimated_reading_time: 15 minutes
 llm_summary: Analyse critique du "code jetable" généré par l'IA dans l'écosystème PrestaShop. L'article démontre pourquoi la facilité apparente du Vibe Coding crée une dette technique massive et comment l'architecture logicielle (SOLID, Service Layer, Repository Pattern) devient le rempart essentiel pour construire des modules maintenables et évolutifs à l'ère de l'IA.
 llm_topics:
 - PrestaShop
 - Intelligence Artificielle
 - Vibe Coding
-- Architecture Logicielle
-- Dette Technique
+- architecture logicielle
+- dette technique
 - Principes SOLID
-- Code Jetable
-- Sécurité
+- code jetable
+- sécurité
 - Symfony
 - Doctrine
 - Maintenabilité

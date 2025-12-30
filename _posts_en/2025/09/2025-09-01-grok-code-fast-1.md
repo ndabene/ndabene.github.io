@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: grok-code-fast-1
 categories:
-- Artificial Intelligence
-- Development
+- artificial intelligence
+- development
 tags:
 - AI
 - development
@@ -19,7 +19,7 @@ featured: false
 difficulty: Intermediate
 technologies:
 - AI
-- Development
+- development
 - GitHub Copilot
 - PrestaShop
 estimated_reading_time: 9 minutes

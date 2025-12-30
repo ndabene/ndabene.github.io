@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: ia-danger-conversations-exposees
 categories:
-- Security
-- Artificial Intelligence
+- security
+- artificial intelligence
 tags:
 - AI
 - security
@@ -18,7 +18,7 @@ featured: true
 difficulty: Intermediate
 technologies:
 - AI
-- Security
+- security
 - Privacy
 estimated_reading_time: 6 minutes
 faq:

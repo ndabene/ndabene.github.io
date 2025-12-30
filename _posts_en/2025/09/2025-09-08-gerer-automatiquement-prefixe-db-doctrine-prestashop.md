@@ -8,7 +8,7 @@ ref: gerer-automatiquement-prefixe-db-doctrine-prestashop
 categories:
 - PrestaShop
 - PHP
-- Development
+- development
 tags:
 - PrestaShop
 - development

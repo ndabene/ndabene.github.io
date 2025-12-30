@@ -4,7 +4,7 @@ title: Automatiser Facebook et Instagram avec n8n
 date: 2025-11-06
 author: Nicolas Dabène
 categories:
-- Développement
+- développement
 - Intelligence Artificielle
 - Tutoriel
 tags:

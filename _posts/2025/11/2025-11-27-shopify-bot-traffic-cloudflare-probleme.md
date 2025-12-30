@@ -8,7 +8,7 @@ author: Nicolas Dabène
 categories:
 - Ecommerce
 - Données
-- Sécurité
+- sécurité
 - Publicité
 tags:
 - PrestaShop

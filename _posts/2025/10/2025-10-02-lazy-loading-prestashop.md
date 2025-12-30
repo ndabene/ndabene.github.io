@@ -5,7 +5,7 @@ date: 2025-10-02
 author: Nicolas Dabène
 categories:
 - PrestaShop
-- Développement
+- développement
 - Performance
 tags:
 - API

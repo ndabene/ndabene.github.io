@@ -7,8 +7,8 @@ lang: en
 ref: black-friday-geo-suite
 categories:
 - PrestaShop
-- E-commerce
-- Artificial Intelligence
+- e-commerce
+- artificial intelligence
 tags:
 - AI
 - PrestaShop
@@ -23,7 +23,7 @@ technologies:
 - PrestaShop
 - AI
 - SEO
-- E-commerce
+- e-commerce
 estimated_reading_time: 8 minutes
 faq:
 - question: Does GEO Suite replace traditional SEO?

@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: prestashop-enterprise-vs-shopify-plus
 categories:
-- E-commerce
+- e-commerce
 - PrestaShop
 - Market Analysis
 tags:

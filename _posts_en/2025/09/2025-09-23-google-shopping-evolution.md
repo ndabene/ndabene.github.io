@@ -6,8 +6,8 @@ author: Nicolas Dabène
 lang: en
 ref: google-shopping-evolution
 categories:
-- E-commerce
-- Artificial Intelligence
+- e-commerce
+- artificial intelligence
 tags:
 - AI
 - PrestaShop
@@ -21,7 +21,7 @@ difficulty: Intermediate
 technologies:
 - Google Ads
 - AI
-- E-commerce
+- e-commerce
 - SEO
 estimated_reading_time: 12 minutes
 faq:

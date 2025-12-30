@@ -4,8 +4,8 @@ title: 'Gemini Canvas vs GPT-5: Which Creates Better?'
 date: 2025-11-14
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
-- Best Practices
+- artificial intelligence
+- best practices
 tags:
 - Gemini
 - GPT-5

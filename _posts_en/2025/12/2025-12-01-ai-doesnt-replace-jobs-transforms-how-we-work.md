@@ -4,14 +4,14 @@ title: "AI Doesn't Replace Jobs, It Transforms How We Work"
 date: 2025-12-01
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
+- artificial intelligence
 - Career
 - Personal Development
 tags:
 - ai-employment
 - digital-transformation
 - 2025-skills
-- chatgpt
+- ChatGPT
 - professional-adaptation
 - future-of-work
 excerpt: "92% of professionals fear AI, but only 22% have actually tested it.

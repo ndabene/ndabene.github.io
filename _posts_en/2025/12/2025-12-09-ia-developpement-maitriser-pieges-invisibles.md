@@ -4,9 +4,9 @@ title: 'AI & Development: Avoiding Common Traps'
 date: 2025-12-09
 author: Nicolas Dabène
 categories:
-- Artificial Intelligence
-- Development
-- Best Practices
+- artificial intelligence
+- development
+- best practices
 tags:
 - AI
 - development
@@ -22,7 +22,7 @@ technologies:
 - GitHub Copilot
 - Claude
 - ChatGPT
-- Development
+- development
 estimated_reading_time: 10 minutes
 lang: en
 ref: ai-development-invisible-traps-2025

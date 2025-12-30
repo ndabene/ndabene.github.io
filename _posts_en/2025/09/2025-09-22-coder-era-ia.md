@@ -6,9 +6,9 @@ author: Nicolas Dabène
 lang: en
 ref: coder-era-ia
 categories:
-- Artificial Intelligence
-- Development
-- Best Practices
+- artificial intelligence
+- development
+- best practices
 tags:
 - AI
 - development
@@ -22,7 +22,7 @@ difficulty: Intermediate
 technologies:
 - AI
 - GitHub Copilot
-- Development
+- development
 - Methodologies
 estimated_reading_time: 12 minutes
 faq:

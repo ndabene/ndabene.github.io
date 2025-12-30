@@ -6,7 +6,7 @@ author: Nicolas Dabène
 lang: en
 ref: back-to-school-evolution-2025
 categories:
-- E-commerce
+- e-commerce
 - Commerce
 - Market Analysis
 tags:
