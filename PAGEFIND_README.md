@@ -32,38 +32,69 @@ Le fichier `.github/workflows/jekyll.yml` a été modifié pour inclure :
 
 ### 2. Configuration Pagefind
 
-Le fichier `pagefind.yml` contient la configuration de l'indexation :
+La configuration se fait directement dans le workflow via les options CLI :
 
-```yaml
-source: _site
-glob: "**/*.html"
-exclude_selectors:
-  - ".social-sharing-section"
-  - ".post-meta"
-  - "nav"
-  - "footer"
-force_language: fr
+```bash
+npx pagefind --site _site \
+  --output-path _site/pagefind \
+  --glob "**/*.html" \
+  --exclude-selectors ".social-sharing-section, .post-meta, nav, footer, .breadcrumb" \
+  --force-language fr \
+  --verbose
 ```
 
-### 3. Attributs HTML pour l'indexation
+**Options utilisées :**
+- `--site _site` : Répertoire du site généré par Jekyll
+- `--output-path _site/pagefind` : Où sauvegarder l'index
+- `--glob "**/*.html"` : Indexer tous les fichiers HTML
+- `--exclude-selectors` : Éléments à ne pas indexer (navigation, metadata, etc.)
+- `--force-language fr` : Langue principale (français)
+- `--verbose` : Logs détaillés pour debugging
 
-Les articles utilisent les attributs suivants :
+### 3. Attributs HTML pour l'indexation optimale
 
+Les articles utilisent des attributs avancés pour une indexation riche :
+
+**Attributs utilisés :**
 - `data-pagefind-body` : Marque le contenu principal à indexer
-- `data-pagefind-ignore` : Exclut certaines sections (partage social, meta, etc.)
-- `data-pagefind-meta` : Métadonnées pour filtrer/trier
+- `data-pagefind-meta` : Métadonnées extractibles (titre, date, auteur, excerpt)
+- `data-pagefind-filter` : Filtres pour catégories, tags, langue
+- `data-pagefind-ignore` : Exclut certaines sections (partage social, navigation, etc.)
 
-Exemple dans `_layouts/post.html` :
+**Exemple optimisé dans `_layouts/post.html` :**
 
 ```html
-<article class="post-page" data-pagefind-body data-pagefind-meta="lang:{{ page.lang | default: 'fr' }}">
-  <h1 class="post-title" data-pagefind-meta="title">{{ page.title }}</h1>
-  <div class="post-meta" data-pagefind-ignore>...</div>
+<article class="post-page"
+         data-pagefind-body
+         data-pagefind-meta="title:{{ page.title }}"
+         data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}"
+         data-pagefind-meta="author:{{ page.author | default: site.author.name }}"
+         data-pagefind-meta="excerpt:{{ page.excerpt | strip_html | truncate: 200 }}"
+         data-pagefind-filter="category:{{ page.categories | join: ', ' }}"
+         data-pagefind-filter="tags:{{ page.tags | join: ', ' }}"
+         data-pagefind-filter="lang:{{ page.lang | default: 'fr' }}">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <div class="post-meta" data-pagefind-ignore>
+    <!-- Metadata non indexée -->
+  </div>
+
   <article class="post-content" data-pagefind-body>
     {{ content }}
   </article>
+
+  <div class="social-sharing-section" data-pagefind-ignore>
+    <!-- Partage social non indexé -->
+  </div>
 </article>
 ```
+
+**Avantages de cette configuration :**
+✅ Recherche full-text dans tout le contenu
+✅ Filtrage possible par catégorie, tags, langue
+✅ Métadonnées riches (date, auteur, excerpt)
+✅ Exclusion intelligente des éléments non pertinents
 
 ## 🧪 Tester localement
 
@@ -135,13 +166,13 @@ La recherche réutilise l'interface existante du blog :
 
 ### Fichiers créés :
 
-- ✅ `assets/js/blog-search-pagefind.js` - Script de recherche
-- ✅ `pagefind.yml` - Configuration Pagefind
+- ✅ `assets/js/blog-search-pagefind.js` - Script de recherche avec API Pagefind
 - ✅ `PAGEFIND_README.md` - Cette documentation
 
 ### Fichiers conservés (rétrocompatibilité) :
 
-- ⚠️ `assets/js/blog-search-modern.js` - Peut être supprimé après validation
+- ⚠️ `assets/js/blog-search-modern.js` - Ancien script Fuse.js (peut être supprimé)
+- ⚠️ CDN Fuse.js - Peut être retiré après validation complète
 
 ## 📊 Performance
 

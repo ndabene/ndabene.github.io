@@ -32,10 +32,10 @@
         if (isInitialized) return;
 
         try {
-            // Charger Pagefind depuis le CDN ou le fichier généré
+            // Charger Pagefind depuis le fichier généré
             const script = document.createElement('script');
             script.src = '/pagefind/pagefind.js';
-            script.async = true;
+            script.type = 'text/javascript';
 
             await new Promise((resolve, reject) => {
                 script.onload = resolve;
@@ -43,13 +43,13 @@
                 document.head.appendChild(script);
             });
 
-            // Initialiser l'instance Pagefind
-            if (window.PagefindUI) {
-                pagefind = window.PagefindUI;
+            // Attendre que window.pagefind soit disponible
+            if (window.pagefind) {
+                pagefind = window.pagefind;
                 isInitialized = true;
                 console.log('✅ Pagefind initialisé avec succès');
             } else {
-                throw new Error('PagefindUI not found');
+                throw new Error('window.pagefind not found');
             }
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation de Pagefind:', error);
@@ -69,9 +69,20 @@
             await initializePagefind();
         }
 
+        if (!isInitialized) {
+            // Si l'initialisation a échoué, utiliser le fallback
+            performFallbackSearch(query);
+            return;
+        }
+
         try {
             // Utiliser l'API Pagefind pour rechercher
-            const results = await window.pagefind.search(query);
+            const search = await pagefind.search(query);
+
+            // Charger les données complètes des résultats
+            const results = await Promise.all(
+                search.results.map(r => r.data())
+            );
 
             displaySearchResults(results, query);
         } catch (error) {
@@ -94,7 +105,7 @@
             post.style.display = 'none';
         });
 
-        if (!results || results.results.length === 0) {
+        if (!results || results.length === 0) {
             if (filteredCountSpan) filteredCountSpan.textContent = '(0)';
             if (noResultsDiv) noResultsDiv.style.display = 'flex';
             updatePagination();
@@ -103,13 +114,22 @@
 
         // Afficher les posts correspondants
         let visibleCount = 0;
-        results.results.forEach(result => {
+        results.forEach(result => {
             // Trouver le post correspondant dans le DOM
-            // Pagefind retourne l'URL du post
-            const postUrl = result.url;
+            // Pagefind retourne l'URL du post (raw_url ou url)
+            const postUrl = result.url || result.raw_url;
+
             const matchingPost = Array.from(allPosts).find(post => {
                 const titleLink = post.querySelector('.post-news-title a');
-                return titleLink && titleLink.getAttribute('href') === postUrl;
+                if (!titleLink) return false;
+
+                const href = titleLink.getAttribute('href');
+                // Comparer les URLs (avec et sans trailing slash)
+                return href === postUrl ||
+                       href === postUrl + '/' ||
+                       href + '/' === postUrl ||
+                       href.endsWith(postUrl) ||
+                       postUrl.endsWith(href);
             });
 
             if (matchingPost) {
@@ -130,6 +150,8 @@
         }
 
         updatePagination();
+
+        console.log(`🔍 ${visibleCount} résultat(s) trouvé(s) pour "${query}"`);
     }
 
     // Afficher tous les posts (réinitialiser la recherche)

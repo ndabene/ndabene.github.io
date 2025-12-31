@@ -128,7 +128,12 @@ jobs:
       - name: Build Pagefind index
         run: |
           echo "🔍 Génération de l'index de recherche Pagefind..."
-          npx pagefind --site _site --output-path _site/pagefind
+          npx pagefind --site _site \
+            --output-path _site/pagefind \
+            --glob "**/*.html" \
+            --exclude-selectors ".social-sharing-section, .post-meta, nav, footer, .breadcrumb, .reading-progress, .toc-perplexity-block" \
+            --force-language fr \
+            --verbose
           echo "✅ Index Pagefind généré avec succès"
 
       - name: Upload artifact

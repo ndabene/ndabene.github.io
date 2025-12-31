@@ -24,7 +24,15 @@ layout: default
 <!-- Schema.org Article pour SEO/GEO/VEO - Optimisé pour moteurs IA -->
 {% include blog-post-jsonld.html %}
 
-<article class="post-page" data-pagefind-body data-pagefind-meta="lang:{{ page.lang | default: 'fr' }}">
+<article class="post-page"
+         data-pagefind-body
+         data-pagefind-meta="title:{{ page.title }}"
+         data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}"
+         data-pagefind-meta="author:{{ page.author | default: site.author.name }}"
+         data-pagefind-meta="excerpt:{{ page.excerpt | strip_html | truncate: 200 }}"
+         data-pagefind-filter="category:{{ page.categories | join: ', ' }}"
+         {% if page.tags and page.tags.size > 0 %}data-pagefind-filter="tags:{{ page.tags | join: ', ' }}"{% endif %}
+         data-pagefind-filter="lang:{{ page.lang | default: 'fr' }}">
     <!-- Message pour les articles non encore publiés -->
     {% if page.hide_until_published == true %}
       {% assign current_timestamp = 'now' | date: '%s' | plus: 0 %}
@@ -60,7 +68,7 @@ layout: default
                 {% endif %}
             </div>
 
-            <h1 class="post-title" data-pagefind-meta="title">{{ page.title }}</h1>
+            <h1 class="post-title">{{ page.title }}</h1>
 
             <div class="post-meta" data-pagefind-ignore>
                 <div class="meta-primary">
