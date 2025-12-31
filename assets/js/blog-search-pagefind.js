@@ -39,7 +39,7 @@
             // Charger Pagefind depuis le fichier généré
             const script = document.createElement('script');
             script.src = '/pagefind/pagefind.js';
-            script.type = 'text/javascript';
+            script.type = 'module';
 
             await new Promise((resolve, reject) => {
                 script.onload = resolve;
