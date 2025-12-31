@@ -131,8 +131,9 @@ jobs:
           npx pagefind --site _site \
             --output-path _site/pagefind \
             --glob "**/*.html" \
-            --exclude-selectors ".social-sharing-section, .post-meta, nav, footer, .breadcrumb, .reading-progress, .toc-perplexity-block" \
+            --exclude-selectors "nav, footer, .breadcrumb, .reading-progress, script, style" \
             --force-language fr \
+            --bundle-dir pagefind \
             --verbose
           echo "✅ Index Pagefind généré avec succès"
 

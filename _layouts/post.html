@@ -25,7 +25,6 @@ layout: default
 {% include blog-post-jsonld.html %}
 
 <article class="post-page"
-         data-pagefind-body
          data-pagefind-meta="title:{{ page.title }}"
          data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}"
          data-pagefind-meta="author:{{ page.author | default: site.author.name }}"
@@ -110,7 +109,7 @@ layout: default
             <div class="post-layout">
                 <!-- Sidebar pour la table des matières (desktop uniquement) -->
                 {% if page.table_of_contents != false %}
-                <aside class="post-sidebar">
+                <aside class="post-sidebar" data-pagefind-ignore>
                     <div class="sidebar-toc">
                         <h3 class="sidebar-toc-title">
                             <i class="fas fa-list"></i>
@@ -149,7 +148,7 @@ layout: default
                     <article class="post-content" data-pagefind-body>
                         <!-- Bloc Perplexity au-dessus de la table des matières -->
                         {% if true %}
-                        <div class="toc-perplexity-block">
+                        <div class="toc-perplexity-block" data-pagefind-ignore>
                             <h4>🎁 Perplexity PRO offert</h4>
                             <div class="perplexity-sidebar-content">
                                 <p><strong>30 jours gratuits</strong></p>
@@ -163,7 +162,7 @@ layout: default
 
                         <!-- Table des matières repliable (mobile uniquement) -->
                         {% if page.table_of_contents != false %}
-                        <div class="table-of-contents-inline">
+                        <div class="table-of-contents-inline" data-pagefind-ignore>
                             <button class="toc-toggle" id="toc-toggle">
                                 <i class="fas fa-list"></i>
                                 <span>Table des matières</span>
