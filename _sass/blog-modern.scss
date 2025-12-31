@@ -2997,9 +2997,9 @@ $blog-content-bg: $white;
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.75rem;
-  background: rgba($danger-color, 0.1);
-  color: $danger-color;
-  border: 1px solid rgba($danger-color, 0.2);
+  background: rgba($error-color, 0.1);
+  color: $error-color;
+  border: 1px solid rgba($error-color, 0.2);
   border-radius: $rounded-full;
   font-size: 0.875rem;
   font-weight: $font-weight-semibold;
@@ -3012,8 +3012,8 @@ $blog-content-bg: $white;
   }
 
   &:hover {
-    background: rgba($danger-color, 0.15);
-    border-color: rgba($danger-color, 0.3);
+    background: rgba($error-color, 0.15);
+    border-color: rgba($error-color, 0.3);
     transform: translateY(-1px);
   }
 
