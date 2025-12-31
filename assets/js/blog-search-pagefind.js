@@ -36,24 +36,11 @@
         if (isInitialized) return;
 
         try {
-            // Charger Pagefind depuis le fichier généré
-            const script = document.createElement('script');
-            script.src = '/pagefind/pagefind.js';
-
-            await new Promise((resolve, reject) => {
-                script.onload = resolve;
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
-
-            // Attendre que window.pagefind soit disponible
-            if (window.pagefind) {
-                pagefind = window.pagefind;
-                isInitialized = true;
-                console.log('✅ Pagefind initialisé avec succès');
-            } else {
-                throw new Error('window.pagefind not found');
-            }
+            // Import dynamique moderne (ES6)
+            const pagefindModule = await import('/pagefind/pagefind.js');
+            pagefind = pagefindModule.default || pagefindModule;
+            isInitialized = true;
+            console.log('✅ Pagefind initialisé avec succès');
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation de Pagefind:', error);
             // Fallback vers la recherche basique si Pagefind échoue
