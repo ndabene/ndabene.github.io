@@ -2923,3 +2923,144 @@ $blog-content-bg: $white;
     }
   }
 }
+
+// ========================================
+// PAGEFIND - FILTRES ACTIFS
+// ========================================
+
+// Container des filtres actifs
+#active-filters {
+  display: none;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.03) 100%);
+  border-radius: $radius-lg;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+
+  &.has-filters {
+    display: flex;
+  }
+}
+
+.active-filters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+// Tags de filtres actifs
+.active-filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white;
+  border: none;
+  border-radius: $radius-full;
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+  box-shadow: $shadow-sm;
+
+  i.fa-tag,
+  i.fa-folder {
+    font-size: 0.75rem;
+  }
+
+  i.fa-times {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-left: 0.2rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+
+    i.fa-times {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Bouton "Tout effacer"
+.clear-all-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba($danger-color, 0.1);
+  color: $danger-color;
+  border: 1px solid rgba($danger-color, 0.2);
+  border-radius: $radius-full;
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+  margin-left: auto;
+
+  i {
+    font-size: 0.875rem;
+  }
+
+  &:hover {
+    background: rgba($danger-color, 0.15);
+    border-color: rgba($danger-color, 0.3);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// État actif des tags (dans la liste des tags populaires)
+.tag-pill-large.active-filter {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white;
+  border-color: transparent;
+  box-shadow: $shadow-md;
+  transform: scale(1.05);
+  font-weight: $font-weight-bold;
+
+  &::before {
+    content: '✓ ';
+    margin-right: 0.2rem;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+// Responsive mobile
+@media (max-width: 768px) {
+  #active-filters {
+    padding: 0.75rem;
+  }
+
+  .active-filters-list {
+    gap: 0.4rem;
+  }
+
+  .active-filter-tag,
+  .clear-all-filters {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .clear-all-filters {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+}

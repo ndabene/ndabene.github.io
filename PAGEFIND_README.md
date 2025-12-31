@@ -139,6 +139,7 @@ L'indexation Pagefind se fait **automatiquement** à chaque push sur `main` via 
 
 Le fichier `assets/js/blog-search-pagefind.js` gère :
 
+### Recherche
 - Chargement asynchrone de Pagefind
 - Recherche avec debounce (300ms)
 - Affichage des résultats
@@ -146,14 +147,52 @@ Le fichier `assets/js/blog-search-pagefind.js` gère :
 - Fallback vers recherche basique si Pagefind échoue
 - Raccourcis clavier (`/` ou `Ctrl+K`)
 
+### Filtrage par tags 🆕
+- **API Pagefind avec filtres** : Utilise `pagefind.search(query, { filters: { tags: [...] } })`
+- **Gestion d'état** : Tableau `activeFilters` maintenant les tags/catégories actifs
+- **Événements dynamiques** : Transformation des liens tags en boutons de filtrage
+- **UI des filtres actifs** : Génération dynamique des badges de filtres
+- **Fallback intelligent** : Filtrage manuel si Pagefind non disponible
+- **Combinaison recherche + filtres** : Recherche textuelle avec filtres simultanés
+
+### Fonctions principales
+```javascript
+// Recherche avec filtres
+performPagefindSearch(query, filters)
+
+// Gestion des filtres
+toggleTagFilter(tag)          // Ajouter/retirer un tag
+toggleCategoryFilter(category)// Ajouter/retirer une catégorie
+clearAllFilters()             // Réinitialiser tous les filtres
+
+// UI
+updateActiveFiltersUI()       // Afficher les filtres actifs
+updateTagsVisualState()       // Mettre à jour l'état visuel des tags
+```
+
 ## 🎨 Interface Utilisateur
 
-La recherche réutilise l'interface existante du blog :
+La recherche offre une interface riche :
 
+### Recherche textuelle
 - Barre de recherche globale
-- Affichage des résultats filtrés
-- Message "Aucun résultat trouvé"
+- Raccourcis clavier (`/` ou `Ctrl+K` pour focus)
+- Bouton d'effacement rapide
+- Surlignage des termes de recherche dans les résultats
+
+### Filtrage par tags 🆕
+- **Tags cliquables** : Cliquez sur n'importe quel tag dans le cloud pour filtrer
+- **Filtres multiples** : Combinez plusieurs tags pour affiner la recherche
+- **Filtres actifs visibles** : Badges affichant les filtres actifs avec possibilité de les retirer
+- **Bouton "Tout effacer"** : Réinitialisation rapide de tous les filtres
+- **État visuel** : Tags actifs mis en surbrillance (✓) dans le cloud
+- **Combinaison** : Recherche textuelle + filtres par tags fonctionne ensemble
+
+### Affichage des résultats
+- Compteur de résultats en temps réel
+- Message "Aucun résultat trouvé" si nécessaire
 - Compatible avec la pagination existante
+- Fallback automatique si Pagefind échoue
 
 ## 🔄 Migration depuis Fuse.js
 
@@ -174,17 +213,24 @@ La recherche réutilise l'interface existante du blog :
 - ⚠️ `assets/js/blog-search-modern.js` - Ancien script Fuse.js (peut être supprimé)
 - ⚠️ CDN Fuse.js - Peut être retiré après validation complète
 
-## 📊 Performance
+## 📊 Performance & Fonctionnalités
 
 ### Avant (Fuse.js) :
 - Chargement CDN Fuse.js (~50KB)
 - Indexation runtime de tous les articles
 - Recherche côté client sur tous les posts
+- ❌ Pas de filtrage par tags
+- ❌ Recherche limitée (titres + excerpts)
 
 ### Après (Pagefind) :
 - Index pré-généré au build
 - Chargement progressif (~10KB initial + fragments à la demande)
 - Recherche ultra-rapide sur l'index pré-calculé
+- ✅ **Filtrage par tags/catégories via API Pagefind**
+- ✅ **Filtres combinables** (plusieurs tags simultanés)
+- ✅ **UI des filtres actifs** avec badges cliquables
+- ✅ **Full-text search** (contenu complet indexé)
+- ✅ **Recherche + filtres combinés** (ex: "prestashop" + tag "PHP")
 
 ## 🐛 Debugging
 
