@@ -322,10 +322,8 @@ llm_topics:
 </section>
 
 <!-- Scripts optimized for better performance with deferred loading -->
-<!-- Fuse.js CDN for modern fuzzy search -->
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
-<!-- Modern Search System -->
-<script src="{{ '/assets/js/blog-search-modern.js' | relative_url }}" defer></script>
+<!-- Pagefind Search System - Performant static search -->
+<script src="{{ '/assets/js/blog-search-pagefind.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>
