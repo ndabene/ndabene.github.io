@@ -39,6 +39,7 @@
             // Charger Pagefind depuis le fichier généré
             const script = document.createElement('script');
             script.src = '/pagefind/pagefind.js';
+            script.type = 'module';
 
             await new Promise((resolve, reject) => {
                 script.onload = resolve;
@@ -46,13 +47,20 @@
                 document.head.appendChild(script);
             });
 
-            // Attendre que window.pagefind soit disponible
+            // Attendre que window.pagefind soit disponible (avec retry pour modules ES6)
+            let retries = 0;
+            const maxRetries = 10;
+            while (!window.pagefind && retries < maxRetries) {
+                await new Promise(resolve => setTimeout(resolve, 100));
+                retries++;
+            }
+
             if (window.pagefind) {
                 pagefind = window.pagefind;
                 isInitialized = true;
                 console.log('✅ Pagefind initialisé avec succès');
             } else {
-                throw new Error('window.pagefind not found');
+                throw new Error('window.pagefind not found after ' + retries + ' retries');
             }
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation de Pagefind:', error);
