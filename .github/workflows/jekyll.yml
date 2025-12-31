@@ -116,7 +116,20 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      # ========================================
+      # PAGEFIND SEARCH INDEX
+      # ========================================
+      - name: Install Pagefind
+        run: |
+          echo "📦 Installation de Pagefind pour l'indexation de recherche..."
+          npm install -g pagefind
+          echo "✅ Pagefind installé avec succès"
 
+      - name: Build Pagefind index
+        run: |
+          echo "🔍 Génération de l'index de recherche Pagefind..."
+          npx pagefind --site _site --output-path _site/pagefind
+          echo "✅ Index Pagefind généré avec succès"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
