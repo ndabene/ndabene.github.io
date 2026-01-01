@@ -2,6 +2,8 @@
 layout: post
 title: "IA Q1 2026 : Vers l'ère de l'industrialisation et des agents autonomes"
 date: 2026-01-22
+lang: fr
+ref: ai-q1-2026
 author: Nicolas Dabène
 categories:
 - News
@@ -25,7 +27,6 @@ technologies:
 - LLM
 - Automation
 estimated_reading_time: 12 minutes
-lang: fr
 keywords:
 - IA 2026
 - Agents autonomes
