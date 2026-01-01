@@ -96,27 +96,27 @@ I observed that the year 2025 was marked by three major cross-cutting themes thr
 
 ***
 
-## Citations
+## Sources
 
-[1] PrestaShop Project Live Update - January 2025 https://www.youtube.com/watch?v=JljSmYH-vdg
-[2] PrestaShop Live Update - March 2025 https://build.prestashop-project.org/news/2025/live-update-march-2025/
-[3] PrestaShop Live Update - April 2025 https://build.prestashop-project.org/news/2025/live-update-april-2025/
-[4] PrestaShop Live Update - July 2025 https://build.prestashop-project.org/news/2025/live-update-july-2025/
-[5] FOP Days : l'événement de la communauté PrestaShop https://friendsofpresta.org/friends-of-presta-day-fop-day/
-[6] PrestaShop 9: What's New in the 2025 Upgrade https://belvg.com/blog/prestashop-9-why-this-upgrade-matters-more-than-you-think.html
-[7] PrestaShop 9: new, more robust and modern version https://prestashop.com/prestashop9/
-[8] PrestaShop 9.0 : nouveautés, migration, et conseils experts https://lorispinna.com/blog/dev/prestashop-9-nouveautes-migration-performances/
-[9] PrestaShop Day 2025 https://www.202-ecommerce.com/ressources/evenements/prestashop-day-2025/
-[10] PrestaShop Day 2025 : la rencontre incontournable ... - Fevad https://www.fevad.com/prestashop-day-2025-la-rencontre-incontournable-des-professionnels-du-e-commerce/
-[11] Le PrestaShop Day 2025 en 5 minutes https://www.youtube.com/watch?v=ZQEWzDVywZ8
-[12] PrestaShop 9.0.1 is available https://build.prestashop-project.org/news/2025/prestashop-9-0-1-maintenance-release/
-[13] PrestaShop Developer Conference 2025 - Event Recap https://build.prestashop-project.org/news/2025/prestashop-developer-conference-2025-event-recap/
-[14] PrestaShop MCP : quand l'IA conversationnelle transforme ... https://www.cibleweb.com/2025/11/21/prestashop-mcp-lia-conversationnelle-transforme-la-gestion-e-commerce-1028264348
-[15] PrestaShop lance son serveur MCP et connecte l'IA au ... https://itsocial.fr/intelligence-artificielle/intelligence-artificielle-actualites/prestashop-lance-son-serveur-mcp-et-connecte-lia-au-back-office/
-[16] cyber_Folks i Sylius przejmą platformę dla e-commerce PrestaShop https://pl.investing.com/news/stock-market-news/cyberfolks-i-sylius-przejma-platforme-dla-ecommerce-prestashop-1206137
-[17] Grupa cyber_Folks podpisała porozumienia dotyczące nabycia PrestaShop https://strefainwestorow.pl/wiadomosci/20251211/grupa-cyberfolks-podpisala-porozumienia-dotyczace-nabycia-prestashop-opis
-[18] Cyber_Folks signs term sheet with MBE Worldwide to acquire 100% stake in Prestashop https://www.marketscreener.com/news/cyberfolks-signs-term-sheet-with-mbe-worldwide-to-acquire-100-stake-in-prestashop-ce7d50dbd989f625
-[19] cyber_Folks staje się najpotężniejszym europejskim dostawcą technologii e-commerce https://strefainwestorow.pl/wiadomosci/20251211/cyberfolks-staje-sie-najpotezniejszym-europejskim-dostawca-technologii-e
+1. [PrestaShop Project Live Update - January 2025](https://www.youtube.com/watch?v=JljSmYH-vdg)
+2. [PrestaShop Live Update - March 2025](https://build.prestashop-project.org/news/2025/live-update-march-2025/)
+3. [PrestaShop Live Update - April 2025](https://build.prestashop-project.org/news/2025/live-update-april-2025/)
+4. [PrestaShop Live Update - July 2025](https://build.prestashop-project.org/news/2025/live-update-july-2025/)
+5. [FOP Days : l'événement de la communauté PrestaShop](https://friendsofpresta.org/friends-of-presta-day-fop-day/)
+6. [PrestaShop 9: What's New in the 2025 Upgrade](https://belvg.com/blog/prestashop-9-why-this-upgrade-matters-more-than-you-think.html)
+7. [PrestaShop 9: new, more robust and modern version](https://prestashop.com/prestashop9/)
+8. [PrestaShop 9.0 : nouveautés, migration, et conseils experts](https://lorispinna.com/blog/dev/prestashop-9-nouveautes-migration-performances/)
+9. [PrestaShop Day 2025](https://www.202-ecommerce.com/ressources/evenements/prestashop-day-2025/)
+10. [PrestaShop Day 2025 : la rencontre incontournable des professionnels du e-commerce - Fevad](https://www.fevad.com/prestashop-day-2025-la-rencontre-incontournable-des-professionnels-du-e-commerce/)
+11. [Le PrestaShop Day 2025 en 5 minutes](https://www.youtube.com/watch?v=ZQEWzDVywZ8)
+12. [PrestaShop 9.0.1 is available](https://build.prestashop-project.org/news/2025/prestashop-9-0-1-maintenance-release/)
+13. [PrestaShop Developer Conference 2025 - Event Recap](https://build.prestashop-project.org/news/2025/prestashop-developer-conference-2025-event-recap/)
+14. [PrestaShop MCP : quand l'IA conversationnelle transforme la gestion e-commerce](https://www.cibleweb.com/2025/11/21/prestashop-mcp-lia-conversationnelle-transforme-la-gestion-e-commerce-1028264348)
+15. [PrestaShop lance son serveur MCP et connecte l'IA au back-office](https://itsocial.fr/intelligence-artificielle/intelligence-artificielle-actualites/prestashop-lance-son-serveur-mcp-et-connecte-lia-au-back-office/)
+16. [cyber_Folks i Sylius przejmą platformę dla e-commerce PrestaShop](https://pl.investing.com/news/stock-market-news/cyberfolks-i-sylius-przejma-platforme-dla-ecommerce-prestashop-1206137)
+17. [Grupa cyber_Folks podpisała porozumienia dotyczące nabycia PrestaShop](https://strefainwestorow.pl/wiadomosci/20251211/grupa-cyberfolks-podpisala-porozumienia-dotyczace-nabycia-prestashop-opis)
+18. [Cyber_Folks signs term sheet with MBE Worldwide to acquire 100% stake in Prestashop](https://www.marketscreener.com/news/cyberfolks-signs-term-sheet-with-mbe-worldwide-to-acquire-100-stake-in-prestashop-ce7d50dbd989f625)
+19. [cyber_Folks staje się najpotężniejszym europejskim dostawcą technologii e-commerce](https://strefainwestorow.pl/wiadomosci/20251211/cyberfolks-staje-sie-najpotezniejszym-europejskim-dostawca-technologii-e)
 
 ---
 
