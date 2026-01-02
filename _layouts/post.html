@@ -256,27 +256,46 @@ layout: default
     <!-- Reading Progress & TOC Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Fonction debounce pour optimiser les performances
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
         // Reading Progress Bar
         const progressBar = document.querySelector('.reading-progress-bar');
         if (progressBar) {
             function updateReadingProgress() {
                 const article = document.querySelector('.post-content');
                 if (!article) return;
-                
+
                 const articleTop = article.offsetTop;
                 const articleHeight = article.offsetHeight;
                 const windowHeight = window.innerHeight;
                 const scrollTop = window.pageYOffset;
-                
+
                 const progress = Math.min(
                     Math.max((scrollTop + windowHeight - articleTop) / articleHeight, 0),
                     1
                 );
-                
+
                 progressBar.style.width = (progress * 100) + '%';
             }
-            
-            window.addEventListener('scroll', updateReadingProgress);
+
+            // Utiliser requestAnimationFrame pour de meilleures performances
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateReadingProgress();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
             updateReadingProgress();
         }
         
@@ -364,14 +383,23 @@ layout: default
                 }
             }
             
-            window.addEventListener('scroll', handleTocSticky);
-            window.addEventListener('resize', function() {
-                // Recalculer la position d'origine après resize
-                setTimeout(() => {
-                    updateOriginalPosition();
-                    handleTocSticky();
-                }, 100);
+            // Optimiser handleTocSticky avec requestAnimationFrame
+            let stickyTicking = false;
+            window.addEventListener('scroll', function() {
+                if (!stickyTicking) {
+                    window.requestAnimationFrame(function() {
+                        handleTocSticky();
+                        stickyTicking = false;
+                    });
+                    stickyTicking = true;
+                }
             });
+
+            // Debouncer le resize pour éviter les appels excessifs
+            window.addEventListener('resize', debounce(function() {
+                updateOriginalPosition();
+                handleTocSticky();
+            }, 250));
         }
         
         // Auto-generate Table of Contents
@@ -436,7 +464,17 @@ layout: default
                 }
             }
 
-            window.addEventListener('scroll', updateActiveLinks);
+            // Optimiser updateActiveLinks avec requestAnimationFrame
+            let activeLinkTicking = false;
+            window.addEventListener('scroll', function() {
+                if (!activeLinkTicking) {
+                    window.requestAnimationFrame(function() {
+                        updateActiveLinks();
+                        activeLinkTicking = false;
+                    });
+                    activeLinkTicking = true;
+                }
+            });
             updateActiveLinks();
 
             // Gestion du scroll avec offset pour tous les liens TOC
