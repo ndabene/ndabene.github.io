@@ -1086,12 +1086,32 @@ $blog-content-bg: $white;
     }
 
     .post-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: 4rem;
       font-weight: 700;
       color: #ffffff;
       margin: 0 0 2rem 0;
       line-height: 1.1;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+      @media (max-width: 1200px) {
+        font-size: 3.5rem;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 2.8rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 1.5rem;
+      }
     }
 
     .post-meta {
@@ -1107,12 +1127,28 @@ $blog-content-bg: $white;
         flex-wrap: wrap;
         justify-content: center;
 
+        @media (max-width: 768px) {
+          gap: 1rem; // 16px sur tablet
+        }
+
+        @media (max-width: 480px) {
+          gap: 0.75rem; // 12px sur mobile
+        }
+
+        @media (max-width: 375px) {
+          gap: 0.5rem; // 8px sur très petit mobile - économise l'espace
+        }
+
         time, span {
           display: flex;
           align-items: center;
           gap: 0.5rem;
           color: rgba(255, 255, 255, 0.9);
           font-size: 1rem;
+
+          @media (max-width: 480px) {
+            font-size: 0.9rem; // Légèrement réduit sur mobile
+          }
 
           i {
             color: rgba(255, 255, 255, 0.7);
@@ -1252,15 +1288,6 @@ $blog-content-bg: $white;
 
     .post-header-content {
       padding: 0;
-
-      .post-title {
-        font-size: 2rem;
-      }
-
-      .post-meta .meta-primary {
-        gap: 1rem;
-        font-size: 0.9rem;
-      }
     }
   }
 }
@@ -1302,6 +1329,13 @@ $blog-content-bg: $white;
 
   @media (max-width: 640px) {
     margin: 0 0 1.5rem 0;
+  }
+
+  // Support landscape mobile - économise l'espace vertical
+  @media (max-height: 500px) and (orientation: landscape) {
+    float: left;
+    width: 40%; // Réduit en landscape
+    margin: 0 1.5rem 1rem 0;
   }
 
   .post-banner-image {
@@ -1476,23 +1510,37 @@ $blog-content-bg: $white;
   }
 
   @media (max-width: 768px) {
-    padding: 2rem;
+    padding: 2rem 1.5rem; // 32px vertical, 24px horizontal - meilleur équilibre lecture
     border-radius: 8px;
   }
 
   @media (max-width: 480px) {
-    padding: 1.5rem;
+    padding: 1.75rem 1.25rem; // 28px vertical, 20px horizontal - optimal pour petits écrans
+  }
+
+  @media (max-width: 375px) {
+    padding: 1.5rem 1rem; // 24px vertical, 16px horizontal - minimum confortable iPhone SE
   }
 }
 
 // Typography améliorée pour le contenu
 .post-content {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(1rem, calc(1rem + 1.5vw), 1.125rem); // Légèrement réduit pour une meilleure lisibilité sur grand écran
+  font-size: 1.0625rem; // 17px - optimal pour lecture desktop/tablet
   line-height: 1.7;
   color: #374151;
   max-width: 100%; // Suppression de la limitation 70ch pour utiliser toute la largeur disponible
   margin: 0; // Suppression du centrage automatique
+
+  @media (max-width: 768px) {
+    font-size: 1rem; // 16px sur tablet
+    line-height: 1.65; // Légèrement réduit pour économiser l'espace vertical
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.0625rem; // Retour à 17px pour confort de lecture mobile
+    line-height: 1.6; // Plus compact sans sacrifier la lisibilité
+  }
   
   // Scroll offset pour éviter que les titres soient cachés derrière la navbar
   scroll-padding-top: 100px;
@@ -1533,9 +1581,15 @@ $blog-content-bg: $white;
     font-weight: 600;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid #e2e8f0;
-    
+
     @media (max-width: 768px) {
       font-size: 1.75rem;
+      line-height: 1.25; // Titres plus compacts sur tablet
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+      line-height: 1.3; // Légèrement plus aéré sur mobile
     }
   }
   
@@ -1698,31 +1752,42 @@ $blog-content-bg: $white;
     position: fixed;
     z-index: 1001; // AU-DESSUS de la navbar pour mobile
     width: 350px; // Un peu plus large pour le centrage
+    max-width: min(350px, calc(100vw - 2rem)); // Sécurité anti-débordement
     margin: 0;
-    box-shadow: 
+    box-shadow:
       0 15px 50px rgba(0, 0, 0, 0.2),
       0 0 0 1px rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px); // Renforcé en mode sticky
     border-radius: 20px; // Plus arrondi en mode floating
     animation: slideDown 0.3s ease-out;
-    
+
     // Mode mobile sticky
     &.mobile-sticky {
       width: auto; // Utilise left/right du JS
+      max-width: calc(100vw - 2rem); // Garantie absolue anti-débordement
       border-radius: 16px;
       z-index: 1001; // Assure-toi que mobile est aussi au-dessus
-      box-shadow: 
+      box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.15),
         0 0 0 1px rgba(255, 255, 255, 0.4);
-      
+
       .toc-toggle {
         padding: 1rem 1.25rem;
         font-size: 0.95rem;
+
+        @media (max-width: 375px) {
+          padding: 0.875rem 1rem; // Légèrement réduit sur très petits écrans
+          font-size: 0.9rem;
+        }
       }
-      
+
       .toc-content {
         &.expanded {
           max-height: 400px; // Moins haut sur mobile
+
+          @media (max-width: 375px) {
+            max-height: 350px; // Encore moins sur très petits écrans
+          }
         }
       }
     }
@@ -1769,6 +1834,11 @@ $blog-content-bg: $white;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      padding: 1rem 1.25rem;
+      min-height: 48px; // Touch target optimal pour boutons
+    }
     
     &::before {
       content: '';
@@ -1856,12 +1926,18 @@ $blog-content-bg: $white;
         
         a {
           text-decoration: none;
-          display: block;
+          display: flex;
+          align-items: center;
           padding: 0.6rem 1rem;
           border-radius: 8px;
           transition: all 0.3s ease;
           border-left: 3px solid transparent;
           position: relative;
+
+          @media (max-width: 768px) {
+            padding: 0.75rem 1rem; // Touch target minimum 44px
+            min-height: 44px;
+          }
           
           &::before {
             content: '';
