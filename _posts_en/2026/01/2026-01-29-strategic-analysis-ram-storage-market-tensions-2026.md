@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Global Strategic Analysis: Structural Tensions in the RAM and Storage Market in 2026"
-date: 2026-01-02
+date: 2026-01-29
 lang: en
 ref: ram-storage-crisis-2026
 author: Nicolas Dabène
@@ -18,7 +18,7 @@ tags:
 - geopolitics
 excerpt: >
   The year 2026 marks a fundamental break in the semiconductor industry. Memory is no longer a commodity but a critical strategic asset, whose scarcity is redrawing the map of global technological power.
-image: /assets/images/blog/2026/01/2026-01-02-analyse-strategique-tensions-marche-ram-2026.webp
+image: /assets/images/blog/2026/01/2026-01-29-analyse-strategique-tensions-marche-ram-2026.webp
 difficulty: ⭐️⭐️⭐️⭐️
 technologies:
 - Hardware

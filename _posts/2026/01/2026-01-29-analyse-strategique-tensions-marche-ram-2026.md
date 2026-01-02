@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Analyse Stratégique Globale : Les Tensions Structurelles sur le Marché de la Mémoire Vive (RAM) et du Stockage en 2026"
-date: 2026-01-02
+date: 2026-01-29
 lang: fr
 ref: ram-storage-crisis-2026
 author: Nicolas Dabène
@@ -18,7 +18,7 @@ tags:
 - geopolitics
 excerpt: >
   L'année 2026 marque une rupture fondamentale dans l'industrie des semi-conducteurs. La mémoire n'est plus une commodité mais un actif stratégique critique, dont la rareté redessine les cartes de la puissance technologique mondiale.
-image: /assets/images/blog/2026/01/2026-01-02-analyse-strategique-tensions-marche-ram-2026.webp
+image: /assets/images/blog/2026/01/2026-01-29-analyse-strategique-tensions-marche-ram-2026.webp
 difficulty: ⭐️⭐️⭐️⭐️
 technologies:
 - Hardware
