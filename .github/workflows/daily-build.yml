@@ -12,7 +12,7 @@ on:
       force_build:
         description: 'Forcer le build même sans changements'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 # Permissions nécessaires pour GitHub Pages
@@ -65,7 +65,7 @@ jobs:
       - name: Harmonize tags
         run: |
           echo "🏷️  Harmonisation automatique des tags..."
-          python3 harmonize_tags.py --apply
+          python3 scripts/harmonize_tags.py --apply
           echo "✅ Tags harmonisés avec succès"
 
       - name: Generate tag pages
