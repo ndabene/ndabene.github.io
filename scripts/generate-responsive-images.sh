@@ -49,7 +49,7 @@ while IFS= read -r image; do
         echo "📊 Progression: $processed/$total images traitées"
     fi
 
-done < <(find assets/images/blog -name "*.webp" -not -name "*-480.webp" -not -name "*-720.webp" -not -name "*-1080.webp" -type f)
+done < <(find assets/images -name "*.webp" -not -name "*-480.webp" -not -name "*-720.webp" -not -name "*-1080.webp" -type f)
 
 echo ""
 echo "✅ Terminé!"

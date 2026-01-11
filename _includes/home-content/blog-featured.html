@@ -1,10 +1,10 @@
 {% assign current_lang = page.lang | default: site.default_lang %}
 {% if current_lang == 'en' %}
-  {% assign content_data = site.data.home-content_en %}
-  {% assign read_more_text = "Read more" %}
+{% assign content_data = site.data.home-content_en %}
+{% assign read_more_text = "Read more" %}
 {% else %}
-  {% assign content_data = site.data.home-content %}
-  {% assign read_more_text = "Lire la suite" %}
+{% assign content_data = site.data.home-content %}
+{% assign read_more_text = "Lire la suite" %}
 {% endif %}
 
 <!-- BLOG FEATURED - Derniers articles du créateur -->
@@ -21,31 +21,29 @@
         <!-- Grille d'articles -->
         <div class="blog-featured-grid">
             {% if current_lang == 'en' %}
-              {% assign all_posts = site.documents | where: "collection", "posts_en" | sort: "date" | reverse %}
+            {% assign all_posts = site.documents | where: "collection", "posts_en" | sort: "date" | reverse %}
             {% else %}
-              {% assign all_posts = site.documents | where: "collection", "posts" | sort: "date" | reverse %}
+            {% assign all_posts = site.documents | where: "collection", "posts" | sort: "date" | reverse %}
             {% endif %}
             {% assign published_posts = "" | split: "" %}
             {% for post in all_posts %}
-                {% comment %} Afficher uniquement si la date est passée ET que hide_until_published n'est pas true {% endcomment %}
-                {% if post.date <= site.time and post.hide_until_published != true %}
-                    {% assign published_posts = published_posts | push: post %}
-                {% endif %}
-            {% endfor %}
-
-            {% assign limit = content_data.blog_featured.limit | default: 4 %}
-            {% for post in published_posts limit: limit %}
-            <article class="blog-featured-card">
-                {% if post.image %}
+            {% comment %} Afficher uniquement si la date est passée ET que hide_until_published n'est pas true {%
+            endcomment %}
+            {% if post.date <= site.time and post.hide_until_published !=true %} {% assign
+                published_posts=published_posts | push: post %} {% endif %} {% endfor %} {% assign
+                limit=content_data.blog_featured.limit | default: 4 %} {% for post in published_posts limit: limit %}
+                <article class="blog-featured-card">
                 <div class="blog-featured-image">
                     <a href="{{ post.url }}">
-                        <picture>
-                            <source srcset="{{ post.image }}" type="image/webp">
-                            <img src="{{ post.image | replace: '.webp', '.png' | replace: '.WEBP', '.PNG' }}" alt="{{ post.title | escape }}" loading="lazy">
-                        </picture>
+                        {% include responsive-image.html
+                        src=post.image
+                        alt=post.title
+                        loading="lazy"
+                        width="400"
+                        height="250"
+                        %}
                     </a>
                 </div>
-                {% endif %}
 
                 <div class="blog-featured-content">
                     <h3 class="blog-featured-title">
@@ -75,8 +73,8 @@
                         {{ read_more_text }} <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-            </article>
-            {% endfor %}
+                </article>
+                {% endfor %}
         </div>
 
         <!-- CTA Tous les articles -->

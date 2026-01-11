@@ -1,8 +1,8 @@
 {% assign current_lang = page.lang | default: site.default_lang %}
 {% if current_lang == 'en' %}
-  {% assign content_data = site.data.home-content_en %}
+{% assign content_data = site.data.home-content_en %}
 {% else %}
-  {% assign content_data = site.data.home-content %}
+{% assign content_data = site.data.home-content %}
 {% endif %}
 
 <!-- FORMATIONS SHOWCASE - Formations IA -->
@@ -10,7 +10,8 @@
     <div class="container-creator">
         <!-- En-tête -->
         <div class="section-header-creator">
-            <h2 class="section-title-creator">{{ content_data.formations_showcase.title | default: "Formations IA" }}</h2>
+            <h2 class="section-title-creator">{{ content_data.formations_showcase.title | default: "Formations IA" }}
+            </h2>
             {% if content_data.formations_showcase.subtitle and content_data.formations_showcase.subtitle != "" %}
             <p class="section-intro-text">{{ content_data.formations_showcase.subtitle }}</p>
             {% endif %}
@@ -22,7 +23,14 @@
             <div class="formation-card">
                 <div class="formation-image">
                     <a href="{{ formation.link }}">
-                        <img src="/{{ formation.image }}" alt="{{ formation.title | escape }}" loading="lazy">
+                        {% capture formation_img %}/{{ formation.image }}{% endcapture %}
+                        {% include responsive-image.html
+                        src=formation_img
+                        alt=formation.title
+                        loading="lazy"
+                        width="400"
+                        height="250"
+                        %}
                     </a>
                 </div>
 

@@ -1,7 +1,7 @@
 // Blog Filters & Featured Articles - Optimized Version
 // Performance optimizations for Mac Chrome and all browsers
 
-(function() {
+(function () {
     'use strict';
 
     // Utility: Debounce function
@@ -24,6 +24,13 @@
         } else {
             callback();
         }
+    }
+
+    // Utility: Generate srcset for responsive images
+    function generateSrcset(src) {
+        if (!src || src.includes('://') || !src.endsWith('.webp')) return '';
+        const basePath = src.split('.').slice(0, -1).join('.');
+        return `${basePath}-480.webp 480w, ${basePath}-720.webp 720w, ${basePath}-1080.webp 1080w, ${src} 1200w`;
     }
 
     // Randomisation des articles featured - Optimisée avec cache
@@ -108,11 +115,21 @@
                     `<span class="tag-pill">#${tag.trim()}</span>`
                 ).join('')}</div>` : '';
 
+            const srcset = generateSrcset(image);
+            const sizes = "(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px";
+
             const articleHTML = `
                 <article class="featured-article-card">
                     <a href="${url}" class="featured-card-link">
                         <div class="featured-card-image">
-                            <img src="${image}" alt="${title}" loading="lazy" width="400" height="250" decoding="async">
+                            <img src="${image}" 
+                                 srcset="${srcset}" 
+                                 sizes="${sizes}" 
+                                 alt="${title}" 
+                                 loading="lazy" 
+                                 width="400" 
+                                 height="250" 
+                                 decoding="async">
                             ${categoryBadge}
                             <div class="featured-card-overlay"></div>
                         </div>
@@ -149,7 +166,7 @@
         const filtersContent = document.getElementById('filters-content');
 
         if (toggleFiltersBtn && filtersContent) {
-            toggleFiltersBtn.addEventListener('click', function() {
+            toggleFiltersBtn.addEventListener('click', function () {
                 const isVisible = filtersContent.style.display !== 'none';
 
                 scheduleUpdate(() => {
@@ -171,7 +188,7 @@
         const tagsContent = document.getElementById('tags-content');
 
         if (toggleTagsBtn && tagsContent) {
-            toggleTagsBtn.addEventListener('click', function() {
+            toggleTagsBtn.addEventListener('click', function () {
                 const isVisible = tagsContent.style.display !== 'none';
                 const chevronIcon = this.querySelector('.chevron-icon');
 
@@ -241,7 +258,7 @@
                     const parentElement = badge.parentElement;
                     if (!parentElement ||
                         (!parentElement.classList.contains('series-card-difficulty') &&
-                         !parentElement.classList.contains('difficulty-badge'))) {
+                            !parentElement.classList.contains('difficulty-badge'))) {
                         badge.remove();
                     }
                 }
@@ -279,7 +296,7 @@
 
             domCache.activeFiltersDiv.appendChild(filterTag);
 
-            filterTag.querySelector('.remove-filter').addEventListener('click', function() {
+            filterTag.querySelector('.remove-filter').addEventListener('click', function () {
                 const filterType = this.dataset.type;
 
                 switch (filterType) {
@@ -316,17 +333,17 @@
                 switch (sortValue) {
                     case 'date-desc':
                         return parseInt(postB.getAttribute('data-date') || '0') -
-                               parseInt(postA.getAttribute('data-date') || '0');
+                            parseInt(postA.getAttribute('data-date') || '0');
                     case 'date-asc':
                         return parseInt(postA.getAttribute('data-date') || '0') -
-                               parseInt(postB.getAttribute('data-date') || '0');
+                            parseInt(postB.getAttribute('data-date') || '0');
                     case 'title':
                         const titleA = a.querySelector('.post-news-title')?.textContent || '';
                         const titleB = b.querySelector('.post-news-title')?.textContent || '';
                         return titleA.localeCompare(titleB);
                     case 'reading-time':
                         return parseInt(postA.getAttribute('data-read-time') || '0') -
-                               parseInt(postB.getAttribute('data-read-time') || '0');
+                            parseInt(postB.getAttribute('data-read-time') || '0');
                     default:
                         return 0;
                 }
@@ -445,7 +462,7 @@
 
         // Gestion des pills de catégories
         domCache.categoryPills.forEach(pill => {
-            pill.addEventListener('click', function() {
+            pill.addEventListener('click', function () {
                 domCache.categoryPills.forEach(p => p.classList.remove('active'));
                 this.classList.add('active');
                 state.currentCategory = this.dataset.category;
@@ -455,7 +472,7 @@
 
         // Gestion des pills de tri
         domCache.sortPills.forEach(pill => {
-            pill.addEventListener('click', function() {
+            pill.addEventListener('click', function () {
                 domCache.sortPills.forEach(p => p.classList.remove('active'));
                 this.classList.add('active');
                 state.currentSort = this.dataset.sort;
@@ -465,7 +482,7 @@
 
         // Réinitialiser les filtres
         if (domCache.resetFiltersBtn) {
-            domCache.resetFiltersBtn.addEventListener('click', function() {
+            domCache.resetFiltersBtn.addEventListener('click', function () {
                 state.currentCategory = '';
                 // state.currentSearch = ''; // DÉSACTIVÉ - Géré par blog-search-modern.js
                 state.currentSort = 'date-desc';
@@ -499,7 +516,7 @@
 
         // Catégories sidebar
         domCache.categorySidebarLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 e.preventDefault();
                 const category = this.dataset.category;
                 state.currentCategory = category;
@@ -531,7 +548,7 @@
     }
 
     // Initialisation au chargement du DOM
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         renderRandomFeaturedArticles();
         initializeFiltersToggle();
         initializeTagsToggle();

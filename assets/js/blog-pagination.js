@@ -1,5 +1,5 @@
 // Blog pagination simple - gère uniquement la pagination avec chargement lazy
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const postsContainer = document.getElementById('blog-posts-container');
     const prevButton = document.getElementById('prev-page');
     const nextButton = document.getElementById('next-page');
@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const postsPerPage = 6;
     let currentPage = 1;
     let lazyPostsLoaded = false;
+
+    // Utility: Generate srcset for responsive images
+    function generateSrcset(src) {
+        if (!src || src.includes('://') || !src.endsWith('.webp')) return '';
+        const basePath = src.split('.').slice(0, -1).join('.');
+        return `${basePath}-480.webp 480w, ${basePath}-720.webp 720w, ${basePath}-1080.webp 1080w, ${src} 1200w`;
+    }
 
     // Fonction pour charger les posts lazy
     function loadLazyPosts() {
@@ -48,11 +55,21 @@ document.addEventListener('DOMContentLoaded', function() {
             const seriesHtml = postData.dataset.series ?
                 `<span class="series-indicator">${postData.dataset.series}</span>` : '';
 
+            const srcset = generateSrcset(postData.dataset.image);
+            const sizes = "(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px";
+
             article.innerHTML = `
                 <div class="post-news-content">
                     ${postData.dataset.image ? `
                     <div class="post-news-thumb">
-                        <img src="${postData.dataset.image}" alt="${postData.dataset.title}" loading="lazy" width="200" height="150" decoding="async">
+                        <img src="${postData.dataset.image}" 
+                             srcset="${srcset}" 
+                             sizes="${sizes}" 
+                             alt="${postData.dataset.title}" 
+                             loading="lazy" 
+                             width="200" 
+                             height="150" 
+                             decoding="async">
                     </div>
                     ` : ''}
                     <div class="post-news-text">
@@ -259,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listeners pour les boutons
     if (prevButton) {
-        prevButton.addEventListener('click', function() {
+        prevButton.addEventListener('click', function () {
             if (currentPage > 1) {
                 goToPage(currentPage - 1);
             }
@@ -267,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (nextButton) {
-        nextButton.addEventListener('click', function() {
+        nextButton.addEventListener('click', function () {
             const totalPosts = getTotalPostsCount();
             const totalPages = Math.ceil(totalPosts / postsPerPage);
             if (currentPage < totalPages) {
@@ -316,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDisplay();
 
     // Exposer la fonction updateDisplay pour que les filtres puissent la rappeler
-    window.blogPaginationUpdate = function() {
+    window.blogPaginationUpdate = function () {
         currentPage = 1; // Réinitialiser à la page 1 quand les filtres changent
         updateDisplay();
     };

@@ -5,26 +5,49 @@ const path = require('path');
 const IMAGES_DIR = path.join(__dirname, '../assets/images');
 const QUALITY = 85;
 
+const SIZES = [480, 720, 1080];
+
 async function convertToWebp(file) {
     const ext = path.extname(file).toLowerCase();
-    if (!['.jpg', '.jpeg', '.png'].includes(ext)) return;
+    if (!['.jpg', '.jpeg', '.png', '.webp'].includes(ext)) return;
 
-    const webpFile = file.substring(0, file.lastIndexOf('.')) + '.webp';
+    // Skip variants themselves to avoid infinite recursion or processing them as sources
+    if (file.match(/-\d+\.webp$/)) return;
 
-    // Check if webp already exists
-    if (fs.existsSync(webpFile)) {
-        // console.log(`⏩ Skipped: ${path.relative(IMAGES_DIR, file)} (Already exists)`);
-        return 'skipped';
-    }
+    const baseName = file.substring(0, file.lastIndexOf('.'));
+    const webpFile = baseName + '.webp';
+
+    let status = 'skipped';
 
     try {
-        await sharp(file)
-            .webp({ quality: QUALITY })
-            .toFile(webpFile);
-        console.log(`✅ Converted: ${path.relative(IMAGES_DIR, file)} -> ${path.relative(IMAGES_DIR, webpFile)}`);
-        return 'converted';
+        // 1. Generate main WebP if it's a JPG/PNG and doesn't exist
+        if (['.jpg', '.jpeg', '.png'].includes(ext) && !fs.existsSync(webpFile)) {
+            await sharp(file)
+                .webp({ quality: QUALITY })
+                .toFile(webpFile);
+            console.log(`✅ Converted: ${path.relative(IMAGES_DIR, file)} -> ${path.relative(IMAGES_DIR, webpFile)}`);
+            status = 'converted';
+        }
+
+        // 2. Generate responsive variants if they don't exist
+        // Use the original file as source if it exists, otherwise use the webp version
+        const sourceForVariants = file;
+
+        for (const size of SIZES) {
+            const variantFile = `${baseName}-${size}.webp`;
+            if (!fs.existsSync(variantFile)) {
+                await sharp(sourceForVariants)
+                    .resize(size, null, { withoutEnlargement: true })
+                    .webp({ quality: QUALITY })
+                    .toFile(variantFile);
+                console.log(`   📱 Variant: ${path.basename(variantFile)} generated`);
+                status = 'converted';
+            }
+        }
+
+        return status;
     } catch (err) {
-        console.error(`❌ Error converting ${file}:`, err.message);
+        console.error(`❌ Error processing ${file}:`, err.message);
         return 'error';
     }
 }

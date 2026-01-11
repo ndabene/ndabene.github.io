@@ -2,14 +2,14 @@
 Widget Trending Topics - Affiche les articles populaires avec métriques simulées
 {% endcomment %}
 
-{% assign trending_posts = site.posts | where_exp: "post", "post.date <= site.time" | slice: 0, 5 %}
-
-{% if trending_posts.size > 0 %}
-<div class="sidebar-widget-compact">
-    <h4><i class="fas fa-fire"></i> Tendances</h4>
-    <div class="trending-topics-list">
-        {% for post in trending_posts %}
-            {% assign days_since_published = site.time | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
+{% assign trending_posts = site.posts | where_exp: "post", "post.date <= site.time" | slice: 0, 5 %} {% if
+    trending_posts.size> 0 %}
+    <div class="sidebar-widget-compact">
+        <h4><i class="fas fa-fire"></i> Tendances</h4>
+        <div class="trending-topics-list">
+            {% for post in trending_posts %}
+            {% assign days_since_published = site.time | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400
+            %}
             {% assign base_views = 100 %}
             {% assign recency_factor = 500 | divided_by: days_since_published | plus: 1 %}
             {% assign simulated_views = base_views | times: recency_factor | plus: 50 %}
@@ -17,9 +17,15 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
             <article class="trending-topic-item">
                 <a href="{{ post.url | relative_url }}" class="trending-link">
                     {% if post.image %}
-                        <div class="trending-thumb">
-                            <img src="{{ post.image }}" alt="{{ post.title | escape }}" loading="lazy">
-                        </div>
+                    <div class="trending-thumb">
+                        {% include responsive-image.html
+                        src=post.image
+                        alt=post.title
+                        loading="lazy"
+                        width="150"
+                        height="150"
+                        %}
+                    </div>
                     {% endif %}
 
                     <div class="trending-content">
@@ -27,26 +33,24 @@ Widget Trending Topics - Affiche les articles populaires avec métriques simulé
 
                         <div class="trending-stats">
                             {% if post.estimated_reading_time %}
-                                <span class="trending-stat">
-                                    <i class="fas fa-clock"></i>
-                                    {{ post.estimated_reading_time | remove: ' minutes' }} min
-                                </span>
+                            <span class="trending-stat">
+                                <i class="fas fa-clock"></i>
+                                {{ post.estimated_reading_time | remove: ' minutes' }} min
+                            </span>
                             {% endif %}
                         </div>
 
-                        {% if days_since_published <= 7 %}
-                            <span class="trending-badge trending-hot">
-                                <i class="fas fa-fire"></i> Hot
+                        {% if days_since_published <= 7 %} <span class="trending-badge trending-hot">
+                            <i class="fas fa-fire"></i> Hot
                             </span>
-                        {% elsif days_since_published <= 30 %}
-                            <span class="trending-badge trending-new">
+                            {% elsif days_since_published <= 30 %} <span class="trending-badge trending-new">
                                 <i class="fas fa-star"></i> Nouveau
-                            </span>
-                        {% endif %}
+                                </span>
+                                {% endif %}
                     </div>
                 </a>
             </article>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
-{% endif %}
+    {% endif %}

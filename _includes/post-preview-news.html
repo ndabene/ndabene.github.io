@@ -3,32 +3,31 @@ Template d'article style "site de presse" - format horizontal compact
 Usage: {% include post-preview-news.html post=post %}
 {% endcomment %}
 
-<article class="post-preview-news"
-    data-categories="{{ post.categories | join: ' ' }}"
-    data-tags="{{ post.tags | join: ' ' }}"
-    data-date="{{ post.date | date: '%s' }}"
-    data-read-time="{{ post.read_time_minutes | default: 5 }}"
-    {% if post.image_display %}data-image-display="{{ post.image_display }}"{% endif %}
-    {% if post.image_position %}data-image-position="{{ post.image_position }}"{% endif %}>
+<article class="post-preview-news" data-categories="{{ post.categories | join: ' ' }}"
+    data-tags="{{ post.tags | join: ' ' }}" data-date="{{ post.date | date: '%s' }}"
+    data-read-time="{{ post.read_time_minutes | default: 5 }}" {% if post.image_display
+    %}data-image-display="{{ post.image_display }}" {% endif %} {% if post.image_position
+    %}data-image-position="{{ post.image_position }}" {% endif %}>
 
     <div class="post-news-content">
         <!-- Vignette compacte -->
         {% if post.image %}
-            <div class="post-news-thumb">
-                <img src="{{ post.image | relative_url }}"
-                     alt="{{ post.title | escape }}"
-                     loading="lazy"
-                     width="200"
-                     height="150"
-                     decoding="async">
-                {% if post.categories and post.categories.size > 0 %}
-                    <span class="post-category-mini" data-category="{{ post.categories | first | slugify }}">
-                        {{ post.categories | first }}
-                    </span>
-                {% endif %}
-            </div>
+        <div class="post-news-thumb">
+            {% include responsive-image.html
+            src=post.image
+            alt=post.title
+            loading="lazy"
+            width="400"
+            height="300"
+            %}
+            {% if post.categories and post.categories.size > 0 %}
+            <span class="post-category-mini" data-category="{{ post.categories | first | slugify }}">
+                {{ post.categories | first }}
+            </span>
+            {% endif %}
+        </div>
         {% endif %}
-        
+
         <!-- Contenu principal -->
         <div class="post-news-text">
             <!-- Méta-données compactes éditoriales -->
@@ -37,47 +36,48 @@ Usage: {% include post-preview-news.html post=post %}
                     {% include date-fr.html date=post.date %}
                 </time>
                 {% if post.estimated_reading_time %}
-                    <span class="reading-time">{{ post.estimated_reading_time | remove: ' minutes' }} min</span>
+                <span class="reading-time">{{ post.estimated_reading_time | remove: ' minutes' }} min</span>
                 {% endif %}
                 {% if post.difficulty %}
-                    <span class="difficulty-badge difficulty-{{ post.difficulty | slugify }}">{{ post.difficulty }}</span>
+                <span class="difficulty-badge difficulty-{{ post.difficulty | slugify }}">{{ post.difficulty }}</span>
                 {% endif %}
                 {% if post.content_type %}
-                    <span class="content-type-badge content-type-{{ post.content_type | slugify }}">{{ post.content_type }}</span>
+                <span class="content-type-badge content-type-{{ post.content_type | slugify }}">{{ post.content_type
+                    }}</span>
                 {% endif %}
                 {% if post.series and site.data.series[post.series] %}
-                    <span class="series-indicator">{{ post.series }}</span>
+                <span class="series-indicator">{{ post.series }}</span>
                 {% endif %}
             </div>
-            
+
             <!-- Titre -->
             <h3 class="post-news-title">
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
-            
+
             <!-- Extrait -->
             <p class="post-news-excerpt">
                 {% if post.excerpt %}
-                    {{ post.excerpt | strip_html | truncate: 120 }}
+                {{ post.excerpt | strip_html | truncate: 120 }}
                 {% else %}
-                    {{ post.content | strip_html | truncate: 120 }}
+                {{ post.content | strip_html | truncate: 120 }}
                 {% endif %}
             </p>
-            
+
             <!-- Tags compacts améliorés -->
             {% if post.tags and post.tags.size > 0 %}
-                <div class="post-news-tags">
-                    {% for tag in post.tags limit: 3 %}
-                        {% assign clean_tag = tag | strip %}
-                        <span class="tag-mini">{{ clean_tag }}</span>
-                    {% endfor %}
-                    {% if post.tags.size > 3 %}
-                        <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
-                    {% endif %}
-                </div>
+            <div class="post-news-tags">
+                {% for tag in post.tags limit: 3 %}
+                {% assign clean_tag = tag | strip %}
+                <span class="tag-mini">{{ clean_tag }}</span>
+                {% endfor %}
+                {% if post.tags.size > 3 %}
+                <span class="tag-more">+{{ post.tags.size | minus: 3 }}</span>
+                {% endif %}
+            </div>
             {% endif %}
         </div>
-        
+
         <!-- Actions -->
         <div class="post-news-actions">
             <a href="{{ post.url | relative_url }}" class="read-more-compact">

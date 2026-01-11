@@ -12,21 +12,24 @@ Usage: {% include hero-article.html post=site.posts.first %}
     <a href="{{ hero_post.url | relative_url }}" class="hero-article-link">
         <div class="hero-article-image">
             {% if hero_post.image %}
-                <img src="{{ hero_post.image }}"
-                     alt="{{ hero_post.title | escape }}"
-                     loading="eager"
-                     width="1600"
-                     height="900"
-                     decoding="async"
-                     fetchpriority="high">
+                {% include responsive-image.html
+                   src=hero_post.image
+                   alt=hero_post.title
+                   loading="eager"
+                   width="1600"
+                   height="900"
+                   fetchpriority="high"
+                   class="hero-post-image"
+                %}
             {% else %}
-                <img src="/assets/images/default-hero.jpg"
-                     alt="{{ hero_post.title | escape }}"
-                     loading="eager"
-                     width="1600"
-                     height="900"
-                     decoding="async"
-                     fetchpriority="high">
+                {% include responsive-image.html
+                   src="/assets/images/default-hero.jpg"
+                   alt=hero_post.title
+                   loading="eager"
+                   width="1600"
+                   height="900"
+                   fetchpriority="high"
+                %}
             {% endif %}
             <div class="hero-article-overlay"></div>
         </div>

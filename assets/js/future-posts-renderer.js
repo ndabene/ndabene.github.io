@@ -1,9 +1,16 @@
 // Rendu côté client des futurs posts pour contourner la limitation Jekyll
 // Charge les données JSON et génère le HTML des futurs posts
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mode admin désactivé - les futurs posts ne sont jamais affichés
 });
+
+// Utility: Generate srcset for responsive images
+function generateSrcset(src) {
+    if (!src || src.includes('://') || !src.endsWith('.webp')) return '';
+    const basePath = src.split('.').slice(0, -1).join('.');
+    return `${basePath}-480.webp 480w, ${basePath}-720.webp 720w, ${basePath}-1080.webp 1080w, ${src} 1200w`;
+}
 
 function loadAndRenderFuturePosts() {
     // Récupérer les données des futurs posts
@@ -58,7 +65,14 @@ function generatePostPreviewHtml(post) {
                 <div class="post-news-content">
                     ${post.image ? `
                         <div class="post-news-thumb">
-                            <img src="${post.image}" alt="${post.title}" loading="lazy">
+                            <img src="${post.image}" 
+                                 srcset="${generateSrcset(post.image)}" 
+                                 sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px" 
+                                 alt="${post.title}" 
+                                 loading="lazy"
+                                 width="400"
+                                 height="300"
+                                 decoding="async">
                             <span class="post-category-mini">${post.categories[0] || 'Article'}</span>
                         </div>
                     ` : ''}
@@ -128,10 +142,10 @@ ${post.excerpt.substring(0, 100)}...
 }
 
 // Fonctions utilitaires pour les boutons de copie
-window.copyFuturePostUrl = function(button) {
+window.copyFuturePostUrl = function (button) {
     const input = button.parentElement.querySelector('.production-url-input');
     input.select();
-    
+
     try {
         document.execCommand('copy') || navigator.clipboard.writeText(input.value);
         showCopyFeedback(button, 'URL copiée !');
@@ -140,10 +154,10 @@ window.copyFuturePostUrl = function(button) {
     }
 };
 
-window.copyLinkedInPost = function(button) {
+window.copyLinkedInPost = function (button) {
     const textarea = button.parentElement.querySelector('.linkedin-suggestion-mini');
     textarea.select();
-    
+
     try {
         document.execCommand('copy') || navigator.clipboard.writeText(textarea.value);
         showCopyFeedback(button, 'Post copié !');
@@ -156,7 +170,7 @@ function showCopyFeedback(button, message) {
     const originalText = button.innerHTML;
     button.innerHTML = `<i class="fas fa-check"></i> ${message}`;
     button.style.background = '#28a745';
-    
+
     setTimeout(() => {
         button.innerHTML = originalText;
         button.style.background = '';
