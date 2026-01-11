@@ -80,21 +80,19 @@ collections:
     output: true
     permalink: "/en/quiz/:path/"
 
-# Fichiers à exclure de la génération
+# Fichiers Ã  exclure de la gÃ©nÃ©ration
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - PLAN.md
-  - CLAUDE.md
-  - GEMINI.md
-  - BLOG_INSTRUCTIONS.md
-  - todo.md
+  - docs/
   - scripts/
-  - update-sitemap.sh
   - package.json
   - node_modules/
   - vendor/
+  - .agent/
+  - .bmad-core/
+  - .claude/
   - "**/nul"
   - assets/images/blog/nul
 

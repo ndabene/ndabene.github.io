@@ -21,7 +21,7 @@ tags:
 - data-breach
 - retail
 excerpt: 'An in-depth analysis of 2025, marked by unprecedented cyberattacks against French retail (Auchan, Boulanger, LDLC, Leroy Merlin) and the emergence of vibecoding as a new systemic threat for 2026.'
-image: /assets/images/blog/2026/01/2026-01-08-retrospective-cybersecurite-ecommerce-2025.webp
+image: /assets/images/blog/2026/01/retrospective-cybersecurite-ecommerce-2025/image-principale.webp
 keywords:
 - e-commerce cybersecurity 2025
 - France retail attacks
@@ -280,3 +280,5 @@ The time is no longer for panic, but for **lucid reconstruction**. The security 
 ***
 
 *Article published on January 8, 2026 by Nicolas Dabène*
+
+

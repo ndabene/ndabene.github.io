@@ -21,7 +21,7 @@ tags:
 - sécurité
 - dette technique
 excerpt: En 2025, le Vibe Coding et l'IA générative créent l'illusion du code gratuit. Mais derrière cette facilité se cache une dette technique explosive pour PrestaShop. Découvrez pourquoi l'architecture logicielle n'a jamais été aussi cruciale et comment passer de "copiste IA" à "architecte orchestrateur".
-image: /assets/images/blog/2026/01/2026-01-13-illusion-code-jetable-ia-prestashop.webp
+image: /assets/images/blog/2026/01/illusion-code-jetable-ia-prestashop/image-principale.webp
 featured: false
 difficulty: Avancé
 technologies:
@@ -159,3 +159,5 @@ Alors, préférez-vous livrer un script qui brille aujourd'hui mais s'éteint de
 - [Formations IA pour développeurs](/formations/)
 - [Expertise PrestaShop](/expertise/prestashop/)
 - [Expertise IA](/expertise/ia/)
+
+

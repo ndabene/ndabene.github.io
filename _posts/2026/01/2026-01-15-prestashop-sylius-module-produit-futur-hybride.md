@@ -19,7 +19,7 @@ tags:
 - automatisation
 - headless commerce
 excerpt: 'Un simple module PrestaShop peut révéler deux visions du e‑commerce moderne. En comparant l''approche PrestaShop et Sylius, on découvre une convergence passionnante entre rapidité, architecture et vision long terme. Et si le futur du e‑commerce était tout simplement hybride ?'
-image: /assets/images/blog/2026/01/2026-01-15-prestashop-sylius-module-produit-futur-hybride.webp
+image: /assets/images/blog/2026/01/prestashop-sylius-module-produit-futur-hybride/image-principale.webp
 keywords:
 - PrestaShop
 - Sylius
@@ -233,3 +233,5 @@ Ni de puristes de l'architecture déconnectés du terrain.
 👉 Le futur appartient à ceux qui savent **orchestrer** : outils, frameworks, IA, automatisation.
 
 Et toi, ton prochain module… est‑ce qu'il est juste "fonctionnel", ou déjà pensé comme une brique d'avenir ?
+
+

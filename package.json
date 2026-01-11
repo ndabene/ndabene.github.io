@@ -7,15 +7,9 @@
     "serve": "bundle exec jekyll serve --port 4000",
     "dev": "bundle exec jekyll serve --config _config.yml,_config_dev.yml --limit_posts 5 --port 4000",
     "clean": "bundle exec jekyll clean",
-    "update-sitemap": "bash update-sitemap.sh",
-    "new-post": "bash scripts/new-post.sh",
-    "new-draft": "bash scripts/new-post.sh \"$npm_config_title\" --draft",
-    "new-future": "bash scripts/new-post.sh \"$npm_config_title\" --future \"$npm_config_date\"",
-    "test-sitemap": "bash scripts/test-sitemap.sh",
-    "deploy": "bash scripts/deploy.sh",
     "validate:produits": "ruby scripts/validate_produits.rb",
     "validate:frontmatter": "ruby scripts/validate_frontmatter.rb",
-    "generate:webp": "bash scripts/generate-webp.sh"
+    "generate:webp": "node scripts/generate-webp.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +18,7 @@
   "author": "Nicolas Dabène",
   "license": "MIT",
   "devDependencies": {
+    "sharp": "^0.34.5",
     "watch": "^1.0.2"
   }
 }

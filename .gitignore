@@ -19,3 +19,4 @@ Thumbs.db
 # Fichiers d'analyse temporaires
 analyze_tags.py
 tag_analysis_report.txt
+.bmad-core
