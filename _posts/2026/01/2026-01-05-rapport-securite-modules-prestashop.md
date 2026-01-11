@@ -19,7 +19,7 @@ tags:
 - php
 - Symfony
 excerpt: Référentiel complet pour concevoir des modules PrestaShop 1.7 et 8 durcis contre SQLi, XSS, CSRF et traversées de répertoire.
-image: /assets/images/blog/2026/01/securite-prestashop.webp
+image: /assets/images/blog/2026/01/rapport-securite-modules-prestashop/image-principale.webp
 keywords:
 - PrestaShop
 - sécurité
@@ -235,3 +235,5 @@ Suivez les avis de sécurité publiés par Friends of Presta pour anticiper les 
 ## Conclusion
 
 Sécuriser un module PrestaShop implique une défense en profondeur : garde-fous structurels (fichiers `index.php`, `.htaccess`), validation et assainissement stricts (`Tools`, `Validate`, `pSQL`), protections d'affichage (échappements Smarty), mécanismes anti-CSRF, et adoption des standards modernes de PrestaShop 8. En combinant ces pratiques avec des outils d'audit (Validator, PHPStan) et une veille active, les développeurs peuvent livrer des modules robustes qui protègent marchands et clients contre les menaces actuelles.
+
+

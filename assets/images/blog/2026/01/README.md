@@ -1,42 +1,34 @@
-# Images requises pour l'article "Daily Merchant Morning"
+# Gestion des Assets - Janvier 2026
 
-Article : `2026-01-06-daily-merchant-morning-automatise-prestashop-ia.md`
+Ce dossier suit la nouvelle architecture **"Isolated Assets"** définie dans `docs/ai-instructions/post-management.md`.
 
-## 📸 Images nécessaires
+## 📁 Structure
+Chaque article possède son propre sous-dossier nommé d'après son **slug**.
 
-### 1. Image de cover (obligatoire)
-**Nom du fichier :** `2026-01-06-daily-merchant-morning.webp`
-**Description :** Image principale de l'article (affichée dans la liste des articles et en haut de l'article)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-daily-merchant-morning.webp`
+Exemple : 
+`assets/images/blog/2026/01/mon-article-slug/`
+  ├── `image-principale.webp` (Image de couverture par défaut)
+  └── `screenshot-1.webp` (Images additionnelles)
 
----
+## ✅ État de la Migration (Janvier 2026)
+Tous les articles de ce mois ont été migrés vers cette structure.
 
-### 2. Screenshot du workflow n8n
-**Nom du fichier :** `2026-01-06-workflow-n8n.webp`
-**Description :** Capture d'écran du workflow n8n complet montrant les différents nœuds (Schedule Trigger, AI Agent, MCP Client, Gmail)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-workflow-n8n.webp`
-**Utilisée dans l'article :** Section "Partie 3 : La mise en pratique (Votre Workflow n8n)"
+| Article (Slug) | Dossier d'Images |
+| :--- | :--- |
+| `retrospective-evenements-prestashop-2025` | Validé |
+| `rapport-securite-modules-prestashop` | Validé |
+| `daily-merchant-morning-automatise-prestashop-ia` | Validé (3 images) |
+| `retrospective-cybersecurite-ecommerce-2025` | Validé |
+| `illusion-code-jetable-ia-prestashop` | Validé |
+| `prestashop-sylius-module-produit-futur-hybride` | Validé |
+| `notebooklm-copilote-experts-prestashop` | Validé |
+| `ia-q1-2026-industrialisation-agents-autonomes` | Validé |
+| `orchestrateur-ia-developpeurs-futur` | Validé |
+| `analyse-strategique-tensions-marche-ram-2026` | Dossier créé (Image manquante) |
 
----
-
-### 3. Screenshot du mail de démo
-**Nom du fichier :** `2026-01-06-mail-demo.webp`
-**Description :** Capture d'écran du rendu final du mail HTML généré par l'IA (montrant les KPIs, l'analyse sémantique, et les actions prioritaires)
-**Emplacement :** `/assets/images/blog/2026/01/2026-01-06-mail-demo.webp`
-**Utilisée dans l'article :** Section "Le Rendu Final"
-
----
-
-## 📝 Instructions
-
-1. Placez les 3 images dans ce dossier (`/assets/images/blog/2026/01/`)
-2. Respectez exactement les noms de fichiers indiqués ci-dessus
-3. **Format obligatoire : WebP** (meilleure compression et performance web)
-4. Optimisez les images pour le web (compression sans perte de qualité)
-5. Résolution recommandée :
-   - Image de cover : 1200x630px (ratio 16:9)
-   - Screenshots : largeur max 1200px
-
----
-
-**Note :** Les chemins des images sont déjà configurés dans l'article markdown. Une fois les images ajoutées, l'article sera prêt pour publication.
+## ⚠️ Notes pour les Agents IA
+Lors de la création d'un nouvel article :
+1. Déterminez le slug.
+2. Créez le dossier `assets/images/blog/YYYY/MM/slug/`.
+3. Nommez l'image principale `image-principale.webp`.
+4. Mettez à jour le front-matter en conséquence.

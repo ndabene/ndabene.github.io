@@ -19,7 +19,7 @@ tags:
 - anthropic
 excerpt: >
   Loin des effets d'annonce explosifs, le premier trimestre 2026 marque le début de l'industrialisation de l'IA. Entre agents autonomes, multimodalité native et souveraineté européenne avec Mistral, voici l'analyse des tendances concrètes pour les développeurs et e-commerçants.
-image: /assets/images/blog/2026/01/2026-01-22-ia-q1-2026-industrialisation-agents-autonomes.webp
+image: /assets/images/blog/2026/01/ia-q1-2026-industrialisation-agents-autonomes/image-principale.webp
 difficulty: ⭐️⭐️
 technologies:
 - AI
@@ -119,3 +119,5 @@ Pour nous, développeurs et architectes, c'est le moment de consolider nos infra
 - [Documentation Mistral AI](https://docs.mistral.ai/)
 - [Anthropic Model Changelog](https://docs.anthropic.com/en/docs/about-claude/changelog)
 - [OpenAI Platform Updates](https://platform.openai.com/docs/changelog)
+
+

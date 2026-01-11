@@ -20,7 +20,7 @@ tags:
 - e-commerce
 - développement
 excerpt: L'ère du "Léviathan" (une seule IA géante qui fait tout) est une illusion. L'avenir du e-commerce et du développement PrestaShop se jouera avec une équipe d'agents spécialisés. Découvrez comment transformer votre boutique en machine de guerre grâce aux architectures agentiques et au protocole MCP.
-image: /assets/images/blog/2026/01/2026-01-27-orchestrateur-ia-developpeurs-futur.webp
+image: /assets/images/blog/2026/01/orchestrateur-ia-developpeurs-futur/image-principale.webp
 featured: false
 difficulty: Avancé
 technologies:
@@ -201,3 +201,5 @@ Jetez un œil à **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-
 - [Formations IA pour développeurs](/formations/)
 - [Expertise PrestaShop](/expertise/prestashop/)
 - [Expertise IA](/expertise/ia/)
+
+

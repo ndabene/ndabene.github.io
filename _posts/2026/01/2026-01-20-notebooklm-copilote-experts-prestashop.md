@@ -20,7 +20,7 @@ tags:
 - e-commerce
 - développement
 excerpt: ChatGPT hallucine sur votre code PrestaShop ? Découvrez NotebookLM, l'outil Google qui révolutionne la façon dont les développeurs et e-commerçants exploitent leur documentation technique. Une IA qui analyse vos sources au lieu d'inventer des réponses.
-image: /assets/images/blog/2026/01/2026-01-20-notebooklm-copilote-experts-prestashop.webp
+image: /assets/images/blog/2026/01/notebooklm-copilote-experts-prestashop/image-principale.webp
 featured: false
 difficulty: Intermédiaire
 technologies:
@@ -213,3 +213,5 @@ Prenez ce PDF fournisseur qui traîne sur votre bureau, ou cette documentation d
 - [Formations IA pour développeurs](/formations/)
 - [Expertise PrestaShop](/expertise/prestashop/)
 - [Expertise IA](/expertise/ia/)
+
+

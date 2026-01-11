@@ -21,7 +21,7 @@ tags:
 - security
 - technical debt
 excerpt: In 2025, Vibe Coding and generative AI create the illusion of free code. But behind this ease lies an explosive technical debt for PrestaShop. Discover why software architecture has never been more crucial and how to shift from "AI copyist" to "orchestrator architect".
-image: /assets/images/blog/2026/01/2026-01-13-illusion-code-jetable-ia-prestashop.webp
+image: /assets/images/blog/2026/01/illusion-code-jetable-ia-prestashop/image-principale.webp
 featured: false
 difficulty: Advanced
 technologies:
@@ -159,3 +159,5 @@ So, would you rather deliver a script that shines today but fades tomorrow, or b
 - [AI Training for Developers](/formations/)
 - [PrestaShop Expertise](/expertise/prestashop/)
 - [AI Expertise](/expertise/ia/)
+
+

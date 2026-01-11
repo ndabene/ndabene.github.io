@@ -18,7 +18,7 @@ tags:
 - geopolitics
 excerpt: >
   L'année 2026 marque une rupture fondamentale dans l'industrie des semi-conducteurs. La mémoire n'est plus une commodité mais un actif stratégique critique, dont la rareté redessine les cartes de la puissance technologique mondiale.
-image: /assets/images/blog/2026/01/2026-01-29-analyse-strategique-tensions-marche-ram-2026.webp
+image: /assets/images/blog/2026/01/analyse-strategique-tensions-marche-ram-2026/image-principale.webp
 difficulty: ⭐️⭐️⭐️⭐️
 technologies:
 - Hardware
@@ -248,3 +248,5 @@ Pour les entreprises européennes, la leçon est claire : **la sécurisation des
 ---
 
 *Article basé sur une analyse de marché technologique et géopolitique au 2 janvier 2026. Les données proviennent de multiples sources industrielles incluant IDC, TrendForce et les rapports financiers des principaux fabricants de semi-conducteurs.*
+
+

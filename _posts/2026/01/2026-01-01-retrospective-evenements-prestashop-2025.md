@@ -19,7 +19,7 @@ tags:
 - fop-days
 - prestashop-day
 excerpt: 'Je vous propose un résumé complet de tous les événements majeurs de PrestaShop en 2025, une année exceptionnelle marquée par des lancements importants, des innovations majeures et une forte mobilisation de la communauté.'
-image: /assets/images/blog/2026/01/retrospective-prestashop-2025.webp
+image: /assets/images/blog/2026/01/retrospective-evenements-prestashop-2025/image-principale.webp
 keywords:
 - PrestaShop 2025
 - PrestaShop 9
@@ -121,3 +121,4 @@ J'ai observé que l'année 2025 a été marquée par trois grands thèmes transv
 ---
 
 *Article publié le 1er janvier 2026 par Nicolas Dabène*
+

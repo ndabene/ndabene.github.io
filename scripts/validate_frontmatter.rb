@@ -138,9 +138,31 @@ POSTS_DIRS.each do |posts_dir|
     # Image validation
     if frontmatter['image']
       image_path = frontmatter['image'].to_s
+      
+      # Architecture Rule: Must be WebP
+      unless image_path.downcase.end_with?('.webp')
+        errors << "#{relative_path}: image must be in .webp format (found: #{File.extname(image_path)})"
+      end
+
+      # Architecture Rule: Isolated Assets (for posts from 2026 onwards)
+      if frontmatter['date'].to_s.start_with?('2026')
+        # Expected: /assets/images/blog/YYYY/MM/slug/image.webp
+        # or /assets/images/blog/YYYY-MM-DD-slug.webp (legacy but let's encourage folders)
+        unless image_path.match?(%r{^/assets/images/blog/\d{4}/\d{2}/[^/]+/.+})
+          warnings << "#{relative_path}: [ArchRule] New posts should use isolated folders for assets: /assets/images/blog/YYYY/MM/slug/filename.webp"
+        end
+      end
+
       unless file_exists_relative?(image_path)
         warnings << "#{relative_path}: image not found at '#{image_path}'"
       end
+    end
+
+    # Architecture Rule: Symmetry
+    other_dir_name = posts_dir.end_with?('_posts_en') ? '_posts' : '_posts_en'
+    other_path = file_path.sub(/(.*)\/_posts(_en)?\/(.*)/, "\\1/#{other_dir_name}/\\3")
+    unless File.exist?(other_path)
+      warnings << "#{relative_path}: [ArchRule] Missing symmetry. Corresponding file not found in #{other_dir_name} at #{other_path.sub(ROOT, '')}"
     end
 
     # Excerpt validation
