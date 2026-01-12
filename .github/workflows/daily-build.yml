@@ -74,17 +74,25 @@ jobs:
           ruby scripts/generate_tag_pages.rb
           echo "✅ Pages de tags générées avec succès"
 
-      - name: Install webp tools
-        run: |
-          echo "📦 Installation des outils de conversion WebP..."
-          sudo apt-get update -qq
-          sudo apt-get install -y webp
-          echo "✅ webp installé avec succès"
+      - name: Setup Node.js for WebP generation
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Generate WebP images
+      - name: Install npm dependencies
         run: |
-          echo "🖼️  Génération des images WebP manquantes..."
-          bash scripts/generate-webp.sh
+          echo "📦 Installation des dépendances npm (sharp)..."
+          npm install
+          echo "✅ Dépendances npm installées avec succès"
+
+      - name: Generate WebP images with sharp
+        run: |
+          echo "🖼️  Génération des images WebP avec sharp (plus rapide et robuste)..."
+          npm run generate:webp
+          echo ""
+          echo "📊 Vérification des fichiers générés..."
+          find assets/images/blog -name "*.webp" -type f | wc -l
           echo "✅ Images WebP générées avec succès"
 
       - name: Install ImageMagick for responsive images
@@ -98,6 +106,11 @@ jobs:
         run: |
           echo "🖼️  Génération des images responsive (480px, 720px, 1080px)..."
           bash scripts/generate-responsive-images.sh
+          echo ""
+          echo "📊 Vérification des variants responsive générés..."
+          echo "   - Variants 480px: $(find assets/images/blog -name "*-480.webp" -type f | wc -l)"
+          echo "   - Variants 720px: $(find assets/images/blog -name "*-720.webp" -type f | wc -l)"
+          echo "   - Variants 1080px: $(find assets/images/blog -name "*-1080.webp" -type f | wc -l)"
           echo "✅ Images responsive générées avec succès"
 
       - name: Check for future posts
