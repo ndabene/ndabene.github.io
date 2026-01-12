@@ -82,12 +82,24 @@ convert_to_webp() {
         return 0
     fi
 
-    # Convertir en WebP
-    if cwebp -q "$QUALITY" "$source_file" -o "$webp_file" &> /dev/null; then
+    # Vérifier la taille du fichier
+    local file_size=$(stat -f%z "$source_file" 2>/dev/null || stat -c%s "$source_file" 2>/dev/null)
+    local file_size_mb=$((file_size / 1024 / 1024))
+
+    if [ "$file_size_mb" -gt 5 ]; then
+        echo -e "${YELLOW}⚠️${NC}  Gros fichier (${file_size_mb}MB): ${source_file}"
+    fi
+
+    # Convertir en WebP avec affichage des erreurs
+    local error_output=$(cwebp -q "$QUALITY" "$source_file" -o "$webp_file" 2>&1)
+    local exit_code=$?
+
+    if [ $exit_code -eq 0 ]; then
         echo -e "${GREEN}✓${NC} ${source_file} → ${webp_file}"
         ((CONVERTED++))
     else
         echo -e "❌ Échec: ${source_file}"
+        echo -e "   Erreur: $error_output"
         ((ERRORS++))
     fi
 }
