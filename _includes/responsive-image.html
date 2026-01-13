@@ -15,36 +15,31 @@ class="post-banner-image"
 Automatically generates srcset with -480, -720, -1080 variants if they exist
 {% endcomment %}
 
-{% comment %} Extract base path and handle potential multiple dots by removing the last extension part {% endcomment %}
-{% assign parts = include.src | split: "." %}
-{% assign part_count = parts | size | minus: 1 %}
-{% assign base_path = "" %}
-{% for i in (0..part_count) %}
-  {% if i < part_count %}
-    {% if i > 0 %}
-      {% assign base_path = base_path | append: "." %}
-    {% endif %}
-    {% assign base_path = base_path | append: parts[i] %}
-  {% endif %}
-{% endfor %}
-
-  {% assign sizes_array = "480,720,1080" | split: "," %}
-  {% assign srcset_parts = "" | split: "" %}
-
-  {% for size in sizes_array %}
-  {% comment %} Variants are always generated as .webp for maximum performance {% endcomment %}
-  {% assign variant_path = base_path | append: "-" | append: size | append: ".webp" %}
-  {% capture srcset_item %}{{ variant_path }} {{ size }}w{% endcapture %}
-  {% assign srcset_parts = srcset_parts | push: srcset_item %}
-  {% endfor %}
-
-  {% comment %} Add original image as largest size {% endcomment %}
-  {% assign original_width = include.width | default: "1024" %}
-  {% capture srcset_original %}{{ include.src }} {{ original_width }}w{% endcapture %}
-  {% assign srcset_parts = srcset_parts | push: srcset_original %}
-
-  {% assign srcset_value = srcset_parts | join: ", " %}
-
+{%- comment -%} Extract base path and handle potential multiple dots by removing the last extension part {%- endcomment -%}
+{%- assign parts = include.src | split: "." -%}
+{%- assign part_count = parts | size | minus: 1 -%}
+{%- assign base_path = "" -%}
+{%- for i in (0..part_count) -%}
+  {%- if i < part_count -%}
+    {%- if i > 0 -%}
+      {%- assign base_path = base_path | append: "." -%}
+    {%- endif -%}
+    {%- assign base_path = base_path | append: parts[i] -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign sizes_array = "480,720,1080" | split: "," -%}
+{%- assign srcset_parts = "" | split: "" -%}
+{%- for size in sizes_array -%}
+  {%- comment -%} Variants are always generated as .webp for maximum performance {%- endcomment -%}
+  {%- assign variant_path = base_path | append: "-" | append: size | append: ".webp" -%}
+  {%- capture srcset_item -%}{{ variant_path }} {{ size }}w{%- endcapture -%}
+  {%- assign srcset_parts = srcset_parts | push: srcset_item -%}
+{%- endfor -%}
+{%- comment -%} Add original image as largest size {%- endcomment -%}
+{%- assign original_width = include.width | default: "1024" -%}
+{%- capture srcset_original -%}{{ include.src }} {{ original_width }}w{%- endcapture -%}
+{%- assign srcset_parts = srcset_parts | push: srcset_original -%}
+{%- assign srcset_value = srcset_parts | join: ", " -%}
 <img src="{{ include.src }}" srcset="{{ srcset_value }}"
   sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px"
   alt="{{ include.alt | default: page.title }}" {% if include.class %}class="{{ include.class }}" {% endif %}
