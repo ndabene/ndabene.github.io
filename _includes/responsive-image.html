@@ -20,10 +20,13 @@ Automatically generates srcset with -480, -720, -1080 variants if they exist
 {% assign part_count = parts | size | minus: 1 %}
 {% assign base_path = "" %}
 {% for i in (0..part_count) %}
-{% if i < part_count %} {% if i> 0 %}{% assign base_path = base_path | append: "." %}{% endif %}
-  {% assign base_path = base_path | append: parts[i] %}
+  {% if i < part_count %}
+    {% if i > 0 %}
+      {% assign base_path = base_path | append: "." %}
+    {% endif %}
+    {% assign base_path = base_path | append: parts[i] %}
   {% endif %}
-  {% endfor %}
+{% endfor %}
 
   {% assign sizes_array = "480,720,1080" | split: "," %}
   {% assign srcset_parts = "" | split: "" %}
@@ -42,9 +45,9 @@ Automatically generates srcset with -480, -720, -1080 variants if they exist
 
   {% assign srcset_value = srcset_parts | join: ", " %}
 
-  <img src="{{ include.src }}" srcset="{{ srcset_value }}"
-    sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px"
-    alt="{{ include.alt | default: page.title }}" {% if include.class %}class="{{ include.class }}" {% endif %}
-    width="{{ include.width | default: '1024' }}" height="{{ include.height | default: '1024' }}"
-    loading="{{ include.loading | default: 'lazy' }}" {% if include.fetchpriority
-    %}fetchpriority="{{ include.fetchpriority }}" {% endif %} decoding="async">
+<img src="{{ include.src }}" srcset="{{ srcset_value }}"
+  sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px"
+  alt="{{ include.alt | default: page.title }}" {% if include.class %}class="{{ include.class }}" {% endif %}
+  width="{{ include.width | default: '1024' }}" height="{{ include.height | default: '1024' }}"
+  loading="{{ include.loading | default: 'lazy' }}" {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}" {% endif %}
+  decoding="async">
