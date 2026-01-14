@@ -47,8 +47,8 @@ L'IA fonctionne exactement pareil.
 **Ma conviction ?**
 L'IA ne demande pas de devenir un expert technique. Elle demande simplement de rester curieux, d'essayer, d'apprendre.
 
-🔗 Article complet en commentaire (avec retours d'expérience concrets)
-
 **Challenge : Donnez-vous 30 jours pour explorer l'IA sans pression. Qui relève le défi ?**
+
+🔗 Article complet avec retours d'expérience concrets : https://ndabene.github.io/articles/2025/12/01/ia-opportunite-pas-menace/
 
 #IA #Carrière #Transformation #FutureOfWork #Adaptation

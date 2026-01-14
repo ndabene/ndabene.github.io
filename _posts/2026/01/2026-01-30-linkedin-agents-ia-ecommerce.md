@@ -47,8 +47,8 @@ L'IA génère des vidéos et met à jour les fiches
 **La vraie révolution ?**
 Ce n'est pas la tech. C'est que les marchands et agences peuvent enfin se concentrer sur la stratégie plutôt que les tâches répétitives.
 
-🔗 Article complet avec exemples détaillés en commentaire
-
 **Et vous, quelle serait votre première requête à un assistant IA pour votre boutique ?**
+
+🔗 Article complet avec exemples détaillés : https://ndabene.github.io/articles/2025/11/24/agents-ia-ecommerce-mcp/
 
 #Ecommerce #PrestaShop #IA #Automatisation #Innovation

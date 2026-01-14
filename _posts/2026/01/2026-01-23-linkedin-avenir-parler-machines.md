@@ -44,8 +44,8 @@ Et un exemple concret : créer un workflow SAV PrestaShop sans une ligne de code
 
 **La vérité ?** Les "soft skills" (créativité, empathie, pensée critique) ne sont plus des bonus sur un CV. Elles deviennent le cœur du réacteur de la création de valeur.
 
-🔗 Lien vers l'article complet en commentaire
-
 **Question pour vous : Quelle tâche répétitive pourriez-vous automatiser si vous parliez mieux à l'IA ?**
+
+🔗 Article complet : https://ndabene.github.io/articles/2025/11/26/lavenir-appartient-a-ceux-qui-parlent-aux-machines/
 
 #IA #Transformation #FuturOfWork #NoCode #Développement

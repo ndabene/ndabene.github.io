@@ -68,8 +68,8 @@ Jusqu'à présent, passer de PrestaShop (PME) à une solution enterprise (Sylius
 **La phrase qui résume tout :**
 > "PHP et Symfony sont les standards indiscutables du e-commerce moderne en Europe."
 
-🔗 Article complet avec analyse technique et business en commentaire
-
 **Question : Voyez-vous cette alliance comme une chance de monter en gamme, ou craignez-vous une complexification de l'écosystème ?**
+
+🔗 Article complet avec analyse technique et business : https://ndabene.github.io/articles/2025/12/13/prestashop-cyberfolks-sylius-bigbang-opensource-europeen/
 
 #PrestaShop #Sylius #Symfony #Ecommerce #OpenSource #Europe

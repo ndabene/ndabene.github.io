@@ -54,8 +54,8 @@ Votre valeur ne se mesure plus à la vitesse d'écriture du code, mais à votre 
 - Des exemples de prompts (mauvais vs bons)
 - Comment relire le code généré comme un pro
 
-🔗 Article complet en commentaire
-
 **Question : Avez-vous déjà été piégé par du code IA qui semblait parfait... avant de tout casser ?**
+
+🔗 Article complet : https://ndabene.github.io/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/
 
 #Développement #IA #CodeQuality #BestPractices #TechDebt

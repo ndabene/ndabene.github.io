@@ -37,8 +37,8 @@ Dans cet article, je décortique :
 
 **Le paradoxe fascinant ?** En créant l'outil de paresse ultime, nous nous obligeons à devenir plus intelligents.
 
-🔗 Lien vers l'article complet dans les commentaires
-
 **Et vous, comment utilisez-vous l'IA dans votre quotidien ? Plutôt en mode "demande simple" ou "brief structuré" ?**
+
+🔗 Article complet : https://ndabene.github.io/articles/2025/11/21/ia-paresseuse-superpouvoir/
 
 #IA #IntelligenceArtificielle #Productivité #Développement #TechFrançaise

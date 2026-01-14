@@ -63,8 +63,8 @@ Chaque nouveauté répond à un pain point réel :
 - Guide de migration depuis 8.4
 - Cas d'usage PrestaShop concrets
 
-🔗 Lien vers l'analyse technique complète en commentaire
-
 **Question : Quelle feature de PHP 8.5 vous enthousiasme le plus ? L'opérateur pipe ? Le clone with ?**
+
+🔗 Analyse technique complète : https://ndabene.github.io/articles/2025/11/16/php-8-5-revolution-silencieuse-transforme-votre-code/
 
 #PHP #Développement #Performance #PHP85 #WebDev
