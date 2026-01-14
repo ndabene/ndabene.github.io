@@ -86,6 +86,9 @@ C'est là que ça devient intéressant pour nous : UCP sépare l'instrument de p
 ---
 
 ## 🛠️ Partie 3 : PrestaShop comme "Business Server" UCP
+
+> **Note importante** : Les concepts et idées présentés dans cette partie sont des propositions théoriques basées sur ma compréhension du protocole UCP. Aucune implémentation n'a été éprouvée ni validée en production à ce jour.
+
 C'est ici que je mets ma casquette d'architecte module. Comment transforme-t-on un PrestaShop (conçu en PHP pour générer du HTML Smarty/Twig) en un serveur UCP performant ?
 
 Ce n'est pas juste un export de flux XML. C'est du transactionnel synchrone.
@@ -161,4 +164,4 @@ En attendant que les modules UCP arrivent sur l'Addons Marketplace, votre meille
 
 Car quand l'IA viendra faire ses courses chez vous, elle ne pardonnera pas l'approximation.
 
-Et vous ? Prêts à laisser des robots passer commande sur votre boutique ? Discutons-en sur [LinkedIn](https://www.linkedin.com/in/nicolasdabene/)
+Et vous ? Prêts à laisser des robots passer commande sur votre boutique ? Discutons-en sur [LinkedIn](https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/)
