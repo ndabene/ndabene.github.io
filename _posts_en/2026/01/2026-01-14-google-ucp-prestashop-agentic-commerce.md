@@ -86,6 +86,9 @@ This is where it gets interesting for us: UCP separates the payment instrument f
 ---
 
 ## 🛠️ Part 3: PrestaShop as a "UCP Business Server"
+
+> **Important note**: The concepts and ideas presented in this part are theoretical proposals based on my understanding of the UCP protocol. No implementation has been tested or validated in production to date.
+
 This is where I put on my module architect hat. How do we transform a PrestaShop (designed in PHP to generate HTML Smarty/Twig) into a performant UCP server?
 
 It's not just an XML feed export. It's synchronous transactional.
@@ -161,4 +164,4 @@ While waiting for UCP modules to arrive on the Addons Marketplace, your best inv
 
 Because when AI comes to shop at your store, it won't forgive approximation.
 
-And you? Ready to let robots place orders in your store? Let's discuss on [LinkedIn](https://www.linkedin.com/in/nicolasdabene/)
+And you? Ready to let robots place orders in your store? Let's discuss on [LinkedIn](https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/)
