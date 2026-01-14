@@ -56,6 +56,6 @@ Votre valeur ne se mesure plus à la vitesse d'écriture du code, mais à votre 
 
 **Question : Avez-vous déjà été piégé par du code IA qui semblait parfait... avant de tout casser ?**
 
-🔗 Article complet : https://ndabene.github.io/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/
+🔗 Article complet : https://nicolas-dabene.fr/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/
 
 #Développement #IA #CodeQuality #BestPractices #TechDebt

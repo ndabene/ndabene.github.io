@@ -49,6 +49,6 @@ L'IA ne demande pas de devenir un expert technique. Elle demande simplement de r
 
 **Challenge : Donnez-vous 30 jours pour explorer l'IA sans pression. Qui relève le défi ?**
 
-🔗 Article complet avec retours d'expérience concrets : https://ndabene.github.io/articles/2025/12/01/ia-opportunite-pas-menace/
+🔗 Article complet avec retours d'expérience concrets : https://nicolas-dabene.fr/articles/2025/12/01/ia-opportunite-pas-menace/
 
 #IA #Carrière #Transformation #FutureOfWork #Adaptation

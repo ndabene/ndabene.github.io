@@ -49,6 +49,6 @@ Ce n'est pas la tech. C'est que les marchands et agences peuvent enfin se concen
 
 **Et vous, quelle serait votre première requête à un assistant IA pour votre boutique ?**
 
-🔗 Article complet avec exemples détaillés : https://ndabene.github.io/articles/2025/11/24/agents-ia-ecommerce-mcp/
+🔗 Article complet avec exemples détaillés : https://nicolas-dabene.fr/articles/2025/11/24/agents-ia-ecommerce-mcp/
 
 #Ecommerce #PrestaShop #IA #Automatisation #Innovation

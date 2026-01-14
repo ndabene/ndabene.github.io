@@ -46,6 +46,6 @@ Et un exemple concret : créer un workflow SAV PrestaShop sans une ligne de code
 
 **Question pour vous : Quelle tâche répétitive pourriez-vous automatiser si vous parliez mieux à l'IA ?**
 
-🔗 Article complet : https://ndabene.github.io/articles/2025/11/26/lavenir-appartient-a-ceux-qui-parlent-aux-machines/
+🔗 Article complet : https://nicolas-dabene.fr/articles/2025/11/26/lavenir-appartient-a-ceux-qui-parlent-aux-machines/
 
 #IA #Transformation #FuturOfWork #NoCode #Développement

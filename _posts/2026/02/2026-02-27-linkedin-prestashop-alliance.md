@@ -70,6 +70,6 @@ Jusqu'à présent, passer de PrestaShop (PME) à une solution enterprise (Sylius
 
 **Question : Voyez-vous cette alliance comme une chance de monter en gamme, ou craignez-vous une complexification de l'écosystème ?**
 
-🔗 Article complet avec analyse technique et business : https://ndabene.github.io/articles/2025/12/13/prestashop-cyberfolks-sylius-bigbang-opensource-europeen/
+🔗 Article complet avec analyse technique et business : https://nicolas-dabene.fr/articles/2025/12/13/prestashop-cyberfolks-sylius-bigbang-opensource-europeen/
 
 #PrestaShop #Sylius #Symfony #Ecommerce #OpenSource #Europe

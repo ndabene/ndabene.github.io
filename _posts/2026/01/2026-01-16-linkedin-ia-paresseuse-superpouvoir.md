@@ -39,6 +39,6 @@ Dans cet article, je décortique :
 
 **Et vous, comment utilisez-vous l'IA dans votre quotidien ? Plutôt en mode "demande simple" ou "brief structuré" ?**
 
-🔗 Article complet : https://ndabene.github.io/articles/2025/11/21/ia-paresseuse-superpouvoir/
+🔗 Article complet : https://nicolas-dabene.fr/articles/2025/11/21/ia-paresseuse-superpouvoir/
 
 #IA #IntelligenceArtificielle #Productivité #Développement #TechFrançaise

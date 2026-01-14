@@ -65,6 +65,6 @@ Chaque nouveauté répond à un pain point réel :
 
 **Question : Quelle feature de PHP 8.5 vous enthousiasme le plus ? L'opérateur pipe ? Le clone with ?**
 
-🔗 Analyse technique complète : https://ndabene.github.io/articles/2025/11/16/php-8-5-revolution-silencieuse-transforme-votre-code/
+🔗 Analyse technique complète : https://nicolas-dabene.fr/articles/2025/11/16/php-8-5-revolution-silencieuse-transforme-votre-code/
 
 #PHP #Développement #Performance #PHP85 #WebDev
