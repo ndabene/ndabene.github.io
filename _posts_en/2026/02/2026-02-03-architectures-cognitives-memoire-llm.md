@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MIRROR and Engram: How AI Learns to Think and Remember"
-date: 2026-02-05
+date: 2026-02-03
 lang: en
 ref: architectures-cognitives-memoire-llm
 author: Nicolas Dabène
