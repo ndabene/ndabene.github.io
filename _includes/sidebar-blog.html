@@ -17,7 +17,8 @@
   <div class="sidebar-widget-compact">
     <h4><i class="fas fa-clock"></i> Articles récents</h4>
     <div class="recent-posts-compact">
-      {% assign recent_posts = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
+      {% assign recent_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+      {% assign recent_posts = recent_posts | where_exp: "post", "post.linkedin != true" %}
       {% for post in recent_posts limit: 5 %}
         <article class="recent-post-compact">
           {% if post.image %}

@@ -33,7 +33,8 @@ llm_topics:
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
+        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+        {% assign published_posts = published_posts | where_exp: "post", "post.linkedin != true" %}
         {% if published_posts.size > 0 %}
 
             <!-- HERO ARTICLE PRINCIPAL (Article le plus récent) -->
@@ -146,7 +147,9 @@ llm_topics:
                         </div><!-- Fin filters-content -->
 
                         <div class="filter-results-info" id="filter-results-info">
-                            {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" | size %}
+                            {% assign temp_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+                            {% assign temp_posts = temp_posts | where_exp: "post", "post.linkedin != true" %}
+                            {% assign published_posts_count = temp_posts | size %}
                             <span class="results-count">Tous les articles <span id="filtered-count">({{ published_posts_count }})</span></span>
                             <div class="active-filters" id="active-filters"></div>
                         </div>
@@ -161,7 +164,8 @@ llm_topics:
                     
                     <div class="post-list-news grid-view" id="blog-posts-container">
                         {% comment %}Charger initialement 2 pages d'articles (12 posts) - skip hero + 3 featured = offset 4{% endcomment %}
-                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" | offset: 4 %}
+                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" %}
+                        {% assign published_posts_list = published_posts_list | where_exp: "post", "post.linkedin != true" | offset: 4 %}
                         {% assign initial_load_count = 12 %}
                         {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
 
@@ -201,7 +205,9 @@ llm_topics:
 
                     <!-- Pagination -->
                     {% assign posts_per_page = 6 %}
-                    {% assign published_posts_count = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" | size %}
+                    {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" %}
+                    {% assign temp_posts_2 = temp_posts_2 | where_exp: "post", "post.linkedin != true" %}
+                    {% assign published_posts_count = temp_posts_2 | size %}
                     {% assign remaining_posts = published_posts_count | minus: 4 %}
                     {% if remaining_posts > posts_per_page %}
                         <div class="pagination-container">

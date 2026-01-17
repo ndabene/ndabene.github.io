@@ -60,7 +60,9 @@ layout: default
         <div class="blog-grid-news">
             <div class="main-blog-content-news">
                 {% comment %}Filtrer les articles par catégorie{% endcomment %}
-                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
+                {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category" %}
+                {% assign category_posts = category_posts | where_exp: "post", "post.date <= site.time" %}
+                {% assign category_posts = category_posts | where_exp: "post", "post.linkedin != true" %}
 
                 {% if category_posts.size > 0 %}
                     <div class="category-stats" style="margin-bottom: 2rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">

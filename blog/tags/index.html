@@ -41,7 +41,8 @@ keywords: "tags blog, thématiques, sujets techniques, navigation blog, index ta
 
             {% comment %}Collect and count all tags{% endcomment %}
             {% assign all_tags = "" | split: "" %}
-            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
+            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+            {% assign published_posts = published_posts | where_exp: "post", "post.linkedin != true" %}
 
             {% for post in published_posts %}
               {% if post.tags %}
