@@ -15,6 +15,7 @@ tags:
 excerpt: "L'avenir n'appartient plus à ceux qui codent les machines, mais à ceux qui savent leur parler. Un changement de paradigme radical."
 image: /assets/images/blog/2025/11/parler-aux-machines-futur.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/11/26/lavenir-appartient-a-ceux-qui-parlent-aux-machines/
 ---
 
 ## 🚀 Le code n'est plus le seul langage du pouvoir

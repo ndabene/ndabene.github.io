@@ -15,6 +15,7 @@ tags:
 excerpt: "Rapports comptables en 2 minutes, promos automatiques pour vos meilleurs clients... L'IA n'est plus de la science-fiction pour l'e-commerce."
 image: /assets/images/blog/2025/11/mcp-server-prestashop-tools-plus.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/11/24/agents-ia-ecommerce-mcp/
 ---
 
 ## 🤖 Et si votre boutique PrestaShop avait un assistant IA ?

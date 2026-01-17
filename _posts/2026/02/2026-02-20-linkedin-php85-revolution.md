@@ -15,6 +15,7 @@ tags:
 excerpt: "L'opérateur pipe, clone with, OPcache obligatoire... PHP 8.5 élimine 20 ans de frustrations. +10% de performances, debugging x10 plus rapide."
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/11/16/php-8-5-revolution-silencieuse-transforme-votre-code/
 ---
 
 ## 🚀 PHP 8.5 : La révolution silencieuse qui transforme votre code
