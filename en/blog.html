@@ -37,7 +37,9 @@ llm_topics:
             <!-- HERO ARTICLE (Most recent article) -->
             {% if published_posts.size > 0 %}
                 {% assign hero_post = published_posts.first %}
-                {% include hero-article.html post=hero_post %}
+                {% unless hero_post.linkedin == true %}
+                    {% include hero-article.html post=hero_post %}
+                {% endunless %}
             {% endif %}
 
             <!-- FEATURED ARTICLES SECTION (Articles 2-4 as featured) -->
