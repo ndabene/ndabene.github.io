@@ -36,7 +36,7 @@
 
 {% comment %}Collecter des articles de thématiques complémentaires{% endcomment %}
 {% assign cross_posts = "" | split: "" %}
-{% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
 
 {% for post in published_posts %}
   {% if post.url != page.url %}
