@@ -2,8 +2,9 @@
 Widget Trending Topics - Affiche les articles populaires avec métriques simulées
 {% endcomment %}
 
-{% assign trending_posts = site.posts | where_exp: "post", "post.date <= site.time and post.linkedin != true" | slice: 0, 5 %} {% if
-    trending_posts.size> 0 %}
+{% assign trending_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
+{% assign trending_posts = trending_posts | where_exp: "post", "post.linkedin != true" | slice: 0, 5 %}
+{% if trending_posts.size > 0 %}
     <div class="sidebar-widget-compact">
         <h4><i class="fas fa-fire"></i> Tendances</h4>
         <div class="trending-topics-list">

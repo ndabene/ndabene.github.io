@@ -60,7 +60,9 @@ layout: default
         <div class="blog-grid-news">
             <div class="main-blog-content-news">
                 {% comment %}Filtrer les articles par tag{% endcomment %}
-                {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains page.tag" | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
+                {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+                {% assign tag_posts = tag_posts | where_exp: "post", "post.date <= site.time" %}
+                {% assign tag_posts = tag_posts | where_exp: "post", "post.linkedin != true" %}
 
                 {% if tag_posts.size > 0 %}
                     <div class="tag-stats" style="margin-bottom: 2rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
