@@ -15,6 +15,7 @@ tags:
 excerpt: "GitHub Copilot, Claude, ChatGPT : +55% de productivité... mais 64% des bugs viennent de mauvaises décisions d'architecture. Les 8 pièges invisibles à éviter."
 image: /assets/images/blog/2025/12/ia-pieges-developpeurs.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/
 ---
 
 ## ⚠️ L'IA nous rend plus rapides... mais aussi plus dangereux

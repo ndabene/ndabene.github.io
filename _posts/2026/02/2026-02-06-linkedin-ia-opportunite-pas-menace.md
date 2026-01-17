@@ -15,6 +15,7 @@ tags:
 excerpt: "L'IA ne remplace pas votre emploi, elle transforme votre façon de travailler. Guide pratique pour passer de la peur à l'opportunité."
 image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/12/01/ia-opportunite-pas-menace/
 ---
 
 ## 😰 92% ont peur de l'IA, mais seuls 22% l'ont testée

@@ -15,6 +15,7 @@ tags:
 excerpt: "Redécouvrez comment l'IA ne 'pense' pas vraiment - elle cherche juste le chemin le plus court. Un article qui change la façon dont vous travaillez avec l'IA."
 image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/11/21/ia-paresseuse-superpouvoir/
 ---
 
 ## 💡 Et si l'IA était fondamentalement... paresseuse ?

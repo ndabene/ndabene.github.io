@@ -15,6 +15,7 @@ tags:
 excerpt: "L'acquisition qui change tout : PrestaShop rejoint cyber_Folks et Sylius. 31 milliards d'€ de GMV, 240 000 boutiques, une force de frappe technique européenne sous Symfony."
 image: /assets/images/blog/2025/12/2025-12-13-prestashop-sylius-alliance.webp
 linkedin: true
+external_url: https://nicolas-dabene.fr/articles/2025/12/13/prestashop-cyberfolks-sylius-bigbang-opensource-europeen/
 ---
 
 ## 💥 PrestaShop + Sylius : Le Big Bang de l'Open Source Européen
