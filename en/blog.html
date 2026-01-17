@@ -31,7 +31,7 @@ llm_topics:
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
+        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time and post.linkedin != true" %}
         {% if published_posts.size > 0 %}
 
             <!-- HERO ARTICLE (Most recent article) -->
@@ -142,7 +142,7 @@ llm_topics:
                         </div><!-- End filters-content -->
 
                         <div class="filter-results-info" id="filter-results-info">
-                            {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
+                            {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time and post.linkedin != true" | size %}
                             <span class="results-count">All articles <span id="filtered-count">({{ published_posts_count }})</span></span>
                             <div class="active-filters" id="active-filters"></div>
                         </div>
@@ -157,7 +157,7 @@ llm_topics:
 
                     <div class="post-list-news grid-view" id="blog-posts-container">
                         {% comment %}Initially load 2 pages of articles (12 posts) - skip hero + 3 featured = offset 4{% endcomment %}
-                        {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | offset: 4 %}
+                        {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time and post.linkedin != true" | offset: 4 %}
                         {% assign initial_load_count = 12 %}
                         {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
 
@@ -197,7 +197,7 @@ llm_topics:
 
                     <!-- Pagination -->
                     {% assign posts_per_page = 6 %}
-                    {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" | size %}
+                    {% assign published_posts_count = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time and post.linkedin != true" | size %}
                     {% assign remaining_posts = published_posts_count | minus: 4 %}
                     {% if remaining_posts > posts_per_page %}
                         <div class="pagination-container">

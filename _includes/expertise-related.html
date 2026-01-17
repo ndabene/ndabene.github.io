@@ -25,12 +25,12 @@
   {% assign related = related | uniq %}
   {% assign related = related | sort: 'date' | reverse %}
 
-  {% comment %} Exclure les articles futurs {% endcomment %}
+  {% comment %} Exclure les articles futurs et les posts LinkedIn {% endcomment %}
   {% assign filtered_related = '' | split: '' %}
   {% assign now_timestamp = site.time | date: "%s" %}
   {% for post in related %}
     {% assign post_timestamp = post.date | date: "%s" %}
-    {% if post_timestamp <= now_timestamp %}
+    {% if post_timestamp <= now_timestamp and post.linkedin != true %}
       {% assign filtered_related = filtered_related | push: post %}
     {% endif %}
   {% endfor %}
