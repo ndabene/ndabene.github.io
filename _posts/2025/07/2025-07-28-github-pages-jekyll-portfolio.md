@@ -2,6 +2,7 @@
 layout: post
 title: 'Créez votre portfolio tech en ligne : Guide'
 date: 2025-07-28
+ref: github-pages-jekyll-portfolio-2025
 author: Nicolas Dabène
 categories:
 - développement

@@ -2,6 +2,7 @@
 layout: post
 title: Réduire les erreurs de texte dans Banana
 date: 2025-10-31
+ref: banana-tutorial-reduce-text-errors
 author: Nicolas Dabène
 categories:
 - IA

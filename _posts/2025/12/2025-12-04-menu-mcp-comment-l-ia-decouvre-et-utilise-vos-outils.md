@@ -2,6 +2,7 @@
 layout: post
 title: Comment l'IA découvre vos outils MCP?
 date: 2025-12-04
+ref: mcp-menu-ai-tool-discovery-2025
 author: Nicolas Dabène
 categories:
 - Tutoriel

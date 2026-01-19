@@ -2,6 +2,7 @@
 layout: post
 title: 'PHP 8.5 : Boostez vos performances – La révolution qui transforme votre code'
 date: 2025-11-16
+ref: php-85-boost-your-app-performance-essential-featur
 author: Nicolas Dabène
 categories:
 - PHP

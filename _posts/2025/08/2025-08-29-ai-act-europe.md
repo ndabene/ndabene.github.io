@@ -2,6 +2,7 @@
 layout: post
 title: 'AI Act : comprendre la régulation IA en Europe'
 date: 2025-08-29
+ref: ai-act-europe
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

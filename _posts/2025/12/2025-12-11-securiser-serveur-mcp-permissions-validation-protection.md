@@ -2,6 +2,7 @@
 layout: post
 title: Comment sécuriser un serveur MCP?
 date: 2025-12-11
+ref: secure-mcp-server-permissions-2025
 author: Nicolas Dabène
 categories:
 - Tutoriel

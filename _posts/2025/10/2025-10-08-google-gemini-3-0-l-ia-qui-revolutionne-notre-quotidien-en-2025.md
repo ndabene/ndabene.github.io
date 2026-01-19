@@ -2,6 +2,7 @@
 layout: post
 title: 'Google Gemini 3.0 : IA du quotidien'
 date: 2025-10-08
+ref: google-gemini-3-0-ai-revolution-2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

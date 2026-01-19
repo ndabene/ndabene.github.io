@@ -2,6 +2,7 @@
 layout: post
 title: 'PHP : histoire d''un langage incontournable'
 date: 2025-07-30
+ref: php-history-language-2025
 author: Nicolas Dabène
 categories:
 - PHP

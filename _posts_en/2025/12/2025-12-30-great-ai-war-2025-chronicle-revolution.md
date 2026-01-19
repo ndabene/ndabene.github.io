@@ -2,6 +2,7 @@
 layout: post
 title: "The Great AI War of 2025: Chronicle of a Revolution Redefining E-commerce and Work"
 date: 2025-12-30
+ref: the-great-ai-war-of-2025-chronicle-of-a-revolution
 author: Nicolas Dabène
 categories:
 - artificial intelligence

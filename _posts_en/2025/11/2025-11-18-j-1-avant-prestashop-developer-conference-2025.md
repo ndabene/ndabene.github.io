@@ -2,6 +2,7 @@
 layout: post
 title: 'Countdown to PrestaShop Developer Conference 2025: What to Expect!'
 date: 2025-11-18 01:00:00
+ref: countdown-to-prestashop-developer-conference-2025
 author: Nicolas Dabène
 lang: en
 categories:

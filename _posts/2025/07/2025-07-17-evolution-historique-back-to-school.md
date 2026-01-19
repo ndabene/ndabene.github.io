@@ -2,6 +2,7 @@
 layout: post
 title: 'L''évolution du Back to School : 1850-2025'
 date: 2025-07-17
+ref: back-to-school-evolution-2025
 author: Nicolas Dabène
 categories:
 - Ecommerce

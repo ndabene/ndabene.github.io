@@ -2,6 +2,7 @@
 layout: post
 title: Évolution des compétences des développeurs
 date: 2025-11-10
+ref: evolution-competences-developpeurs-nov2025
 author: Nicolas Dabène
 categories:
 - développement

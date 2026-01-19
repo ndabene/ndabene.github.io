@@ -2,6 +2,7 @@
 layout: post
 title: 'Grok expose ses prompts : leçons de sécurité'
 date: 2025-08-19
+ref: grok-prompt-leak-security
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

@@ -2,6 +2,7 @@
 layout: post
 title: 'Google Shopping & Gemini : la révolution IA en e-commerce'
 date: 2025-09-18
+ref: google-shopping-gemini-revolution-ia-e-commerce
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

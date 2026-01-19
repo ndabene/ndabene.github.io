@@ -2,6 +2,7 @@
 layout: post
 title: Comment connecter un serveur MCP à Claude?
 date: 2025-12-18
+ref: connect-mcp-server-claude-desktop-2025
 author: Nicolas Dabène
 categories:
 - Tutoriel

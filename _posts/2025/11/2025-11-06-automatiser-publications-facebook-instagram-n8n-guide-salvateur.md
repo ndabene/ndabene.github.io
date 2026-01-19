@@ -2,6 +2,7 @@
 layout: post
 title: Automatiser Facebook et Instagram avec n8n
 date: 2025-11-06
+ref: automatiser-publications-facebook-instagram-n8n-guide-salvateur-nov2025
 author: Nicolas Dabène
 categories:
 - développement

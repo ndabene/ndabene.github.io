@@ -2,6 +2,7 @@
 layout: post
 title: 'Doctrine PrestaShop : gérer automatiquement le préfixe DB'
 date: 2025-09-08
+ref: gerer-automatiquement-prefixe-db-doctrine-prestashop
 author: Nicolas Dabène
 categories:
 - PrestaShop

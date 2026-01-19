@@ -2,6 +2,7 @@
 layout: post
 title: 'Coder à l''ère de l''IA : adapter ses méthodes'
 date: 2025-09-22
+ref: coder-era-ia
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

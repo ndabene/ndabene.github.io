@@ -2,6 +2,7 @@
 layout: post
 title: 'Black Friday 2025 : la révolution GEO arrive sur PrestaShop'
 date: 2025-09-16
+ref: black-friday-geo-suite
 author: Nicolas Dabène
 categories:
 - PrestaShop

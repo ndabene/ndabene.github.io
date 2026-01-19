@@ -2,6 +2,7 @@
 layout: post
 title: Laisseriez-vous un dev junior coder seul?
 date: 2025-11-04
+ref: ia-supervision-developpement-nov2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

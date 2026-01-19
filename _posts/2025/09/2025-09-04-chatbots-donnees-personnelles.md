@@ -2,6 +2,7 @@
 layout: post
 title: Les chatbots IA incitent au partage de données
 date: 2025-09-04
+ref: chatbots-donnees-personnelles
 author: Nicolas Dabène
 categories:
 - sécurité

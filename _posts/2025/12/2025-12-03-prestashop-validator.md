@@ -2,6 +2,7 @@
 layout: post
 title: 'PrestaShop Validator : garantir la qualité'
 date: 2025-12-03
+ref: prestashop-validator-nov2025
 author: Nicolas Dabène
 categories:
 - PrestaShop

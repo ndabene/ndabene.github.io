@@ -2,6 +2,7 @@
 layout: post
 title: 'Comprendre le Model Context Protocol (MCP) : Guide Complet'
 date: 2025-08-03
+ref: mcp-protocol-guide
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

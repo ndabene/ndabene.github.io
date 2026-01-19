@@ -2,6 +2,7 @@
 layout: post
 title: "La Grande Guerre des IA de 2025 : Chronique d'une Révolution qui Redéfinit le E-commerce et le Travail"
 date: 2025-12-30
+ref: the-great-ai-war-of-2025-chronicle-of-a-revolution
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

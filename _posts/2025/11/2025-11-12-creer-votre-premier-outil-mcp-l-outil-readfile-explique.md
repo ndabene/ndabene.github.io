@@ -2,6 +2,7 @@
 layout: post
 title: 'Créer votre premier outil MCP : readFile'
 date: 2025-11-12
+ref: creer-votre-premier-outil-mcp-l-outil-readfile-explique-nov2025
 author: Nicolas Dabène
 categories:
 - Tutoriel

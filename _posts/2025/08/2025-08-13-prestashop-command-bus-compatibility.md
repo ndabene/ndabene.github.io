@@ -2,6 +2,7 @@
 layout: post
 title: 'Compatibilité PrestaShop 8/9 : transition'
 date: 2025-08-13
+ref: prestashop-command-bus-compatibility
 author: Nicolas Dabène
 categories:
 - PrestaShop

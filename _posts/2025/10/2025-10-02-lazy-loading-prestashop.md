@@ -2,6 +2,7 @@
 layout: post
 title: Optimiser PrestaShop avec le lazy loading
 date: 2025-10-02
+ref: lazy-loading-prestashop-2025-10
 author: Nicolas Dabène
 categories:
 - PrestaShop

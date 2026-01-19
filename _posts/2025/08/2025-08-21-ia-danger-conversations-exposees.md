@@ -2,6 +2,7 @@
 layout: post
 title: 'Quand l''IA devient un danger : 370 000 conversations Grok exposées'
 date: 2025-08-21
+ref: ia-danger-conversations-exposees
 author: Nicolas Dabène
 categories:
 - sécurité

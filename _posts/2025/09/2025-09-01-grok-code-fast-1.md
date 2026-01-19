@@ -2,6 +2,7 @@
 layout: post
 title: 'Grok Code Fast 1 : IA de codage rapide xAI'
 date: 2025-09-01
+ref: grok-code-fast-1
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
