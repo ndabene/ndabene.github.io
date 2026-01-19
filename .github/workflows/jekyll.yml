@@ -146,6 +146,15 @@ jobs:
             --glob "**/*.html" \
             --exclude-selectors ".social-sharing-section, .post-meta, nav, footer, .breadcrumb, .reading-progress, .toc-perplexity-block" \
             --verbose
+
+          echo ""
+          echo "📊 Statistiques de l'indexation Pagefind:"
+          echo "   - Fichiers index générés: $(find _site/pagefind -name "*.pf_*" -type f | wc -l)"
+          echo "   - Taille totale de l'index: $(du -sh _site/pagefind | cut -f1)"
+          echo ""
+          echo "📄 Échantillon des pages indexées:"
+          find _site -name "*.html" -path "*/articles/*" | head -10
+          echo ""
           echo "✅ Index Pagefind généré avec succès"
 
       - name: Upload artifact
