@@ -1,0 +1,62 @@
+<!-- Toggle pour choisir le mode de filtrage (ET / OU) -->
+<div class="filter-mode-selector" id="filter-mode-selector" style="display: none;">
+    <label class="filter-mode-label">
+        <input type="radio" name="filter-mode" value="AND" checked>
+        <span class="mode-text">
+            <i class="fas fa-check-double"></i> ET (tous les tags)
+        </span>
+    </label>
+    <label class="filter-mode-label">
+        <input type="radio" name="filter-mode" value="OR">
+        <span class="mode-text">
+            <i class="fas fa-list"></i> OU (au moins un tag)
+        </span>
+    </label>
+</div>
+
+<style>
+.filter-mode-selector {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 8px;
+    align-items: center;
+}
+
+.filter-mode-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background: white;
+    border: 2px solid transparent;
+}
+
+.filter-mode-label:hover {
+    background: var(--primary-light, #e3f2fd);
+}
+
+.filter-mode-label input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.filter-mode-label input[type="radio"]:checked + .mode-text {
+    font-weight: 600;
+    color: var(--primary-color, #1976d2);
+}
+
+.filter-mode-label:has(input:checked) {
+    border-color: var(--primary-color, #1976d2);
+    background: var(--primary-light, #e3f2fd);
+}
+
+.mode-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+</style>
