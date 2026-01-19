@@ -4,6 +4,7 @@ title: 'PrestaShop MCP Server Tutorial: How to Connect Your Store to AI Agents (
 date: 2025-11-28
 ref: mcp-server-prestashop-setup-guide
 author: Nicolas Dabène
+lang: en
 categories:
 - PrestaShop
 - artificial intelligence
