@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Comparing AI Development Methodologies: BMAD vs. Ralph"
-date: 2026-02-21
+date: 2026-01-21
 lang: en
 ref: bmad-vs-ralph-ai-methodologies
 author: Nicolas Dabène
 categories: [Artificial Intelligence, Methodology]
 tags: [AI, BMAD, Ralph, Development, Agentic AI, Methodologies, Vibe Coding]
 excerpt: "The rise of AI-assisted software development has ushered in a new era of productivity, but has also created a clear dichotomy between 'vibe coding' and formal frameworks to ensure quality and governance."
-image: /assets/images/blog/2026/02/comparaison-methodologies-developpement-ia-bmad-vs-ralph/image-principale.webp
+image: /assets/images/blog/2026/01/comparaison-methodologies-developpement-ia-bmad-vs-ralph/image-principale.png
 keywords: [BMAD, Ralph, AI development, AI methodologies, vibe coding, agentic AI, AI-assisted development]
 difficulty: "Advanced"
 technologies: ["BMAD", "Ralph", "Git", "Agentic AI"]
@@ -17,7 +17,7 @@ published: true
 ---
 
 <!-- TODO: Add English translation of the article content here -->
-<!-- The French version is available in _posts/2026/02/2026-02-21-comparaison-methodologies-developpement-ia-bmad-vs-ralph.md -->
+<!-- The French version is available in _posts/2026/01/2026-01-21-comparaison-methodologies-developpement-ia-bmad-vs-ralph.md -->
 
 ## Introduction: Beyond "Vibe Coding"
 
