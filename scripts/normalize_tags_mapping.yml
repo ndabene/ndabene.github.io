@@ -1,0 +1,38 @@
+# Mapping de normalisation des tags
+# Format: tag_source: tag_cible
+
+# Intelligence Artificielle
+AI: IA
+"Intelligence Artificielle": IA
+"IA générative": IA
+
+# Automatisation
+automation: automatisation
+
+# PrestaShop versions
+"PrestaShop 8": PrestaShop
+"PrestaShop 9": PrestaShop
+
+# LLMs spécifiques - on garde distincts car pertinents
+ChatGPT: ChatGPT
+GPT-5: GPT-5
+Gemini: Gemini
+Claude: Claude
+"GitHub Copilot": "GitHub Copilot"
+
+# Technologies - on garde distincts
+PHP: PHP
+TypeScript: TypeScript
+Symfony: Symfony
+n8n: n8n
+
+# Thématiques générales - à garder
+sécurité: sécurité
+SEO: SEO
+e-commerce: e-commerce
+API: API
+architecture: architecture
+"Open Source": "Open Source"
+
+# Tags à subdiviser (optionnel)
+# développement: [développement web, développement API, développement backend]

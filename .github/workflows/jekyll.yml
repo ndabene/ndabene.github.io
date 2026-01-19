@@ -73,6 +73,12 @@ jobs:
           python3 scripts/harmonize_tags.py --apply
           echo "✅ Tags harmonisés avec succès"
 
+      - name: Normalize tags for better filtering
+        run: |
+          echo "🔧 Normalisation des tags pour améliorer les filtres..."
+          ruby scripts/normalize_tags.rb --apply
+          echo "✅ Tags normalisés avec succès"
+
       - name: Generate tag pages
         run: |
           echo "🚀 Génération automatique des pages de tags..."

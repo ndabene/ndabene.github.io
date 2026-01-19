@@ -42,7 +42,7 @@ Usage: {% include smart-internal-links.html %}
   {% assign sorted_related = related_posts | sort | reverse %}
 
   {% if sorted_related.size > 0 %}
-  <section class="smart-internal-links">
+  <section class="smart-internal-links" data-pagefind-ignore>
     <h2 class="links-title">
       <i class="fas fa-link"></i>
       Articles Liés

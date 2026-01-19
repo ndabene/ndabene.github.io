@@ -1,0 +1,173 @@
+/* Améliorations visuelles pour les filtres Pagefind */
+
+/* Container des suggestions de tags */
+#tag-suggestions {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+    display: none;
+}
+
+.suggestions-header {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.suggestions-header i {
+    font-size: 1.1em;
+    color: #ffd700;
+}
+
+.suggestions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.suggested-tag {
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.suggested-tag:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.suggested-tag i {
+    font-size: 0.9em;
+}
+
+/* Compteurs de résultats sur les tags */
+.tag-result-count {
+    font-size: 0.85em;
+    opacity: 0.7;
+    margin-left: 0.25rem;
+}
+
+.tag-pill-large.tag-no-results {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tag-pill-large.tag-no-results:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Indicateur de tri par pertinence */
+.sort-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-light, #e3f2fd);
+    color: var(--primary-color, #1976d2);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.sort-indicator i {
+    font-size: 0.9em;
+}
+
+/* Badge de pertinence sur les résultats */
+.relevance-score {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+/* Animation pour les filtres actifs */
+.active-filter-tag {
+    animation: filterPulse 0.3s ease-out;
+}
+
+@keyframes filterPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mode responsive */
+@media (max-width: 768px) {
+    #tag-suggestions {
+        padding: 0.75rem;
+    }
+
+    .suggestions-list {
+        gap: 0.4rem;
+    }
+
+    .suggested-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .filter-mode-selector {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filter-mode-label {
+        width: 100%;
+    }
+}
+
+/* Effet de highlight pour les tags actifs */
+.tag-pill-large.active-filter {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+.tag-pill-large.active-filter:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+}
+
+/* Badge "nouveau" pour les tags récemment ajoutés */
+.tag-pill-large[data-new="true"]::after {
+    content: "nouveau";
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.4rem;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
