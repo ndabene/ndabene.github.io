@@ -30,8 +30,8 @@ layout: default
          data-pagefind-meta="date:{{ page.date | date: '%Y-%m-%d' }}"
          data-pagefind-meta="author:{{ page.author | default: site.author.name }}"
          data-pagefind-meta="excerpt:{{ page.excerpt | strip_html | truncate: 200 }}"
-         data-pagefind-filter="category:{{ page.categories | join: ', ' }}"
-         {% if page.tags and page.tags.size > 0 %}data-pagefind-filter="tags:{{ page.tags | join: ', ' }}"{% endif %}
+         {% for category in page.categories %}data-pagefind-filter="category:{{ category }}"{% endfor %}
+         {% if page.tags and page.tags.size > 0 %}{% for tag in page.tags %}data-pagefind-filter="tags:{{ tag }}"{% endfor %}{% endif %}
          data-pagefind-filter="lang:{{ page.lang | default: 'fr' }}">
     <!-- Message pour les articles non encore publiés -->
     {% if page.hide_until_published == true %}
