@@ -50,7 +50,7 @@ layout: default
 
     <!-- Reading Progress Bar -->
     {% if page.reading_progress != false %}
-    <div class="reading-progress">
+    <div class="reading-progress" data-pagefind-ignore>
         <div class="reading-progress-bar"></div>
     </div>
     {% endif %}
@@ -58,7 +58,7 @@ layout: default
     <!-- Header d'article en pleine largeur -->
     <header class="post-header-fullwidth">
         <div class="post-header-content">
-            <div class="post-breadcrumb">
+            <div class="post-breadcrumb" data-pagefind-ignore>
                 <a href="/" class="breadcrumb-home">Accueil</a>
                 <span class="breadcrumb-separator">/</span>
                 <a href="/blog/" class="breadcrumb-blog">Blog</a>
@@ -149,7 +149,7 @@ layout: default
                     <article class="post-content">
                         <!-- Bloc Perplexity au-dessus de la table des matières -->
                         {% if true %}
-                        <div class="toc-perplexity-block">
+                        <div class="toc-perplexity-block" data-pagefind-ignore>
                             <h4>🎁 Perplexity PRO offert</h4>
                             <div class="perplexity-sidebar-content">
                                 <p><strong>30 jours gratuits</strong></p>
@@ -163,7 +163,7 @@ layout: default
 
                         <!-- Table des matières repliable (mobile uniquement) -->
                         {% if page.table_of_contents != false %}
-                        <div class="table-of-contents-inline">
+                        <div class="table-of-contents-inline" data-pagefind-ignore>
                             <button class="toc-toggle" id="toc-toggle">
                                 <i class="fas fa-list"></i>
                                 <span>Table des matières</span>
@@ -180,8 +180,10 @@ layout: default
                         {{ content }}
 
                         <!-- Schemas SEO/GEO/VEO - FAQs en fin d'article -->
-                        {% include faq-schema.html %}
-                        {% include howto-schema.html %}
+                        <div data-pagefind-ignore>
+                            {% include faq-schema.html %}
+                            {% include howto-schema.html %}
+                        </div>
 
                         <!-- CTA SEO/GEO -->
                     </article>
