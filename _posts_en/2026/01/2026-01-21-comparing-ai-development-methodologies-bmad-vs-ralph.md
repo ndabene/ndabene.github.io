@@ -8,7 +8,7 @@ author: Nicolas Dabène
 categories: [Artificial Intelligence, Methodology]
 tags: [AI, BMAD, Ralph, Development, Agentic AI, Methodologies, Vibe Coding]
 excerpt: "The rise of AI-assisted software development has ushered in a new era of productivity, but has also created a clear dichotomy between 'vibe coding' and formal frameworks to ensure quality and governance."
-image: /assets/images/blog/2026/01/comparaison-methodologies-developpement-ia-bmad-vs-ralph/image-principale.png
+image: /assets/images/blog/2026/01/comparaison-methodologies-developpement-ia-bmad-vs-ralph/image-principale.webp
 keywords: [BMAD, Ralph, AI development, AI methodologies, vibe coding, agentic AI, AI-assisted development]
 difficulty: "Advanced"
 technologies: ["BMAD", "Ralph", "Git", "Agentic AI"]
