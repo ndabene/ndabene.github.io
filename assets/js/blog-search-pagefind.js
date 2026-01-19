@@ -39,10 +39,16 @@
             // Import dynamique moderne (ES6)
             const pagefindModule = await import('/pagefind/pagefind.js');
             pagefind = pagefindModule.default || pagefindModule;
+
+            // Récupérer les options de l'index
+            const options = await pagefind.options();
+
             isInitialized = true;
             console.log('✅ Pagefind initialisé avec succès');
+            console.log('📊 Options Pagefind:', options);
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation de Pagefind:', error);
+            console.error('📍 Vérifiez que /pagefind/pagefind.js existe et est accessible');
             // Fallback vers la recherche basique si Pagefind échoue
             initializeFallbackSearch();
         }
@@ -95,10 +101,21 @@
             const searchQuery = query && query.length >= 2 ? query : '';
             const search = await pagefind.search(searchQuery, searchOptions);
 
+            console.log(`🔍 Recherche Pagefind: "${searchQuery}"`, searchOptions);
+            console.log(`📝 Résultats trouvés: ${search.results.length}`);
+
             // Charger les données complètes des résultats
             const results = await Promise.all(
                 search.results.map(r => r.data())
             );
+
+            if (results.length > 0) {
+                console.log('📄 Premiers résultats:', results.slice(0, 3).map(r => ({
+                    title: r.meta?.title,
+                    url: r.url,
+                    excerpt: r.excerpt?.substring(0, 100)
+                })));
+            }
 
             displaySearchResults(results, query);
         } catch (error) {
