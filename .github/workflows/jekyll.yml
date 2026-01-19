@@ -144,16 +144,31 @@ jobs:
           npx pagefind --site _site \
             --output-path _site/pagefind \
             --glob "**/*.html" \
-            --exclude-selectors ".social-sharing-section, .post-meta, nav, footer, .breadcrumb, .reading-progress, .toc-perplexity-block" \
+            --exclude-selectors ".social-sharing-section, nav, footer, .breadcrumb, .reading-progress" \
+            --force-language "multi" \
+            --keep-index-url \
             --verbose
 
           echo ""
           echo "📊 Statistiques de l'indexation Pagefind:"
-          echo "   - Fichiers index générés: $(find _site/pagefind -name "*.pf_*" -type f | wc -l)"
-          echo "   - Taille totale de l'index: $(du -sh _site/pagefind | cut -f1)"
+          echo "   - Fichiers HTML trouvés: $(find _site -name "*.html" -type f | wc -l)"
+          echo "   - Articles FR trouvés: $(find _site/articles -name "*.html" -type f 2>/dev/null | wc -l)"
+          echo "   - Articles EN trouvés: $(find _site/en/articles -name "*.html" -type f 2>/dev/null | wc -l)"
+          echo "   - Fichiers index générés: $(find _site/pagefind -name "*.pf_*" -type f 2>/dev/null | wc -l)"
+          echo "   - Taille totale de l'index: $(du -sh _site/pagefind 2>/dev/null | cut -f1 || echo 'N/A')"
           echo ""
-          echo "📄 Échantillon des pages indexées:"
-          find _site -name "*.html" -path "*/articles/*" | head -10
+          echo "📄 Échantillon des pages indexées FR:"
+          find _site/articles -name "*.html" -type f 2>/dev/null | head -5 || echo "Aucun article FR trouvé"
+          echo ""
+          echo "📄 Échantillon des pages indexées EN:"
+          find _site/en/articles -name "*.html" -type f 2>/dev/null | head -5 || echo "Aucun article EN trouvé"
+          echo ""
+          echo "🔍 Test de recherche dans l'index:"
+          if [ -f "_site/pagefind/pagefind.js" ]; then
+            echo "   ✅ Index principal généré"
+          else
+            echo "   ❌ Index principal manquant"
+          fi
           echo ""
           echo "✅ Index Pagefind généré avec succès"
 
