@@ -2,6 +2,7 @@
 layout: post
 title: 'Gemini Canvas vs GPT-5 : qui crée mieux?'
 date: 2025-11-14
+ref: gemini-canvas-vs-gpt5-nov2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

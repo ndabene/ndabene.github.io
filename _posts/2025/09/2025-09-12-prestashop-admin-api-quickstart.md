@@ -2,6 +2,7 @@
 layout: post
 title: Contribuer à l'Admin API PrestaShop 9
 date: 2025-09-12
+ref: prestashop-admin-api-quickstart
 author: Nicolas Dabène
 categories:
 - PrestaShop

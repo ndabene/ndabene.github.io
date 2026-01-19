@@ -2,6 +2,7 @@
 layout: post
 title: Et si l'IA refusait votre code à tort?
 date: 2025-11-13
+ref: ia-biais-code-review-nov2025
 author: Nicolas Dabène
 categories:
 - IA

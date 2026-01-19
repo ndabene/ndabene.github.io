@@ -2,6 +2,7 @@
 layout: post
 title: 'Google Shopping & Black Friday 2025 : Guide'
 date: 2025-10-29
+ref: google-shopping-black-friday-2025-prestashop
 author: Nicolas Dabène
 categories:
 - Ecommerce

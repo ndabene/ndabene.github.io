@@ -2,6 +2,7 @@
 layout: post
 title: PrestaShop Enterprise vs Shopify Plus
 date: 2025-09-05
+ref: prestashop-enterprise-vs-shopify-plus
 author: Nicolas Dabène
 categories:
 - Ecommerce

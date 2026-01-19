@@ -2,6 +2,7 @@
 layout: post
 title: ChatGPT autorise les conversations érotiques
 date: 2025-12-02
+ref: chatgpt-erotic-conversations-openai-2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

@@ -2,6 +2,7 @@
 layout: post
 title: 'Gemini 2.5 Flash Image : révolution visuelle'
 date: 2025-08-27
+ref: gemini-flash-image-revolution
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

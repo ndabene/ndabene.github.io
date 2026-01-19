@@ -2,6 +2,7 @@
 layout: post
 title: "Comprendre le Model Context Protocol (MCP) : Une Conversation Simple"
 date: 2025-10-23
+ref: comprendre-mcp-conversation-simple-2025-10
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

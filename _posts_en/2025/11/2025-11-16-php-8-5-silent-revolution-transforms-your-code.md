@@ -2,6 +2,7 @@
 layout: post
 title: 'PHP 8.5: Boost Your App Performance – Essential Features Developers Need'
 date: 2025-11-16
+ref: php-85-boost-your-app-performance-essential-featur
 author: Nicolas Dabène
 categories:
 - PHP

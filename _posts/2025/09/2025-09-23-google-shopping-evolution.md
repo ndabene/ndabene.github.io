@@ -2,6 +2,7 @@
 layout: post
 title: 'Évolution de Google Shopping : Froogle à l''IA'
 date: 2025-09-23
+ref: google-shopping-evolution
 author: Nicolas Dabène
 categories:
 - Ecommerce

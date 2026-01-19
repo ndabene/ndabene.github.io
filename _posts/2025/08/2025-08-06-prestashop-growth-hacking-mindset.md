@@ -2,6 +2,7 @@
 layout: post
 title: Édition de modules PrestaShop et growth hacking
 date: 2025-08-06
+ref: prestashop-growth-hacking-mindset
 author: Nicolas Dabène
 categories:
 - PrestaShop

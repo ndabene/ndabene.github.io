@@ -20,3 +20,4 @@ Thumbs.db
 analyze_tags.py
 tag_analysis_report.txt
 .bmad-core
+missing_translations_report.md

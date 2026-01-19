@@ -2,6 +2,7 @@
 layout: post
 title: "AI Doesn't Replace Jobs, It Transforms How We Work"
 date: 2025-12-01
+ref: ai-doesnt-replace-jobs-it-transforms-how-we-work
 author: Nicolas Dabène
 categories:
 - artificial intelligence

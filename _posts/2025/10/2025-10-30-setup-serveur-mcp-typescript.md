@@ -2,6 +2,7 @@
 layout: post
 title: 'Créer votre premier serveur MCP : Setup'
 date: 2025-10-30
+ref: setup-serveur-mcp-typescript-2025-10
 author: Nicolas Dabène
 categories:
 - Tutoriel

@@ -2,6 +2,7 @@
 layout: post
 title: 'Vibe Coding vs Prompt-Driven : IA générative'
 date: 2025-06-15
+ref: vibe-coding-prompt-driven-development-2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

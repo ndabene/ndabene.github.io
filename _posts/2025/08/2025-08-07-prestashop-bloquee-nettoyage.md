@@ -2,6 +2,7 @@
 layout: post
 title: Boutique PrestaShop bloquée? Guide pratique
 date: 2025-08-07
+ref: prestashop-bloquee-nettoyage
 author: Nicolas Dabène
 categories:
 - PrestaShop

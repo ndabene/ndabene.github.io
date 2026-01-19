@@ -2,6 +2,7 @@
 layout: post
 title: 'IA et développement : éviter les pièges courants'
 date: 2025-12-09
+ref: ai-development-invisible-traps-2025
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

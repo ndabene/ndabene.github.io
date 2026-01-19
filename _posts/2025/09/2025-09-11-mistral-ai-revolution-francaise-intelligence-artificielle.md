@@ -2,6 +2,7 @@
 layout: post
 title: 'Mistral AI : révolution française de l''IA'
 date: 2025-09-11
+ref: mistral-ai-revolution-francaise-intelligence-artificielle
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

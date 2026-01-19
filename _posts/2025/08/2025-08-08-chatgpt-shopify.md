@@ -2,6 +2,7 @@
 layout: post
 title: 'ChatGPT × Shopify : le commerce conversationnel'
 date: 2025-08-08
+ref: chatgpt-shopify
 author: Nicolas Dabène
 categories:
 - Ecommerce

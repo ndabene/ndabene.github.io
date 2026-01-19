@@ -2,6 +2,7 @@
 layout: post
 title: 'PrestaShop : de projet étudiant à leader'
 date: 2025-07-24
+ref: prestashop-student-project-european-leader-2025
 author: Nicolas Dabène
 categories:
 - Ecommerce

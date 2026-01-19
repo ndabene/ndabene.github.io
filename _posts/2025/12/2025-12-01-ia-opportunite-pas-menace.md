@@ -2,6 +2,7 @@
 layout: post
 title: "L'IA ne remplace pas les métiers, elle transforme notre façon de travailler"
 date: 2025-12-01
+ref: ai-doesnt-replace-jobs-it-transforms-how-we-work
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

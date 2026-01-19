@@ -2,6 +2,7 @@
 layout: post
 title: 'FAQ et GEO : les clés du e-commerce de demain'
 date: 2025-10-07
+ref: faq-geo-essentielles-2025-10
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

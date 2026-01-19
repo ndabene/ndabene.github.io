@@ -2,6 +2,7 @@
 layout: post
 title: 'Perplexity Comet : navigateur intelligent 2025'
 date: 2025-10-22
+ref: perplexity-comet-revolution-ai-browser
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle

@@ -2,6 +2,7 @@
 layout: post
 title: 'OpenAI Agent Builder : créer des assistants IA'
 date: 2025-10-16
+ref: openai-agent-builder-personalized-ai-assistants
 author: Nicolas Dabène
 categories:
 - Intelligence Artificielle
