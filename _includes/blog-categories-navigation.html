@@ -1,15 +1,18 @@
 {% comment %}
-Navigation par catégories pour la page blog
-Affiche les catégories principales et leurs sous-catégories
+Navigation par catégories pour la page blog - Version navbar horizontale classique
+Affiche les catégories principales dans une barre horizontale avec onglets
 {% endcomment %}
 
-<section class="blog-categories-navigation">
-    <div class="categories-header">
-        <h2><i class="fas fa-folder-open"></i> Explorer par catégorie</h2>
-        <p class="categories-subtitle">Naviguez dans nos contenus par domaine d'expertise</p>
-    </div>
+<section class="blog-categories-navbar">
+    <div class="categories-nav-container">
+        <!-- Onglet "Tous les articles" -->
+        <button class="category-tab active" data-category="all">
+            <i class="fas fa-th"></i>
+            <span>Tous les articles</span>
+            <span class="tab-count">{{ include.posts.size }}</span>
+        </button>
 
-    <div class="categories-grid">
+        <!-- Onglets des catégories -->
         {% for category_item in site.data.blog_categories %}
             {% assign category_key = category_item[0] %}
             {% assign category = category_item[1] %}
@@ -17,393 +20,486 @@ Affiche les catégories principales et leurs sous-catégories
             {% comment %}Compter les articles de cette catégorie{% endcomment %}
             {% assign category_posts_count = 0 %}
             {% for post in include.posts %}
-                {% if post.category == category_key or post.categories contains category.name %}
+                {% if post.category == category_key %}
                     {% assign category_posts_count = category_posts_count | plus: 1 %}
                 {% endif %}
             {% endfor %}
 
-            <div class="category-card">
-                <div class="category-card-header">
-                    <div class="category-icon">
-                        <i class="fas {{ category.icon }}"></i>
-                    </div>
-                    <div class="category-main-info">
-                        <h3>{{ category.name }}</h3>
-                        <p class="category-description">{{ category.description }}</p>
-                        <span class="category-count">{{ category_posts_count }} articles</span>
-                    </div>
-                </div>
+            {% if category_posts_count > 0 %}
+            <button class="category-tab"
+                    data-category="{{ category_key }}"
+                    data-has-subcategories="{% if category.subcategories and category.subcategories.size > 0 %}true{% else %}false{% endif %}">
+                <i class="fas {{ category.icon }}"></i>
+                <span>{{ category.name }}</span>
+                <span class="tab-count">{{ category_posts_count }}</span>
+            </button>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Sous-catégories (affichées quand une catégorie est sélectionnée) -->
+    <div class="subcategories-bar" id="subcategories-bar" style="display: none;">
+        <div class="subcategories-container">
+            <button class="subcategory-btn active" data-subcategory="all">
+                Toutes les sous-catégories
+            </button>
+
+            {% for category_item in site.data.blog_categories %}
+                {% assign category_key = category_item[0] %}
+                {% assign category = category_item[1] %}
 
                 {% if category.subcategories and category.subcategories.size > 0 %}
-                <div class="subcategories-list">
+                <div class="subcategories-group" data-parent-category="{{ category_key }}" style="display: none;">
                     {% for subcategory in category.subcategories %}
                         {% comment %}Compter les articles de cette sous-catégorie{% endcomment %}
                         {% assign subcat_posts_count = 0 %}
                         {% for post in include.posts %}
-                            {% if post.subcategory == subcategory.key %}
+                            {% if post.subcategory == subcategory.key and post.category == category_key %}
                                 {% assign subcat_posts_count = subcat_posts_count | plus: 1 %}
                             {% endif %}
                         {% endfor %}
 
                         {% if subcat_posts_count > 0 %}
-                        <a href="#"
-                           class="subcategory-link"
-                           data-category="{{ category_key }}"
-                           data-subcategory="{{ subcategory.key }}"
-                           title="{{ subcategory.description }}">
-                            <span class="subcategory-name">{{ subcategory.name }}</span>
-                            <span class="subcategory-count">({{ subcat_posts_count }})</span>
-                        </a>
+                        <button class="subcategory-btn"
+                                data-subcategory="{{ subcategory.key }}"
+                                title="{{ subcategory.description }}">
+                            {{ subcategory.name }} <span class="sub-count">({{ subcat_posts_count }})</span>
+                        </button>
                         {% endif %}
                     {% endfor %}
                 </div>
                 {% endif %}
-
-                <a href="#"
-                   class="category-view-all"
-                   data-category="{{ category_key }}">
-                    Voir tous les articles <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 
-    <div class="active-category-filter" id="active-category-filter" style="display: none;">
-        <span class="filter-label">Filtré par :</span>
-        <div class="filter-badge">
-            <span id="active-filter-text"></span>
-            <button class="remove-filter-btn" id="remove-category-filter">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
+    <!-- Badge de filtre actif -->
+    <div class="active-filter-badge" id="active-filter-badge" style="display: none;">
+        <span class="filter-text">
+            <i class="fas fa-filter"></i>
+            <span id="filter-text-content"></span>
+        </span>
+        <button class="clear-filter-btn" id="clear-filter-btn">
+            <i class="fas fa-times"></i> Réinitialiser
+        </button>
     </div>
 </section>
 
 <style>
-.blog-categories-navigation {
-    margin: 3rem 0;
-    padding: 2rem 0;
-}
-
-.categories-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.categories-header h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-color-primary, #1a1a1a);
-    margin-bottom: 0.5rem;
-}
-
-.categories-header h2 i {
-    color: var(--primary-color, #2c5aa0);
-    margin-right: 0.5rem;
-}
-
-.categories-subtitle {
-    font-size: 1rem;
-    color: var(--text-color-secondary, #666);
-    margin: 0;
-}
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.category-card {
+.blog-categories-navbar {
     background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    border-bottom: 2px solid #e5e7eb;
+    margin: 2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.category-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-    border-color: var(--primary-color, #2c5aa0);
+.categories-nav-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.5rem;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
 }
 
-.category-card-header {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+.categories-nav-container::-webkit-scrollbar {
+    height: 6px;
 }
 
-.category-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    display: flex;
+.categories-nav-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.categories-nav-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.category-tab {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #f9fafb;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
     flex-shrink: 0;
 }
 
-.category-icon i {
-    font-size: 1.5rem;
-    color: white;
+.category-tab:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
 }
 
-.category-main-info {
-    flex: 1;
-}
-
-.category-main-info h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-color-primary, #1a1a1a);
-    margin: 0 0 0.5rem 0;
-}
-
-.category-description {
-    font-size: 0.875rem;
-    color: var(--text-color-secondary, #666);
-    margin: 0 0 0.5rem 0;
-    line-height: 1.4;
-}
-
-.category-count {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--primary-color, #2c5aa0);
-    background: rgba(44, 90, 160, 0.1);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-}
-
-.subcategories-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding-top: 0.5rem;
-    border-top: 1px solid #f3f4f6;
-}
-
-.subcategory-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 0.375rem 0.75rem;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    font-size: 0.8125rem;
-    color: var(--text-color-primary, #1a1a1a);
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.subcategory-link:hover {
+.category-tab.active {
     background: var(--primary-color, #2c5aa0);
     color: white;
     border-color: var(--primary-color, #2c5aa0);
 }
 
-.subcategory-count {
-    font-size: 0.75rem;
-    opacity: 0.7;
+.category-tab i {
+    font-size: 1rem;
 }
 
-.category-view-all {
+.tab-count {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 0.5rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.category-tab.active .tab-count {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.subcategories-bar {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+}
+
+.subcategories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.subcategories-group {
+    display: contents;
+}
+
+.subcategory-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.subcategory-btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.subcategory-btn.active {
+    background: var(--primary-color, #2c5aa0);
+    color: white;
+    border-color: var(--primary-color, #2c5aa0);
+}
+
+.sub-count {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.active-filter-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #eff6ff;
+    border-top: 1px solid #bfdbfe;
+}
+
+.filter-text {
+    display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary-color, #2c5aa0);
-    text-decoration: none;
-    margin-top: auto;
-    padding-top: 0.5rem;
-    transition: gap 0.2s ease;
+    font-weight: 500;
+    color: #1e40af;
 }
 
-.category-view-all:hover {
-    gap: 0.75rem;
+.filter-text i {
+    color: #3b82f6;
 }
 
-.category-view-all i {
-    font-size: 0.75rem;
-}
-
-.active-category-filter {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #f0f9ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
-.filter-label {
-    font-weight: 600;
-    color: var(--text-color-primary, #1a1a1a);
-}
-
-.filter-badge {
-    display: flex;
+.clear-filter-btn {
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     background: white;
+    border: 1px solid #bfdbfe;
     border-radius: 6px;
     font-size: 0.875rem;
-}
-
-.remove-filter-btn {
-    background: none;
-    border: none;
-    color: #ef4444;
+    font-weight: 500;
+    color: #1e40af;
     cursor: pointer;
-    padding: 0.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-.remove-filter-btn:hover {
-    color: #dc2626;
+.clear-filter-btn:hover {
+    background: #f0f9ff;
+    border-color: #3b82f6;
+}
+
+.clear-filter-btn i {
+    color: #ef4444;
 }
 
 @media (max-width: 768px) {
-    .categories-grid {
-        grid-template-columns: 1fr;
+    .category-tab {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
     }
 
-    .categories-header h2 {
-        font-size: 1.5rem;
+    .subcategory-btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.8125rem;
     }
 }
 </style>
 
 <script>
-// Gestion du filtrage par catégorie
-document.addEventListener('DOMContentLoaded', function() {
-    const categoryLinks = document.querySelectorAll('[data-category]');
-    const activeFilterSection = document.getElementById('active-category-filter');
-    const activeFilterText = document.getElementById('active-filter-text');
-    const removeFilterBtn = document.getElementById('remove-category-filter');
-    const postsContainer = document.getElementById('blog-posts-container');
+// Gestion de la navigation par catégories et filtrage
+(function() {
+    'use strict';
 
-    let currentFilter = null;
+    // Attendre que le DOM soit chargé
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCategoryNavigation);
+    } else {
+        initCategoryNavigation();
+    }
 
-    // Fonction pour filtrer les articles
-    function filterPostsByCategory(category, subcategory = null) {
-        const posts = postsContainer.querySelectorAll('.post-preview-wrapper');
-        let visibleCount = 0;
+    function initCategoryNavigation() {
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const subcategoriesBar = document.getElementById('subcategories-bar');
+        const subcategoryBtns = document.querySelectorAll('.subcategory-btn');
+        const activeFilterBadge = document.getElementById('active-filter-badge');
+        const filterTextContent = document.getElementById('filter-text-content');
+        const clearFilterBtn = document.getElementById('clear-filter-btn');
+        const postsContainer = document.getElementById('blog-posts-container');
 
-        posts.forEach(post => {
-            const postElement = post.querySelector('.post-preview-news');
-            if (!postElement) return;
+        let currentCategory = 'all';
+        let currentSubcategory = 'all';
 
-            // Récupérer les données du post (à adapter selon votre structure)
-            const postCategory = postElement.dataset.category || '';
-            const postSubcategory = postElement.dataset.subcategory || '';
+        // Gérer le clic sur les onglets de catégories
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.dataset.category;
+                const hasSubcategories = this.dataset.hasSubcategories === 'true';
 
-            let shouldShow = false;
+                // Mettre à jour l'onglet actif
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
 
-            if (subcategory) {
-                // Filtrage par sous-catégorie
-                shouldShow = postSubcategory === subcategory;
-            } else {
-                // Filtrage par catégorie principale
-                shouldShow = postCategory === category;
-            }
+                // Afficher/masquer la barre de sous-catégories
+                if (category === 'all') {
+                    subcategoriesBar.style.display = 'none';
+                    resetFilters();
+                } else {
+                    currentCategory = category;
+                    currentSubcategory = 'all';
 
-            if (shouldShow) {
-                post.style.display = '';
-                visibleCount++;
-            } else {
-                post.style.display = 'none';
-            }
+                    if (hasSubcategories) {
+                        showSubcategories(category);
+                    } else {
+                        subcategoriesBar.style.display = 'none';
+                    }
+
+                    filterPosts(category, 'all');
+                }
+            });
         });
 
-        // Mettre à jour le badge de filtre actif
-        if (category) {
-            currentFilter = { category, subcategory };
-            const categoryName = document.querySelector(`[data-category="${category}"]`)?.closest('.category-card')?.querySelector('h3')?.textContent || category;
-            let filterText = categoryName;
+        // Gérer le clic sur les sous-catégories
+        subcategoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const subcategory = this.dataset.subcategory;
 
-            if (subcategory) {
-                const subcatName = document.querySelector(`[data-subcategory="${subcategory}"]`)?.querySelector('.subcategory-name')?.textContent || subcategory;
+                // Mettre à jour le bouton actif
+                const parentGroup = this.closest('.subcategories-group');
+                if (parentGroup) {
+                    parentGroup.querySelectorAll('.subcategory-btn').forEach(b => b.classList.remove('active'));
+                } else {
+                    document.querySelectorAll('.subcategory-btn').forEach(b => b.classList.remove('active'));
+                }
+                this.classList.add('active');
+
+                currentSubcategory = subcategory;
+                filterPosts(currentCategory, subcategory);
+            });
+        });
+
+        // Gérer le bouton de réinitialisation
+        if (clearFilterBtn) {
+            clearFilterBtn.addEventListener('click', resetFilters);
+        }
+
+        // Afficher les sous-catégories d'une catégorie
+        function showSubcategories(category) {
+            // Masquer tous les groupes de sous-catégories
+            document.querySelectorAll('.subcategories-group').forEach(group => {
+                group.style.display = 'none';
+            });
+
+            // Afficher le groupe correspondant
+            const targetGroup = document.querySelector(`.subcategories-group[data-parent-category="${category}"]`);
+            if (targetGroup) {
+                targetGroup.style.display = 'contents';
+                subcategoriesBar.style.display = 'block';
+
+                // Réinitialiser le bouton "Toutes les sous-catégories"
+                const allSubBtn = document.querySelector('.subcategory-btn[data-subcategory="all"]');
+                if (allSubBtn) {
+                    document.querySelectorAll('.subcategory-btn').forEach(b => b.classList.remove('active'));
+                    allSubBtn.classList.add('active');
+                }
+            }
+        }
+
+        // Filtrer les articles
+        function filterPosts(category, subcategory) {
+            if (!postsContainer) return;
+
+            const posts = postsContainer.querySelectorAll('.post-preview-wrapper, article.post-preview-news');
+            let visibleCount = 0;
+
+            posts.forEach(post => {
+                // Chercher l'élément article à l'intérieur si nécessaire
+                const articleElement = post.classList.contains('post-preview-news')
+                    ? post
+                    : post.querySelector('.post-preview-news');
+
+                if (!articleElement) {
+                    post.style.display = 'none';
+                    return;
+                }
+
+                const postCategory = articleElement.dataset.category || '';
+                const postSubcategory = articleElement.dataset.subcategory || '';
+
+                let shouldShow = false;
+
+                if (category === 'all') {
+                    shouldShow = true;
+                } else if (subcategory === 'all') {
+                    shouldShow = postCategory === category;
+                } else {
+                    shouldShow = postCategory === category && postSubcategory === subcategory;
+                }
+
+                if (shouldShow) {
+                    post.style.display = '';
+                    visibleCount++;
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+
+            // Mettre à jour le badge de filtre
+            updateFilterBadge(category, subcategory, visibleCount);
+
+            // Mettre à jour le compteur
+            updateCounter(visibleCount);
+
+            // Gérer le message "aucun résultat"
+            showNoResults(visibleCount === 0);
+        }
+
+        // Mettre à jour le badge de filtre actif
+        function updateFilterBadge(category, subcategory, count) {
+            if (category === 'all') {
+                activeFilterBadge.style.display = 'none';
+                return;
+            }
+
+            const categoryTab = document.querySelector(`.category-tab[data-category="${category}"]`);
+            const categoryName = categoryTab ? categoryTab.querySelector('span:not(.tab-count)').textContent : category;
+
+            let filterText = `${categoryName}`;
+
+            if (subcategory !== 'all') {
+                const subcatBtn = document.querySelector(`.subcategory-btn[data-subcategory="${subcategory}"]`);
+                const subcatName = subcatBtn ? subcatBtn.textContent.replace(/\(\d+\)/, '').trim() : subcategory;
                 filterText += ` → ${subcatName}`;
             }
 
-            activeFilterText.textContent = filterText;
-            activeFilterSection.style.display = 'flex';
+            filterText += ` (${count} article${count > 1 ? 's' : ''})`;
+
+            filterTextContent.textContent = filterText;
+            activeFilterBadge.style.display = 'flex';
         }
 
-        // Mettre à jour le compteur
-        const countElement = document.getElementById('filtered-count');
-        if (countElement) {
-            countElement.textContent = `(${visibleCount})`;
+        // Mettre à jour le compteur d'articles
+        function updateCounter(count) {
+            const countElement = document.getElementById('filtered-count');
+            if (countElement) {
+                countElement.textContent = `(${count})`;
+            }
         }
 
-        // Gérer le message "aucun résultat"
-        const noResults = document.getElementById('no-results');
-        if (noResults) {
-            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        // Afficher/masquer le message "aucun résultat"
+        function showNoResults(show) {
+            const noResults = document.getElementById('no-results');
+            if (noResults) {
+                noResults.style.display = show ? 'block' : 'none';
+            }
+        }
+
+        // Réinitialiser tous les filtres
+        function resetFilters() {
+            currentCategory = 'all';
+            currentSubcategory = 'all';
+
+            // Réactiver l'onglet "Tous les articles"
+            categoryTabs.forEach(t => t.classList.remove('active'));
+            const allTab = document.querySelector('.category-tab[data-category="all"]');
+            if (allTab) {
+                allTab.classList.add('active');
+            }
+
+            // Masquer la barre de sous-catégories
+            subcategoriesBar.style.display = 'none';
+
+            // Afficher tous les articles
+            if (postsContainer) {
+                const posts = postsContainer.querySelectorAll('.post-preview-wrapper, article.post-preview-news');
+                posts.forEach(post => {
+                    post.style.display = '';
+                });
+
+                updateCounter(posts.length);
+            }
+
+            // Masquer le badge de filtre
+            activeFilterBadge.style.display = 'none';
+
+            // Masquer le message "aucun résultat"
+            showNoResults(false);
+        }
+
+        // Lier avec le bouton "Réinitialiser les filtres" existant
+        const resetFiltersBtn = document.getElementById('reset-filters');
+        if (resetFiltersBtn) {
+            resetFiltersBtn.addEventListener('click', resetFilters);
         }
     }
-
-    // Réinitialiser le filtre
-    function resetFilter() {
-        const posts = postsContainer.querySelectorAll('.post-preview-wrapper');
-        posts.forEach(post => {
-            post.style.display = '';
-        });
-
-        activeFilterSection.style.display = 'none';
-        currentFilter = null;
-
-        // Mettre à jour le compteur
-        const countElement = document.getElementById('filtered-count');
-        if (countElement) {
-            countElement.textContent = `(${posts.length})`;
-        }
-
-        // Cacher le message "aucun résultat"
-        const noResults = document.getElementById('no-results');
-        if (noResults) {
-            noResults.style.display = 'none';
-        }
-    }
-
-    // Event listeners pour les liens de catégories
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const category = this.dataset.category;
-            const subcategory = this.dataset.subcategory || null;
-            filterPostsByCategory(category, subcategory);
-
-            // Scroll vers les articles
-            postsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
-
-    // Event listener pour retirer le filtre
-    if (removeFilterBtn) {
-        removeFilterBtn.addEventListener('click', resetFilter);
-    }
-
-    // Event listener pour le bouton "Réinitialiser les filtres"
-    const resetFiltersBtn = document.getElementById('reset-filters');
-    if (resetFiltersBtn) {
-        resetFiltersBtn.addEventListener('click', resetFilter);
-    }
-});
+})();
 </script>
