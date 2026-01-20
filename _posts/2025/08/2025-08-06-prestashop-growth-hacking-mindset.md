@@ -4,6 +4,8 @@ title: Édition de modules PrestaShop et growth hacking
 date: 2025-08-06
 ref: prestashop-growth-hacking-mindset
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - PrestaShop
 - Entrepreneuriat
@@ -69,6 +71,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Quand l'édition de modules PrestaShop rencontre le growth hacking : mindset, méthodes et points de convergence
 

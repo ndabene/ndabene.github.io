@@ -1,10 +1,12 @@
 ---
 layout: post
-title: Rapport exhaustif sur les protocoles de sécurité et les standards de développement pour les modules PrestaShop
+title: Rapport exhaustif sur les protocoles de sécurité et les standards de développement
+  pour les modules PrestaShop
 date: 2026-01-05
-lang: fr
 ref: rapport-securite-modules-prestashop
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - sécurité
@@ -18,14 +20,9 @@ tags:
 - compliance
 - php
 - Symfony
-excerpt: Référentiel complet pour concevoir des modules PrestaShop 1.7 et 8 durcis contre SQLi, XSS, CSRF et traversées de répertoire.
+excerpt: Référentiel complet pour concevoir des modules PrestaShop 1.7 et 8 durcis
+  contre SQLi, XSS, CSRF et traversées de répertoire.
 image: /assets/images/blog/2026/01/rapport-securite-modules-prestashop/image-principale.webp
-keywords:
-- PrestaShop
-- sécurité
-- Modules PrestaShop
-- Standards de développement
-- Validation des données
 difficulty: Avancé
 technologies:
 - PrestaShop 1.7
@@ -33,7 +30,15 @@ technologies:
 - PHP 8
 - Symfony
 estimated_reading_time: 18 minutes
+lang: fr
+keywords:
+- PrestaShop
+- sécurité
+- Modules PrestaShop
+- Standards de développement
+- Validation des données
 ---
+
 
 # Rapport exhaustif sur les protocoles de sécurité et les standards de développement pour les modules PrestaShop
 

@@ -3,11 +3,15 @@ Template d'article style "site de presse" - format horizontal compact
 Usage: {% include post-preview-news.html post=post %}
 {% endcomment %}
 
-<article class="post-preview-news" data-categories="{{ post.categories | join: ' ' }}"
-    data-tags="{{ post.tags | join: ' ' }}" data-date="{{ post.date | date: '%s' }}"
-    data-read-time="{{ post.read_time_minutes | default: 5 }}" {% if post.image_display
-    %}data-image-display="{{ post.image_display }}" {% endif %} {% if post.image_position
-    %}data-image-position="{{ post.image_position }}" {% endif %}>
+<article class="post-preview-news"
+    data-category="{{ post.category }}"
+    data-subcategory="{{ post.subcategory }}"
+    data-categories="{{ post.categories | join: ' ' }}"
+    data-tags="{{ post.tags | join: ' ' }}"
+    data-date="{{ post.date | date: '%s' }}"
+    data-read-time="{{ post.read_time_minutes | default: 5 }}"
+    {% if post.image_display %}data-image-display="{{ post.image_display }}"{% endif %}
+    {% if post.image_position %}data-image-position="{{ post.image_position }}"{% endif %}>
 
     <div class="post-news-content">
         <!-- Vignette compacte -->

@@ -4,6 +4,8 @@ title: 'PHP : histoire d''un langage incontournable'
 date: 2025-07-30
 ref: php-history-language-2025
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - PHP
 - développement
@@ -66,6 +68,7 @@ faq:
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
 ---
+
 
 # PHP : L'Histoire d'un Langage Incontournable, de ses Débuts à 2025
 

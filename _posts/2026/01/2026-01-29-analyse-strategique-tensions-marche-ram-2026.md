@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Analyse Stratégique Globale : Les Tensions Structurelles sur le Marché de la Mémoire Vive (RAM) et du Stockage en 2026"
+title: 'Analyse Stratégique Globale : Les Tensions Structurelles sur le Marché de
+  la Mémoire Vive (RAM) et du Stockage en 2026'
 date: 2026-01-29
-lang: fr
 ref: ram-storage-crisis-2026
 author: Nicolas Dabène
+category: retrospectives
+subcategory: analyses-approfondies
 categories:
 - Analyse
 - Hardware
@@ -16,8 +18,11 @@ tags:
 - ai
 - supply-chain
 - geopolitics
-excerpt: >
-  L'année 2026 marque une rupture fondamentale dans l'industrie des semi-conducteurs. La mémoire n'est plus une commodité mais un actif stratégique critique, dont la rareté redessine les cartes de la puissance technologique mondiale.
+excerpt: 'L''année 2026 marque une rupture fondamentale dans l''industrie des semi-conducteurs.
+  La mémoire n''est plus une commodité mais un actif stratégique critique, dont la
+  rareté redessine les cartes de la puissance technologique mondiale.
+
+  '
 image: /assets/images/blog/2026/01/analyse-strategique-tensions-marche-ram-2026/image-principale.webp
 difficulty: ⭐️⭐️⭐️⭐️
 technologies:
@@ -26,6 +31,7 @@ technologies:
 - AI
 - Supply Chain
 estimated_reading_time: 25 minutes
+lang: fr
 keywords:
 - RAM
 - HBM
@@ -40,8 +46,9 @@ keywords:
 - SK Hynix
 - Micron
 - Nexperia
-source: "Analyse de marché technologique 2026"
+source: Analyse de marché technologique 2026
 ---
+
 
 # Analyse Stratégique Globale : Les Tensions Structurelles sur le Marché de la Mémoire Vive (RAM) et du Stockage en 2026
 

@@ -4,6 +4,8 @@ title: Et si l'IA refusait votre code à tort?
 date: 2025-11-13
 ref: ia-biais-code-review-nov2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: securite-ia
 categories:
 - IA
 - développement
@@ -18,12 +20,12 @@ excerpt: Et si l'IA rejetait ton code non pas parce qu'il est mauvais, mais parc
 image: /assets/images/blog/2025/11/ia-biais-code-review.webp
 featured: true
 difficulty: Avancé
-estimated_reading_time: 10 minutes
 technologies:
 - IA générative
 - LLM
 - GitHub Copilot
 - SonarQube
+estimated_reading_time: 10 minutes
 faq:
 - question: Pourquoi les outils de code review IA ne sont-ils pas neutres ?
   answer: Aucune IA n'est neutre car toute IA est le reflet de ses données, concepteurs
@@ -56,6 +58,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # 🧠 Et si l'IA rejetait ton code pour de mauvaises raisons ?
 ## Les biais cachés des outils de code review automatisés

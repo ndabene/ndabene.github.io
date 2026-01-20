@@ -4,6 +4,8 @@ title: 'Doctolib : de l''idée à la licorne (2013-2025)'
 date: 2025-09-30
 ref: doctolib-2013-2025-histoire-innovations-ia
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - Success Story
 - Analyse Marché
@@ -51,6 +53,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 Doctolib est devenue en à peine douze ans l'une des success stories les plus remarquables de la French Tech, transformant radicalement la manière dont les Français prennent leurs rendez-vous médicaux. Retour sur l'épopée d'une startup qui a su révolutionner le secteur de la santé numérique.
 

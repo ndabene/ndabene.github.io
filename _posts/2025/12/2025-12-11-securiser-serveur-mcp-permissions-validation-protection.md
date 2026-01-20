@@ -4,6 +4,8 @@ title: Comment sécuriser un serveur MCP?
 date: 2025-12-11
 ref: secure-mcp-server-permissions-2025
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - Tutoriel
 - Intelligence Artificielle
@@ -47,6 +49,7 @@ faq:
   answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
     est open-source et d'autres IA pourront l'adopter.
 ---
+
 
 # Sécuriser votre Serveur MCP : Permissions, Validation et Protection
 

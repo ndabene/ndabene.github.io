@@ -4,6 +4,8 @@ title: 'Grok expose ses prompts : leçons de sécurité'
 date: 2025-08-19
 ref: grok-prompt-leak-security
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: developpement-assiste
 categories:
 - Intelligence Artificielle
 - sécurité
@@ -45,6 +47,7 @@ faq:
   answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
     MCP pour accéder à des données externes.
 ---
+
 
 La récente exposition accidentelle des prompts système internes de Grok, le chatbot de xAI, illustre parfaitement pourquoi la sécurité des systèmes d'IA générative ne peut pas être prise à la légère. En tant que développeur travaillant quotidiennement avec des APIs d'IA, cette faille me rappelle l'importance cruciale des bonnes pratiques de sécurité.
 

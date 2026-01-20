@@ -4,6 +4,8 @@ title: Automatiser Facebook et Instagram avec n8n
 date: 2025-11-06
 ref: automatiser-publications-facebook-instagram-n8n-guide-salvateur-nov2025
 author: Nicolas Dabène
+category: automatisation
+subcategory: outils-automatisation
 categories:
 - développement
 - Intelligence Artificielle
@@ -50,6 +52,7 @@ faq:
   answer: Selon votre expérience, comptez entre 30 minutes et 2 heures pour une première
     mise en place.
 ---
+
 
 # Automatiser vos Publications Facebook et Instagram avec n8n : Le Guide Salvateur
 

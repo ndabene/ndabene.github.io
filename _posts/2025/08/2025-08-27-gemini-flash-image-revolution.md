@@ -4,6 +4,8 @@ title: 'Gemini 2.5 Flash Image : révolution visuelle'
 date: 2025-08-27
 ref: gemini-flash-image-revolution
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - Innovation
@@ -68,6 +70,7 @@ faq:
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
 ---
+
 
 # Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin
 

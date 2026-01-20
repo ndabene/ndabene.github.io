@@ -3,6 +3,8 @@ layout: post
 title: Guide définitif pour mesurer le GEO
 date: 2025-11-03
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Intelligence Artificielle
 - développement
@@ -81,6 +83,7 @@ sources:
   organization: Perplexity AI
   type: Report
 ---
+
 
 # Le Guide Définitif pour Mesurer le GEO : Du Classement SEO à l'Influence IA
 

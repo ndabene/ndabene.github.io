@@ -4,6 +4,8 @@ title: Évolution des compétences des développeurs
 date: 2025-11-10
 ref: evolution-competences-developpeurs-nov2025
 author: Nicolas Dabène
+category: strategie-marche
+subcategory: carriere-competences
 categories:
 - développement
 - Intelligence Artificielle
@@ -54,6 +56,7 @@ faq:
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
 ---
+
 
 # Évolution des Compétences des Développeurs : de l'Expertise Technique à l'Hybride Visionnaire
 

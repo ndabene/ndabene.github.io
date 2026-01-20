@@ -4,6 +4,8 @@ title: 'Black Friday 2025 : la révolution GEO arrive sur PrestaShop'
 date: 2025-09-16
 ref: black-friday-geo-suite
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - PrestaShop
 - Ecommerce
@@ -46,6 +48,7 @@ faq:
   answer: Oui, PrestaShop est nativement multilingue et multi-devises, parfait pour
     l'international.
 ---
+
 
 # Black Friday 2025 : La révolution GEO arrive sur PrestaShop
 

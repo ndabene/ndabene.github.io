@@ -4,6 +4,8 @@ title: Optimiser PrestaShop avec le lazy loading
 date: 2025-10-02
 ref: lazy-loading-prestashop-2025-10
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - développement
@@ -54,6 +56,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Optimiser vos modules PrestaShop avec le lazy loading des services Symfony
 

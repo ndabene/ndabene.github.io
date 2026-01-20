@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "PrestaShop rejoint cyber_Folks & Sylius : Le Big Bang de l'Open Source Européen (et ce que ça change pour vous)"
+title: 'PrestaShop rejoint cyber_Folks & Sylius : Le Big Bang de l''Open Source Européen
+  (et ce que ça change pour vous)'
 date: 2025-12-13
-lang: fr
 ref: prestashop-cyberfolks-sylius-alliance
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: alternatives
 categories:
 - e-commerce
 - Tech Watch
@@ -16,8 +18,12 @@ tags:
 - opensource
 - ecosystem
 - business
-excerpt: >
-  C'est officiel : PrestaShop rejoint l'écosystème cyber_Folks aux côtés de Sylius. Ce n'est pas juste une acquisition, c'est la naissance d'une superpuissance européenne du e-commerce sous la bannière de Symfony. Analyse d'un séisme tech et des opportunités massives pour les développeurs et marchands.
+excerpt: 'C''est officiel : PrestaShop rejoint l''écosystème cyber_Folks aux côtés
+  de Sylius. Ce n''est pas juste une acquisition, c''est la naissance d''une superpuissance
+  européenne du e-commerce sous la bannière de Symfony. Analyse d''un séisme tech
+  et des opportunités massives pour les développeurs et marchands.
+
+  '
 image: /assets/images/blog/2025/12/2025-12-13-prestashop-sylius-alliance.webp
 featured: true
 difficulty: Intermédiaire
@@ -28,13 +34,24 @@ technologies:
 - Symfony
 estimated_reading_time: 15 minutes
 faq:
-- question: "Qu'est-ce que l'acquisition de PrestaShop par cyber_Folks change concrètement ?"
-  answer: "Cette acquisition crée un continuum technologique autour de Symfony, permettant aux marchands de grandir de PrestaShop (PME) vers Sylius (grandes entreprises) sans changer d'écosystème. Les développeurs bénéficient d'une convergence des compétences."
-- question: "Pourquoi Symfony est-il central dans cette alliance ?"
-  answer: "Symfony est le framework PHP standard de l'industrie. PrestaShop migre progressivement vers Symfony depuis la version 1.7, et Sylius est nativement bâti sur Symfony. Cela signifie une base de code commune, facilitant l'interopérabilité et la montée en compétence."
-- question: "Est-ce que mes modules PrestaShop vont encore fonctionner ?"
-  answer: "Oui, PrestaShop conserve sa stratégie de compatibilité progressive. Cette alliance renforce la vision long terme de l'écosystème, garantissant une meilleure stabilité pour les modules existants tout en ouvrant de nouvelles possibilités."
+- question: Qu'est-ce que l'acquisition de PrestaShop par cyber_Folks change concrètement
+    ?
+  answer: Cette acquisition crée un continuum technologique autour de Symfony, permettant
+    aux marchands de grandir de PrestaShop (PME) vers Sylius (grandes entreprises)
+    sans changer d'écosystème. Les développeurs bénéficient d'une convergence des
+    compétences.
+- question: Pourquoi Symfony est-il central dans cette alliance ?
+  answer: Symfony est le framework PHP standard de l'industrie. PrestaShop migre progressivement
+    vers Symfony depuis la version 1.7, et Sylius est nativement bâti sur Symfony.
+    Cela signifie une base de code commune, facilitant l'interopérabilité et la montée
+    en compétence.
+- question: Est-ce que mes modules PrestaShop vont encore fonctionner ?
+  answer: Oui, PrestaShop conserve sa stratégie de compatibilité progressive. Cette
+    alliance renforce la vision long terme de l'écosystème, garantissant une meilleure
+    stabilité pour les modules existants tout en ouvrant de nouvelles possibilités.
+lang: fr
 ---
+
 
 ## 🧠 Introduction
 

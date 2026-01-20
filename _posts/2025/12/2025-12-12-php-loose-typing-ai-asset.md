@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Arrêtez de vouloir transformer PHP en Java : Pourquoi le typage faible est votre meilleur atout à l'ère de l'IA"
+title: 'Arrêtez de vouloir transformer PHP en Java : Pourquoi le typage faible est
+  votre meilleur atout à l''ère de l''IA'
 date: 2025-12-12
-lang: fr
 ref: php-loose-typing-ai-asset
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - PHP
 - IA
@@ -15,8 +17,12 @@ tags:
 - best practices
 - type juggling
 - resilience
-excerpt: >
-  On nous répète que le "code propre" doit être strictement typé. C'est faux. À l'heure où nous devons intégrer des IA imprévisibles qui génèrent des données imparfaites, la souplesse native de PHP n'est pas une faiblesse, c'est un super-pouvoir de résilience.
+excerpt: 'On nous répète que le "code propre" doit être strictement typé. C''est faux.
+  À l''heure où nous devons intégrer des IA imprévisibles qui génèrent des données
+  imparfaites, la souplesse native de PHP n''est pas une faiblesse, c''est un super-pouvoir
+  de résilience.
+
+  '
 image: /assets/images/blog/2025/12/2025-12-12-php-flexible-typing-ai.webp
 difficulty: Avancé
 technologies:
@@ -25,13 +31,19 @@ technologies:
 - JSON
 estimated_reading_time: 12 minutes
 faq:
-- question: "Le typage strict n'est-il pas toujours préférable ?"
-  answer: "Le typage strict est excellent pour la logique métier interne. Mais aux frontières de l'application (APIs, IA, entrées utilisateur), le typage faible offre une résilience précieuse face aux données imparfaites."
-- question: "Ces principes s'appliquent-ils à d'autres langages ?"
-  answer: "Oui ! Le concept de 'defensive programming' aux frontières des systèmes s'applique partout. Mais PHP a l'avantage d'avoir cette flexibilité intégrée nativement."
-- question: "Puis-je mélanger typage strict et faible dans un même projet ?"
-  answer: "Absolument ! C'est même recommandé : strict pour votre core métier, faible pour vos adaptateurs/contrôleurs qui dialoguent avec l'extérieur."
+- question: Le typage strict n'est-il pas toujours préférable ?
+  answer: Le typage strict est excellent pour la logique métier interne. Mais aux
+    frontières de l'application (APIs, IA, entrées utilisateur), le typage faible
+    offre une résilience précieuse face aux données imparfaites.
+- question: Ces principes s'appliquent-ils à d'autres langages ?
+  answer: Oui ! Le concept de 'defensive programming' aux frontières des systèmes
+    s'applique partout. Mais PHP a l'avantage d'avoir cette flexibilité intégrée nativement.
+- question: Puis-je mélanger typage strict et faible dans un même projet ?
+  answer: 'Absolument ! C''est même recommandé : strict pour votre core métier, faible
+    pour vos adaptateurs/contrôleurs qui dialoguent avec l''extérieur.'
+lang: fr
 ---
+
 
 # Arrêtez de vouloir transformer PHP en Java : Pourquoi le typage faible est votre meilleur atout à l'ère de l'IA
 

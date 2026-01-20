@@ -4,6 +4,8 @@ title: 'ChatGPT × Shopify : le commerce conversationnel'
 date: 2025-08-08
 ref: chatgpt-shopify
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Ecommerce
 - Intelligence Artificielle
@@ -63,6 +65,7 @@ faq:
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
 ---
+
 
 # ChatGPT + Shopify : le futur de l’e-commerce
 

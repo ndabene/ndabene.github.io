@@ -4,6 +4,8 @@ title: 'PrestaShop Validator : garantir la qualité'
 date: 2025-12-03
 ref: prestashop-validator-nov2025
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - Bonnes Pratiques
@@ -49,6 +51,7 @@ faq:
   answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
     les débutants créent leur boutique en quelques semaines.
 ---
+
 
 # PrestaShop Validator : Garantir la Qualité de Vos Modules
 

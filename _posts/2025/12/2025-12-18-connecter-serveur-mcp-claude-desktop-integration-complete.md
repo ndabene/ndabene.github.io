@@ -4,6 +4,8 @@ title: Comment connecter un serveur MCP à Claude?
 date: 2025-12-18
 ref: connect-mcp-server-claude-desktop-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Tutoriel
 - Intelligence Artificielle
@@ -42,6 +44,7 @@ faq:
   answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
     est open-source et d'autres IA pourront l'adopter.
 ---
+
 
 # Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète
 

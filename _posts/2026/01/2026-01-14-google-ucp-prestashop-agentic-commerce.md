@@ -1,19 +1,40 @@
 ---
 layout: post
-title: "Google UCP : La fin des marketplaces fermées ? Ce que ça change pour PrestaShop"
+title: 'Google UCP : La fin des marketplaces fermées ? Ce que ça change pour PrestaShop'
 date: 2026-01-14
-lang: fr
 ref: google-ucp-prestashop-agentic-commerce
 author: Nicolas Dabène
-categories: [E-commerce, Tech Watch]
-tags: [UCP, Google, AI Agents, PrestaShop, API]
-excerpt: "Google vient de dévoiler le Universal Commerce Protocol (UCP). Une révolution qui permet aux IA d'acheter directement dans votre boutique PrestaShop. Analyse technique et opportunités."
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
+categories:
+- E-commerce
+- Tech Watch
+tags:
+- UCP
+- Google
+- AI Agents
+- PrestaShop
+- API
+excerpt: Google vient de dévoiler le Universal Commerce Protocol (UCP). Une révolution
+  qui permet aux IA d'acheter directement dans votre boutique PrestaShop. Analyse
+  technique et opportunités.
 image: /assets/images/blog/2026/01/google-ucp-prestashop-agentic-commerce/image-principale.webp
-keywords: [Google UCP, Universal Commerce Protocol, PrestaShop AI, Agentic Commerce, Beckn Protocol]
-difficulty: "Intermédiaire"
-technologies: ["JSON Schema", "REST API", "MCP", "PrestaShop Hooks"]
+difficulty: Intermédiaire
+technologies:
+- JSON Schema
+- REST API
+- MCP
+- PrestaShop Hooks
+lang: fr
+keywords:
+- Google UCP
+- Universal Commerce Protocol
+- PrestaShop AI
+- Agentic Commerce
+- Beckn Protocol
 published: true
 ---
+
 
 Combien de fois avez-vous dû développer (ou acheter) un module spécifique pour connecter PrestaShop à une marketplace ? Un pour Amazon, un pour Cdiscount, un autre pour Google Shopping...
 

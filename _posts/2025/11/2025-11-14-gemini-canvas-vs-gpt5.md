@@ -4,6 +4,8 @@ title: 'Gemini Canvas vs GPT-5 : qui crée mieux?'
 date: 2025-11-14
 ref: gemini-canvas-vs-gpt5-nov2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - Bonnes Pratiques
@@ -55,6 +57,7 @@ faq:
   answer: Selon votre expérience, comptez entre 30 minutes et 2 heures pour une première
     mise en place.
 ---
+
 
 
 # Gemini Canvas vs GPT-5 : qui crée la meilleure présentation ?

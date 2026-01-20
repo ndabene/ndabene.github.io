@@ -4,6 +4,8 @@ title: 'Google Gemini 3.0 : IA du quotidien'
 date: 2025-10-08
 ref: google-gemini-3-0-ai-revolution-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - développement
@@ -22,7 +24,6 @@ technologies:
 - Machine Learning
 - Gemini
 estimated_reading_time: 14 minutes
-is_future: true
 faq:
 - question: Quelle est la différence principale entre Gemini 3.0 et les versions précédentes
     ?
@@ -45,7 +46,9 @@ faq:
 - question: Claude peut-il remplacer un développeur?
   answer: Non, Claude est un assistant puissant mais ne remplace pas l'expertise humaine.
     Il accélère le travail.
+is_future: true
 ---
+
 
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025
 

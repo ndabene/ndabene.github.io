@@ -4,6 +4,8 @@ title: 'Évolution de Google Shopping : Froogle à l''IA'
 date: 2025-09-23
 ref: google-shopping-evolution
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Ecommerce
 - Intelligence Artificielle
@@ -47,6 +49,7 @@ faq:
   answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
     MCP pour accéder à des données externes.
 ---
+
 
 # L'Évolution de Google Shopping : De Froogle aux Innovations IA (2002-2025)
 

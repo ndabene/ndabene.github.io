@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "💡 Et si l'IA était fondamentalement... paresseuse ?"
+title: 💡 Et si l'IA était fondamentalement... paresseuse ?
 date: 2026-01-16
-lang: fr
 ref: linkedin-ia-paresseuse-superpouvoir
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - LinkedIn
 - IA
@@ -12,11 +13,14 @@ tags:
 - LinkedIn
 - IA
 - réflexion
-excerpt: "Redécouvrez comment l'IA ne 'pense' pas vraiment - elle cherche juste le chemin le plus court. Un article qui change la façon dont vous travaillez avec l'IA."
+excerpt: Redécouvrez comment l'IA ne 'pense' pas vraiment - elle cherche juste le
+  chemin le plus court. Un article qui change la façon dont vous travaillez avec l'IA.
 image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.webp
+lang: fr
 linkedin: true
 external_url: https://nicolas-dabene.fr/articles/2025/11/21/ia-paresseuse-superpouvoir/
 ---
+
 
 ## 💡 Et si l'IA était fondamentalement... paresseuse ?
 

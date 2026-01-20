@@ -2,9 +2,10 @@
 layout: post
 title: 'VEO 2025 : l''optimisation vocale transforme le SEO'
 date: 2025-11-25
-lang: fr
 ref: voice-engine-optimization-veo
 author: Nicolas Dabène
+category: seo-marketing
+subcategory: seo-technique
 categories:
 - Intelligence Artificielle
 - SEO
@@ -65,6 +66,7 @@ faq:
     seront effectuées par la voix d'ici 2030. Déjà, 50% des consommateurs ont effectué
     un achat via un assistant vocal, et 24% des acheteurs vocaux dépensent plus que
     prévu, démontrant que la commodité de la voix incite à acheter davantage.
+lang: fr
 sources:
 - name: Google Voice Search Statistics 2025
   url: https://support.google.com/websearch/answer/2940021
@@ -79,6 +81,7 @@ sources:
   organization: Schema.org
   type: TechArticle
 ---
+
 
 # Le VEO en 2025 : Comment l'optimisation vocale transforme la recherche
 

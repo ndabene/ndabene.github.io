@@ -4,6 +4,8 @@ title: 'Perplexity Comet : navigateur intelligent 2025'
 date: 2025-10-22
 ref: perplexity-comet-revolution-ai-browser
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - Intelligence Artificielle
 - développement
@@ -54,6 +56,7 @@ faq:
     les serveurs Perplexity. C'est une limitation des IA génératives actuelles trop
     volumineuses pour tourner entièrement en local.
 ---
+
 
 # Perplexity Comet 2025 : Quand Votre Navigateur Devient Votre Assistant Intelligent
 

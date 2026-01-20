@@ -4,6 +4,8 @@ title: Contribuer à l'Admin API PrestaShop 9
 date: 2025-09-12
 ref: prestashop-admin-api-quickstart
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - développement
@@ -46,6 +48,7 @@ faq:
   answer: PrestaShop a une courbe d'apprentissage moyenne. Avec de la documentation,
     les débutants créent leur boutique en quelques semaines.
 ---
+
 
 # Quick Start : Contribuer rapidement à l’Admin API PrestaShop 9
 

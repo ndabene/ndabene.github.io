@@ -1,10 +1,11 @@
 ---
 layout: post
-title: 'Comment l''IA découvre vos outils MCP ?'
+title: Comment l'IA découvre vos outils MCP ?
 date: 2025-11-19
-lang: fr
 ref: how-ai-discovers-mcp-tools
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - IA
 - PrestaShop
@@ -22,16 +23,6 @@ excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un 
   réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
   en opportunités de croissance pour marchands et agences.'
 image: /assets/images/blog/2025/11/mcp-prestashop-banner.webp
-keywords:
-- PS MCP Server
-- MCP Tools Plus
-- PrestaShop
-- IA
-- assistant gestion
-- e-commerce
-- automatisation
-- langage naturel
-- module PrestaShop
 difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop
@@ -42,22 +33,34 @@ technologies:
 - Qonto
 estimated_reading_time: 15 minutes
 faq:
-- question: "Qu'est-ce que le protocole MCP ?"
-  answer: "MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
-    pour connecter des serveurs de données aux assistants IA comme Claude."
-- question: "MCP est-il compatible avec d'autres IA ?"
-  answer: "Actuellement, MCP est principalement conçu pour Claude, mais le protocole
-    est open-source et d'autres IA pourront l'adopter."
-- question: "Ai-je besoin de connaissances en programmation ?"
-  answer: "Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
-    des serveurs MCP."
-- question: "Les serveurs MCP sont-ils gratuits ?"
-  answer: "Oui, le protocole MCP est open-source et gratuit. Vous pouvez créer autant
-    de serveurs que vous voulez."
-- question: "Puis-je utiliser MCP en production ?"
-  answer: "Oui, assurez-vous d'implémenter toutes les mesures de sécurité : authentification,
-    validation, rate limiting."
+- question: Qu'est-ce que le protocole MCP ?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA ?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
+- question: Ai-je besoin de connaissances en programmation ?
+  answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
+    des serveurs MCP.
+- question: Les serveurs MCP sont-ils gratuits ?
+  answer: Oui, le protocole MCP est open-source et gratuit. Vous pouvez créer autant
+    de serveurs que vous voulez.
+- question: Puis-je utiliser MCP en production ?
+  answer: 'Oui, assurez-vous d''implémenter toutes les mesures de sécurité : authentification,
+    validation, rate limiting.'
+lang: fr
+keywords:
+- PS MCP Server
+- MCP Tools Plus
+- PrestaShop
+- IA
+- assistant gestion
+- e-commerce
+- automatisation
+- langage naturel
+- module PrestaShop
 ---
+
 
 # Comment l'IA découvre vos outils MCP ?
 

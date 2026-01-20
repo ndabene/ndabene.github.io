@@ -3,6 +3,8 @@ layout: post
 title: 'Claude Code en ligne : IA agentique sur le web'
 date: 2025-10-21
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - développement
 - Intelligence Artificielle
@@ -46,6 +48,7 @@ faq:
   answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
     Les deux sont complémentaires.
 ---
+
 
 # Claude Code en Ligne : L'IA Agentique Transforme le Développement Web
 

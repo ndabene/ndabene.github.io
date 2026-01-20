@@ -4,6 +4,8 @@ title: ChatGPT autorise les conversations érotiques
 date: 2025-12-02
 ref: chatgpt-erotic-conversations-openai-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - Entrepreneuriat
@@ -55,6 +57,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # ChatGPT s'ouvre aux conversations érotiques : un tournant assumé par OpenAI
 

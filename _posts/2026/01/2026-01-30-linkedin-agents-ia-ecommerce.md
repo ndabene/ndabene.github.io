@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "🤖 Et si votre boutique PrestaShop avait un assistant IA ?"
+title: 🤖 Et si votre boutique PrestaShop avait un assistant IA ?
 date: 2026-01-30
-lang: fr
 ref: linkedin-agents-ia-ecommerce
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: ia-ecommerce
 categories:
 - LinkedIn
 - e-commerce
@@ -12,11 +13,14 @@ tags:
 - LinkedIn
 - PrestaShop
 - IA
-excerpt: "Rapports comptables en 2 minutes, promos automatiques pour vos meilleurs clients... L'IA n'est plus de la science-fiction pour l'e-commerce."
+excerpt: Rapports comptables en 2 minutes, promos automatiques pour vos meilleurs
+  clients... L'IA n'est plus de la science-fiction pour l'e-commerce.
 image: /assets/images/blog/2025/11/mcp-server-prestashop-tools-plus.webp
+lang: fr
 linkedin: true
 external_url: https://nicolas-dabene.fr/articles/2025/11/24/agents-ia-ecommerce-mcp/
 ---
+
 
 ## 🤖 Et si votre boutique PrestaShop avait un assistant IA ?
 

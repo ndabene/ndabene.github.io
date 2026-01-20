@@ -4,6 +4,8 @@ title: 'Mistral AI : révolution française de l''IA'
 date: 2025-09-11
 ref: mistral-ai-revolution-francaise-intelligence-artificielle
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - Startups
@@ -53,6 +55,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Mistral AI : L'Histoire d'une Révolution Française de l'Intelligence Artificielle (2023-2025)
 

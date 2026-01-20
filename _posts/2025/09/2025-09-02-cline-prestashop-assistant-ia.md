@@ -3,6 +3,8 @@ layout: post
 title: 'Cline : assistant IA pour PrestaShop'
 date: 2025-09-02
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: ia-ecommerce
 categories:
 - développement
 - PHP
@@ -59,6 +61,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Cline : L'Assistant IA qui Révolutionne le Développement PrestaShop
 

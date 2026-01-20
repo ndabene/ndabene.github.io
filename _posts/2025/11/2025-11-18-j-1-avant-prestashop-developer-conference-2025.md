@@ -4,6 +4,8 @@ title: 'J-1 avant la PrestaShop Developer Conference 2025 : ce qui vous attend !
 date: 2025-11-18 01:00:00
 ref: countdown-to-prestashop-developer-conference-2025
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: fondamentaux-prestashop
 categories:
 - PrestaShop
 - Événements
@@ -16,7 +18,13 @@ tags:
 - développeur
 - prestashop 9
 - formation
-excerpt: 'Demain, c''est le jour J ! La PrestaShop Developer Conference 2025 ouvre ses portes et, franchement, je ne tiens plus en place. Après 15 ans dans l''écosystème PrestaShop, je peux vous dire que ces Dev Conf sont bien plus que des conférences : ce sont les moments où l''avenir de la plateforme se dessine sous nos yeux. Retours d''expérience sur PrestaShop 9, bonnes pratiques de migration, IA, sécurité... Cette édition s''annonce exceptionnelle. Alors à la veille du grand jour, faisons ensemble le tour de ce qui nous attend !'
+excerpt: 'Demain, c''est le jour J ! La PrestaShop Developer Conference 2025 ouvre
+  ses portes et, franchement, je ne tiens plus en place. Après 15 ans dans l''écosystème
+  PrestaShop, je peux vous dire que ces Dev Conf sont bien plus que des conférences
+  : ce sont les moments où l''avenir de la plateforme se dessine sous nos yeux. Retours
+  d''expérience sur PrestaShop 9, bonnes pratiques de migration, IA, sécurité... Cette
+  édition s''annonce exceptionnelle. Alors à la veille du grand jour, faisons ensemble
+  le tour de ce qui nous attend !'
 image: /assets/images/blog/2025/11/j-1-avant-prestashop-developer-conference-2025.webp
 featured: true
 difficulty: Débutant
@@ -26,21 +34,56 @@ technologies:
 - Hummingbird
 estimated_reading_time: 5 minutes
 faq:
-- question: Qu'est-ce que la PrestaShop Developer Conference et pourquoi est-elle si importante ?
-  answer: La PrestaShop Developer Conference est LE rendez-vous annuel de la communauté PrestaShop où développeurs, contributeurs et passionnés se réunissent pour découvrir les futures orientations du projet. C'est là que les retours d'expérience sont partagés (comme sur PrestaShop 9 récemment sorti), que les experts transmettent leurs connaissances et que la communauté se renforce. Après 15 ans dans l'écosystème, je peux affirmer que c'est le meilleur endroit pour comprendre où va PrestaShop et comment en tirer parti.
+- question: Qu'est-ce que la PrestaShop Developer Conference et pourquoi est-elle
+    si importante ?
+  answer: La PrestaShop Developer Conference est LE rendez-vous annuel de la communauté
+    PrestaShop où développeurs, contributeurs et passionnés se réunissent pour découvrir
+    les futures orientations du projet. C'est là que les retours d'expérience sont
+    partagés (comme sur PrestaShop 9 récemment sorti), que les experts transmettent
+    leurs connaissances et que la communauté se renforce. Après 15 ans dans l'écosystème,
+    je peux affirmer que c'est le meilleur endroit pour comprendre où va PrestaShop
+    et comment en tirer parti.
 - question: Quels sont les thèmes principaux de la Developer Conference 2025 ?
-  answer: 'Trois grandes thématiques se dessinent : les retours d''expérience sur PrestaShop 9 avec bonnes pratiques de migration et vision produit, les ateliers techniques sur le back-office moderne, Hummingbird et la contribution open source, et enfin les sujets avancés comme la sécurité, la performance et l''Intelligence Artificielle dans l''e-commerce. De quoi satisfaire tous les profils, du débutant à l''expert.'
-- question: Pourquoi participer à la Developer Conference même si je débute avec PrestaShop ?
-  answer: Justement ! C'est l'occasion rêvée pour accélérer votre apprentissage. Les sessions "How to contribute to PrestaShop" sont parfaites pour les débutants, vous rencontrerez des développeurs expérimentés prêts à partager leurs astuces, et vous découvrirez les bonnes pratiques avant de prendre de mauvaises habitudes. En plus, vous tisserez un réseau qui vous sera précieux tout au long de votre carrière PrestaShop.
+  answer: 'Trois grandes thématiques se dessinent : les retours d''expérience sur
+    PrestaShop 9 avec bonnes pratiques de migration et vision produit, les ateliers
+    techniques sur le back-office moderne, Hummingbird et la contribution open source,
+    et enfin les sujets avancés comme la sécurité, la performance et l''Intelligence
+    Artificielle dans l''e-commerce. De quoi satisfaire tous les profils, du débutant
+    à l''expert.'
+- question: Pourquoi participer à la Developer Conference même si je débute avec PrestaShop
+    ?
+  answer: Justement ! C'est l'occasion rêvée pour accélérer votre apprentissage. Les
+    sessions "How to contribute to PrestaShop" sont parfaites pour les débutants,
+    vous rencontrerez des développeurs expérimentés prêts à partager leurs astuces,
+    et vous découvrirez les bonnes pratiques avant de prendre de mauvaises habitudes.
+    En plus, vous tisserez un réseau qui vous sera précieux tout au long de votre
+    carrière PrestaShop.
 - question: Comment tirer le maximum de la Developer Conference en ligne ?
-  answer: 'Préparez-vous comme si vous y étiez en personne : testez votre connexion, créez un espace calme sans distractions, préparez vos questions à l''avance, et surtout, participez activement aux sessions de Q&A ! Suivez le hashtag #PrestaShopDevConf2025 pour interagir avec la communauté en temps réel. L''avantage du virtuel ? Vous pouvez prendre des notes détaillées et même revoir certaines sessions.'
+  answer: 'Préparez-vous comme si vous y étiez en personne : testez votre connexion,
+    créez un espace calme sans distractions, préparez vos questions à l''avance, et
+    surtout, participez activement aux sessions de Q&A ! Suivez le hashtag #PrestaShopDevConf2025
+    pour interagir avec la communauté en temps réel. L''avantage du virtuel ? Vous
+    pouvez prendre des notes détaillées et même revoir certaines sessions.'
 - question: Quelles sont les sessions les plus attendues de cette édition 2025 ?
-  answer: Sans hésitation, les retours d'expérience sur PrestaShop 9 ! Tout le monde veut comprendre comment migrer en toute sécurité, connaître les bonnes pratiques et découvrir la roadmap des prochaines versions. L'avenir du front-office est également un sujet brûlant, surtout avec l'évolution du thème Hummingbird. Et personnellement, je suis très curieux des sessions sur l'IA - ce domaine transforme radicalement notre façon de concevoir l'e-commerce.
+  answer: Sans hésitation, les retours d'expérience sur PrestaShop 9 ! Tout le monde
+    veut comprendre comment migrer en toute sécurité, connaître les bonnes pratiques
+    et découvrir la roadmap des prochaines versions. L'avenir du front-office est
+    également un sujet brûlant, surtout avec l'évolution du thème Hummingbird. Et
+    personnellement, je suis très curieux des sessions sur l'IA - ce domaine transforme
+    radicalement notre façon de concevoir l'e-commerce.
 - question: Est-ce que PrestaShop est vraiment gratuit ?
-  answer: Oui ! PrestaShop est un CMS e-commerce open-source et 100% gratuit. Vous ne payez que l'hébergement et, si vous en avez besoin, des modules premium qui enrichissent votre boutique. C'est l'un des grands atouts de la plateforme.
+  answer: Oui ! PrestaShop est un CMS e-commerce open-source et 100% gratuit. Vous
+    ne payez que l'hébergement et, si vous en avez besoin, des modules premium qui
+    enrichissent votre boutique. C'est l'un des grands atouts de la plateforme.
 - question: Comment se préparer efficacement pour la Developer Conference ?
-  answer: 'Mon conseil : consultez le programme dès maintenant et identifiez vos 3-4 sessions incontournables. Notez vos questions sur PrestaShop 9, la sécurité, ou tout ce qui vous intrigue. Si vous êtes sur place, préparez vos cartes de visite et une batterie externe (croyez-moi, les journées sont longues !). Et surtout, venez avec l''esprit ouvert : les meilleures découvertes viennent souvent des conversations impromptues.'
+  answer: 'Mon conseil : consultez le programme dès maintenant et identifiez vos 3-4
+    sessions incontournables. Notez vos questions sur PrestaShop 9, la sécurité, ou
+    tout ce qui vous intrigue. Si vous êtes sur place, préparez vos cartes de visite
+    et une batterie externe (croyez-moi, les journées sont longues !). Et surtout,
+    venez avec l''esprit ouvert : les meilleures découvertes viennent souvent des
+    conversations impromptues.'
 ---
+
 
 # J-1 avant la PrestaShop Developer Conference 2025 : Ce Qui Nous Attend !
 

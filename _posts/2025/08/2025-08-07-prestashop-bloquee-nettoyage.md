@@ -4,6 +4,8 @@ title: Boutique PrestaShop bloquée? Guide pratique
 date: 2025-08-07
 ref: prestashop-bloquee-nettoyage
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: securite-prestashop
 categories:
 - PrestaShop
 - Bonnes Pratiques
@@ -60,6 +62,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Boutique PrestaShop bloquée ? Guide pratique entre pros
 

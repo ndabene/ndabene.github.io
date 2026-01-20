@@ -4,6 +4,8 @@ title: Les chatbots IA incitent au partage de données
 date: 2025-09-04
 ref: chatbots-donnees-personnelles
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: securite-ia
 categories:
 - sécurité
 - Intelligence Artificielle
@@ -46,6 +48,7 @@ faq:
   answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
     MCP pour accéder à des données externes.
 ---
+
 
 # Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles
 

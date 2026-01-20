@@ -4,6 +4,8 @@ title: 'PrestaShop : de projet étudiant à leader'
 date: 2025-07-24
 ref: prestashop-student-project-european-leader-2025
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: fondamentaux-prestashop
 categories:
 - Ecommerce
 - Entrepreneuriat
@@ -74,6 +76,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 Prestashop: De projet étudiant à leader européen de l'e-commerce - L'épopée complète (2005-2025) PrestaShop incarne l'une des plus belles réussites entrepreneuriales françaises de l'ère numérique. De projet étudiant d'Epitech en 2005 à plateforme e-commerce générant 22 milliards d'euros de ventes pour 300 000 marchands mondiaux, cette success story de 20 ans illustre parfaitement la capacité d'innovation française face aux géants américains du secteur. Avec le lancement récent de PrestaShop 9.0 en juin 2025, l'entreprise entame un nouveau chapitre de son histoire, marqué par une modernisation technique ambitieuse et des défis concurrentiels renouvelés.
 

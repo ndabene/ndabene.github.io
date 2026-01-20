@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Arrêtez de réinventer la roue : 5 pépites cachées dans le fichier Tools.php de PrestaShop"
+title: 'Arrêtez de réinventer la roue : 5 pépites cachées dans le fichier Tools.php
+  de PrestaShop'
 date: 2025-12-17
-lang: fr
 ref: prestashop-tools-hidden-gems
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - PrestaShop
 - développement
@@ -15,8 +17,12 @@ tags:
 - productivity
 - php
 - backend
-excerpt: >
-  Vous pensez que le "Clean Code" est la seule voie ? Détrompez-vous. Parfois, l'efficacité brutale se cache dans les vieux greniers. J'ai fouillé le fichier Tools.php pour vous : voici 5 fonctions natives à utiliser absolument avant de recoder quoi que ce soit.
+excerpt: 'Vous pensez que le "Clean Code" est la seule voie ? Détrompez-vous. Parfois,
+  l''efficacité brutale se cache dans les vieux greniers. J''ai fouillé le fichier
+  Tools.php pour vous : voici 5 fonctions natives à utiliser absolument avant de recoder
+  quoi que ce soit.
+
+  '
 image: /assets/images/blog/2025/12/2025-12-17-prestashop-tools-legacy.webp
 difficulty: Intermédiaire
 technologies:
@@ -25,13 +31,19 @@ technologies:
 - Legacy Code
 estimated_reading_time: 10 minutes
 faq:
-- question: "La classe Tools n'est-elle pas un anti-pattern ?"
-  answer: "D'un point de vue architecture pure, oui. Mais dans le contexte PrestaShop, c'est une bibliothèque utilitaire éprouvée qui gère des cas limites que vous n'avez probablement pas anticipés."
-- question: "Ces fonctions sont-elles compatibles avec PrestaShop 9 ?"
-  answer: "Oui, toutes les fonctions présentées sont maintenues dans la dernière version de PrestaShop et le resteront pour des raisons de rétrocompatibilité."
-- question: "Puis-je utiliser Tools dans mes modules ?"
-  answer: "Absolument ! C'est même recommandé pour rester cohérent avec l'écosystème PrestaShop et bénéficier des correctifs de sécurité du core."
+- question: La classe Tools n'est-elle pas un anti-pattern ?
+  answer: D'un point de vue architecture pure, oui. Mais dans le contexte PrestaShop,
+    c'est une bibliothèque utilitaire éprouvée qui gère des cas limites que vous n'avez
+    probablement pas anticipés.
+- question: Ces fonctions sont-elles compatibles avec PrestaShop 9 ?
+  answer: Oui, toutes les fonctions présentées sont maintenues dans la dernière version
+    de PrestaShop et le resteront pour des raisons de rétrocompatibilité.
+- question: Puis-je utiliser Tools dans mes modules ?
+  answer: Absolument ! C'est même recommandé pour rester cohérent avec l'écosystème
+    PrestaShop et bénéficier des correctifs de sécurité du core.
+lang: fr
 ---
+
 
 # Arrêtez de réinventer la roue : 5 pépites cachées dans le fichier Tools.php de PrestaShop
 

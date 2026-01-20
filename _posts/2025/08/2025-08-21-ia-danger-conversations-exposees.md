@@ -4,6 +4,8 @@ title: 'Quand l''IA devient un danger : 370 000 conversations Grok exposées'
 date: 2025-08-21
 ref: ia-danger-conversations-exposees
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - sécurité
 - Intelligence Artificielle
@@ -43,6 +45,7 @@ faq:
   answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
     MCP pour accéder à des données externes.
 ---
+
 
 # Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur
 
