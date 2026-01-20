@@ -204,13 +204,3 @@ Take that supplier PDF sitting on your desk, or that module documentation you ne
 
 Your move. 🚀
 
----
-
-### Related Resources
-
-- [AI & E-commerce Services](/en/services/)
-- [AI Training for Developers](/en/formations/)
-- [PrestaShop Expertise](/en/expertise/prestashop/)
-- [AI Expertise](/en/expertise/ia/)
-
-
