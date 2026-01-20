@@ -205,13 +205,3 @@ Prenez ce PDF fournisseur qui traîne sur votre bureau, ou cette documentation d
 
 À vous de jouer. 🚀
 
----
-
-### Ressources liées
-
-- [Services IA & e-commerce](/services/)
-- [Formations IA pour développeurs](/formations/)
-- [Expertise PrestaShop](/expertise/prestashop/)
-- [Expertise IA](/expertise/ia/)
-
-
