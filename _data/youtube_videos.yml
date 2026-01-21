@@ -213,3 +213,13 @@
   channel: ndabene06
   duration: PT6M57S
   category: PrestaShop & E-commerce
+- title: Le Duel du Code par IA
+  video_id: ZIiChqqNg08
+  url: https://www.youtube.com/watch?v=ZIiChqqNg08
+  thumbnail: https://i.ytimg.com/vi/ZIiChqqNg08/hqdefault.jpg
+  description: 'Claude vs ChatGPT vs Gemini : Qui est le meilleur pour coder ? J''ai
+    fait s''affronter ces trois géants de l''IA sur des défis de ...'
+  published_at: '2026-01-20T23:00:50Z'
+  channel: ndabene06
+  duration: PT6M2S
+  category: IA & Automatisation
