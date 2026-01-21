@@ -3,6 +3,8 @@
 
 require 'yaml'
 require 'fileutils'
+require 'date'
+require 'time'
 
 # Mapping de normalisation (de -> vers)
 TAG_MAPPINGS = {
