@@ -4,6 +4,8 @@ title: 'Compatibilité PrestaShop 8/9 : transition'
 date: 2025-08-13
 ref: prestashop-command-bus-compatibility
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - architecture
@@ -66,6 +68,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Compatibilité PrestaShop 8/9 : maîtriser la transition Command Bus
 

@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Oubliez Python : Pourquoi PHP est le véritable avenir de l'IA pour le Web"
+title: 'Oubliez Python : Pourquoi PHP est le véritable avenir de l''IA pour le Web'
 date: 2025-12-19
-lang: fr
 ref: php-ai-future-web
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - IA
 - PHP
@@ -15,8 +16,12 @@ tags:
 - api integration
 - web development
 - PrestaShop
-excerpt: >
-  Vous pensez que pour faire de l'IA, vous devez apprendre Python et les mathématiques complexes ? Faux. Python est le langage des chercheurs qui créent les modèles. PHP est le langage des "Makers" qui les vendent. Découvrez pourquoi votre expertise actuelle vaut de l'or.
+excerpt: 'Vous pensez que pour faire de l''IA, vous devez apprendre Python et les
+  mathématiques complexes ? Faux. Python est le langage des chercheurs qui créent
+  les modèles. PHP est le langage des "Makers" qui les vendent. Découvrez pourquoi
+  votre expertise actuelle vaut de l''or.
+
+  '
 image: /assets/images/blog/2025/12/php-vs-python-ai.webp
 difficulty: Débutant
 technologies:
@@ -24,7 +29,9 @@ technologies:
 - REST APIs
 - LLM
 estimated_reading_time: 10 minutes
+lang: fr
 ---
+
 
 # Oubliez Python : Pourquoi PHP est le véritable avenir de l'IA pour le Web
 

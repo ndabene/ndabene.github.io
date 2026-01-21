@@ -3,13 +3,13 @@ layout: default
 title: Blog
 permalink: /blog/
 description: "Articles et analyses sur PHP, l'IA, l'e-commerce et l'ingénierie logicielle
-  par Nicolas Dabène."
+par Nicolas Dabène."
 keywords: "blog php, blog ia, blog e-commerce, ingénierie logicielle, articles techniques,
-  prestashop"
+prestashop"
 image: /assets/images/hero/profile-hero.jpg
 body_class: "page-blog"
-llm_summary: Articles et analyses sur PHP, l'IA, l'e-commerce et l'ingénierie
-  logicielle par Nicolas Dabène.
+llm_summary: "Articles et analyses sur PHP, l'IA, l'e-commerce et l'ingénierie
+logicielle par Nicolas Dabène."
 llm_topics:
 - blog php
 - blog ia
@@ -26,71 +26,33 @@ llm_topics:
         </nav>
         <div class="hero-content">
             <h1>Blog Technique & E-commerce</h1>
-            <p class="section-description">Explorez des articles techniques approfondis sur PHP, PrestaShop et l'e-commerce, découvrez les dernières innovations en intelligence artificielle, et maîtrisez les meilleures pratiques en ingénierie logicielle pour booster vos projets digitaux.</p>
+            <p class="section-description">Explorez des articles techniques approfondis sur PHP, PrestaShop et
+                l'e-commerce, découvrez les dernières innovations en intelligence artificielle, et maîtrisez les
+                meilleures pratiques en ingénierie logicielle pour booster vos projets digitaux.</p>
         </div>
     </div>
 </section>
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-        {% assign published_posts = published_posts | where_exp: "post", "post.linkedin != true" %}
-        {% if published_posts.size > 0 %}
-
-            <!-- HERO ARTICLE PRINCIPAL (Article le plus récent) -->
-            {% if published_posts.size > 0 %}
-                {% assign hero_post = published_posts.first %}
-                {% unless hero_post.linkedin == true %}
+        {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
+            , "post.linkedin != true" %} {% if published_posts.size> 0 %}
+            <div class="bento-blog-grid">
+                <!-- BENTO HERO: Latest Post -->
+                <div class="bento-hero">
+                    {% assign hero_post = published_posts.first %}
                     {% include hero-article.html post=hero_post %}
-                {% endunless %}
-            {% endif %}
+                </div>
 
-            <!-- FEATURED ARTICLES SECTION (Articles 2-4 as featured) -->
-            {% if published_posts.size > 3 %}
-            <section class="featured-section">
-                <h2 class="featured-section-title">
-                    <i class="fas fa-star"></i> À la une
-                </h2>
-                <div class="featured-articles-grid">
-                    {% for post in published_posts offset: 1 limit: 3 %}
-                        {% include featured-article-card.html post=post %}
+                <!-- BENTO FEATURED: Articles 2 & 3 -->
+                {% if published_posts.size > 1 %}
+                <div class="bento-featured-list">
+                    {% for post in published_posts offset: 1 limit: 2 %}
+                    {% include featured-article-card.html post=post %}
                     {% endfor %}
                 </div>
-            </section>
-            {% endif %}
-
-            <!-- Popular Tags Cloud -->
-            <section class="popular-tags-section">
-                <div class="popular-tags-cloud">
-                    <div class="tags-header">
-                        <h3><i class="fas fa-tags"></i> Tags populaires</h3>
-                        <button id="toggle-tags" class="toggle-tags-btn">
-                            <i class="fas fa-chevron-up chevron-icon"></i>
-                        </button>
-                    </div>
-                    <div id="tags-content" class="tags-cloud-horizontal">
-                        {% assign all_tags = "" | split: "" %}
-                        {% for post in published_posts %}
-                            {% if post.tags %}
-                                {% for tag in post.tags %}
-                                    {% assign all_tags = all_tags | push: tag %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                        {% assign unique_tags = all_tags | uniq | sort %}
-                        {% for tag in unique_tags limit: 20 %}
-                            {% assign count = 0 %}
-                            {% for t in all_tags %}
-                                {% if t == tag %}
-                                    {% assign count = count | plus: 1 %}
-                                {% endif %}
-                            {% endfor %}
-                            <a href="/blog/tags/{{ tag | slugify }}/" class="tag-pill-large">#{{ tag }} <span>({{ count }})</span></a>
-                        {% endfor %}
-                    </div>
-                    </div>
-                </div>
-            </section>
+                {% endif %}
+            </div>
 
     </div>
 </section>
@@ -98,242 +60,95 @@ llm_topics:
 <section class="blog-main-section">
     <div class="blog-content-full-width">
         <div class="main-blog-content-full">
-                    <!-- Barre de recherche globale -->
-                    <section class="global-search-section">
-                        <div class="blog-search-bar">
-                            <div class="search-input-wrapper">
-                                <i class="fas fa-search"></i>
-                                <input type="text" id="search-input" placeholder="Recherchez par titre, sujet, catégorie...">
-                                <button id="clear-search" class="clear-search-btn" style="display: none;">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Filtres et tri -->
-                    <div class="blog-filters-container">
-                        <div class="blog-filters-header">
-                            <h2 class="section-title">Articles du blog</h2>
-                            <button id="toggle-filters" class="toggle-filters-btn">
-                                <i class="fas fa-filter"></i>
-                                <span>Filtres</span>
-                                <i class="fas fa-chevron-down chevron-icon"></i>
-                            </button>
-                        </div>
-                        
-                        <!-- Zone des filtres (masquée par défaut) -->
-                        <div id="filters-content" class="filters-content" style="display: none;">
-
-                        <!-- Tri rapide -->
-                        <div class="blog-sort-bar">
-                            <span class="sort-label">Trier par :</span>
-                            <div class="sort-pills">
-                                <button class="sort-pill active" data-sort="date-desc">
-                                    <i class="fas fa-fire"></i> Récent
-                                </button>
-                                <button class="sort-pill" data-sort="date-asc">
-                                    <i class="fas fa-history"></i> Ancien
-                                </button>
-                                <button class="sort-pill" data-sort="reading-time">
-                                    <i class="fas fa-clock"></i> Rapide
-                                </button>
-                                <button class="sort-pill" data-sort="title">
-                                    <i class="fas fa-sort-alpha-down"></i> A-Z
-                                </button>
-                            </div>
-                        </div>
-
-                        </div><!-- Fin filters-content -->
-
-                        <div class="filter-results-info" id="filter-results-info">
-                            {% assign temp_posts = site.posts | where_exp: "post", "post.date <= site.time" %}
-                            {% assign temp_posts = temp_posts | where_exp: "post", "post.linkedin != true" %}
-                            {% assign published_posts_count = temp_posts | size %}
-                            <span class="results-count">Tous les articles <span id="filtered-count">({{ published_posts_count }})</span></span>
-                            <div class="active-filters" id="active-filters"></div>
-                        </div>
-
-                        <!-- Bouton admin pour voir les futurs posts -->
-                        <div id="admin-toggle-section">
-                            <button onclick="enableAdminPreview()" class="btn btn-admin-toggle" style="display: none;">
-                                <i class="fas fa-eye"></i> Mode Admin (voir futurs posts)
-                            </button>
-                        </div>
+            <!-- 1. Barre de recherche (Clean & Minimalist) -->
+            <div class="blog-search-wrapper">
+                <div class="blog-search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input"
+                            placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off">
+                        <button id="clear-search" class="clear-search-btn" style="display: none;"
+                            title="Effacer la recherche">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
-                    
-                    <div class="post-list-news grid-view" id="blog-posts-container">
-                        {% comment %}Charger initialement 2 pages d'articles (12 posts) - skip hero + 3 featured = offset 4{% endcomment %}
-                        {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" %}
-                        {% assign published_posts_list = published_posts_list | where_exp: "post", "post.linkedin != true" | offset: 4 %}
-                        {% assign initial_load_count = 12 %}
-                        {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
+                </div>
+            </div>
 
-                        {% comment %}Stocker le reste des posts pour chargement à la demande{% endcomment %}
-                        {% if published_posts_list.size > initial_load_count %}
-                            <div id="lazy-posts-data" style="display: none;">
-                                {% for post in published_posts_list offset: 12 %}
-                                    <div class="lazy-post-data"
-                                         data-url="{{ post.url | relative_url }}"
-                                         data-title="{{ post.title | escape }}"
-                                         data-image="{{ post.image }}"
-                                         data-categories="{{ post.categories | join: ' ' }}"
-                                         data-tags="{{ post.tags | join: ' ' }}"
-                                         data-date="{{ post.date | date: '%s' }}"
-                                         data-date-formatted="{% include date-fr.html date=post.date %}"
-                                         data-read-time="{{ post.read_time_minutes | default: 5 }}"
-                                         data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
-                                         data-series="{% if post.series %}{{ post.series }}{% endif %}">
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </div>
-                    
-                    <!-- Message quand aucun résultat -->
-                    <div class="no-results" id="no-results">
-                        <div class="no-results-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>Aucun article trouvé</h3>
-                        <p>Aucun article ne correspond à vos critères de recherche.</p>
-                        <button id="reset-filters" class="btn btn--primary">Réinitialiser les filtres</button>
-                    </div>
-                    
-                    <!-- Données des futurs posts pour le mode admin -->
-                    {% include future-posts-data.html %}
+            <!-- The blog-filters-container has been removed -->
 
-                    <!-- Pagination -->
-                    {% assign posts_per_page = 6 %}
-                    {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" %}
-                    {% assign temp_posts_2 = temp_posts_2 | where_exp: "post", "post.linkedin != true" %}
-                    {% assign published_posts_count = temp_posts_2 | size %}
-                    {% assign remaining_posts = published_posts_count | minus: 4 %}
-                    {% if remaining_posts > posts_per_page %}
-                        <div class="pagination-container">
-                            <div class="pagination">
-                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
-                                <div id="pagination-numbers"></div>
-                                <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
-                            </div>
-                            <div class="pagination-info-wrapper">
-                                Affichage <span id="showing-range">1-6</span> sur <span id="total-posts">{{ remaining_posts }}</span> articles
-                            </div>
+            <!-- 3. Liste des Articles -->
+            <div class="post-list-news grid-view" id="blog-posts-container">
+                {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" |
+                    where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign initial_load_count=12 %} {%
+                    include blog-post-loop.html posts=published_posts_list limit=initial_load_count %} {% if
+                    published_posts_list.size> initial_load_count %}
+                    <div id="lazy-posts-data" style="display: none;">
+                        {% for post in published_posts_list offset: 12 %}
+                        <div class="lazy-post-data" data-url="{{ post.url | relative_url }}"
+                            data-title="{{ post.title | escape }}" data-image="{{ post.image }}"
+                            data-categories="{{ post.categories | join: ' ' }}" data-tags="{{ post.tags | join: ' ' }}"
+                            data-date="{{ post.date | date: '%s' }}"
+                            data-date-formatted="{% include date-fr.html date=post.date %}"
+                            data-read-time="{{ post.read_time_minutes | default: 5 }}"
+                            data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
+                            data-series="{% if post.series %}{{ post.series }}{% endif %}">
                         </div>
+                        {% endfor %}
+                    </div>
                     {% endif %}
+            </div>
 
+            <!-- 4. No Results & Pagination -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Aucun article trouvé</h3>
+                <p>Aucun article ne correspond à vos critères de recherche.</p>
+                <button id="reset-filters" class="btn btn--primary">Réinitialiser les filtres</button>
+            </div>
+
+            {% include future-posts-data.html %}
+
+            {% assign posts_per_page = 6 %}
+            {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
+                , "post.linkedin != true" %} {% assign published_posts_count=temp_posts_2 | size %} {% assign
+                remaining_posts=published_posts_count | minus: 4 %} {% if remaining_posts> initial_load_count %}
+                <div class="pagination-container">
+                    <div class="pagination">
+                        <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
+                        <div id="pagination-numbers"></div>
+                        <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
+                    </div>
+                    <div class="pagination-info-wrapper">
+                        Affichage <span id="showing-range">1-{{ initial_load_count }}</span> sur <span
+                            id="total-posts">{{ temp_posts_count }}</span> articles
+                    </div>
+                </div>
+                {% endif %}
         </div>
     </div>
 </section>
 
+<!-- Publications externes maintenant intégrées dans le layout principal ci-dessus -->
+{% else %}
 <section class="blog-content-section">
     <div class="container">
-            <!-- THEMES & TOPICS SECTION (replaces sidebar) -->
-            <section class="themes-topics-section">
-                <div class="themes-header">
-                    <h2><i class="fas fa-compass"></i> Explorer par thème</h2>
-                    <p class="themes-subtitle">Naviguez dans nos contenus par domaine d'expertise</p>
-                </div>
-
-                <div class="themes-grid">
-                    <!-- Popular Categories -->
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>E-commerce</h3>
-                        <p>Guides, stratégies et analyses pour réussir votre boutique en ligne</p>
-                        {% assign ecommerce_posts = published_posts | where_exp: "post", "post.categories contains 'Ecommerce'" %}
-                        <a href="/blog/ecommerce/" class="theme-link">
-                            {{ ecommerce_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Intelligence Artificielle</h3>
-                        <p>IA générative, LLM, automatisation et cas d'usage pratiques</p>
-                        {% assign ai_posts = published_posts | where_exp: "post", "post.categories contains 'Intelligence Artificielle'" %}
-                        <a href="/blog/intelligence-artificielle/" class="theme-link">
-                            {{ ai_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Development</h3>
-                        <p>PHP, architecture, tests, CI/CD et bonnes pratiques de développement</p>
-                        {% assign dev_posts = published_posts | where_exp: "post", "post.categories contains 'Développement'" %}
-                        <a href="/blog/developpement/" class="theme-link">
-                            {{ dev_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Best Practices</h3>
-                        <p>Méthodologies, patterns et retours d'expérience terrain</p>
-                        {% assign best_posts = published_posts | where_exp: "post", "post.categories contains 'Tutoriels'" %}
-                        <a href="/blog/tutoriels/" class="theme-link">
-                            {{ best_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Series if any -->
-                {% if site.data.series %}
-                    {% assign has_series_with_posts = false %}
-                    {% for series in site.data.series %}
-                        {% assign series_posts = published_posts | where: "series", series[0] %}
-                        {% if series_posts.size > 0 %}
-                            {% assign has_series_with_posts = true %}
-                            {% break %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if has_series_with_posts %}
-                    <div class="series-horizontal">
-                        <h3><i class="fas fa-book-open"></i> Séries d'articles</h3>
-                        <div class="series-cards-grid">
-                            {% for series_entry in site.data.series limit: 4 %}
-                                {% assign series_key = series_entry[0] %}
-                                {% assign series_data = series_entry[1] %}
-                                {% assign series_posts = published_posts | where: "series", series_key %}
-                                {% if series_posts.size > 0 %}
-                                    <a href="/series/{{ series_key | slugify }}.html" class="series-card-large">
-                                        <i class="fas fa-layer-group"></i>
-                                        <strong>{{ series_key }}</strong>
-                                        <span>{{ series_posts.size }} articles</span>
-                                    </a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    {% endif %}
-                {% endif %}
-            </section>
-
-<!-- Publications externes maintenant intégrées dans le layout principal ci-dessus -->
-        {% else %}
-            <div class="no-posts-container">
-                <span class="no-posts-icon">📝</span>
-                <h2>Le blog est en cours de rédaction</h2>
-                <p>De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus tard pour découvrir mes publications !</p>
-                <a href="/" class="btn btn--primary">Retour à l'accueil</a>
-            </div>
-        {% endif %}
+        <div class="no-posts-container">
+            <span class="no-posts-icon">📝</span>
+            <h2>Le blog est en cours de rédaction</h2>
+            <p>De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus tard
+                pour découvrir mes publications !</p>
+            <a href="/" class="btn btn--primary">Retour à l'accueil</a>
+        </div>
     </div>
 </section>
+{% endif %}
 
 <!-- Scripts optimisés pour de meilleures performances avec chargement différé -->
-<!-- Pagefind Search System - Recherche statique performante -->
-<script src="{{ '/assets/js/blog-search-pagefind.js' | relative_url }}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="{{ '/assets/js/blog-search-modern.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>

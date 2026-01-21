@@ -2,9 +2,10 @@
 layout: post
 title: Pourquoi Shopify ne suit pas bien vos campagnes?
 date: 2025-11-27
-lang: fr
 ref: shopify-bot-traffic-cloudflare-problem
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Ecommerce
 - Données
@@ -58,6 +59,7 @@ faq:
   answer: 'Non. Il s''agit d''un filtrage rétrospectif : les bots sont visibles dans
     les rapports, mais pas bloqués. Le trafic reste comptabilisé et continue d''impacter
     les pixels publicitaires.'
+lang: fr
 sources:
 - https://www.radware.com/blog/application-protection/the-alarming-rise-of-bot-traffic-reshaping-the-holiday-shopping-landscape/
 - https://community.shopify.com/t/shopify-bot-exploit-add-to-cart-abuse-is-corrupting-analytics-shopify-refuses-to-act-at-platform/412062
@@ -66,6 +68,7 @@ sources:
 - https://help-center.prestashop.com/hc/en-us/articles/16417637123602-Configure-Cloudflare-on-PS-Hosting
 - https://prestahero.com/blog/post/122-how-to-prevent-spam-and-bots-with-captcha-recaptcha-module.html
 ---
+
 
 # Pourquoi les marchands Shopify ne parviennent pas à suivre correctement leurs campagnes publicitaires
 

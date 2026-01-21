@@ -4,6 +4,8 @@ title: 'FAQ et GEO : les clés du e-commerce de demain'
 date: 2025-10-07
 ref: faq-geo-essentielles-2025-10
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Intelligence Artificielle
 - Ecommerce
@@ -50,6 +52,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Pourquoi les FAQ sont devenues essentielles pour votre visibilité sur les IA
 

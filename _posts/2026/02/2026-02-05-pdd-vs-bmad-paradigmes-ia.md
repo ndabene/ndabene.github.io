@@ -1,8 +1,12 @@
 ---
 layout: post
-title: "Analyse Comparative Approfondie des Paradigmes de Développement IA : Prompt Driven Development vs Méthodologie BMAD"
+title: 'Analyse Comparative Approfondie des Paradigmes de Développement IA : Prompt
+  Driven Development vs Méthodologie BMAD'
 date: 2026-02-05
+ref: pdd-vs-bmad-paradigmes-ia
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: developpement-assiste
 categories:
 - Intelligence Artificielle
 - Développement
@@ -17,17 +21,40 @@ tags:
 - architecture
 - PrestaShop
 - vibe-coding
-excerpt: >
-  L'avènement des Grands Modèles de Langage redéfinit le développement logiciel. Deux écoles s'affrontent : le Prompt Driven Development (PDD), fluide et conversationnel, et la méthode BMAD, rigoureuse et architecturale. Cette analyse comparative détaille leurs mécanismes, leurs forces et leurs limites, illustrée par un cas concret sur PrestaShop.
+excerpt: 'L''avènement des Grands Modèles de Langage redéfinit le développement logiciel.
+  Deux écoles s''affrontent : le Prompt Driven Development (PDD), fluide et conversationnel,
+  et la méthode BMAD, rigoureuse et architecturale. Cette analyse comparative détaille
+  leurs mécanismes, leurs forces et leurs limites, illustrée par un cas concret sur
+  PrestaShop.
+
+  '
 image: /assets/images/blog/2026/02/pdd-vs-bmad-paradigmes-ia/image-principale.webp
-difficulty: Avancé
-estimated_reading_time: 35 minutes
-keywords: [prompt driven development, méthode BMAD, développement IA, LLM, vibe coding, architecture logicielle, PrestaShop, agents IA, sharding contextuel, GPT-4, Claude]
-technologies: [LLM, GPT-4, Claude, PrestaShop, PHP, Smarty, Symfony]
 featured: true
+difficulty: Avancé
+technologies:
+- LLM
+- GPT-4
+- Claude
+- PrestaShop
+- PHP
+- Smarty
+- Symfony
+estimated_reading_time: 35 minutes
+keywords:
+- prompt driven development
+- méthode BMAD
+- développement IA
+- LLM
+- vibe coding
+- architecture logicielle
+- PrestaShop
+- agents IA
+- sharding contextuel
+- GPT-4
+- Claude
 lang: fr
-ref: pdd-vs-bmad-paradigmes-ia
 ---
+
 
 ## Introduction : La Métamorphose du Génie Logiciel à l'Ère de l'Intelligence Artificielle
 

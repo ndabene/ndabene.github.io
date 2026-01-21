@@ -2,9 +2,10 @@
 layout: post
 title: 'L''IA est paresseuse : sa force cachée'
 date: 2025-11-21
-lang: fr
 ref: ai-lazy-superpower
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - IA
 - Philosophie
@@ -15,18 +16,12 @@ tags:
 - LLM
 - philosophy
 - future
-excerpt: 'Et si la révolution de l''IA reposait sur un immense malentendu ? Les modèles comme GPT ne "pensent" pas, ils évitent de réfléchir. Découvrez pourquoi cette "paresse algorithmique" est en réalité un super-pouvoir et comment, en tant que développeurs et créateurs, nous devons changer notre rapport à cet outil pour en libérer le plein potentiel.'
+excerpt: Et si la révolution de l'IA reposait sur un immense malentendu ? Les modèles
+  comme GPT ne "pensent" pas, ils évitent de réfléchir. Découvrez pourquoi cette "paresse
+  algorithmique" est en réalité un super-pouvoir et comment, en tant que développeurs
+  et créateurs, nous devons changer notre rapport à cet outil pour en libérer le plein
+  potentiel.
 image: /assets/images/blog/2025/11/ia-paresseuse-superpouvoir.webp
-keywords:
-- IA
-- intelligence artificielle
-- LLM
-- paresse
-- PrestaShop
-- développeur
-- prompt engineering
-- futur du travail
-- e-commerce
 difficulty: ⭐️⭐️⭐️
 technologies:
 - AI
@@ -68,7 +63,19 @@ faq:
 - question: Claude est-il gratuit?
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
+lang: fr
+keywords:
+- IA
+- intelligence artificielle
+- LLM
+- paresse
+- PrestaShop
+- développeur
+- prompt engineering
+- futur du travail
+- e-commerce
 ---
+
 
 
 # L'IA n'est pas Intelligente, elle est Paresseuse (et c'est sa plus grande force)

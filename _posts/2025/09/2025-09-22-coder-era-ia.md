@@ -4,6 +4,8 @@ title: 'Coder à l''ère de l''IA : adapter ses méthodes'
 date: 2025-09-22
 ref: coder-era-ia
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - Intelligence Artificielle
 - développement
@@ -56,6 +58,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Coder à l'Ère des IA : Comment Adapter ses Méthodes de Travail en 2025
 

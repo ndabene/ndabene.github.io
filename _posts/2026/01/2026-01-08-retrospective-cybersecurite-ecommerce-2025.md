@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 'Rétrospective Cybersécurité E-Commerce 2025 : L''Effondrement des Certitudes et le Spectre du Vibecoding'
+title: 'Rétrospective Cybersécurité E-Commerce 2025 : L''Effondrement des Certitudes
+  et le Spectre du Vibecoding'
 date: 2026-01-08
-lang: fr
 ref: cybersecurity-ecommerce-retrospective-2025
 author: Nicolas Dabène
+category: securite
+subcategory: menaces-vulnerabilites
 categories:
 - Cybersécurité
 - e-commerce
@@ -20,8 +22,20 @@ tags:
 - infostealers
 - data-breach
 - retail
-excerpt: 'Une analyse approfondie de l''année 2025, marquée par des cyberattaques sans précédent contre le retail français (Auchan, Boulanger, LDLC, Leroy Merlin) et l''émergence du vibecoding comme nouvelle menace systémique pour 2026.'
+excerpt: Une analyse approfondie de l'année 2025, marquée par des cyberattaques sans
+  précédent contre le retail français (Auchan, Boulanger, LDLC, Leroy Merlin) et l'émergence
+  du vibecoding comme nouvelle menace systémique pour 2026.
 image: /assets/images/blog/2026/01/retrospective-cybersecurite-ecommerce-2025/image-principale.webp
+difficulty: ⭐️⭐️⭐️
+technologies:
+- RGPD
+- NIS2
+- MFA/FIDO2
+- XSS
+- Ransomware
+- AI/LLM
+estimated_reading_time: 35 minutes
+lang: fr
 keywords:
 - cybersécurité e-commerce 2025
 - attaques retail France
@@ -33,16 +47,8 @@ keywords:
 - NIS2 compliance
 - IA génération code
 - vulnerabilités code IA
-difficulty: ⭐️⭐️⭐️
-technologies:
-- RGPD
-- NIS2
-- MFA/FIDO2
-- XSS
-- Ransomware
-- AI/LLM
-estimated_reading_time: 35 minutes
 ---
+
 
 # Rétrospective Cybersécurité E-Commerce 2025 : L'Effondrement des Certitudes et le Spectre du Vibecoding
 

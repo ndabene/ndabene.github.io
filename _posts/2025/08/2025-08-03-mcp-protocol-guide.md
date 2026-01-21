@@ -4,6 +4,8 @@ title: 'Comprendre le Model Context Protocol (MCP) : Guide Complet'
 date: 2025-08-03
 ref: mcp-protocol-guide
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - Intelligence Artificielle
 - développement
@@ -67,6 +69,7 @@ faq:
   answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
     pour connecter des serveurs de données aux assistants IA comme Claude.
 ---
+
 
 # Model Context Protocol (MCP) : Le Pont Révolutionnaire entre l'IA et vos Systèmes
 

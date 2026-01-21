@@ -3,6 +3,8 @@ layout: post
 title: Préparer PrestaShop pour le Black Friday 2025
 date: 2025-11-03
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Ecommerce
 - PrestaShop
@@ -55,6 +57,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Préparer votre boutique PrestaShop pour le Black Friday 2025 avec le module Advanced Search Pro
 

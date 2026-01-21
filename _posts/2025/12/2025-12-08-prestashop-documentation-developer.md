@@ -2,9 +2,10 @@
 layout: post
 title: 'Développement PrestaShop : Le vrai problème vient-il de la documentation ?'
 date: 2025-12-08
-lang: fr
 ref: prestashop-documentation-developer
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - Développement Web
@@ -15,7 +16,8 @@ tags:
 - hooks
 - architecture-logicielle
 - Symfony
-excerpt: '80% des "bugs" PrestaShop sont en réalité des erreurs d implémentation. Découvrez comment la documentation officielle peut transformer votre code et votre carrière.'
+excerpt: 80% des "bugs" PrestaShop sont en réalité des erreurs d implémentation. Découvrez
+  comment la documentation officielle peut transformer votre code et votre carrière.
 image: /assets/images/blog/2025/12/2025-12-08-prestashop-documentation-developer.webp
 featured: false
 difficulty: Avancé
@@ -25,13 +27,21 @@ technologies:
 - Symfony
 estimated_reading_time: 10 minutes
 faq:
-- question: "La documentation de PrestaShop est-elle à jour ?"
-  answer: "Oui, la DevDocs (devdocs.prestashop-project.org) a été considérablement améliorée avec l'arrivée de PrestaShop 8, couvrant l'architecture Symfony, les Hooks et les bonnes pratiques modernes."
-- question: "Pourquoi faut-il éviter les overrides dans PrestaShop ?"
-  answer: "Les overrides cassent souvent lors des mises à jour et rendent le débogage complexe. Il est recommandé d'utiliser les Hooks ou la décoration de services Symfony pour modifier le comportement sans toucher au cœur."
-- question: "Est-ce difficile de passer de PrestaShop 1.6/1.7 à la version 8 ?"
-  answer: "Pour un développeur qui suit la documentation et les standards Symfony, la transition est logique. La difficulté vient souvent de la dette technique accumulée par des pratiques obsolètes."
+- question: La documentation de PrestaShop est-elle à jour ?
+  answer: Oui, la DevDocs (devdocs.prestashop-project.org) a été considérablement
+    améliorée avec l'arrivée de PrestaShop 8, couvrant l'architecture Symfony, les
+    Hooks et les bonnes pratiques modernes.
+- question: Pourquoi faut-il éviter les overrides dans PrestaShop ?
+  answer: Les overrides cassent souvent lors des mises à jour et rendent le débogage
+    complexe. Il est recommandé d'utiliser les Hooks ou la décoration de services
+    Symfony pour modifier le comportement sans toucher au cœur.
+- question: Est-ce difficile de passer de PrestaShop 1.6/1.7 à la version 8 ?
+  answer: Pour un développeur qui suit la documentation et les standards Symfony,
+    la transition est logique. La difficulté vient souvent de la dette technique accumulée
+    par des pratiques obsolètes.
+lang: fr
 ---
+
 
 # Non, PrestaShop n'est pas compliqué. C'est juste que personne ne lit la documentation.
 

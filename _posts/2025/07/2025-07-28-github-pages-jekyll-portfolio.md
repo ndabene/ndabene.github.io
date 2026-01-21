@@ -4,6 +4,8 @@ title: 'Créez votre portfolio tech en ligne : Guide'
 date: 2025-07-28
 ref: github-pages-jekyll-portfolio-2025
 author: Nicolas Dabène
+category: developpement-web
+subcategory: devops-deploiement
 categories:
 - développement
 - Tutoriel
@@ -66,6 +68,7 @@ faq:
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
 ---
+
 
 ## Introduction
 

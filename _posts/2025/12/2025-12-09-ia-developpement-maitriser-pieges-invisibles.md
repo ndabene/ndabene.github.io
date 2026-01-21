@@ -4,6 +4,8 @@ title: 'IA et développement : éviter les pièges courants'
 date: 2025-12-09
 ref: ai-development-invisible-traps-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: securite-ia
 categories:
 - Intelligence Artificielle
 - développement
@@ -49,6 +51,7 @@ faq:
   answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
     Les deux sont complémentaires.
 ---
+
 
 ## Introduction
 

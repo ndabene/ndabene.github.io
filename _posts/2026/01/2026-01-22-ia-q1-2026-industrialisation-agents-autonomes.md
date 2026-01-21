@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "IA Q1 2026 : Vers l'ère de l'industrialisation et des agents autonomes"
+title: 'IA Q1 2026 : Vers l''ère de l''industrialisation et des agents autonomes'
 date: 2026-01-22
-lang: fr
 ref: ai-q1-2026
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - News
 - IA
@@ -17,8 +18,12 @@ tags:
 - openai
 - google
 - anthropic
-excerpt: >
-  Loin des effets d'annonce explosifs, le premier trimestre 2026 marque le début de l'industrialisation de l'IA. Entre agents autonomes, multimodalité native et souveraineté européenne avec Mistral, voici l'analyse des tendances concrètes pour les développeurs et e-commerçants.
+excerpt: 'Loin des effets d''annonce explosifs, le premier trimestre 2026 marque le
+  début de l''industrialisation de l''IA. Entre agents autonomes, multimodalité native
+  et souveraineté européenne avec Mistral, voici l''analyse des tendances concrètes
+  pour les développeurs et e-commerçants.
+
+  '
 image: /assets/images/blog/2026/01/ia-q1-2026-industrialisation-agents-autonomes/image-principale.webp
 difficulty: ⭐️⭐️
 technologies:
@@ -27,6 +32,7 @@ technologies:
 - LLM
 - Automation
 estimated_reading_time: 12 minutes
+lang: fr
 keywords:
 - IA 2026
 - Agents autonomes
@@ -35,8 +41,9 @@ keywords:
 - Gemini 3
 - RAG 2.0
 - PrestaShop IA
-source: "Veille Technologique Q1 2026"
+source: Veille Technologique Q1 2026
 ---
+
 
 # 📰 Le paysage IA à l'aube de 2026
 

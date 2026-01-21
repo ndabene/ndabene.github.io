@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "L'IA, le Pig Butchering et la Nouvelle Frontière des Arnaques : Pourquoi les Arnaqueurs Deviennent des Développeurs"
+title: 'L''IA, le Pig Butchering et la Nouvelle Frontière des Arnaques : Pourquoi
+  les Arnaqueurs Deviennent des Développeurs'
 date: 2025-12-23
-lang: fr
 ref: ia-pig-butchering-scam-frontier
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
 categories:
 - IA
 - sécurité
@@ -16,8 +18,13 @@ tags:
 - security
 - fraud detection
 - pig butchering
-excerpt: >
-  Les technologies d'IA transforment l'une des plus anciennes formes de fraude : le pig butchering. Des LLM qui gèrent des milliers de conversations aux deepfakes indétectables, découvrez comment les arnaqueurs deviennent des orchestrateurs d'IA et pourquoi vous devez repenser votre vigilance face à une menace qui exploite notre confiance à l'échelle industrielle.
+excerpt: 'Les technologies d''IA transforment l''une des plus anciennes formes de
+  fraude : le pig butchering. Des LLM qui gèrent des milliers de conversations aux
+  deepfakes indétectables, découvrez comment les arnaqueurs deviennent des orchestrateurs
+  d''IA et pourquoi vous devez repenser votre vigilance face à une menace qui exploite
+  notre confiance à l''échelle industrielle.
+
+  '
 image: /assets/images/blog/2025/12/ia-pig-butchering-arnaques.webp
 difficulty: Intermédiaire
 technologies:
@@ -26,7 +33,9 @@ technologies:
 - Deepfake
 - sécurité
 estimated_reading_time: 15 minutes
+lang: fr
 ---
+
 
 # L'IA, le Pig Butchering et la Nouvelle Frontière des Arnaques : Pourquoi les Arnaqueurs Deviennent des Développeurs
 

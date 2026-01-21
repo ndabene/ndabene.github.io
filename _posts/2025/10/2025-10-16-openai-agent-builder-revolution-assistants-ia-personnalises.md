@@ -4,6 +4,8 @@ title: 'OpenAI Agent Builder : créer des assistants IA'
 date: 2025-10-16
 ref: openai-agent-builder-personalized-ai-assistants
 author: Nicolas Dabène
+category: automatisation
+subcategory: outils-automatisation
 categories:
 - Intelligence Artificielle
 - développement
@@ -26,7 +28,6 @@ technologies:
 - IA
 - automatisation
 estimated_reading_time: 18 minutes
-is_future: true
 faq:
 - question: Qu'est-ce que l'Agent Builder d'OpenAI ?
   answer: L'Agent Builder est une plateforme révolutionnaire lancée le 5 octobre 2025
@@ -60,7 +61,9 @@ faq:
 - question: Claude est-il gratuit?
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
+is_future: true
 ---
+
 
 # OpenAI Agent Builder : La Révolution des Assistants IA Personnalisés (2025)
 

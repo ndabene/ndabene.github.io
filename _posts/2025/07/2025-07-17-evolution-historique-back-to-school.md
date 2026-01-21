@@ -4,6 +4,8 @@ title: 'L''évolution du Back to School : 1850-2025'
 date: 2025-07-17
 ref: back-to-school-evolution-2025
 author: Nicolas Dabène
+category: retrospectives
+subcategory: retrospectives-annuelles
 categories:
 - Ecommerce
 - Commerce
@@ -11,10 +13,8 @@ categories:
 tags:
 - automatisation
 - e-commerce
-description: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
-  en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
-  traditionnel vers l'e-commerce.
-excerpt: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail traditionnel vers l'e-commerce.
+excerpt: L'événement commercial "Back to School" représente aujourd'hui le deuxième
+  plus important marché de vente au détail mondial, avec un chiffre d'affa...
 image: /assets/images/blog/2025/07/back-to-school-evolution.webp
 llm_summary: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
   en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
@@ -55,8 +55,11 @@ faq:
 - question: Est-ce adapté aux débutants?
   answer: Oui, ce guide est conçu pour être accessible avec des explications pas à
     pas.
-excerpt: 'L''événement commercial "Back to School" représente aujourd''hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d''affa...'
+description: Analyse de l'évolution du marché 'Back to School' de 172,3 milliards
+  en 2024 vers 230,1 milliards projetés en 2030, explorant la transformation du retail
+  traditionnel vers l'e-commerce.
 ---
+
 
 L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affaires de **172,3 milliards de dollars en 2024** et une projection de **230,1 milliards de dollars d'ici 2030**.
 

@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "L'illusion du code jetable : Pourquoi l'IA va tuer votre boutique PrestaShop (si vous ne redevenez pas architecte)"
+title: 'L''illusion du code jetable : Pourquoi l''IA va tuer votre boutique PrestaShop
+  (si vous ne redevenez pas architecte)'
 date: 2026-01-13
-lang: fr
 ref: disposable-code-illusion-ai-prestashop
 author: Nicolas Dabène
+category: developpement-web
+subcategory: architecture-design
 categories:
 - développement
 - IA
@@ -20,7 +22,10 @@ tags:
 - Doctrine
 - sécurité
 - dette technique
-excerpt: En 2025, le Vibe Coding et l'IA générative créent l'illusion du code gratuit. Mais derrière cette facilité se cache une dette technique explosive pour PrestaShop. Découvrez pourquoi l'architecture logicielle n'a jamais été aussi cruciale et comment passer de "copiste IA" à "architecte orchestrateur".
+excerpt: En 2025, le Vibe Coding et l'IA générative créent l'illusion du code gratuit.
+  Mais derrière cette facilité se cache une dette technique explosive pour PrestaShop.
+  Découvrez pourquoi l'architecture logicielle n'a jamais été aussi cruciale et comment
+  passer de "copiste IA" à "architecte orchestrateur".
 image: /assets/images/blog/2026/01/illusion-code-jetable-ia-prestashop/image-principale.webp
 featured: false
 difficulty: Avancé
@@ -32,7 +37,11 @@ technologies:
 - IA
 - architecture
 estimated_reading_time: 15 minutes
-llm_summary: Analyse critique du "code jetable" généré par l'IA dans l'écosystème PrestaShop. L'article démontre pourquoi la facilité apparente du Vibe Coding crée une dette technique massive et comment l'architecture logicielle (SOLID, Service Layer, Repository Pattern) devient le rempart essentiel pour construire des modules maintenables et évolutifs à l'ère de l'IA.
+llm_summary: Analyse critique du "code jetable" généré par l'IA dans l'écosystème
+  PrestaShop. L'article démontre pourquoi la facilité apparente du Vibe Coding crée
+  une dette technique massive et comment l'architecture logicielle (SOLID, Service
+  Layer, Repository Pattern) devient le rempart essentiel pour construire des modules
+  maintenables et évolutifs à l'ère de l'IA.
 llm_topics:
 - PrestaShop
 - Intelligence Artificielle
@@ -49,18 +58,41 @@ llm_topics:
 - Repository Pattern
 faq:
 - question: Qu'est-ce que le "Vibe Coding" ?
-  answer: Le Vibe Coding est une approche de développement où l'on tape quelques phrases dans un LLM (comme ChatGPT ou Claude), on obtient un script qui "marche", et on le déploie immédiatement sans réelle structure. C'est rapide et grisant, mais c'est une bombe à retardement pour la maintenance et l'évolutivité du code.
-- question: Pourquoi le code généré par l'IA est-il problématique pour PrestaShop ?
-  answer: L'IA est excellente en syntaxe mais faible en contexte métier. Elle ignore souvent les nuances de PrestaShop comme les préfixes de table dynamiques, le système de Hooks, ou l'architecture Symfony/Doctrine. Environ 45% du code IA contient des vulnérabilités de sécurité, et l'IA préfère dupliquer du code plutôt que créer des abstractions réutilisables.
+  answer: Le Vibe Coding est une approche de développement où l'on tape quelques phrases
+    dans un LLM (comme ChatGPT ou Claude), on obtient un script qui "marche", et on
+    le déploie immédiatement sans réelle structure. C'est rapide et grisant, mais
+    c'est une bombe à retardement pour la maintenance et l'évolutivité du code.
+- question: Pourquoi le code généré par l'IA est-il problématique pour PrestaShop
+    ?
+  answer: L'IA est excellente en syntaxe mais faible en contexte métier. Elle ignore
+    souvent les nuances de PrestaShop comme les préfixes de table dynamiques, le système
+    de Hooks, ou l'architecture Symfony/Doctrine. Environ 45% du code IA contient
+    des vulnérabilités de sécurité, et l'IA préfère dupliquer du code plutôt que créer
+    des abstractions réutilisables.
 - question: Les principes SOLID sont-ils encore pertinents à l'ère de l'IA ?
-  answer: Plus que jamais ! Les principes SOLID sont les garde-fous de l'IA. Si vous lui demandez de modifier une classe de 1000 lignes, elle va halluciner. Mais si votre architecture est découpée en petits services spécialisés (Single Responsibility), l'IA devient un assistant chirurgical d'une précision redoutable.
-- question: Quelle est la différence entre un module "jetable" et un module "architecturé" ?
-  answer: Un module jetable met tout le code dans un seul gros fichier avec du SQL en dur et aucune séparation des responsabilités. Un module architecturé utilise une Service Layer, des Repositories Doctrine, et des Hooks pour orchestrer la logique. Le premier est rapide à créer mais impossible à maintenir. Le second prend plus de temps initialement mais reste évolutif sur des années.
+  answer: Plus que jamais ! Les principes SOLID sont les garde-fous de l'IA. Si vous
+    lui demandez de modifier une classe de 1000 lignes, elle va halluciner. Mais si
+    votre architecture est découpée en petits services spécialisés (Single Responsibility),
+    l'IA devient un assistant chirurgical d'une précision redoutable.
+- question: Quelle est la différence entre un module "jetable" et un module "architecturé"
+    ?
+  answer: Un module jetable met tout le code dans un seul gros fichier avec du SQL
+    en dur et aucune séparation des responsabilités. Un module architecturé utilise
+    une Service Layer, des Repositories Doctrine, et des Hooks pour orchestrer la
+    logique. Le premier est rapide à créer mais impossible à maintenir. Le second
+    prend plus de temps initialement mais reste évolutif sur des années.
 - question: Comment utiliser l'IA sans créer de dette technique ?
-  answer: Voyez l'IA comme un "stagiaire ultra-rapide" pour générer vos composants, mais c'est à vous de définir l'architecture, les interfaces et les règles de sécurité. Utilisez l'IA pour accélérer la production de code atomique (une fonction, une classe simple), pas pour concevoir toute votre logique métier. Restez l'architecte, laissez l'IA être le maçon.
+  answer: Voyez l'IA comme un "stagiaire ultra-rapide" pour générer vos composants,
+    mais c'est à vous de définir l'architecture, les interfaces et les règles de sécurité.
+    Utilisez l'IA pour accélérer la production de code atomique (une fonction, une
+    classe simple), pas pour concevoir toute votre logique métier. Restez l'architecte,
+    laissez l'IA être le maçon.
 - question: PrestaShop est-il gratuit ?
-  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez uniquement l'hébergement et les modules premium.
+  answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
+    uniquement l'hébergement et les modules premium.
+lang: fr
 ---
+
 
 # L'illusion du code jetable : Pourquoi l'IA va tuer votre boutique PrestaShop (si vous ne redevenez pas architecte)
 

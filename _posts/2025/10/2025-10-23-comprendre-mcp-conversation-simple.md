@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "Comprendre le Model Context Protocol (MCP) : Une Conversation Simple"
+title: 'Comprendre le Model Context Protocol (MCP) : Une Conversation Simple'
 date: 2025-10-23
 ref: comprendre-mcp-conversation-simple-2025-10
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - Intelligence Artificielle
 - Tutoriel
@@ -45,6 +47,7 @@ faq:
   answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
     des serveurs MCP.
 ---
+
 
 # Comprendre le Model Context Protocol (MCP) : Une Conversation Simple
 

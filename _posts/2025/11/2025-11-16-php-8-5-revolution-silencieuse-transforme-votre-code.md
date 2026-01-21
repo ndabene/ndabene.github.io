@@ -4,6 +4,8 @@ title: 'PHP 8.5 : Boostez vos performances – La révolution qui transforme vot
 date: 2025-11-16
 ref: php-85-boost-your-app-performance-essential-featur
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - PHP
 - développement
@@ -14,9 +16,9 @@ tags:
 - opérateur pipe
 - nouvelles fonctionnalités
 - modernisation
-excerpt: Découvrez comment PHP 8.5 booste vos applications de 5-10%, accélère le
-  debugging x10 et sécurise votre code avec l'opérateur pipe, OPcache obligatoire
-  et 40+ améliorations essentielles pour des apps haute performance.
+excerpt: Découvrez comment PHP 8.5 booste vos applications de 5-10%, accélère le debugging
+  x10 et sécurise votre code avec l'opérateur pipe, OPcache obligatoire et 40+ améliorations
+  essentielles pour des apps haute performance.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
 featured: true
 difficulty: Intermédiaire
@@ -26,7 +28,6 @@ technologies:
 - OPcache
 - URI API
 estimated_reading_time: 15 minutes
-lang: fr
 faq:
 - question: Qu'est-ce que l'opérateur pipe introduit dans PHP 8.5 ?
   answer: 'L''opérateur pipe |> permet de chaîner les appels de fonctions de manière
@@ -68,7 +69,9 @@ faq:
     URI sécurisée pour le traitement des URLs, des améliorations Intl pour le multilingue,
     et des nouveaux attributs comme #[Override] pour sécuriser son système d''overrides
     de modules.'
+lang: fr
 ---
+
 
 
 # PHP 8.5 : La Révolution Silencieuse qui Transforme Votre Code

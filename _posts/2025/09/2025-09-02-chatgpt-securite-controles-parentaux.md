@@ -3,6 +3,8 @@ layout: post
 title: ChatGPT renforce sa sécurité
 date: 2025-09-02
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - sécurité
@@ -48,6 +50,7 @@ faq:
   answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
     Les deux sont complémentaires.
 ---
+
 
 # ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs
 

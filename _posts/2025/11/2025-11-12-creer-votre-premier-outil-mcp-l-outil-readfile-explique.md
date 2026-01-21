@@ -4,6 +4,8 @@ title: 'Créer votre premier outil MCP : readFile'
 date: 2025-11-12
 ref: creer-votre-premier-outil-mcp-l-outil-readfile-explique-nov2025
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - Tutoriel
 - Intelligence Artificielle
@@ -42,6 +44,7 @@ faq:
   answer: Oui, une connaissance de JavaScript/TypeScript est recommandée pour créer
     des serveurs MCP.
 ---
+
 
 # Créer votre Premier Outil MCP : L'Outil readFile Expliqué
 

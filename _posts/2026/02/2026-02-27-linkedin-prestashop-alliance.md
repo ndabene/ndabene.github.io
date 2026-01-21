@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "💥 PrestaShop + Sylius : Le Big Bang de l'Open Source Européen"
+title: '💥 PrestaShop + Sylius : Le Big Bang de l''Open Source Européen'
 date: 2026-02-27
-lang: fr
 ref: linkedin-prestashop-alliance
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: alternatives
 categories:
 - LinkedIn
 - e-commerce
@@ -12,11 +13,15 @@ tags:
 - LinkedIn
 - PrestaShop
 - Sylius
-excerpt: "L'acquisition qui change tout : PrestaShop rejoint cyber_Folks et Sylius. 31 milliards d'€ de GMV, 240 000 boutiques, une force de frappe technique européenne sous Symfony."
+excerpt: 'L''acquisition qui change tout : PrestaShop rejoint cyber_Folks et Sylius.
+  31 milliards d''€ de GMV, 240 000 boutiques, une force de frappe technique européenne
+  sous Symfony.'
 image: /assets/images/blog/2025/12/2025-12-13-prestashop-sylius-alliance.webp
+lang: fr
 linkedin: true
 external_url: https://nicolas-dabene.fr/articles/2025/12/13/prestashop-cyberfolks-sylius-bigbang-opensource-europeen/
 ---
+
 
 ## 💥 PrestaShop + Sylius : Le Big Bang de l'Open Source Européen
 

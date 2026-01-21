@@ -4,6 +4,8 @@ title: 'Vibe Coding vs Prompt-Driven : IA générative'
 date: 2025-06-15
 ref: vibe-coding-prompt-driven-development-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: developpement-assiste
 categories:
 - Intelligence Artificielle
 - développement
@@ -62,6 +64,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Vibe Coding vs Prompt-Driven Development: IA générative et développement logiciel, sécurité et qualité du code
 

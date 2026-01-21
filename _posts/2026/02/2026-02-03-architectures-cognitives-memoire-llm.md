@@ -1,19 +1,47 @@
 ---
 layout: post
-title: "MIRROR et Engram : Comment l'IA Apprend à Penser et à Se Souvenir"
+title: 'MIRROR et Engram : Comment l''IA Apprend à Penser et à Se Souvenir'
 date: 2026-02-03
-lang: fr
 ref: architectures-cognitives-memoire-llm
 author: Nicolas Dabène
-categories: [Intelligence Artificielle]
-tags: [IA, LLM, Architecture, MIRROR, Engram, Mémoire, Raisonnement]
-excerpt: "Les modèles de langage actuels oublient, se contredisent et recalculent sans cesse ce qu'ils devraient simplement se rappeler. Découvrez MIRROR et Engram, deux architectures révolutionnaires qui donnent aux IA une véritable mémoire et une capacité de réflexion interne."
+category: intelligence-artificielle
+subcategory: fondamentaux-ia
+categories:
+- Intelligence Artificielle
+tags:
+- IA
+- LLM
+- Architecture
+- MIRROR
+- Engram
+- Mémoire
+- Raisonnement
+excerpt: Les modèles de langage actuels oublient, se contredisent et recalculent sans
+  cesse ce qu'ils devraient simplement se rappeler. Découvrez MIRROR et Engram, deux
+  architectures révolutionnaires qui donnent aux IA une véritable mémoire et une capacité
+  de réflexion interne.
 image: /assets/images/blog/2026/02/architectures-cognitives-memoire-llm/image-principale.webp
-keywords: [architectures cognitives, MIRROR, Engram, modèles de langage, mémoire IA, LLM, raisonnement, monologue intérieur, N-grammes]
-difficulty: "Avancé"
-technologies: ["LLM", "MIRROR", "Engram", "Transformers", "MoE"]
+difficulty: Avancé
+technologies:
+- LLM
+- MIRROR
+- Engram
+- Transformers
+- MoE
+lang: fr
+keywords:
+- architectures cognitives
+- MIRROR
+- Engram
+- modèles de langage
+- mémoire IA
+- LLM
+- raisonnement
+- monologue intérieur
+- N-grammes
 published: true
 ---
+
 
 ## Quand l'IA Oublie Votre Prénom Trois Messages Plus Tard
 

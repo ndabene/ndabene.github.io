@@ -4,6 +4,8 @@ title: 'AI Act : comprendre la régulation IA en Europe'
 date: 2025-08-29
 ref: ai-act-europe
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: securite-ia
 categories:
 - Intelligence Artificielle
 - Bonnes Pratiques
@@ -48,6 +50,7 @@ faq:
   answer: Claude excelle dans les tâches longues et l'analyse. ChatGPT est plus conversationnel.
     Les deux sont complémentaires.
 ---
+
 
 # AI Act : comprendre la régulation européenne de l’IA
 

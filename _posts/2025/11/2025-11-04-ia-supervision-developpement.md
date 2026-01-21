@@ -4,6 +4,8 @@ title: Laisseriez-vous un dev junior coder seul?
 date: 2025-11-04
 ref: ia-supervision-developpement-nov2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: securite-ia
 categories:
 - Intelligence Artificielle
 - développement
@@ -59,6 +61,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Vous laisseriez un Dev Junior coder sans supervision ? Alors pourquoi l'IA ?
 

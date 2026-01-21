@@ -4,6 +4,8 @@ title: 'Google Shopping & Gemini : la révolution IA en e-commerce'
 date: 2025-09-18
 ref: google-shopping-gemini-revolution-ia-e-commerce
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: strategie-ecommerce
 categories:
 - Intelligence Artificielle
 - Ecommerce
@@ -58,6 +60,7 @@ faq:
   answer: Claude propose une version gratuite limitée et des abonnements Pro (20$/mois)
     et Team (30$/mois par utilisateur).
 ---
+
 
 # Google Shopping avec Gemini : La révolution IA qui transforme l'e-commerce
 

@@ -223,24 +223,17 @@
 
         // Cache des éléments DOM (évite les querySelectorAll répétés)
         // Note: La recherche est maintenant gérée par blog-search-modern.js
+        // Cache des éléments DOM
         const domCache = {
-            // searchInput: document.getElementById('search-input'), // DÉSACTIVÉ - Géré par blog-search-modern.js
-            // clearSearchBtn: document.getElementById('clear-search'), // DÉSACTIVÉ - Géré par blog-search-modern.js
-            categoryPills: document.querySelectorAll('.category-pill'),
             sortPills: document.querySelectorAll('.sort-pill'),
             resetFiltersBtn: document.getElementById('reset-filters'),
             noResultsDiv: document.getElementById('no-results'),
-            filteredCountSpan: document.getElementById('filtered-count'),
-            activeFiltersDiv: document.getElementById('active-filters'),
-            categorySidebarLinks: document.querySelectorAll('.category-compact')
+            activeFiltersDiv: document.getElementById('active-filters')
         };
 
         // État des filtres
-        // Note: currentSearch retiré - géré par blog-search-modern.js
         const state = {
-            currentCategory: '',
             currentSort: 'date-desc'
-            // currentSearch: '' // DÉSACTIVÉ - Géré par blog-search-modern.js
         };
 
         // Masquer par défaut le div "pas de résultats"
@@ -266,57 +259,11 @@
         }, 100); // Réduit de 300ms à 100ms
 
         // Fonction pour ajouter un filtre actif
+        // NOTE: Désactivée car gérée par blog-categories-navigation.html
         function addActiveFilter(value, type) {
-            if (!domCache.activeFiltersDiv) return;
-
-            const filterTag = document.createElement('div');
-            filterTag.className = 'active-filter';
-
-            let icon = '';
-            let label = value;
-
-            switch (type) {
-                case 'category':
-                    icon = 'fa-folder';
-                    label = `Catégorie: ${value}`;
-                    break;
-                case 'search':
-                    icon = 'fa-search';
-                    label = `Recherche: "${value}"`;
-                    break;
-            }
-
-            filterTag.innerHTML = `
-                <i class="fas ${icon}"></i>
-                ${label}
-                <button class="remove-filter" data-type="${type}">
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
-
-            domCache.activeFiltersDiv.appendChild(filterTag);
-
-            filterTag.querySelector('.remove-filter').addEventListener('click', function () {
-                const filterType = this.dataset.type;
-
-                switch (filterType) {
-                    case 'category':
-                        state.currentCategory = '';
-                        domCache.categoryPills.forEach(p => p.classList.remove('active'));
-                        if (domCache.categoryPills[0]) {
-                            domCache.categoryPills[0].classList.add('active');
-                        }
-                        break;
-                    // Note: search case désactivé - géré par blog-search-modern.js
-                    // case 'search':
-                    //     state.currentSearch = '';
-                    //     if (domCache.searchInput) domCache.searchInput.value = '';
-                    //     if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
-                    //     break;
-                }
-
-                applyFilters();
-            });
+            // Cette fonction n'est plus utilisée car le filtrage par catégories
+            // est maintenant géré par la navbar de catégories
+            return;
         }
 
         // Fonction pour trier les posts - Optimisée
@@ -356,46 +303,74 @@
         }
 
         // Fonction pour appliquer les filtres - Optimisée
+        // Fonction pour appliquer les filtres - Optimisée et unifiée
         function applyFilters() {
             const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
+            const lazyPostsData = document.getElementById('lazy-posts-data');
+
+            // Si on a des posts lazy-loaded, on les charge pour que le filtrage soit complet
+            if (lazyPostsData && !window.lazyPostsLoadedForSearch) {
+                if (window.loadLazyPostsForSearch) {
+                    window.loadLazyPostsForSearch();
+                }
+            }
+
             if (posts.length === 0) return;
+
+            // Récupérer la recherche active
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
             let visibleCount = 0;
 
-            // Mise à jour des filtres actifs
-            if (domCache.activeFiltersDiv) domCache.activeFiltersDiv.innerHTML = '';
-            if (state.currentCategory) {
-                addActiveFilter(state.currentCategory, 'category');
-            }
+            // Mise à jour des filtres actifs - DÉSACTIVÉ
+            // Le filtrage par catégories est maintenant géré par blog-categories-navigation.html
+            // if (domCache.activeFiltersDiv) domCache.activeFiltersDiv.innerHTML = '';
+            // if (state.currentCategory) {
+            //     addActiveFilter(state.currentCategory, 'category');
+            // }
             // Note: Recherche gérée par blog-search-modern.js
             // if (state.currentSearch) {
             //     addActiveFilter(state.currentSearch, 'search');
             // }
 
+            // Gérer la visibilité des sections Hero et Featured
+            const heroSection = document.querySelector('.hero-article');
+            const featuredSection = document.querySelector('.featured-section, .bento-blog-grid');
+            const themesSection = document.querySelector('.themes-topics-section');
+
+            const isFiltering = !!(searchQuery && searchQuery.length >= 2);
+
             // Batch DOM updates avec requestAnimationFrame
             scheduleUpdate(() => {
+                if (isFiltering) {
+                    if (heroSection) heroSection.style.display = 'none';
+                    if (featuredSection) featuredSection.style.display = 'none';
+                    if (themesSection) themesSection.style.display = 'none';
+                    // On garde la barre de recherche visible !
+                    document.body.classList.add('is-filtering-active');
+                } else {
+                    if (heroSection) heroSection.style.display = '';
+                    if (featuredSection) featuredSection.style.display = '';
+                    if (themesSection) themesSection.style.display = '';
+                    document.body.classList.remove('is-filtering-active');
+                }
+
                 posts.forEach(post => {
                     const postPreviewElement = post.querySelector('.post-preview-news');
                     if (!postPreviewElement) return;
 
-                    const categoriesRaw = postPreviewElement.getAttribute('data-categories') || '';
-                    const categories = categoriesRaw ? categoriesRaw.split(' ').filter(Boolean) : [];
+                    // NOTE: Le filtrage par catégories est désormais géré par blog-categories-navigation.html
+                    // On ne filtre plus sur data-categories (ancien système)
+                    // Les articles utilisent maintenant data-category et data-subcategory
 
                     const title = post.querySelector('.post-news-title')?.textContent.toLowerCase() || '';
                     const content = post.querySelector('.post-news-excerpt')?.textContent.toLowerCase() || '';
 
-                    // Extraire les tags pour la recherche
-                    const tagsRaw = postPreviewElement.getAttribute('data-tags') || '';
-                    const tagsText = tagsRaw ? tagsRaw.toLowerCase() : '';
-                    const categoriesText = categories.join(' ').toLowerCase();
-
                     let visible = true;
 
-                    // Filtre catégorie
-                    if (state.currentCategory && categories.length > 0 &&
-                        !categories.includes(state.currentCategory)) {
-                        visible = false;
-                    }
+                    // Filtre catégorie - DÉSACTIVÉ - Géré par la navbar de catégories
+                    // La logique de filtrage par catégorie est maintenant dans blog-categories-navigation.html
 
                     // Note: Recherche maintenant gérée par blog-search-modern.js avec Fuse.js
                     // Filtre recherche (amélioré : titre, contenu, catégories ET tags) - DÉSACTIVÉ
@@ -413,11 +388,6 @@
                         visibleCount++;
                     }
                 });
-
-                // Mettre à jour le compteur
-                if (domCache.filteredCountSpan) {
-                    domCache.filteredCountSpan.textContent = `(${visibleCount})`;
-                }
 
                 if (domCache.noResultsDiv) {
                     domCache.noResultsDiv.style.display = visibleCount === 0 ? 'flex' : 'none';
@@ -460,15 +430,16 @@
         //     });
         // }
 
-        // Gestion des pills de catégories
-        domCache.categoryPills.forEach(pill => {
-            pill.addEventListener('click', function () {
-                domCache.categoryPills.forEach(p => p.classList.remove('active'));
-                this.classList.add('active');
-                state.currentCategory = this.dataset.category;
-                applyFilters();
-            });
-        });
+        // Gestion des pills de catégories - DÉSACTIVÉ
+        // Le filtrage par catégories est maintenant géré par blog-categories-navigation.html
+        // domCache.categoryPills.forEach(pill => {
+        //     pill.addEventListener('click', function () {
+        //         domCache.categoryPills.forEach(p => p.classList.remove('active'));
+        //         this.classList.add('active');
+        //         state.currentCategory = this.dataset.category;
+        //         applyFilters();
+        //     });
+        // });
 
         // Gestion des pills de tri
         domCache.sortPills.forEach(pill => {
@@ -483,13 +454,10 @@
         // Réinitialiser les filtres
         if (domCache.resetFiltersBtn) {
             domCache.resetFiltersBtn.addEventListener('click', function () {
-                state.currentCategory = '';
+                // Note: Les catégories sont réinitialisées par blog-categories-navigation.html
+                // state.currentCategory = ''; // DÉSACTIVÉ
                 // state.currentSearch = ''; // DÉSACTIVÉ - Géré par blog-search-modern.js
                 state.currentSort = 'date-desc';
-
-                // Note: La recherche est réinitialisée par blog-search-modern.js
-                // if (domCache.searchInput) domCache.searchInput.value = '';
-                // if (domCache.clearSearchBtn) domCache.clearSearchBtn.style.display = 'none';
 
                 // Déclencher la réinitialisation de la recherche moderne
                 const searchInput = document.getElementById('search-input');
@@ -500,51 +468,56 @@
                 }
                 if (clearSearchBtn) clearSearchBtn.style.display = 'none';
 
-                domCache.categoryPills.forEach(p => p.classList.remove('active'));
-                if (domCache.categoryPills[0]) {
-                    domCache.categoryPills[0].classList.add('active');
-                }
+                // Réinitialisation des pills de catégories - DÉSACTIVÉ
+                // domCache.categoryPills.forEach(p => p.classList.remove('active'));
+                // if (domCache.categoryPills[0]) {
+                //     domCache.categoryPills[0].classList.add('active');
+                // }
 
                 domCache.sortPills.forEach(p => p.classList.remove('active'));
                 if (domCache.sortPills[0]) {
                     domCache.sortPills[0].classList.add('active');
                 }
 
+                // Déclencher la réinitialisation de la navbar de catégories
+                const clearCategoryFilter = document.getElementById('clear-filter-btn');
+                if (clearCategoryFilter) {
+                    clearCategoryFilter.click();
+                }
+
                 applyFilters();
             });
         }
 
-        // Catégories sidebar
-        domCache.categorySidebarLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const category = this.dataset.category;
-                state.currentCategory = category;
-
-                domCache.categoryPills.forEach(p => {
-                    if (p.dataset.category === category) {
-                        p.classList.add('active');
-                    } else {
-                        p.classList.remove('active');
-                    }
-                });
-
-                applyFilters();
-            });
-        });
+        // Catégories sidebar - DÉSACTIVÉ
+        // Le filtrage par catégories est maintenant géré par blog-categories-navigation.html
+        // domCache.categorySidebarLinks.forEach(link => {
+        //     link.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         const category = this.dataset.category;
+        //         state.currentCategory = category;
+        //
+        //         domCache.categoryPills.forEach(p => {
+        //             if (p.dataset.category === category) {
+        //                 p.classList.add('active');
+        //             } else {
+        //                 p.classList.remove('active');
+        //             }
+        //         });
+        //
+        //         applyFilters();
+        //     });
+        // });
 
         // Filtrage initial - Délai réduit
         setTimeout(() => {
             applyFilters();
+        }, 100);
+        // Réduit de 300ms à 100ms
 
-            // Vérifier si des posts sont visibles
-            const posts = Array.from(postsContainer.querySelectorAll('.post-preview-wrapper'));
-            const visiblePosts = posts.filter(post => post.style.display !== 'none');
-
-            if (visiblePosts.length === 0 && posts.length > 0) {
-                applyFilters();
-            }
-        }, 100); // Réduit de 300ms à 100ms
+        // Exporter pour coordination
+        window.applyBlogFilters = applyFilters;
+        window.blogState = state;
     }
 
     // Initialisation au chargement du DOM

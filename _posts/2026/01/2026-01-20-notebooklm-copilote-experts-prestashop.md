@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Oubliez ChatGPT (parfois) : Pourquoi NotebookLM est le nouveau copilote des experts PrestaShop"
+title: 'Oubliez ChatGPT (parfois) : Pourquoi NotebookLM est le nouveau copilote des
+  experts PrestaShop'
 date: 2026-01-20
-lang: fr
 ref: notebooklm-prestashop-experts-copilot
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - IA
 - PrestaShop
@@ -19,7 +21,10 @@ tags:
 - productivité
 - e-commerce
 - développement
-excerpt: ChatGPT hallucine sur votre code PrestaShop ? Découvrez NotebookLM, l'outil Google qui révolutionne la façon dont les développeurs et e-commerçants exploitent leur documentation technique. Une IA qui analyse vos sources au lieu d'inventer des réponses.
+excerpt: ChatGPT hallucine sur votre code PrestaShop ? Découvrez NotebookLM, l'outil
+  Google qui révolutionne la façon dont les développeurs et e-commerçants exploitent
+  leur documentation technique. Une IA qui analyse vos sources au lieu d'inventer
+  des réponses.
 image: /assets/images/blog/2026/01/notebooklm-copilote-experts-prestashop/image-principale.webp
 featured: false
 difficulty: Intermédiaire
@@ -30,7 +35,12 @@ technologies:
 - RAG
 - documentation
 estimated_reading_time: 12 minutes
-llm_summary: Découvrez NotebookLM, l'outil Google basé sur la technologie RAG qui transforme la façon dont les experts PrestaShop travaillent avec leur documentation. Contrairement aux LLM classiques qui hallucinent, NotebookLM analyse vos documents spécifiques pour fournir des réponses fiables et contextualisées. L'article présente des cas d'usage concrets pour les développeurs et e-commerçants, de la migration de modules à l'optimisation de catalogues produits.
+llm_summary: Découvrez NotebookLM, l'outil Google basé sur la technologie RAG qui
+  transforme la façon dont les experts PrestaShop travaillent avec leur documentation.
+  Contrairement aux LLM classiques qui hallucinent, NotebookLM analyse vos documents
+  spécifiques pour fournir des réponses fiables et contextualisées. L'article présente
+  des cas d'usage concrets pour les développeurs et e-commerçants, de la migration
+  de modules à l'optimisation de catalogues produits.
 llm_topics:
 - NotebookLM
 - Intelligence Artificielle
@@ -46,18 +56,34 @@ llm_topics:
 - Google AI
 faq:
 - question: Qu'est-ce que NotebookLM ?
-  answer: NotebookLM est un outil Google basé sur la technologie RAG (Retrieval-Augmented Generation) qui permet à une IA d'analyser et de répondre à vos questions en se basant uniquement sur vos documents sources, sans halluciner. C'est comme avoir un assistant qui lit vraiment vos docs avant de répondre.
+  answer: NotebookLM est un outil Google basé sur la technologie RAG (Retrieval-Augmented
+    Generation) qui permet à une IA d'analyser et de répondre à vos questions en se
+    basant uniquement sur vos documents sources, sans halluciner. C'est comme avoir
+    un assistant qui lit vraiment vos docs avant de répondre.
 - question: En quoi NotebookLM est-il différent de ChatGPT ?
-  answer: ChatGPT est entraîné sur l'ensemble d'internet et peut inventer des réponses basées sur sa "mémoire". NotebookLM, lui, se base uniquement sur les documents que vous lui fournissez. Si l'information n'est pas dans vos sources, il dira "Je ne sais pas" au lieu d'halluciner.
+  answer: ChatGPT est entraîné sur l'ensemble d'internet et peut inventer des réponses
+    basées sur sa "mémoire". NotebookLM, lui, se base uniquement sur les documents
+    que vous lui fournissez. Si l'information n'est pas dans vos sources, il dira
+    "Je ne sais pas" au lieu d'halluciner.
 - question: Quelles sources puis-je importer dans NotebookLM ?
-  answer: Vous pouvez importer des PDF, fichiers texte, documents Google Drive et URLs de sites web. Pour PrestaShop, cela inclut les catalogues fournisseurs, la documentation technique, les logs d'erreurs, le code source de modules, etc.
+  answer: Vous pouvez importer des PDF, fichiers texte, documents Google Drive et
+    URLs de sites web. Pour PrestaShop, cela inclut les catalogues fournisseurs, la
+    documentation technique, les logs d'erreurs, le code source de modules, etc.
 - question: NotebookLM est-il gratuit ?
-  answer: Oui, NotebookLM est actuellement gratuit et accessible via notebooklm.google.com. Google assure que vos données ne sont pas utilisées pour entraîner le modèle global.
+  answer: Oui, NotebookLM est actuellement gratuit et accessible via notebooklm.google.com.
+    Google assure que vos données ne sont pas utilisées pour entraîner le modèle global.
 - question: Mes données sont-elles confidentielles dans NotebookLM ?
-  answer: Selon Google, vos sources restent dans votre instance privée et ne servent pas à entraîner le modèle global. C'est un point critique pour les marchands qui y importent des données sensibles.
+  answer: Selon Google, vos sources restent dans votre instance privée et ne servent
+    pas à entraîner le modèle global. C'est un point critique pour les marchands qui
+    y importent des données sensibles.
 - question: Qu'est-ce que la technologie RAG ?
-  answer: RAG signifie Retrieval-Augmented Generation. Au lieu de demander à l'IA d'inventer une réponse basée sur sa mémoire, on lui demande de lire vos documents et de répondre uniquement en se basant sur eux. C'est la différence entre un expert qui devine et un expert qui vérifie ses sources.
+  answer: RAG signifie Retrieval-Augmented Generation. Au lieu de demander à l'IA
+    d'inventer une réponse basée sur sa mémoire, on lui demande de lire vos documents
+    et de répondre uniquement en se basant sur eux. C'est la différence entre un expert
+    qui devine et un expert qui vérifie ses sources.
+lang: fr
 ---
+
 
 Avez-vous déjà ressenti cette fatigue mentale ? Celle qui survient quand vous ouvrez un PDF technique de fournisseur de 80 pages pour trouver une dimension produit ? Ou quand vous devez migrer un module PrestaShop 1.6 vers 8.1 et que vous passez votre après-midi à jongler entre la doc Symfony, l'ancienne doc legacy et StackOverflow ?
 

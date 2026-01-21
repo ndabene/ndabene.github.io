@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "⚠️ L'IA nous rend plus rapides... mais aussi plus dangereux"
+title: ⚠️ L'IA nous rend plus rapides... mais aussi plus dangereux
 date: 2026-02-13
-lang: fr
 ref: linkedin-ia-pieges-developpeurs
 author: Nicolas Dabène
+category: developpement-web
+subcategory: api-integration
 categories:
 - LinkedIn
 - Développement
@@ -12,11 +13,14 @@ tags:
 - LinkedIn
 - IA
 - code
-excerpt: "GitHub Copilot, Claude, ChatGPT : +55% de productivité... mais 64% des bugs viennent de mauvaises décisions d'architecture. Les 8 pièges invisibles à éviter."
+excerpt: 'GitHub Copilot, Claude, ChatGPT : +55% de productivité... mais 64% des bugs
+  viennent de mauvaises décisions d''architecture. Les 8 pièges invisibles à éviter.'
 image: /assets/images/blog/2025/12/ia-pieges-developpeurs.webp
+lang: fr
 linkedin: true
 external_url: https://nicolas-dabene.fr/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/
 ---
+
 
 ## ⚠️ L'IA nous rend plus rapides... mais aussi plus dangereux
 

@@ -2,9 +2,10 @@
 layout: post
 title: L'avenir des développeurs avec l'IA
 date: 2025-11-26
-lang: fr
 ref: future-belongs-to-those-who-talk-to-machines
 author: Nicolas Dabène
+category: strategie-marche
+subcategory: impact-industrie
 categories:
 - IA
 - PrestaShop
@@ -15,18 +16,12 @@ tags:
 - prompt engineering
 - future of work
 - soft skills
-excerpt: 'Le code n''est plus le seul langage du pouvoir dans le monde digital. Une nouvelle compétence, plus humaine et plus accessible, est en train de prendre le dessus : l''art de "parler" aux machines. Découvrez pourquoi le futur de l''innovation, notamment sur PrestaShop, appartiendra aux communicateurs, aux créatifs et aux visionnaires, et non plus seulement aux codeurs.'
+excerpt: 'Le code n''est plus le seul langage du pouvoir dans le monde digital. Une
+  nouvelle compétence, plus humaine et plus accessible, est en train de prendre le
+  dessus : l''art de "parler" aux machines. Découvrez pourquoi le futur de l''innovation,
+  notamment sur PrestaShop, appartiendra aux communicateurs, aux créatifs et aux visionnaires,
+  et non plus seulement aux codeurs.'
 image: /assets/images/blog/2025/11/parler-aux-machines-futur.webp
-keywords:
-- IA
-- PrestaShop
-- prompt engineering
-- futur du travail
-- développeur
-- soft skills
-- communication
-- n8n
-- automatisation
 difficulty: ⭐️⭐️
 technologies:
 - AI
@@ -66,7 +61,19 @@ faq:
 - question: PrestaShop est-il gratuit?
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
+lang: fr
+keywords:
+- IA
+- PrestaShop
+- prompt engineering
+- futur du travail
+- développeur
+- soft skills
+- communication
+- n8n
+- automatisation
 ---
+
 
 
 # L'Avenir Appartient à Ceux qui Parlent aux Machines, Pas à Ceux qui les Codent

@@ -1,10 +1,11 @@
 ---
 layout: post
-title: 'Rétrospective Complète des Événements PrestaShop 2025'
+title: Rétrospective Complète des Événements PrestaShop 2025
 date: 2026-01-01
-lang: fr
 ref: retrospective-prestashop-2025
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: ia-ecommerce
 categories:
 - PrestaShop
 - e-commerce
@@ -18,8 +19,18 @@ tags:
 - developer-conference
 - fop-days
 - prestashop-day
-excerpt: 'Je vous propose un résumé complet de tous les événements majeurs de PrestaShop en 2025, une année exceptionnelle marquée par des lancements importants, des innovations majeures et une forte mobilisation de la communauté.'
+excerpt: Je vous propose un résumé complet de tous les événements majeurs de PrestaShop
+  en 2025, une année exceptionnelle marquée par des lancements importants, des innovations
+  majeures et une forte mobilisation de la communauté.
 image: /assets/images/blog/2026/01/retrospective-evenements-prestashop-2025/image-principale.webp
+difficulty: ⭐️⭐️
+technologies:
+- PrestaShop
+- Symfony 6.4
+- PHP 8.4
+- MCP Protocol
+estimated_reading_time: 20 minutes
+lang: fr
 keywords:
 - PrestaShop 2025
 - PrestaShop 9
@@ -29,14 +40,8 @@ keywords:
 - MCP Server
 - Live Updates
 - événements PrestaShop
-difficulty: ⭐️⭐️
-technologies:
-- PrestaShop
-- Symfony 6.4
-- PHP 8.4
-- MCP Protocol
-estimated_reading_time: 20 minutes
 ---
+
 
 # Rétrospective Complète des Événements PrestaShop 2025
 

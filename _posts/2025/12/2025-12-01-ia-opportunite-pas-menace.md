@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "L'IA ne remplace pas les métiers, elle transforme notre façon de travailler"
+title: L'IA ne remplace pas les métiers, elle transforme notre façon de travailler
 date: 2025-12-01
 ref: ai-doesnt-replace-jobs-it-transforms-how-we-work
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: strategie-ia
 categories:
 - Intelligence Artificielle
 - Carrière
@@ -15,24 +17,36 @@ tags:
 - ChatGPT
 - adaptation-professionnelle
 - avenir-travail
-excerpt: "92% des professionnels craignent l'IA, mais seuls 22% l'ont vraiment testée.
-  Découvrez pourquoi l'IA est une opportunité de croissance, pas une menace. Guide pratique et retours d'expérience."
+excerpt: 92% des professionnels craignent l'IA, mais seuls 22% l'ont vraiment testée.
+  Découvrez pourquoi l'IA est une opportunité de croissance, pas une menace. Guide
+  pratique et retours d'expérience.
 image: /assets/images/blog/2025/11/2025-11-15-ia-opportunite-pas-menace.webp
 featured: true
 difficulty: Débutant
 estimated_reading_time: 12 minutes
 faq:
-- question: "L'IA va-t-elle vraiment remplacer mon emploi ?"
-  answer: "Les études montrent que 85% des métiers seront transformés, pas supprimés. L'IA devient un outil qui augmente vos capacités plutôt qu'un remplaçant. La clé est d'apprendre à collaborer avec ces outils."
-- question: "Par où commencer pour apprendre à utiliser l'IA professionnellement ?"
-  answer: "Commencez simplement avec ChatGPT ou Claude pour une tâche répétitive. Par exemple, la rédaction d'emails ou la synthèse de documents. 15 minutes par jour pendant 2 semaines suffisent pour voir la différence."
-- question: "Quelles compétences développer pour rester pertinent ?"
-  answer: "Focus sur ce que l'IA ne fait pas bien : créativité, empathie, pensée critique et capacité à contextualiser. Plus vous maîtrisez l'IA, plus ces compétences humaines prennent de la valeur."
-- question: "L'IA fait parfois des erreurs, comment lui faire confiance ?"
-  answer: "L'IA est un assistant, pas un oracle. Comme avec un stagiaire brillant, vous vérifiez et validez. Avec le temps, vous apprenez ses forces et limites, et vous travaillez en complémentarité."
-- question: "Combien de temps faut-il pour devenir efficace avec l'IA ?"
-  answer: "Pour les bases : 1 semaine. Pour être à l'aise : 1 mois. Pour exceller : 3-6 mois. C'est comme apprendre Excel, au début ça semble complexe, puis ça devient naturel."
+- question: L'IA va-t-elle vraiment remplacer mon emploi ?
+  answer: Les études montrent que 85% des métiers seront transformés, pas supprimés.
+    L'IA devient un outil qui augmente vos capacités plutôt qu'un remplaçant. La clé
+    est d'apprendre à collaborer avec ces outils.
+- question: Par où commencer pour apprendre à utiliser l'IA professionnellement ?
+  answer: Commencez simplement avec ChatGPT ou Claude pour une tâche répétitive. Par
+    exemple, la rédaction d'emails ou la synthèse de documents. 15 minutes par jour
+    pendant 2 semaines suffisent pour voir la différence.
+- question: Quelles compétences développer pour rester pertinent ?
+  answer: 'Focus sur ce que l''IA ne fait pas bien : créativité, empathie, pensée
+    critique et capacité à contextualiser. Plus vous maîtrisez l''IA, plus ces compétences
+    humaines prennent de la valeur.'
+- question: L'IA fait parfois des erreurs, comment lui faire confiance ?
+  answer: L'IA est un assistant, pas un oracle. Comme avec un stagiaire brillant,
+    vous vérifiez et validez. Avec le temps, vous apprenez ses forces et limites,
+    et vous travaillez en complémentarité.
+- question: Combien de temps faut-il pour devenir efficace avec l'IA ?
+  answer: 'Pour les bases : 1 semaine. Pour être à l''aise : 1 mois. Pour exceller
+    : 3-6 mois. C''est comme apprendre Excel, au début ça semble complexe, puis ça
+    devient naturel.'
 ---
+
 
 # L'IA ne remplace pas les métiers, elle transforme notre façon de travailler
 

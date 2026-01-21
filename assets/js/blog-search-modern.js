@@ -1,7 +1,7 @@
 // Modern Blog Search with Fuse.js - Recherche floue et moderne
 // Amélioration de l'expérience de recherche avec fonctionnalités avancées
 
-(function() {
+(function () {
     'use strict';
 
     // Configuration
@@ -142,16 +142,16 @@
                         <i class="fas fa-sparkles"></i> ${results.length} résultat${results.length > 1 ? 's' : ''} pertinent${results.length > 1 ? 's' : ''}
                     </div>
                     ${results.map((result, index) => {
-                        const item = result.item;
-                        const score = (1 - result.score) * 100;
+                    const item = result.item;
+                    const score = (1 - result.score) * 100;
 
-                        // Extraire un court extrait avec le match
-                        let excerpt = item.excerpt;
-                        if (excerpt.length > 80) {
-                            excerpt = excerpt.substring(0, 80) + '...';
-                        }
+                    // Extraire un court extrait avec le match
+                    let excerpt = item.excerpt;
+                    if (excerpt.length > 80) {
+                        excerpt = excerpt.substring(0, 80) + '...';
+                    }
 
-                        return `
+                    return `
                             <a href="${item.url}" class="search-suggestion" data-url="${item.url}">
                                 <i class="fas fa-${index === 0 ? 'star' : 'file-alt'}"></i>
                                 <div class="suggestion-content">
@@ -164,7 +164,7 @@
                                 </div>
                             </a>
                         `;
-                    }).join('')}
+                }).join('')}
                 `;
                 suggestionsModal.classList.add('active');
             } else {
@@ -293,34 +293,33 @@
 
     // Perform fuzzy search (simplified - all posts are loaded)
     function performFuzzySearch(query) {
+        // Obtenir l'état global du filtrage (catégories)
+        const activeCategory = window.blogState ? window.blogState.currentCategory : '';
+        const activeSubcategory = window.blogState ? window.blogState.currentSubcategory : '';
+
         if (!query || query.length < 2) {
-            // Show all posts
-            searchIndex.forEach(item => {
-                if (item.element) {
-                    item.element.style.display = '';
-                    // Remove highlights
-                    const titleElement = item.element.querySelector('.post-news-title a');
-                    const excerptElement = item.element.querySelector('.post-news-excerpt');
-                    if (titleElement) titleElement.innerHTML = item.title;
-                    if (excerptElement) excerptElement.innerHTML = item.excerpt;
-                }
-            });
+            // Si pas de recherche, on laisse blog-filters.js gérer tout (y compris les catégories)
+            if (window.applyBlogFilters) {
+                window.applyBlogFilters();
+            } else {
+                searchIndex.forEach(item => {
+                    if (item.element) item.element.style.display = '';
+                });
+            }
             return searchIndex.length;
         }
 
         if (!fuse) {
-            // Fallback to basic search
             return performBasicSearch(query);
         }
 
         const results = fuse.search(query);
         let visibleCount = 0;
 
-        // Hide all posts first
+        // On réinitialise tout le monde à masqué d'abord
         searchIndex.forEach(item => {
             if (item.element) {
                 item.element.style.display = 'none';
-                // Remove previous highlights
                 const titleElement = item.element.querySelector('.post-news-title a');
                 const excerptElement = item.element.querySelector('.post-news-excerpt');
                 if (titleElement) titleElement.innerHTML = item.title;
@@ -328,15 +327,37 @@
             }
         });
 
-        // Show matching results with highlights
+        // Gérer les sections Hero et Featured (on les cache en cas de recherche)
+        const heroSection = document.querySelector('.hero-article');
+        const featuredSection = document.querySelector('.featured-section');
+        if (heroSection) heroSection.style.display = 'none';
+        if (featuredSection) featuredSection.style.display = 'none';
+
+        // Filtrer les résultats de recherche par la catégorie active
         results.forEach(result => {
             const item = result.item;
+            const postElement = item.element.querySelector('.post-preview-news');
 
-            if (item.element) {
+            let categoryMatches = true;
+            if (activeCategory) {
+                const postCategory = postElement.getAttribute('data-category') || '';
+                const postSubcategory = postElement.getAttribute('data-subcategory') || '';
+                const postCategories = (postElement.getAttribute('data-categories') || '').toLowerCase().split(' ');
+
+                const matchesCat = (postCategory === activeCategory) || postCategories.includes(activeCategory.toLowerCase());
+
+                if (activeSubcategory) {
+                    if (postSubcategory !== activeSubcategory) categoryMatches = false;
+                } else if (!matchesCat) {
+                    categoryMatches = false;
+                }
+            }
+
+            if (categoryMatches && item.element) {
                 item.element.style.display = '';
                 visibleCount++;
 
-                // Highlight matches
+                // Highlights
                 if (result.matches) {
                     result.matches.forEach(match => {
                         const element = item.element.querySelector(
@@ -357,17 +378,27 @@
     // Fallback basic search (si Fuse.js n'est pas disponible)
     function performBasicSearch(query) {
         const searchTerm = query.toLowerCase();
+        const activeCategory = window.blogState ? window.blogState.currentCategory : '';
         let visibleCount = 0;
 
         searchIndex.forEach(item => {
-            const matches =
+            const postElement = item.element.querySelector('.post-preview-news');
+            const matchesSearch =
                 item.title.toLowerCase().includes(searchTerm) ||
                 item.excerpt.toLowerCase().includes(searchTerm) ||
                 item.categories.toLowerCase().includes(searchTerm) ||
                 item.tags.toLowerCase().includes(searchTerm);
 
-            item.element.style.display = matches ? '' : 'none';
-            if (matches) visibleCount++;
+            let categoryMatches = true;
+            if (activeCategory) {
+                const postCategory = postElement.getAttribute('data-category') || '';
+                const postCategories = (postElement.getAttribute('data-categories') || '').toLowerCase().split(' ');
+                categoryMatches = (postCategory === activeCategory) || postCategories.includes(activeCategory.toLowerCase());
+            }
+
+            const visible = matchesSearch && categoryMatches;
+            item.element.style.display = visible ? '' : 'none';
+            if (visible) visibleCount++;
         });
 
         return visibleCount;
@@ -474,7 +505,7 @@
         }, 150);
 
         // Search input handler
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             const value = this.value.trim();
 
             if (clearSearchBtn) {
@@ -486,7 +517,7 @@
         });
 
         // Focus handler - show suggestions modal
-        searchInput.addEventListener('focus', function() {
+        searchInput.addEventListener('focus', function () {
             if (suggestionsModal) {
                 debouncedSuggestions(this);
             }
@@ -494,7 +525,7 @@
 
         // Click handler for suggestions in modal
         if (suggestionsModal) {
-            suggestionsModal.addEventListener('click', function(e) {
+            suggestionsModal.addEventListener('click', function (e) {
                 const suggestion = e.target.closest('.search-suggestion');
                 if (suggestion) {
                     // Si c'est un lien vers un article, laisser la navigation se faire naturellement
@@ -517,7 +548,7 @@
 
         // Clear search button
         if (clearSearchBtn) {
-            clearSearchBtn.addEventListener('click', function() {
+            clearSearchBtn.addEventListener('click', function () {
                 searchInput.value = '';
                 searchInput.dispatchEvent(new Event('input'));
                 searchInput.focus();
@@ -525,7 +556,7 @@
         }
 
         // Keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             // "/" to focus search
             if (e.key === '/' && !isInputFocused()) {
                 e.preventDefault();
@@ -554,6 +585,7 @@
 
     // Re-export function to rebuild index when posts are loaded
     window.rebuildSearchIndex = buildSearchIndex;
+    window.loadLazyPostsForSearch = loadLazyPostsForSearch;
 
     // Initialize on DOM ready
     if (document.readyState === 'loading') {

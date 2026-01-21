@@ -4,6 +4,8 @@ title: 'Créer votre premier serveur MCP : Setup'
 date: 2025-10-30
 ref: setup-serveur-mcp-typescript-2025-10
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - Tutoriel
 - Intelligence Artificielle
@@ -21,6 +23,36 @@ technologies:
 - Express
 - MCP
 estimated_reading_time: 8 minutes
+faq:
+- question: Pourquoi utiliser TypeScript plutôt que JavaScript pour un serveur MCP
+    ?
+  answer: TypeScript ajoute des types statiques qui évitent beaucoup d'erreurs stupides
+    lors du développement. Pour un serveur qui va gérer des requêtes d'IA et manipuler
+    des données sensibles, avoir ce niveau de vérification est rassurant. De plus,
+    l'auto-complétion dans votre éditeur devient magique avec TypeScript, accélérant
+    considérablement le développement.
+- question: Quelle version de Node.js faut-il pour créer un serveur MCP ?
+  answer: Il est recommandé d'utiliser Node.js version 16 ou supérieure. Vous pouvez
+    vérifier votre version avec la commande `node --version` dans votre terminal.
+    Si vous n'avez pas Node.js installé, téléchargez-le depuis le site officiel nodejs.org.
+- question: Qu'est-ce que le flag --save-dev dans npm install ?
+  answer: Le flag --save-dev indique que les packages installés sont des dépendances
+    de développement, nécessaires uniquement pendant le développement, pas en production.
+    Ces dépendances seront listées dans la section devDependencies du package.json.
+    C'est le cas de TypeScript, ts-node et @types/node qui ne sont utilisés que pour
+    compiler et développer le code.
+- question: Pourquoi séparer les dossiers src et dist ?
+  answer: 'Cette structure sépare votre code source TypeScript (dans src/) du code
+    compilé JavaScript (dans dist/). C''est une bonne pratique qui garde votre projet
+    organisé : vous développez dans src/, TypeScript compile vers dist/, et c''est
+    le contenu de dist/ qui est exécuté en production. Cela évite de mélanger code
+    source et code compilé.'
+- question: Qu'est-ce que le protocole MCP?
+  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
+    pour connecter des serveurs de données aux assistants IA comme Claude.
+- question: MCP est-il compatible avec d'autres IA?
+  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
+    est open-source et d'autres IA pourront l'adopter.
 howto:
   name: Créer son Premier Serveur MCP avec TypeScript
   description: Guide étape par étape pour initialiser un projet TypeScript et configurer
@@ -69,36 +101,6 @@ howto:
     text: Créez un fichier de test simple dans src/index.ts avec un console.log('Hello
       MCP!'). Lancez `npm run dev` pour vérifier que tout fonctionne. Si vous voyez
       le message dans le terminal, votre environnement est correctement configuré.
-faq:
-- question: Pourquoi utiliser TypeScript plutôt que JavaScript pour un serveur MCP
-    ?
-  answer: TypeScript ajoute des types statiques qui évitent beaucoup d'erreurs stupides
-    lors du développement. Pour un serveur qui va gérer des requêtes d'IA et manipuler
-    des données sensibles, avoir ce niveau de vérification est rassurant. De plus,
-    l'auto-complétion dans votre éditeur devient magique avec TypeScript, accélérant
-    considérablement le développement.
-- question: Quelle version de Node.js faut-il pour créer un serveur MCP ?
-  answer: Il est recommandé d'utiliser Node.js version 16 ou supérieure. Vous pouvez
-    vérifier votre version avec la commande `node --version` dans votre terminal.
-    Si vous n'avez pas Node.js installé, téléchargez-le depuis le site officiel nodejs.org.
-- question: Qu'est-ce que le flag --save-dev dans npm install ?
-  answer: Le flag --save-dev indique que les packages installés sont des dépendances
-    de développement, nécessaires uniquement pendant le développement, pas en production.
-    Ces dépendances seront listées dans la section devDependencies du package.json.
-    C'est le cas de TypeScript, ts-node et @types/node qui ne sont utilisés que pour
-    compiler et développer le code.
-- question: Pourquoi séparer les dossiers src et dist ?
-  answer: 'Cette structure sépare votre code source TypeScript (dans src/) du code
-    compilé JavaScript (dans dist/). C''est une bonne pratique qui garde votre projet
-    organisé : vous développez dans src/, TypeScript compile vers dist/, et c''est
-    le contenu de dist/ qui est exécuté en production. Cela évite de mélanger code
-    source et code compilé.'
-- question: Qu'est-ce que le protocole MCP?
-  answer: MCP (Model Context Protocol) est un protocole open-source créé par Anthropic
-    pour connecter des serveurs de données aux assistants IA comme Claude.
-- question: MCP est-il compatible avec d'autres IA?
-  answer: Actuellement, MCP est principalement conçu pour Claude, mais le protocole
-    est open-source et d'autres IA pourront l'adopter.
 sources:
 - name: TypeScript Official Documentation
   url: https://www.typescriptlang.org/docs/
@@ -113,6 +115,7 @@ sources:
   organization: Express
   type: Documentation
 ---
+
 
 # Créer son Premier Serveur MCP : Setup du Projet TypeScript
 

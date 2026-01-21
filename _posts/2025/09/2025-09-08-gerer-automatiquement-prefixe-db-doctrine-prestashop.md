@@ -4,6 +4,8 @@ title: 'Doctrine PrestaShop : gérer automatiquement le préfixe DB'
 date: 2025-09-08
 ref: gerer-automatiquement-prefixe-db-doctrine-prestashop
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - PrestaShop
 - PHP
@@ -52,6 +54,7 @@ faq:
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
 ---
+
 
 # Gérer automatiquement le préfixe DB dans Doctrine pour PrestaShop
 

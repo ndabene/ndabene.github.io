@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "🚀 PHP 8.5 : La révolution silencieuse qui transforme votre code"
+title: '🚀 PHP 8.5 : La révolution silencieuse qui transforme votre code'
 date: 2026-02-20
-lang: fr
 ref: linkedin-php85-revolution
 author: Nicolas Dabène
+category: developpement-web
+subcategory: langages-frameworks
 categories:
 - LinkedIn
 - PHP
@@ -12,11 +13,14 @@ tags:
 - LinkedIn
 - PHP
 - performance
-excerpt: "L'opérateur pipe, clone with, OPcache obligatoire... PHP 8.5 élimine 20 ans de frustrations. +10% de performances, debugging x10 plus rapide."
+excerpt: L'opérateur pipe, clone with, OPcache obligatoire... PHP 8.5 élimine 20 ans
+  de frustrations. +10% de performances, debugging x10 plus rapide.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
+lang: fr
 linkedin: true
 external_url: https://nicolas-dabene.fr/articles/2025/11/16/php-8-5-revolution-silencieuse-transforme-votre-code/
 ---
+
 
 ## 🚀 PHP 8.5 : La révolution silencieuse qui transforme votre code
 

@@ -1,10 +1,11 @@
 ---
 layout: post
-title: 'Pourquoi un module PrestaShop minimaliste vaut de l or'
+title: Pourquoi un module PrestaShop minimaliste vaut de l or
 date: 2025-12-16
-lang: fr
 ref: module-minimaliste-ps9
 author: Nicolas Dabène
+category: prestashop-ecommerce
+subcategory: developpement-prestashop
 categories:
 - Développement PrestaShop
 - Qualité Code
@@ -15,7 +16,9 @@ tags:
 - clean-code
 - prestashop-9
 - performance-web
-excerpt: 'Un module de 50 Ko peut-il valoir plus cher qu une usine à gaz de 10 Mo ? Avec PrestaShop 9, découvrez pourquoi la valeur d un module réside dans ce qu il ne fait pas.'
+excerpt: Un module de 50 Ko peut-il valoir plus cher qu une usine à gaz de 10 Mo ?
+  Avec PrestaShop 9, découvrez pourquoi la valeur d un module réside dans ce qu il
+  ne fait pas.
 image: /assets/images/blog/2025/12/2025-12-16-module-minimaliste-ps9.webp
 featured: false
 difficulty: Avancé
@@ -25,13 +28,21 @@ technologies:
 - PHP 8.4
 estimated_reading_time: 9 minutes
 faq:
-- question: "Pourquoi certains modules légers sont-ils chers ?"
-  answer: "Parce que vous payez l'expertise de l'architecte, pas celle du maçon. Un code concis qui s'intègre parfaitement à l'architecture stricte de PrestaShop 9 demande plus d'heures de conception qu'un code bavard."
-- question: "C'est quoi un module 'usine à gaz' ?"
-  answer: "C'est un module qui tente de tout réinventer au lieu d'utiliser les services natifs du Cœur. Sur PrestaShop 9, ces modules sont souvent instables et créent des conflits."
-- question: "Les overrides sont-ils toujours utilisés ?"
-  answer: "De moins en moins. Avec l'architecture moderne de PrestaShop 9, l'usage des Hooks et de la décoration de services est la norme. L'override est devenu une pratique risquée à éviter."
+- question: Pourquoi certains modules légers sont-ils chers ?
+  answer: Parce que vous payez l'expertise de l'architecte, pas celle du maçon. Un
+    code concis qui s'intègre parfaitement à l'architecture stricte de PrestaShop
+    9 demande plus d'heures de conception qu'un code bavard.
+- question: C'est quoi un module 'usine à gaz' ?
+  answer: C'est un module qui tente de tout réinventer au lieu d'utiliser les services
+    natifs du Cœur. Sur PrestaShop 9, ces modules sont souvent instables et créent
+    des conflits.
+- question: Les overrides sont-ils toujours utilisés ?
+  answer: De moins en moins. Avec l'architecture moderne de PrestaShop 9, l'usage
+    des Hooks et de la décoration de services est la norme. L'override est devenu
+    une pratique risquée à éviter.
+lang: fr
 ---
+
 
 # Les meilleurs modules PrestaShop ne se voient presque pas
 

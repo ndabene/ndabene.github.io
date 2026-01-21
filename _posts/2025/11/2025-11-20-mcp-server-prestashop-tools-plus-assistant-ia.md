@@ -2,8 +2,10 @@
 layout: post
 title: 'MCP Server PrestaShop : Piloter votre boutique avec MCP Tools Plus'
 date: 2025-11-20
-author: Nicolas Dabène
 ref: mcp-tools-plus-prestashop-assistant
+author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - IA
 - PrestaShop
@@ -20,21 +22,6 @@ excerpt: 'Découvrez le PS MCP Server et MCP Tools Plus pour PrestaShop : transf
   en langage naturel. Guide complet 2025.'
 image: /assets/images/blog/2025/11/mcp-server-prestashop-tools-plus.webp
 featured: true
-keywords:
-- PS MCP Server
-- MCP Tools Plus
-- MCP Server PrestaShop
-- PrestaShop MCP integration
-- PrestaShop AI assistant
-- Model Context Protocol PrestaShop
-- MCP protocol e-commerce
-- PrestaShop automation IA
-- IA
-- assistant gestion
-- e-commerce
-- automatisation
-- langage naturel
-- module PrestaShop
 difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop
@@ -59,7 +46,23 @@ faq:
 - question: Puis-je utiliser MCP en production?
   answer: 'Oui, assurez-vous d''implémenter toutes les mesures de sécurité : authentification,
     validation, rate limiting.'
+keywords:
+- PS MCP Server
+- MCP Tools Plus
+- MCP Server PrestaShop
+- PrestaShop MCP integration
+- PrestaShop AI assistant
+- Model Context Protocol PrestaShop
+- MCP protocol e-commerce
+- PrestaShop automation IA
+- IA
+- assistant gestion
+- e-commerce
+- automatisation
+- langage naturel
+- module PrestaShop
 ---
+
 
 
 # L'Ère de l'Assistant de Gestion IA : Décryptage du PS MCP Server et l'Avènement du Module Révolutionnaire MCP Tools Plus

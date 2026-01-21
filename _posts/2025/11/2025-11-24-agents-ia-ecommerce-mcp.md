@@ -2,9 +2,10 @@
 layout: post
 title: 'Agents IA pour e-commerce : PS MCP Server & Tools Plus'
 date: 2025-11-24
-lang: fr
 ref: ai-agents-ecommerce-mcp
 author: Nicolas Dabène
+category: automatisation
+subcategory: mcp-protocol
 categories:
 - IA
 - PrestaShop
@@ -16,18 +17,12 @@ tags:
 - automation
 - natural-language
 - business-intelligence
-excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées, et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient réalité. Découvrez comment ces outils transforment les frustrations quotidiennes en opportunités de croissance pour marchands et agences.'
+excerpt: 'Imaginez un assistant IA qui gère votre boutique PrestaShop comme un bras
+  droit infatigable : rapports comptables en un clin d''œil, promos ciblées automatisées,
+  et bien plus. Avec le PS MCP Server et le module MCP Tools Plus, cette vision devient
+  réalité. Découvrez comment ces outils transforment les frustrations quotidiennes
+  en opportunités de croissance pour marchands et agences.'
 image: /assets/images/blog/2025/11/mcp-server-prestashop-tools-plus.webp
-keywords:
-- PS MCP Server
-- MCP Tools Plus
-- PrestaShop
-- IA
-- assistant gestion
-- e-commerce
-- automatisation
-- langage naturel
-- module PrestaShop
 difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop
@@ -68,10 +63,21 @@ faq:
 - question: Quels types d'actions peut-on automatiser avec MCP Tools Plus ?
   answer: Les actions incluent la génération de rapports comptables PDF envoyés automatiquement,
     la segmentation et récompense des meilleurs clients avec vérification de paiement
-    et envoi d'emails, l'analyse de produits en perte de vitesse avec
-    génération de vidéos et mise à jour automatique. Tout se fait via prompts en langage
-    naturel.
+    et envoi d'emails, l'analyse de produits en perte de vitesse avec génération de
+    vidéos et mise à jour automatique. Tout se fait via prompts en langage naturel.
+lang: fr
+keywords:
+- PS MCP Server
+- MCP Tools Plus
+- PrestaShop
+- IA
+- assistant gestion
+- e-commerce
+- automatisation
+- langage naturel
+- module PrestaShop
 ---
+
 
 
 # 🧠 Introduction : Répondre à la Frustration par l'Intelligence Artificielle

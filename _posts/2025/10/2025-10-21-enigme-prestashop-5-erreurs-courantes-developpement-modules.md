@@ -3,6 +3,8 @@ layout: post
 title: 'Énigme PrestaShop : trouvez les 5 erreurs'
 date: 2025-10-21
 author: Nicolas Dabène
+category: tutoriels
+subcategory: resolution-problemes
 categories:
 - PrestaShop
 - développement
@@ -23,7 +25,6 @@ technologies:
 - Smarty
 - Hook
 estimated_reading_time: 15 minutes
-is_future: true
 faq:
 - question: Pourquoi parent::__construct() est-il indispensable dans un module PrestaShop
     ?
@@ -58,7 +59,9 @@ faq:
 - question: PrestaShop est-il gratuit?
   answer: Oui, PrestaShop est un CMS e-commerce open-source et gratuit. Vous payez
     uniquement l'hébergement et les modules premium.
+is_future: true
 ---
+
 
 # 🧩 Énigme PrestaShop : Saurez-vous trouver les 5 erreurs ?
 

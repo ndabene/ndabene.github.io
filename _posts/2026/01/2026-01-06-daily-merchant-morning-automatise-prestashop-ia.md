@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 'Fini le café devant Excel : Votre "Daily Merchant Morning" 100% automatisé avec PrestaShop et l''IA 🚀'
+title: 'Fini le café devant Excel : Votre "Daily Merchant Morning" 100% automatisé
+  avec PrestaShop et l''IA 🚀'
 date: 2026-01-06
-lang: fr
 ref: daily-merchant-morning-automation
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: ia-ecommerce
 categories:
 - IA
 - PrestaShop
@@ -18,7 +20,9 @@ tags:
 - automatisation
 - GPT-4
 - e-commerce
-excerpt: Découvrez comment transformer votre routine matinale e-commerce en recevant chaque matin un briefing stratégique complet généré par l'IA pendant que vous dormez. Un workflow n8n + MCP + PrestaShop qui change la donne.
+excerpt: Découvrez comment transformer votre routine matinale e-commerce en recevant
+  chaque matin un briefing stratégique complet généré par l'IA pendant que vous dormez.
+  Un workflow n8n + MCP + PrestaShop qui change la donne.
 image: /assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/image-principale.webp
 featured: true
 difficulty: Intermédiaire
@@ -29,7 +33,9 @@ technologies:
 - Model Context Protocol (MCP)
 - HTML
 estimated_reading_time: 12 minutes
+lang: fr
 ---
+
 
 Il est 7h55. Vous avez votre café en main. Vous ouvrez votre ordinateur, vous vous logguez sur le back-office de votre PrestaShop.
 

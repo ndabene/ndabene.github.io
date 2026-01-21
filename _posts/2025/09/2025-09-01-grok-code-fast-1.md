@@ -4,6 +4,8 @@ title: 'Grok Code Fast 1 : IA de codage rapide xAI'
 date: 2025-09-01
 ref: grok-code-fast-1
 author: Nicolas Dabène
+category: intelligence-artificielle
+subcategory: outils-plateformes
 categories:
 - Intelligence Artificielle
 - développement
@@ -41,6 +43,7 @@ faq:
   answer: Non, Claude n'a pas d'accès Internet direct, mais peut utiliser des serveurs
     MCP pour accéder à des données externes.
 ---
+
 
 # Grok Code Fast 1 : l'IA de codage rapide signée xAI
 
