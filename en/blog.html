@@ -128,16 +128,18 @@ llm_topics:
 
 <!-- External publications now integrated in the main layout above -->
 {% else %}
-<div class="no-posts-container">
-    <span class="no-posts-icon">📝</span>
-    <h2>Blog is under construction</h2>
-    <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my
-        publications!</p>
-    <a href="/en/" class="btn btn--primary">Back to homepage</a>
-</div>
-{% endif %}
-</div>
+<section class="blog-content-section">
+    <div class="container">
+        <div class="no-posts-container">
+            <span class="no-posts-icon">📝</span>
+            <h2>Blog is under construction</h2>
+            <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my
+                publications!</p>
+            <a href="/en/" class="btn btn--primary">Back to homepage</a>
+        </div>
+    </div>
 </section>
+{% endif %}
 
 <!-- Scripts optimized for better performance with deferred loading -->
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>

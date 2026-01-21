@@ -133,16 +133,18 @@ llm_topics:
 
 <!-- Publications externes maintenant intégrées dans le layout principal ci-dessus -->
 {% else %}
-<div class="no-posts-container">
-    <span class="no-posts-icon">📝</span>
-    <h2>Le blog est en cours de rédaction</h2>
-    <p>De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus tard
-        pour découvrir mes publications !</p>
-    <a href="/" class="btn btn--primary">Retour à l'accueil</a>
-</div>
-{% endif %}
-</div>
+<section class="blog-content-section">
+    <div class="container">
+        <div class="no-posts-container">
+            <span class="no-posts-icon">📝</span>
+            <h2>Le blog est en cours de rédaction</h2>
+            <p>De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus tard
+                pour découvrir mes publications !</p>
+            <a href="/" class="btn btn--primary">Retour à l'accueil</a>
+        </div>
+    </div>
 </section>
+{% endif %}
 
 <!-- Scripts optimisés pour de meilleures performances avec chargement différé -->
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>

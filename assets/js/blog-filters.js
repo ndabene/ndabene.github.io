@@ -334,6 +334,13 @@
             //     addActiveFilter(state.currentSearch, 'search');
             // }
 
+            // Gérer la visibilité des sections Hero et Featured
+            const heroSection = document.querySelector('.hero-article');
+            const featuredSection = document.querySelector('.featured-section, .bento-blog-grid');
+            const themesSection = document.querySelector('.themes-topics-section');
+
+            const isFiltering = !!(searchQuery && searchQuery.length >= 2);
+
             // Batch DOM updates avec requestAnimationFrame
             scheduleUpdate(() => {
                 if (isFiltering) {
