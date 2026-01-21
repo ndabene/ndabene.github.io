@@ -24,266 +24,119 @@ llm_topics:
         </nav>
         <div class="hero-content">
             <h1>Technical & E-commerce Blog</h1>
-            <p class="section-description">Explore in-depth technical articles on PHP, PrestaShop and e-commerce, discover the latest innovations in artificial intelligence, and master software engineering best practices to boost your digital projects.</p>
+            <p class="section-description">Explore in-depth technical articles on PHP, PrestaShop and e-commerce,
+                discover the latest innovations in artificial intelligence, and master software engineering best
+                practices to boost your digital projects.</p>
         </div>
     </div>
 </section>
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
-        {% assign published_posts = published_posts | where_exp: "post", "post.linkedin != true" %}
-        {% if published_posts.size > 0 %}
-
-            <!-- HERO ARTICLE (Most recent article) -->
-            {% if published_posts.size > 0 %}
-                {% assign hero_post = published_posts.first %}
-                {% unless hero_post.linkedin == true %}
+        {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time"
+            | where_exp: "post" , "post.linkedin != true" %} {% if published_posts.size> 0 %}
+            <div class="bento-blog-grid">
+                <!-- BENTO HERO: Latest Post -->
+                <div class="bento-hero">
+                    {% assign hero_post = published_posts.first %}
                     {% include hero-article.html post=hero_post %}
-                {% endunless %}
-            {% endif %}
+                </div>
 
-            <!-- FEATURED ARTICLES SECTION (Articles 2-4 as featured) -->
-            {% if published_posts.size > 3 %}
-            <section class="featured-section">
-                <h2 class="featured-section-title">
-                    <i class="fas fa-star"></i> Featured
-                </h2>
-                <div class="featured-articles-grid">
-                    {% for post in published_posts offset: 1 limit: 3 %}
-                        {% include featured-article-card.html post=post %}
+                <!-- BENTO FEATURED: Articles 2 & 3 -->
+                {% if published_posts.size > 1 %}
+                <div class="bento-featured-list">
+                    {% for post in published_posts offset: 1 limit: 2 %}
+                    {% include featured-article-card.html post=post %}
                     {% endfor %}
                 </div>
-            </section>
-            {% endif %}
-
-            <!-- Category navigation -->
-            {% include blog-categories-navigation-en.html posts=published_posts %}
-
+                {% endif %}
+            </div>
     </div>
 </section>
 
 <section class="blog-main-section">
     <div class="blog-content-full-width">
         <div class="main-blog-content-full">
-                    <!-- Filters and sorting -->
-                    <div class="blog-filters-container">
-                        <div class="blog-filters-header">
-                            <h2 class="section-title">Blog Articles</h2>
-                            <button id="toggle-filters" class="toggle-filters-btn">
-                                <i class="fas fa-filter"></i>
-                                <span>Filters</span>
-                                <i class="fas fa-chevron-down chevron-icon"></i>
-                            </button>
-                        </div>
-
-                        <!-- Filters area (hidden by default) -->
-                        <div id="filters-content" class="filters-content" style="display: none;">
-
-                        <!-- Quick sort -->
-                        <div class="blog-sort-bar">
-                            <span class="sort-label">Sort by:</span>
-                            <div class="sort-pills">
-                                <button class="sort-pill active" data-sort="date-desc">
-                                    <i class="fas fa-fire"></i> Recent
-                                </button>
-                                <button class="sort-pill" data-sort="date-asc">
-                                    <i class="fas fa-history"></i> Old
-                                </button>
-                                <button class="sort-pill" data-sort="reading-time">
-                                    <i class="fas fa-clock"></i> Quick
-                                </button>
-                                <button class="sort-pill" data-sort="title">
-                                    <i class="fas fa-sort-alpha-down"></i> A-Z
-                                </button>
-                            </div>
-                        </div>
-
-                        </div><!-- End filters-content -->
-
-                        <div class="filter-results-info" id="filter-results-info">
-                            {% assign temp_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
-                            {% assign temp_posts = temp_posts | where_exp: "post", "post.linkedin != true" %}
-                            {% assign published_posts_count = temp_posts | size %}
-                            <span class="results-count">All articles <span id="filtered-count">({{ published_posts_count }})</span></span>
-                            <div class="active-filters" id="active-filters"></div>
-                        </div>
-
-                        <!-- Admin button to see future posts -->
-                        <div id="admin-toggle-section">
-                            <button onclick="enableAdminPreview()" class="btn btn-admin-toggle" style="display: none;">
-                                <i class="fas fa-eye"></i> Admin Mode (see future posts)
-                            </button>
-                        </div>
+            <!-- 1. Search Bar (Clean & Minimalist) -->
+            <div class="blog-search-wrapper">
+                <div class="blog-search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search for an article, tool, technology..."
+                            autocomplete="off">
+                        <button id="clear-search" class="clear-search-btn" style="display: none;" title="Clear search">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
+                </div>
+            </div>
 
-                    <div class="post-list-news grid-view" id="blog-posts-container">
-                        {% comment %}Initially load 2 pages of articles (12 posts) - skip hero + 3 featured = offset 4{% endcomment %}
-                        {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
-                        {% assign published_posts_list = published_posts_list | where_exp: "post", "post.linkedin != true" | offset: 4 %}
-                        {% assign initial_load_count = 12 %}
-                        {% include blog-post-loop.html posts=published_posts_list limit=initial_load_count %}
+            <!-- The blog-filters-container has been removed -->
 
-                        {% comment %}Store remaining posts for lazy loading{% endcomment %}
-                        {% if published_posts_list.size > initial_load_count %}
-                            <div id="lazy-posts-data" style="display: none;">
-                                {% for post in published_posts_list offset: 12 %}
-                                    <div class="lazy-post-data"
-                                         data-url="{{ post.url | relative_url }}"
-                                         data-title="{{ post.title | escape }}"
-                                         data-image="{{ post.image }}"
-                                         data-categories="{{ post.categories | join: ' ' }}"
-                                         data-tags="{{ post.tags | join: ' ' }}"
-                                         data-date="{{ post.date | date: '%s' }}"
-                                         data-date-formatted="{{ post.date | date: '%B %d, %Y' }}"
-                                         data-read-time="{{ post.read_time_minutes | default: 5 }}"
-                                         data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
-                                         data-series="{% if post.series %}{{ post.series }}{% endif %}">
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                    </div>
-
-                    <!-- Message when no results -->
-                    <div class="no-results" id="no-results">
-                        <div class="no-results-icon">
-                            <i class="fas fa-search"></i>
+            <!-- 3. Article List -->
+            <div class="post-list-news grid-view" id="blog-posts-container">
+                {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date
+                <= site.time" | where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign
+                    initial_load_count=12 %} {% include blog-post-loop.html posts=published_posts_list
+                    limit=initial_load_count %} {% if published_posts_list.size> initial_load_count %}
+                    <div id="lazy-posts-data" style="display: none;">
+                        {% for post in published_posts_list offset: 12 %}
+                        <div class="lazy-post-data" data-url="{{ post.url | relative_url }}"
+                            data-title="{{ post.title | escape }}" data-image="{{ post.image }}"
+                            data-categories="{{ post.categories | join: ' ' }}" data-tags="{{ post.tags | join: ' ' }}"
+                            data-date="{{ post.date | date: '%s' }}"
+                            data-date-formatted="{{ post.date | date: '%B %d, %Y' }}"
+                            data-read-time="{{ post.read_time_minutes | default: 5 }}"
+                            data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
+                            data-series="{% if post.series %}{{ post.series }}{% endif %}">
                         </div>
-                        <h3>No articles found</h3>
-                        <p>No articles match your search criteria.</p>
-                        <button id="reset-filters" class="btn btn--primary">Reset filters</button>
+                        {% endfor %}
                     </div>
-
-                    <!-- Future posts data for admin mode -->
-                    {% include future-posts-data.html %}
-
-                    <!-- Pagination -->
-                    {% assign posts_per_page = 6 %}
-                    {% assign temp_posts_2 = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time" %}
-                    {% assign temp_posts_2 = temp_posts_2 | where_exp: "post", "post.linkedin != true" %}
-                    {% assign published_posts_count = temp_posts_2 | size %}
-                    {% assign remaining_posts = published_posts_count | minus: 4 %}
-                    {% if remaining_posts > posts_per_page %}
-                        <div class="pagination-container">
-                            <div class="pagination">
-                                <button id="prev-page" class="pagination-btn" disabled>&laquo; Previous</button>
-                                <div id="pagination-numbers"></div>
-                                <button id="next-page" class="pagination-btn">Next &raquo;</button>
-                            </div>
-                            <div class="pagination-info-wrapper">
-                                Showing <span id="showing-range">1-6</span> of <span id="total-posts">{{ remaining_posts }}</span> articles
-                            </div>
-                        </div>
                     {% endif %}
+            </div>
 
+            <!-- 4. No Results & Pagination -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>No articles found</h3>
+                <p>No articles match your search criteria.</p>
+                <button id="reset-filters" class="btn btn--primary">Reset filters</button>
+            </div>
+
+            {% include future-posts-data.html %}
+
+            {% assign posts_per_page = 6 %}
+            {% assign temp_posts_count = published_posts_list | size %}
+            {% if temp_posts_count > initial_load_count %}
+            <div class="pagination-container">
+                <div class="pagination">
+                    <button id="prev-page" class="pagination-btn" disabled>&laquo; Previous</button>
+                    <div id="pagination-numbers"></div>
+                    <button id="next-page" class="pagination-btn">Next &raquo;</button>
+                </div>
+                <div class="pagination-info-wrapper">
+                    Showing <span id="showing-range">1-12</span> of <span id="total-posts">{{ temp_posts_count }}</span>
+                    articles
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>
 
-<section class="blog-content-section">
-    <div class="container">
-            <!-- THEMES & TOPICS SECTION (replaces sidebar) -->
-            <section class="themes-topics-section">
-                <div class="themes-header">
-                    <h2><i class="fas fa-compass"></i> Explore by Theme</h2>
-                    <p class="themes-subtitle">Browse our content by expertise area</p>
-                </div>
-
-                <div class="themes-grid">
-                    <!-- Popular Categories -->
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>E-commerce</h3>
-                        <p>Guides, strategies and insights to succeed in your online store</p>
-                        {% assign ecommerce_posts = published_posts | where_exp: "post", "post.categories contains 'Ecommerce'" %}
-                        <a href="/en/blog/ecommerce/" class="theme-link">
-                            {{ ecommerce_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Artificial Intelligence</h3>
-                        <p>Generative AI, LLMs, automation and practical use cases</p>
-                        {% assign ai_posts = published_posts | where_exp: "post", "post.categories contains 'Intelligence Artificielle'" %}
-                        <a href="/en/blog/intelligence-artificielle/" class="theme-link">
-                            {{ ai_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Development</h3>
-                        <p>PHP, architecture, testing, CI/CD and development best practices</p>
-                        {% assign dev_posts = published_posts | where_exp: "post", "post.categories contains 'Développement'" %}
-                        <a href="/en/blog/developpement/" class="theme-link">
-                            {{ dev_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                    <div class="theme-card">
-                        <div class="theme-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Best Practices</h3>
-                        <p>Methodologies, patterns and real-world experience feedback</p>
-                        {% assign best_posts = published_posts | where_exp: "post", "post.categories contains 'Tutoriels'" %}
-                        <a href="/en/blog/tutoriels/" class="theme-link">
-                            {{ best_posts.size }} articles <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Series if any -->
-                {% if site.data.series %}
-                    {% assign has_series_with_posts = false %}
-                    {% for series in site.data.series %}
-                        {% assign series_posts = published_posts | where: "series", series[0] %}
-                        {% if series_posts.size > 0 %}
-                            {% assign has_series_with_posts = true %}
-                            {% break %}
-                        {% endif %}
-                    {% endfor %}
-
-                    {% if has_series_with_posts %}
-                    <div class="series-horizontal">
-                        <h3><i class="fas fa-book-open"></i> Article Series</h3>
-                        <div class="series-cards-grid">
-                            {% for series_entry in site.data.series limit: 4 %}
-                                {% assign series_key = series_entry[0] %}
-                                {% assign series_data = series_entry[1] %}
-                                {% assign series_posts = published_posts | where: "series", series_key %}
-                                {% if series_posts.size > 0 %}
-                                    <a href="/series/{{ series_key | slugify }}.html" class="series-card-large">
-                                        <i class="fas fa-layer-group"></i>
-                                        <strong>{{ series_key }}</strong>
-                                        <span>{{ series_posts.size }} articles</span>
-                                    </a>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                    {% endif %}
-                {% endif %}
-            </section>
-
 <!-- External publications now integrated in the main layout above -->
-        {% else %}
-            <div class="no-posts-container">
-                <span class="no-posts-icon">📝</span>
-                <h2>Blog is under construction</h2>
-                <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my publications!</p>
-                <a href="/en/" class="btn btn--primary">Back to homepage</a>
-            </div>
-        {% endif %}
-    </div>
+{% else %}
+<div class="no-posts-container">
+    <span class="no-posts-icon">📝</span>
+    <h2>Blog is under construction</h2>
+    <p>New technical articles on PHP, PrestaShop and AI will be available soon. Come back later to discover my
+        publications!</p>
+    <a href="/en/" class="btn btn--primary">Back to homepage</a>
+</div>
+{% endif %}
+</div>
 </section>
 
 <!-- Scripts optimized for better performance with deferred loading -->
