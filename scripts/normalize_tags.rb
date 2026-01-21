@@ -44,7 +44,7 @@ def process_file(file_path, dry_run: true)
 
   # Extraire le front matter
   if content =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
-    front_matter = YAML.load($1)
+    front_matter = YAML.safe_load($1, permitted_classes: [Date, Symbol, Time], aliases: true)
 
     return unless front_matter['tags']
 
