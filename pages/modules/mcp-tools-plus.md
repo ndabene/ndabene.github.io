@@ -107,7 +107,7 @@ product:
                     <div class="text-sm text-[#374151]">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
-                            <span>77+ outils MCP inclus</span>
+                            <span>100+ outils MCP inclus</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
@@ -176,11 +176,11 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">77+</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">100+</div>
                 <div class="text-[#475569]">Outils MCP</div>
             </div>
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">10</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">11</div>
                 <div class="text-[#475569]">Catégories</div>
             </div>
             <div class="text-center">
@@ -265,6 +265,45 @@ product:
                     Intégration complète Google Analytics 4 avec tracking e-commerce, analyse trafic et tunnels de conversion.
                 </p>
             </div>
+            <!-- Feature 7: RGPD Compliance -->
+            <div class="card p-6 border-2 border-[#D4AF37]">
+                <div class="w-14 h-14 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-shield-alt text-2xl text-[#D4AF37]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">Conformité RGPD</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Protection des données clients renforcée avec anonymisation automatique des données sensibles lors des requêtes IA. Hardening XSS systématique et type safety généralisé pour une sécurité maximale.
+                </p>
+            </div>
+            <!-- Feature 8: Profitability Analysis -->
+            <div class="card p-6">
+                <div class="w-14 h-14 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-chart-pie text-2xl text-[#D4AF37]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">Analyse Rentabilité</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Calculez la rentabilité nette de vos commandes en incluant coûts de revient (COGS), frais d'expédition et remises. Identifiez les tendances et catégories les plus profitables.
+                </p>
+            </div>
+            <!-- Feature 9: Logistics & Carriers -->
+            <div class="card p-6">
+                <div class="w-14 h-14 rounded-lg bg-[#DF3163]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-shipping-fast text-2xl text-[#DF3163]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">Gestion Transporteurs</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Diagnostic et gestion complète de vos transporteurs avec audit automatique, configuration zones de livraison et mise à jour des numéros de suivi.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -298,6 +337,9 @@ product:
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="marketing">
                 <i class="fas fa-bullhorn mr-2"></i>Marketing
+            </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="logistics">
+                <i class="fas fa-truck mr-2"></i>Logistique
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="cms">
                 <i class="fas fa-file-alt mr-2"></i>CMS
@@ -666,11 +708,26 @@ product:
         { name: 'multi_market_tax_analyzer', desc: 'Groupement HT/TTC/TVA par pays ou taux de taxe pour déclarations multi-pays.', category: 'sales', icon: 'fa-globe', color: 'gold' },
         { name: 'returns_and_credits_tracker', desc: 'Retourne avoirs/remboursements avec totaux HT/TTC pour réconciliation comptable.', category: 'sales', icon: 'fa-undo', color: 'marine' },
 
+        // Profitability & Margin Analysis (v1.0.3)
+        { name: 'get_order_profitability', desc: 'Calcule la rentabilité nette d\'une commande spécifique en comparant CA HT aux coûts produits, frais de port, emballage et remises.', category: 'sales', icon: 'fa-calculator', color: 'gold' },
+        { name: 'get_bulk_order_profitability', desc: 'Analyse groupée de plusieurs commandes avec résumé agrégé et détail par commande de la rentabilité.', category: 'sales', icon: 'fa-table', color: 'gold' },
+        { name: 'order_profitability_alerts', desc: 'Scan des commandes sur période donnée pour isoler celles avec marge nette inférieure au seuil défini (%).', category: 'sales', icon: 'fa-exclamation-circle', color: 'gold' },
+        { name: 'profitability_trends', desc: 'Agrégation temporelle (jour/semaine/mois) du CA, coûts et marge pour identifier les tendances de profit.', category: 'sales', icon: 'fa-chart-line', color: 'gold' },
+        { name: 'get_category_profitability', desc: 'Analyse de la rentabilité brute par catégorie de produits sur une période donnée.', category: 'sales', icon: 'fa-folder-open', color: 'gold' },
+
         // Customer Insights & Operations
         { name: 'customer_insights_analyzer', desc: 'Segmente clients (pays/groupe/fréquence) et liste top acheteurs.', category: 'customer', icon: 'fa-user-chart', color: 'ecommerce' },
         { name: 'customer_behavior_summary', desc: 'Total clients, dépense moyenne, clients récurrents, top 10, distribution pays.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
         { name: 'customer_demographics_breakdown', desc: 'Distribution acheteurs par genre et tranches d\'âge (avec filtres pays optionnels).', category: 'customer', icon: 'fa-users-demographic', color: 'ecommerce' },
         { name: 'order_fulfillment_tracker', desc: 'Compte commandes et CA par statut PrestaShop pour détecter blocages fulfillment.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
+
+        // Logistics & Carriers (v1.0.3)
+        { name: 'list_carriers', desc: 'Liste tous les transporteurs avec états (actif/inactif) et délais configurés.', category: 'logistics', icon: 'fa-shipping-fast', color: 'prestashop' },
+        { name: 'get_carrier_details', desc: 'Récupère détails avancés: zones de livraison, groupes clients autorisés et tranches prix/poids.', category: 'logistics', icon: 'fa-info-circle', color: 'prestashop' },
+        { name: 'carriers_audit_report', desc: 'Rapport diagnostic identifiant erreurs critiques (zones sans prix, délais manquants, erreurs de tranches).', category: 'logistics', icon: 'fa-clipboard-check', color: 'prestashop' },
+        { name: 'set_carrier_active', desc: 'Active ou désactive un transporteur via son ID.', category: 'logistics', icon: 'fa-toggle-on', color: 'prestashop' },
+        { name: 'set_carrier_free_shipping', desc: 'Bascule un transporteur en mode "Livraison Gratuite" (is_free).', category: 'logistics', icon: 'fa-gift', color: 'prestashop' },
+        { name: 'update_order_tracking_number', desc: 'Met à jour le numéro de suivi d\'une commande et synchronise les tables order_carrier.', category: 'logistics', icon: 'fa-barcode', color: 'prestashop' },
 
         // Inventory & Stock
         { name: 'inventory_alerts_monitor', desc: 'Liste produits avec stock au/sous seuil avec détails variantes en rupture.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
@@ -688,6 +745,21 @@ product:
         { name: 'get_packs', desc: 'Liste tous packs Advanced Pack avec nom, état, prix, quantité disponible et contenu.', category: 'marketing', icon: 'fa-box-open', color: 'prestashop' },
         { name: 'get_pack_available_quantity', desc: 'Retourne quantité disponible pour un pack Advanced Pack spécifique.', category: 'marketing', icon: 'fa-warehouse', color: 'prestashop' },
         { name: 'generate_add_to_cart_link', desc: 'Génère URL ajout panier PrestaShop avec résolution variante et vérification stock.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
+
+        // Price Engine & Specific Prices (v1.0.3)
+        { name: 'specific_price_list', desc: 'Liste les prix spécifiques d\'un produit avec flag entrées expirées ou actives.', category: 'marketing', icon: 'fa-tags', color: 'gold' },
+        { name: 'specific_price_create', desc: 'Crée une remise sur produit/combinaison (montant fixe ou %) pour client/pays/groupe spécifique.', category: 'marketing', icon: 'fa-percent', color: 'gold' },
+        { name: 'specific_price_delete', desc: 'Supprime une remise spécifique par son ID.', category: 'marketing', icon: 'fa-trash', color: 'gold' },
+        { name: 'product_price_preview', desc: 'Simule le prix final calculé par Product::getPriceStatic() selon contexte (quantité, taxe, client).', category: 'marketing', icon: 'fa-eye', color: 'gold' },
+        { name: 'specific_price_rule_list', desc: 'Liste les règles de prix catalogue actives sur la boutique.', category: 'marketing', icon: 'fa-list-ul', color: 'gold' },
+        { name: 'specific_price_rule_create', desc: 'Crée règle catalogue globale (ex: -10% sur catégorie) avec gestion groupes de conditions.', category: 'marketing', icon: 'fa-plus', color: 'gold' },
+        { name: 'specific_price_rule_apply', desc: 'Force l\'application immédiate d\'une règle catalogue sur tout ou partie du catalogue.', category: 'marketing', icon: 'fa-magic', color: 'gold' },
+
+        // Google Shopping & Merchant Center (v1.0.3)
+        { name: 'google_shopping_get_configuration_status', desc: 'Outil diagnostic amélioré avec rapport lisible (labels traduits) et recommandations priorité Haute/Moyenne/Basse.', category: 'marketing', icon: 'fa-shopping-bag', color: 'marine' },
+        { name: 'google_shopping_get_feeds', desc: 'Liste les flux configurés (langue, pays, devise) pour Google Shopping.', category: 'marketing', icon: 'fa-rss', color: 'marine' },
+        { name: 'google_shopping_set_category_taxonomy', desc: 'Mappe une catégorie PrestaShop vers la taxonomie officielle de Google.', category: 'marketing', icon: 'fa-sitemap', color: 'marine' },
+        { name: 'google_shopping_set_exclusion_rule', desc: 'Définit des règles pour exclure produits du flux (par ID, SKU, catégorie).', category: 'marketing', icon: 'fa-filter', color: 'marine' },
 
         // CMS
         { name: 'cms_list_pages', desc: 'Liste pages CMS avec filtres optionnels (shop, langue, catégorie, actif) et URL front.', category: 'cms', icon: 'fa-file-alt', color: 'marine', comingSoon: true },

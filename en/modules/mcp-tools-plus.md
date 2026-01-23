@@ -107,7 +107,7 @@ product:
                     <div class="text-sm text-[#374151]">
                         <div class="flex items-center gap-2 mb-1">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
-                            <span>77+ MCP tools included</span>
+                            <span>100+ MCP tools included</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
@@ -176,11 +176,11 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">77+</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">100+</div>
                 <div class="text-[#475569]">MCP Tools</div>
             </div>
             <div class="text-center">
-                <div class="text-4xl font-bold text-[#D4AF37] mb-2">10</div>
+                <div class="text-4xl font-bold text-[#D4AF37] mb-2">11</div>
                 <div class="text-[#475569]">Tool Categories</div>
             </div>
             <div class="text-center">
@@ -265,6 +265,45 @@ product:
                     Full Google Analytics 4 integration with e-commerce tracking, traffic analysis and conversion funnels.
                 </p>
             </div>
+            <!-- Feature 7: GDPR Compliance -->
+            <div class="card p-6 border-2 border-[#D4AF37]">
+                <div class="w-14 h-14 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-shield-alt text-2xl text-[#D4AF37]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">GDPR Compliance</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Enhanced customer data protection with automatic anonymization of sensitive data during AI queries. Systematic XSS hardening and generalized type safety for maximum security.
+                </p>
+            </div>
+            <!-- Feature 8: Profitability Analysis -->
+            <div class="card p-6">
+                <div class="w-14 h-14 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-chart-pie text-2xl text-[#D4AF37]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">Profitability Analysis</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Calculate net profitability of your orders including cost of goods sold (COGS), shipping fees and discounts. Identify trends and most profitable categories.
+                </p>
+            </div>
+            <!-- Feature 9: Logistics & Carriers -->
+            <div class="card p-6">
+                <div class="w-14 h-14 rounded-lg bg-[#DF3163]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-shipping-fast text-2xl text-[#DF3163]"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-bold text-[#111827]">Carrier Management</h3>
+                    <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
+                </div>
+                <p class="text-[#374151] leading-relaxed">
+                    Complete carrier diagnostics and management with automatic audit, delivery zone configuration and tracking number updates.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -298,6 +337,9 @@ product:
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="marketing">
                 <i class="fas fa-bullhorn mr-2"></i>Marketing
+            </button>
+            <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="logistics">
+                <i class="fas fa-truck mr-2"></i>Logistics
             </button>
             <button class="category-tab px-5 py-2.5 rounded-lg font-medium bg-white border border-[#E2E8F0] text-[#475569] hover:text-[#0F172A] hover:border-[#0F172A]" data-category="cms">
                 <i class="fas fa-file-alt mr-2"></i>CMS
@@ -666,11 +708,26 @@ product:
         { name: 'multi_market_tax_analyzer', desc: 'Groups HT/TTC/VAT by country or tax rate for multi-country filings.', category: 'sales', icon: 'fa-globe', color: 'gold' },
         { name: 'returns_and_credits_tracker', desc: 'Returns credit notes/refunds with HT/TTC totals for accounting reconciliation.', category: 'sales', icon: 'fa-undo', color: 'marine' },
 
+        // Profitability & Margin Analysis (v1.0.3)
+        { name: 'get_order_profitability', desc: 'Calculates net profitability of specific order comparing revenue to product costs, shipping fees, packaging and discounts.', category: 'sales', icon: 'fa-calculator', color: 'gold' },
+        { name: 'get_bulk_order_profitability', desc: 'Grouped analysis of multiple orders with aggregated summary and per-order profitability detail.', category: 'sales', icon: 'fa-table', color: 'gold' },
+        { name: 'order_profitability_alerts', desc: 'Scans orders over period to isolate those with net margin below defined threshold (%).', category: 'sales', icon: 'fa-exclamation-circle', color: 'gold' },
+        { name: 'profitability_trends', desc: 'Temporal aggregation (day/week/month) of revenue, costs and margin to identify profit trends.', category: 'sales', icon: 'fa-chart-line', color: 'gold' },
+        { name: 'get_category_profitability', desc: 'Analysis of gross profitability by product category over given period.', category: 'sales', icon: 'fa-folder-open', color: 'gold' },
+
         // Customer Insights & Operations
         { name: 'customer_insights_analyzer', desc: 'Segments customers (country/group/frequency) and lists top buyers.', category: 'customer', icon: 'fa-user-chart', color: 'ecommerce' },
         { name: 'customer_behavior_summary', desc: 'Total customers, average spend, repeat customers, top 10, country distribution.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
         { name: 'customer_demographics_breakdown', desc: 'Buyer distribution by gender and age brackets (with optional country filters).', category: 'customer', icon: 'fa-users-demographic', color: 'ecommerce' },
         { name: 'order_fulfillment_tracker', desc: 'Counts orders and revenue per PrestaShop status to spot fulfillment bottlenecks.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
+
+        // Logistics & Carriers (v1.0.3)
+        { name: 'list_carriers', desc: 'Lists all carriers with status (active/inactive) and configured delays.', category: 'logistics', icon: 'fa-shipping-fast', color: 'prestashop' },
+        { name: 'get_carrier_details', desc: 'Retrieves advanced details: delivery zones, authorized customer groups and price/weight brackets.', category: 'logistics', icon: 'fa-info-circle', color: 'prestashop' },
+        { name: 'carriers_audit_report', desc: 'Diagnostic report identifying critical errors (zones without prices, missing delays, bracket errors).', category: 'logistics', icon: 'fa-clipboard-check', color: 'prestashop' },
+        { name: 'set_carrier_active', desc: 'Activates or deactivates a carrier via its ID.', category: 'logistics', icon: 'fa-toggle-on', color: 'prestashop' },
+        { name: 'set_carrier_free_shipping', desc: 'Toggles a carrier to "Free Shipping" mode (is_free).', category: 'logistics', icon: 'fa-gift', color: 'prestashop' },
+        { name: 'update_order_tracking_number', desc: 'Updates tracking number for an order and synchronizes order_carrier tables.', category: 'logistics', icon: 'fa-barcode', color: 'prestashop' },
 
         // Inventory & Stock
         { name: 'inventory_alerts_monitor', desc: 'Lists products with stock at/below threshold with low-stock variant details.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
@@ -688,6 +745,21 @@ product:
         { name: 'get_packs', desc: 'Lists all Advanced Pack bundles with name, state, prices, available quantity and contents.', category: 'marketing', icon: 'fa-box-open', color: 'prestashop' },
         { name: 'get_pack_available_quantity', desc: 'Returns available quantity for a specific Advanced Pack bundle.', category: 'marketing', icon: 'fa-warehouse', color: 'prestashop' },
         { name: 'generate_add_to_cart_link', desc: 'Generates add-to-cart URL for PrestaShop with variant resolution and stock check.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
+
+        // Price Engine & Specific Prices (v1.0.3)
+        { name: 'specific_price_list', desc: 'Lists specific prices for a product with flag for expired or active entries.', category: 'marketing', icon: 'fa-tags', color: 'gold' },
+        { name: 'specific_price_create', desc: 'Creates discount on product/combination (fixed amount or %) for specific customer/country/group.', category: 'marketing', icon: 'fa-percent', color: 'gold' },
+        { name: 'specific_price_delete', desc: 'Deletes a specific price by its ID.', category: 'marketing', icon: 'fa-trash', color: 'gold' },
+        { name: 'product_price_preview', desc: 'Simulates final price calculated by Product::getPriceStatic() according to context (quantity, tax, customer).', category: 'marketing', icon: 'fa-eye', color: 'gold' },
+        { name: 'specific_price_rule_list', desc: 'Lists active catalog price rules on the shop.', category: 'marketing', icon: 'fa-list-ul', color: 'gold' },
+        { name: 'specific_price_rule_create', desc: 'Creates global catalog rule (e.g., -10% on category) with condition group management.', category: 'marketing', icon: 'fa-plus', color: 'gold' },
+        { name: 'specific_price_rule_apply', desc: 'Forces immediate application of catalog rule on all or part of the catalog.', category: 'marketing', icon: 'fa-magic', color: 'gold' },
+
+        // Google Shopping & Merchant Center (v1.0.3)
+        { name: 'google_shopping_get_configuration_status', desc: 'Enhanced diagnostic tool with human-readable report (translated labels) and High/Medium/Low priority recommendations.', category: 'marketing', icon: 'fa-shopping-bag', color: 'marine' },
+        { name: 'google_shopping_get_feeds', desc: 'Lists configured feeds (language, country, currency) for Google Shopping.', category: 'marketing', icon: 'fa-rss', color: 'marine' },
+        { name: 'google_shopping_set_category_taxonomy', desc: 'Maps a PrestaShop category to Google\'s official taxonomy.', category: 'marketing', icon: 'fa-sitemap', color: 'marine' },
+        { name: 'google_shopping_set_exclusion_rule', desc: 'Defines rules to exclude products from feed (by ID, SKU, category).', category: 'marketing', icon: 'fa-filter', color: 'marine' },
 
         // CMS
         { name: 'cms_list_pages', desc: 'Lists CMS pages with optional filters (shop, language, category, active) and front URL.', category: 'cms', icon: 'fa-file-alt', color: 'marine', comingSoon: true },
