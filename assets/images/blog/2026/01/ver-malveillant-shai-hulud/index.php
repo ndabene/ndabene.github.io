@@ -4,7 +4,7 @@
  * Prevents direct directory listing
  *
  * Article: Comprendre le ver malveillant Shai-Hulud : Quand npm install devient une porte dérobée
- * Date: 2026-02-25
+ * Date: 2026-01-25
  * Author: Nicolas Dabène
  */
 

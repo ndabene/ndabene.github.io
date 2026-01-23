@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Comprendre le ver malveillant Shai-Hulud : Quand npm install devient une porte dérobée'
-date: 2026-02-25
+date: 2026-01-25
 ref: ver-malveillant-shai-hulud-2026
 author: Nicolas Dabène
 category: cybersecurite
@@ -19,7 +19,7 @@ tags:
 - CI/CD
 - GitHub Actions
 excerpt: Le ver Shai-Hulud représente une menace sophistiquée pour l'écosystème JavaScript. Exploitant le registre npm et transformant npm install en vecteur d'attaque, ce malware auto-réplicatif vole des secrets, établit des portes dérobées persistantes et se propage exponentiellement. Découvrez son fonctionnement et pourquoi chaque développeur doit comprendre cette menace.
-image: /assets/images/blog/2026/02/ver-malveillant-shai-hulud/image-principale.webp
+image: /assets/images/blog/2026/01/ver-malveillant-shai-hulud/image-principale.webp
 difficulty: Intermédiaire
 technologies:
 - npm
