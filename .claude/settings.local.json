@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx bmad-method:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:api.github.com)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "agentvibes"
+  ]
+}

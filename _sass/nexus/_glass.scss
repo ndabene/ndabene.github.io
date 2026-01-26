@@ -1,0 +1,21 @@
+// _sass/nexus/_glass.scss
+// Nexus Glassmorphism Mixins
+
+@mixin nexus-glass($opacity: 0.05, $blur: 12px) {
+    background: rgba(255, 255, 255, $opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: $nexus-shadow-depth;
+    transition: $nexus-transition-fluid;
+
+    &:hover {
+        background: rgba(255, 255, 255, $opacity + 0.03);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+@mixin nexus-glow-gold {
+    box-shadow: $nexus-glow-gold;
+    border-color: rgba($nexus-gold-soft, 0.5);
+}

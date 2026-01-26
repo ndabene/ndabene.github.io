@@ -1,0 +1,20 @@
+// _sass/nexus/_animations.scss
+// Nexus System - Micro-animations
+
+@keyframes nexus-glow-pulse {
+    0% {
+        filter: drop-shadow(0 0 5px rgba($nexus-gold-soft, 0.2));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba($nexus-gold-soft, 0.6));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px rgba($nexus-gold-soft, 0.2));
+    }
+}
+
+.is-nexus-pulsing {
+    animation: nexus-glow-pulse 3s infinite ease-in-out;
+}

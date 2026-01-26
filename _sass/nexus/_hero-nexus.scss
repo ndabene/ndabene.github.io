@@ -1,0 +1,140 @@
+// _sass/nexus/_hero-nexus.scss
+// Nexus System - Hero Section Redesign
+
+.hero-creator {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: $nexus-slate-deep !important; // Force black slate
+    overflow: hidden;
+
+    // Background AI Asset
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/assets/images/nexus/hero-architecture.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.4;
+        filter: saturate(0.8);
+        z-index: 0;
+    }
+
+    // Deep Gradient Overlay
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 20% 50%, rgba($nexus-slate-deep, 0.8) 0%, transparent 100%);
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 10;
+    }
+
+    .hero-creator-grid {
+        background: transparent !important; // Override old styles
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        grid-template-columns: 1fr; // Focus on content center/left
+        padding: 0;
+        text-align: left;
+    }
+
+    .hero-creator-content {
+        max-width: 800px;
+
+        @include nexus-glass(0.08, 12px); // Use the mixin for the text container
+        padding: clamp(2rem, 5vw, 4rem);
+        border-radius: $rounded-2xl;
+        border: 1px solid $nexus-glass-border;
+    }
+
+    .hero-creator-title {
+        font-family: $font-family-headings !important;
+        font-weight: 900 !important; // Poppins Black
+        font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+        color: $white;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+        // Dynamic coloring for highlight
+        span.nexus-gold {
+            color: $nexus-gold-soft;
+            background: $gradient-gold;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba($nexus-gold-soft, 0.3));
+        }
+    }
+
+    .hero-creator-subtitle {
+        font-size: clamp(1.1rem, 3vw, 1.4rem) !important;
+        color: rgba($white, 0.8);
+        max-width: 600px;
+        margin-bottom: 2.5rem;
+    }
+
+    // Hide old visual for now, we use background
+    .hero-creator-visual {
+        display: none;
+    }
+
+    @media (max-width: 968px) {
+        min-height: auto;
+        padding: 6rem 0;
+
+        .hero-creator-content {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero-creator-title {
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+// CTA Buttons Nexus Style
+.btn-creator {
+    border-radius: $rounded-full !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem !important;
+    transition: $nexus-transition-fluid !important;
+
+    &-primary {
+        background: $gradient-gold !important;
+        color: $nexus-slate-deep !important;
+        @include nexus-glow-gold;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba($nexus-gold-soft, 0.4);
+        }
+    }
+
+    &-outline {
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: $white !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: $nexus-gold-soft !important;
+        }
+    }
+}

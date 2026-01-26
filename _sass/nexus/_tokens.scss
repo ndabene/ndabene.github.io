@@ -1,0 +1,19 @@
+// _sass/nexus/_tokens.scss
+// Nexus Design System Tokens
+
+// Deep Slate & Gold Nexus Palette
+$nexus-slate-deep: #020617;
+$nexus-gold-bright: #FFD700;
+$nexus-gold-soft: #D4AF37;
+
+// Glassmorphism Tokens
+$nexus-glass-heavy: rgba(255, 255, 255, 0.05);
+$nexus-glass-border: rgba(255, 255, 255, 0.1);
+$nexus-glass-blur: blur(12px);
+
+// Glow & Depth
+$nexus-glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+$nexus-shadow-depth: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+// Transitions
+$nexus-transition-fluid: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
