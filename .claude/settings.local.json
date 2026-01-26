@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npx bmad-method:*)",
       "Bash(curl:*)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "Bash(if not exist \"C:\\\\Users\\\\ndabe\\\\Documents\\\\site\\\\ndabene.github.io\\\\_bmad-output\\\\planning-artifacts\" mkdir \"C:\\\\Users\\\\ndabe\\\\Documents\\\\site\\\\ndabene.github.io\\\\_bmad-output\\\\planning-artifacts\")"
     ]
   },
   "enableAllProjectMcpServers": true,
