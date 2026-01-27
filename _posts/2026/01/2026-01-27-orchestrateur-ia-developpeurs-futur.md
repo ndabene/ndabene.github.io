@@ -62,7 +62,7 @@ faq:
     vous déployez plusieurs petits agents IA spécialisés, chacun expert dans un domaine
     précis (fraude, logistique, merchandising). Ces agents travaillent ensemble de
     manière coordonnée, comme une équipe d'experts.
-- question: Pourquoi les grands modèles comme GPT-4 ne sont pas optimaux pour l'e-commerce
+- question: Pourquoi les grands modèles comme GPT-5 ne sont pas optimaux pour l'e-commerce
     ?
   answer: Trois raisons principales - la latence (temps de réponse trop long pour
     des actions critiques), le coût (chaque requête consomme beaucoup de ressources),
@@ -75,7 +75,7 @@ faq:
     pour l'IA, qui permet à vos agents d'interagir avec PrestaShop sans avoir à coder
     une API complexe pour chaque cas d'usage.
 - question: Qu'est-ce que MCP Tools Plus ?
-  answer: C'est un module PrestaShop développé par Nicolas Dabène qui transforme votre
+  answer: C'est un module PrestaShop développé par BusinessTech & PrestaModule qui transforme votre
     boutique en serveur MCP. Il expose de manière standardisée et sécurisée les données
     et actions de votre boutique à vos agents IA, permettant une intégration simple
     sans hallucination.
@@ -93,9 +93,7 @@ lang: fr
 ---
 
 
-Salut les amis ! 👋
-
-Aujourd'hui, on va mettre les pieds dans le plat. On entend tout et son contraire sur l'IA : "Ça va remplacer les devs", "C'est juste une mode", "Il faut tout miser sur GPT-4".
+Aujourd'hui, on va mettre les pieds dans le plat. On entend tout et son contraire sur l'IA : "Ça va remplacer les devs", "C'est juste une mode", "Il faut tout miser sur GPT-5".
 
 Si vous me suivez un peu, vous savez que je suis un pragmatique. Je ne m'intéresse pas à l'IA pour écrire des poèmes, mais pour optimiser, vendre et construire. Et j'ai une conviction profonde, étayée par ce qui se passe actuellement dans la recherche et l'industrie :
 
@@ -117,7 +115,7 @@ Pourquoi ? Pour une raison simple que les mathématiciens appellent le théorèm
 
 Imaginez que vous embauchiez une seule personne pour gérer votre boutique. Elle doit être experte en droit fiscal, en logistique, en développement Symfony, en copywriting persuasif et en psychologie client. C'est impossible. Au mieux, elle sera "moyenne" partout.
 
-Une IA généraliste (comme les modèles géants GPT-4 ou Claude 3 Opus), c'est pareil :
+Une IA généraliste (comme les modèles géants GPT-5 ou Claude 3 Opus), c'est pareil :
 
 **C'est lent (Latence)** : Pour répondre à une question simple comme "Avez-vous ce T-shirt en rouge ?", un modèle géant mobilise une puissance de calcul phénoménale. En e-commerce, 100ms de latence, c'est 1% de conversion en moins. **On ne sort pas un bazooka pour tuer une mouche.**
 
@@ -153,7 +151,7 @@ Assez de théorie. Comment on met ça en place quand on est dev ou e-commerçant
 
 Voyez le MCP comme une **"prise USB universelle" pour l'IA**. Ça permet à une IA (Claude, ChatGPT, ou un agent local) de se connecter à vos outils de manière standardisée et sécurisée.
 
-C'est précisément pour combler ce manque que j'ai développé **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)**.
+C'est précisément pour combler ce manque qu'a été développé **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)** par **BusinessTech & PrestaModule**.
 
 L'idée est simple : **transformer votre boutique PrestaShop en véritable Serveur MCP**. Au lieu de bricoler des scripts Python dans tous les sens, vous installez le module, et boum : votre boutique expose nativement ses données et ses actions à vos agents IA, de manière contrôlée.
 
@@ -222,15 +220,5 @@ L'IA n'est pas une baguette magique qui remplace tout. C'est une brique technolo
 Jetez un œil à **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)** et essayez de connecter votre premier agent à votre boutique. Commencez petit : un simple agent capable de lire vos stocks. Vous verrez, une fois qu'on a goûté à l'architecture agentique, impossible de revenir en arrière.
 
 **C'est le moment de passer de "l'utilisateur d'IA" à "l'architecte d'IA".** Et croyez-moi, c'est beaucoup plus fun !
-
----
-
-### Ressources liées
-
-- [MCP Tools Plus - Module PrestaShop](https://nicolas-dabene.fr/modules/mcp-tools-plus/)
-- [Services IA & e-commerce](/services/)
-- [Formations IA pour développeurs](/formations/)
-- [Expertise PrestaShop](/expertise/prestashop/)
-- [Expertise IA](/expertise/ia/)
 
 
