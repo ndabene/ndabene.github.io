@@ -50,21 +50,19 @@ llm_topics:
 faq:
 - question: What is an agentic architecture?
   answer: It's an approach where instead of using a single massive generalist AI, you deploy multiple small specialized AI agents, each expert in a specific domain (fraud, logistics, merchandising). These agents work together in a coordinated manner, like a team of experts.
-- question: Why aren't large models like GPT-4 optimal for e-commerce?
+- question: Why aren't large models like GPT-5 optimal for e-commerce?
   answer: Three main reasons - latency (response time too long for critical actions), cost (each query consumes a lot of resources), and risk of hallucination (the model can make up information). For specific tasks like validating a transaction, we need speed and precision, not creativity.
 - question: What is MCP (Model Context Protocol)?
   answer: It's a standardized protocol that allows an AI to connect to your tools and systems securely. Think of it as a "universal USB plug" for AI, which allows your agents to interact with PrestaShop without having to code a complex API for each use case.
 - question: What is MCP Tools Plus?
-  answer: It's a PrestaShop module developed by Nicolas Dabène that transforms your store into an MCP server. It exposes your store's data and actions in a standardized and secure way to your AI agents, enabling simple integration without hallucination.
+  answer: It's a PrestaShop module developed by BusinessTech & PrestaModule that transforms your store into an MCP server. It exposes your store's data and actions in a standardized and secure way to your AI agents, enabling simple integration without hallucination.
 - question: Are Small Language Models less performant?
   answer: No, they are different. An SLM only knows how to do one thing, but does it perfectly and quickly. For specific tasks (analyzing a transaction, checking stock), a well-trained SLM will be faster, cheaper and more reliable than a giant model.
 - question: How do I get started with agentic architecture on PrestaShop?
   answer: Start small - install MCP Tools Plus, create your first simple agent (for example to read your stock), test the integration. Once you master the concept, you can gradually add other specialized agents for fraud, customer support, etc.
 ---
 
-Hey friends! 👋
-
-Today, we're going to be blunt. We hear everything and its opposite about AI: "It will replace devs", "It's just a fad", "You need to bet everything on GPT-4".
+Today, we're going to be blunt. We hear everything and its opposite about AI: "It will replace devs", "It's just a fad", "You need to bet everything on GPT-5".
 
 If you've been following me a bit, you know I'm a pragmatist. I'm not interested in AI for writing poems, but for optimizing, selling and building. And I have a deep conviction, supported by what's currently happening in research and industry:
 
@@ -86,7 +84,7 @@ Why? For a simple reason that mathematicians call the "No Free Lunch" theorem. I
 
 Imagine you hire one person to manage your store. They must be an expert in tax law, logistics, Symfony development, persuasive copywriting and customer psychology. It's impossible. At best, they'll be "average" everywhere.
 
-A generalist AI (like the giant GPT-4 or Claude 3 Opus models), it's the same:
+A generalist AI (like the giant GPT-5 or Claude 3 Opus models), it's the same:
 
 **It's slow (Latency)**: To answer a simple question like "Do you have this T-shirt in red?", a giant model mobilizes phenomenal computing power. In e-commerce, 100ms of latency is 1% less conversion. **Don't use a bazooka to kill a fly.**
 
@@ -122,7 +120,7 @@ Enough theory. How do you set this up when you're a dev or e-merchant on PrestaS
 
 Think of MCP as a **"universal USB plug" for AI**. It allows an AI (Claude, ChatGPT, or a local agent) to connect to your tools in a standardized and secure way.
 
-This is precisely to fill this gap that I developed **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)**.
+This is precisely to fill this gap that **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)** was developed by **BusinessTech & PrestaModule**.
 
 The idea is simple: **transform your PrestaShop store into a real MCP Server**. Instead of cobbling together Python scripts everywhere, you install the module, and boom: your store natively exposes its data and actions to your AI agents, in a controlled manner.
 
@@ -191,15 +189,5 @@ AI is not a magic wand that replaces everything. It's a technological building b
 Take a look at **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/)** and try to connect your first agent to your store. Start small: a simple agent capable of reading your stock. You'll see, once you've tasted agentic architecture, there's no going back.
 
 **This is the time to move from "AI user" to "AI architect".** And believe me, it's a lot more fun!
-
----
-
-### Related Resources
-
-- [MCP Tools Plus - PrestaShop Module](https://nicolas-dabene.fr/modules/mcp-tools-plus/)
-- [AI & e-commerce Services](/services/)
-- [AI Training for Developers](/formations/)
-- [PrestaShop Expertise](/expertise/prestashop/)
-- [AI Expertise](/expertise/ia/)
 
 
