@@ -234,3 +234,13 @@
   channel: ndabene06
   duration: PT5M4S
   category: PrestaShop & E-commerce
+- title: Sécurité PrestaShop
+  video_id: YPiRrRjFSGY
+  url: https://www.youtube.com/watch?v=YPiRrRjFSGY
+  thumbnail: https://i.ytimg.com/vi/YPiRrRjFSGY/hqdefault.jpg
+  description: Votre boutique PrestaShop est-elle vraiment sécurisée ? Découvrez dans
+    cette vidéo les points essentiels à vérifier pour protéger ...
+  published_at: '2026-01-27T23:00:49Z'
+  channel: ndabene06
+  duration: PT5M52S
+  category: PrestaShop & E-commerce
