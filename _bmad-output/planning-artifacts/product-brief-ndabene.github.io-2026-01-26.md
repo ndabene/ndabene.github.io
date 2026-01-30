@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1, 2, 3, 4]
+stepsCompleted: [1, 2, 3, 4, 5]
 inputDocuments: ["docs/architecture.md", "docs/architecture-nexus.md", "docs/prd-design-rework.md"]
 date: 2026-01-26
 author: Nikko
@@ -97,3 +97,31 @@ Le succès du projet sera validé par l'équilibre entre une perception utilisat
 | **Technical** | Validité des flux XML | 100% de succès (CI/CD) |
 | **Maintainability** | Couverture de validation | 3 nouveaux tests automatisés critiques |
 | **Performance** | Temps de Build (GA) | < +10% d'augmentation malgré les nouveaux tests |
+
+---
+
+## MVP Scope
+
+### Core Features
+
+*   **Fondations Nexus** : Refonte de l'architecture SCSS (tokens, variables) pour implémenter la palette Slate & Gold et les effets de verre (Glassmorphism).
+*   **Hero Section "Alive"** : Nouvelle page d'accueil avec typographie dynamique et mise en page impactante.
+*   **Blog Bento Layout** : Transformation de la liste des articles en une grille "Bento" moderne, sans toucher aux données existantes.
+*   **Pipeline Sécurisé** : Ajout des validations GitHub Actions (XML, Frontmatter) pour garantir la non-régression.
+*   **Navigation & Footer** : Mise à jour stylistique pour s'aligner sur la charte Nexus.
+
+### Out of Scope for MVP
+
+*   **Réécriture du contenu** : On ne touche pas au texte des articles existants.
+*   **Nouvelles fonctionnalités fonctionnelles** : Pas de nouvelle section (type 'Boutique' ou 'Formation') pour le moment, on se concentre sur le design et l'infra.
+*   **Animations lourdes (3D)** : On se limite aux transitions CSS performantes et aux micro-interactions, pas de Three.js ou WebGL complexe pour l'instant.
+
+### MVP Success Criteria
+
+*   **Validation Visuelle** : La nouvelle charte est implémentée sur 100% des pages clés (Home, Blog, Article).
+*   **Validation Technique** : Le pipeline GitHub Actions passe au vert avec les nouveaux tests de sécurité XML.
+*   **Performance** : Le score Lighthouse Mobile reste supérieur à 90 malgré les enrichissements visuels.
+
+### Future Vision
+
+Un site entièrement piloté par des agents IA autonomes qui rédigent, illustrent et déploient du contenu technique de pointe, avec une expérience utilisateur qui s'adapte en temps réel au visiteur.
