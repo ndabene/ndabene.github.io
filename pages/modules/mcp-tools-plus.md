@@ -1,9 +1,9 @@
----
+﻿---
 layout: product-landing
 title: "MCP Tools Plus - Module PrestaShop pour IA & Commerce Analytics"
 permalink: /modules/mcp-tools-plus/
 lang: fr
-description: "Module PrestaShop prêt pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps réel aux agents IA. Suivi des ventes, déclarations fiscales, alertes stock et métriques de rentabilité—le tout accessible en langage naturel."
+description: "Module PrestaShop pr├¬t pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps r├®el aux agents IA. Suivi des ventes, d├®clarations fiscales, alertes stock et m├®triques de rentabilit├®ÔÇöle tout accessible en langage naturel."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 
 # SEO
@@ -14,7 +14,7 @@ twitter_card: summary_large_image
 # Product data
 product:
   name: "MCP Tools Plus"
-  price: "9,90€ HT / Mois"
+  price: "9,90Ôé¼ HT / Mois"
   currency: "EUR"
   availability: "https://schema.org/InStock"
   addons_url: "https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html"
@@ -40,7 +40,7 @@ product:
                 <a href="/blog" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Blog</a>
                 <a href="#features" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Features</a>
                 <a href="#tools" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Outils</a>
-                <a href="#requirements" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Prérequis</a>
+                <a href="#requirements" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Pr├®requis</a>
                 <a href="#docs" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Documentation</a>
                 <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="btn-primary text-sm py-2.5 px-5 flex items-center gap-2">
                     <i class="fas fa-shopping-cart"></i>
@@ -59,7 +59,7 @@ product:
             <a href="/blog" class="block text-[#475569] hover:text-[#0F172A] font-medium">Blog</a>
             <a href="#features" class="block text-[#475569] hover:text-[#0F172A] font-medium">Features</a>
             <a href="#tools" class="block text-[#475569] hover:text-[#0F172A] font-medium">Outils</a>
-            <a href="#requirements" class="block text-[#475569] hover:text-[#0F172A] font-medium">Prérequis</a>
+            <a href="#requirements" class="block text-[#475569] hover:text-[#0F172A] font-medium">Pr├®requis</a>
             <a href="#docs" class="block text-[#475569] hover:text-[#0F172A] font-medium">Documentation</a>
             <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="btn-primary inline-block text-center w-full text-sm py-2.5">
                 Obtenir sur Addons
@@ -76,7 +76,7 @@ product:
                 <!-- PrestaShop Platinum Partner Banner -->
                 <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-[#DF3163]/10 border border-[#DF3163]/30 rounded-full">
                     <i class="fab fa-prestashop text-[#DF3163] text-xl"></i>
-                    <span class="text-[#DF3163] font-semibold">Par BusinessTech & PrestaModule — Platinum Partner PrestaShop</span>
+                    <span class="text-[#DF3163] font-semibold">Par BusinessTech & PrestaModule ÔÇö Platinum Partner PrestaShop</span>
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-6">
@@ -94,13 +94,13 @@ product:
                     Module PrestaShop pour <span class="text-gold">IA & Commerce Analytics</span>
                 </h1>
                 <p class="text-lg text-[#374151] mb-8 leading-relaxed">
-                    Module PrestaShop prêt pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps réel aux agents IA. Suivi des ventes, déclarations fiscales, alertes stock et métriques de rentabilité—le tout accessible en langage naturel.
+                    Module PrestaShop pr├¬t pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps r├®el aux agents IA. Suivi des ventes, d├®clarations fiscales, alertes stock et m├®triques de rentabilit├®ÔÇöle tout accessible en langage naturel.
                 </p>
 
                 <!-- Price Card -->
                 <div class="inline-flex items-center gap-4 mb-8 p-4 bg-white border-2 border-[#D4AF37] rounded-xl shadow-lg">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-[#D4AF37]">9,90€</div>
+                        <div class="text-3xl font-bold text-[#D4AF37]">9,90Ôé¼</div>
                         <div class="text-sm text-[#475569]">HT / Mois</div>
                     </div>
                     <div class="h-12 w-px bg-[#E2E8F0]"></div>
@@ -111,7 +111,7 @@ product:
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-check text-[#059669] text-xs"></i>
-                            <span>Mises à jour incluses</span>
+                            <span>Mises ├á jour incluses</span>
                         </div>
                     </div>
                 </div>
@@ -146,25 +146,25 @@ product:
                         <span class="ml-4 text-[#475569] text-sm font-mono">MCP Agent Query</span>
                     </div>
                     <div class="space-y-3 text-sm font-mono">
-                        <p class="text-[#475569]"># Requête utilisateur:</p>
-                        <p class="text-[#D4AF37]">"Donne-moi un aperçu des ventes sur les 30 derniers jours"</p>
+                        <p class="text-[#475569]"># Requ├¬te utilisateur:</p>
+                        <p class="text-[#D4AF37]">"Donne-moi un aper├ºu des ventes sur les 30 derniers jours"</p>
                         <p class="text-[#475569] mt-4"># L'agent IA appelle:</p>
                         <p class="text-[#DF3163]">sales_analytics_dashboard()</p>
                         <div class="mt-4 p-3 bg-[#1E293B] rounded-lg">
                             <p class="text-[#059669]">{</p>
                             <p class="text-white pl-4">"total_orders": <span class="text-[#F59E0B]">1,247</span>,</p>
-                            <p class="text-white pl-4">"revenue": <span class="text-[#F59E0B]">€89,432.50</span>,</p>
-                            <p class="text-white pl-4">"avg_cart": <span class="text-[#F59E0B]">€71.72</span></p>
+                            <p class="text-white pl-4">"revenue": <span class="text-[#F59E0B]">Ôé¼89,432.50</span>,</p>
+                            <p class="text-white pl-4">"avg_cart": <span class="text-[#F59E0B]">Ôé¼71.72</span></p>
                             <p class="text-[#059669]">}</p>
                         </div>
                     </div>
                 </div>
                 <!-- Floating badges -->
                 <div class="absolute -top-4 -right-4 px-4 py-2 bg-[#059669]/10 border border-[#059669]/30 rounded-full text-[#059669] text-sm font-medium">
-                    <i class="fas fa-circle text-xs mr-2 animate-pulse"></i>Données temps réel
+                    <i class="fas fa-circle text-xs mr-2 animate-pulse"></i>Donn├®es temps r├®el
                 </div>
                 <div class="absolute -bottom-4 -left-4 px-4 py-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] text-sm font-medium">
-                    <i class="fas fa-lock mr-2"></i>SQL Sécurisé
+                    <i class="fas fa-lock mr-2"></i>SQL S├®curis├®
                 </div>
             </div>
         </div>
@@ -181,11 +181,11 @@ product:
             </div>
             <div class="text-center">
                 <div class="text-4xl font-bold text-[#D4AF37] mb-2">11</div>
-                <div class="text-[#475569]">Catégories</div>
+                <div class="text-[#475569]">Cat├®gories</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl font-bold text-[#D4AF37] mb-2">Google Analytics</div>
-                <div class="text-[#475569]">Intégration</div>
+                <div class="text-[#475569]">Int├®gration</div>
             </div>
             <div class="text-center">
                 <div class="text-4xl font-bold text-[#D4AF37] mb-2">100%</div>
@@ -201,7 +201,7 @@ product:
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Pourquoi MCP Tools Plus ?</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Créez un pont entre vos données PrestaShop et les agents IA avec une implémentation MCP prête pour la production.
+                Cr├®ez un pont entre vos donn├®es PrestaShop et les agents IA avec une impl├®mentation MCP pr├¬te pour la production.
             </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -212,7 +212,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Analytics Ventes</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Suivez commandes, revenus, paniers moyens avec regroupement journalier/hebdomadaire/mensuel. Insights instantanés via requêtes en langage naturel.
+                    Suivez commandes, revenus, paniers moyens avec regroupement journalier/hebdomadaire/mensuel. Insights instantan├®s via requ├¬tes en langage naturel.
                 </p>
             </div>
             <!-- Feature 2 -->
@@ -220,9 +220,9 @@ product:
                 <div class="w-14 h-14 rounded-lg bg-[#D4AF37]/10 flex items-center justify-center mb-5">
                     <i class="fas fa-file-invoice-dollar text-2xl text-[#D4AF37]"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Conformité Fiscale</h3>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Conformit├® Fiscale</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Résumés TVA automatisés, ventilation taxes multi-pays et rapports prêts pour vos déclarations fiscales.
+                    R├®sum├®s TVA automatis├®s, ventilation taxes multi-pays et rapports pr├¬ts pour vos d├®clarations fiscales.
                 </p>
             </div>
             <!-- Feature 3 -->
@@ -232,7 +232,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Alertes Inventaire</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Surveillez les niveaux de stock, recevez des alertes de rupture et planifiez le réapprovisionnement avant la pénurie.
+                    Surveillez les niveaux de stock, recevez des alertes de rupture et planifiez le r├®approvisionnement avant la p├®nurie.
                 </p>
             </div>
             <!-- Feature 4 -->
@@ -242,7 +242,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Insights Clients</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Segmentez clients, identifiez top acheteurs, analysez comportements et suivez taux de réachat.
+                    Segmentez clients, identifiez top acheteurs, analysez comportements et suivez taux de r├®achat.
                 </p>
             </div>
             <!-- Feature 5 -->
@@ -252,7 +252,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Service Client</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Monitoring SLA, routage prioritaire, gestion threads et suggestions de réponses IA pour un support plus rapide.
+                    Monitoring SLA, routage prioritaire, gestion threads et suggestions de r├®ponses IA pour un support plus rapide.
                 </p>
             </div>
             <!-- Feature 6 -->
@@ -260,9 +260,9 @@ product:
                 <div class="w-14 h-14 rounded-lg bg-[#0F172A]/10 flex items-center justify-center mb-5">
                     <i class="fab fa-google text-2xl text-[#0F172A]"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Intégration Google Analytics</h3>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Int├®gration Google Analytics</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Intégration complète Google Analytics 4 avec tracking e-commerce, analyse trafic et tunnels de conversion.
+                    Int├®gration compl├¿te Google Analytics 4 avec tracking e-commerce, analyse trafic et tunnels de conversion.
                 </p>
             </div>
             <!-- Feature 7: RGPD Compliance -->
@@ -271,11 +271,11 @@ product:
                     <i class="fas fa-shield-alt text-2xl text-[#D4AF37]"></i>
                 </div>
                 <div class="flex items-center gap-2 mb-3">
-                    <h3 class="text-xl font-bold text-[#111827]">Conformité RGPD</h3>
+                    <h3 class="text-xl font-bold text-[#111827]">Conformit├® RGPD</h3>
                     <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
                 </div>
                 <p class="text-[#374151] leading-relaxed">
-                    Protection des données clients renforcée avec anonymisation automatique des données sensibles lors des requêtes IA. Hardening XSS systématique et type safety généralisé pour une sécurité maximale.
+                    Protection des donn├®es clients renforc├®e avec anonymisation automatique des donn├®es sensibles lors des requ├¬tes IA. Hardening XSS syst├®matique et type safety g├®n├®ralis├® pour une s├®curit├® maximale.
                 </p>
             </div>
             <!-- Feature 8: Profitability Analysis -->
@@ -284,11 +284,11 @@ product:
                     <i class="fas fa-chart-pie text-2xl text-[#D4AF37]"></i>
                 </div>
                 <div class="flex items-center gap-2 mb-3">
-                    <h3 class="text-xl font-bold text-[#111827]">Analyse Rentabilité</h3>
+                    <h3 class="text-xl font-bold text-[#111827]">Analyse Rentabilit├®</h3>
                     <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
                 </div>
                 <p class="text-[#374151] leading-relaxed">
-                    Calculez la rentabilité nette de vos commandes en incluant coûts de revient (COGS), frais d'expédition et remises. Identifiez les tendances et catégories les plus profitables.
+                    Calculez la rentabilit├® nette de vos commandes en incluant co├╗ts de revient (COGS), frais d'exp├®dition et remises. Identifiez les tendances et cat├®gories les plus profitables.
                 </p>
             </div>
             <!-- Feature 9: Logistics & Carriers -->
@@ -301,7 +301,7 @@ product:
                     <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
                 </div>
                 <p class="text-[#374151] leading-relaxed">
-                    Diagnostic et gestion complète de vos transporteurs avec audit automatique, configuration zones de livraison et mise à jour des numéros de suivi.
+                    Diagnostic et gestion compl├¿te de vos transporteurs avec audit automatique, configuration zones de livraison et mise ├á jour des num├®ros de suivi.
                 </p>
             </div>
         </div>
@@ -312,9 +312,9 @@ product:
 <section id="tools" class="py-24 bg-[#FAFAFA]">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Bibliothèque d'Outils MCP</h2>
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Biblioth├¿que d'Outils MCP</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Explorez notre suite complète d'outils organisés par catégorie. Chaque outil retourne du JSON et s'intègre parfaitement avec vos agents IA.
+                Explorez notre suite compl├¿te d'outils organis├®s par cat├®gorie. Chaque outil retourne du JSON et s'int├¿gre parfaitement avec vos agents IA.
             </p>
         </div>
 
@@ -373,24 +373,24 @@ product:
 <section class="py-24 bg-white">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Comment ça marche</h2>
-            <p class="text-lg text-[#374151]">Trois étapes simples pour des insights commerce alimentés par l'IA</p>
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Comment ├ºa marche</h2>
+            <p class="text-lg text-[#374151]">Trois ├®tapes simples pour des insights commerce aliment├®s par l'IA</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
                 <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">1</div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Installer le Module</h3>
-                <p class="text-[#374151] leading-relaxed">Uploadez sur votre instance PrestaShop 8.2+ et activez aux côtés du module MCP Server.</p>
+                <p class="text-[#374151] leading-relaxed">Uploadez sur votre instance PrestaShop 8.2+ et activez aux c├┤t├®s du module MCP Server.</p>
             </div>
             <div class="text-center">
                 <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">2</div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Connecter l'Agent IA</h3>
-                <p class="text-[#374151] leading-relaxed">Configurez votre agent LLM pour communiquer avec le endpoint MCP exposé par le module.</p>
+                <p class="text-[#374151] leading-relaxed">Configurez votre agent LLM pour communiquer avec le endpoint MCP expos├® par le module.</p>
             </div>
             <div class="text-center">
                 <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">3</div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Interroger Naturellement</h3>
-                <p class="text-[#374151] leading-relaxed">Posez vos questions en français et laissez l'IA les traduire automatiquement en appels d'outils.</p>
+                <p class="text-[#374151] leading-relaxed">Posez vos questions en fran├ºais et laissez l'IA les traduire automatiquement en appels d'outils.</p>
             </div>
         </div>
     </div>
@@ -401,9 +401,9 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-[2rem] font-bold mb-6 text-[#111827]">Prérequis Techniques</h2>
+                <h2 class="text-[2rem] font-bold mb-6 text-[#111827]">Pr├®requis Techniques</h2>
                 <p class="text-lg text-[#374151] mb-8 leading-relaxed">
-                    MCP Tools Plus est conçu pour les installations PrestaShop modernes avec support PHP 8.1+.
+                    MCP Tools Plus est con├ºu pour les installations PrestaShop modernes avec support PHP 8.1+.
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-[#E2E8F0] card">
@@ -412,7 +412,7 @@ product:
                         </div>
                         <div>
                             <h4 class="font-bold mb-1 text-[#111827]">PrestaShop 8.2+</h4>
-                            <p class="text-[#475569] text-sm">Avec la boutique en mode multistore-safe pour la compatibilité multi-boutiques.</p>
+                            <p class="text-[#475569] text-sm">Avec la boutique en mode multistore-safe pour la compatibilit├® multi-boutiques.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-[#E2E8F0] card">
@@ -430,7 +430,7 @@ product:
                         </div>
                         <div>
                             <h4 class="font-bold mb-1 text-[#111827]">Module ps_mcp_server</h4>
-                            <p class="text-[#475569] text-sm">Le module MCP Server de base doit être installé et actif.</p>
+                            <p class="text-[#475569] text-sm">Le module MCP Server de base doit ├¬tre install├® et actif.</p>
                         </div>
                     </div>
                 </div>
@@ -460,7 +460,7 @@ product:
                         <div>
                             <h4 class="font-bold text-[#B8941F] mb-1">Modules Optionnels</h4>
                             <p class="text-[#475569] text-sm">
-                                Pour toutes les fonctionnalités, installez <a href="https://www.presta-module.com/fr/3-modules-prestashop/8-ventes/9-advanced-pack.html" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">Advanced Pack</a> pour la gestion packs et <a href="https://www.businesstech.fr/fr/ia/83-geo-suite.html?srsltid=AfmBOoqQgX8gUlM9dLeBDepK0i93VEdkvLefxl5a392Hd0JiSf5ly4lQ" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">LLM SEO</a> pour les outils SEO.
+                                Pour toutes les fonctionnalit├®s, installez <a href="https://www.presta-module.com/fr/3-modules-prestashop/8-ventes/9-advanced-pack.html" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">Advanced Pack</a> pour la gestion packs et <a href="https://www.businesstech.fr/fr/ia/83-geo-suite.html?srsltid=AfmBOoqQgX8gUlM9dLeBDepK0i93VEdkvLefxl5a392Hd0JiSf5ly4lQ" target="_blank" rel="noopener" class="text-[#0F172A] hover:text-[#D4AF37] font-medium underline">LLM SEO</a> pour les outils SEO.
                             </p>
                         </div>
                     </div>
@@ -476,7 +476,7 @@ product:
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Exemples de Prompts</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Interrogez votre agent IA en langage naturel. Il gère automatiquement le calcul des dates et la sélection d'outils.
+                Interrogez votre agent IA en langage naturel. Il g├¿re automatiquement le calcul des dates et la s├®lection d'outils.
             </p>
         </div>
         <div class="grid md:grid-cols-2 gap-6">
@@ -490,23 +490,23 @@ product:
             <div class="code-block rounded-xl p-5">
                 <div class="flex items-center gap-2 mb-3 text-[#DF3163]">
                     <i class="fas fa-file-invoice"></i>
-                    <span class="font-medium">Déclaration Fiscale</span>
+                    <span class="font-medium">D├®claration Fiscale</span>
                 </div>
                 <p class="text-white font-mono text-sm">"Fournis une ventilation TVA par pays pour les 30 derniers jours, puis par taux de taxe si possible."</p>
             </div>
             <div class="code-block rounded-xl p-5">
                 <div class="flex items-center gap-2 mb-3 text-[#059669]">
                     <i class="fas fa-boxes"></i>
-                    <span class="font-medium">Vérification Inventaire</span>
+                    <span class="font-medium">V├®rification Inventaire</span>
                 </div>
-                <p class="text-white font-mono text-sm">"Liste jusqu'à 15 produits actifs avec stock sous 8 unités pour que je puisse planifier le réapprovisionnement."</p>
+                <p class="text-white font-mono text-sm">"Liste jusqu'├á 15 produits actifs avec stock sous 8 unit├®s pour que je puisse planifier le r├®approvisionnement."</p>
             </div>
             <div class="code-block rounded-xl p-5">
                 <div class="flex items-center gap-2 mb-3 text-[#F59E0B]">
                     <i class="fas fa-headset"></i>
                     <span class="font-medium">File Support</span>
                 </div>
-                <p class="text-white font-mono text-sm">"Montre les threads où le dernier message client date de plus de 24h, inclus noms/refs commandes."</p>
+                <p class="text-white font-mono text-sm">"Montre les threads o├╣ le dernier message client date de plus de 24h, inclus noms/refs commandes."</p>
             </div>
             <div class="code-block rounded-xl p-5">
                 <div class="flex items-center gap-2 mb-3 text-[#0F172A] bg-white/10 inline-block px-2 py-1 rounded">
@@ -520,7 +520,7 @@ product:
                     <i class="fas fa-tag"></i>
                     <span class="font-medium">Promotions</span>
                 </div>
-                <p class="text-white font-mono text-sm">"Crée un bon de 10% nommé SUMMER10 valable le mois prochain avec 500 utilisations et livraison gratuite désactivée."</p>
+                <p class="text-white font-mono text-sm">"Cr├®e un bon de 10% nomm├® SUMMER10 valable le mois prochain avec 500 utilisations et livraison gratuite d├®sactiv├®e."</p>
             </div>
         </div>
     </div>
@@ -531,16 +531,16 @@ product:
     <div class="max-w-4xl mx-auto px-6 lg:px-4 text-center">
         <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full">
             <i class="fab fa-prestashop text-[#DF3163]"></i>
-            <span class="text-white/90 font-medium">Par BusinessTech & PrestaModule — Platinum Partner depuis 2009</span>
+            <span class="text-white/90 font-medium">Par BusinessTech & PrestaModule ÔÇö Platinum Partner depuis 2009</span>
         </div>
-        <h2 class="text-[2rem] font-bold mb-6 text-white">Prêt à booster votre boutique PrestaShop avec l'IA ?</h2>
+        <h2 class="text-[2rem] font-bold mb-6 text-white">Pr├¬t ├á booster votre boutique PrestaShop avec l'IA ?</h2>
         <p class="text-xl text-white/80 mb-6 leading-relaxed">
-            Donnez à vos agents IA le contexte commerce dont ils ont besoin pour prendre des décisions intelligentes.
+            Donnez ├á vos agents IA le contexte commerce dont ils ont besoin pour prendre des d├®cisions intelligentes.
         </p>
 
         <!-- Price in CTA -->
         <div class="inline-flex items-center gap-3 mb-10 px-6 py-3 bg-white/10 border border-[#D4AF37]/50 rounded-xl">
-            <span class="text-3xl font-bold text-[#D4AF37]">9,90€</span>
+            <span class="text-3xl font-bold text-[#D4AF37]">9,90Ôé¼</span>
             <span class="text-white/70">HT / Mois</span>
         </div>
 
@@ -567,10 +567,10 @@ product:
                         <i class="fab fa-prestashop"></i>
                         Module PrestaShop
                     </span>
-                    <span class="text-[#D4AF37] font-semibold text-sm">9,90€ HT/Mois</span>
+                    <span class="text-[#D4AF37] font-semibold text-sm">9,90Ôé¼ HT/Mois</span>
                 </div>
                 <p class="text-white/60 text-sm leading-relaxed">
-                    Développé par BusinessTech & PrestaModule, Platinum Partner PrestaShop et éditeur de modules depuis 2009. Support technique réactif et efficace.
+                    D├®velopp├® par BusinessTech & PrestaModule, Platinum Partner PrestaShop et ├®diteur de modules depuis 2009. Support technique r├®actif et efficace.
                 </p>
             </div>
             <div>
@@ -578,7 +578,7 @@ product:
                 <ul class="space-y-2 text-white/60">
                     <li><a href="#features" class="hover:text-white transition">Features</a></li>
                     <li><a href="#tools" class="hover:text-white transition">Outils</a></li>
-                    <li><a href="#requirements" class="hover:text-white transition">Prérequis</a></li>
+                    <li><a href="#requirements" class="hover:text-white transition">Pr├®requis</a></li>
                 </ul>
             </div>
             <div>
@@ -595,7 +595,7 @@ product:
             </div>
         </div>
         <div class="pt-8 border-t border-white/10 text-center">
-            <p class="text-white/40 text-sm">© 2025 MCP Tools Plus by BusinessTech & PrestaModule. Tous droits réservés.</p>
+            <p class="text-white/40 text-sm">┬® 2025 MCP Tools Plus by BusinessTech & PrestaModule. Tous droits r├®serv├®s.</p>
         </div>
     </div>
 </footer>
@@ -695,129 +695,129 @@ product:
     // Tools data
     const tools = [
         // Helpers & Messaging
-        { name: 'get_prompt_examples', desc: 'Liste les outils MCP disponibles avec exemples de prompts, groupés par catégorie/module.', category: 'helpers', icon: 'fa-lightbulb', color: 'gold' },
+        { name: 'get_prompt_examples', desc: 'Liste les outils MCP disponibles avec exemples de prompts, group├®s par cat├®gorie/module.', category: 'helpers', icon: 'fa-lightbulb', color: 'gold' },
         { name: 'get_country_codes', desc: 'Retourne les IDs pays PrestaShop pour filtrage (ex: France = 8). Toujours appeler en premier pour filtrer par pays.', category: 'helpers', icon: 'fa-flag', color: 'gold' },
         { name: 'send_email_from_shop', desc: 'Envoie un email via la boutique en utilisant du contenu HTML (pas de Markdown).', category: 'helpers', icon: 'fa-envelope', color: 'gold' },
 
         // Sales & Revenue Analytics
-        { name: 'sales_analytics_dashboard', desc: 'Totaux commandes, CA, min/max/moyenne panier pour une période avec groupement.', category: 'sales', icon: 'fa-chart-bar', color: 'marine' },
-        { name: 'product_performance_tracker', desc: 'Classement produits par CA/quantité avec filtres pays/catégorie/fabricant et détails variantes.', category: 'sales', icon: 'fa-ranking-star', color: 'marine' },
+        { name: 'sales_analytics_dashboard', desc: 'Totaux commandes, CA, min/max/moyenne panier pour une p├®riode avec groupement.', category: 'sales', icon: 'fa-chart-bar', color: 'marine' },
+        { name: 'product_performance_tracker', desc: 'Classement produits par CA/quantit├® avec filtres pays/cat├®gorie/fabricant et d├®tails variantes.', category: 'sales', icon: 'fa-ranking-star', color: 'marine' },
         { name: 'advanced_business_reports', desc: 'Rapports niveau commande avec colonnes flexibles (shipping, wrapping, discounts, status, invoice).', category: 'sales', icon: 'fa-file-chart-line', color: 'marine' },
-        { name: 'order_charges_breakdown', desc: 'Vue d\'ensemble charges HT/TTC/TVA shipping, wrapping, réductions avec ratio livraison gratuite/payante.', category: 'sales', icon: 'fa-receipt', color: 'marine' },
-        { name: 'tax_declaration_summary', desc: 'Agrégation totaux HT/TTC/TVA pour déclarations fiscales.', category: 'sales', icon: 'fa-file-invoice-dollar', color: 'gold' },
-        { name: 'multi_market_tax_analyzer', desc: 'Groupement HT/TTC/TVA par pays ou taux de taxe pour déclarations multi-pays.', category: 'sales', icon: 'fa-globe', color: 'gold' },
-        { name: 'returns_and_credits_tracker', desc: 'Retourne avoirs/remboursements avec totaux HT/TTC pour réconciliation comptable.', category: 'sales', icon: 'fa-undo', color: 'marine' },
+        { name: 'order_charges_breakdown', desc: 'Vue d\'ensemble charges HT/TTC/TVA shipping, wrapping, r├®ductions avec ratio livraison gratuite/payante.', category: 'sales', icon: 'fa-receipt', color: 'marine' },
+        { name: 'tax_declaration_summary', desc: 'Agr├®gation totaux HT/TTC/TVA pour d├®clarations fiscales.', category: 'sales', icon: 'fa-file-invoice-dollar', color: 'gold' },
+        { name: 'multi_market_tax_analyzer', desc: 'Groupement HT/TTC/TVA par pays ou taux de taxe pour d├®clarations multi-pays.', category: 'sales', icon: 'fa-globe', color: 'gold' },
+        { name: 'returns_and_credits_tracker', desc: 'Retourne avoirs/remboursements avec totaux HT/TTC pour r├®conciliation comptable.', category: 'sales', icon: 'fa-undo', color: 'marine' },
 
         // Profitability & Margin Analysis (v1.0.3)
-        { name: 'get_order_profitability', desc: 'Calcule la rentabilité nette d\'une commande spécifique en comparant CA HT aux coûts produits, frais de port, emballage et remises.', category: 'sales', icon: 'fa-calculator', color: 'gold' },
-        { name: 'get_bulk_order_profitability', desc: 'Analyse groupée de plusieurs commandes avec résumé agrégé et détail par commande de la rentabilité.', category: 'sales', icon: 'fa-table', color: 'gold' },
-        { name: 'order_profitability_alerts', desc: 'Scan des commandes sur période donnée pour isoler celles avec marge nette inférieure au seuil défini (%).', category: 'sales', icon: 'fa-exclamation-circle', color: 'gold' },
-        { name: 'profitability_trends', desc: 'Agrégation temporelle (jour/semaine/mois) du CA, coûts et marge pour identifier les tendances de profit.', category: 'sales', icon: 'fa-chart-line', color: 'gold' },
-        { name: 'get_category_profitability', desc: 'Analyse de la rentabilité brute par catégorie de produits sur une période donnée.', category: 'sales', icon: 'fa-folder-open', color: 'gold' },
+        { name: 'get_order_profitability', desc: 'Calcule la rentabilit├® nette d\'une commande sp├®cifique en comparant CA HT aux co├╗ts produits, frais de port, emballage et remises.', category: 'sales', icon: 'fa-calculator', color: 'gold' },
+        { name: 'get_bulk_order_profitability', desc: 'Analyse group├®e de plusieurs commandes avec r├®sum├® agr├®g├® et d├®tail par commande de la rentabilit├®.', category: 'sales', icon: 'fa-table', color: 'gold' },
+        { name: 'order_profitability_alerts', desc: 'Scan des commandes sur p├®riode donn├®e pour isoler celles avec marge nette inf├®rieure au seuil d├®fini (%).', category: 'sales', icon: 'fa-exclamation-circle', color: 'gold' },
+        { name: 'profitability_trends', desc: 'Agr├®gation temporelle (jour/semaine/mois) du CA, co├╗ts et marge pour identifier les tendances de profit.', category: 'sales', icon: 'fa-chart-line', color: 'gold' },
+        { name: 'get_category_profitability', desc: 'Analyse de la rentabilit├® brute par cat├®gorie de produits sur une p├®riode donn├®e.', category: 'sales', icon: 'fa-folder-open', color: 'gold' },
 
         // Customer Insights & Operations
-        { name: 'customer_insights_analyzer', desc: 'Segmente clients (pays/groupe/fréquence) et liste top acheteurs.', category: 'customer', icon: 'fa-user-chart', color: 'ecommerce' },
-        { name: 'customer_behavior_summary', desc: 'Total clients, dépense moyenne, clients récurrents, top 10, distribution pays.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
-        { name: 'customer_demographics_breakdown', desc: 'Distribution acheteurs par genre et tranches d\'âge (avec filtres pays optionnels).', category: 'customer', icon: 'fa-users-demographic', color: 'ecommerce' },
-        { name: 'order_fulfillment_tracker', desc: 'Compte commandes et CA par statut PrestaShop pour détecter blocages fulfillment.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
+        { name: 'customer_insights_analyzer', desc: 'Segmente clients (pays/groupe/fr├®quence) et liste top acheteurs.', category: 'customer', icon: 'fa-user-chart', color: 'ecommerce' },
+        { name: 'customer_behavior_summary', desc: 'Total clients, d├®pense moyenne, clients r├®currents, top 10, distribution pays.', category: 'customer', icon: 'fa-users', color: 'ecommerce' },
+        { name: 'customer_demographics_breakdown', desc: 'Distribution acheteurs par genre et tranches d\'├óge (avec filtres pays optionnels).', category: 'customer', icon: 'fa-users-demographic', color: 'ecommerce' },
+        { name: 'order_fulfillment_tracker', desc: 'Compte commandes et CA par statut PrestaShop pour d├®tecter blocages fulfillment.', category: 'customer', icon: 'fa-truck', color: 'ecommerce' },
 
         // Logistics & Carriers (v1.0.3)
-        { name: 'list_carriers', desc: 'Liste tous les transporteurs avec états (actif/inactif) et délais configurés.', category: 'logistics', icon: 'fa-shipping-fast', color: 'prestashop' },
-        { name: 'get_carrier_details', desc: 'Récupère détails avancés: zones de livraison, groupes clients autorisés et tranches prix/poids.', category: 'logistics', icon: 'fa-info-circle', color: 'prestashop' },
-        { name: 'carriers_audit_report', desc: 'Rapport diagnostic identifiant erreurs critiques (zones sans prix, délais manquants, erreurs de tranches).', category: 'logistics', icon: 'fa-clipboard-check', color: 'prestashop' },
-        { name: 'set_carrier_active', desc: 'Active ou désactive un transporteur via son ID.', category: 'logistics', icon: 'fa-toggle-on', color: 'prestashop' },
+        { name: 'list_carriers', desc: 'Liste tous les transporteurs avec ├®tats (actif/inactif) et d├®lais configur├®s.', category: 'logistics', icon: 'fa-shipping-fast', color: 'prestashop' },
+        { name: 'get_carrier_details', desc: 'R├®cup├¿re d├®tails avanc├®s: zones de livraison, groupes clients autoris├®s et tranches prix/poids.', category: 'logistics', icon: 'fa-info-circle', color: 'prestashop' },
+        { name: 'carriers_audit_report', desc: 'Rapport diagnostic identifiant erreurs critiques (zones sans prix, d├®lais manquants, erreurs de tranches).', category: 'logistics', icon: 'fa-clipboard-check', color: 'prestashop' },
+        { name: 'set_carrier_active', desc: 'Active ou d├®sactive un transporteur via son ID.', category: 'logistics', icon: 'fa-toggle-on', color: 'prestashop' },
         { name: 'set_carrier_free_shipping', desc: 'Bascule un transporteur en mode "Livraison Gratuite" (is_free).', category: 'logistics', icon: 'fa-gift', color: 'prestashop' },
-        { name: 'update_order_tracking_number', desc: 'Met à jour le numéro de suivi d\'une commande et synchronise les tables order_carrier.', category: 'logistics', icon: 'fa-barcode', color: 'prestashop' },
+        { name: 'update_order_tracking_number', desc: 'Met ├á jour le num├®ro de suivi d\'une commande et synchronise les tables order_carrier.', category: 'logistics', icon: 'fa-barcode', color: 'prestashop' },
 
         // Inventory & Stock
-        { name: 'inventory_alerts_monitor', desc: 'Liste produits avec stock au/sous seuil avec détails variantes en rupture.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
-        { name: 'margin_performance_alerts', desc: 'Détecte produits avec marges sous seuil (ou négatives) avec breakdown variantes.', category: 'inventory', icon: 'fa-percent', color: 'green' },
+        { name: 'inventory_alerts_monitor', desc: 'Liste produits avec stock au/sous seuil avec d├®tails variantes en rupture.', category: 'inventory', icon: 'fa-boxes-stacked', color: 'green' },
+        { name: 'margin_performance_alerts', desc: 'D├®tecte produits avec marges sous seuil (ou n├®gatives) avec breakdown variantes.', category: 'inventory', icon: 'fa-percent', color: 'green' },
         { name: 'get_product_stock', desc: 'Obtient stock disponible pour un produit avec breakdown par combinaison si applicable.', category: 'inventory', icon: 'fa-box', color: 'green', comingSoon: true },
-        { name: 'set_product_stock', desc: 'Définit quantité stock pour produit/combinaison avec enregistrement mouvement optionnel.', category: 'inventory', icon: 'fa-edit', color: 'green', comingSoon: true },
-        { name: 'adjust_product_stock', desc: 'Ajuste stock par delta (positif/négatif) avec enregistrement mouvement.', category: 'inventory', icon: 'fa-plus-minus', color: 'green', comingSoon: true },
+        { name: 'set_product_stock', desc: 'D├®finit quantit├® stock pour produit/combinaison avec enregistrement mouvement optionnel.', category: 'inventory', icon: 'fa-edit', color: 'green', comingSoon: true },
+        { name: 'adjust_product_stock', desc: 'Ajuste stock par delta (positif/n├®gatif) avec enregistrement mouvement.', category: 'inventory', icon: 'fa-plus-minus', color: 'green', comingSoon: true },
         { name: 'list_stock_movement_reasons', desc: 'Liste raisons mouvements stock (filtrables par signe: augmentation/diminution).', category: 'inventory', icon: 'fa-list', color: 'green', comingSoon: true },
         { name: 'get_stock_movements', desc: 'Obtient derniers mouvements stock pour produit/combinaison avec dates, deltas, raisons.', category: 'inventory', icon: 'fa-history', color: 'green', comingSoon: true },
 
         // Promotions & Marketing
-        { name: 'voucher_overview', desc: 'Liste bons existants avec statut, validité et type de réduction.', category: 'marketing', icon: 'fa-ticket', color: 'prestashop' },
-        { name: 'create_voucher', desc: 'Crée nouveau bon via webservices avec paramètres simples (code, dates, réduction).', category: 'marketing', icon: 'fa-plus-circle', color: 'prestashop' },
-        { name: 'update_voucher', desc: 'Met à jour champs clés bon (code, validité, réduction, activation) via webservice.', category: 'marketing', icon: 'fa-pen', color: 'prestashop' },
-        { name: 'get_packs', desc: 'Liste tous packs Advanced Pack avec nom, état, prix, quantité disponible et contenu.', category: 'marketing', icon: 'fa-box-open', color: 'prestashop' },
-        { name: 'get_pack_available_quantity', desc: 'Retourne quantité disponible pour un pack Advanced Pack spécifique.', category: 'marketing', icon: 'fa-warehouse', color: 'prestashop' },
-        { name: 'generate_add_to_cart_link', desc: 'Génère URL ajout panier PrestaShop avec résolution variante et vérification stock.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
+        { name: 'voucher_overview', desc: 'Liste bons existants avec statut, validit├® et type de r├®duction.', category: 'marketing', icon: 'fa-ticket', color: 'prestashop' },
+        { name: 'create_voucher', desc: 'Cr├®e nouveau bon via webservices avec param├¿tres simples (code, dates, r├®duction).', category: 'marketing', icon: 'fa-plus-circle', color: 'prestashop' },
+        { name: 'update_voucher', desc: 'Met ├á jour champs cl├®s bon (code, validit├®, r├®duction, activation) via webservice.', category: 'marketing', icon: 'fa-pen', color: 'prestashop' },
+        { name: 'get_packs', desc: 'Liste tous packs Advanced Pack avec nom, ├®tat, prix, quantit├® disponible et contenu.', category: 'marketing', icon: 'fa-box-open', color: 'prestashop' },
+        { name: 'get_pack_available_quantity', desc: 'Retourne quantit├® disponible pour un pack Advanced Pack sp├®cifique.', category: 'marketing', icon: 'fa-warehouse', color: 'prestashop' },
+        { name: 'generate_add_to_cart_link', desc: 'G├®n├¿re URL ajout panier PrestaShop avec r├®solution variante et v├®rification stock.', category: 'marketing', icon: 'fa-cart-plus', color: 'prestashop' },
 
         // Price Engine & Specific Prices (v1.0.3)
-        { name: 'specific_price_list', desc: 'Liste les prix spécifiques d\'un produit avec flag entrées expirées ou actives.', category: 'marketing', icon: 'fa-tags', color: 'gold' },
-        { name: 'specific_price_create', desc: 'Crée une remise sur produit/combinaison (montant fixe ou %) pour client/pays/groupe spécifique.', category: 'marketing', icon: 'fa-percent', color: 'gold' },
-        { name: 'specific_price_delete', desc: 'Supprime une remise spécifique par son ID.', category: 'marketing', icon: 'fa-trash', color: 'gold' },
-        { name: 'product_price_preview', desc: 'Simule le prix final calculé par Product::getPriceStatic() selon contexte (quantité, taxe, client).', category: 'marketing', icon: 'fa-eye', color: 'gold' },
-        { name: 'specific_price_rule_list', desc: 'Liste les règles de prix catalogue actives sur la boutique.', category: 'marketing', icon: 'fa-list-ul', color: 'gold' },
-        { name: 'specific_price_rule_create', desc: 'Crée règle catalogue globale (ex: -10% sur catégorie) avec gestion groupes de conditions.', category: 'marketing', icon: 'fa-plus', color: 'gold' },
-        { name: 'specific_price_rule_apply', desc: 'Force l\'application immédiate d\'une règle catalogue sur tout ou partie du catalogue.', category: 'marketing', icon: 'fa-magic', color: 'gold' },
+        { name: 'specific_price_list', desc: 'Liste les prix sp├®cifiques d\'un produit avec flag entr├®es expir├®es ou actives.', category: 'marketing', icon: 'fa-tags', color: 'gold' },
+        { name: 'specific_price_create', desc: 'Cr├®e une remise sur produit/combinaison (montant fixe ou %) pour client/pays/groupe sp├®cifique.', category: 'marketing', icon: 'fa-percent', color: 'gold' },
+        { name: 'specific_price_delete', desc: 'Supprime une remise sp├®cifique par son ID.', category: 'marketing', icon: 'fa-trash', color: 'gold' },
+        { name: 'product_price_preview', desc: 'Simule le prix final calcul├® par Product::getPriceStatic() selon contexte (quantit├®, taxe, client).', category: 'marketing', icon: 'fa-eye', color: 'gold' },
+        { name: 'specific_price_rule_list', desc: 'Liste les r├¿gles de prix catalogue actives sur la boutique.', category: 'marketing', icon: 'fa-list-ul', color: 'gold' },
+        { name: 'specific_price_rule_create', desc: 'Cr├®e r├¿gle catalogue globale (ex: -10% sur cat├®gorie) avec gestion groupes de conditions.', category: 'marketing', icon: 'fa-plus', color: 'gold' },
+        { name: 'specific_price_rule_apply', desc: 'Force l\'application imm├®diate d\'une r├¿gle catalogue sur tout ou partie du catalogue.', category: 'marketing', icon: 'fa-magic', color: 'gold' },
 
         // Google Shopping & Merchant Center (v1.0.3)
-        { name: 'google_shopping_get_configuration_status', desc: 'Outil diagnostic amélioré avec rapport lisible (labels traduits) et recommandations priorité Haute/Moyenne/Basse.', category: 'marketing', icon: 'fa-shopping-bag', color: 'marine' },
-        { name: 'google_shopping_get_feeds', desc: 'Liste les flux configurés (langue, pays, devise) pour Google Shopping.', category: 'marketing', icon: 'fa-rss', color: 'marine' },
-        { name: 'google_shopping_set_category_taxonomy', desc: 'Mappe une catégorie PrestaShop vers la taxonomie officielle de Google.', category: 'marketing', icon: 'fa-sitemap', color: 'marine' },
-        { name: 'google_shopping_set_exclusion_rule', desc: 'Définit des règles pour exclure produits du flux (par ID, SKU, catégorie).', category: 'marketing', icon: 'fa-filter', color: 'marine' },
+        { name: 'google_shopping_get_configuration_status', desc: 'Outil diagnostic am├®lior├® avec rapport lisible (labels traduits) et recommandations priorit├® Haute/Moyenne/Basse.', category: 'marketing', icon: 'fa-shopping-bag', color: 'marine' },
+        { name: 'google_shopping_get_feeds', desc: 'Liste les flux configur├®s (langue, pays, devise) pour Google Shopping.', category: 'marketing', icon: 'fa-rss', color: 'marine' },
+        { name: 'google_shopping_set_category_taxonomy', desc: 'Mappe une cat├®gorie PrestaShop vers la taxonomie officielle de Google.', category: 'marketing', icon: 'fa-sitemap', color: 'marine' },
+        { name: 'google_shopping_set_exclusion_rule', desc: 'D├®finit des r├¿gles pour exclure produits du flux (par ID, SKU, cat├®gorie).', category: 'marketing', icon: 'fa-filter', color: 'marine' },
 
         // CMS
-        { name: 'cms_list_pages', desc: 'Liste pages CMS avec filtres optionnels (shop, langue, catégorie, actif) et URL front.', category: 'cms', icon: 'fa-file-alt', color: 'marine', comingSoon: true },
-        { name: 'cms_get_page', desc: 'Obtient détails page CMS (contenu + champs SEO) avec traductions optionnelles.', category: 'cms', icon: 'fa-file', color: 'marine', comingSoon: true },
-        { name: 'cms_update_page_fields', desc: 'Met à jour champs traduisibles CMS pour une langue (meta title/description/SEO).', category: 'cms', icon: 'fa-edit', color: 'marine', comingSoon: true },
-        { name: 'cms_set_page_content', desc: 'Remplace contenu HTML CMS pour une langue (peut être vide pour effacer).', category: 'cms', icon: 'fa-file-code', color: 'marine', comingSoon: true },
-        { name: 'cms_create_page', desc: 'Crée page CMS dans catégorie pour un shop et langue (contenu initial + champs SEO).', category: 'cms', icon: 'fa-plus-square', color: 'marine', comingSoon: true },
-        { name: 'cms_set_page_publication', desc: 'Publie/dépublie page CMS (toggle actif).', category: 'cms', icon: 'fa-toggle-on', color: 'marine', comingSoon: true },
-        { name: 'cms_set_page_indexation', desc: 'Définit index/noindex pour page CMS (toggle indexation).', category: 'cms', icon: 'fa-search', color: 'marine', comingSoon: true },
-        { name: 'cms_move_or_reorder_page', desc: 'Déplace page CMS vers autre catégorie et/ou réordonne position dans catégorie.', category: 'cms', icon: 'fa-arrows-alt', color: 'marine', comingSoon: true },
-        { name: 'cms_list_categories_tree', desc: 'Liste catégories CMS en arborescence (lite) avec liens.', category: 'cms', icon: 'fa-folder-tree', color: 'marine', comingSoon: true },
+        { name: 'cms_list_pages', desc: 'Liste pages CMS avec filtres optionnels (shop, langue, cat├®gorie, actif) et URL front.', category: 'cms', icon: 'fa-file-alt', color: 'marine', comingSoon: true },
+        { name: 'cms_get_page', desc: 'Obtient d├®tails page CMS (contenu + champs SEO) avec traductions optionnelles.', category: 'cms', icon: 'fa-file', color: 'marine', comingSoon: true },
+        { name: 'cms_update_page_fields', desc: 'Met ├á jour champs traduisibles CMS pour une langue (meta title/description/SEO).', category: 'cms', icon: 'fa-edit', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_content', desc: 'Remplace contenu HTML CMS pour une langue (peut ├¬tre vide pour effacer).', category: 'cms', icon: 'fa-file-code', color: 'marine', comingSoon: true },
+        { name: 'cms_create_page', desc: 'Cr├®e page CMS dans cat├®gorie pour un shop et langue (contenu initial + champs SEO).', category: 'cms', icon: 'fa-plus-square', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_publication', desc: 'Publie/d├®publie page CMS (toggle actif).', category: 'cms', icon: 'fa-toggle-on', color: 'marine', comingSoon: true },
+        { name: 'cms_set_page_indexation', desc: 'D├®finit index/noindex pour page CMS (toggle indexation).', category: 'cms', icon: 'fa-search', color: 'marine', comingSoon: true },
+        { name: 'cms_move_or_reorder_page', desc: 'D├®place page CMS vers autre cat├®gorie et/ou r├®ordonne position dans cat├®gorie.', category: 'cms', icon: 'fa-arrows-alt', color: 'marine', comingSoon: true },
+        { name: 'cms_list_categories_tree', desc: 'Liste cat├®gories CMS en arborescence (lite) avec liens.', category: 'cms', icon: 'fa-folder-tree', color: 'marine', comingSoon: true },
         { name: 'cms_seo_audit_report', desc: 'Audit SEO lecture seule pages CMS (meta manquantes/longues, contenu vide, doublons).', category: 'cms', icon: 'fa-clipboard-check', color: 'marine', comingSoon: true },
 
         // Product Images
-        { name: 'product_images_full_overview', desc: 'Vue complète images produit et images preview variantes (si combinaisons).', category: 'images', icon: 'fa-images', color: 'ecommerce', comingSoon: true },
-        { name: 'add_product_image', desc: 'Attache fichier image existant à produit, optionnellement cover et lié à combinaison.', category: 'images', icon: 'fa-plus', color: 'ecommerce', comingSoon: true },
+        { name: 'product_images_full_overview', desc: 'Vue compl├¿te images produit et images preview variantes (si combinaisons).', category: 'images', icon: 'fa-images', color: 'ecommerce', comingSoon: true },
+        { name: 'add_product_image', desc: 'Attache fichier image existant ├á produit, optionnellement cover et li├® ├á combinaison.', category: 'images', icon: 'fa-plus', color: 'ecommerce', comingSoon: true },
         { name: 'replace_product_image', desc: 'Remplace contenu fichier image produit existante en conservant ID/position/cover.', category: 'images', icon: 'fa-sync', color: 'ecommerce', comingSoon: true },
-        { name: 'set_product_cover_image', desc: 'Définit image cover produit vers image existante spécifique.', category: 'images', icon: 'fa-star', color: 'ecommerce', comingSoon: true },
-        { name: 'upload_image_from_url', desc: 'Télécharge image depuis URL dans répertoire upload module et retourne file_path.', category: 'images', icon: 'fa-cloud-download', color: 'ecommerce', comingSoon: true },
-        { name: 'attach_image_to_combination', desc: 'Associe image produit existante avec combinaison/variante spécifique.', category: 'images', icon: 'fa-link', color: 'ecommerce', comingSoon: true },
+        { name: 'set_product_cover_image', desc: 'D├®finit image cover produit vers image existante sp├®cifique.', category: 'images', icon: 'fa-star', color: 'ecommerce', comingSoon: true },
+        { name: 'upload_image_from_url', desc: 'T├®l├®charge image depuis URL dans r├®pertoire upload module et retourne file_path.', category: 'images', icon: 'fa-cloud-download', color: 'ecommerce', comingSoon: true },
+        { name: 'attach_image_to_combination', desc: 'Associe image produit existante avec combinaison/variante sp├®cifique.', category: 'images', icon: 'fa-link', color: 'ecommerce', comingSoon: true },
 
         // Google Analytics 4
-        { name: 'google_analytics_connection_checker', desc: 'Vérifie statut OAuth GA4 et IDs propriété, retourne status/message + suggestions setup.', category: 'ga4', icon: 'fa-plug', color: 'marine' },
-        { name: 'google_analytics_traffic_report', desc: 'GA4 runReport trafic/engagement avec dimensions, métriques, filtres et tri personnalisés.', category: 'ga4', icon: 'fa-chart-line', color: 'marine' },
-        { name: 'google_analytics_realtime_report', desc: 'Snapshot temps réel GA4 (30 dernières minutes) groupé par dimensions choisies.', category: 'ga4', icon: 'fa-clock', color: 'marine' },
-        { name: 'google_analytics_ecommerce_summary', desc: 'Revenus, transactions, AOV, conversion et comparaison période précédente optionnelle.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
+        { name: 'google_analytics_connection_checker', desc: 'V├®rifie statut OAuth GA4 et IDs propri├®t├®, retourne status/message + suggestions setup.', category: 'ga4', icon: 'fa-plug', color: 'marine' },
+        { name: 'google_analytics_traffic_report', desc: 'GA4 runReport trafic/engagement avec dimensions, m├®triques, filtres et tri personnalis├®s.', category: 'ga4', icon: 'fa-chart-line', color: 'marine' },
+        { name: 'google_analytics_realtime_report', desc: 'Snapshot temps r├®el GA4 (30 derni├¿res minutes) group├® par dimensions choisies.', category: 'ga4', icon: 'fa-clock', color: 'marine' },
+        { name: 'google_analytics_ecommerce_summary', desc: 'Revenus, transactions, AOV, conversion et comparaison p├®riode pr├®c├®dente optionnelle.', category: 'ga4', icon: 'fa-shopping-cart', color: 'marine' },
         { name: 'google_analytics_top_products_report', desc: 'Classement produits par revenus/vues/ajouts panier/achats avec filtre nom optionnel.', category: 'ga4', icon: 'fa-trophy', color: 'marine' },
         { name: 'google_analytics_traffic_sources_report', desc: 'Breakdown sessions/engagement (et revenus optionnels) par source/medium/campagne/canal.', category: 'ga4', icon: 'fa-users', color: 'marine' },
-        { name: 'google_analytics_compare_analytics_periods', desc: 'Compare deux périodes pour métriques sélectionnées et retourne deltas/tendances.', category: 'ga4', icon: 'fa-balance-scale', color: 'marine' },
-        { name: 'google_analytics_product_page_performance', desc: 'Trafic/engagement pages produits avec métriques e-commerce optionnelles et filtre path.', category: 'ga4', icon: 'fa-chart-area', color: 'marine' },
-        { name: 'google_analytics_user_demographics', desc: 'Breakdown visiteurs par pays/ville/langue/appareil/navigateur/OS avec métriques revenus.', category: 'ga4', icon: 'fa-globe', color: 'marine' },
-        { name: 'google_analytics_conversion_funnel', desc: 'Construit tunnel conversion de sessions à achat avec taux abandon par étape.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
+        { name: 'google_analytics_compare_analytics_periods', desc: 'Compare deux p├®riodes pour m├®triques s├®lectionn├®es et retourne deltas/tendances.', category: 'ga4', icon: 'fa-balance-scale', color: 'marine' },
+        { name: 'google_analytics_product_page_performance', desc: 'Trafic/engagement pages produits avec m├®triques e-commerce optionnelles et filtre path.', category: 'ga4', icon: 'fa-chart-area', color: 'marine' },
+        { name: 'google_analytics_user_demographics', desc: 'Breakdown visiteurs par pays/ville/langue/appareil/navigateur/OS avec m├®triques revenus.', category: 'ga4', icon: 'fa-globe', color: 'marine' },
+        { name: 'google_analytics_conversion_funnel', desc: 'Construit tunnel conversion de sessions ├á achat avec taux abandon par ├®tape.', category: 'ga4', icon: 'fa-filter', color: 'marine' },
 
         // Customer Service
-        { name: 'inbox_status_snapshot', desc: 'Compte threads par statut et liste ceux en attente réponse marchand avec fenêtre jours récente.', category: 'support', icon: 'fa-inbox', color: 'prestashop', comingSoon: true },
-        { name: 'sla_breach_radar', desc: 'Liste threads dont dernier message client dépasse seuil et attend toujours réponse.', category: 'support', icon: 'fa-exclamation-triangle', color: 'prestashop', comingSoon: true },
-        { name: 'open_threads_brief', desc: 'Liste threads par statut (défaut: open/pending) avec nom/email client et ref commande.', category: 'support', icon: 'fa-list', color: 'prestashop', comingSoon: true },
-        { name: 'order_context_enricher', desc: 'Pour un thread donné, retourne contexte commande (état, tracking, transporteur) + messages récents.', category: 'support', icon: 'fa-info-circle', color: 'prestashop', comingSoon: true },
-        { name: 'language_template_suggestion', desc: 'Détecte langue thread et suggère clé réponse pré-définie selon mots-clés dernier message client.', category: 'support', icon: 'fa-language', color: 'prestashop', comingSoon: true },
+        { name: 'inbox_status_snapshot', desc: 'Compte threads par statut et liste ceux en attente r├®ponse marchand avec fen├¬tre jours r├®cente.', category: 'support', icon: 'fa-inbox', color: 'prestashop', comingSoon: true },
+        { name: 'sla_breach_radar', desc: 'Liste threads dont dernier message client d├®passe seuil et attend toujours r├®ponse.', category: 'support', icon: 'fa-exclamation-triangle', color: 'prestashop', comingSoon: true },
+        { name: 'open_threads_brief', desc: 'Liste threads par statut (d├®faut: open/pending) avec nom/email client et ref commande.', category: 'support', icon: 'fa-list', color: 'prestashop', comingSoon: true },
+        { name: 'order_context_enricher', desc: 'Pour un thread donn├®, retourne contexte commande (├®tat, tracking, transporteur) + messages r├®cents.', category: 'support', icon: 'fa-info-circle', color: 'prestashop', comingSoon: true },
+        { name: 'language_template_suggestion', desc: 'D├®tecte langue thread et sugg├¿re cl├® r├®ponse pr├®-d├®finie selon mots-cl├®s dernier message client.', category: 'support', icon: 'fa-language', color: 'prestashop', comingSoon: true },
         { name: 'priority_routing', desc: 'Classe et score threads en attente par SLA, temps attente et valeur commande pour prioriser urgences.', category: 'support', icon: 'fa-sort', color: 'prestashop', comingSoon: true },
-        { name: 'messages_by_date', desc: 'Recherche messages pour un jour, plage ou X derniers jours avec filtres statut thread et expéditeur.', category: 'support', icon: 'fa-calendar', color: 'prestashop', comingSoon: true },
-        { name: 'reply_drafter', desc: 'Génère prompt (et fallback) pour rédiger réponse contextuelle au dernier message client (draft uniquement).', category: 'support', icon: 'fa-pen-square', color: 'prestashop', comingSoon: true },
+        { name: 'messages_by_date', desc: 'Recherche messages pour un jour, plage ou X derniers jours avec filtres statut thread et exp├®diteur.', category: 'support', icon: 'fa-calendar', color: 'prestashop', comingSoon: true },
+        { name: 'reply_drafter', desc: 'G├®n├¿re prompt (et fallback) pour r├®diger r├®ponse contextuelle au dernier message client (draft uniquement).', category: 'support', icon: 'fa-pen-square', color: 'prestashop', comingSoon: true },
 
         // SEO & Settings
-        { name: 'get_settings_insights', desc: 'Audit paramètres PrestaShop clés groupés par catégorie (sécurité, perfs, SEO) vs recommandés.', category: 'seo', icon: 'fa-cog', color: 'green' },
-        { name: 'get_blocked_modules', desc: 'Liste modules bloqués par Advanced Cookie Banner, groupés par allowed/analytics/marketing.', category: 'seo', icon: 'fa-ban', color: 'green', comingSoon: true },
-        { name: 'set_module_category', desc: 'Déplace module dans allowed/analytics/marketing pour bloquer ou autoriser selon catégorie.', category: 'seo', icon: 'fa-cogs', color: 'green', comingSoon: true },
-        { name: 'list_faqs', desc: 'Liste FAQs avec filtres optionnels par type entité, langue et statut actif.', category: 'seo', icon: 'fa-question-circle', color: 'green', comingSoon: true },
-        { name: 'get_faq', desc: 'Obtient détails complets FAQ par ID incluant texte réponse et métadonnées.', category: 'seo', icon: 'fa-question', color: 'green', comingSoon: true },
+        { name: 'get_settings_insights', desc: 'Audit param├¿tres PrestaShop cl├®s group├®s par cat├®gorie (s├®curit├®, perfs, SEO) vs recommand├®s.', category: 'seo', icon: 'fa-cog', color: 'green' },
+        { name: 'get_blocked_modules', desc: 'Liste modules bloqu├®s par Advanced Cookie Banner, group├®s par allowed/analytics/marketing.', category: 'seo', icon: 'fa-ban', color: 'green', comingSoon: true },
+        { name: 'set_module_category', desc: 'D├®place module dans allowed/analytics/marketing pour bloquer ou autoriser selon cat├®gorie.', category: 'seo', icon: 'fa-cogs', color: 'green', comingSoon: true },
+        { name: 'list_faqs', desc: 'Liste FAQs avec filtres optionnels par type entit├®, langue et statut actif.', category: 'seo', icon: 'fa-question-circle', color: 'green', comingSoon: true },
+        { name: 'get_faq', desc: 'Obtient d├®tails complets FAQ par ID incluant texte r├®ponse et m├®tadonn├®es.', category: 'seo', icon: 'fa-question', color: 'green', comingSoon: true },
         { name: 'get_faq_statistics', desc: 'Obtient statistiques FAQ incluant comptages totaux, breakdown par type, langue et statut.', category: 'seo', icon: 'fa-chart-pie', color: 'green', comingSoon: true },
-        { name: 'list_products_missing_alt_texts', desc: 'Liste produits ayant images sans texte alt (méthode legacy).', category: 'seo', icon: 'fa-image', color: 'green', comingSoon: true },
-        { name: 'get_alt_text_status', desc: 'Obtient statut couverture alt text pour produit spécifique incluant comptage images et alts manquants.', category: 'seo', icon: 'fa-align-left', color: 'green', comingSoon: true },
+        { name: 'list_products_missing_alt_texts', desc: 'Liste produits ayant images sans texte alt (m├®thode legacy).', category: 'seo', icon: 'fa-image', color: 'green', comingSoon: true },
+        { name: 'get_alt_text_status', desc: 'Obtient statut couverture alt text pour produit sp├®cifique incluant comptage images et alts manquants.', category: 'seo', icon: 'fa-align-left', color: 'green', comingSoon: true },
         { name: 'list_products_alt_text_status', desc: 'Liste produits avec statut couverture alt text sur toutes langues.', category: 'seo', icon: 'fa-list-alt', color: 'green', comingSoon: true },
-        { name: 'get_geo_content', desc: 'Obtient contenu GEO (phrases citation IA, contenu frais, URLs custom) pour produit spécifique.', category: 'seo', icon: 'fa-map-marker', color: 'green', comingSoon: true },
-        { name: 'list_products_with_geo_content', desc: 'Liste produits ayant contenu GEO configuré (phrases citation IA ou contenu frais).', category: 'seo', icon: 'fa-globe-americas', color: 'green', comingSoon: true },
+        { name: 'get_geo_content', desc: 'Obtient contenu GEO (phrases citation IA, contenu frais, URLs custom) pour produit sp├®cifique.', category: 'seo', icon: 'fa-map-marker', color: 'green', comingSoon: true },
+        { name: 'list_products_with_geo_content', desc: 'Liste produits ayant contenu GEO configur├® (phrases citation IA ou contenu frais).', category: 'seo', icon: 'fa-globe-americas', color: 'green', comingSoon: true },
         { name: 'get_indexnow_queue_status', desc: 'Obtient statut file soumission IndexNow incluant comptages pending, processed, failed.', category: 'seo', icon: 'fa-paper-plane', color: 'green', comingSoon: true },
-        { name: 'get_indexnow_history', desc: 'Obtient historique soumissions IndexNow récentes avec URLs, statut et timestamps.', category: 'seo', icon: 'fa-history', color: 'green', comingSoon: true },
-        { name: 'get_sitemap_status', desc: 'Obtient statut génération sitemap XML incluant date dernière génération et types contenu inclus.', category: 'seo', icon: 'fa-sitemap', color: 'green', comingSoon: true },
+        { name: 'get_indexnow_history', desc: 'Obtient historique soumissions IndexNow r├®centes avec URLs, statut et timestamps.', category: 'seo', icon: 'fa-history', color: 'green', comingSoon: true },
+        { name: 'get_sitemap_status', desc: 'Obtient statut g├®n├®ration sitemap XML incluant date derni├¿re g├®n├®ration et types contenu inclus.', category: 'seo', icon: 'fa-sitemap', color: 'green', comingSoon: true },
         { name: 'get_ai_bot_traffic_stats', desc: 'Obtient analytics trafic bots IA incluant visites par type bot et patterns user agent.', category: 'seo', icon: 'fa-robot', color: 'green', comingSoon: true },
     ];
 
