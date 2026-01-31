@@ -6,27 +6,52 @@ layout: default
     <div class="nexus-container">
         <!-- Header -->
         <header class="post-header mb-lg">
-            <nav class="breadcrumb">
-                <a href="/blog/">Blog</a>
-                <span>{{ page.title }}</span>
+            <nav class="breadcrumb" style="margin-bottom: var(--space-md); font-size: 0.9rem;">
+                <a href="/blog/" style="color: var(--color-primary);">Blog</a>
+                {% if page.categories.size > 0 %}
+                <span style="color: var(--color-text-dim);"> / {{ page.categories | first | capitalize }}</span>
+                {% endif %}
             </nav>
-            <h1 class="post-title">{{ page.title }}</h1>
-            <div class="post-meta">
+
+            {% if page.image %}
+            <div class="nexus-article-hero" style="margin-bottom: var(--space-xl);">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="width: 100%; 
+                            height: auto; 
+                            max-height: 500px; 
+                            object-fit: cover; 
+                            border-radius: var(--radius-lg);
+                            box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            </div>
+            {% endif %}
+            <h1 class="post-title" style="font-size: 2.5rem; 
+                                          line-height: 1.2; 
+                                          margin-bottom: var(--space-md); 
+                                          font-weight: 700;
+                                          font-family: var(--font-heading);">
+                {{ page.title }}
+            </h1>
+            <div class="post-meta" style="font-size: 0.95rem; 
+                                          color: var(--color-text-dim); 
+                                          margin-bottom: var(--space-xl); 
+                                          padding-bottom: var(--space-md); 
+                                          border-bottom: 1px solid var(--color-border);">
                 <time datetime="{{ page.date | date_to_xmlschema }}">
                     {{ page.date | date: "%d %B %Y" }}
                 </time>
                 {% if page.author %}
-                <span class="post-author">• {{ page.author }}</span>
+                <span class="post-author"> • {{ page.author }}</span>
                 {% endif %}
                 {% if page.read_time_minutes %}
-                <span class="post-read-time">• {{ page.read_time_minutes }} min de lecture</span>
+                <span class="post-read-time"> • {{ page.read_time_minutes }} min de lecture</span>
                 {% endif %}
             </div>
         </header>
 
         <!-- Content -->
-        <div class="nexus-reading-container">
-            <div class="nexus-prose">
+        <div class="nexus-reading-container" style="max-width: 720px; margin: 0 auto;">
+            <div class="nexus-prose" style="font-size: 1.125rem; 
+                                             line-height: 1.75; 
+                                             color: var(--color-text-main);">
                 {{ content }}
             </div>
         </div>
