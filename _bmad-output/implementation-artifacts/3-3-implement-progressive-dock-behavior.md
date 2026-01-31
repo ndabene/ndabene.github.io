@@ -1,6 +1,6 @@
 # Story 3.3: Implement Progressive Dock Behavior
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,20 +22,26 @@ so that it feels premium and saves screen space.
 
 ## Tasks / Subtasks
 
-- [ ] Create State Script (AC: 2, 4)
-  - [ ] Monitor scroll position
-  - [ ] Toggle `.is-docked` class
-- [ ] Style Dock State (AC: 3, 5)
-  - [ ] CSS for `.nexus-nav.is-docked` (centered, rounded corners)
-  - [ ] Transition properties
+- [x] Create State Script (AC: 2, 4)
+  - [x] Monitor scroll position
+  - [x] Toggle `.is-docked` class
+- [x] Style Dock State (AC: 3, 5)
+  - [x] CSS for `.nexus-nav.is-docked` (centered, rounded corners)
+  - [x] Transition properties
 
-## Dev Notes
+## File List
 
-### Architecture & Design System
-- **State Management:** `.is-docked` class toggled by JS.
-- **Location:** `assets/js/nexus/state.js`.
-- **Performance:** Debounce or throttle scroll listener, or use IntersectionObserver.
+- assets/js/nexus/state.js
+- assets/css/nexus.css
+- _includes/footer.html
 
-### References
-- [Epics: Story 3.3](../planning-artifacts/epics.md#story-33-implement-progressive-dock-behavior)
-- [Architecture: State Management](../planning-artifacts/architecture.md)
+## Change Log
+
+- 2026-01-31: Implemented progressive dock behavior. Added state.js for scroll monitoring and updated nexus.css with docked styles.
+
+## Dev Agent Record
+
+### Completion Notes
+- Created `assets/js/nexus/state.js` to toggle `.is-docked` class on scroll.
+- Added smooth transition and docked styling in `assets/css/nexus.css`.
+- Included script in `_includes/footer.html`.

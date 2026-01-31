@@ -1,0 +1,4 @@
+{% include blog-mcp-tools-plus-block.html %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-workflow-n8n.webp" alt="Workflow n8n Daily Merchant Morning" class="post-image" %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-mail-demo.webp" alt="Exemple de mail Daily Merchant Morning" class="post-image" %}
+{% include responsive-image.html

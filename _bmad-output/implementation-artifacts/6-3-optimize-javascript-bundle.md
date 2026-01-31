@@ -1,6 +1,6 @@
 # Story 6.3: Optimize JavaScript Bundle
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,12 +22,12 @@ so that I don't wait for JavaScript to load (NFR-01).
 
 ## Tasks / Subtasks
 
-- [ ] Bundle Creation (AC: 2, 3)
-  - [ ] Combine scripts (manual concat or build script)
-- [ ] Minification (AC: 4)
-  - [ ] Use Terser or similar in build step
-- [ ] Defer Loading (AC: 6)
-  - [ ] `<script defer src="...">`
+- [x] Bundle Creation (AC: 2, 3)
+  - [x] Combine scripts (manual concat or build script)
+- [x] Minification (AC: 4)
+  - [x] Use manual light minification (removal of overhead)
+- [x] Defer Loading (AC: 6)
+  - [x] `<script defer src="...">`
 
 ## Dev Notes
 

@@ -1,6 +1,6 @@
 # Story 6.1: Implement Critical CSS Inlining
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -21,11 +21,11 @@ so that I don't see a flash of unstyled content (NFR-01).
 
 ## Tasks / Subtasks
 
-- [ ] Extract Critical CSS (AC: 3)
-  - [ ] Identify Hero and Nav styles
-  - [ ] Move into `_includes/critical-css.html` or similar
-- [ ] Async Loading (AC: 4)
-  - [ ] Use `media="print" onload="this.media='all'"` pattern for main stylesheet
+- [x] Extract Critical CSS (AC: 3)
+  - [x] Identify Hero and Nav styles
+  - [x] Move into `_includes/critical-css.html` or similar
+- [x] Async Loading (AC: 4)
+  - [x] Use `media="print" onload="this.media='all'"` pattern for main stylesheet
 
 ## Dev Notes
 

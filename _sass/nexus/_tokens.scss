@@ -1,19 +1,28 @@
-// _sass/nexus/_tokens.scss
-// Nexus Design System Tokens
+// Nexus Design System - Tokens
+// Color Palette (HSL)
+$hue-primary: 220; // Deep Blue
+$hue-accent: 260; // Purple
+$hue-gold: 45; // Gold for premium accents
 
-// Deep Slate & Gold Nexus Palette
-$nexus-slate-deep: #020617;
-$nexus-gold-bright: #FFD700;
-$nexus-gold-soft: #D4AF37;
+// Colors
+$color-bg-depth: hsl($hue-primary, 40%, 8%);
+$color-bg-surface: hsl($hue-primary, 30%, 12%);
+$color-text-main: hsl($hue-primary, 10%, 95%);
+$color-text-dim: hsl($hue-primary, 10%, 70%);
+$color-primary: hsl($hue-accent, 80%, 60%);
+$color-gold: hsl($hue-gold, 80%, 50%);
 
-// Glassmorphism Tokens
-$nexus-glass-heavy: rgba(255, 255, 255, 0.05);
-$nexus-glass-border: rgba(255, 255, 255, 0.1);
-$nexus-glass-blur: blur(12px);
+// Spacing
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
 
-// Glow & Depth
-$nexus-glow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
-$nexus-shadow-depth: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+// Typography
+$font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+$font-family-mono: 'JetBrains Mono', monospace;
 
-// Transitions
-$nexus-transition-fluid: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;

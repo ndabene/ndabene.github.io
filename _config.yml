@@ -31,7 +31,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-sass-converter
-  - jekyll-last-modified-at
+#   - jekyll-last-modified-at
   - jekyll-redirect-from
   - jekyll-sitemap
 

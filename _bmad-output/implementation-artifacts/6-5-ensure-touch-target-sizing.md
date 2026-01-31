@@ -1,6 +1,6 @@
 # Story 6.5: Ensure Touch Target Sizing
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -21,9 +21,9 @@ so that I don't accidentally tap the wrong thing.
 
 ## Tasks / Subtasks
 
-- [ ] Audit & Fix (AC: 3, 4)
-  - [ ] Check padding/margins
-  - [ ] Increase tappable area with pseudo-elements if visual size is small
+- [x] Audit & Fix (AC: 3, 4)
+  - [x] Check padding/margins
+  - [x] Increase tappable area with pseudo-elements if visual size is small (Applied min-height/padding)
 
 ## Dev Notes
 

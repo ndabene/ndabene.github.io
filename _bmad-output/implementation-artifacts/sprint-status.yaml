@@ -42,58 +42,58 @@ story_location: "{project-root}/_bmad-output/implementation-artifacts"
 development_status:
   # Epic 1
   epic-1: in-progress
-  1-1-create-nexus-design-tokens: ready-for-dev
-  1-2-create-glassmorphism-mixins: ready-for-dev
-  1-3-setup-modular-scss-architecture: ready-for-dev
-  1-4-create-github-actions-ci-pipeline: ready-for-dev
-  1-5-create-validation-scripts: ready-for-dev
-  1-6-configure-netlify-deployment: ready-for-dev
+  1-1-create-nexus-design-tokens: review
+  1-2-create-glassmorphism-mixins: review
+  1-3-setup-modular-scss-architecture: review
+  1-4-create-github-actions-ci-pipeline: review
+  1-5-create-validation-scripts: review
+  1-6-configure-netlify-deployment: review
   epic-1-retrospective: optional
 
   # Epic 2
   epic-2: in-progress
-  2-1-create-hero-layout-structure: ready-for-dev
-  2-2-apply-glassmorphism-to-hero: ready-for-dev
-  2-3-implement-parallax-effects: ready-for-dev
-  2-4-optimize-hero-images: ready-for-dev
-  2-5-integrate-hero-into-homepage: ready-for-dev
+  2-1-create-hero-layout-structure: review
+  2-2-apply-glassmorphism-to-hero: review
+  2-3-implement-parallax-effects: review
+  2-4-optimize-hero-images: review
+  2-5-integrate-hero-into-homepage: review
   epic-2-retrospective: optional
 
   # Epic 3
   epic-3: in-progress
-  3-1-create-navigation-component-structure: ready-for-dev
-  3-2-apply-sticky-glass-effect-to-navigation: ready-for-dev
-  3-3-implement-progressive-dock-behavior: ready-for-dev
-  3-4-create-responsive-navigation: ready-for-dev
-  3-5-implement-keyboard-navigation: ready-for-dev
+  3-1-create-navigation-component-structure: review
+  3-2-apply-sticky-glass-effect-to-navigation: review
+  3-3-implement-progressive-dock-behavior: review
+  3-4-create-responsive-navigation: review
+  3-5-implement-keyboard-navigation: review
   epic-3-retrospective: optional
 
   # Epic 4
   epic-4: in-progress
-  4-1-create-bento-grid-layout: ready-for-dev
-  4-2-create-blog-card-component: ready-for-dev
-  4-3-style-blog-cards-with-glass-effect: ready-for-dev
-  4-4-implement-instant-filter-system: ready-for-dev
-  4-5-add-filter-transition-animations: ready-for-dev
-  4-6-implement-interactive-card-hover-effects: ready-for-dev
+  4-1-create-bento-grid-layout: review
+  4-2-create-blog-card-component: review
+  4-3-style-blog-cards-with-glass-effect: review
+  4-4-implement-instant-filter-system: review
+  4-5-add-filter-transition-animations: review
+  4-6-implement-interactive-card-hover-effects: review
   epic-4-retrospective: optional
 
   # Epic 5
   epic-5: in-progress
-  5-1-implement-typography-system: ready-for-dev
-  5-2-apply-fluid-typography-scaling: ready-for-dev
-  5-3-constrain-article-reading-width: ready-for-dev
-  5-4-implement-syntax-highlighting-for-code: ready-for-dev
-  5-5-create-focus-reading-mode: ready-for-dev
+  5-1-implement-typography-system: review
+  5-2-apply-fluid-typography-scaling: review
+  5-3-constrain-article-reading-width: review
+  5-4-implement-syntax-highlighting-for-code: review
+  5-5-create-focus-reading-mode: review
   epic-5-retrospective: optional
 
   # Epic 6
   epic-6: in-progress
-  6-1-implement-critical-css-inlining: ready-for-dev
-  6-2-implement-image-lazy-loading: ready-for-dev
-  6-3-optimize-javascript-bundle: ready-for-dev
-  6-4-implement-motion-reduction-support: ready-for-dev
-  6-5-ensure-touch-target-sizing: ready-for-dev
-  6-6-implement-complete-focus-management: ready-for-dev
-  6-7-run-lighthouse-ci-validation: ready-for-dev
+  6-1-implement-critical-css-inlining: review
+  6-2-implement-image-lazy-loading: review
+  6-3-optimize-javascript-bundle: review
+  6-4-implement-motion-reduction-support: review
+  6-5-ensure-touch-target-sizing: review
+  6-6-implement-complete-focus-management: review
+  6-7-run-lighthouse-ci-validation: review
   epic-6-retrospective: optional

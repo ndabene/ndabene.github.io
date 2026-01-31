@@ -1,6 +1,6 @@
 # Story 1.5: Create Validation Scripts
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -23,11 +23,11 @@ so that content quality is enforced automatically.
 
 ## Tasks / Subtasks
 
-- [ ] Create Frontmatter Validator (AC: 2, 3, 4, 5)
-  - [ ] Write Ruby script to parse Frontmatter
-  - [ ] Implement validation logic
-- [ ] Create XML Validator (AC: 6, 7)
-  - [ ] Write Shell script wrapping xmllint or similar
+- [x] Create Frontmatter Validator (AC: 2, 3, 4, 5)
+  - [x] Write Ruby script to parse Frontmatter (Using existing `validate_frontmatter.rb`)
+  - [x] Implement validation logic
+- [x] Create XML Validator (AC: 6, 7)
+  - [x] Write Shell script wrapping xmllint or similar (Created `validate-xml.sh`)
 
 ## Dev Notes
 
@@ -37,4 +37,23 @@ so that content quality is enforced automatically.
 
 ### References
 - [Epics: Story 1.5](../planning-artifacts/epics.md#story-15-create-validation-scripts)
-- [Architecture: Validation](../planning-artifacts/architecture.md)
+### Completion Notes List
+- Confirmed `validate_frontmatter.rb` exists and covers requirements.
+- Created `scripts/validate-xml.sh` for sitemap/feed checks.
+- Registered script in `package.json` as `validate:xml`.
+- Updated CI to use new script.
+
+## File List
+
+- scripts/validate_frontmatter.rb
+- scripts/validate-xml.sh
+- package.json
+- .github/workflows/ci.yml
+
+## Change Log
+
+- 2026-01-30: Added XML validation script and registered in package.json.
+
+## Status
+
+review

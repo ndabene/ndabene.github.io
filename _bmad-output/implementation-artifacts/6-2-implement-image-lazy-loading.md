@@ -1,6 +1,6 @@
 # Story 6.2: Implement Image Lazy Loading
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -21,10 +21,10 @@ so that I can start reading without waiting for all images (NFR-02).
 
 ## Tasks / Subtasks
 
-- [ ] Audit Images (AC: 3)
-  - [ ] Add `loading="lazy"` to Bento cards and post content
-- [ ] Preload Hero (AC: 4)
-  - [ ] Ensure LCP image is preloaded
+- [x] Audit Images (AC: 3)
+  - [x] Add `loading="lazy"` to Bento cards and post content
+- [x] Preload Hero (AC: 4)
+  - [x] Ensure LCP image is preloaded
 
 ## Dev Notes
 

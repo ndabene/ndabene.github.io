@@ -1,0 +1,32 @@
+// Nexus Design System - Cards
+.nexus-card {
+    @include nexus-glass(0.05, 10px);
+    border-radius: 16px;
+    padding: $space-lg;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: $space-sm;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-bottom: $space-xs;
+        color: $color-text-main;
+    }
+
+    &__excerpt {
+        font-size: 0.9rem;
+        color: $color-text-dim;
+        margin-bottom: $space-md;
+    }
+}

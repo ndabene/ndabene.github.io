@@ -1,12 +1,9 @@
-- name: "À propos"
-  link: /
-- name: "Compétences"
-  link: /skills/
-- name: "Vidéos"
-  link: /youtube/
-- name: "Blog"
-  link: /blog/
-- name: "Sponsors"
-  link: /sponsors/
-- name: "Quiz"
-  link: /quizz/
+- title: Blog
+  url: /blog/
+- title: Modules
+  url: /pages/boutique.html
+- title: Vidéos
+  url: /youtube/
+- title: Contact
+  url: "#contact"
+  style: glass

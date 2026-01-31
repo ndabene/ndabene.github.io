@@ -1,0 +1,44 @@
+// Nexus Design System - Header
+.nexus-header {
+    @include nexus-glass(0.8, 12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: $space-sm 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: $color-text-main;
+    }
+
+    &__nav {
+        display: flex;
+        gap: $space-md;
+
+        a {
+            color: $color-text-dim;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    @media (max-width: $mobile) {
+        &__nav {
+            display: none;
+        }
+
+        // Simple mobile hide for now
+    }
+}

@@ -1,6 +1,6 @@
 # Story 6.7: Run Lighthouse CI Validation
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,11 +22,11 @@ so that performance regressions are caught before deployment (NFR-01).
 
 ## Tasks / Subtasks
 
-- [ ] Create Workflow (AC: 2, 3)
-  - [ ] `.github/workflows/lighthouse.yml`
-- [ ] Configure LHCI (AC: 4, 5, 7)
-  - [ ] `lighthouserc.js` configuration
-  - [ ] Set assertions
+- [x] Create Workflow (AC: 2, 3)
+  - [x] `.github/workflows/lighthouse.yml`
+- [x] Configure LHCI (AC: 4, 5, 7)
+  - [x] `lighthouserc.js` configuration
+  - [x] Set assertions (Scores > 90/95, budgets enforced)
 
 ## Dev Notes
 

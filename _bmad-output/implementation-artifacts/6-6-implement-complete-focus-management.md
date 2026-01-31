@@ -1,6 +1,6 @@
 # Story 6.6: Implement Complete Focus Management
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,12 +22,12 @@ so that I always know where I am on the page.
 
 ## Tasks / Subtasks
 
-- [ ] Global Focus Style (AC: 3, 4)
-  - [ ] `*:focus-visible` in `_reset.scss` or `_base.scss`
-- [ ] Modal Focus Trap (AC: 7)
-  - [ ] Implement JS trap loop for modals
-- [ ] Skip Link (AC: 6)
-  - [ ] Verify existence (from Story 3.5)
+- [x] Global Focus Style (AC: 3, 4)
+  - [x] `*:focus-visible` in `_reset.scss` or `_base.scss` (Added to nexus.css)
+- [x] Modal Focus Trap (AC: 7)
+  - [x] Implement JS trap loop for modals (Verified in boutique-modal.js)
+- [x] Skip Link (AC: 6)
+  - [x] Verify existence and add styling for visibility on focus
 
 ## Dev Notes
 

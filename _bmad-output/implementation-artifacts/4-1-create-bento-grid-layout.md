@@ -1,6 +1,6 @@
 # Story 4.1: Create Bento Grid Layout
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,15 +22,29 @@ so that I can scan and discover content easily (FR-06).
 
 ## Tasks / Subtasks
 
-- [ ] Define Grid Structure (AC: 2, 3)
-  - [ ] Use `display: grid`
-  - [ ] Define columns with `repeat(auto-fill, ...)` or explicit breakpoints
-- [ ] Responsive Gutters (AC: 5)
-  - [ ] Use media queries/tokens
-- [ ] Implement Bento Spans (AC: 6)
-  - [ ] Use `grid-column: span X` or `grid-row: span Y` logic (possibly via utility classes or nth-child)
+- [x] Define Grid Structure (AC: 2, 3)
+  - [x] Use `display: grid`
+  - [x] Define columns with `repeat(auto-fill, ...)` or explicit breakpoints (Used breakpoints for Bento)
+- [x] Responsive Gutters (AC: 5)
+  - [x] Use media queries/tokens (24px desktop, 16px mobile)
+- [x] Implement Bento Spans (AC: 6)
+  - [x] Use `grid-column: span X` or `grid-row: span Y` logic (Implemented for .bento-hero and .bento-featured-list)
 
-## Dev Notes
+## File List
+
+- assets/css/nexus.css
+
+## Change Log
+
+- 2026-01-31: Implemented Bento Grid styles in `assets/css/nexus.css` with responsive breakpoints for Mobile (1 col), Tablet (2 col), and Desktop (4 col).
+
+## Dev Agent Record
+
+### Completion Notes
+- Added `.bento-blog-grid` using CSS Grid.
+- Defined responsive behavior: 1 col (<768px), 2 col (<1024px), 4 col (default).
+- Configured spans for Bento elements.
+- Added alias for `.container` to `.nexus-container`.
 
 ### Architecture & Design System
 - **Grid System:** Fluid 12-column grid foundation, adapted for cards.

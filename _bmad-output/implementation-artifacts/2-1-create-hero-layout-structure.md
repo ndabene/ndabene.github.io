@@ -1,6 +1,6 @@
 # Story 2.1: Create Hero Layout Structure
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,14 +22,14 @@ so that I immediately understand the site's premium quality.
 
 ## Tasks / Subtasks
 
-- [ ] Create Hero Component (AC: 2, 3, 7)
-  - [ ] Create `_includes/nexus/hero.html`
-  - [ ] Use `nexus-hero` block class
-- [ ] Implement Content Structure (AC: 4, 5)
-  - [ ] Add tagline H1
-  - [ ] Add expertise area list
-- [ ] Implement Responsive Layout (AC: 6)
-  - [ ] Ensure mobile stack vs desktop row layout (using Nexus layout tokens)
+- [x] Create Hero Component (AC: 2, 3, 7)
+  - [x] Create `_includes/nexus/hero.html`
+  - [x] Use `nexus-hero` block class
+- [x] Implement Content Structure (AC: 4, 5)
+  - [x] Add tagline H1
+  - [x] Add expertise area list
+- [x] Implement Responsive Layout (AC: 6)
+  - [x] Ensure mobile stack vs desktop row layout (using Nexus layout tokens)
 
 ## Dev Notes
 
@@ -40,4 +40,20 @@ so that I immediately understand the site's premium quality.
 
 ### References
 - [Epics: Story 2.1](../planning-artifacts/epics.md#story-21-create-hero-layout-structure)
-- [UX Design: Hero Section](../planning-artifacts/ux-design-specification.md)
+### Completion Notes List
+- Created `_includes/nexus/hero.html` with semantic structure.
+- Refactored `_sass/nexus/_hero-nexus.scss` to use Nexus tokens and BEM.
+- Implemented responsive design and glass effects for interactions.
+
+## File List
+
+- _includes/nexus/hero.html
+- _sass/nexus/_hero-nexus.scss
+
+## Change Log
+
+- 2026-01-30: Implemented Hero structure and styles.
+
+## Status
+
+review

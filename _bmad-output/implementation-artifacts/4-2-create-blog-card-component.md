@@ -1,6 +1,6 @@
 # Story 4.2: Create Blog Card Component
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -21,15 +21,31 @@ so that I'm encouraged to explore the content.
 
 ## Tasks / Subtasks
 
-- [ ] Create Component (AC: 2, 6)
-  - [ ] `_includes/nexus/card-bento.html`
-- [ ] Implement Content (AC: 3, 4)
-  - [ ] Liquid tags for post data
-  - [ ] Conditional image rendering
-- [ ] BEM Structure (AC: 5)
-  - [ ] `nexus-card__image`, `nexus-card__content`, etc.
+- [x] Create Component (AC: 2, 6)
+  - [x] `_includes/nexus/card-bento.html`
+- [x] Implement Content (AC: 3, 4)
+  - [x] Liquid tags for post data
+  - [x] Conditional image rendering
+- [x] BEM Structure (AC: 5)
+  - [x] `nexus-card__image`, `nexus-card__content`, etc.
 
-## Dev Notes
+## File List
+
+- _includes/nexus/card-bento.html
+- _includes/featured-article-card.html
+- _includes/blog-post-loop.html
+- _includes/hero-article.html
+
+## Change Log
+
+- 2026-01-31: Created `card-bento.html` component and integrated it into blog layout via placeholders.
+
+## Dev Agent Record
+
+### Completion Notes
+- Implemented `nexus-card` component.
+- Updated `featured-article-card.html`, `blog-post-loop.html`, `hero-article.html` to use the new component.
+- Blog page now renders posts correctly.
 
 ### Architecture & Design System
 - **Component:** Reusable card.

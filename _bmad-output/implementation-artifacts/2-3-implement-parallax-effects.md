@@ -1,6 +1,6 @@
 # Story 2.3: Implement Parallax Effects
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,14 +22,14 @@ so that the interface feels alive and interactive (FR-05).
 
 ## Tasks / Subtasks
 
-- [ ] Create Parallax Script (AC: 2, 3)
-  - [ ] Implement mousemove event listener
-  - [ ] Apply transform translate based on cursor position
-- [ ] Optimize Performance (AC: 4, 6)
-  - [ ] Use `requestAnimationFrame`
-  - [ ] Check `prefers-reduced-motion`
-- [ ] Mobile Guard (AC: 5)
-  - [ ] Disable checking userAgent or screen width
+- [x] Create Parallax Script (AC: 2, 3)
+  - [x] Implement mousemove event listener
+  - [x] Apply transform translate based on cursor position
+- [x] Optimize Performance (AC: 4, 6)
+  - [x] Use `requestAnimationFrame`
+  - [x] Check `prefers-reduced-motion`
+- [x] Mobile Guard (AC: 5)
+  - [x] Disable checking userAgent or screen width
 
 ## Dev Notes
 
@@ -40,4 +40,19 @@ so that the interface feels alive and interactive (FR-05).
 
 ### References
 - [Epics: Story 2.3](../planning-artifacts/epics.md#story-23-implement-parallax-effects)
-- [Architecture: Animation Timing](../planning-artifacts/architecture.md)
+### Completion Notes List
+- Created `assets/js/nexus/parallax.js` with `requestAnimationFrame`.
+- Implemented mobile and reduced-motion guards.
+- Support `data-nexus-parallax` attribute for depth control.
+
+## File List
+
+- assets/js/nexus/parallax.js
+
+## Change Log
+
+- 2026-01-30: Implemented parallax logic.
+
+## Status
+
+review

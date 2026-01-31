@@ -1,6 +1,6 @@
 # Story 2.2: Apply Glassmorphism to Hero
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,15 +22,15 @@ so that I perceive the site as premium and immersive (FR-01).
 
 ## Tasks / Subtasks
 
-- [ ] Create Hero Styles (AC: 2)
-  - [ ] Create partial `_sass/nexus/_hero-nexus.scss`
-  - [ ] Import in `main.scss` (if not already done in 1.3)
-- [ ] Apply Glass Effects (AC: 3, 4)
-  - [ ] Apply `nexus-glass` mixin
-  - [ ] Layer elements using z-index
-- [ ] Refine Visuals (AC: 5, 6)
-  - [ ] Add Golden accents
-  - [ ] Verify contrast
+- [x] Create Hero Styles (AC: 2)
+  - [x] Create partial `_sass/nexus/_hero-nexus.scss` (Done in 2.1)
+  - [x] Import in `main.scss` (Done in 1.3/2.1)
+- [x] Apply Glass Effects (AC: 3, 4)
+  - [x] Apply `nexus-glass` mixin (Applied to buttons and badges per "Balanced Nexus" design)
+  - [x] Layer elements using z-index
+- [x] Refine Visuals (AC: 5, 6)
+  - [x] Add Golden accents
+  - [x] Verify contrast
 
 ## Dev Notes
 
@@ -41,4 +41,19 @@ so that I perceive the site as premium and immersive (FR-01).
 
 ### References
 - [Epics: Story 2.2](../planning-artifacts/epics.md#story-22-apply-glassmorphism-to-hero)
-- [Architecture: Visual depth](../planning-artifacts/architecture.md)
+### Completion Notes List
+- Validated `_sass/nexus/_hero-nexus.scss` contains glass effects for badges and buttons.
+- Confirmed "Balanced Nexus" approach (glass on accents, not main container).
+- Verified contrast ratios.
+
+## File List
+
+- _sass/nexus/_hero-nexus.scss
+
+## Change Log
+
+- 2026-01-30: Validated glassmorphism application in Hero.
+
+## Status
+
+review

@@ -1,0 +1,52 @@
+// Nexus Design System - Hero
+.nexus-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: $space-xl $space-sm;
+    overflow: hidden;
+
+    // Ambient Background glow
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba($color-primary, 0.2) 0%, transparent 70%);
+        filter: blur(80px);
+        z-index: -1;
+    }
+
+    &__content {
+        max-width: 800px;
+        z-index: 1;
+    }
+
+    &__title {
+        margin-bottom: $space-lg;
+
+        span {
+            color: $color-gold;
+            text-shadow: 0 0 20px rgba($color-gold, 0.3);
+        }
+    }
+
+    &__description {
+        font-size: 1.25rem;
+        color: $color-text-dim;
+        margin-bottom: $space-xl;
+    }
+
+    &__actions {
+        display: flex;
+        gap: $space-md;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

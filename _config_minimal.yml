@@ -1,0 +1,11 @@
+title: Minimal Site
+description: Debugging
+theme: null
+plugins: []
+sass:
+  sass_dir: _sass
+  style: expanded
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

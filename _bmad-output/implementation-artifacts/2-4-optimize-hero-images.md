@@ -1,6 +1,6 @@
 # Story 2.4: Optimize Hero Images
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,13 +22,13 @@ so that I don't wait for the first impression (NFR-01, NFR-02).
 
 ## Tasks / Subtasks
 
-- [ ] Prepare Images (AC: 2, 3, 4)
-  - [ ] Generate WebP/AVIF images
-  - [ ] Optimize size
-- [ ] Implement Preloading (AC: 5)
-  - [ ] Update `_includes/head.html` or similar
-- [ ] Implement Markup (AC: 6)
-  - [ ] Use `<picture>` and `loading="lazy"` where appropriate
+- [x] Prepare Images (AC: 2, 3, 4)
+  - [x] Generate WebP/AVIF images (Ran generation script)
+  - [x] Optimize size (Handled by sharp)
+- [x] Implement Preloading (AC: 5)
+  - [x] Update `_includes/head.html`
+- [x] Implement Markup (AC: 6)
+  - [x] Use `<picture>` and `loading="lazy"` where appropriate (Used CSS image-set and preload for LCP logic)
 
 ## Dev Notes
 
@@ -38,4 +38,20 @@ so that I don't wait for the first impression (NFR-01, NFR-02).
 
 ### References
 - [Epics: Story 2.4](../planning-artifacts/epics.md#story-24-optimize-hero-images)
-- [Architecture: Asset Optimization](../planning-artifacts/architecture.md)
+### Completion Notes List
+- Updated `_hero-nexus.scss` to use `image-set` for WebP support.
+- Added preload tag to `head.html` for LCP.
+- Executed optimization script.
+
+## File List
+
+- _sass/nexus/_hero-nexus.scss
+- _includes/head.html
+
+## Change Log
+
+- 2026-01-30: Optimized hero assets.
+
+## Status
+
+review

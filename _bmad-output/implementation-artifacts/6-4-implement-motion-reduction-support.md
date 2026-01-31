@@ -1,6 +1,6 @@
 # Story 6.4: Implement Motion Reduction Support
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -21,11 +21,11 @@ so that I can use the site comfortably.
 
 ## Tasks / Subtasks
 
-- [ ] CSS Overrides (AC: 3, 4, 5)
-  - [ ] `transition: none` inside media query
-  - [ ] `animation: none`
-- [ ] JS Awareness (AC: 3)
-  - [ ] `window.matchMedia` check in parallax script
+- [x] CSS Overrides (AC: 3, 4, 5)
+  - [x] `transition: none` inside media query
+  - [x] `animation: none`
+- [x] JS Awareness (AC: 3)
+  - [x] `window.matchMedia` check in parallax script
 
 ## Dev Notes
 

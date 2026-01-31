@@ -1,6 +1,6 @@
 # Story 3.1: Create Navigation Component Structure
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,21 +22,28 @@ so that I can explore the site easily.
 
 ## Tasks / Subtasks
 
-- [ ] Create Navigation Data (AC: 5)
-  - [ ] Create `_data/navigation.yml`
-- [ ] Create Component (AC: 2, 3, 6)
-  - [ ] Create partial `_includes/nexus/nav.html`
-  - [ ] Loop through data to build links
-- [ ] Add Accessibility (AC: 7)
-  - [ ] ARIA roles and labels
+- [x] Create Navigation Data (AC: 5)
+  - [x] Create `_data/navigation.yml`
+- [x] Create Component (AC: 2, 3, 6)
+  - [x] Create partial `_includes/nexus/nav.html`
+  - [x] Loop through data to build links
+- [x] Add Accessibility (AC: 7)
+  - [x] ARIA roles and labels
 
-## Dev Notes
+## File List
 
-### Architecture & Design System
-- **Navigation:** Semantic nav.
-- **Location:** `_includes/nexus/nav.html`.
-- **Data Source:** Jekyll data file separation.
+- _data/navigation.yml
+- _includes/nexus/nav.html
+- _includes/header.html
 
-### References
-- [Epics: Story 3.1](../planning-artifacts/epics.md#story-31-create-navigation-component-structure)
-- [Architecture: Components](../planning-artifacts/architecture.md)
+## Change Log
+
+- 2026-01-31: Implemented navigation data and component using Nexus design. Replaced hardcoded header navigation.
+
+## Dev Agent Record
+
+### Completion Notes
+- Created semantic navigation component in `_includes/nexus/nav.html`.
+- Centralized navigation links in `_data/navigation.yml`.
+- Updated header to use dynamic navigation.
+- Maintained accessibility and styling.

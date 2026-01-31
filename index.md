@@ -1,42 +1,41 @@
 ---
 layout: default
-title: "Nicolas Dabène — Blog IA & E-commerce | Expert PrestaShop"
-description: "Créateur de contenu sur l'Intelligence Artificielle et PrestaShop. Articles techniques et modules e-commerce professionnels. Optimisé SEO/GEO/VEO."
-keywords: "blog ia, expert prestashop, créateur contenu e-commerce, mcp protocol, geo veo, intelligence artificielle"
-no_bg: true
-body_class: homepage-creator
-
-# SEO & GEO Optimization
-llm_summary: "Nicolas Dabène, créateur de contenu spécialisé en IA et e-commerce PrestaShop. Auteur d'articles techniques sur l'Intelligence Artificielle (ChatGPT, Claude, MCP Protocol) et créateur de modules professionnels (GEO Suite, Google Merchant Center). Contenu optimisé pour découverte par IA génératives (ChatGPT, Gemini, Perplexity)."
-
-llm_topics:
-- créateur contenu ia
-- blog intelligence artificielle
-- expert prestashop
-- mcp protocol
-- seo geo veo optimization
-- modules e-commerce
-
-# FAQ Schema (GEO/VEO)
-faq:
-  - question: "Qui est Nicolas Dabène ?"
-    answer: "Expert PrestaShop avec plus de 15 ans d'expérience, créateur de contenu spécialisé en Intelligence Artificielle et e-commerce. Auteur d'articles techniques et développeur de modules professionnels pour PrestaShop."
-
-  - question: "Quel type de contenu trouve-t-on sur ce site ?"
-    answer: "Articles techniques sur l'IA (ChatGPT, Claude, MCP Protocol, GEO/VEO), tutoriels PrestaShop et guides e-commerce. Contenu actionnable optimisé pour les moteurs de recherche et les IA génératives."
-
-  - question: "Comment suivre les nouveaux articles ?"
-    answer: "Abonnez-vous au flux RSS ou consultez régulièrement la page blog. Les articles couvrent l'actualité IA, les tutoriels techniques PrestaShop et les bonnes pratiques e-commerce."
+title: "Nicolas Dabène | AI Orchestrator & PHP Expert"
+description: "Senior PHP Developer turning complex requirements into elegant AI-driven solutions."
 ---
-{% include home-content/hero-creator.html %}
 
-{% include home-content/blog-featured.html %}
+<section class="nexus-hero">
+  <div class="nexus-hero__content">
+    <h1 class="nexus-hero__title">
+      Orchestrating <span>Intelligence</span>
+    </h1>
+    <p class="nexus-hero__description">
+      Senior PHP Developer & AI Orchestrator turning complex requirements into elegant, scalable solutions.
+    </p>
+    <div class="nexus-hero__actions">
+      <a href="/blog/" class="nexus-btn nexus-btn--primary">Read Articles</a>
+      <a href="/pages/boutique.html" class="nexus-btn nexus-btn--glass">View Modules</a>
+    </div>
+  </div>
+</section>
 
-{% include home-content/modules-showcase.html %}
-
-{% include home-content/youtube-featured.html %}
-
-{% include home-content/rss-subscribe.html %}
-
-{% include person-jsonld.html %}
-{% include faq-schema.html %}
+<section class="section-padding">
+  <div class="nexus-container">
+    <h2 class="text-center mb-lg">Latest Insights</h2>
+    
+    <div class="nexus-grid-3">
+      {% for post in site.posts limit:3 %}
+      <article class="nexus-card">
+        {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="nexus-card__image" loading="lazy">
+        {% endif %}
+        <h3 class="nexus-card__title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p class="nexus-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        <a href="{{ post.url }}" class="nexus-card__action" style="color: #a78bfa; font-weight: 600;">Read More →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 # Story 3.5: Implement Keyboard Navigation
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,14 +22,28 @@ so that I can navigate without a mouse.
 
 ## Tasks / Subtasks
 
-- [ ] Focus Styles (AC: 4)
-  - [ ] `:focus-visible` styles with gold color
-- [ ] Skip Link (AC: 6)
-  - [ ] Add hidden link at top of body, visible on focus
-- [ ] Verify Order (AC: 5)
-  - [ ] Check DOM order
+- [x] Focus Styles (AC: 4)
+  - [x] `:focus-visible` styles with gold color
+- [x] Skip Link (AC: 6)
+  - [x] Add hidden link at top of body, visible on focus (Added to `_layouts/default.html`)
+- [x] Verify Order (AC: 5)
+  - [x] Check DOM order (Skip link -> Header -> Main)
 
-## Dev Notes
+## File List
+
+- _layouts/default.html
+- assets/css/nexus.css
+
+## Change Log
+
+- 2026-01-31: Implemented keyboard accessibility features: Skip link and Gold focus ring.
+
+## Dev Agent Record
+
+### Completion Notes
+- Added "Skip to Content" link in `_layouts/default.html`.
+- Implemented high-contrast focus styles in `assets/css/nexus.css`.
+- Verified logical tab order.
 
 ### Architecture & Design System
 - **Accessibility:** Core requirement.

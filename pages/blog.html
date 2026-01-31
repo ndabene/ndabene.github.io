@@ -75,7 +75,15 @@ llm_topics:
                 </div>
             </div>
 
-            <!-- The blog-filters-container has been removed -->
+            <!-- Nexus Filters -->
+            <div class="nexus-filters-container mb-lg">
+                <button class="nexus-btn nexus-btn--glass active" data-filter="all">Tous</button>
+                {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+                {% for category in categories %}
+                <button class="nexus-btn nexus-btn--glass" data-filter="{{ category | slugify }}">{{ category
+                    }}</button>
+                {% endfor %}
+            </div>
 
             <!-- 3. Liste des Articles -->
             <div class="post-list-news grid-view" id="blog-posts-container">
@@ -150,5 +158,5 @@ llm_topics:
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script src="{{ '/assets/js/blog-search-modern.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
-<script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/nexus/filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>

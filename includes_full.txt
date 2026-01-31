@@ -1,0 +1,59 @@
+            {% include tags-cloud.html %}
+{% include responsive-image.html 
+   {% include responsive-image.html 
+{% include responsive-image.html
+        {% include expertise-related.html expertise_id='ai' %}
+        {% include expertise-related-resources.html expertise_id='ai' %}
+        {% include expertise-related.html expertise_id='ecommerce' %}
+        {% include expertise-related-resources.html expertise_id='ecommerce' %}
+        {% include expertise-related.html expertise_id='fullstack' %}
+        {% include expertise-related-resources.html expertise_id='fullstack' %}
+        {% include expertise-related.html expertise_id='innovation' %}
+        {% include expertise-related-resources.html expertise_id='innovation' %}
+                    {% include hero-article.html post=hero_post %}
+                    {% include featured-article-card.html post=post %}
+                    initial_load_count=12 %} {% include blog-post-loop.html posts=published_posts_list
+            {% include future-posts-data.html %}
+                                    {% include tech-badge.html tech=tag.tech category=tag.category %}
+{% include home-content/hero-creator.html %}
+{% include home-content/blog-featured.html %}
+{% include home-content/modules-showcase.html %}
+{% include home-content/youtube-featured.html %}
+{% include home-content/rss-subscribe.html %}
+{% include person-jsonld.html %}
+{% include faq-schema.html %}
+                {% include product-card-formation.html product=product %}
+{% include youtube-seo-meta.html %}
+                                            {% include date-fr.html date=video.published_at %}
+                                    <time>{% include date-fr.html date=video.published_at %}</time>
+        {% include expertise-related.html expertise_id='ecommerce' %}
+        {% include expertise-related-resources.html expertise_id='ecommerce' %}
+        {% include expertise-related.html expertise_id='fullstack' %}
+        {% include expertise-related-resources.html expertise_id='fullstack' %}
+        {% include expertise-related.html expertise_id='ai' %}
+        {% include expertise-related-resources.html expertise_id='ai' %}
+        {% include expertise-related.html expertise_id='innovation' %}
+        {% include expertise-related-resources.html expertise_id='innovation' %}
+                    {% include hero-article.html post=hero_post %}
+                    {% include featured-article-card.html post=post %}
+                            data-date-formatted="{% include date-fr.html date=post.date %}"
+            {% include future-posts-data.html %}
+                {% include product-card-formation.html product=product %}
+                                    {% include tech-badge.html tech=tag.tech category=tag.category %}
+{% include youtube-seo-meta.html %}
+                                            {% include date-fr.html date=video.published_at %}
+                                    <time>{% include date-fr.html date=video.published_at %}</time>
+3. **Then** the Hero section is included via `{% include nexus/hero.html %}`
+**Then** the Hero section is included via `{% include nexus/hero.html %}`
+  {% include head.html %}
+  {% include header.html %}
+  {% include footer.html %}
+{% include blog-mcp-tools-plus-block.html %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-workflow-n8n.webp" alt="Workflow n8n Daily Merchant Morning" class="post-image" %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-mail-demo.webp" alt="Exemple de mail Daily Merchant Morning" class="post-image" %}
+{% include responsive-image.html
+{% include blog-mcp-tools-plus-block-en.html %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-workflow-n8n.webp" alt="Daily Merchant Morning n8n Workflow" class="post-image" %}
+{% include responsive-image.html src="/assets/images/blog/2026/01/daily-merchant-morning-automatise-prestashop-ia/2026-01-06-mail-demo.webp" alt="Daily Merchant Morning Email Example" class="post-image" %}
+{% include responsive-image.html
+{% include filter-mode-toggle.html %}

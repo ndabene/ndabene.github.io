@@ -9,6 +9,7 @@
     "clean": "bundle exec jekyll clean",
     "validate:produits": "ruby scripts/validate_produits.rb",
     "validate:frontmatter": "ruby scripts/validate_frontmatter.rb",
+    "validate:xml": "bash scripts/validate-xml.sh",
     "generate:webp": "node scripts/generate-webp.js"
   },
   "repository": {

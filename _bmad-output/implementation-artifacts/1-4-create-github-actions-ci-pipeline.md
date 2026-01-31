@@ -1,6 +1,6 @@
 # Story 1.4: Create GitHub Actions CI Pipeline
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,15 +22,15 @@ so that broken deployments are prevented (FR-07).
 
 ## Tasks / Subtasks
 
-- [ ] Create Workflow File (AC: 2, 3)
-  - [ ] Define triggers (push, pull_request)
-- [ ] Implement Linters (AC: 4, 5)
-  - [ ] Add job for yamllint
-  - [ ] Add job for xmllint
-- [ ] Implement Build Check (AC: 6)
-  - [ ] Add job for `jekyll build`
-- [ ] Branch Protection (AC: 7)
-  - [ ] Ensure workflow failure blocks merge (note: this is a GitHub repo setting, but workflow must report status)
+- [x] Create Workflow File (AC: 2, 3)
+  - [x] Define triggers (push, pull_request)
+- [x] Implement Linters (AC: 4, 5)
+  - [x] Add job for yamllint (Replaced with `npm run validate:frontmatter`)
+  - [x] Add job for xmllint
+- [x] Implement Build Check (AC: 6)
+  - [x] Add job for `jekyll build`
+- [x] Branch Protection (AC: 7)
+  - [x] Ensure workflow failure blocks merge (note: this is a GitHub repo setting, but workflow must report status)
 
 ## Dev Notes
 
@@ -40,4 +40,19 @@ so that broken deployments are prevented (FR-07).
 
 ### References
 - [Epics: Story 1.4](../planning-artifacts/epics.md#story-14-create-github-actions-ci-pipeline)
-- [Architecture: CI/CD](../planning-artifacts/architecture.md)
+### Completion Notes List
+- Created `.github/workflows/ci.yml`.
+- Integrated `npm run validate:frontmatter` and `xmllint` for validation.
+- Added Jekyll build step.
+
+## File List
+
+- .github/workflows/ci.yml
+
+## Change Log
+
+- 2026-01-30: Setup CI pipeline for quality gates.
+
+## Status
+
+review

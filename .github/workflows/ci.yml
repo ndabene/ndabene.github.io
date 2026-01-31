@@ -1,0 +1,40 @@
+name: CI Quality Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3' # Adjusted to recent stable, check Gemfile if needed
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Setup Node (for scripts)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate Frontmatter
+        run: npm run validate:frontmatter
+
+      - name: Build Site
+        run: bundle exec jekyll build
+
+      - name: Validate XML Artifacts
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          npm run validate:xml

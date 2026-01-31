@@ -1,6 +1,4 @@
-# Story 5.5: Create Focus Reading Mode
-
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -14,26 +12,34 @@ so that I can focus on the content.
 
 1. **Given** a visitor is reading an article
 2. **When** I style the article layout
-3. **Then** navigation becomes more subtle during scroll
+3. **Then** navigation becomes more subtle during scroll (Handled via progressive dock)
 4. **And** sidebar elements (if any) are hidden on mobile
 5. **And** article content is the primary visual focus
 6. **And** UI elements fade in only when needed (scroll to top button)
 
 ## Tasks / Subtasks
 
-- [ ] Navigation Behavior (AC: 3)
-  - [ ] Nav might retract or become transparent (already covered in Epic 3 progressive dock, here we verify it supports reading mode).
-- [ ] UI Cleanup (AC: 4, 5)
-  - [ ] Hide sidebars, minimize footer distractions.
-- [ ] Utility Buttons (AC: 6)
-  - [ ] Implement scroll-to-top button appearing after scroll.
+- [x] Navigation Behavior (AC: 3)
+  - [x] Verified progressive dock behavior supports focus
+- [x] UI Cleanup (AC: 4, 5)
+  - [x] Optimized post layout for focus
+- [x] Utility Buttons (AC: 6)
+  - [x] Implemented `#nexus-back-to-top` with scroll logic
 
-## Dev Notes
+## File List
 
-### Architecture & Design System
-- **Focus:** Content first.
-- **Interactions:** Subtle transitions.
+- assets/css/nexus.css
+- assets/js/nexus/state.js
+- _includes/footer.html
 
-### References
-- [Epics: Story 5.5](../planning-artifacts/epics.md#story-55-create-focus-reading-mode)
-- [UX Design: Focus Management](../planning-artifacts/ux-design-specification.md)
+## Change Log
+
+- 2026-01-31: Implemented focus reading mode with refined post layout and scroll-to-top utility.
+
+## Dev Agent Record
+
+### Completion Notes
+- Integrated a floating scroll-to-top button that appears after 500px scroll.
+- Refined the post layout to eliminate distractions and center the reading experience.
+- Leveraged the existant progressive dock for a subtle, focus-oriented navigation.
+- Ensured mobile guard for back-to-top button to avoid overlapping footer nav.
