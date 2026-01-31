@@ -18,137 +18,138 @@ llm_topics:
 - articles techniques
 - prestashop
 ---
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/">Accueil</a>
+<section class="nexus-hero" style="min-height: 40vh; padding-top: 8rem;">
+    <div class="nexus-container">
+        <nav style="margin-bottom: var(--space-md); font-size: 0.9rem;">
+            <a href="/" style="color: var(--color-text-dim);">Accueil</a>
+            <span style="color: var(--color-text-dim);"> / </span>
             <span>{{ page.title }}</span>
         </nav>
-        <div class="hero-content">
-            <h1>Blog Technique & E-commerce</h1>
-            <p class="section-description">Explorez des articles techniques approfondis sur PHP, PrestaShop et
+        <div class="nexus-hero__content" style="text-align: left;">
+            <h1 style="font-size: clamp(2rem, 5vw, 3rem);">Blog Technique & E-commerce</h1>
+            <p style="font-size: 1.1rem; color: var(--color-text-dim); max-width: 800px;">
+                Explorez des articles techniques approfondis sur PHP, PrestaShop et
                 l'e-commerce, découvrez les dernières innovations en intelligence artificielle, et maîtrisez les
-                meilleures pratiques en ingénierie logicielle pour booster vos projets digitaux.</p>
+                meilleures pratiques en ingénierie logicielle pour booster vos projets digitaux.
+            </p>
         </div>
     </div>
 </section>
 
-<section class="blog-content-section">
-    <div class="container">
+<section class="section-padding">
+    <div class="nexus-container">
         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
             , "post.linkedin != true" %} {% if published_posts.size> 0 %}
-            <div class="bento-blog-grid">
-                <!-- BENTO HERO: Latest Post -->
-                <div class="bento-hero">
+            <div class="nexus-grid-3" style="margin-bottom: var(--space-xl);">
+                <!-- HERO: Latest Post -->
+                <div style="grid-column: span 3;">
                     {% assign hero_post = published_posts.first %}
-                    {% include hero-article.html post=hero_post %}
+                    {% include nexus/card-bento.html post=hero_post %}
                 </div>
 
-                <!-- BENTO FEATURED: Articles 2 & 3 -->
+                <!-- FEATURED: Articles 2, 3 & 4 -->
                 {% if published_posts.size > 1 %}
-                <div class="bento-featured-list">
-                    {% for post in published_posts offset: 1 limit: 2 %}
-                    {% include featured-article-card.html post=post %}
+                {% for post in published_posts offset: 1 limit: 3 %}
+                {% include nexus/card-bento.html post=post %}
+                {% endfor %}
+                {% endif %}
+            </div>
+
+    </div>
+</section>
+
+<section class="section-padding" style="padding-top: 0;">
+    <div class="nexus-container">
+        <!-- Search Bar -->
+        <div style="margin-bottom: var(--space-lg);">
+            <div class="glass" style="padding: var(--space-sm); border-radius: 12px;">
+                <div style="display: flex; align-items: center; gap: var(--space-sm);">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="search-input"
+                        placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off"
+                        style="background: transparent; border: none; outline: none; color: var(--color-text-main); flex: 1; font-size: 1rem;">
+                    <button id="clear-search" class="nexus-btn nexus-btn--glass"
+                        style="display: none; padding: 0.5rem 1rem;" title="Effacer la recherche">
+                        ✕
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles List -->
+        <div class="nexus-grid-3" id="blog-posts-container">
+            {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" |
+                where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign initial_load_count=12 %} {% include
+                blog-post-loop.html posts=published_posts_list limit=initial_load_count %} {% if
+                published_posts_list.size> initial_load_count %}
+                <div id="lazy-posts-data" style="display: none;">
+                    {% for post in published_posts_list offset: 12 %}
+                    <div class="lazy-post-data" data-url="{{ post.url | relative_url }}"
+                        data-title="{{ post.title | escape }}" data-image="{{ post.image }}"
+                        data-categories="{{ post.categories | join: ' ' }}" data-tags="{{ post.tags | join: ' ' }}"
+                        data-date="{{ post.date | date: '%s' }}"
+                        data-date-formatted="{% include date-fr.html date=post.date %}"
+                        data-read-time="{{ post.read_time_minutes | default: 5 }}"
+                        data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
+                        data-series="{% if post.series %}{{ post.series }}{% endif %}">
+                    </div>
                     {% endfor %}
                 </div>
                 {% endif %}
-            </div>
-
-    </div>
-</section>
-
-<section class="blog-main-section">
-    <div class="blog-content-full-width">
-        <div class="main-blog-content-full">
-            <!-- 1. Barre de recherche (Clean & Minimalist) -->
-            <div class="blog-search-wrapper">
-                <div class="blog-search-bar">
-                    <div class="search-input-wrapper">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-input"
-                            placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off">
-                        <button id="clear-search" class="clear-search-btn" style="display: none;"
-                            title="Effacer la recherche">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nexus Filters -->
-            <div class="nexus-filters-container mb-lg">
-                <button class="nexus-btn nexus-btn--glass active" data-filter="all">Tous</button>
-                {% assign categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-                {% for category in categories %}
-                <button class="nexus-btn nexus-btn--glass" data-filter="{{ category | slugify }}">{{ category
-                    }}</button>
-                {% endfor %}
-            </div>
-
-            <!-- 3. Liste des Articles -->
-            <div class="post-list-news grid-view" id="blog-posts-container">
-                {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" |
-                    where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign initial_load_count=12 %} {%
-                    include blog-post-loop.html posts=published_posts_list limit=initial_load_count %} {% if
-                    published_posts_list.size> initial_load_count %}
-                    <div id="lazy-posts-data" style="display: none;">
-                        {% for post in published_posts_list offset: 12 %}
-                        <div class="lazy-post-data" data-url="{{ post.url | relative_url }}"
-                            data-title="{{ post.title | escape }}" data-image="{{ post.image }}"
-                            data-categories="{{ post.categories | join: ' ' }}" data-tags="{{ post.tags | join: ' ' }}"
-                            data-date="{{ post.date | date: '%s' }}"
-                            data-date-formatted="{% include date-fr.html date=post.date %}"
-                            data-read-time="{{ post.read_time_minutes | default: 5 }}"
-                            data-excerpt="{{ post.excerpt | strip_html | truncate: 120 | escape }}"
-                            data-series="{% if post.series %}{{ post.series }}{% endif %}">
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-            </div>
-
-            <!-- 4. No Results & Pagination -->
-            <div class="no-results" id="no-results" style="display: none;">
-                <div class="no-results-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3>Aucun article trouvé</h3>
-                <p>Aucun article ne correspond à vos critères de recherche.</p>
-                <button id="reset-filters" class="btn btn--primary">Réinitialiser les filtres</button>
-            </div>
-
-            {% include future-posts-data.html %}
-
-            {% assign posts_per_page = 6 %}
-            {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
-                , "post.linkedin != true" %} {% assign published_posts_count=temp_posts_2 | size %} {% assign
-                remaining_posts=published_posts_count | minus: 4 %} {% if remaining_posts> initial_load_count %}
-                <div class="pagination-container">
-                    <div class="pagination">
-                        <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
-                        <div id="pagination-numbers"></div>
-                        <button id="next-page" class="pagination-btn">Suivant &raquo;</button>
-                    </div>
-                    <div class="pagination-info-wrapper">
-                        Affichage <span id="showing-range">1-{{ initial_load_count }}</span> sur <span
-                            id="total-posts">{{ temp_posts_count }}</span> articles
-                    </div>
-                </div>
-                {% endif %}
         </div>
+
+        <!-- No Results -->
+        <div id="no-results" style="display: none; text-align: center; padding: var(--space-xxl);">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2"
+                style="margin: 0 auto var(--space-md); color: var(--color-text-dim);">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <h3 style="margin-bottom: var(--space-sm);">Aucun article trouvé</h3>
+            <p style="color: var(--color-text-dim); margin-bottom: var(--space-md);">Aucun article ne correspond à vos
+                critères de recherche.</p>
+            <button id="reset-filters" class="nexus-btn nexus-btn--primary">Réinitialiser les filtres</button>
+        </div>
+
+        {% include future-posts-data.html %}
+
+        <!-- Pagination Setup -->
+        {% assign total_published = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
+            , "post.linkedin != true" | size %} {% assign remaining_posts=total_published | minus: 4 %} {% if
+            remaining_posts> initial_load_count %}
+            <div class="pagination-container"
+                style="text-align: center; margin-top: var(--space-xxl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+                <div
+                    style="display: inline-flex; gap: var(--space-sm); align-items: center; margin-bottom: var(--space-md);">
+                    <button id="prev-page" class="nexus-btn nexus-btn--glass" disabled>&laquo; Précédent</button>
+                    <div id="pagination-numbers" style="display: flex; gap: var(--space-xs);"></div>
+                    <button id="next-page" class="nexus-btn nexus-btn--glass">Suivant &raquo;</button>
+                </div>
+                <div style="color: var(--color-text-dim); font-size: 0.9rem;">
+                    Affichage <span id="showing-range">1-{{ initial_load_count }}</span> sur <span id="total-posts">{{
+                        remaining_posts }}</span> articles
+                </div>
+            </div>
+            {% endif %}
+    </div>
     </div>
 </section>
 
-<!-- Publications externes maintenant intégrées dans le layout principal ci-dessus -->
+<!-- No Posts Fallback -->
 {% else %}
-<section class="blog-content-section">
-    <div class="container">
-        <div class="no-posts-container">
-            <span class="no-posts-icon">📝</span>
-            <h2>Le blog est en cours de rédaction</h2>
-            <p>De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus tard
-                pour découvrir mes publications !</p>
-            <a href="/" class="btn btn--primary">Retour à l'accueil</a>
+<section class="section-padding">
+    <div class="nexus-container">
+        <div style="text-align: center; padding: var(--space-xxl);">
+            <span style="font-size: 4rem;">📝</span>
+            <h2 style="margin: var(--space-md) 0;">Le blog est en cours de rédaction</h2>
+            <p style="color: var(--color-text-dim); margin-bottom: var(--space-lg);">
+                De nouveaux articles techniques sur PHP, PrestaShop et l'IA seront bientôt disponibles. Revenez plus
+                tard pour découvrir mes publications !
+            </p>
+            <a href="/" class="nexus-btn nexus-btn--primary">Retour à l'accueil</a>
         </div>
     </div>
 </section>

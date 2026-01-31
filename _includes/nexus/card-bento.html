@@ -1,11 +1,14 @@
 <article class="nexus-card" data-category="{{ include.post.categories | first | slugify }}"
     data-tags="{{ include.post.tags | join: ',' | slugify }}">
-    {% if include.post.image %}
     <div class="nexus-card__image-container">
+        {% if include.post.image %}
         <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title }}" class="nexus-card__image"
             loading="lazy">
+        {% else %}
+        <img src="/assets/images/blog/default-post.png" alt="{{ include.post.title }}" class="nexus-card__image"
+            loading="lazy">
+        {% endif %}
     </div>
-    {% endif %}
     <div class="nexus-card__content">
         <h3 class="nexus-card__title">
             <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>

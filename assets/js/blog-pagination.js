@@ -1,4 +1,4 @@
-// Blog pagination simple - gère uniquement la pagination avec chargement lazy
+// Blog pagination - Nexus Design System compatible
 document.addEventListener('DOMContentLoaded', function () {
     const postsContainer = document.getElementById('blog-posts-container');
     const prevButton = document.getElementById('prev-page');
@@ -9,16 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!postsContainer) return;
 
-    const postsPerPage = 6;
+    const postsPerPage = 12; // Changed to match grid layout
     let currentPage = 1;
     let lazyPostsLoaded = false;
-
-    // Utility: Generate srcset for responsive images
-    function generateSrcset(src) {
-        if (!src || src.includes('://') || !src.endsWith('.webp')) return '';
-        const basePath = src.split('.').slice(0, -1).join('.');
-        return `${basePath}-480.webp 480w, ${basePath}-720.webp 720w, ${basePath}-1080.webp 1080w, ${src} 1200w`;
-    }
 
     // Fonction pour charger les posts lazy
     function loadLazyPosts() {
@@ -26,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const lazyPostsData = document.getElementById('lazy-posts-data');
         if (!lazyPostsData) {
-            lazyPostsLoaded = true; // Pas de posts lazy à charger
+            lazyPostsLoaded = true;
             return;
         }
 
@@ -38,84 +31,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log('🔄 Chargement de', lazyPosts.length, 'articles supplémentaires...');
 
-        // Créer un fragment pour éviter les reflows multiples
         const fragment = document.createDocumentFragment();
 
         lazyPosts.forEach(postData => {
-            const wrapper = document.createElement('div');
-            wrapper.className = 'post-preview-wrapper';
-
             const article = document.createElement('article');
-            article.className = 'post-preview-news';
-            article.setAttribute('data-categories', postData.dataset.categories || '');
+            article.className = 'nexus-card';
+            article.setAttribute('data-category', postData.dataset.categories || '');
             article.setAttribute('data-tags', postData.dataset.tags || '');
-            article.setAttribute('data-date', postData.dataset.date || '');
-            article.setAttribute('data-read-time', postData.dataset.readTime || '5');
 
-            const seriesHtml = postData.dataset.series ?
-                `<span class="series-indicator">${postData.dataset.series}</span>` : '';
-
-            const srcset = generateSrcset(postData.dataset.image);
-            const sizes = "(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px";
+            const imageUrl = postData.dataset.image || '/assets/images/blog/default-post.png';
 
             article.innerHTML = `
-                <div class="post-news-content">
-                    ${postData.dataset.image ? `
-                    <div class="post-news-thumb">
-                        <img src="${postData.dataset.image}" 
-                             srcset="${srcset}" 
-                             sizes="${sizes}" 
-                             alt="${postData.dataset.title}" 
-                             loading="lazy" 
-                             width="200" 
-                             height="150" 
-                             decoding="async">
+                <div class="nexus-card__image-container">
+                    <img src="${imageUrl}" 
+                         alt="${postData.dataset.title}" 
+                         class="nexus-card__image"
+                         loading="lazy">
+                </div>
+                <div class="nexus-card__content">
+                    <h3 class="nexus-card__title">
+                        <a href="${postData.dataset.url}">${postData.dataset.title}</a>
+                    </h3>
+                    <div class="nexus-card__meta" style="font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 0.5rem;">
+                        <time>${postData.dataset.dateFormatted}</time>
                     </div>
-                    ` : ''}
-                    <div class="post-news-text">
-                        <div class="post-news-meta">
-                            <time>${postData.dataset.dateFormatted}</time>
-                            <span class="reading-time">${postData.dataset.readTime} min</span>
-                            ${seriesHtml}
-                        </div>
-                        <h3 class="post-news-title">
-                            <a href="${postData.dataset.url}">${postData.dataset.title}</a>
-                        </h3>
-                        <p class="post-news-excerpt">${postData.dataset.excerpt}</p>
-                    </div>
-                    <div class="post-news-actions">
-                        <a href="${postData.dataset.url}" class="read-more-compact">
-                            Lire l'article <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                    <p class="nexus-card__excerpt">${postData.dataset.excerpt}</p>
                 </div>
             `;
 
-            wrapper.appendChild(article);
-            fragment.appendChild(wrapper);
+            fragment.appendChild(article);
         });
 
         // Insérer avant le div lazy-posts-data
         lazyPostsData.parentNode.insertBefore(fragment, lazyPostsData);
-
-        // Retirer le container de données
         lazyPostsData.remove();
 
         lazyPostsLoaded = true;
         console.log('✅ Articles supplémentaires chargés');
     }
 
-    // Fonction pour obtenir tous les articles visibles (non masqués par les filtres)
+    // Fonction pour obtenir tous les articles visibles
     function getVisiblePosts() {
-        const allWrappers = postsContainer.querySelectorAll('.post-preview-wrapper');
-        return Array.from(allWrappers).filter(wrapper => {
-            return wrapper.style.display !== 'none';
+        const allCards = postsContainer.querySelectorAll('.nexus-card');
+        return Array.from(allCards).filter(card => {
+            return card.style.display !== 'none' && !card.classList.contains('hidden-by-filter');
         });
     }
 
-    // Fonction pour obtenir le nombre total de posts (y compris lazy non encore chargés)
+    // Fonction pour obtenir le nombre total de posts
     function getTotalPostsCount() {
-        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper');
+        const renderedPosts = postsContainer.querySelectorAll('.nexus-card');
         const lazyPostsData = document.getElementById('lazy-posts-data');
         const lazyCount = lazyPostsData ? lazyPostsData.querySelectorAll('.lazy-post-data').length : 0;
         return renderedPosts.length + lazyCount;
@@ -126,14 +91,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const visiblePosts = getVisiblePosts();
         const allPostsCount = getTotalPostsCount();
 
-        // Si des filtres sont actifs (visiblePosts < posts rendus), utiliser visiblePosts
-        // Sinon, utiliser le total incluant les posts lazy
-        const renderedPostsCount = postsContainer.querySelectorAll('.post-preview-wrapper').length;
+        const renderedPostsCount = postsContainer.querySelectorAll('.nexus-card').length;
         const hasActiveFilters = visiblePosts.length < renderedPostsCount;
         const totalPosts = hasActiveFilters ? visiblePosts.length : allPostsCount;
         const totalPages = Math.ceil(totalPosts / postsPerPage);
 
-        // Réinitialiser à la page 1 si on dépasse
         if (currentPage > totalPages && totalPages > 0) {
             currentPage = 1;
         }
@@ -141,16 +103,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const startIndex = (currentPage - 1) * postsPerPage;
         const endIndex = startIndex + postsPerPage;
 
-        // Masquer tous les articles visibles d'abord
+        // Masquer/afficher les articles
         visiblePosts.forEach((post, index) => {
             if (index >= startIndex && index < endIndex) {
                 post.classList.remove('pagination-hidden');
+                post.style.display = '';
             } else {
                 post.classList.add('pagination-hidden');
+                post.style.display = 'none';
             }
         });
 
-        // Mettre à jour les boutons de pagination
+        // Mettre à jour les boutons
         if (prevButton) {
             prevButton.disabled = currentPage === 1;
         }
@@ -158,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function () {
             nextButton.disabled = currentPage >= totalPages || totalPages === 0;
         }
 
-        // Mettre à jour les numéros de pagination
+        // Mettre à jour les numéros
         updatePaginationNumbers(totalPages);
 
-        // Mettre à jour les informations d'affichage
+        // Mettre à jour les infos
         if (showingRange) {
             const start = visiblePosts.length > 0 ? startIndex + 1 : 0;
             const end = Math.min(endIndex, visiblePosts.length);
@@ -169,14 +133,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (totalPostsSpan) {
-            // Afficher le nombre total (incluant les posts lazy et les posts filtrés)
             totalPostsSpan.textContent = totalPosts;
         }
 
-        // Masquer le container de pagination si pas assez d'articles
+        // Masquer pagination si pas assez d'articles
         const paginationContainer = document.querySelector('.pagination-container');
         if (paginationContainer) {
-            // Utiliser totalPosts pour décider si on affiche la pagination
             if (totalPosts <= postsPerPage) {
                 paginationContainer.style.display = 'none';
             } else {
@@ -193,11 +155,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (totalPages === 0) return;
 
-        // Calculer les pages à afficher
         let startPage = Math.max(1, currentPage - 2);
         let endPage = Math.min(totalPages, currentPage + 2);
 
-        // Ajuster si on est au début ou à la fin
         if (currentPage <= 3) {
             endPage = Math.min(5, totalPages);
         }
@@ -205,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
             startPage = Math.max(1, totalPages - 4);
         }
 
-        // Ajouter "..." au début si nécessaire
+        // Ajouter page 1 et "..." si nécessaire
         if (startPage > 1) {
             addPageNumber(1);
             if (startPage > 2) {
@@ -218,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
             addPageNumber(i);
         }
 
-        // Ajouter "..." à la fin si nécessaire
+        // Ajouter "..." et dernière page si nécessaire
         if (endPage < totalPages) {
             if (endPage < totalPages - 1) {
                 paginationNumbers.appendChild(createEllipsis());
@@ -230,12 +190,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ajouter un numéro de page
     function addPageNumber(pageNum) {
         const pageButton = document.createElement('button');
-        pageButton.className = 'page-number';
+        pageButton.className = 'nexus-btn nexus-btn--glass';
+        pageButton.style.padding = '0.5rem 0.75rem';
+        pageButton.style.minWidth = '2.5rem';
         pageButton.textContent = pageNum;
         pageButton.onclick = () => goToPage(pageNum);
 
         if (pageNum === currentPage) {
             pageButton.classList.add('active');
+            pageButton.style.background = 'var(--color-primary)';
+            pageButton.style.color = 'white';
         }
 
         paginationNumbers.appendChild(pageButton);
@@ -245,7 +209,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function createEllipsis() {
         const ellipsis = document.createElement('span');
         ellipsis.textContent = '...';
-        ellipsis.className = 'pagination-ellipsis';
+        ellipsis.style.padding = '0.5rem';
+        ellipsis.style.color = 'var(--color-text-dim)';
         return ellipsis;
     }
 
@@ -253,28 +218,21 @@ document.addEventListener('DOMContentLoaded', function () {
     function goToPage(pageNum) {
         currentPage = pageNum;
 
-        // Charger les posts lazy si nécessaire pour afficher cette page
-        // On charge dès qu'on atteint la page 2 (posts 9-16) car la page 3 aura besoin des posts lazy
         const startIndex = (pageNum - 1) * postsPerPage;
-        const renderedPosts = postsContainer.querySelectorAll('.post-preview-wrapper').length;
+        const renderedPosts = postsContainer.querySelectorAll('.nexus-card').length;
 
         if (startIndex >= renderedPosts - postsPerPage && !lazyPostsLoaded) {
-            // On approche de la fin des posts rendus, charger les lazy
             loadLazyPosts();
-            // Attendre un peu que les posts soient insérés dans le DOM
             setTimeout(() => updateDisplay(), 50);
         } else {
             updateDisplay();
         }
 
-        // Scroll vers le haut de la liste
-        const blogContent = document.querySelector('.blog-filters-container');
-        if (blogContent) {
-            blogContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        // Scroll vers le haut
+        postsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // Event listeners pour les boutons
+    // Event listeners
     if (prevButton) {
         prevButton.addEventListener('click', function () {
             if (currentPage > 1) {
@@ -293,48 +251,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Navigation par clavier - Optimisée pour éviter les écoutes inutiles
-    let keyboardNavigationEnabled = false;
-
-    // Activer la navigation clavier seulement si l'utilisateur interagit avec la pagination
-    function enableKeyboardNavigation() {
-        if (keyboardNavigationEnabled) return;
-        keyboardNavigationEnabled = true;
-
-        document.addEventListener('keydown', handleKeyboardNavigation);
-    }
-
-    function handleKeyboardNavigation(e) {
-        // Ignorer si l'utilisateur tape dans un champ
-        if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-            return;
-        }
-
-        const totalPosts = getTotalPostsCount();
-        const totalPages = Math.ceil(totalPosts / postsPerPage);
-
-        if (e.key === 'ArrowLeft' && currentPage > 1) {
-            e.preventDefault();
-            goToPage(currentPage - 1);
-        } else if (e.key === 'ArrowRight' && currentPage < totalPages) {
-            e.preventDefault();
-            goToPage(currentPage + 1);
-        }
-    }
-
-    // Activer au survol ou clic sur les boutons de pagination
-    const paginationContainer = document.querySelector('.pagination-container');
-    if (paginationContainer) {
-        paginationContainer.addEventListener('mouseenter', enableKeyboardNavigation, { once: true });
-        paginationContainer.addEventListener('click', enableKeyboardNavigation, { once: true });
-    }
-
-    // Initialiser l'affichage
+    // Initialiser
     updateDisplay();
 
-    // Exposer la fonction updateDisplay pour que les filtres puissent la rappeler
+    // Exposer pour les filtres
     window.blogPaginationUpdate = function () {
-        currentPage = 1; // Réinitialiser à la page 1 quand les filtres changent
+        currentPage = 1;
         updateDisplay();
     };
 });

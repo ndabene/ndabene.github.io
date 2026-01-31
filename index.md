@@ -24,10 +24,13 @@ description: "Senior PHP Developer turning complex requirements into elegant AI-
     <h2 class="text-center mb-lg">Latest Insights</h2>
     
     <div class="nexus-grid-3">
-      {% for post in site.posts limit:3 %}
+      {% assign blog_posts = site.posts | where_exp: "post", "post.linkedin != true" %}
+      {% for post in blog_posts limit:3 %}
       <article class="nexus-card">
         {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}" class="nexus-card__image" loading="lazy">
+        {% else %}
+        <img src="/assets/images/blog/default-post.png" alt="{{ post.title }}" class="nexus-card__image" loading="lazy">
         {% endif %}
         <h3 class="nexus-card__title">
           <a href="{{ post.url }}">{{ post.title }}</a>

@@ -6,6 +6,11 @@
 <link rel="preload" as="image" href="{{ page.hero_image | relative_url }}">
 {% endif %}
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +24,7 @@
         % include critical-css.html %
     }
 </style>
+
 
 <link rel="stylesheet" href="{{ '/assets/css/nexus.css' | relative_url }}?v={{ site.time | date: '%s' }}" media="print"
     onload="this.media='all'">

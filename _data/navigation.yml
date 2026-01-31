@@ -1,9 +1,7 @@
 - title: Blog
   url: /blog/
 - title: Modules
-  url: /pages/boutique.html
-- title: Vidéos
-  url: /youtube/
+  url: /modules/mcp-tools-plus/
 - title: Contact
-  url: "#contact"
+  url: /contact/
   style: glass
