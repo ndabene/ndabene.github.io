@@ -98,7 +98,7 @@ product:
                 </p>
 
                 <!-- Price Card -->
-                <div class="inline-flex items-center gap-4 mb-8 p-4 bg-white border-2 border-[#D4AF37] rounded-xl shadow-lg">
+                <div class="inline-flex items-center gap-4 mb-4 p-4 bg-white border-2 border-[#D4AF37] rounded-xl shadow-lg">
                     <div class="text-center">
                         <div class="text-3xl font-bold text-[#D4AF37]">€9.90</div>
                         <div class="text-sm text-[#475569]">excl. VAT / Month</div>
@@ -116,10 +116,20 @@ product:
                     </div>
                 </div>
 
+                <!-- Free Trial Badge -->
+                <div class="flex items-center gap-2 mb-8 text-[#059669] font-bold uppercase tracking-wide text-sm">
+                    <i class="fas fa-gift"></i>
+                    <span>14 Day Free Trial Included</span>
+                </div>
+
                 <div class="flex flex-wrap gap-4 mb-10">
                     <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="btn-primary flex items-center gap-2">
                         <i class="fab fa-prestashop"></i>
                         Get on PrestaShop Addons
+                    </a>
+                    <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition flex items-center gap-2">
+                        <i class="far fa-calendar-alt"></i>
+                        Book a Demo
                     </a>
                 </div>
                 <div class="flex flex-wrap items-center gap-6 text-[#475569] text-sm">
@@ -308,8 +318,101 @@ product:
     </div>
 </section>
 
+<!-- How It Works -->
+<section class="py-24 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">How It Works</h2>
+            <p class="text-lg text-[#374151]">Three simple steps to AI-powered commerce insights</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">1</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Install the Module</h3>
+                <p class="text-[#374151] leading-relaxed">Upload to your PrestaShop 8.2+ instance and activate alongside the MCP Server module.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">2</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Connect AI Agent</h3>
+                <p class="text-[#374151] leading-relaxed">Configure your LLM agent to communicate with the MCP endpoint exposed by the module.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">3</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Query Naturally</h3>
+                <p class="text-[#374151] leading-relaxed">Ask questions in English and let the AI automatically translate them into tool calls.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Example Prompts -->
+<section id="docs" class="py-24 bg-[#FAFAFA]">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Example Prompts</h2>
+            <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
+                Query your AI agent in natural language. It automatically handles date calculations and tool selection.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Example 1: Sales Analysis -->
+            <div class="code-block rounded-xl p-6">
+                <div class="flex items-center gap-2 mb-4 border-b border-[#374151] pb-2">
+                    <div class="w-3 h-3 rounded-full bg-[#DC2626]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#F59E0B]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#059669]"></div>
+                    <span class="ml-2 text-[#94A3B8] text-xs">Sales Analysis</span>
+                </div>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># User Prompt</p>
+                <p class="text-[#E2E8F0] font-mono text-sm mb-4">"Show me the top 5 products sold in France over the last 3 months."</p>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># AI Agent calls</p>
+                <p class="text-[#059669] font-mono text-sm">product_performance_tracker({<br>&nbsp;&nbsp;"limit": 5,<br>&nbsp;&nbsp;"country_id": 8,<br>&nbsp;&nbsp;"period": "last_3_months"<br>})</p>
+            </div>
+            <!-- Example 2: Inventory Check -->
+            <div class="code-block rounded-xl p-6">
+                <div class="flex items-center gap-2 mb-4 border-b border-[#374151] pb-2">
+                    <div class="w-3 h-3 rounded-full bg-[#DC2626]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#F59E0B]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#059669]"></div>
+                    <span class="ml-2 text-[#94A3B8] text-xs">Inventory Check</span>
+                </div>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># User Prompt</p>
+                <p class="text-[#E2E8F0] font-mono text-sm mb-4">"List up to 15 active products with stock below 8 units to plan replenishment."</p>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># AI Agent calls</p>
+                <p class="text-[#059669] font-mono text-sm">inventory_alerts_monitor({<br>&nbsp;&nbsp;"threshold": 8,<br>&nbsp;&nbsp;"active_only": true,<br>&nbsp;&nbsp;"limit": 15<br>})</p>
+            </div>
+            <!-- Example 3: Promotions -->
+            <div class="code-block rounded-xl p-6">
+                <div class="flex items-center gap-2 mb-4 border-b border-[#374151] pb-2">
+                    <div class="w-3 h-3 rounded-full bg-[#DC2626]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#F59E0B]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#059669]"></div>
+                    <span class="ml-2 text-[#94A3B8] text-xs">Promotions</span>
+                </div>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># User Prompt</p>
+                <p class="text-[#E2E8F0] font-mono text-sm mb-4">"Create a 10% voucher named SUMMER10 valid next month with 500 uses."</p>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># AI Agent calls</p>
+                <p class="text-[#059669] font-mono text-sm">create_voucher({<br>&nbsp;&nbsp;"code": "SUMMER10",<br>&nbsp;&nbsp;"reduction_percent": 10,<br>&nbsp;&nbsp;"quantity": 500<br>})</p>
+            </div>
+            <!-- Example 4: Tax Declaration -->
+            <div class="code-block rounded-xl p-6">
+                <div class="flex items-center gap-2 mb-4 border-b border-[#374151] pb-2">
+                    <div class="w-3 h-3 rounded-full bg-[#DC2626]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#F59E0B]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#059669]"></div>
+                    <span class="ml-2 text-[#94A3B8] text-xs">Tax Declaration</span>
+                </div>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># User Prompt</p>
+                <p class="text-[#E2E8F0] font-mono text-sm mb-4">"Provide a VAT breakdown by country for the last 30 days, then by tax rate."</p>
+                <p class="text-[#D4AF37] text-sm mb-2 font-mono"># AI Agent calls</p>
+                <p class="text-[#059669] font-mono text-sm">multi_market_tax_analyzer({<br>&nbsp;&nbsp;"group_by": "country",<br>&nbsp;&nbsp;"period": "last_30_days"<br>})</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Tools Section -->
-<section id="tools" class="py-24 bg-[#FAFAFA]">
+<section id="tools" class="py-24 bg-white">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">MCP Tools Library</h2>
@@ -365,33 +468,6 @@ product:
 
         <div class="text-center mt-12">
             <p class="text-[#475569]">And many more tools available...</p>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works -->
-<section class="py-24 bg-white">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">How It Works</h2>
-            <p class="text-lg text-[#374151]">Three simple steps to AI-powered commerce insights</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">1</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Install the Module</h3>
-                <p class="text-[#374151] leading-relaxed">Upload to your PrestaShop 8.2+ instance and activate alongside the MCP Server module.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">2</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Connect AI Agent</h3>
-                <p class="text-[#374151] leading-relaxed">Configure your LLM agent to communicate with the MCP endpoint exposed by the module.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">3</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Query Naturally</h3>
-                <p class="text-[#374151] leading-relaxed">Ask questions in English and let the AI automatically translate them into tool calls.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -470,62 +546,6 @@ product:
     </div>
 </section>
 
-<!-- Example Prompts -->
-<section id="docs" class="py-24 bg-white">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Example Prompts</h2>
-            <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Query your AI agent in natural language. It automatically handles date calculations and tool selection.
-            </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
-                    <i class="fas fa-chart-line"></i>
-                    <span class="font-medium">Sales Analysis</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Show me the top 5 products sold in France over the last 3 months and display them in an interactive chart showing revenue share."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#DF3163]">
-                    <i class="fas fa-file-invoice"></i>
-                    <span class="font-medium">Tax Declaration</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Provide a VAT breakdown by country for the last 30 days, then by tax rate if possible."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#059669]">
-                    <i class="fas fa-boxes"></i>
-                    <span class="font-medium">Inventory Check</span>
-                </div>
-                <p class="text-white font-mono text-sm">"List up to 15 active products with stock below 8 units so I can plan replenishment."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#F59E0B]">
-                    <i class="fas fa-headset"></i>
-                    <span class="font-medium">Support Queue</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Show threads where the last customer message is older than 24 hours, include names/order refs."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#0F172A] bg-white/10 inline-block px-2 py-1 rounded">
-                    <i class="fab fa-google text-white"></i>
-                    <span class="font-medium text-white">Google Analytics</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Give me cart abandonment and checkout abandonment rates by device for the last 30 days."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
-                    <i class="fas fa-tag"></i>
-                    <span class="font-medium">Promotions</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Create a 10% voucher named SUMMER10 valid next month with 500 uses and free shipping disabled."</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CTA Section -->
 <section class="py-24 primary-gradient">
     <div class="max-w-4xl mx-auto px-6 lg:px-4 text-center">
@@ -539,15 +559,27 @@ product:
         </p>
 
         <!-- Price in CTA -->
-        <div class="inline-flex items-center gap-3 mb-10 px-6 py-3 bg-white/10 border border-[#D4AF37]/50 rounded-xl">
-            <span class="text-3xl font-bold text-[#D4AF37]">€9.90</span>
-            <span class="text-white/70">excl. VAT / Month</span>
+        <div class="mb-8">
+            <div class="inline-flex items-center gap-3 mb-2 px-6 py-3 bg-white/10 border border-[#D4AF37]/50 rounded-xl">
+                <span class="text-3xl font-bold text-[#D4AF37]">€9.90</span>
+                <span class="text-white/70">excl. VAT / Month</span>
+            </div>
+            <div class="text-[#059669] font-bold uppercase tracking-wide text-sm mt-2">
+                <i class="fas fa-check"></i> 14 Day Free Trial
+            </div>
         </div>
 
         <div class="flex flex-wrap justify-center gap-4">
             <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="gold-gradient text-[#0F172A] px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition flex items-center gap-2">
                 <i class="fab fa-prestashop"></i>
                 Get on PrestaShop Addons
+            </a>
+        </div>
+
+        <!-- Calendly Link -->
+        <div class="mt-6">
+            <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="text-[#D4AF37] hover:text-white font-medium underline text-sm transition">
+                Need help? Book a call with the creator
             </a>
         </div>
     </div>
@@ -585,6 +617,7 @@ product:
                 <h4 class="font-bold mb-4">Support</h4>
                 <ul class="space-y-2 text-white/60">
                     <li><a href="https://addons.prestashop.com/en/contact-us?id_product=96638" target="_blank" rel="noopener" class="hover:text-white transition">Contact Support</a></li>
+                    <li><a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Book a call with the creator</a></li>
                 </ul>
                 <div class="mt-6">
                     <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#D4AF37] hover:underline text-sm">
