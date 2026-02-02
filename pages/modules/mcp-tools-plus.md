@@ -121,6 +121,10 @@ product:
                         <i class="fab fa-prestashop"></i>
                         Obtenir sur PrestaShop Addons
                     </a>
+                    <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white transition flex items-center gap-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        Réserver une démo
+                    </a>
                 </div>
                 <div class="flex flex-wrap items-center gap-6 text-[#475569] text-sm">
                     <div class="flex items-center gap-2">
@@ -308,8 +312,91 @@ product:
     </div>
 </section>
 
+<!-- How It Works -->
+<section class="py-24 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Comment ça marche</h2>
+            <p class="text-lg text-[#374151]">Trois étapes simples pour des insights commerce alimentés par l'IA</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">1</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Installer le Module</h3>
+                <p class="text-[#374151] leading-relaxed">Uploadez sur votre instance PrestaShop 8.2+ et activez aux côtés du module MCP Server.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">2</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Connecter l'Agent IA</h3>
+                <p class="text-[#374151] leading-relaxed">Configurez votre agent LLM pour communiquer avec le endpoint MCP exposé par le module.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">3</div>
+                <h3 class="text-xl font-bold mb-3 text-[#111827]">Interroger Naturellement</h3>
+                <p class="text-[#374151] leading-relaxed">Posez vos questions en français et laissez l'IA les traduire automatiquement en appels d'outils.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Example Prompts -->
+<section id="docs" class="py-24 bg-[#FAFAFA]">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Exemples de Prompts</h2>
+            <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
+                Interrogez votre agent IA en langage naturel. Il gère automatiquement le calcul des dates et la sélection d'outils.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="font-medium">Analyse Ventes</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Montre-moi les 5 produits les plus vendus en France sur les 3 derniers mois et affiche-les dans un graphique interactif montrant la part de revenus."</p>
+            </div>
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#DF3163]">
+                    <i class="fas fa-file-invoice"></i>
+                    <span class="font-medium">Déclaration Fiscale</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Fournis une ventilation TVA par pays pour les 30 derniers jours, puis par taux de taxe si possible."</p>
+            </div>
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#059669]">
+                    <i class="fas fa-boxes"></i>
+                    <span class="font-medium">Vérification Inventaire</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Liste jusqu'à 15 produits actifs avec stock sous 8 unités pour que je puisse planifier le réapprovisionnement."</p>
+            </div>
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#F59E0B]">
+                    <i class="fas fa-headset"></i>
+                    <span class="font-medium">File Support</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Montre les threads où le dernier message client date de plus de 24h, inclus noms/refs commandes."</p>
+            </div>
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#0F172A] bg-white/10 inline-block px-2 py-1 rounded">
+                    <i class="fab fa-google text-white"></i>
+                    <span class="font-medium text-white">Analytics Google Analytics</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Donne-moi les taux d'abandon ajout panier et checkout par appareil pour les 30 derniers jours."</p>
+            </div>
+            <div class="code-block rounded-xl p-5">
+                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
+                    <i class="fas fa-tag"></i>
+                    <span class="font-medium">Promotions</span>
+                </div>
+                <p class="text-white font-mono text-sm">"Crée un bon de 10% nommé SUMMER10 valable le mois prochain avec 500 utilisations et livraison gratuite désactivée."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Tools Section -->
-<section id="tools" class="py-24 bg-[#FAFAFA]">
+<section id="tools" class="py-24 bg-white">
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Bibliothèque d'Outils MCP</h2>
@@ -365,33 +452,6 @@ product:
 
         <div class="text-center mt-12">
             <p class="text-[#475569]">Et bien d'autres outils disponibles...</p>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works -->
-<section class="py-24 bg-white">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Comment ça marche</h2>
-            <p class="text-lg text-[#374151]">Trois étapes simples pour des insights commerce alimentés par l'IA</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">1</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Installer le Module</h3>
-                <p class="text-[#374151] leading-relaxed">Uploadez sur votre instance PrestaShop 8.2+ et activez aux côtés du module MCP Server.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">2</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Connecter l'Agent IA</h3>
-                <p class="text-[#374151] leading-relaxed">Configurez votre agent LLM pour communiquer avec le endpoint MCP exposé par le module.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-20 h-20 rounded-full primary-gradient flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-white">3</div>
-                <h3 class="text-xl font-bold mb-3 text-[#111827]">Interroger Naturellement</h3>
-                <p class="text-[#374151] leading-relaxed">Posez vos questions en français et laissez l'IA les traduire automatiquement en appels d'outils.</p>
-            </div>
         </div>
     </div>
 </section>
@@ -470,62 +530,6 @@ product:
     </div>
 </section>
 
-<!-- Example Prompts -->
-<section id="docs" class="py-24 bg-white">
-    <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Exemples de Prompts</h2>
-            <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Interrogez votre agent IA en langage naturel. Il gère automatiquement le calcul des dates et la sélection d'outils.
-            </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
-                    <i class="fas fa-chart-line"></i>
-                    <span class="font-medium">Analyse Ventes</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Montre-moi les 5 produits les plus vendus en France sur les 3 derniers mois et affiche-les dans un graphique interactif montrant la part de revenus."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#DF3163]">
-                    <i class="fas fa-file-invoice"></i>
-                    <span class="font-medium">Déclaration Fiscale</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Fournis une ventilation TVA par pays pour les 30 derniers jours, puis par taux de taxe si possible."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#059669]">
-                    <i class="fas fa-boxes"></i>
-                    <span class="font-medium">Vérification Inventaire</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Liste jusqu'à 15 produits actifs avec stock sous 8 unités pour que je puisse planifier le réapprovisionnement."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#F59E0B]">
-                    <i class="fas fa-headset"></i>
-                    <span class="font-medium">File Support</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Montre les threads où le dernier message client date de plus de 24h, inclus noms/refs commandes."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#0F172A] bg-white/10 inline-block px-2 py-1 rounded">
-                    <i class="fab fa-google text-white"></i>
-                    <span class="font-medium text-white">Analytics Google Analytics</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Donne-moi les taux d'abandon ajout panier et checkout par appareil pour les 30 derniers jours."</p>
-            </div>
-            <div class="code-block rounded-xl p-5">
-                <div class="flex items-center gap-2 mb-3 text-[#D4AF37]">
-                    <i class="fas fa-tag"></i>
-                    <span class="font-medium">Promotions</span>
-                </div>
-                <p class="text-white font-mono text-sm">"Crée un bon de 10% nommé SUMMER10 valable le mois prochain avec 500 utilisations et livraison gratuite désactivée."</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CTA Section -->
 <section class="py-24 primary-gradient">
     <div class="max-w-4xl mx-auto px-6 lg:px-4 text-center">
@@ -585,6 +589,7 @@ product:
                 <h4 class="font-bold mb-4">Support</h4>
                 <ul class="space-y-2 text-white/60">
                     <li><a href="https://addons.prestashop.com/en/contact-us?id_product=96638" target="_blank" rel="noopener" class="hover:text-white transition">Contacter le Support</a></li>
+                    <li><a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Prendre RDV avec le créateur</a></li>
                 </ul>
                 <div class="mt-6">
                     <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#D4AF37] hover:underline text-sm">
