@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '5 Surprising Revelations from the BMAD Method on the Future of Module Development'
-date: 2026-02-18
+date: 2026-02-17
 ref: bmad-revelations-future-module-development
 author: Nicolas Dabène
 category: artificial-intelligence
