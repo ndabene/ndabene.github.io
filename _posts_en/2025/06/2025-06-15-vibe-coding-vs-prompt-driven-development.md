@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Coding in AI Era: Adapt Your Methods'
+title: 'Vibe Coding vs Prompt-Driven Development: Generative AI'
 date: 2025-06-15
 author: Nicolas Dabène
 lang: en

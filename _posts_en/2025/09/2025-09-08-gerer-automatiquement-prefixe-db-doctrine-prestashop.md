@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'AI & Development: Avoiding Common Traps'
+title: 'PrestaShop Doctrine: Automatically Manage the DB Prefix'
 date: 2025-09-08
 author: Nicolas Dabène
 lang: en

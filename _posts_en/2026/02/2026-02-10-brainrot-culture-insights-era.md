@@ -4,6 +4,7 @@ title: '5 Surprising Things "Brainrot" Culture Reveals About Our Era'
 date: 2026-02-10
 ref: culture-brainrot-revelations-epoque-2026
 author: Nicolas Dabène
+lang: en
 category: digital-culture
 subcategory: internet-trends
 categories:

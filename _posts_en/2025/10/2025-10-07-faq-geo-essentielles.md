@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Google Gemini 3.0: AI for Daily Life'
+title: 'FAQ & GEO: The Keys to Tomorrow’s E-commerce'
 date: 2025-10-07
 author: Nicolas Dabène
 lang: en

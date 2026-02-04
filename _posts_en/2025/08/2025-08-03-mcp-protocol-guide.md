@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Secure MCP Server?
+title: 'Understanding the Model Context Protocol (MCP): Complete Guide'
 date: 2025-08-03
 author: Nicolas Dabène
 lang: en
