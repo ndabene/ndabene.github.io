@@ -255,3 +255,13 @@
   channel: ndabene06
   duration: PT6M23S
   category: PrestaShop & E-commerce
+- title: La Mémoire de l IA
+  video_id: o-PYxeljozo
+  url: https://www.youtube.com/watch?v=o-PYxeljozo
+  thumbnail: https://i.ytimg.com/vi/o-PYxeljozo/hqdefault.jpg
+  description: Comment l'IA stocke-t-elle et utilise-t-elle l'information ? Découvrez
+    dans cette vidéo comment les systèmes d'IA gèrent leur ...
+  published_at: '2026-02-03T23:01:05Z'
+  channel: ndabene06
+  duration: PT6M46S
+  category: Technique
