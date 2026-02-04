@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'OpenAI Agent Builder: Create AI Assistants'
+title: 'ChatGPT × Shopify: Conversational Commerce'
 date: 2025-08-08
 author: Nicolas Dabène
 lang: en

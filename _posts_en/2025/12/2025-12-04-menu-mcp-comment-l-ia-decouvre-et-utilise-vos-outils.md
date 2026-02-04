@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How AI Discovers Your MCP Tools?
+title: 'MCP Menu: How AI Discovers and Uses Your Tools'
 date: 2025-12-04
 author: Nicolas Dabène
 categories:
