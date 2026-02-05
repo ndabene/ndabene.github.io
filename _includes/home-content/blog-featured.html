@@ -27,9 +27,10 @@
             {% endif %}
             {% assign published_posts = "" | split: "" %}
             {% for post in all_posts %}
-            {% comment %} Afficher uniquement si la date est passée ET que hide_until_published n'est pas true ET que ce n'est pas un post LinkedIn {%
+            {% comment %} Afficher uniquement si la date est passée ET que hide_until_published n'est pas true ET que ce
+            n'est pas un post LinkedIn {%
             endcomment %}
-            {% if post.date <= site.time and post.hide_until_published !=true and post.linkedin != true %} {% assign
+            {% if post.date <= site.time and post.hide_until_published !=true and post.linkedin !=true %} {% assign
                 published_posts=published_posts | push: post %} {% endif %} {% endfor %} {% assign
                 limit=content_data.blog_featured.limit | default: 4 %} {% for post in published_posts limit: limit %}
                 <article class="blog-featured-card">
@@ -80,7 +81,7 @@
         <!-- CTA Tous les articles -->
         {% if content_data.blog_featured.cta %}
         <div class="section-cta-center">
-            <a href="{{ content_data.blog_featured.cta.url }}" class="btn-creator btn-creator-outline-large">
+            <a href="{{ content_data.blog_featured.cta.url }}" class="btn-blog-footer">
                 {{ content_data.blog_featured.cta.text }}
                 <i class="fas fa-arrow-right"></i>
             </a>

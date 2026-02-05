@@ -1,0 +1,116 @@
+/* Nexus Design System - Variables & Enhancements */
+/* Combined with existing site styles */
+
+/* ===== NEXUS TOKENS ===== */
+:root {
+    /* Nexus Color System */
+    --hue-primary: 220;
+    --hue-accent: 260;
+    --hue-gold: 45;
+
+    /* Nexus Dark Mode Colors */
+    --color-bg-depth: hsl(220, 40%, 8%);
+    --color-bg-surface: hsl(220, 30%, 12%);
+    --color-text-main: hsl(220, 10%, 95%);
+    --color-text-dim: hsl(220, 10%, 70%);
+    --color-primary: hsl(260, 80%, 60%);
+    --color-gold: hsl(45, 80%, 50%);
+
+    /* Nexus Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Nexus Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Poppins', var(--font-sans);
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Nexus Z-Index */
+    --z-negative: -1;
+    --z-normal: 1;
+    --z-nav: 100;
+    --z-dropdown: 200;
+    --z-modal: 1000;
+}
+
+/* ===== NEXUS ENHANCEMENTS ===== */
+
+/* Optional: Begin applying Nexus theming */
+body.nexus-mode {
+    background: var(--color-bg-depth);
+    color: var(--color-text-main);
+}
+
+body.nexus-mode h1,
+body.nexus-mode h2,
+body.nexus-mode h3,
+body.nexus-mode h4,
+body.nexus-mode h5,
+body.nexus-mode h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-main);
+}
+
+body.nexus-mode a {
+    color: var(--color-primary);
+}
+
+body.nexus-mode a:hover {
+    color: var(--color-gold);
+}
+
+/* Nexus Card Style */
+.nexus-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Nexus Button Styles */
+.nexus-btn--primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, hsl(260, 90%, 70%) 100%);
+    color: white;
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nexus-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+.nexus-btn--glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-main);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nexus-btn--glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* ===== ORIGINAL SITE STYLES ===== */
