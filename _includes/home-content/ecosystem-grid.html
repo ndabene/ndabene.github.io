@@ -1,0 +1,30 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- ECOSYSTEM - Autres projets & solutions -->
+<section class="ecosystem-section section-creator" id="ecosystem">
+    <div class="container-creator">
+        <div class="section-header-creator">
+            <h2 class="section-title-creator">{{ content_data.ecosystem.title }}</h2>
+        </div>
+
+        <div class="ecosystem-grid">
+            {% for item in content_data.ecosystem.items %}
+            <a href="{{ item.url }}" class="ecosystem-card">
+                <div class="ecosystem-card-icon">
+                    <i class="{{ item.icon }}"></i>
+                </div>
+                <h3 class="ecosystem-card-title">{{ item.title }}</h3>
+                <p class="ecosystem-card-description">{{ item.description }}</p>
+                <span class="ecosystem-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

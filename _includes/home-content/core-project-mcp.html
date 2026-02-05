@@ -1,0 +1,50 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- CORE PROJECT - MCP Tools Plus -->
+<section class="core-project section-creator" id="core-project">
+    <div class="container-creator">
+        <div class="core-project-card">
+            <div class="core-project-content">
+                <div class="core-project-badge">
+                    <i class="fas fa-star"></i>
+                    <span>{% if current_lang == 'en' %}Featured Project{% else %}Projet phare{% endif %}</span>
+                </div>
+
+                <h2 class="core-project-title">{{ content_data.core_project.title }}</h2>
+                <p class="core-project-tagline">{{ content_data.core_project.tagline }}</p>
+                <p class="core-project-description">{{ content_data.core_project.description }}</p>
+
+                <ul class="core-project-benefits">
+                    {% for benefit in content_data.core_project.benefits %}
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>{{ benefit }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+                <a href="{{ content_data.core_project.cta.url }}" class="btn-creator btn-creator-primary">
+                    <span>{{ content_data.core_project.cta.text }}</span>
+                    <i class="{{ content_data.core_project.cta.icon }}"></i>
+                </a>
+            </div>
+
+            <div class="core-project-visual">
+                <div class="core-project-icon-wrapper">
+                    <i class="fas fa-robot"></i>
+                    <div class="core-project-icon-ring"></div>
+                </div>
+                <div class="core-project-floating-icons">
+                    <div class="floating-icon floating-icon-1"><i class="fas fa-cog"></i></div>
+                    <div class="floating-icon floating-icon-2"><i class="fas fa-database"></i></div>
+                    <div class="floating-icon floating-icon-3"><i class="fas fa-chart-line"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
