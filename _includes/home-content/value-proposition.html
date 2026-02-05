@@ -1,0 +1,23 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- VALUE PROPOSITION - 4 Piliers -->
+<section class="value-proposition section-creator" id="value-proposition">
+    <div class="container-creator">
+        <div class="value-proposition-grid">
+            {% for item in content_data.value_proposition.items %}
+            <div class="value-card">
+                <div class="value-card-icon">
+                    <i class="{{ item.icon }}"></i>
+                </div>
+                <h3 class="value-card-title">{{ item.title }}</h3>
+                <p class="value-card-description">{{ item.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- ABOUT - Qui je suis -->
+<section class="about-short section-creator" id="about">
+    <div class="container-creator">
+        <div class="about-short-card">
+            <div class="about-short-icon">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="about-short-content">
+                <h2 class="about-short-title">{{ content_data.about.title }}</h2>
+                <p class="about-short-text">{{ content_data.about.content }}</p>
+                <a href="{{ content_data.about.cta.url }}" class="btn-creator btn-creator-outline">
+                    <span>{{ content_data.about.cta.text }}</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

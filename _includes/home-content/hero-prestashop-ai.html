@@ -1,0 +1,57 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- HERO SECTION - PrestaShop x AI -->
+<section class="hero-prestashop-ai" id="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <!-- Photo professionnelle -->
+            <div class="hero-visual">
+                <div class="hero-photo-wrapper">
+                    <picture>
+                        <source srcset="/assets/images/hero/profile-hero.webp" type="image/webp">
+                        <img src="/assets/images/hero/profile-hero.jpg"
+                             alt="Nicolas Dabène - PrestaShop x AI Developer"
+                             class="hero-photo"
+                             fetchpriority="high"
+                             loading="eager"
+                             width="400"
+                             height="400">
+                    </picture>
+                    <div class="hero-photo-glow"></div>
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">{{ content_data.hero.title }}</span>
+                </h1>
+                <p class="hero-subtitle">{{ content_data.hero.subtitle }}</p>
+                <p class="hero-description">{{ content_data.hero.description }}</p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta">
+                    <a href="{{ content_data.hero.cta.primary.url }}" class="btn-hero btn-hero-primary">
+                        <i class="{{ content_data.hero.cta.primary.icon }}"></i>
+                        <span>{{ content_data.hero.cta.primary.text }}</span>
+                    </a>
+                    <a href="{{ content_data.hero.cta.secondary.url }}" class="btn-hero btn-hero-secondary">
+                        <i class="{{ content_data.hero.cta.secondary.icon }}"></i>
+                        <span>{{ content_data.hero.cta.secondary.text }}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="hero-decoration">
+        <div class="hero-decoration-circle hero-decoration-circle-1"></div>
+        <div class="hero-decoration-circle hero-decoration-circle-2"></div>
+    </div>
+</section>

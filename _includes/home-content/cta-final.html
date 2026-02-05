@@ -1,0 +1,23 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% if current_lang == 'en' %}
+  {% assign content_data = site.data.home-content_en %}
+{% else %}
+  {% assign content_data = site.data.home-content %}
+{% endif %}
+
+<!-- CTA FINAL - Contact -->
+<section class="cta-final" id="contact-cta">
+    <div class="container-creator">
+        <div class="cta-final-card">
+            <h2 class="cta-final-title">{{ content_data.cta_final.title }}</h2>
+            <div class="cta-final-buttons">
+                {% for button in content_data.cta_final.buttons %}
+                <a href="{{ button.url }}" class="btn-cta btn-cta-{{ button.style }}">
+                    <i class="{{ button.icon }}"></i>
+                    <span>{{ button.text }}</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

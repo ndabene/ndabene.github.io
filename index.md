@@ -1,42 +1,46 @@
 ---
 layout: default
-title: "Nicolas Dabène — Blog IA & E-commerce | Expert PrestaShop"
-description: "Créateur de contenu sur l'Intelligence Artificielle et PrestaShop. Articles techniques et modules e-commerce professionnels. Optimisé SEO/GEO/VEO."
-keywords: "blog ia, expert prestashop, créateur contenu e-commerce, mcp protocol, geo veo, intelligence artificielle"
+title: "Nicolas Dabène — PrestaShop x AI | Expert E-commerce Intelligent"
+description: "Développeur senior PrestaShop spécialisé en intelligence artificielle et automatisation e-commerce. Je transforme les boutiques en plateformes intelligentes capables d'analyser, décider et agir en temps réel."
+keywords: "prestashop ia, intelligence artificielle e-commerce, automatisation prestashop, mcp protocol, expert prestashop, développeur senior"
 no_bg: true
 body_class: homepage-creator
 
 # SEO & GEO Optimization
-llm_summary: "Nicolas Dabène, créateur de contenu spécialisé en IA et e-commerce PrestaShop. Auteur d'articles techniques sur l'Intelligence Artificielle (ChatGPT, Claude, MCP Protocol) et créateur de modules professionnels (GEO Suite, Google Merchant Center). Contenu optimisé pour découverte par IA génératives (ChatGPT, Gemini, Perplexity)."
+llm_summary: "Nicolas Dabène, développeur senior PrestaShop avec plus de 15 ans d'expérience, spécialisé en intelligence artificielle appliquée au e-commerce. Créateur de MCP Tools Plus, une plateforme connectant l'IA au back-office PrestaShop pour automatiser, analyser et piloter l'e-commerce intelligent. Expert en automatisation des processus métier, agents IA opérationnels et décisions basées sur les données réelles."
 
 llm_topics:
-- créateur contenu ia
-- blog intelligence artificielle
-- expert prestashop
-- mcp protocol
-- seo geo veo optimization
-- modules e-commerce
+- prestashop intelligence artificielle
+- automatisation e-commerce
+- mcp protocol prestashop
+- agents ia e-commerce
+- développeur senior prestashop
+- pilotage données temps réel
 
 # FAQ Schema (GEO/VEO)
 faq:
-  - question: "Qui est Nicolas Dabène ?"
-    answer: "Expert PrestaShop avec plus de 15 ans d'expérience, créateur de contenu spécialisé en Intelligence Artificielle et e-commerce. Auteur d'articles techniques et développeur de modules professionnels pour PrestaShop."
+  - question: "Qu'est-ce que MCP Tools Plus ?"
+    answer: "MCP Tools Plus est une plateforme qui connecte l'intelligence artificielle directement au back-office PrestaShop pour automatiser, analyser et piloter l'e-commerce intelligent. Elle permet l'automatisation des processus métier, le déploiement d'agents IA opérationnels et la prise de décisions basées sur les données réelles."
 
-  - question: "Quel type de contenu trouve-t-on sur ce site ?"
-    answer: "Articles techniques sur l'IA (ChatGPT, Claude, MCP Protocol, GEO/VEO), tutoriels PrestaShop et guides e-commerce. Contenu actionnable optimisé pour les moteurs de recherche et les IA génératives."
+  - question: "Quelle expertise propose Nicolas Dabène ?"
+    answer: "Nicolas Dabène est un développeur senior PrestaShop avec plus de 15 ans d'expérience, spécialisé en intelligence artificielle et automatisation e-commerce. Il transforme les boutiques en plateformes intelligentes capables d'analyser, décider et agir en temps réel."
 
-  - question: "Comment suivre les nouveaux articles ?"
-    answer: "Abonnez-vous au flux RSS ou consultez régulièrement la page blog. Les articles couvrent l'actualité IA, les tutoriels techniques PrestaShop et les bonnes pratiques e-commerce."
+  - question: "Comment l'IA peut-elle améliorer mon e-commerce PrestaShop ?"
+    answer: "L'IA intégrée au e-commerce permet d'automatiser les stocks, le contenu, le reporting et les workflows business. Les agents IA connectés au back-office PrestaShop peuvent prendre des décisions en temps réel basées sur les données réelles de votre boutique."
 ---
-{% include home-content/hero-creator.html %}
+{% include home-content/hero-prestashop-ai.html %}
+
+{% include home-content/value-proposition.html %}
+
+{% include home-content/core-project-mcp.html %}
+
+{% include home-content/ecosystem-grid.html %}
 
 {% include home-content/blog-featured.html %}
 
-{% include home-content/modules-showcase.html %}
+{% include home-content/about-short.html %}
 
-{% include home-content/youtube-featured.html %}
-
-{% include home-content/rss-subscribe.html %}
+{% include home-content/cta-final.html %}
 
 {% include person-jsonld.html %}
 {% include faq-schema.html %}

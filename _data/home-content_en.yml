@@ -1,56 +1,124 @@
+# HOME CONTENT - Nicolas Dabène Homepage (EN)
+# PrestaShop x AI - Building intelligent e-commerce
+
+# ============================================
+# 1. HERO SECTION - Main message
+# ============================================
 hero:
-  title: "Nicolas Dabène — AI & E-commerce Content Creator"
-  subtitle: "Senior PHP Developer & AI Orchestrator with 15 years of experience. I share my expertise through technical articles, practical training and PrestaShop modules to master Artificial Intelligence and e-commerce."
-  location: "PrestaShop Expert & AI Trainer"
+  title: "PrestaShop x AI"
+  subtitle: "Building intelligent e-commerce"
+  description: "Senior PrestaShop developer specialized in artificial intelligence and e-commerce automation. I transform online stores into intelligent platforms able to analyze, decide and act in real time."
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
+      text: "Discover my AI projects"
+      url: "/en/modules/mcp-tools-plus/"
+      icon: "fas fa-robot"
+    secondary:
       text: "Read the blog"
       url: "/en/blog/"
-    secondary:
-      text: "AI Training"
-      url: "/en/shop/"
-    tertiary:
-      text: "Connect your PrestaShop with AI"
-      url: "https://nicolas-dabene.fr/en/modules/mcp-tools-plus/"
+      icon: "fas fa-book-open"
 
+# ============================================
+# 2. VALUE PROPOSITION - 4 Pillars
+# ============================================
+value_proposition:
+  title: "What I do"
+  items:
+    - icon: "fas fa-robot"
+      title: "AI integrated into e-commerce"
+      description: "AI agents connected directly to the PrestaShop back-office"
+    - icon: "fas fa-cogs"
+      title: "Smart automation"
+      description: "Stock, content, reporting and business workflows"
+    - icon: "fas fa-puzzle-piece"
+      title: "Advanced PrestaShop modules"
+      description: "High value technical solutions"
+    - icon: "fas fa-chart-line"
+      title: "Data-driven e-commerce"
+      description: "Real-time analysis and decision making"
+
+# ============================================
+# 3. CORE PROJECT - MCP Tools Plus
+# ============================================
+core_project:
+  title: "MCP Tools Plus"
+  tagline: "AI connected to PrestaShop"
+  description: "A platform connecting artificial intelligence directly to the PrestaShop back-office to automate, analyze and manage intelligent e-commerce."
+  benefits:
+    - "Business process automation"
+    - "Operational AI agents"
+    - "Data-driven decisions"
+  cta:
+    text: "Discover MCP Tools Plus"
+    url: "/en/modules/mcp-tools-plus/"
+    icon: "fas fa-arrow-right"
+
+# ============================================
+# 4. ECOSYSTEM - Other projects & solutions
+# ============================================
+ecosystem:
+  title: "Ecosystem & Solutions"
+  items:
+    - icon: "fas fa-puzzle-piece"
+      title: "Innovative PrestaShop modules"
+      description: "Professional e-commerce solutions"
+      url: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=ecosystem"
+    - icon: "fas fa-sync-alt"
+      title: "E-commerce automations"
+      description: "Intelligent workflows and integrations"
+      url: "/en/expertise/ia/"
+    - icon: "fas fa-flask"
+      title: "AI experimental projects"
+      description: "R&D and continuous innovation"
+      url: "/en/blog/"
+    - icon: "fas fa-tools"
+      title: "Tools & resources"
+      description: "Documentation and practical guides"
+      url: "/en/shop/"
+
+# ============================================
+# 5. BLOG FEATURED - Latest articles
+# ============================================
 blog_featured:
-  title: "Latest Articles"
-  subtitle: "Discover my latest articles on Artificial Intelligence, PrestaShop development, MCP protocol and e-commerce best practices. Actionable technical content optimized for generative engines."
+  title: "Latest articles & insights"
+  subtitle: "Discover my latest articles on Artificial Intelligence, PrestaShop development, MCP protocol and e-commerce best practices."
   limit: 3
   cta:
-    text: "All articles"
+    text: "View all articles"
     url: "/en/blog/"
 
-formations_showcase:
-  title: "AI Training"
-  subtitle: "Learn AI step by step with pragmatic training in PDF and Podcast. From beginner to autonomous, master the fundamentals, prompt engineering and adopt a responsible approach."
-  featured:
-    - id: "chapitre-1-ia-debutants"
-      title: "Chapter 1: AI for Beginners"
-      description: "Understand AI in 2h30 without technical jargon"
-      image: "assets/images/produits/H_TSamn0lf8KfEIGUtDki.png"
-      link: "/en/shop/#chapitre-1"
-      tags: ["Beginner", "AI"]
-    - id: "chapitre-3-art-du-prompt"
-      title: "Chapter 3: The Art of Prompting"
-      description: "C.L.A.I.R method for effective prompts"
-      image: "assets/images/produits/h5bCdyOvb-low8Tt75UDQ.png"
-      link: "/en/shop/#chapitre-3"
-      tags: ["Advanced", "Prompts"]
-    - id: "chapitre-2-impact-ecologique"
-      title: "Chapter 2: Ecological Impact of AI"
-      description: "Understand the environmental impacts of AI"
-      image: "assets/images/produits/bFiJRNp5cq8QAHlzmfeQu.png"
-      link: "/en/shop/#chapitre-2"
-      tags: ["Green AI", "Environment"]
+# ============================================
+# 6. ABOUT - Who I am
+# ============================================
+about:
+  title: "About"
+  content: "Senior PrestaShop developer with over 15 years of experience, passionate about AI applied to e-commerce and business process automation. I build concrete solutions to drive e-commerce into a new intelligent generation."
   cta:
-    text: "View all training"
-    url: "/en/shop/"
+    text: "Learn more"
+    url: "/en/about/"
 
+# ============================================
+# 7. CTA FINAL - Contact
+# ============================================
+cta_final:
+  title: "Interested in AI applied to PrestaShop or my projects?"
+  buttons:
+    - text: "Contact me"
+      url: "/en/contact/"
+      style: "primary"
+      icon: "fas fa-envelope"
+    - text: "Explore my solutions"
+      url: "/en/modules/mcp-tools-plus/"
+      style: "secondary"
+      icon: "fas fa-search"
+
+# ============================================
+# LEGACY - Existing sections (kept for compatibility)
+# ============================================
 modules_showcase:
   title: "PrestaShop Modules"
-  subtitle: "Professional e-commerce solutions developed with 15 years of expertise. Reliable, maintainable and optimized modules for PrestaShop 8/9. Over 100,000 cumulative installations."
+  subtitle: "Professional e-commerce solutions developed with 15 years of expertise. Reliable, maintainable and optimized modules for PrestaShop 8/9."
   featured:
     - id: "geo-suite"
       title: "GEO Suite"
@@ -60,13 +128,13 @@ modules_showcase:
       tags: ["SEO", "GEO", "AI"]
     - id: "google-merchant-center-pro"
       title: "Google Merchant Center Pro"
-      description: "Complete Google Shopping integration for PrestaShop. Automatic product sync, feed management and boost your sales."
+      description: "Complete Google Shopping integration for PrestaShop. Automatic product sync."
       image: "assets/images/modules/google-merchant-center-pro-prestashop-interface-module.png"
       link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["Google Shopping", "Feed"]
     - id: "google-analytics-4"
       title: "Google Analytics 4"
-      description: "Native Google Analytics 4 integration for PrestaShop. Advanced e-commerce tracking, custom events and detailed performance reports."
+      description: "Native Google Analytics 4 integration for PrestaShop. Advanced e-commerce tracking."
       image: "assets/images/modules/google-analytics-4-prestashop-interface-module.png"
       link: "https://www.businesstech.fr/?utm_source=portfolio&utm_medium=homepage&utm_campaign=modules_featured"
       tags: ["Analytics", "Tracking", "Performance"]
@@ -76,7 +144,7 @@ modules_showcase:
 
 youtube_featured:
   title: "Latest Videos"
-  subtitle: "Video tutorials on AI, PrestaShop and e-commerce. Practical and actionable content for developers and e-merchants."
+  subtitle: "Video tutorials on AI, PrestaShop and e-commerce."
   limit: 3
   cta:
     text: "All videos"
@@ -84,5 +152,5 @@ youtube_featured:
 
 rss_subscribe:
   title: "Follow the content"
-  description: "Subscribe to the RSS feed to never miss an article on Artificial Intelligence, PrestaShop, MCP protocol and e-commerce best practices."
+  description: "Subscribe to the RSS feed to never miss an article on Artificial Intelligence, PrestaShop and e-commerce."
   cta_text: "Subscribe to RSS"
