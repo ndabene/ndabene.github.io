@@ -80,7 +80,7 @@ collections:
     output: true
     permalink: "/en/quiz/:path/"
 
-# Fichiers Ã  exclure de la gÃ©nÃ©ration
+# Fichiers a exclure de la generation (_site)
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -88,13 +88,17 @@ exclude:
   - docs/
   - scripts/
   - package.json
+  - package-lock.json
   - node_modules/
   - vendor/
+  - netlify.toml
+  - tag_mapping.yaml
   - .agent/
   - .bmad-core/
   - .claude/
-  - "**/nul"
-  - assets/images/blog/nul
+  - .gemini/
+  - "**/*.backup"
+  - "**/*.bak"
 
 # Fichiers à inclure explicitement
 include:
