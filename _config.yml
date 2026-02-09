@@ -80,7 +80,7 @@ collections:
     output: true
     permalink: "/en/quiz/:path/"
 
-# Fichiers Ã  exclure de la gÃ©nÃ©ration
+# Fichiers à exclure de la génération
 exclude:
   - Gemfile
   - Gemfile.lock
