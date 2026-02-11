@@ -4,6 +4,9 @@ title: Training
 heading: AI Training for Developers
 permalink: /en/training/
 lang: en
+alternates:
+  - lang: fr
+    url: /formations/
 description: "AI training for developers: practical programs, on-site in Sophia
   Antipolis, remote and in-company."
 llm_summary: 'AI training for developers: practical programs, on-site in Sophia

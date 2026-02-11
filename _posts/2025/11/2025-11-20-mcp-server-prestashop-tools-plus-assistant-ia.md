@@ -22,6 +22,8 @@ excerpt: 'Découvrez le PS MCP Server et MCP Tools Plus pour PrestaShop : transf
   en langage naturel. Guide complet 2025.'
 image: /assets/images/blog/2025/11/mcp-server-prestashop-tools-plus.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: ⭐️⭐️⭐️
 technologies:
 - PrestaShop

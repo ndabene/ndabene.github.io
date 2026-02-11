@@ -18,6 +18,8 @@ excerpt: Voice optimization (VEO) is transforming search in 2025. With 8.4 billi
   your audience. Discover the 3 technical pillars to dominate voice search.
 image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.webp
 featured: false
+sitemap:
+  priority: 0.8
 difficulty: Intermediate
 technologies:
 - Voice Search

@@ -2,6 +2,9 @@
 layout: default
 title: "Conditions Générales d’Utilisation et de Vente"
 permalink: /cgu-boutique/
+alternates:
+  - lang: en
+    url: /en/terms-shop/
 description: "Conditions générales applicables à la boutique (formations et produits
   numériques)."
 body_class: "page-cgu"

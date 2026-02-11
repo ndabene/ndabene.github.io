@@ -17,6 +17,8 @@ image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.webp
 lang: en
 ref: ia-supervision-developpement-nov2025
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermediate
 technologies:
 - AI

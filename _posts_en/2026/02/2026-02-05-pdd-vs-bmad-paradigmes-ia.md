@@ -25,6 +25,8 @@ estimated_reading_time: 35 minutes
 keywords: [prompt driven development, BMAD method, AI development, LLM, vibe coding, software architecture, PrestaShop, AI agents, contextual sharding, GPT-4, Claude]
 technologies: [LLM, GPT-4, Claude, PrestaShop, PHP, Smarty, Symfony]
 featured: true
+sitemap:
+  priority: 0.8
 lang: en
 ref: pdd-vs-bmad-paradigmes-ia
 ---

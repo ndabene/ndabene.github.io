@@ -36,16 +36,34 @@ layout: null
     <url>
       <loc>{{ page.url | prepend: site.url }}</loc>
       <xhtml:link rel="alternate" hreflang="{{ page_lang }}" href="{{ page.url | prepend: site.url }}" />
-      {% if page_lang == "fr" %}
+      {% if page.alternates %}
+        {% comment %} Use explicit alternates when defined (handles mismatched FR/EN paths) {% endcomment %}
+        {% for alt in page.alternates %}
+        <xhtml:link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | prepend: site.url }}" />
+        {% endfor %}
+      {% elsif page_lang == "fr" %}
         {% assign en_url = page.url | prepend: "/en" %}
         <xhtml:link rel="alternate" hreflang="en" href="{{ en_url | prepend: site.url }}" />
       {% else %}
         {% assign fr_url = page.url | remove_first: "/en" %}
         <xhtml:link rel="alternate" hreflang="fr" href="{{ fr_url | prepend: site.url }}" />
       {% endif %}
+      {% comment %} x-default points to FR version {% endcomment %}
+      {% if page_lang == "fr" %}
+      <xhtml:link rel="alternate" hreflang="x-default" href="{{ page.url | prepend: site.url }}" />
+      {% elsif page.alternates %}
+        {% for alt in page.alternates %}
+          {% if alt.lang == "fr" %}
+      <xhtml:link rel="alternate" hreflang="x-default" href="{{ alt.url | prepend: site.url }}" />
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% assign fr_url = page.url | remove_first: "/en" %}
+      <xhtml:link rel="alternate" hreflang="x-default" href="{{ fr_url | prepend: site.url }}" />
+      {% endif %}
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
-      <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
-      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% else %}0.8{% endif %}</priority>
+      <changefreq>{% if page.sitemap.changefreq %}{{ page.sitemap.changefreq }}{% elsif page.pillar_page %}weekly{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if page.sitemap.priority %}{{ page.sitemap.priority }}{% elsif page.pillar_page %}1.0{% else %}0.8{% endif %}</priority>
       {% if page.image %}
       <image:image>
         <image:loc>{{ page.image | prepend: site.url }}</image:loc>
@@ -73,9 +91,10 @@ layout: null
           {% endif %}
         {% endfor %}
       {% endif %}
+      <xhtml:link rel="alternate" hreflang="x-default" href="{{ post.url | prepend: site.url }}" />
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
-      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
+      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% elsif post.pillar_page %}weekly{% else %}yearly{% endif %}</changefreq>
+      <priority>{% if post.pillar_page %}1.0{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% elsif post.featured %}0.9{% else %}0.7{% endif %}</priority>
       {% if post.image %}
       <image:image>
         <image:loc>{{ post.image | prepend: site.url }}</image:loc>
@@ -102,12 +121,13 @@ layout: null
         {% for alt_post in all_posts_fr %}
           {% if alt_post.ref == post.ref %}
             <xhtml:link rel="alternate" hreflang="fr" href="{{ alt_post.url | prepend: site.url }}" />
+            <xhtml:link rel="alternate" hreflang="x-default" href="{{ alt_post.url | prepend: site.url }}" />
           {% endif %}
         {% endfor %}
       {% endif %}
       <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
-      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% else %}yearly{% endif %}</changefreq>
-      <priority>{% if post.featured %}0.9{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% else %}0.7{% endif %}</priority>
+      <changefreq>{% if post.sitemap.changefreq %}{{ post.sitemap.changefreq }}{% elsif post.pillar_page %}weekly{% else %}yearly{% endif %}</changefreq>
+      <priority>{% if post.pillar_page %}1.0{% elsif post.sitemap.priority %}{{ post.sitemap.priority }}{% elsif post.featured %}0.9{% else %}0.7{% endif %}</priority>
       {% if post.image %}
       <image:image>
         <image:loc>{{ post.image | prepend: site.url }}</image:loc>
@@ -232,6 +252,60 @@ layout: null
     {% endunless %}
   {% endfor %}
 
+  <!-- Quizzes FR -->
+  {% for quiz in site.quizz %}
+    {% unless quiz.sitemap.exclude == "yes" %}
+    {% assign last = quiz.last_modified_at | default: quiz.date | default: site.time %}
+    <url>
+      <loc>{{ quiz.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ quiz.url | prepend: site.url }}" />
+      {% if quiz.ref %}
+        {% for alt_quiz in site.quizz_en %}
+          {% if alt_quiz.ref == quiz.ref %}
+            <xhtml:link rel="alternate" hreflang="en" href="{{ alt_quiz.url | prepend: site.url }}" />
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
+      <changefreq>{% if quiz.sitemap.changefreq %}{{ quiz.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if quiz.sitemap.priority %}{{ quiz.sitemap.priority }}{% else %}0.6{% endif %}</priority>
+      {% if quiz.image %}
+      <image:image>
+        <image:loc>{{ quiz.image | prepend: site.url }}</image:loc>
+        <image:title>{{ quiz.title | xml_escape }}</image:title>
+      </image:image>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Quizzes EN -->
+  {% for quiz in site.quizz_en %}
+    {% unless quiz.sitemap.exclude == "yes" %}
+    {% assign last = quiz.last_modified_at | default: quiz.date | default: site.time %}
+    <url>
+      <loc>{{ quiz.url | prepend: site.url }}</loc>
+      <xhtml:link rel="alternate" hreflang="en" href="{{ quiz.url | prepend: site.url }}" />
+      {% if quiz.ref %}
+        {% for alt_quiz in site.quizz %}
+          {% if alt_quiz.ref == quiz.ref %}
+            <xhtml:link rel="alternate" hreflang="fr" href="{{ alt_quiz.url | prepend: site.url }}" />
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      <lastmod>{{ last | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
+      <changefreq>{% if quiz.sitemap.changefreq %}{{ quiz.sitemap.changefreq }}{% else %}monthly{% endif %}</changefreq>
+      <priority>{% if quiz.sitemap.priority %}{{ quiz.sitemap.priority }}{% else %}0.6{% endif %}</priority>
+      {% if quiz.image %}
+      <image:image>
+        <image:loc>{{ quiz.image | prepend: site.url }}</image:loc>
+        <image:title>{{ quiz.title | xml_escape }}</image:title>
+      </image:image>
+      {% endif %}
+    </url>
+    {% endunless %}
+  {% endfor %}
+
   <!-- Tag Pages FR -->
   {% assign all_tags_fr = "" | split: "" %}
   {% for post in site.posts %}
@@ -244,18 +318,6 @@ layout: null
     {% endif %}
   {% endfor %}
 
-  {% for tag in all_tags_fr %}
-    {% assign slug = tag | slugify: "pretty" %}
-    <url>
-      <loc>{{ site.url }}/blog/tags/{{ slug }}/</loc>
-      <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}/blog/tags/{{ slug }}/" />
-      <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.6</priority>
-    </url>
-  {% endfor %}
-
-  <!-- Tag Pages EN -->
   {% assign all_tags_en = "" | split: "" %}
   {% for post in site.posts_en %}
     {% if post.tags %}
@@ -267,11 +329,37 @@ layout: null
     {% endif %}
   {% endfor %}
 
+  {% for tag in all_tags_fr %}
+    {% assign slug = tag | slugify: "pretty" %}
+    <url>
+      <loc>{{ site.url }}/blog/tags/{{ slug }}/</loc>
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}/blog/tags/{{ slug }}/" />
+      {% comment %} Cross-reference EN tag if same slug exists {% endcomment %}
+      {% for tag_en in all_tags_en %}
+        {% assign slug_en = tag_en | slugify: "pretty" %}
+        {% if slug_en == slug %}
+      <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/blog/tags/{{ slug }}/" />
+        {% endif %}
+      {% endfor %}
+      <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+    </url>
+  {% endfor %}
+
+  <!-- Tag Pages EN -->
   {% for tag in all_tags_en %}
     {% assign slug = tag | slugify: "pretty" %}
     <url>
       <loc>{{ site.url }}/en/blog/tags/{{ slug }}/</loc>
       <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en/blog/tags/{{ slug }}/" />
+      {% comment %} Cross-reference FR tag if same slug exists {% endcomment %}
+      {% for tag_fr in all_tags_fr %}
+        {% assign slug_fr = tag_fr | slugify: "pretty" %}
+        {% if slug_fr == slug %}
+      <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}/blog/tags/{{ slug }}/" />
+        {% endif %}
+      {% endfor %}
       <lastmod>{{ site.time | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.6</priority>

@@ -3,6 +3,8 @@ layout: product-landing
 title: "MCP Tools Plus - Module PrestaShop pour IA & Commerce Analytics"
 permalink: /modules/mcp-tools-plus/
 lang: fr
+published: false
+redirect_from: []
 description: "Module PrestaShop prêt pour la production qui expose des outils Model Context Protocol (MCP) pour fournir des analyses commerce en temps réel aux agents IA. Suivi des ventes, déclarations fiscales, alertes stock et métriques de rentabilité—le tout accessible en langage naturel."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 

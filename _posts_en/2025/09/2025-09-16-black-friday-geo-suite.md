@@ -18,6 +18,8 @@ excerpt: Black Friday 2025 will be dominated by generative AIs. Discover how GEO
   revolutionizes PrestaShop e-commerce with Generative Engine Optimization.
 image: /assets/images/blog/2025/09/2025-09-16-black-friday-geo-suite.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermediate
 technologies:
 - PrestaShop

@@ -3,6 +3,9 @@ layout: page
 title: AI Expertise for Developers
 permalink: /en/expertise/ai/
 lang: en
+alternates:
+  - lang: fr
+    url: /expertise/ia/
 show_sidebar: false
 llm_summary: "Skills in artificial intelligence applied to Nicolas Dabène's projects."
 llm_topics: [artificial intelligence, ai]

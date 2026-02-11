@@ -19,6 +19,8 @@ excerpt: Les assistants IA changent radicalement la façon dont vos clients vous
   recommandé par ChatGPT, Gemini et Perplexity.
 image: /assets/images/blog/2025/10/2025-10-07-faq-geo-essentielles.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - IA

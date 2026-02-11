@@ -22,6 +22,8 @@ tags:
 excerpt: "Claude ou ChatGPT pour gérer votre boutique PrestaShop ? Test comparatif réel avec MCP Tools Plus sur 5 épreuves e-commerce : analyse des ventes, gestion de stock, SEO, diagnostic et workflow autonome."
 image: /assets/images/blog/2026/02/prestashop-claude-chatgpt-mcp-tools-plus/image-principale.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
   - Claude

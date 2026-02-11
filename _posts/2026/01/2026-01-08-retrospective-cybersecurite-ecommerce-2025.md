@@ -26,6 +26,8 @@ excerpt: Une analyse approfondie de l'année 2025, marquée par des cyberattaque
   précédent contre le retail français (Auchan, Boulanger, LDLC, Leroy Merlin) et l'émergence
   du vibecoding comme nouvelle menace systémique pour 2026.
 image: /assets/images/blog/2026/01/retrospective-cybersecurite-ecommerce-2025/image-principale.webp
+sitemap:
+  priority: 0.8
 difficulty: ⭐️⭐️⭐️
 technologies:
 - RGPD

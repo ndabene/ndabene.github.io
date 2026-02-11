@@ -3,6 +3,9 @@ layout: page
 title: "Privacy Policy"
 permalink: /en/cookie-policy/
 lang: en
+alternates:
+  - lang: fr
+    url: /politique-cookies/
 description: "GDPR-compliant privacy policy and personal data protection for Nicolas Dabène's website."
 body_class: "cookie-policy-page"
 llm_summary: GDPR-compliant privacy policy and personal data protection for Nicolas Dabène's website.
