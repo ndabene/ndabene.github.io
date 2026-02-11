@@ -104,6 +104,20 @@
         }
     }
 
+    // Sync original input value to modal input and focus it
+    function syncAndFocusModalInput(suggestionsModal, value) {
+        const modalInput = suggestionsModal.querySelector('#search-modal-input');
+        const modalClearBtn = suggestionsModal.querySelector('.search-modal-clear-btn');
+        if (modalInput) {
+            modalInput.value = value;
+            // Use requestAnimationFrame to ensure the modal is visible before focusing
+            requestAnimationFrame(() => modalInput.focus());
+        }
+        if (modalClearBtn) {
+            modalClearBtn.style.display = value.trim() ? 'flex' : 'none';
+        }
+    }
+
     // Show search suggestions in modal
     function showSearchSuggestions(input, suggestionsModal) {
         if (!suggestionsModal) return;
@@ -126,6 +140,7 @@
                     `).join('')}
                 `;
                 suggestionsModal.classList.add('active');
+                syncAndFocusModalInput(suggestionsModal, input.value);
             } else {
                 suggestionsModal.classList.remove('active');
             }
@@ -167,6 +182,7 @@
                 }).join('')}
                 `;
                 suggestionsModal.classList.add('active');
+                syncAndFocusModalInput(suggestionsModal, input.value);
             } else {
                 modalContent.innerHTML = `
                     <div class="search-no-suggestions">
@@ -175,6 +191,7 @@
                     </div>
                 `;
                 suggestionsModal.classList.add('active');
+                syncAndFocusModalInput(suggestionsModal, input.value);
             }
         }
     }
@@ -432,6 +449,14 @@
                     <button class="search-modal-close" aria-label="Fermer">
                         <i class="fas fa-times"></i>
                     </button>
+                    <div class="search-modal-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-modal-input"
+                            placeholder="${searchInput.placeholder}" autocomplete="off">
+                        <button class="search-modal-clear-btn" style="display: none;" title="Effacer la recherche">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                     <div class="search-modal-content"></div>
                 </div>
             `;
@@ -453,8 +478,33 @@
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && suggestionsModal.classList.contains('active')) {
                     suggestionsModal.classList.remove('active');
+                    searchInput.focus();
                 }
             });
+
+            // Modal input sync
+            const modalInput = suggestionsModal.querySelector('#search-modal-input');
+            const modalClearBtn = suggestionsModal.querySelector('.search-modal-clear-btn');
+
+            modalInput.addEventListener('input', function () {
+                const value = this.value;
+                searchInput.value = value;
+                searchInput.dispatchEvent(new Event('input'));
+
+                if (modalClearBtn) {
+                    modalClearBtn.style.display = value.trim() ? 'flex' : 'none';
+                }
+            });
+
+            if (modalClearBtn) {
+                modalClearBtn.addEventListener('click', function () {
+                    modalInput.value = '';
+                    searchInput.value = '';
+                    searchInput.dispatchEvent(new Event('input'));
+                    modalClearBtn.style.display = 'none';
+                    modalInput.focus();
+                });
+            }
         }
 
         // Debounced search function
@@ -538,9 +588,12 @@
                     const query = suggestion.dataset.query;
                     if (query) {
                         searchInput.value = query;
+                        const modalInput = suggestionsModal.querySelector('#search-modal-input');
+                        if (modalInput) {
+                            modalInput.value = query;
+                            modalInput.focus();
+                        }
                         searchInput.dispatchEvent(new Event('input'));
-                        suggestionsModal.classList.remove('active');
-                        searchInput.focus();
                     }
                 }
             });

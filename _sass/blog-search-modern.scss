@@ -267,8 +267,87 @@ $search-highlight-text: #92400e;
   }
 }
 
+// Input de recherche intégré dans la modal
+.search-modal-input-wrapper {
+  position: relative;
+  padding: 20px 24px 0;
+
+  > .fa-search {
+    position: absolute;
+    left: 46px;
+    top: calc(20px + 50%);
+    transform: translateY(-50%);
+    color: $search-accent;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  #search-modal-input {
+    width: 100%;
+    padding: 16px 52px 16px 52px;
+    border: 2px solid $search-border;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #f8fafc;
+    color: $search-text;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    &:focus {
+      outline: none;
+      border-color: $search-accent;
+      background: $search-bg;
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15),
+        0 0 0 4px rgba(59, 130, 246, 0.1);
+    }
+
+    &::placeholder {
+      color: $search-text-light;
+      opacity: 0.7;
+      font-weight: 400;
+    }
+  }
+
+  &:focus-within > .fa-search {
+    color: $search-accent;
+    transform: translateY(-50%) scale(1.15);
+  }
+
+  .search-modal-clear-btn {
+    position: absolute;
+    right: 42px;
+    top: calc(20px + 50%);
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
+
+    &:hover {
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    }
+
+    i {
+      font-size: 12px;
+    }
+  }
+}
+
 .search-modal-content {
-  max-height: calc(80vh - 32px);
+  max-height: calc(80vh - 100px);
   overflow-y: auto;
 
   // Scrollbar personnalisée élégante
@@ -634,8 +713,34 @@ $search-highlight-text: #92400e;
     }
   }
 
+  .search-modal-input-wrapper {
+    padding: 16px 16px 0;
+
+    > .fa-search {
+      left: 34px;
+      top: calc(16px + 50%);
+      font-size: 18px;
+    }
+
+    #search-modal-input {
+      padding: 14px 46px 14px 46px;
+      font-size: 16px;
+      border-radius: 12px;
+    }
+
+    .search-modal-clear-btn {
+      right: 34px;
+      top: calc(16px + 50%);
+      padding: 7px;
+
+      i {
+        font-size: 11px;
+      }
+    }
+  }
+
   .search-modal-content {
-    max-height: calc(90vh - 24px);
+    max-height: calc(90vh - 90px);
   }
 
   .search-suggestions-header {
