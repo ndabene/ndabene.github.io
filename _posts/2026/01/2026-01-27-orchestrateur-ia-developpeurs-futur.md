@@ -26,7 +26,11 @@ excerpt: L'ère du "Léviathan" (une seule IA géante qui fait tout) est une ill
   d'agents spécialisés. Découvrez comment transformer votre boutique en machine de
   guerre grâce aux architectures agentiques et au protocole MCP.
 image: /assets/images/blog/2026/01/orchestrateur-ia-developpeurs-futur/image-principale.webp
-featured: false
+featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Avancé
 technologies:
 - MCP

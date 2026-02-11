@@ -2,6 +2,9 @@
 layout: page
 title: Expertise IA pour Développeurs
 permalink: /expertise/ia/
+alternates:
+  - lang: en
+    url: /en/expertise/ai/
 show_sidebar: false
 llm_summary: "Compétences en intelligence artificielle appliquée aux projets de Nicolas Dabène."
 llm_topics: [intelligence artificielle, ia]

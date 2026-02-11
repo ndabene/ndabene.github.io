@@ -28,6 +28,10 @@ tags:
 excerpt: "En 2026, intégrer l'IA dans PrestaShop ne signifie pas abandonner le contrôle. Découvrez le cadre complet de gouvernance IA adapté à l'écosystème PrestaShop : registre des systèmes, contrôle des données, sécurité LLM, monitoring, et gestion des risques pour une IA maîtrisée, traçable et stratégique."
 image: /assets/images/blog/2026/03/gouvernance-ia-prestashop/image-principale.webp
 featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Avancé
 technologies:
   - PrestaShop

@@ -3,6 +3,9 @@ layout: page
 title: Formations
 heading: Formations IA pour Développeurs
 permalink: /formations/
+alternates:
+  - lang: en
+    url: /en/training/
 description: "Formations IA pour développeurs : programmes pratiques, présentiel Sophia
   Antipolis, distanciel et intra-entreprise."
 llm_summary: 'Formations IA pour développeurs : programmes pratiques, présentiel Sophia

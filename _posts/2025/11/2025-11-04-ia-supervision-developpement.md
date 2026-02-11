@@ -19,6 +19,8 @@ excerpt: 84% des développeurs utilisent l'IA, mais 45% du code généré contie
   junior.
 image: /assets/images/blog/2025/11/2025-11-04-ia-supervision-developpement.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - IA

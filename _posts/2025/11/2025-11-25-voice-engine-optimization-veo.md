@@ -20,6 +20,8 @@ excerpt: L'optimisation vocale (VEO) transforme la recherche en 2025. Avec 8,4 m
   dominer la recherche vocale.
 image: /assets/images/blog/2025/11/2025-11-25-voice-engine-optimization-veo.webp
 featured: false
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - Voice Search

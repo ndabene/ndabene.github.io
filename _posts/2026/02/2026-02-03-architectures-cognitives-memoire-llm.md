@@ -21,6 +21,8 @@ excerpt: Les modèles de langage actuels oublient, se contredisent et recalculen
   architectures révolutionnaires qui donnent aux IA une véritable mémoire et une capacité
   de réflexion interne.
 image: /assets/images/blog/2026/02/architectures-cognitives-memoire-llm/image-principale.webp
+sitemap:
+  priority: 0.8
 difficulty: Avancé
 technologies:
 - LLM

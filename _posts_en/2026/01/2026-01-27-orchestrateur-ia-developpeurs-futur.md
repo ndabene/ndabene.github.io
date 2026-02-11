@@ -21,7 +21,11 @@ tags:
 - development
 excerpt: The era of the "Leviathan" (one giant AI that does everything) is an illusion. The future of e-commerce and PrestaShop development will be played out with a team of specialized agents. Discover how to transform your store into a war machine thanks to agentic architectures and the MCP protocol.
 image: /assets/images/blog/2026/01/orchestrateur-ia-developpeurs-futur/image-principale.webp
-featured: false
+featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Advanced
 technologies:
 - MCP

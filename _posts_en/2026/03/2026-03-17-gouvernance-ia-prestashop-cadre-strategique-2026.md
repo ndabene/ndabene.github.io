@@ -29,6 +29,10 @@ tags:
 excerpt: "In 2026, integrating AI into PrestaShop doesn't mean losing control. Discover the complete AI governance framework adapted to the PrestaShop ecosystem: system registry, data governance, LLM security, monitoring, and risk management for controlled, traceable, and strategic AI."
 image: /assets/images/blog/2026/03/gouvernance-ia-prestashop/image-principale.webp
 featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Advanced
 technologies:
   - PrestaShop

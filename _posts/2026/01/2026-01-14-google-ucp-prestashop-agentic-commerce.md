@@ -19,6 +19,8 @@ excerpt: Google vient de dévoiler le Universal Commerce Protocol (UCP). Une ré
   qui permet aux IA d'acheter directement dans votre boutique PrestaShop. Analyse
   technique et opportunités.
 image: /assets/images/blog/2026/01/google-ucp-prestashop-agentic-commerce/image-principale.webp
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - JSON Schema

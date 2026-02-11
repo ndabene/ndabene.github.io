@@ -19,6 +19,8 @@ excerpt: Découvrez le Model Context Protocol d'Anthropic, le protocole qui perm
   pratiques.
 image: /assets/images/blog/2025/08/2025-08-03-mcp-protocol-guide.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - MCP

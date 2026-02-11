@@ -3,6 +3,14 @@ layout: product-landing
 title: "MCP Tools Plus - Module PrestaShop pour IA & Commerce Analytics"
 permalink: /modules/mcp-tools-plus/
 lang: fr
+ref: mcp-tools-plus-module
+pillar_page: true
+alternates:
+  - lang: en
+    url: /en/modules/mcp-tools-plus/
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 description: "MCP Tools Plus est un module PrestaShop qui permet d'explorer des usages IA via des scénarios guidés. Découvrez comment accéder à vos données PrestaShop avec des outils structurés pendant 14 jours de trial."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 

@@ -3,6 +3,9 @@ layout: default
 title: E-books and Training (AI, PrestaShop, Development)
 permalink: /en/shop/
 lang: en
+alternates:
+  - lang: fr
+    url: /boutique/
 description: "Practical PDF e-books and complementary training courses to progress
   in AI, PrestaShop and development. Instant download, clear and actionable content
   to level up step by step."

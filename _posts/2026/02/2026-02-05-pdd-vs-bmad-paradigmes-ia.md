@@ -30,6 +30,8 @@ excerpt: 'L''avènement des Grands Modèles de Langage redéfinit le développem
   '
 image: /assets/images/blog/2026/02/pdd-vs-bmad-paradigmes-ia/image-principale.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Avancé
 technologies:
 - LLM

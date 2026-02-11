@@ -3,6 +3,9 @@ layout: default
 title: "Terms and Conditions of Use and Sale"
 permalink: /en/terms-shop/
 lang: en
+alternates:
+  - lang: fr
+    url: /cgu-boutique/
 description: "General terms and conditions applicable to the shop (training courses and digital products)."
 body_class: "page-cgu"
 llm_summary: General terms and conditions applicable to the shop (training courses and digital products).

@@ -26,6 +26,10 @@ tags:
 excerpt: "A step-by-step case study: how I took a PrestaShop product page from 0 to 14 mentions in ChatGPT, Gemini and Perplexity answers in 60 days, with the complete process and before/after measurements."
 image: /assets/images/blog/2026/02/geo-ecommerce-optimiser-fiche-produit-reponses-ia/image-principale.webp
 featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Intermediate
 technologies:
   - PrestaShop

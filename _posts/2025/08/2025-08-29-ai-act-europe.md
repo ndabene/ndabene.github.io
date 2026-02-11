@@ -19,6 +19,8 @@ excerpt: L’AI Act est la première loi mondiale qui encadre l’intelligence a
   les développeurs et l’open source en France.
 image: /assets/images/blog/2025/08/2025-08-29-ai-act-europe.webp
 featured: false
+sitemap:
+  priority: 0.8
 difficulty: Intermédiaire
 technologies:
 - Intelligence Artificielle

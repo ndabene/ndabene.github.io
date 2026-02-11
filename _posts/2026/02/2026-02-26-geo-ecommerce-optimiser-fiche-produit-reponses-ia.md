@@ -26,6 +26,10 @@ tags:
 excerpt: "Un cas pratique step-by-step : comment j'ai fait passer une fiche produit PrestaShop de 0 a 14 mentions dans les reponses de ChatGPT, Gemini et Perplexity en 60 jours, avec le processus complet et les mesures avant/apres."
 image: /assets/images/blog/2026/02/geo-ecommerce-optimiser-fiche-produit-reponses-ia/image-principale.webp
 featured: true
+pillar_page: true
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 difficulty: Intermediaire
 technologies:
   - PrestaShop

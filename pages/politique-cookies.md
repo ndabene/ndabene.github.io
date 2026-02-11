@@ -2,6 +2,9 @@
 layout: page
 title: "Politique de Confidentialité"
 permalink: /politique-cookies/
+alternates:
+  - lang: en
+    url: /en/cookie-policy/
 description: "Politique de confidentialité et protection des données personnelles conforme au RGPD pour le site de Nicolas Dabène."
 body_class: "cookie-policy-page"
 llm_summary: Politique de confidentialité et protection des données personnelles conforme au RGPD pour le site de Nicolas Dabène.

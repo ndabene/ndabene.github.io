@@ -21,6 +21,8 @@ excerpt: L'émergence des moteurs génératifs a catalysé une transformation fo
   transformer votre stratégie digitale.
 image: /assets/images/blog/2025/11/2025-11-03-guide-complet-mesurer-geo.webp
 featured: true
+sitemap:
+  priority: 0.8
 difficulty: Avancé
 technologies:
 - Google Analytics 4
