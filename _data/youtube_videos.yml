@@ -275,3 +275,13 @@
   channel: ndabene06
   duration: PT5M10S
   category: Technique
+- title: 'BMAD vs Ralph : Comment structurer le développement assisté par IA ?'
+  video_id: pSw4TUG5G14
+  url: https://www.youtube.com/watch?v=pSw4TUG5G14
+  thumbnail: https://i.ytimg.com/vi/pSw4TUG5G14/hqdefault.jpg
+  description: L'IA dans le développement logiciel, c'est un peu le Far West en ce
+    moment. On code au feeling, on discute avec le chatbot... c'est ...
+  published_at: '2026-02-10T23:00:59Z'
+  channel: ndabene06
+  duration: PT7M1S
+  category: Technique
