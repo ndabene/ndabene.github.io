@@ -65,6 +65,18 @@ Le **6 juin 2025** marquait l'un des moments les plus importants de l'année ave
 
 Les innovations principales de PrestaShop 9.0 incluent une **nouvelle Admin API** développée sur API Platform, permettant des intégrations plus propres et conformes aux standards REST modernes, un **nouveau design d'interface de gestion** entièrement réfléchi pour améliorer l'expérience utilisateur, et des **améliorations SEO natives** cruciales pour les marchands. Ces améliorations SEO intègrent le support des formats **WebP et AVIF** pour les images produits, l'optimisation des **Core Web Vitals**, notamment pour le Largest Contentful Paint (LCP), et des **URLs pleinement personnalisables** même pour les filtres à facettes[8]. Le code de PrestaShop 9 offre également une performance accrue avec des temps de chargement de page considérablement réduits, un avantage compétitif majeur pour les marchands cherchant à améliorer les taux de conversion.
 
+{% capture takeaway_ps9 %}
+**PrestaShop 9.0** (6 juin 2025) : Symfony 6.4 LTS, PHP 8.4, nouvelle Admin API (API Platform), support WebP/AVIF, URLs personnalisables, Core Web Vitals optimisés.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="PrestaShop 9.0 : les fondations modernes"
+   content=takeaway_ps9
+   icon="⚙️"
+   variant="technical"
+   cite_id="prestashop-9-features"
+%}
+
 ## PrestaShop Day 2025 : L'Événement Incontournable des Décideurs
 
 Le **10 juin 2025** s'est tenu le **PrestaShop Day 2025** au 3 Mazarium à Paris, accueillant un rassemblement impressionnant de **plus de 300 marchands**, **20 exposants**, et animé par **14 conférences** majeures[9]. J'ai observé que cet événement annuel s'est concentré sur trois piliers fondamentaux : la **liberté** de l'open source, la **flexibilité** omnicanale, et la **rentabilité** maîtrisée. Les thèmes abordés ont englobé la **souveraineté numérique**, un sujet particulièrement crucial dans un contexte où les solutions propriétaires verrouillées dominent le marché, la **logistique** et les stratégies de livraison optimisées, la **gestion de l'intelligence artificielle** dans l'e-commerce, les **paiements innovants** avec des partenaires comme PayPal, et les **nouveaux enjeux réglementaires européens**[10]. Le programme a également inclus des **100+ rencontres business** programmées entre les exposants et les visiteurs, et a permis aux participants de découvrir PrestaShop Enterprise, l'offre premium de PrestaShop destinée aux boutiques ambitieuses générant déjà des millions de chiffre d'affaires[11].
@@ -83,6 +95,18 @@ La conférence s'est articulée autour de **plus de 18 présentations** réparti
 
 Le **PrestaShop MCP Server**, lancé le **19 novembre 2025**, représente une innovation technologique déterminante pour l'écosystème e-commerce[15]. J'ai été fasciné par ce connecteur standardisé disponible gratuitement pour PrestaShop 8+, qui établit un pont sécurisé entre les boutiques PrestaShop et les agents IA commerciaux. Le protocole MCP permet aux agents de reconnaître les objets métiers tels que les produits, clients et commandes, et d'exécuter automatiquement des tâches en langage naturel, transformant des requêtes simples comme « affiche-moi mes dix plus gros clients ce mois-ci » ou « réécris toutes les fiches produits marquées comme "en déclin" » en actions concrètes du back-office[15]. Cette approche préserve la **souveraineté des données** des marchands tout en ouvrant des possibilités d'automatisation jusqu'alors réservées aux grandes plateformes propriétaires.
 
+{% capture takeaway_mcp_server %}
+Le **PrestaShop MCP Server** (lancé le 19 nov 2025) permet aux agents IA (ChatGPT, Claude, Mistral) de se connecter nativement aux boutiques PrestaShop pour exécuter des actions en langage naturel tout en préservant la souveraineté des données.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Innovation MCP Server"
+   content=takeaway_mcp_server
+   icon="🚀"
+   variant="technical"
+   cite_id="prestashop-mcp-server-2025"
+%}
+
 ## L'Acquisition de PrestaShop : Un Tournant Historique
 
 Le **11 décembre 2025** a marqué l'annonce d'un événement absolument historique pour l'écosystème PrestaShop : **CyberFolks et Sylius ont signé un accord pour acquérir PrestaShop**, l'une des plus grandes plateformes e-commerce open source au monde[16]. Cette acquisition stratégique représente un tournant majeur dans le paysage des technologies e-commerce européennes. La transaction, structurée autour de l'acquisition de **79% de cyber_Pixel par CyberFolks** (les 21% restants étant détenus par les fondations familiales des fondateurs de Sylius), permettra à cyber_Pixel d'acquérir **100% de PrestaShop**, **100% de Sylius** et **100% de BitBag**[17]. Le prix de vente attendu pour l'intégralité des actions PrestaShop s'élève à **53,765 millions d'euros**.
@@ -94,6 +118,18 @@ Cette acquisition garantit la pérennité du projet PrestaShop tout en préserva
 ## Thèmes Transversaux de 2025 : IA, Souveraineté et Modernisation
 
 J'ai observé que l'année 2025 a été marquée par trois grands thèmes transversaux tout au long des événements. Premièrement, la **montée en puissance de l'intelligence artificielle** s'est manifestée à travers l'annonce du MCP Server, les discussions sur l'automatisation des processus commerciaux, et l'exploration des agents IA dans l'écosystème de paiement. Deuxièmement, la **souveraineté numérique** est devenue un enjeu central, tant au PrestaShop Day qu'aux FOP Days, avec un message clair adressé aux marchands : reprendre le contrôle de leurs données et de leur infrastructure technologique face aux solutions propriétaires cloisonnées. Troisièmement, la **modernisation technologique** s'est concrétisée par le lancement de PrestaShop 9.0, l'arrivée de Hummingbird 2.0, les améliorations du système de mise à jour, et l'évolution continue de l'API Admin, transformant progressivement PrestaShop en une plateforme véritablement moderne et adaptée aux défis e-commerce contemporains.
+
+{% include contextual-cta.html
+   cta_type="linkedin"
+   zone="C"
+   context="Actualités PrestaShop"
+   title="Suivez les actualités PrestaShop et IA"
+   description="Analyses, retours d'expérience et veille technologique sur LinkedIn."
+   button_text="Me suivre sur LinkedIn"
+   button_url="https://www.linkedin.com/in/ndabene/"
+   icon="fab fa-linkedin"
+   variant="subtle"
+%}
 
 ***
 

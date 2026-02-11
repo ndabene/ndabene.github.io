@@ -1,0 +1,172 @@
+{% comment %}
+Composant Bloc Citable optimisé GEO avec Schema.org
+Usage: {% include key-takeaway.html title="À retenir" content=takeaway_content icon="💡" variant="technical" cite_id="unique-id" %}
+{% endcomment %}
+
+<div class="key-takeaway key-takeaway--{{ include.variant | default: 'default' }}"
+     {% if include.cite_id %}id="{{ include.cite_id }}"{% endif %}
+     itemscope
+     itemtype="https://schema.org/DefinedTerm">
+
+  <div class="key-takeaway-header">
+    {% if include.icon %}
+    <span class="key-takeaway-icon" aria-hidden="true">{{ include.icon }}</span>
+    {% endif %}
+
+    <h4 class="key-takeaway-title" itemprop="name">
+      {{ include.title | default: "À retenir" }}
+    </h4>
+  </div>
+
+  <div class="key-takeaway-content" itemprop="description">
+    {{ include.content | markdownify }}
+  </div>
+
+  {% comment %}Métadonnées Schema.org pour citation GEO{% endcomment %}
+  <meta itemprop="inDefinedTermSet" content="nicolas-dabene.fr">
+  <link itemprop="url" href="{{ page.url | absolute_url }}{% if include.cite_id %}#{{ include.cite_id }}{% endif %}">
+</div>
+
+<style>
+.key-takeaway {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.key-takeaway:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.key-takeaway::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #7c3aed 0%, #a855f7 100%);
+  border-radius: 12px 0 0 12px;
+}
+
+.key-takeaway--important {
+  background: #fffbeb;
+  border-color: #fbbf24;
+}
+
+.key-takeaway--important::before {
+  background: linear-gradient(180deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.key-takeaway--technical {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.key-takeaway--technical::before {
+  background: linear-gradient(180deg, #10b981 0%, #34d399 100%);
+}
+
+.key-takeaway-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.key-takeaway-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.key-takeaway-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  flex: 1;
+}
+
+.key-takeaway-content {
+  color: #334155;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.key-takeaway-content > *:first-child {
+  margin-top: 0;
+}
+
+.key-takeaway-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.key-takeaway-content p {
+  margin: 0.75rem 0;
+}
+
+.key-takeaway-content ul,
+.key-takeaway-content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.key-takeaway-content li {
+  margin-bottom: 0.5rem;
+}
+
+.key-takeaway-content strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.key-takeaway-content code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .key-takeaway {
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .key-takeaway-header {
+    gap: 0.5rem;
+  }
+
+  .key-takeaway-icon {
+    font-size: 1.3rem;
+  }
+
+  .key-takeaway-title {
+    font-size: 1rem;
+  }
+
+  .key-takeaway-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media print {
+  .key-takeaway {
+    border-color: #000;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key-takeaway {
+    transition: none;
+  }
+}
+</style>

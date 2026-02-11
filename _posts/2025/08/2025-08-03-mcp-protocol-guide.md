@@ -104,6 +104,18 @@ Avec le MCP, l'IA peut :
 - **Planifier ses actions** en fonction des capacités exposées
 - **Obtenir des informations fraîches** sans intervention humaine
 
+{% include contextual-cta.html
+   cta_type="mcp_trial"
+   zone="A"
+   context="Pour les boutiques PrestaShop"
+   title="Testez MCP Tools Plus sur votre boutique"
+   description="Connectez votre PrestaShop à Claude avec des outils métier avancés."
+   button_text="Découvrir MCP Tools Plus"
+   button_url="/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article-cta&utm_campaign=mcp-guide-zone-a"
+   icon="fas fa-plug"
+   variant="subtle"
+%}
+
 ## Architecture du MCP : Les Acteurs en Présence
 
 Le MCP s'articule autour de deux composants principaux qui communiquent via le protocole JSON-RPC :
@@ -395,6 +407,24 @@ Les **prompts** aident les utilisateurs à formuler correctement leurs demandes 
 }
 ```
 
+{% capture takeaway_mcp_pillars %}
+Les trois piliers du MCP sont :
+
+1. **Ressources** : Accès lecture seule aux documents (lister, lire)
+2. **Outils** : Opérations interactives sur votre système
+3. **Prompts** : Templates pour guider les requêtes utilisateur
+
+Cette structure permet à l'IA de découvrir automatiquement les capacités disponibles et de planifier ses actions.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Les 3 piliers du MCP"
+   content=takeaway_mcp_pillars
+   icon="🏛️"
+   variant="technical"
+   cite_id="mcp-three-pillars"
+%}
+
 ## Développement Pratique : Créer votre Premier Serveur MCP
 
 Créons ensemble un serveur MCP simple pour gérer une bibliothèque de livres :
@@ -585,6 +615,18 @@ class ServeurMCPSecurise
     }
 }
 ```
+
+{% capture takeaway_security %}
+**Sécurité MCP** : Audit systématique du code serveur, principe du moindre privilège, environnement isolé, validation stricte des entrées/sorties. Le MCP expose à des risques d'injection de prompt, il faut donc être vigilant sur les serveurs MCP installés.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Sécurité MCP"
+   content=takeaway_security
+   icon="🔒"
+   variant="important"
+   cite_id="mcp-security-best-practices"
+%}
 
 ## Outils de Développement et Débogage
 
@@ -893,6 +935,18 @@ class ServeurMCPOptimise
     }
 }
 ```
+
+{% include contextual-cta.html
+   cta_type="consultation"
+   zone="C"
+   context="Architecture MCP pour votre projet"
+   title="Besoin d'accompagnement sur votre implémentation MCP ?"
+   description="Discutons de votre cas d'usage spécifique et de l'architecture adaptée."
+   button_text="Échanger sur mon projet"
+   button_url="/contact/?subject=Consultation%20MCP"
+   icon="fas fa-comments"
+   variant="emphasis"
+%}
 
 ## Conclusion : L'Avenir de l'Intégration IA
 

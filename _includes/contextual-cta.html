@@ -1,0 +1,214 @@
+{% comment %}
+Composant CTA Contextuel pour Optimisation CRO
+Usage: {% include contextual-cta.html cta_type="consultation" zone="A" context="..." title="..." description="..." button_text="..." button_url="..." icon="..." variant="subtle" %}
+{% endcomment %}
+
+<aside class="contextual-cta contextual-cta--{{ include.variant | default: 'standard' }} contextual-cta--{{ include.cta_type }}"
+       data-pagefind-ignore
+       data-cta-type="{{ include.cta_type }}"
+       data-cta-zone="{{ include.zone }}">
+
+  <div class="contextual-cta-inner">
+    {% if include.icon %}
+    <div class="contextual-cta-icon">
+      <i class="{{ include.icon }}"></i>
+    </div>
+    {% endif %}
+
+    <div class="contextual-cta-content">
+      {% if include.context %}
+      <p class="contextual-cta-context">{{ include.context }}</p>
+      {% endif %}
+
+      <h4 class="contextual-cta-title">{{ include.title }}</h4>
+
+      {% if include.description %}
+      <p class="contextual-cta-description">{{ include.description }}</p>
+      {% endif %}
+    </div>
+
+    <a href="{{ include.button_url }}"
+       class="contextual-cta-button"
+       data-cta-type="{{ include.cta_type }}"
+       data-cta-location="{{ include.zone | default: 'unknown' }}">
+      {{ include.button_text }}
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</aside>
+
+<style>
+.contextual-cta {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-left: 4px solid #7c3aed;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contextual-cta--subtle {
+  background: #fafbfc;
+  border-left-width: 3px;
+  border-left-color: #cbd5e1;
+  padding: 1.5rem;
+}
+
+.contextual-cta--emphasis {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border-left-color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
+}
+
+.contextual-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contextual-cta-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.contextual-cta--subtle .contextual-cta-icon {
+  background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
+}
+
+.contextual-cta-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contextual-cta-context {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+  margin: 0 0 0.5rem 0;
+}
+
+.contextual-cta-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.contextual-cta-description {
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contextual-cta-button {
+  background: #0f172a;
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.contextual-cta-button:hover {
+  background: #1e293b;
+  transform: translateX(4px);
+  text-decoration: none !important;
+}
+
+.contextual-cta-button i {
+  transition: transform 0.3s ease;
+}
+
+.contextual-cta-button:hover i {
+  transform: translateX(2px);
+}
+
+.contextual-cta--emphasis .contextual-cta-button {
+  background: #7c3aed;
+}
+
+.contextual-cta--emphasis .contextual-cta-button:hover {
+  background: #6d28d9;
+}
+
+@media (max-width: 768px) {
+  .contextual-cta {
+    padding: 1.5rem;
+  }
+
+  .contextual-cta-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .contextual-cta-content {
+    min-width: auto;
+  }
+
+  .contextual-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contextual-cta,
+  .contextual-cta-button,
+  .contextual-cta-button i {
+    transition: none;
+  }
+}
+</style>
+
+<script>
+(function() {
+  'use strict';
+
+  // Track CTA clicks for GA4
+  document.addEventListener('DOMContentLoaded', function() {
+    const ctaButtons = document.querySelectorAll('.contextual-cta-button');
+
+    ctaButtons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        const ctaType = this.getAttribute('data-cta-type');
+        const ctaLocation = this.getAttribute('data-cta-location');
+        const ctaUrl = this.href;
+        const articleTitle = document.querySelector('h1.post-title, article h1')?.textContent.trim() || 'Unknown';
+
+        // Track with GA4 if available
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'contextual_cta_click', {
+            event_category: 'engagement',
+            event_label: ctaType,
+            cta_type: ctaType,
+            cta_zone: ctaLocation,
+            article_title: articleTitle,
+            destination_url: ctaUrl,
+            value: 0.5
+          });
+
+          console.log('Contextual CTA tracked:', ctaType, ctaLocation);
+        }
+      });
+    });
+  });
+})();
+</script>

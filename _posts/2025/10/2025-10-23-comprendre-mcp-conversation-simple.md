@@ -83,6 +83,23 @@ Imaginez un interprète qui non seulement traduit les langues, mais aussi les in
 
 C'est la source de données réelle ou l'outil auquel on veut accéder : un dossier sur votre ordinateur, une base de données PostgreSQL, l'API de Google Drive, votre boîte Gmail... Bref, tout ce qui contient de l'information ou permet d'effectuer des actions.
 
+{% capture takeaway_actors %}
+Les 3 acteurs du MCP :
+- **L'Application IA** : Le cerveau isolé (Claude, ChatGPT)
+- **Le Serveur MCP** : Le pont intelligent entre IA et données
+- **La Ressource** : La source de données réelle (fichiers, BDD, API)
+
+Cette architecture permet à l'IA de découvrir et d'utiliser des capacités externes tout en gardant le contrôle humain.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="L'écosystème MCP"
+   content=takeaway_actors
+   icon="🎭"
+   variant="default"
+   cite_id="mcp-ecosystem-actors"
+%}
+
 ## Le Voyage d'une Question Simple
 
 Maintenant que nous connaissons les acteurs, suivons ensemble le parcours d'une demande utilisateur. Imaginons que vous disiez à Claude :
@@ -182,6 +199,18 @@ Reprenons notre scénario depuis le début avec un schéma conversationnel simpl
 
 **🤖 Claude** : "Voici le résumé de votre rapport : Le chiffre d'affaires du Q4 2024 atteint 2,5M€ avec une croissance de 15%..."
 
+{% include contextual-cta.html
+   cta_type="linkedin"
+   zone="B"
+   context="Questions sur MCP ?"
+   title="Continuons la conversation"
+   description="Connectons-nous sur LinkedIn pour échanger sur vos cas d'usage."
+   button_text="Me suivre sur LinkedIn"
+   button_url="https://www.linkedin.com/in/ndabene/"
+   icon="fab fa-linkedin"
+   variant="subtle"
+%}
+
 ## Les Principes Clés à Retenir
 
 Avant de passer au code, consolidons notre compréhension avec les principes fondamentaux du MCP :
@@ -216,6 +245,18 @@ Cette standardisation ouvre des possibilités infinies :
 - Intégration avec des outils d'entreprise
 - Automatisation de tâches complexes
 - Création d'assistants IA véritablement utiles au quotidien
+
+{% include contextual-cta.html
+   cta_type="mcp_trial"
+   zone="C"
+   context="Pour PrestaShop"
+   title="Implémentez MCP dans votre boutique PrestaShop"
+   description="Serveur MCP gratuit + extension MCP Tools Plus pour analyses avancées."
+   button_text="Voir la solution PrestaShop"
+   button_url="/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article-cta&utm_campaign=mcp-simple-zone-c"
+   icon="fas fa-shopping-cart"
+   variant="standard"
+%}
 
 ## Conclusion
 

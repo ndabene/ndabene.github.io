@@ -50,6 +50,12 @@
 
     // 6. Track social media clicks (optional)
     trackSocialMediaClicks();
+
+    // 7. Track LinkedIn profile clicks (distinct from social sharing)
+    trackLinkedInProfileClicks();
+
+    // 8. Track resource downloads (PDFs, docs, etc.)
+    trackResourceDownloads();
   }
 
   // Track clicks on marketplace links (PRIMARY CONVERSION)
@@ -176,6 +182,54 @@
     });
   }
 
+  // Track LinkedIn profile clicks (DISTINCT FROM SOCIAL SHARING)
+  function trackLinkedInProfileClicks() {
+    // Target specific LinkedIn profile links (not article sharing)
+    const linkedInProfileLinks = document.querySelectorAll(
+      'a[href*="linkedin.com/in/ndabene"], a[href*="linkedin.com/in/nicolasdabene"], .linkedin-profile-link'
+    );
+
+    linkedInProfileLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const linkLocation = getElementLocation(this);
+        const destinationUrl = this.href;
+
+        trackConversion('click_linkedin_profile', {
+          event_category: 'engagement',
+          event_label: 'LinkedIn Profile Visit',
+          link_location: linkLocation,
+          destination_url: destinationUrl,
+          value: 0.5
+        });
+      });
+    });
+  }
+
+  // Track resource downloads (FUTURE-PROOFING)
+  function trackResourceDownloads() {
+    // Find all downloadable resource links
+    const downloadLinks = document.querySelectorAll(
+      'a[href$=".pdf"], a[href$=".zip"], a[href$=".doc"], a[href$=".docx"], a[href$=".ppt"], a[href$=".pptx"], a[download], .download-resource'
+    );
+
+    downloadLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const url = this.href;
+        const fileName = extractFileName(url);
+        const resourceType = extractFileType(url);
+        const linkLocation = getElementLocation(this);
+
+        trackConversion('download_resource', {
+          event_category: 'conversion',
+          event_label: fileName,
+          resource_type: resourceType,
+          link_location: linkLocation,
+          value: 2
+        });
+      });
+    });
+  }
+
   // Helper: Extract product name from URL
   function extractProductName(url) {
     // Try to extract from URL pattern like /12345-product-name.html
@@ -214,6 +268,34 @@
     if (element.closest('article, .post-content')) return 'article_content';
     if (element.closest('.blog-mcp-tools-plus-section')) return 'article_cta_block';
     return 'body';
+  }
+
+  // Helper: Extract file name from URL
+  function extractFileName(url) {
+    try {
+      const urlObj = new URL(url, window.location.origin);
+      const pathname = urlObj.pathname;
+      const fileName = pathname.split('/').pop();
+      return fileName || 'unknown_file';
+    } catch (e) {
+      return 'unknown_file';
+    }
+  }
+
+  // Helper: Extract file type from URL
+  function extractFileType(url) {
+    const extension = url.split('.').pop().toLowerCase();
+    const typeMap = {
+      'pdf': 'PDF Document',
+      'zip': 'ZIP Archive',
+      'doc': 'Word Document',
+      'docx': 'Word Document',
+      'ppt': 'PowerPoint',
+      'pptx': 'PowerPoint',
+      'xls': 'Excel Spreadsheet',
+      'xlsx': 'Excel Spreadsheet'
+    };
+    return typeMap[extension] || extension.toUpperCase();
   }
 
   // Initialize when DOM is ready
