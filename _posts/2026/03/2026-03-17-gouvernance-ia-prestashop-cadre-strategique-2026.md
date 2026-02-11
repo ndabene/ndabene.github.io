@@ -110,6 +110,18 @@ Résultat :
 
 Cet article propose un modèle complet, pragmatique et adapté à l'écosystème PrestaShop.
 
+{% capture takeaway_principle %}
+**Plus un système est intelligent, plus son cadre doit être structuré.** Intégrer l'IA dans PrestaShop ne signifie pas abandonner le contrôle, mais au contraire structurer un cadre de gouvernance robuste.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Principe fondamental"
+   content=takeaway_principle
+   icon="⚖️"
+   variant="important"
+   cite_id="ai-governance-principle"
+%}
+
 ---
 
 ## 1. Pourquoi la gouvernance IA devient incontournable en 2026
@@ -297,6 +309,18 @@ La sécurité IA ne doit pas être ajoutée après coup.
 
 Elle doit être conçue dès l'architecture.
 
+{% capture takeaway_llm_security %}
+**Sécurité LLM (OWASP)** : Ne jamais injecter directement des données sensibles dans un prompt, filtrer les sorties avant écriture en base, isoler les environnements, journaliser les interactions. La sécurité IA doit être conçue dès l'architecture, pas ajoutée après coup.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Sécurité LLM"
+   content=takeaway_llm_security
+   icon="🔐"
+   variant="important"
+   cite_id="llm-security-owasp"
+%}
+
 ---
 
 ### 4.5 Monitoring et dérive
@@ -344,6 +368,37 @@ La gouvernance implique :
 * clauses contractuelles claires
 * cartographie des flux
 * plan de sortie
+
+{% capture takeaway_pillars %}
+Les **6 piliers de gouvernance IA** pour PrestaShop :
+
+1. **Registre des systèmes IA** - Inventaire des systèmes, finalités, responsables
+2. **Gouvernance des données** - Cartographie flux, minimisation, AIPD
+3. **Contrôle humain proportionné** - Feature flags, workflow, override
+4. **Sécurité spécifique IA/LLM** - OWASP, filtrage prompts/sorties, isolation
+5. **Monitoring et dérive** - Métriques, logs, alertes, rollback
+6. **Gestion dépendances fournisseurs** - Analyse risques, clauses contractuelles, plan de sortie
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Les 6 piliers"
+   content=takeaway_pillars
+   icon="🏛️"
+   variant="technical"
+   cite_id="ai-governance-six-pillars"
+%}
+
+{% include contextual-cta.html
+   cta_type="consultation"
+   zone="C"
+   context="Gouvernance IA sur-mesure"
+   title="Construisez votre cadre de gouvernance IA"
+   description="Accompagnement stratégique pour industrialiser l'IA dans votre écosystème PrestaShop."
+   button_text="Échanger sur la gouvernance"
+   button_url="/contact/?subject=Gouvernance%20IA%20PrestaShop"
+   icon="fas fa-shield-alt"
+   variant="emphasis"
+%}
 
 ---
 

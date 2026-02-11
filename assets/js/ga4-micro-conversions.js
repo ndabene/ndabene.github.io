@@ -5,6 +5,7 @@
  * Events tracked:
  * - scroll_depth_75: User scrolled more than 75% of page
  * - internal_cta_click: Click on internal CTAs and links
+ * - internal_navigation: Natural navigation between articles (distinct from CTAs)
  * - engaged_session: Session duration exceeds 90 seconds
  * - code_copy: User copied a code block
  */
@@ -142,7 +143,38 @@
   }
 
   /**
-   * 3. ENGAGED SESSION TRACKING (> 90s)
+   * 3. INTERNAL NAVIGATION TRACKING (ARTICLE TO ARTICLE)
+   * Tracks natural navigation between articles, distinct from CTA clicks
+   */
+  function initInternalNavigationTracking() {
+    document.addEventListener('click', function(e) {
+      const target = e.target.closest('a[href^="/articles/"], a[href^="/blog/"]');
+      if (!target) return;
+
+      // Skip if it's a CTA button (already tracked by internal_cta_click)
+      if (target.classList.contains('cta-button') ||
+          target.classList.contains('btn-primary') ||
+          target.classList.contains('btn-secondary') ||
+          target.classList.contains('contextual-cta-button')) {
+        return;
+      }
+
+      const destinationUrl = target.getAttribute('href');
+      const linkText = target.textContent.trim();
+      const linkLocation = getElementLocation(target);
+
+      trackMicroConversion('internal_navigation', {
+        event_label: 'Article to Article Navigation',
+        link_text: linkText,
+        destination_url: destinationUrl,
+        link_location: linkLocation,
+        value: 0.2
+      });
+    });
+  }
+
+  /**
+   * 4. ENGAGED SESSION TRACKING (> 90s)
    * Tracks when user stays on page for more than 90 seconds
    */
   function initEngagedSessionTracking() {
@@ -161,7 +193,7 @@
   }
 
   /**
-   * 4. CODE COPY TRACKING
+   * 5. CODE COPY TRACKING
    * Tracks when user copies code from code blocks
    */
   function initCodeCopyTracking() {
@@ -248,10 +280,13 @@
     // 2. Track internal CTA clicks
     initInternalCTATracking();
 
-    // 3. Track engaged sessions
+    // 3. Track internal navigation (article to article)
+    initInternalNavigationTracking();
+
+    // 4. Track engaged sessions
     initEngagedSessionTracking();
 
-    // 4. Track code copying
+    // 5. Track code copying
     initCodeCopyTracking();
 
     console.log('GA4 micro-conversion tracking initialized');

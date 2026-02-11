@@ -70,6 +70,18 @@ Le défi technique, c'était la connexion. Comment brancher "le cerveau" (ChatGP
 
 C'est là qu'entre en scène le **Model Context Protocol (MCP)**.
 
+{% capture takeaway_problem %}
+Le commerçant moderne **ne manque pas de données, il manque de clarté**. PrestaShop regorge d'informations, mais leur transformation en décisions business prend du temps précieux.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Le vrai problème"
+   content=takeaway_problem
+   icon="💡"
+   variant="important"
+   cite_id="merchant-clarity-problem"
+%}
+
 ## Partie 2 : Décryptage de l'architecture MCP (Le secret de la fluidité)
 
 Oubliez les API REST classiques où vous devez coder chaque requête (`GET /orders?date=yesterday...`). Avec **MCP**, nous entrons dans l'ère de **l'IA outillée**.
@@ -95,6 +107,18 @@ C'est là qu'intervient **[MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp
 - `analyze_stock_levels` : Pour repérer les urgences logistiques.
 
 C'est cette combinaison **Infrastructure (PrestaShop) + Intelligence (Tools Plus)** qui rend le système surpuissant.
+
+{% include contextual-cta.html
+   cta_type="mcp_trial"
+   zone="B"
+   context="Architecture complète"
+   title="Déployez votre Daily Merchant Morning"
+   description="MCP Server (gratuit) + MCP Tools Plus pour analyses avancées = briefing IA chaque matin."
+   button_text="Accéder à MCP Tools Plus"
+   button_url="/modules/mcp-tools-plus/?utm_source=blog&utm_medium=article-cta&utm_campaign=daily-merchant-zone-b"
+   icon="fas fa-rocket"
+   variant="emphasis"
+%}
 
 ## Partie 3 : La mise en pratique (Votre Workflow n8n)
 
@@ -149,6 +173,18 @@ Regardez le niveau de détail :
 - **KPIs Dynamiques** : Variation de CA, panier moyen.
 - **Analyse Sémantique** : L'IA a écrit : *"Bien, mais pas suffisant. Le volume recule..."*. Elle **interprète** les chiffres !
 - **Actions Prioritaires** : Elle me suggère de *"Booster l'acquisition sur le Top 3"*. Elle devient **force de proposition**.
+
+{% include contextual-cta.html
+   cta_type="consultation"
+   zone="C"
+   context="Architecture n8n personnalisée"
+   title="Besoin d'aide pour votre workflow n8n ?"
+   description="Accompagnement sur l'architecture, les triggers et l'intégration MCP."
+   button_text="Demander un accompagnement"
+   button_url="/contact/?subject=Workflow%20n8n%20PrestaShop"
+   icon="fas fa-hands-helping"
+   variant="standard"
+%}
 
 ## Partie 4 : Vision & Impact Futur 🔮
 
