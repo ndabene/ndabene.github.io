@@ -631,7 +631,7 @@ product:
             Si vous souhaitez échanger sur MCP Tools Plus et comprendre comment l'intégrer dans votre environnement PrestaShop, vous pouvez me contacter via LinkedIn ou le formulaire de contact du site.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://www.linkedin.com/in/nicolasdabene/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold bg-[#0077B5] text-white hover:bg-[#006399] transition flex items-center gap-2">
+            <a href="https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold bg-[#0077B5] text-white hover:bg-[#006399] transition flex items-center gap-2">
                 <i class="fab fa-linkedin"></i>
                 Me contacter sur LinkedIn
             </a>
@@ -708,7 +708,7 @@ product:
                 <h4 class="font-bold mb-4">Support</h4>
                 <ul class="space-y-2 text-white/60">
                     <li><a href="https://addons.prestashop.com/en/contact-us?id_product=96638" target="_blank" rel="noopener" class="hover:text-white transition">Contacter le Support</a></li>
-                    <li><a href="https://www.linkedin.com/in/nicolasdabene/" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fab fa-linkedin text-xs"></i>LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/nicolas-dab%C3%A8ne-473a43b8/" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fab fa-linkedin text-xs"></i>LinkedIn</a></li>
                     <li><a href="/contact" class="hover:text-white transition">Formulaire de contact</a></li>
                 </ul>
                 <div class="mt-6">
