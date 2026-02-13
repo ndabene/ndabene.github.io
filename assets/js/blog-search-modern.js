@@ -406,12 +406,12 @@
 
     // Initialize modern search
     function initializeModernSearch() {
-        const searchInput = document.getElementById('search-input');
+        const pageSearchInput = document.getElementById('search-input');
         const clearSearchBtn = document.getElementById('clear-search');
         const noResultsDiv = document.getElementById('no-results');
         const filteredCountSpan = document.getElementById('filtered-count');
 
-        if (!searchInput) return;
+        if (!pageSearchInput) return;
 
         // Load search history
         loadSearchHistory();
@@ -421,6 +421,7 @@
 
         // Create suggestions modal
         let suggestionsModal = document.getElementById('search-modal');
+        let modalSearchInput = null;
 
         if (!suggestionsModal) {
             suggestionsModal = document.createElement('div');
@@ -429,148 +430,148 @@
             suggestionsModal.innerHTML = `
                 <div class="search-modal-overlay"></div>
                 <div class="search-modal-box">
-                    <button class="search-modal-close" aria-label="Fermer">
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <div class="search-modal-header">
+                        <i class="fas fa-search search-modal-icon"></i>
+                        <input type="text" class="search-modal-input" placeholder="Rechercher un article, un outil..." autocomplete="off">
+                        <button class="search-modal-close" aria-label="Fermer">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                     <div class="search-modal-content"></div>
                 </div>
             `;
             document.body.appendChild(suggestionsModal);
 
+            modalSearchInput = suggestionsModal.querySelector('.search-modal-input');
+
+            // Close modal functions
+            const closeModal = () => {
+                suggestionsModal.classList.remove('active');
+                // Sync value back to page input (visual only)
+                // pageSearchInput.value = modalSearchInput.value; 
+            };
+
             // Close modal on overlay click
             const overlay = suggestionsModal.querySelector('.search-modal-overlay');
-            overlay.addEventListener('click', () => {
-                suggestionsModal.classList.remove('active');
-            });
+            overlay.addEventListener('click', closeModal);
 
             // Close modal on close button click
             const closeBtn = suggestionsModal.querySelector('.search-modal-close');
-            closeBtn.addEventListener('click', () => {
-                suggestionsModal.classList.remove('active');
-            });
+            closeBtn.addEventListener('click', closeModal);
 
             // Close modal on Escape key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && suggestionsModal.classList.contains('active')) {
-                    suggestionsModal.classList.remove('active');
+                    closeModal();
                 }
             });
-        }
 
-        // Debounced search function
-        const debouncedSearch = debounce((value) => {
-            // Load lazy posts if searching (ensures all posts are searchable)
-            if (value.trim().length >= 2) {
-                loadLazyPostsForSearch();
-                // Rebuild index if lazy posts were just loaded
-                if (lazyPostsLoadedForSearch && searchIndex.length < document.querySelectorAll('.post-preview-wrapper').length) {
-                    buildSearchIndex();
-                }
-            }
-
-            const visibleCount = performFuzzySearch(value);
-
-            // Update UI
-            if (filteredCountSpan) {
-                filteredCountSpan.textContent = `(${visibleCount})`;
-            }
-
-            if (noResultsDiv) {
-                noResultsDiv.style.display = visibleCount === 0 && value.length > 0 ? 'flex' : 'none';
-            }
-
-            // Update pagination
-            if (window.blogPaginationUpdate) {
-                window.blogPaginationUpdate();
-            }
-
-            // Save to history if results found
-            if (visibleCount > 0 && value.trim().length >= 2) {
-                saveSearchHistory(value.trim());
-            }
-        }, CONFIG.DEBOUNCE_DELAY);
-
-        // Debounced suggestions
-        const debouncedSuggestions = debounce((input) => {
-            // Load lazy posts if user is typing for suggestions
-            const value = input.value.trim();
-            if (value.length >= 2) {
-                loadLazyPostsForSearch();
-                // Rebuild index if lazy posts were just loaded
-                if (lazyPostsLoadedForSearch && searchIndex.length < document.querySelectorAll('.post-preview-wrapper').length) {
-                    buildSearchIndex();
-                }
-            }
-            showSearchSuggestions(input, suggestionsModal);
-        }, 150);
-
-        // Search input handler
-        searchInput.addEventListener('input', function () {
-            const value = this.value.trim();
-
-            if (clearSearchBtn) {
-                clearSearchBtn.style.display = value ? 'flex' : 'none';
-            }
-
-            debouncedSearch(value);
-            debouncedSuggestions(this);
-        });
-
-        // Focus handler - show suggestions modal
-        searchInput.addEventListener('focus', function () {
-            if (suggestionsModal) {
-                debouncedSuggestions(this);
-            }
-        });
-
-        // Click handler for suggestions in modal
-        if (suggestionsModal) {
+            // Click handler for suggestions in modal
             suggestionsModal.addEventListener('click', function (e) {
                 const suggestion = e.target.closest('.search-suggestion');
                 if (suggestion) {
-                    // Si c'est un lien vers un article, laisser la navigation se faire naturellement
+                    // Si lien article
                     if (suggestion.dataset.url) {
-                        suggestionsModal.classList.remove('active');
-                        // La navigation se fera via le href du <a>
+                        closeModal();
                         return;
                     }
-                    // Sinon, pour les recherches récentes, remplir l'input
+                    // Si historique
                     const query = suggestion.dataset.query;
                     if (query) {
-                        searchInput.value = query;
-                        searchInput.dispatchEvent(new Event('input'));
-                        suggestionsModal.classList.remove('active');
-                        searchInput.focus();
+                        modalSearchInput.value = query;
+                        modalSearchInput.dispatchEvent(new Event('input'));
+                        modalSearchInput.focus();
                     }
                 }
             });
+        } else {
+            modalSearchInput = suggestionsModal.querySelector('.search-modal-input');
         }
 
-        // Clear search button
+        // Open Modal Function
+        const openSearchModal = () => {
+            // Load lazy posts when opening (ensure index is ready)
+            loadLazyPostsForSearch();
+            if (lazyPostsLoadedForSearch && searchIndex.length < document.querySelectorAll('.post-preview-wrapper').length) {
+                buildSearchIndex();
+            }
+
+            suggestionsModal.classList.add('active');
+
+            // Sync value from page input if any
+            if (pageSearchInput.value.trim()) {
+                modalSearchInput.value = pageSearchInput.value;
+                // Trigger search immediately
+                modalSearchInput.dispatchEvent(new Event('input'));
+            } else {
+                // Show history/initial state
+                showSearchSuggestions(modalSearchInput, suggestionsModal);
+            }
+
+            setTimeout(() => modalSearchInput.focus(), 50);
+        };
+
+        // Debounced search logic (inside modal)
+        const debouncedModalSearch = debounce((input) => {
+            const value = input.value.trim();
+
+            // 1. Update/Filter Page Content (optional, but good for "Spotlight" feel if visible behind)
+            // performFuzzySearch(value); 
+            // We might want to DISABLE page filtering if the modal is covering everything
+            // For now let's keep it disconnected or basic
+
+            // 2. Show Results in Modal (Primary)
+            showSearchSuggestions(input, suggestionsModal);
+
+            // Save history handled inside showSearchSuggestions or manually?
+            // Existing showSearchSuggestions uses Fuse results.
+
+            // Save to history if valid search
+            if (value.length >= 2) {
+                saveSearchHistory(value);
+            }
+
+        }, 150);
+
+        // Modal Input Listener
+        if (modalSearchInput) {
+            modalSearchInput.addEventListener('input', function () {
+                debouncedModalSearch(this);
+            });
+        }
+
+        // Page Input Listeners - Now act as triggers
+        pageSearchInput.addEventListener('focus', function (e) {
+            e.preventDefault();
+            this.blur(); // Remove focus from page input
+            openSearchModal();
+        });
+
+        pageSearchInput.addEventListener('click', function (e) {
+            e.preventDefault();
+            openSearchModal();
+        });
+
+        // Clear button on page - just clears page input
         if (clearSearchBtn) {
-            clearSearchBtn.addEventListener('click', function () {
-                searchInput.value = '';
-                searchInput.dispatchEvent(new Event('input'));
-                searchInput.focus();
+            clearSearchBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                pageSearchInput.value = '';
+                // Also clear modal?
+                if (modalSearchInput) modalSearchInput.value = '';
             });
         }
 
         // Keyboard shortcuts
         document.addEventListener('keydown', function (e) {
-            // "/" to focus search
-            if (e.key === '/' && !isInputFocused()) {
+            // "/" or Ctrl+K to open search
+            if ((e.key === '/' && !isInputFocused()) || ((e.ctrlKey || e.metaKey) && e.key === 'k')) {
                 e.preventDefault();
-                searchInput.focus();
-            }
-
-            // Ctrl/Cmd + K to focus search
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                searchInput.focus();
+                openSearchModal();
             }
         });
 
-        console.log('🚀 Recherche moderne initialisée (raccourcis: / ou Ctrl+K)');
+        console.log('🚀 Recherche moderne initialisée (Modal Mode)');
     }
 
     // Helper to check if input is focused

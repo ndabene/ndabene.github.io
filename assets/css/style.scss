@@ -8,7 +8,8 @@
 // Les couleurs critiques sont maintenant dans critical-css inline
 
 // Base font rendering - pas de forçage agressif
-html, body {
+html,
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -44,6 +45,7 @@ html, body {
 @import "components/_external-publications.scss";
 @import "components/_project-cards-modern.scss";
 @import "modern-enhancements"; // AMÉLIORATIONS VISUELLES MODERNES 2025
+@import "blog-homepage-alignment"; // HOMEPAGE VISUAL ALIGNMENT FOR BLOG + POST (FR/EN)
 
 /* SALES CTA BLOCK - Lemon Squeezy Enhanced Sales Block */
 .sales-cta-block {
@@ -140,9 +142,22 @@ html, body {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-5px); }
-  60% { transform: translateY(-3px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-3px);
+  }
 }
 
 .sales-stats {
@@ -178,9 +193,17 @@ html, body {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
-  50% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5); }
-  100% { box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3); }
+  0% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  }
 }
 
 .cta-button-wrapper {
@@ -519,12 +542,16 @@ html, body {
 }
 
 @keyframes float-bubble {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
+
   33% {
     transform: translate(50px, -50px) rotate(120deg);
   }
+
   66% {
     transform: translate(-50px, 50px) rotate(240deg);
   }
@@ -535,4 +562,5 @@ html, body {
   .bubble-element {
     display: none;
   }
-} 
+}
+
