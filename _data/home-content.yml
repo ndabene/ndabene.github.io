@@ -6,8 +6,8 @@
 # ============================================
 hero:
   title: "AI-Native E-commerce"
-  subtitle: "J'aide l'e-commerce à devenir AI-native avec PrestaShop"
-  description: "Architecte de la transition AI-native du e-commerce. 5 PrestaShop Awards, 100k+ installations, 15 ans d'expertise — je conçois les architectures e-commerce pilotées par des agents IA."
+  subtitle: "J'architecture la transition AI-native de l'e-commerce PrestaShop"
+  description: "Je rends compréhensible une transformation complexe : intégrer des agents IA au cœur du e-commerce. 15 ans d'expertise, 5 PrestaShop Awards, 100k+ installations."
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
@@ -32,8 +32,8 @@ value_proposition:
       title: "Automatisation intelligente"
       description: "Stocks, contenu, pricing, reporting — orchestrés par l'IA"
     - icon: "fas fa-puzzle-piece"
-      title: "Architecture PrestaShop complexe"
-      description: "30 modules, 100k+ installs, architecture Symfony moderne"
+      title: "Maîtrise de l'écosystème PrestaShop"
+      description: "30 modules, 100k+ installations, 15 ans d'expertise terrain"
     - icon: "fas fa-chart-line"
       title: "Gouvernance agents IA"
       description: "Pilotage et supervision des agents IA en production"
@@ -82,7 +82,7 @@ ecosystem:
 # ============================================
 blog_featured:
   title: "Derniers articles & analyses"
-  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, le développement PrestaShop, le protocole MCP et les bonnes pratiques e-commerce."
+  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, l'architecture e-commerce PrestaShop, le protocole MCP et la transformation AI-native."
   limit: 3
   cta:
     text: "Voir tous les articles"
@@ -93,7 +93,7 @@ blog_featured:
 # ============================================
 about:
   title: "À propos"
-  content: "Architecte de la transition AI-native du e-commerce depuis plus de 15 ans sur l'écosystème PrestaShop. La majorité des boutiques sont encore pensées pour des humains — je les prépare pour un monde piloté par des agents IA. De l'automatisation des processus métier à la gouvernance algorithmique, je conçois des architectures e-commerce qui intègrent l'IA dès leur fondation."
+  content: "Architecte de la transition AI-native du e-commerce depuis plus de 15 ans sur l'écosystème PrestaShop. Mon rôle : rendre compréhensible et actionnable une transformation complexe. La majorité des boutiques sont encore pensées pour des humains — je les prépare pour un monde piloté par des agents IA. De l'automatisation des processus métier à la gouvernance algorithmique, je conçois des architectures qui intègrent l'IA dès leur fondation."
   cta:
     text: "En savoir plus"
     url: "/a-propos/"
