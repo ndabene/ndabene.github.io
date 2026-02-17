@@ -56,6 +56,10 @@ faq:
     per user) subscriptions.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Changes in LLM usage policies indirectly impact AI agents deployed in e-commerce. Here's a strategic turning point from OpenAI.
+</aside>
+
 # ChatGPT Opens Up to Erotic Conversations: A Bold Turn by OpenAI
 
 Imagine for a moment: you're chatting casually with your voice assistant, and it's capable of understanding not only your professional needs, but also your most intimate emotions. Science fiction? Not anymore. In December 2025, ChatGPT will cross a new frontier by allowing exchanges of an erotic nature with its adult users. This decision, which would have seemed unthinkable just a few months ago, marks a major turning point in the history of conversational artificial intelligence.

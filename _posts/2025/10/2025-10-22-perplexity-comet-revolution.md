@@ -57,6 +57,9 @@ faq:
     volumineuses pour tourner entièrement en local.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les navigateurs IA sont le prochain point de contact entre vos produits et vos clients. Comprendre Perplexity Comet, c'est anticiper le commerce de demain.
+</aside>
 
 # Perplexity Comet 2025 : Quand Votre Navigateur Devient Votre Assistant Intelligent
 

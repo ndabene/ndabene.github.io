@@ -56,6 +56,9 @@ faq:
     Both are complementary.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+AI-powered content creation is a direct lever for e-commerce marketing. Which model produces the best results for your product pages and visuals?
+</aside>
 
 # Gemini Canvas vs GPT-5: Which Creates the Best Presentation?
 

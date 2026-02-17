@@ -38,6 +38,10 @@ keywords:
 published: true
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Exploration — Comprendre comment la culture internet évolue aide à anticiper les comportements d'achat et les usages du e-commerce de demain.
+</aside>
+
 ## Introduction : Bienvenue dans l'Ère du « Brainrot »
 
 Avez-vous déjà eu cette étrange sensation en faisant défiler votre fil d'actualité, tombant sur une vidéo de têtes humaines sortant de toilettes dans Skibidi Toilet, ou sur des mèmes absurdes de la mouvance « Italian Brainrot », peuplés de personnages comme Tralalero Tralala, un requin en baskets, ou Bombardino Crocodilo, un crocodile militarisé ? Si c'est le cas, vous avez fait l'expérience de ce que l'on appelle la culture « brainrot » ou « pourriture cérébrale », un terme qui évoque un déclin cognitif face à un flux incessant de contenu trivial.

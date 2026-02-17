@@ -63,6 +63,10 @@ faq:
   answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Technical note — This guide comes from my experience building this very site. It illustrates a skill adjacent to my core work as an AI-native e-commerce architect.
+</aside>
+
 ## Introduction
 
 Imagine you're a digital craftsman. You create beautiful applications, elegant websites, or innovative designs. But here's the problem: all these masterpieces remain hidden in your computer, like paintings in a dusty attic. How do you show them to the world? How do you prove your expertise to a recruiter or attract new clients?

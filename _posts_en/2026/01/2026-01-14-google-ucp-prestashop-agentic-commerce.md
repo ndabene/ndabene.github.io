@@ -13,6 +13,13 @@ keywords: [Google UCP, Universal Commerce Protocol, PrestaShop AI, Agentic Comme
 difficulty: "Intermediate"
 technologies: ["JSON Schema", "REST API", "MCP", "PrestaShop Hooks"]
 published: true
+llm_summary: "Analysis of Google's Universal Commerce Protocol and its impact on AI-native e-commerce — when AI agents buy directly from PrestaShop stores."
+llm_topics:
+- google ucp
+- universal commerce protocol
+- agentic commerce
+- ai-native e-commerce
+- prestashop ai agents
 ---
 
 How many times have you had to develop (or purchase) a specific module to connect PrestaShop to a marketplace? One for Amazon, one for Cdiscount, another for Google Shopping...

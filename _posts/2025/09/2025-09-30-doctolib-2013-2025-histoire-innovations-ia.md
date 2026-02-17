@@ -54,6 +54,9 @@ faq:
     et Team (30$/mois par utilisateur).
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Doctolib est un cas d'école de transformation numérique réussie par l'IA. Les leçons pour le e-commerce sont nombreuses et concrètes.
+</aside>
 
 Doctolib est devenue en à peine douze ans l'une des success stories les plus remarquables de la French Tech, transformant radicalement la manière dont les Français prennent leurs rendez-vous médicaux. Retour sur l'épopée d'une startup qui a su révolutionner le secteur de la santé numérique.
 

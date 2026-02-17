@@ -4,7 +4,7 @@
 intelligence-artificielle:
   name: "Intelligence Artificielle"
   icon: "fa-robot"
-  description: "IA générative, développement assisté et outils IA"
+  description: "IA générative pour le e-commerce, développement assisté et agents IA"
   subcategories:
     - key: "fondamentaux-ia"
       name: "Fondamentaux IA"
@@ -49,7 +49,7 @@ prestashop-ecommerce:
 developpement-web:
   name: "Développement Web"
   icon: "fa-code"
-  description: "Langages, frameworks et architecture"
+  description: "Langages et architectures au service du e-commerce AI-native"
   subcategories:
     - key: "langages-frameworks"
       name: "Langages & Frameworks"
@@ -73,7 +73,7 @@ developpement-web:
 automatisation:
   name: "Automatisation & Intégration"
   icon: "fa-cogs"
-  description: "MCP, n8n et workflows automatisés"
+  description: "MCP Protocol pour l'e-commerce, workflows IA et automatisation intelligente"
   subcategories:
     - key: "mcp-protocol"
       name: "MCP Protocol"
@@ -88,7 +88,7 @@ automatisation:
 securite:
   name: "Sécurité & Cybersécurité"
   icon: "fa-shield-alt"
-  description: "Menaces, compliance et bonnes pratiques"
+  description: "Sécurité des agents IA, compliance et protection e-commerce"
   subcategories:
     - key: "menaces-vulnerabilites"
       name: "Menaces & Vulnérabilités"
@@ -103,7 +103,7 @@ securite:
 strategie-marche:
   name: "Stratégie & Marché"
   icon: "fa-chart-line"
-  description: "Business, carrière et analyses de marché"
+  description: "Vision stratégique, gouvernance IA et évolution du e-commerce"
   subcategories:
     - key: "strategie-metier"
       name: "Stratégie Métier"
@@ -121,7 +121,7 @@ strategie-marche:
 seo-marketing:
   name: "SEO & Marketing"
   icon: "fa-search"
-  description: "Référencement et performance marketing"
+  description: "GEO, SEO et visibilité dans les moteurs IA"
   subcategories:
     - key: "seo-technique"
       name: "SEO Technique"
@@ -133,7 +133,7 @@ seo-marketing:
 tutoriels:
   name: "Tutoriels & Guides"
   icon: "fa-book"
-  description: "Guides pratiques et pas-à-pas"
+  description: "Guides pratiques : MCP, PrestaShop et IA appliquée"
   subcategories:
     - key: "configuration"
       name: "Configuration"
@@ -148,7 +148,7 @@ tutoriels:
 retrospectives:
   name: "Rétrospectives & Analyses"
   icon: "fa-calendar-alt"
-  description: "Bilans annuels et analyses approfondies"
+  description: "Bilans stratégiques, rétrospectives et analyses de fond"
   subcategories:
     - key: "retrospectives-annuelles"
       name: "Rétrospectives Annuelles"

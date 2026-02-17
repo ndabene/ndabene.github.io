@@ -51,6 +51,10 @@ faq:
     per user) subscriptions.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Doctolib is a textbook case of successful AI-driven digital transformation. The lessons for e-commerce are numerous and concrete.
+</aside>
+
 Doctolib has become in barely twelve years one of French Tech's most remarkable success stories, radically transforming how French people make their medical appointments. Look back at the epic of a startup that revolutionized the digital health sector.
 
 ## Origins: A Vision Born from Experience

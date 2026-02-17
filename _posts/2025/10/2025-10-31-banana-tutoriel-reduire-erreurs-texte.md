@@ -56,6 +56,9 @@ faq:
     pas.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+La qualité du contenu textuel est un facteur clé pour le GEO et le e-commerce. Cet outil contribue à produire des fiches produits plus fiables.
+</aside>
 
 # 🍌 TUTORIEL — Comment réduire les erreurs de texte dans Banana (sans promettre l'impossible)
 

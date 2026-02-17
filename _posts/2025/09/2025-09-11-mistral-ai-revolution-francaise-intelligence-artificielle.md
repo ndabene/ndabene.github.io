@@ -56,6 +56,9 @@ faq:
     et Team (30$/mois par utilisateur).
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+L'écosystème IA européen est crucial pour le futur du e-commerce souverain. Mistral AI joue un rôle central dans cette dynamique.
+</aside>
 
 # Mistral AI : L'Histoire d'une Révolution Française de l'Intelligence Artificielle (2023-2025)
 

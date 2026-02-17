@@ -67,6 +67,13 @@ sources:
 - https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/saas-customers/provider-guides/shopify/
 - https://help-center.prestashop.com/hc/en-us/articles/16417637123602-Configure-Cloudflare-on-PS-Hosting
 - https://prestahero.com/blog/post/122-how-to-prevent-spam-and-bots-with-captcha-recaptcha-module.html
+llm_summary: "Analyse documentée montrant pourquoi PrestaShop + Cloudflare offre un avantage structurel sur Shopify pour la protection contre le trafic bot et la fiabilité des analytics e-commerce."
+llm_topics:
+- shopify bot traffic
+- prestashop vs shopify
+- cloudflare e-commerce
+- analytics fiabilité
+- ai-native e-commerce protection
 ---
 
 

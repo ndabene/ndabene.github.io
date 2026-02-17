@@ -60,6 +60,9 @@ description: Analyse de l'évolution du marché 'Back to School' de 172,3 millia
   traditionnel vers l'e-commerce.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Comprendre l'histoire du commerce, c'est anticiper comment l'IA va le transformer. Ce recul historique éclaire les mutations que nous vivons aujourd'hui dans le e-commerce AI-native.
+</aside>
 
 L'événement commercial "Back to School" représente aujourd'hui le deuxième plus important marché de vente au détail mondial, avec un chiffre d'affaires de **172,3 milliards de dollars en 2024** et une projection de **230,1 milliards de dollars d'ici 2030**.
 

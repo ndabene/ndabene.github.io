@@ -79,6 +79,13 @@ sources:
   url: https://www.perplexity.ai
   organization: Perplexity AI
   type: Report
+llm_summary: "Complete framework for measuring Generative Engine Optimization impact on e-commerce — metrics, tools and KPIs adapted for online stores."
+llm_topics:
+- generative engine optimization
+- geo measurement
+- ai seo
+- e-commerce geo
+- prestashop ai visibility
 ---
 
 # The Definitive Guide to Measuring GEO: From SEO Rankings to AI Influence

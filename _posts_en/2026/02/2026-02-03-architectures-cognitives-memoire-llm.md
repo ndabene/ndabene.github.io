@@ -15,6 +15,10 @@ technologies: ["LLM", "MIRROR", "Engram", "Transformers", "MoE"]
 published: true
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Advances in LLM memory and reasoning directly impact the capabilities of AI agents deployed in e-commerce.
+</aside>
+
 ## When AI Forgets Your Name Three Messages Later
 
 Have you ever had that frustrating conversation with ChatGPT or Claude? You mention an important detail at the beginning, then after a few exchanges with tangential questions, the model seems to have completely forgotten what you said. Or worse: it changes its mind based on your tone, telling you what you want to hear rather than the truth.

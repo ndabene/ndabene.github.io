@@ -43,6 +43,10 @@ keywords:
 source: "Technology Market Analysis 2026"
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Analysis note — Tensions in the memory market affect AI infrastructure costs and, by extension, AI-native e-commerce architectures.
+</aside>
+
 # Global Strategic Analysis: Structural Tensions in the RAM and Storage Market in 2026
 
 ## 1. Introduction: The End of Traditional Cycles and the Advent of the AI-Centric Era

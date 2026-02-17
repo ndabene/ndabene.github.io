@@ -34,6 +34,13 @@ technologies:
 - HTML
 estimated_reading_time: 12 minutes
 lang: fr
+llm_summary: "Comment automatiser un briefing stratégique matinal pour marchand e-commerce avec n8n, MCP et GPT-4 connectés à PrestaShop — le Daily Merchant Morning 100% automatisé."
+llm_topics:
+- automatisation e-commerce
+- daily merchant morning
+- n8n prestashop
+- mcp protocol
+- ai-native commerce
 ---
 
 

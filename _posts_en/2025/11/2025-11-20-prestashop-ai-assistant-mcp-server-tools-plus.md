@@ -44,6 +44,13 @@ technologies:
 - ChatGPT
 - Brevo
 - Qonto
+llm_summary: "Introduction to MCP Tools Plus, the platform connecting AI directly to the PrestaShop back-office for automated e-commerce operations via the MCP protocol."
+llm_topics:
+- mcp tools plus
+- mcp server prestashop
+- prestashop ai automation
+- ai-native e-commerce
+- ai agents back-office
 faq:
 - question: What is the MCP protocol?
   answer: MCP (Model Context Protocol) is an open-source protocol created by Anthropic
