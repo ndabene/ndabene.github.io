@@ -1,20 +1,21 @@
 ---
 layout: page
 title: Contact Me
-description: "Contact Nicolas Dabène for your projects, collaborations or technical
-  consultations."
-keywords: "contact php developer, prestashop expert, ai orchestrator consultant,
-  technical consultation, freelance developer"
+description: "Contact Nicolas Dabène for AI-native transformation projects,
+  e-commerce AI architecture or AI agent governance."
+keywords: "contact ai ecommerce architect, ai-native transformation prestashop,
+  ai agent governance, ecommerce ai architecture, ai commerce consultant"
 permalink: /en/contact/
 lang: en
-llm_summary: Contact Nicolas Dabène for your projects, collaborations or
-  technical consultations.
+llm_summary: Contact Nicolas Dabène, architect of the AI-native transition for
+  PrestaShop e-commerce, for AI transformation projects, e-commerce architecture
+  and AI agent governance.
 llm_topics:
-- contact php developer
-- prestashop expert
-- ai orchestrator consultant
-- technical consultation
-- freelance developer
+- contact ai ecommerce architect
+- ai-native transformation prestashop
+- ai agent governance
+- ecommerce ai architecture
+- ai commerce consultant
 ---
 <section class="contact-section">
     <div class="container">
@@ -26,16 +27,16 @@ llm_topics:
             <div class="contact-columns">
                 <div class="contact-services">
                     <div class="service-card">
-                        <h3>Freelance Project</h3>
-                        <p>Development, integration, optimization projects</p>
+                        <h3>AI-Native Transformation</h3>
+                        <p>E-commerce architecture driven by AI agents</p>
                     </div>
                     <div class="service-card">
-                        <h3>Training</h3>
-                        <p>AI, PrestaShop, advanced PHP training sessions</p>
+                        <h3>E-commerce AI Architecture</h3>
+                        <p>AI integration into PrestaShop, intelligent automation</p>
                     </div>
                     <div class="service-card">
-                        <h3>Consulting</h3>
-                        <p>Technical audit, architecture, strategy</p>
+                        <h3>AI Agent Governance</h3>
+                        <p>Supervision, audit and strategy for AI agents in production</p>
                     </div>
                 </div>
                 <div class="contact-form-container card">
@@ -52,9 +53,9 @@ llm_topics:
                         <label for="contact-type">Request type:</label>
                         <select id="contact-type" name="contact_type" required>
                             <option value="" disabled selected>Choose...</option>
-                            <option>Freelance Project</option>
-                            <option>Training</option>
-                            <option>Consulting</option>
+                            <option>AI-Native Transformation</option>
+                            <option>E-commerce AI Architecture</option>
+                            <option>AI Agent Governance</option>
                         </select>
                     </div>
                     <div class="form-group">
