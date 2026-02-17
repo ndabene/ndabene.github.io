@@ -44,6 +44,9 @@ keywords:
 published: true
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les progrès en mémoire et raisonnement des LLM impactent directement les capacités des agents IA déployés en e-commerce.
+</aside>
 
 ## Quand l'IA Oublie Votre Prénom Trois Messages Plus Tard
 

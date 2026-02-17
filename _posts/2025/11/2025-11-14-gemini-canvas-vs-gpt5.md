@@ -58,7 +58,9 @@ faq:
     mise en place.
 ---
 
-
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+La création de contenu par IA est un levier direct pour le marketing e-commerce. Quel modèle produit les meilleurs résultats pour vos fiches et visuels ?
+</aside>
 
 # Gemini Canvas vs GPT-5 : qui crée la meilleure présentation ?
 

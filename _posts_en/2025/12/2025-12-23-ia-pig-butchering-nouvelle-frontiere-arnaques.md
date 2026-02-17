@@ -28,6 +28,10 @@ technologies:
 estimated_reading_time: 15 minutes
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+AI-powered scams also target e-commerce merchants and their customers. Understanding social engineering techniques is essential to protect your business.
+</aside>
+
 # AI, Pig Butchering, and the New Frontier of Scams: Why Scammers Are Becoming Developers
 
 ## Introduction: When AI Orchestration Becomes a Weapon

@@ -42,6 +42,10 @@ keywords:
 published: true
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+La supply chain JavaScript impacte directement l'écosystème e-commerce. Ce ver illustre un risque réel pour les modules PrestaShop et les boutiques en ligne.
+</aside>
+
 ## Introduction : Bienvenue dans l'Ère des Attaques de Supply Chain
 
 Dans l'univers de Frank Herbert, Shai-Hulud est le nom donné aux vers des sables géants de la planète Arrakis, des créatures légendaires qui dévorent tout sur leur passage. En 2025, ce nom a pris une nouvelle signification inquiétante dans le monde de la cybersécurité : celle d'un ver malveillant sophistiqué qui dévore non pas du sable, mais des données sensibles dans l'écosystème JavaScript.

@@ -46,6 +46,9 @@ faq:
     MCP pour accéder à des données externes.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Quand on déploie des agents IA connectés à des données e-commerce sensibles, la sécurité des conversations n'est pas optionnelle. Voici un cas d'école.
+</aside>
 
 # Quand l'IA devient un danger : 370 000 conversations privées exposées par erreur
 

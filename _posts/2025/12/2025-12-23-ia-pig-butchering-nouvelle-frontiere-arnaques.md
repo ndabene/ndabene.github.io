@@ -36,6 +36,9 @@ estimated_reading_time: 15 minutes
 lang: fr
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les arnaques par IA ciblent aussi les e-commerçants et leurs clients. Comprendre les techniques d'ingénierie sociale est essentiel pour protéger votre activité.
+</aside>
 
 # L'IA, le Pig Butchering et la Nouvelle Frontière des Arnaques : Pourquoi les Arnaqueurs Deviennent des Développeurs
 

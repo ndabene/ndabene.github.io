@@ -46,6 +46,10 @@ faq:
     to access external data.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+When AI agents interact with your store's customers, personal data management becomes both a business and legal imperative.
+</aside>
+
 # AI Chatbots Induce Users to Share 12 Times More Personal Data
 
 Two international studies sound the alarm: AI-based chatbots and browsing assistants push internet users to disclose sensitive information at unprecedented levels.

@@ -53,6 +53,10 @@ faq:
     locally.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+AI-powered browsers are the next point of contact between your products and your customers. Understanding Perplexity Comet means anticipating tomorrow's commerce.
+</aside>
+
 # Perplexity Comet 2025: When Your Browser Becomes Your Intelligent Assistant
 
 Imagine for a moment that your web browser truly understands what you're looking for. No more juggling fifteen open tabs to compare prices, manually copying information from one site to another, or wasting twenty minutes planning a simple trip. This is exactly what Perplexity Comet offers, a browser that doesn't just display web pages, but thinks and acts with you.

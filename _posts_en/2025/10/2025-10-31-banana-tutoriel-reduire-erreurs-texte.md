@@ -51,6 +51,10 @@ faq:
   answer: Yes, this guide is designed to be accessible with step-by-step explanations.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Text content quality is a key factor for GEO and e-commerce. This tool helps produce more reliable product descriptions.
+</aside>
+
 # 🍌 TUTORIAL — How to Reduce Text Errors in Banana (Without Promising the Impossible)
 
 ---

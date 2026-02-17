@@ -69,6 +69,9 @@ faq:
     pas.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Note technique — Ce guide est issu de mon expérience de création de ce site. Il illustre une compétence adjacente à mon métier d'architecte e-commerce AI-native.
+</aside>
 
 ## Introduction
 

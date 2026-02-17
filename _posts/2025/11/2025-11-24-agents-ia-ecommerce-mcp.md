@@ -30,6 +30,13 @@ technologies:
 - Claude
 - ChatGPT
 estimated_reading_time: 15 minutes
+llm_summary: "Comment des agents IA connectés via le protocole MCP transforment la gestion quotidienne d'une boutique PrestaShop — rapports automatisés, promotions intelligentes, analyses en langage naturel."
+llm_topics:
+- agents ia ecommerce
+- mcp protocol prestashop
+- automatisation e-commerce
+- ai-native commerce
+- prestashop ia
 faq:
 - question: Qu'est-ce que le PS MCP Server ?
   answer: Le PS MCP Server est le pont essentiel entre l'IA et votre boutique PrestaShop.

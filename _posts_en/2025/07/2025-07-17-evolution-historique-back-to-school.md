@@ -57,6 +57,10 @@ faq:
     per user) subscriptions.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Understanding the history of commerce means anticipating how AI will transform it. This historical perspective sheds light on the shifts we're experiencing today in AI-native e-commerce.
+</aside>
+
 The "Back to School" commercial event now represents the world's second-largest retail market, with revenue of **$172.3 billion in 2024** and a projection of **$230.1 billion by 2030**.
 
 ## The Historical Roots of a Commercial Phenomenon

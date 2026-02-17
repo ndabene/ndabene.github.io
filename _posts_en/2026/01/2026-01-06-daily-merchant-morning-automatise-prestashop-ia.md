@@ -29,6 +29,13 @@ technologies:
 - Model Context Protocol (MCP)
 - HTML
 estimated_reading_time: 12 minutes
+llm_summary: "How to automate a daily strategic briefing for e-commerce merchants with n8n, MCP and GPT-4 connected to PrestaShop — the fully automated Daily Merchant Morning."
+llm_topics:
+- e-commerce automation
+- daily merchant morning
+- n8n prestashop
+- mcp protocol
+- ai-native commerce
 ---
 
 It's 7:55 AM. You have your coffee in hand. You open your computer, log into your PrestaShop back office.

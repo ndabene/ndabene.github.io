@@ -45,6 +45,10 @@ faq:
     to access external data.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+System prompt security is a critical concern for any AI agent deployed in production, including e-commerce. This Grok case illustrates the real risks.
+</aside>
+
 The recent accidental exposure of Grok's internal system prompts, xAI's chatbot, perfectly illustrates why generative AI system security cannot be taken lightly. As a developer working daily with AI APIs, this breach reminds me of the crucial importance of security best practices.
 
 ## Introduction

@@ -49,6 +49,9 @@ faq:
     MCP pour accéder à des données externes.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Quand des agents IA interagissent avec les clients de votre boutique, la gestion des données personnelles devient un enjeu business et légal majeur.
+</aside>
 
 # Les chatbots IA incitent les utilisateurs à partager 12 fois plus de données personnelles
 

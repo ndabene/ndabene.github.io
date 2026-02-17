@@ -44,6 +44,10 @@ faq:
     It accelerates work.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Every new AI model redefines what's possible for e-commerce. Gemini 3.0 introduces agentic capabilities that change the game for online stores.
+</aside>
+
 # Google Gemini 3.0: The AI Revolutionizing Our Daily Lives in 2025
 
 Imagine a digital assistant capable of understanding a video in real-time, reasoning about complex problems like an expert, and automating your daily tasks with near-human intelligence. This is no longer science fiction: it's Google Gemini 3.0, the third generation of Google's artificial intelligence that's about to radically transform how we work, learn, and create.

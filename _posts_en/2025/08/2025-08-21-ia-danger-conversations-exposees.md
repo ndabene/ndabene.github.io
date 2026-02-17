@@ -44,6 +44,10 @@ faq:
     to access external data.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+When deploying AI agents connected to sensitive e-commerce data, conversation security is not optional. Here's a case study worth understanding.
+</aside>
+
 # When AI Becomes a Danger: 370,000 Private Conversations Exposed by Error
 
 Imagine your most private conversations with your voice assistant suddenly becoming visible on Google. That's exactly what just happened to hundreds of thousands of users of Grok, Elon Musk's chatbot. More than 370,000 confidential conversations were accidentally made public and indexed by search engines, creating an unprecedented situation in the world of artificial intelligence.
