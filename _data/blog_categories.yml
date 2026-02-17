@@ -28,7 +28,7 @@ intelligence-artificielle:
 prestashop-ecommerce:
   name: "PrestaShop & E-commerce"
   icon: "fa-shopping-cart"
-  description: "Développement PrestaShop, stratégies e-commerce"
+  description: "Architecture PrestaShop et stratégies pour le e-commerce AI-native"
   subcategories:
     - key: "fondamentaux-prestashop"
       name: "Fondamentaux PrestaShop"
