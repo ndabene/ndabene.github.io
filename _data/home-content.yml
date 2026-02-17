@@ -82,7 +82,7 @@ ecosystem:
 # ============================================
 blog_featured:
   title: "Derniers articles & analyses"
-  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, l'architecture e-commerce PrestaShop, le protocole MCP et la transformation AI-native."
+  subtitle: "Analyses approfondies sur la transition AI-native du e-commerce PrestaShop — architecture d'agents IA, protocole MCP et gouvernance algorithmique."
   limit: 3
   cta:
     text: "Voir tous les articles"
