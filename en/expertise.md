@@ -3,30 +3,32 @@ layout: page
 title: My Expertise
 permalink: /en/expertise/
 lang: en
-description: "Discover Nicolas Dabène's in-depth technical expertise in PHP, PrestaShop E-commerce, AI, and FullStack development, the result of more than 15 years of experience and continuous learning."
-keywords: "php expert, prestashop consultant, ai orchestrator, fullstack developer, technical leadership, software expertise, prestashop modules, certified PrestaShop expert, senior PHP developer, e-commerce architect, artificial intelligence development, AI developer training, PrestaShop optimization, high performance modules"
+description: "Architecting the AI-native transition of PrestaShop e-commerce. 5 Awards, 100k+ installs, 15 years of expertise in e-commerce architecture driven by AI agents."
+keywords: "ai-native ecommerce, ai commerce architect, ai agents ecommerce, prestashop expert awards, ecommerce ai architecture, intelligent automation, high performance prestashop modules"
 show_sidebar: false
-llm_summary: Nicolas Dabène, recognized expert with 5 PrestaShop Awards, 15 years of PHP development experience, and pioneer in AI agent orchestration to revolutionize e-commerce development efficiency.
+llm_summary: Nicolas Dabène, architect of the AI-native transition for PrestaShop e-commerce. 5 PrestaShop Awards, 15 years of expertise, pioneer in designing e-commerce architectures driven by AI agents — from intelligent automation to algorithmic governance.
 llm_topics:
-- senior PHP expert developer
-- certified PrestaShop consultant 5 Awards
-- AI artificial intelligence orchestrator
-- scalable PrestaShop e-commerce architect
-- expert FullStack Symfony developer
-- AI development technical trainer
-- high performance PrestaShop modules expert
-- e-commerce back-office optimization
-- CTO technical development leadership
-- PrestaShop migration modern architecture
+- ai-native ecommerce architect
+- ai transformation prestashop stores
+- ai agent governance ecommerce
+- prestashop ai architecture
+- intelligent ecommerce automation
+- PrestaShop expert 5 Awards
+- ai agent orchestration
+- high performance prestashop modules
 ---
 <div class="container">
+    <div class="expertise-vision" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; border-left: 4px solid #0f172a;">
+        <p style="font-size: 1.15rem; line-height: 1.7; color: #334155; margin: 0;"><strong>Most stores are still designed for humans.</strong> I prepare them for an agent-driven world &mdash; from business process automation to algorithmic governance, through seamless AI integration into existing architectures.</p>
+    </div>
+
     <div class="expertise-grid">
         {% for expertise in site.data.expertise %}
         <div class="expertise-item" data-id="{{ expertise.id }}">
             <div class="expertise-item-header">
                 <span class="badge expertise-icon">{{ expertise.icon }}</span>
                 <h3>{{ expertise.name }}</h3>
-                {% if expertise.id == 'prestashop' or expertise.id == 'ai' or expertise.id == 'ecommerce' %}
+                {% if expertise.id == 'ai' or expertise.id == 'prestashop' or expertise.id == 'ecommerce' %}
                 <div class="expertise-level-badge">Expert</div>
                 {% endif %}
             </div>
@@ -46,8 +48,8 @@ llm_topics:
     </div>
 
     <div class="expertise-contact">
-        <h2>Need an expert for your project?</h2>
-        <p>I would be delighted to discuss your needs and propose solutions tailored to your context.</p>
+        <h2>Ready to make your e-commerce AI-native?</h2>
+        <p>Let's discuss transforming your store into an intelligent platform driven by AI agents.</p>
         <a href="/en/contact/" class="btn btn--primary">Contact me</a>
     </div>
 </div>
