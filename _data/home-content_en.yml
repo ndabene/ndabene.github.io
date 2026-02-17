@@ -6,8 +6,8 @@
 # ============================================
 hero:
   title: "AI-Native E-commerce"
-  subtitle: "I help e-commerce become AI-native with PrestaShop"
-  description: "Architecting the AI-native transition of e-commerce. 5 PrestaShop Awards, 100k+ installs, 15 years of expertise — I design e-commerce architectures driven by AI agents."
+  subtitle: "I architect the AI-native transition of PrestaShop e-commerce"
+  description: "I make a complex transformation understandable: integrating AI agents at the core of e-commerce. 15 years of expertise, 5 PrestaShop Awards, 100k+ installs."
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
@@ -32,8 +32,8 @@ value_proposition:
       title: "Intelligent automation"
       description: "Inventory, content, pricing, reporting — orchestrated by AI"
     - icon: "fas fa-puzzle-piece"
-      title: "Complex PrestaShop architecture"
-      description: "30 modules, 100k+ installs, modern Symfony architecture"
+      title: "PrestaShop ecosystem mastery"
+      description: "30 modules, 100k+ installs, 15 years of hands-on expertise"
     - icon: "fas fa-chart-line"
       title: "AI agent governance"
       description: "Monitoring and supervision of AI agents in production"
@@ -82,7 +82,7 @@ ecosystem:
 # ============================================
 blog_featured:
   title: "Latest articles & insights"
-  subtitle: "Discover my latest articles on Artificial Intelligence, PrestaShop development, MCP protocol and e-commerce best practices."
+  subtitle: "Discover my latest articles on Artificial Intelligence, PrestaShop e-commerce architecture, MCP protocol and AI-native transformation."
   limit: 3
   cta:
     text: "View all articles"
@@ -93,7 +93,7 @@ blog_featured:
 # ============================================
 about:
   title: "About"
-  content: "Architecting the AI-native transition of e-commerce for over 15 years in the PrestaShop ecosystem. Most stores are still designed for humans — I prepare them for an agent-driven world. From business process automation to algorithmic governance, I design e-commerce architectures with AI built into their foundation."
+  content: "Architecting the AI-native transition of e-commerce for over 15 years in the PrestaShop ecosystem. My role: making a complex transformation understandable and actionable. Most stores are still designed for humans — I prepare them for an agent-driven world. From business process automation to algorithmic governance, I design architectures with AI built into their foundation."
   cta:
     text: "Learn more"
     url: "/en/about/"

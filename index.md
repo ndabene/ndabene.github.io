@@ -26,10 +26,10 @@ faq:
     answer: "MCP Tools Plus est la plateforme qui connecte l'intelligence artificielle directement au back-office PrestaShop via le protocole MCP. Elle permet de déployer des agents IA opérationnels qui automatisent les processus métier et prennent des décisions basées sur les données réelles de la boutique."
 
   - question: "Quelle expertise propose Nicolas Dabène ?"
-    answer: "Nicolas Dabène est l'architecte de la transition AI-native du e-commerce PrestaShop. Fort de 15+ ans d'expérience, 5 PrestaShop Awards et 100k+ installations de modules, il conçoit des architectures e-commerce pilotées par des agents IA — automatisation, gouvernance algorithmique et intégration seamless de l'IA dans les systèmes existants."
+    answer: "Nicolas Dabène est l'architecte de la transition AI-native du e-commerce PrestaShop. Son approche : rendre compréhensible et actionnable l'intégration de l'IA dans le commerce en ligne. Fort de 15+ ans d'expérience, 5 PrestaShop Awards et 100k+ installations, il conçoit des architectures e-commerce pilotées par des agents IA — de l'automatisation des processus à la gouvernance long terme."
 
   - question: "Comment l'IA peut-elle transformer mon e-commerce PrestaShop ?"
-    answer: "L'approche AI-native transforme votre boutique PrestaShop en plateforme intelligente : des agents IA connectés au back-office automatisent les stocks, le contenu et le reporting, prennent des décisions en temps réel et optimisent continuellement les performances. La majorité des boutiques sont encore pensées pour des humains — l'architecture AI-native les prépare pour un monde piloté par des agents."
+    answer: "L'approche AI-native transforme votre boutique PrestaShop en plateforme intelligente : des agents IA connectés au back-office automatisent les stocks, le contenu et le reporting, prennent des décisions en temps réel et optimisent continuellement les performances. Ce n'est pas un ajout technologique — c'est un changement de paradigme. La majorité des boutiques sont encore pensées pour des humains, l'architecture AI-native les prépare pour un monde piloté par des agents."
 ---
 {% include home-content/hero-prestashop-ai.html %}
 
