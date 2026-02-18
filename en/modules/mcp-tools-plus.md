@@ -1,6 +1,6 @@
 ---
 layout: product-landing
-title: "MCP Tools Plus - PrestaShop Module for AI & Commerce Analytics"
+title: "MCP Tools Plus - The MCP Layer for AI-Native PrestaShop Commerce"
 permalink: /en/modules/mcp-tools-plus/
 lang: en
 ref: mcp-tools-plus-module
@@ -11,7 +11,7 @@ alternates:
 sitemap:
   priority: 1.0
   changefreq: weekly
-description: "Production-ready PrestaShop module that exposes Model Context Protocol (MCP) tools to provide real-time commerce analytics to AI agents. Sales tracking, tax declarations, stock alerts and profitability metrics—all accessible in natural language."
+description: "MCP Tools Plus is the MCP layer that connects AI agents to PrestaShop. 100+ structured tools for sales, inventory, pricing and analytics — making AI-native commerce operations clear and actionable. 14-day trial included."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 
 # SEO
@@ -99,10 +99,10 @@ product:
                     </span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-[2.5rem] font-bold leading-[1.3] mb-6 text-[#111827]">
-                    PrestaShop Module for <span class="text-gold">AI & Commerce Analytics</span>
+                    The MCP Layer for <span class="text-gold">AI-Native PrestaShop Commerce</span>
                 </h1>
                 <p class="text-lg text-[#374151] mb-8 leading-relaxed">
-                    Production-ready PrestaShop module that exposes Model Context Protocol (MCP) tools to provide real-time commerce analytics to AI agents. Sales tracking, tax declarations, stock alerts and profitability metrics—all accessible in natural language.
+                    MCP Tools Plus connects AI agents directly to your PrestaShop store via the Model Context Protocol. Sales, inventory, pricing, logistics — all accessible in natural language, making AI-native commerce operations clear and actionable.
                 </p>
 
                 <!-- Price Card -->
@@ -219,7 +219,7 @@ product:
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Why MCP Tools Plus?</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Bridge your PrestaShop data and AI agents with a production-ready MCP implementation.
+                Give your AI agents a structured understanding of your commerce operations — not just data access, but a complete MCP architecture for AI-native e-commerce.
             </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -230,7 +230,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Sales Analytics</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Track orders, revenue, average cart values with daily/weekly/monthly grouping. Instant insights via natural language queries.
+                    Your AI agents get real-time access to orders, revenue and cart metrics — enabling automated reports, trend detection and proactive alerts without manual back-office queries.
                 </p>
             </div>
             <!-- Feature 2 -->
@@ -240,7 +240,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Tax Compliance</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Automated VAT summaries, multi-country tax breakdown and ready-to-file reports for your tax declarations.
+                    VAT summaries and multi-country tax breakdowns, accessible in natural language. AI agents prepare tax reconciliation data without manual extraction.
                 </p>
             </div>
             <!-- Feature 3 -->
@@ -250,7 +250,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Inventory Alerts</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Monitor stock levels, receive low-stock alerts and plan replenishment before running out.
+                    AI agents continuously monitor stock levels and surface replenishment needs before stockouts impact revenue — zero manual back-office checks required.
                 </p>
             </div>
             <!-- Feature 4 -->
@@ -260,7 +260,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Customer Insights</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Segment customers, identify top buyers, analyze behavior and track repeat purchase rates.
+                    Turn raw customer data into actionable commerce intelligence: segments, top buyers, purchase patterns — structured and queryable by your AI agents in natural language.
                 </p>
             </div>
             <!-- Feature 5 -->
@@ -306,7 +306,7 @@ product:
                     <span class="badge badge-api text-xs px-2 py-1">v1.0.3</span>
                 </div>
                 <p class="text-[#374151] leading-relaxed">
-                    Calculate net profitability of your orders including cost of goods sold (COGS), shipping fees and discounts. Identify trends and most profitable categories.
+                    Know the true profitability of every order — COGS, shipping and discounts included. AI agents automatically flag margin-negative orders and surface your most profitable categories.
                 </p>
             </div>
             <!-- Feature 9: Logistics & Carriers -->
@@ -331,7 +331,7 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">How It Works</h2>
-            <p class="text-lg text-[#374151]">Three simple steps to AI-powered commerce insights</p>
+            <p class="text-lg text-[#374151]">Three steps to AI-native commerce operations</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
@@ -561,9 +561,9 @@ product:
             <i class="fab fa-prestashop text-[#DF3163]"></i>
             <span class="text-white/90 font-medium">By BusinessTech & PrestaModule — Platinum Partner since 2009</span>
         </div>
-        <h2 class="text-[2rem] font-bold mb-6 text-white">Ready to boost your PrestaShop store with AI?</h2>
+        <h2 class="text-[2rem] font-bold mb-6 text-white">Activate AI-native commerce on your PrestaShop store</h2>
         <p class="text-xl text-white/80 mb-6 leading-relaxed">
-            Give your AI agents the commerce context they need to make intelligent decisions.
+            MCP Tools Plus is the foundation layer that makes your PrestaShop store understandable to AI agents — structured, queryable, and ready for intelligent automation.
         </p>
 
         <!-- Price in CTA -->
@@ -680,6 +680,15 @@ product:
     "@type": "Brand",
     "name": "BusinessTech"
   },
+  "about": [
+    { "@type": "Thing", "name": "AI-native ecommerce" },
+    { "@type": "Thing", "name": "AI agents for ecommerce" },
+    { "@type": "Thing", "name": "PrestaShop architecture" },
+    { "@type": "Thing", "name": "ecommerce automation" },
+    { "@type": "Thing", "name": "commerce analytics" },
+    { "@type": "Thing", "name": "Model Context Protocol" },
+    { "@type": "Thing", "name": "AI-native commerce operations" }
+  ],
   "offers": {
     "@type": "Offer",
     "url": "{{ page.product.addons_url }}",
