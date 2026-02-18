@@ -1,6 +1,6 @@
 ---
 layout: product-landing
-title: "MCP Tools Plus - Module PrestaShop pour IA & Commerce Analytics"
+title: "MCP Tools Plus - La brique MCP du commerce AI-native PrestaShop"
 permalink: /modules/mcp-tools-plus/
 lang: fr
 ref: mcp-tools-plus-module
@@ -11,7 +11,7 @@ alternates:
 sitemap:
   priority: 1.0
   changefreq: weekly
-description: "MCP Tools Plus est un module PrestaShop qui permet d'explorer des usages IA via des scénarios guidés. Découvrez comment accéder à vos données PrestaShop avec des outils structurés pendant 14 jours de trial."
+description: "MCP Tools Plus est la brique MCP qui connecte vos agents IA à PrestaShop. Rendez l'orchestration IA du commerce claire et actionnable grâce à des scénarios guidés et plus de 100 outils structurés — trial 14 jours."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 
 # SEO
@@ -99,10 +99,10 @@ product:
                     </span>
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-[2.5rem] font-bold leading-[1.3] mb-6 text-[#111827]">
-                    MCP Tools Plus : Explorer des usages IA dans PrestaShop via des scénarios guidés
+                    MCP Tools Plus : la brique MCP qui connecte vos agents IA à PrestaShop
                 </h1>
                 <p class="text-lg text-[#374151] mb-8 leading-relaxed">
-                    MCP Tools Plus est un module PrestaShop qui expose des outils structurés via le protocole MCP (Model Context Protocol). Il permet d'explorer des usages IA pour le e-commerce grâce à des scénarios prêts à l'emploi qui guident l'utilisateur dans la découverte des actions possibles avec ses données.
+                    MCP Tools Plus connecte vos agents IA directement à PrestaShop via le protocole MCP (Model Context Protocol). Il rend l'orchestration IA du commerce claire et actionnable grâce à des scénarios guidés qui structurent l'accès à vos données — sans requête SQL, sans développement ad hoc.
                 </p>
 
                 <!-- Price Card -->
@@ -196,7 +196,7 @@ product:
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Ce que permet MCP Tools Plus</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                MCP Tools Plus expose plus de 100 outils structurés qui permettent d'accéder à vos données PrestaShop via des agents IA ou des workflows d'automatisation.
+                MCP Tools Plus expose plus de 100 outils structurés qui transforment PrestaShop en backend intelligible pour vos agents IA. Chaque outil retourne des données structurées, prêtes à piloter des décisions ou des automatisations.
             </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Accès aux données de ventes</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Suivez commandes, revenus et paniers moyens avec regroupement temporel. Les outils retournent des données structurées accessibles en langage naturel via des agents IA.
+                    Vos agents IA accèdent en temps réel aux commandes, revenus et paniers moyens — avec regroupement temporel pour générer des rapports automatisés ou déclencher des alertes proactives.
                 </p>
             </div>
             <!-- Capacité 2 -->
@@ -217,7 +217,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Données fiscales structurées</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Résumés TVA, ventilation taxes multi-pays et données prêtes pour vos déclarations fiscales, accessibles via des outils dédiés.
+                    Résumés TVA, ventilation multi-pays et données prêtes pour vos déclarations — accessibles en langage naturel. Vos agents IA préparent vos réconciliations fiscales sans extraction manuelle.
                 </p>
             </div>
             <!-- Capacité 3 -->
@@ -227,7 +227,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Surveillance des stocks</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Surveillez les niveaux de stock et identifiez les produits sous seuil avec détails par variantes.
+                    Détectez les ruptures avant qu'elles n'impactent vos ventes. Vos agents IA surveillent les niveaux de stock en continu et remontent les alertes avec le détail par variantes.
                 </p>
             </div>
             <!-- Capacité 4 -->
@@ -237,7 +237,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Segmentation clients</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Segmentez clients, identifiez comportements d'achat et suivez taux de réachat via des outils d'analyse.
+                    Transformez vos données clients en intelligence actionnable : segmentation, comportements d'achat, taux de réachat — structurés et interrogeables en langage naturel par vos agents IA.
                 </p>
             </div>
             <!-- Capacité 5 -->
@@ -247,7 +247,7 @@ product:
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-[#111827]">Calcul de rentabilité</h3>
                 <p class="text-[#374151] leading-relaxed">
-                    Calculez la rentabilité nette des commandes en incluant coûts de revient, frais d'expédition et remises.
+                    Connaissez la rentabilité réelle de chaque commande : coûts de revient, frais d'expédition et remises inclus. Vos agents IA identifient automatiquement les marges négatives et les catégories les plus profitables.
                 </p>
             </div>
             <!-- Capacité 6 -->
@@ -308,7 +308,7 @@ product:
     <div class="max-w-[1200px] mx-auto px-6 lg:px-4">
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Comment fonctionne MCP Tools Plus</h2>
-            <p class="text-lg text-[#374151]">L'exploration se fait en trois étapes guidées</p>
+            <p class="text-lg text-[#374151]">L'orchestration IA du commerce en trois étapes claires</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
@@ -336,7 +336,7 @@ product:
         <div class="text-center mb-16">
             <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Exemple d'usage : une matinée marchand structurée</h2>
             <p class="text-lg text-[#374151] max-w-3xl mx-auto leading-relaxed">
-                Voici un cas d'usage concret : recevoir chaque matin un rapport structuré de vos données e-commerce, généré pendant la nuit via un workflow automatisé.
+                Un exemple réel de commerce AI-native : un workflow automatisé génère chaque matin un rapport structuré de votre activité e-commerce. Votre boutique se pilote pendant que vous dormez.
             </p>
         </div>
 
@@ -658,9 +658,9 @@ product:
             <i class="fab fa-prestashop text-[#DF3163]"></i>
             <span class="text-white/90 font-medium">Par BusinessTech & PrestaModule — Platinum Partner depuis 2009</span>
         </div>
-        <h2 class="text-[2rem] font-bold mb-6 text-white">Explorer des usages IA pour PrestaShop</h2>
+        <h2 class="text-[2rem] font-bold mb-6 text-white">Activez le commerce AI-native sur PrestaShop</h2>
         <p class="text-xl text-white/80 mb-6 leading-relaxed">
-            Découvrez comment MCP Tools Plus structure l'accès à vos données PrestaShop via des scénarios guidés.
+            MCP Tools Plus est la brique qui permet à vos agents IA de comprendre et piloter votre PrestaShop. L'orchestration IA du commerce, rendue claire et actionnable.
         </p>
 
         <!-- Price in CTA -->
@@ -739,7 +739,7 @@ product:
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "MCP Tools Plus",
-  "description": "MCP Tools Plus est un module PrestaShop qui permet d'explorer des usages IA via des scénarios guidés. Il expose plus de 100 outils structurés via le protocole MCP pour accéder aux données PrestaShop.",
+  "description": "MCP Tools Plus est la brique MCP du commerce AI-native PrestaShop. Il expose plus de 100 outils structurés via le protocole MCP, permettant aux agents IA et workflows d'orchestrer ventes, analytics, stocks et opérations en langage naturel.",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "PrestaShop 8.2+",
   "offers": {
@@ -771,13 +771,16 @@ product:
   "image": "https://nicolas-dabene.fr/assets/images/produits/mcp-tools-plus-og.jpg",
   "url": "https://nicolas-dabene.fr/modules/mcp-tools-plus/",
   "featureList": [
-    "Accès structuré aux données de ventes PrestaShop",
-    "Plus de 100 outils MCP exposés",
+    "Architecture AI-native pour e-commerce PrestaShop",
+    "Orchestration IA du commerce via protocole MCP",
+    "Plus de 100 outils MCP structurés et exposés",
     "Scénarios guidés prêts à l'emploi",
     "Intégration Google Analytics 4",
-    "Gestion des stocks et alertes",
-    "Calcul de rentabilité",
-    "Protection et anonymisation des données"
+    "Gestion des stocks et alertes automatisées",
+    "Calcul de rentabilité par commande",
+    "Protection et anonymisation des données",
+    "Automatisation des workflows e-commerce",
+    "Agents IA opérationnels sur PrestaShop"
   ],
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -792,12 +795,21 @@ product:
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "MCP Tools Plus",
-  "description": "Module PrestaShop qui permet d'explorer des usages IA via des scénarios guidés et plus de 100 outils MCP structurés.",
+  "description": "Module PrestaShop qui connecte les agents IA à l'e-commerce via 100+ outils MCP structurés — la brique centrale du commerce AI-native PrestaShop.",
   "image": "https://nicolas-dabene.fr/assets/images/produits/mcp-tools-plus-og.jpg",
   "brand": {
     "@type": "Brand",
     "name": "BusinessTech & PrestaModule"
   },
+  "about": [
+    { "@type": "Thing", "name": "AI-native ecommerce" },
+    { "@type": "Thing", "name": "AI agents for ecommerce" },
+    { "@type": "Thing", "name": "PrestaShop architecture" },
+    { "@type": "Thing", "name": "ecommerce automation" },
+    { "@type": "Thing", "name": "commerce analytics" },
+    { "@type": "Thing", "name": "Model Context Protocol" },
+    { "@type": "Thing", "name": "orchestration IA e-commerce" }
+  ],
   "offers": {
     "@type": "Offer",
     "url": "https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html",
