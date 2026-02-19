@@ -36,22 +36,36 @@
 {% endfor %}
 {% endif %}
 {% else %}
-{% comment %} Pour les pages statiques : construire les URLs alternates {% endcomment %}
+{% comment %} Pour les pages statiques : construire les URLs alternates uniquement si la page cible existe {% endcomment %}
 {% if current_lang == 'fr' %}
 {% if page.url == '/' or page.url == '/index.html' %}
 {% assign en_url = '/en/' %}
 {% else %}
 {% assign en_url = page.url | prepend: '/en' %}
 {% endif %}
+{% comment %} Vérifier que la page anglaise existe pour éviter les hreflang fantômes {% endcomment %}
+{% assign en_page_exists = false %}
+{% for p in site.pages %}
+{% if p.url == en_url %}{% assign en_page_exists = true %}{% endif %}
+{% endfor %}
+{% if en_page_exists %}
 <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+{% endif %}
 {% else %}
 {% assign fr_url = page.url | remove_first: '/en' %}
 {% if fr_url == '' or fr_url == '/' %}
 {% assign fr_url = '/' %}
 {% endif %}
+{% comment %} Vérifier que la page française existe pour éviter les hreflang fantômes {% endcomment %}
+{% assign fr_page_exists = false %}
+{% for p in site.pages %}
+{% if p.url == fr_url %}{% assign fr_page_exists = true %}{% endif %}
+{% endfor %}
+{% if fr_page_exists %}
 <link rel="alternate" hreflang="fr" href="{{ fr_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ fr_url | absolute_url }}">
+{% endif %}
 {% endif %}
 {% endif %}
 

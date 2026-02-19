@@ -27,6 +27,28 @@
 [build.processing.images]
   compress = true
 
+# Redirect www vers non-www pour éviter le contenu dupliqué
+[[redirects]]
+  from = "https://www.nicolas-dabene.fr/*"
+  to = "https://nicolas-dabene.fr/:splat"
+  status = 301
+  force = true
+
+# Redirect index.html vers le dossier parent pour éviter le contenu dupliqué
+# Ex: /articles/2024/01/01/mon-article/index.html -> /articles/2024/01/01/mon-article/
+[[redirects]]
+  from = "/*/index.html"
+  to = "/:splat/"
+  status = 301
+  force = true
+
+# Redirect page racine index.html
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
 # Redirections pour les URLs sans trailing slash
 [[redirects]]
   from = "/blog"
