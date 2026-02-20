@@ -3,10 +3,12 @@
  * Tracks user engagement signals to qualify traffic quality
  *
  * Events tracked:
- * - scroll_depth_75: User scrolled more than 75% of page
+ * - scroll_depth: User scrolled past 25/50/75/90% thresholds on article pages
+ * - scroll_depth_75: User scrolled more than 75% (non-article pages, compatibility)
  * - internal_cta_click: Click on internal CTAs and links
  * - internal_navigation: Natural navigation between articles (distinct from CTAs)
  * - engaged_session: Session duration exceeds 90 seconds
+ * - article_read: User spent 60 seconds reading an article
  * - code_copy: User copied a code block
  */
 
@@ -15,15 +17,22 @@
 
   // Configuration
   const CONFIG = {
-    scrollDepthThreshold: 75, // Percentage
+    scrollDepthThreshold: 75, // Percentage (legacy, non-article pages)
+    articleScrollThresholds: [25, 50, 75, 90], // Multi-threshold for article pages
     engagedSessionTime: 90000, // 90 seconds in milliseconds
+    articleReadTime: 60000, // 60 seconds in milliseconds
     debounceDelay: 300, // Milliseconds for scroll debouncing
   };
+
+  // Helper: is current page an article?
+  const isArticlePage = window.location.pathname.includes('/articles/');
 
   // Tracking state to avoid duplicate events
   const trackingState = {
     scrollDepth75Tracked: false,
+    articleScrollTracked: new Set(),
     engagedSessionTracked: false,
+    articleReadTracked: false,
     sessionStartTime: Date.now(),
   };
 
@@ -60,32 +69,50 @@
   }
 
   /**
-   * 1. SCROLL DEPTH TRACKING (> 75%)
-   * Tracks when user scrolls past 75% of page height
+   * 1. SCROLL DEPTH TRACKING
+   * - Article pages (/articles/): fires at 25%, 50%, 75%, 90% with article_title
+   * - Other pages: fires once at 75% (backward-compatible event name scroll_depth_75)
    */
   function initScrollDepthTracking() {
     let scrollTimeout;
+    const articleTitle = document.querySelector('h1')?.textContent.trim() || document.title;
 
     function checkScrollDepth() {
-      if (trackingState.scrollDepth75Tracked) return;
-
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
       const scrollPercentage = ((scrollTop + windowHeight) / documentHeight) * 100;
 
-      if (scrollPercentage >= CONFIG.scrollDepthThreshold) {
-        trackingState.scrollDepth75Tracked = true;
-
-        trackMicroConversion('scroll_depth_75', {
-          event_label: 'Deep scroll engagement',
-          scroll_percentage: Math.round(scrollPercentage),
-          value: 0.5
+      if (isArticlePage) {
+        // Multi-threshold tracking on article pages
+        CONFIG.articleScrollThresholds.forEach(function(threshold) {
+          if (!trackingState.articleScrollTracked.has(threshold) && scrollPercentage >= threshold) {
+            trackingState.articleScrollTracked.add(threshold);
+            trackMicroConversion('scroll_depth', {
+              event_label: 'Article scroll depth ' + threshold + '%',
+              scroll_percentage: threshold,
+              article_title: articleTitle,
+              value: threshold >= 75 ? 0.5 : 0.2
+            });
+          }
         });
 
-        // Remove listener once tracked to save resources
-        window.removeEventListener('scroll', handleScroll);
+        // Remove listener once all thresholds are tracked
+        if (trackingState.articleScrollTracked.size === CONFIG.articleScrollThresholds.length) {
+          window.removeEventListener('scroll', handleScroll);
+        }
+      } else {
+        // Legacy single-threshold tracking on non-article pages
+        if (trackingState.scrollDepth75Tracked) return;
+        if (scrollPercentage >= CONFIG.scrollDepthThreshold) {
+          trackingState.scrollDepth75Tracked = true;
+          trackMicroConversion('scroll_depth_75', {
+            event_label: 'Deep scroll engagement',
+            scroll_percentage: Math.round(scrollPercentage),
+            value: 0.5
+          });
+          window.removeEventListener('scroll', handleScroll);
+        }
       }
     }
 
@@ -95,6 +122,26 @@
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+  }
+
+  /**
+   * 1b. ARTICLE READ TRACKING (60 seconds on /articles/ pages)
+   * Fires article_read event when user stays on an article for 60 seconds
+   */
+  function initArticleReadTracking() {
+    if (!isArticlePage) return;
+    const articleTitle = document.querySelector('h1')?.textContent.trim() || document.title;
+
+    setTimeout(function() {
+      if (trackingState.articleReadTracked) return;
+      trackingState.articleReadTracked = true;
+      trackMicroConversion('article_read', {
+        event_label: 'Article read 60 seconds',
+        article_title: articleTitle,
+        time_spent: 60,
+        value: 1
+      });
+    }, CONFIG.articleReadTime);
   }
 
   /**
@@ -274,8 +321,11 @@
   function initMicroConversionTracking() {
     console.log('Initializing GA4 micro-conversion tracking...');
 
-    // 1. Track scroll depth
+    // 1. Track scroll depth (multi-threshold on articles, 75% on other pages)
     initScrollDepthTracking();
+
+    // 1b. Track article read (60s on /articles/ pages)
+    initArticleReadTracking();
 
     // 2. Track internal CTA clicks
     initInternalCTATracking();

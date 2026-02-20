@@ -2,14 +2,19 @@
 <!-- Google Analytics 4 avec Google Consent Mode v2 + pings anonymes -->
 <script>
   // Définir d'abord le consentement par défaut avant de charger gtag.js
+  // wait_for_update : laisse 500 ms au bandeau cookies pour mettre à jour le consentement
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', {
     'analytics_storage': 'denied',
     'ad_storage': 'denied',
     'ad_user_data': 'denied',
-    'ad_personalization': 'denied'
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
   });
+  // Modélisation comportementale : rédaction des données publicitaires + passthrough URL
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
