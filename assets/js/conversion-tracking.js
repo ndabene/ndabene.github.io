@@ -45,8 +45,8 @@
     // 4. Track CTA block interactions
     trackCTABlockClicks();
 
-    // 5. Track other product links
-    trackOtherProductClicks();
+    // 5. Track outbound clicks to businesstech.fr
+    trackOutboundClicks();
 
     // 6. Track social media clicks (optional)
     trackSocialMediaClicks();
@@ -56,6 +56,9 @@
 
     // 8. Track resource downloads (PDFs, docs, etc.)
     trackResourceDownloads();
+
+    // 9. Track "Me contacter" CTA clicks
+    trackContactCTAClicks();
   }
 
   // Track clicks on marketplace links (PRIMARY CONVERSION)
@@ -144,22 +147,44 @@
     });
   }
 
-  // Track other product/module clicks
-  function trackOtherProductClicks() {
-    // Track clicks on other products (Geo Suite, Google Pay, etc.)
-    const productLinks = document.querySelectorAll('a[href*="businesstech.fr"]');
+  // Track outbound clicks to businesstech.fr (PRIMARY CONVERSION)
+  function trackOutboundClicks() {
+    const outboundLinks = document.querySelectorAll('a[href*="businesstech.fr"]');
 
-    productLinks.forEach(function(link) {
+    outboundLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
         const url = this.href;
         const linkText = this.textContent.trim();
-        const productName = extractProductName(url) || linkText;
 
-        trackConversion('other_product_click', {
-          event_category: 'engagement',
-          event_label: productName,
-          destination_url: url,
+        trackConversion('outbound_click', {
+          event_category: 'conversion',
+          event_label: 'businesstech.fr',
+          destination: 'businesstech.fr',
+          link_url: url,
+          link_text: linkText,
           value: 0.5
+        });
+      });
+    });
+  }
+
+  // Track "Me contacter" CTA clicks (PRIMARY CONVERSION)
+  function trackContactCTAClicks() {
+    // Links pointing to the contact page
+    const contactLinks = document.querySelectorAll('a[href*="/contact"]');
+
+    contactLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const linkText = this.textContent.trim();
+        const linkLocation = getElementLocation(this);
+
+        trackConversion('cta_click', {
+          event_category: 'conversion',
+          event_label: 'Me contacter',
+          cta_name: linkText || 'Me contacter',
+          cta_location: window.location.pathname,
+          link_location: linkLocation,
+          value: 3
         });
       });
     });
