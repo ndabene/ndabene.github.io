@@ -111,12 +111,21 @@ product:
 
       <div class="relative animate-float">
         <div class="bg-white border border-[#E2E8F0] rounded-2xl p-4 shadow-xl">
-          <img
-            src="/assets/images/produits/mcp-tools-plus-hero-merchant-user.png"
-            alt="MCP Tools Plus pour PrestaShop: marchand pilotant sa boutique en langage naturel"
-            class="w-full h-auto rounded-xl"
-            loading="lazy"
-          >
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/assets/images/produits/mcp-tools-plus-hero-merchant-user-480.webp 480w,
+                      /assets/images/produits/mcp-tools-plus-hero-merchant-user-720.webp 720w,
+                      /assets/images/produits/mcp-tools-plus-hero-merchant-user.webp 1080w"
+              sizes="(max-width: 640px) 480px, (max-width: 1024px) 720px, 640px"
+            >
+            <img
+              src="/assets/images/produits/mcp-tools-plus-hero-merchant-user.png"
+              alt="MCP Tools Plus pour PrestaShop: marchand pilotant sa boutique en langage naturel"
+              class="w-full h-auto rounded-xl"
+              loading="lazy"
+            >
+          </picture>
         </div>
         <div class="absolute -top-4 -right-4 px-4 py-2 bg-[#059669]/10 border border-[#059669]/30 rounded-full text-[#059669] text-sm font-medium">
           <i class="fas fa-check-circle mr-2"></i>Reponse immediate
@@ -168,13 +177,22 @@ product:
 
     <div class="grid lg:grid-cols-2 gap-8 mb-10 items-start">
       <div class="overflow-hidden rounded-xl border border-[#E2E8F0] shadow-sm bg-[#F8FAFC]">
-        <img
-          src="/assets/images/produits/mcp-tools-plus-problem-user.png"
-          alt="Problemes marchands PrestaShop: navigation complexe, decisions retardees, temps non productif"
-          class="w-full"
-          style="max-height: 460px; object-fit: contain; object-position: center;"
-          loading="lazy"
-        >
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/assets/images/produits/mcp-tools-plus-problem-user-480.webp 480w,
+                    /assets/images/produits/mcp-tools-plus-problem-user-720.webp 720w,
+                    /assets/images/produits/mcp-tools-plus-problem-user.webp 1080w"
+            sizes="(max-width: 640px) 480px, (max-width: 1024px) 720px, 640px"
+          >
+          <img
+            src="/assets/images/produits/mcp-tools-plus-problem-user.png"
+            alt="Problemes marchands PrestaShop: navigation complexe, decisions retardees, temps non productif"
+            class="w-full"
+            style="max-height: 460px; object-fit: contain; object-position: center;"
+            loading="lazy"
+          >
+        </picture>
       </div>
       <div class="space-y-4">
         <div class="card p-6">
