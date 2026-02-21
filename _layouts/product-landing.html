@@ -7,8 +7,26 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="{{ page.description }}">
-    <meta name="author" content="Nicolas Dabène">
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="author" content="Nicolas Dabene">
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+    {% endif %}
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <!-- GEO/LLM signals -->
+    {% if page.llm_summary %}
+    <meta name="llm:summary" content="{{ page.llm_summary | escape }}">
+    {% endif %}
+    {% if page.llm_topics %}
+    <meta name="llm:topics" content="{{ page.llm_topics | join: ', ' | escape }}">
+    {% endif %}
+    {% if page.llm_intent %}
+    <meta name="llm:intent" content="{{ page.llm_intent | escape }}">
+    {% endif %}
+    {% if page.llm_audience %}
+    <meta name="llm:audience" content="{{ page.llm_audience | escape }}">
+    {% endif %}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="product">
