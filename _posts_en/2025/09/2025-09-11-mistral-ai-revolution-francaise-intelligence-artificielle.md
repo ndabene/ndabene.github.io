@@ -50,6 +50,10 @@ faq:
     per user) subscriptions.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+The European AI ecosystem is crucial for the future of sovereign e-commerce. Mistral AI plays a central role in this dynamic.
+</aside>
+
 # Mistral AI: The Story of a French AI Revolution (2023-2025)
 
 ## Introduction

@@ -49,6 +49,9 @@ keywords:
 source: Analyse de marché technologique 2026
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Note d'analyse — Les tensions sur le marché de la mémoire affectent les coûts d'infrastructure de l'IA et, par extension, les architectures e-commerce AI-native.
+</aside>
 
 # Analyse Stratégique Globale : Les Tensions Structurelles sur le Marché de la Mémoire Vive (RAM) et du Stockage en 2026
 

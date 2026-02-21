@@ -58,6 +58,9 @@ faq:
     et Team (30$/mois par utilisateur).
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les évolutions des politiques d'utilisation des LLM impactent indirectement les agents IA déployés en e-commerce. Voici un tournant stratégique d'OpenAI.
+</aside>
 
 # ChatGPT s'ouvre aux conversations érotiques : un tournant assumé par OpenAI
 

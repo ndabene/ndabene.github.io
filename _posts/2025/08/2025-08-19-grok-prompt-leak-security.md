@@ -48,6 +48,9 @@ faq:
     MCP pour accéder à des données externes.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+La sécurité des prompts système est un enjeu critique pour tout agent IA déployé en production, y compris dans le e-commerce. Ce cas Grok illustre les risques concrets.
+</aside>
 
 La récente exposition accidentelle des prompts système internes de Grok, le chatbot de xAI, illustre parfaitement pourquoi la sécurité des systèmes d'IA générative ne peut pas être prise à la légère. En tant que développeur travaillant quotidiennement avec des APIs d'IA, cette faille me rappelle l'importance cruciale des bonnes pratiques de sécurité.
 

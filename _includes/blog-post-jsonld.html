@@ -20,18 +20,19 @@
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "author": {
     "@type": "Person",
+    "@id": "{{ site.url }}/#person",
     "name": "{{ page.author | default: site.author.name }}",
     "url": "{{ site.url }}",
-    "jobTitle": "Senior PHP FullStack Developer & AI Orchestrator",
+    "jobTitle": "AI-Native E-commerce Architect",
     "knowsAbout": [
-      "PHP Development",
-      "PrestaShop E-commerce",
-      "Artificial Intelligence Integration",
-      "Web Development",
-      "Software Architecture"
+      "AI-native commerce",
+      "AI agents for ecommerce",
+      "PrestaShop architecture",
+      "Ecommerce automation",
+      "MCP Protocol"
     ],
     "sameAs": [
-      "https://www.linkedin.com/in/nicolas-dabene/",
+      "https://www.linkedin.com/in/nicolas-dabène-473a43b8/",
       "https://github.com/ndabene",
       "{{ site.url }}"
     ]
@@ -66,7 +67,7 @@
   ],
   "audience": {
     "@type": "Audience",
-    "audienceType": "Développeurs, Architectes logiciel, CTO, Technical Leaders"
+    "audienceType": "Développeurs e-commerce, Architectes logiciel, CTO, Décideurs e-commerce, Technical Leaders"
   },
   "teaches": "{{ page.excerpt | default: page.description | strip_html | escape }}",
   "educationalLevel": "{% if page.difficulty %}{{ page.difficulty }}{% else %}Intermédiaire{% endif %}",
@@ -74,32 +75,40 @@
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "about": [
+    {
+      "@type": "Thing",
+      "name": "AI-native e-commerce",
+      "description": "Architecture e-commerce conçue pour être pilotée par des agents IA"
+    },
+    {
+      "@type": "Thing",
+      "name": "Ecommerce architecture",
+      "description": "Architecture e-commerce intelligente et automatisation des processus métier"
+    },
+    {
+      "@type": "Thing",
+      "name": "Ecommerce governance",
+      "description": "Gouvernance et supervision des systèmes IA en production pour le commerce en ligne"
+    },
     {% if page.categories contains 'Intelligence Artificielle' %}
     {
       "@type": "Thing",
-      "name": "Intelligence Artificielle",
-      "description": "Technologies d'intelligence artificielle et apprentissage automatique"
+      "name": "AI agents",
+      "description": "Agents d'intelligence artificielle pour l'automatisation et la gouvernance e-commerce"
     },
     {% endif %}
-    {% if page.categories contains 'Ecommerce' %}
+    {% if page.categories contains 'PrestaShop' or page.tags contains 'PrestaShop' %}
     {
       "@type": "Thing",
-      "name": "E-commerce",
-      "description": "Commerce électronique et solutions de vente en ligne"
-    },
-    {% endif %}
-    {% if page.categories contains 'PrestaShop' %}
-    {
-      "@type": "Thing",
-      "name": "PrestaShop",
-      "description": "Plateforme e-commerce open-source"
+      "name": "PrestaShop ecosystem",
+      "description": "Écosystème PrestaShop et intégration AI-native"
     },
     {% endif %}
     {
       "@type": "Person",
+      "@id": "{{ site.url }}/#person",
       "name": "Nicolas Dabène",
-      "jobTitle": "Senior PHP Developer & AI Orchestrator",
-      "knowsAbout": ["PHP", "PrestaShop", "AI", "E-commerce"]
+      "jobTitle": "AI-Native E-commerce Architect"
     }
   ],
   "mentions": [

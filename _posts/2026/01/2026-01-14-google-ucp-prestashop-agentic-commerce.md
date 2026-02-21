@@ -35,6 +35,13 @@ keywords:
 - Agentic Commerce
 - Beckn Protocol
 published: true
+llm_summary: "Analyse du Universal Commerce Protocol de Google et son impact sur le e-commerce AI-native — quand les agents IA achètent directement dans les boutiques PrestaShop."
+llm_topics:
+- google ucp
+- universal commerce protocol
+- agentic commerce
+- ai-native e-commerce
+- prestashop agents ia
 ---
 
 

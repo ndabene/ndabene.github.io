@@ -44,6 +44,9 @@ faq:
     MCP pour accéder à des données externes.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les modèles de codage rapide changent la façon dont on développe des modules e-commerce. Analyse de l'offre xAI.
+</aside>
 
 # Grok Code Fast 1 : l'IA de codage rapide signée xAI
 

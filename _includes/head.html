@@ -36,22 +36,36 @@
 {% endfor %}
 {% endif %}
 {% else %}
-{% comment %} Pour les pages statiques : construire les URLs alternates {% endcomment %}
+{% comment %} Pour les pages statiques : construire les URLs alternates uniquement si la page cible existe {% endcomment %}
 {% if current_lang == 'fr' %}
 {% if page.url == '/' or page.url == '/index.html' %}
 {% assign en_url = '/en/' %}
 {% else %}
 {% assign en_url = page.url | prepend: '/en' %}
 {% endif %}
+{% comment %} Vérifier que la page anglaise existe pour éviter les hreflang fantômes {% endcomment %}
+{% assign en_page_exists = false %}
+{% for p in site.pages %}
+{% if p.url == en_url %}{% assign en_page_exists = true %}{% endif %}
+{% endfor %}
+{% if en_page_exists %}
 <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ page.url | absolute_url }}">
+{% endif %}
 {% else %}
 {% assign fr_url = page.url | remove_first: '/en' %}
 {% if fr_url == '' or fr_url == '/' %}
 {% assign fr_url = '/' %}
 {% endif %}
+{% comment %} Vérifier que la page française existe pour éviter les hreflang fantômes {% endcomment %}
+{% assign fr_page_exists = false %}
+{% for p in site.pages %}
+{% if p.url == fr_url %}{% assign fr_page_exists = true %}{% endif %}
+{% endfor %}
+{% if fr_page_exists %}
 <link rel="alternate" hreflang="fr" href="{{ fr_url | absolute_url }}">
 <link rel="alternate" hreflang="x-default" href="{{ fr_url | absolute_url }}">
+{% endif %}
 {% endif %}
 {% endif %}
 
@@ -143,7 +157,7 @@ endif %}
 {% endif %}
 
 <!-- Citation et autorité -->
-<meta name="author-expertise" content="15+ years PHP development, PrestaShop expert, AI integration specialist">
+<meta name="author-expertise" content="15+ years e-commerce architecture, 5 PrestaShop Awards, AI-native commerce architect">
 <meta name="content-authority" content="primary-source">
 <meta name="fact-check-worthy" content="true">
 <meta name="llm:intent"
@@ -151,7 +165,7 @@ endif %}
 <meta name="llm:audience" content="developers, CTOs, business leaders, e-commerce professionals">
 <meta name="llm:content-depth"
   content="{% if page.layout == 'post' or page.layout == 'quiz' %}expert{% else %}overview{% endif %}">
-<meta name="llm:industry-focus" content="e-commerce, PHP development, AI integration">
+<meta name="llm:industry-focus" content="AI-native e-commerce, PrestaShop architecture, AI agent governance">
 <meta name="llm:geographic-focus" content="France, Europe, international e-commerce">
 
 <!-- Open Graph / Facebook -->
@@ -338,10 +352,10 @@ endif %}
 
 <!-- Schema.org Markup - Optimisé pour performance -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"{{ site.author.name }}","url":"{{ site.url }}","image":"{{ site.url }}/assets/images/hero/profile-hero.jpg","jobTitle":"Senior PHP FullStack Developer & AI Orchestrator","email":"{{ site.author.email }}","address":{"@type":"PostalAddress","addressCountry":"FR"},"sameAs":["https://www.linkedin.com/in/nicolas-dabene/","https://github.com/ndabene"],"knowsAbout":["PHP Development","PrestaShop E-commerce","AI Integration","Web Performance Optimization"]}
+{"@context":"https://schema.org","@type":"Person","@id":"{{ site.url }}/#person","name":"{{ site.author.name }}","url":"{{ site.url }}","image":"{{ site.url }}/assets/images/hero/profile-hero.jpg","jobTitle":"AI-Native E-commerce Architect","email":"{{ site.author.email }}","address":{"@type":"PostalAddress","addressCountry":"FR"},"worksFor":{"@type":"Organization","name":"BusinessTech","url":"https://www.businesstech.fr"},"sameAs":["https://www.linkedin.com/in/nicolas-dabène-473a43b8/","https://github.com/ndabene","https://www.youtube.com/@nicolas-dabene"],"knowsAbout":["AI-native commerce","AI agents for ecommerce","PrestaShop architecture","Ecommerce automation","MCP Protocol"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title | escape }}","description":"{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 20 | default: site.description | escape }}","url":"{{ page.url | absolute_url }}","inLanguage":"{% if current_lang == 'fr' %}fr-FR{% else %}en-US{% endif %}"}
+{"@context":"https://schema.org","@type":"WebPage","name":"{{ page.title | escape }}","description":"{{ page.description | default: page.excerpt | strip_html | strip | truncatewords: 20 | default: site.description | escape }}","url":"{{ page.url | absolute_url }}","inLanguage":"{% if current_lang == 'fr' %}fr-FR{% else %}en-US{% endif %}","isPartOf":{"@type":"WebSite","@id":"{{ site.url }}/#website"}}
 </script>
 
 {% include breadcrumb-jsonld.html %}

@@ -5,9 +5,9 @@
 # 1. HERO SECTION - Message principal
 # ============================================
 hero:
-  title: "PrestaShop x AI"
-  subtitle: "Building intelligent e-commerce"
-  description: "Développeur senior PrestaShop spécialisé en intelligence artificielle et automatisation e-commerce. Je transforme les boutiques en plateformes intelligentes capables d'analyser, décider et agir en temps réel."
+  title: "AI-Native E-commerce"
+  subtitle: "J'architecture la transition AI-native de l'e-commerce PrestaShop"
+  description: "Je rends compréhensible une transformation complexe : intégrer des agents IA au cœur du e-commerce. 15 ans d'expertise, 5 PrestaShop Awards, 100k+ installations."
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
@@ -26,17 +26,17 @@ value_proposition:
   title: "Ce que je fais"
   items:
     - icon: "fas fa-robot"
-      title: "IA intégrée au e-commerce"
-      description: "Agents IA connectés directement au back-office PrestaShop"
+      title: "Transformation AI-Native"
+      description: "Architecture e-commerce conçue pour être pilotée par des agents IA"
     - icon: "fas fa-cogs"
       title: "Automatisation intelligente"
-      description: "Stocks, contenu, reporting et workflows business"
+      description: "Stocks, contenu, pricing, reporting — orchestrés par l'IA"
     - icon: "fas fa-puzzle-piece"
-      title: "Modules PrestaShop avancés"
-      description: "Solutions techniques à forte valeur ajoutée"
+      title: "Maîtrise de l'écosystème PrestaShop"
+      description: "30 modules, 100k+ installations, 15 ans d'expertise terrain"
     - icon: "fas fa-chart-line"
-      title: "Pilotage par la donnée"
-      description: "Analyse et décisions en temps réel"
+      title: "Gouvernance agents IA"
+      description: "Pilotage et supervision des agents IA en production"
 
 # ============================================
 # 3. CORE PROJECT - MCP Tools Plus
@@ -82,7 +82,7 @@ ecosystem:
 # ============================================
 blog_featured:
   title: "Derniers articles & analyses"
-  subtitle: "Découvrez mes derniers articles sur l'Intelligence Artificielle, le développement PrestaShop, le protocole MCP et les bonnes pratiques e-commerce."
+  subtitle: "Analyses approfondies sur la transition AI-native du e-commerce PrestaShop — architecture d'agents IA, protocole MCP et gouvernance algorithmique."
   limit: 3
   cta:
     text: "Voir tous les articles"
@@ -93,7 +93,7 @@ blog_featured:
 # ============================================
 about:
   title: "À propos"
-  content: "Développeur senior PrestaShop depuis plus de 15 ans, passionné par l'intelligence artificielle appliquée à l'e-commerce et l'automatisation des processus business. Je conçois des solutions concrètes pour faire évoluer l'e-commerce vers une nouvelle génération intelligente."
+  content: "Architecte de la transition AI-native du e-commerce depuis plus de 15 ans sur l'écosystème PrestaShop. Mon rôle : rendre compréhensible et actionnable une transformation complexe. La majorité des boutiques sont encore pensées pour des humains — je les prépare pour un monde piloté par des agents IA. De l'automatisation des processus métier à la gouvernance algorithmique, je conçois des architectures qui intègrent l'IA dès leur fondation."
   cta:
     text: "En savoir plus"
     url: "/a-propos/"
@@ -102,7 +102,7 @@ about:
 # 7. CTA FINAL - Contact
 # ============================================
 cta_final:
-  title: "Intéressé par l'IA appliquée à PrestaShop ou par mes projets ?"
+  title: "Prêt à rendre votre e-commerce AI-native ?"
   buttons:
     - text: "Me contacter"
       url: "/contact/"

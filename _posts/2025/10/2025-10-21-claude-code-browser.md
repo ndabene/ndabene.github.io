@@ -49,6 +49,9 @@ faq:
     Les deux sont complémentaires.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Les IDE agentiques comme Claude Code transforment la façon dont on construit des modules et des architectures e-commerce.
+</aside>
 
 # Claude Code en Ligne : L'IA Agentique Transforme le Développement Web
 

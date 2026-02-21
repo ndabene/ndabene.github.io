@@ -30,14 +30,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="product">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.description }}">
     <meta property="og:image" content="{{ site.url }}{{ page.image | default: '/assets/images/produits/mcp-tools-plus-og.jpg' }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
     <meta property="twitter:title" content="{{ page.title }}">
     <meta property="twitter:description" content="{{ page.description }}">
     <meta property="twitter:image" content="{{ site.url }}{{ page.image | default: '/assets/images/produits/mcp-tools-plus-og.jpg' }}">

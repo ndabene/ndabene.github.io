@@ -1,20 +1,19 @@
 {% comment %}
-  Données structurées Person pour Nicolas Dabène - Optimisé pour SEO et GEO
-  Créateur de contenu IA & E-commerce
+  Données structurées Person + Organization pour Nicolas Dabène
+  Optimisé SEO/GEO - Positionnement : Architecte AI-Native E-commerce
 {% endcomment %}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Person", "CreativeWork"],
+  "@type": "Person",
+  "@id": "{{ site.url }}/#person",
   "name": "Nicolas Dabène",
   "alternateName": "Nicolas Dabene",
-  "description": "Créateur de contenu spécialisé en Intelligence Artificielle et e-commerce PrestaShop. Auteur d'articles techniques sur l'IA (ChatGPT, Claude, MCP Protocol, GEO/VEO), formateur IA et développeur de modules professionnels (GEO Suite, Google Merchant Center Pro).",
-  "jobTitle": "Créateur de Contenu IA & E-commerce",
-  "creator": {
-    "@type": "Person",
-    "name": "Nicolas Dabène"
-  },
+  "description": "Architecte de la transition AI-native du e-commerce PrestaShop. Conçoit des architectures e-commerce pilotées par des agents IA — automatisation, gouvernance algorithmique et intégration seamless de l'IA dans les systèmes existants.",
+  "jobTitle": "AI-Native E-commerce Architect",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/assets/images/hero/profile-hero.jpg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Antibes",
@@ -23,22 +22,25 @@
     "postalCode": "06600"
   },
   "knowsAbout": [
-    "Intelligence Artificielle",
-    "PrestaShop E-commerce",
+    "AI-native commerce",
+    "AI-native ecommerce",
+    "AI agents for ecommerce",
+    "PrestaShop architecture",
+    "PrestaShop AI integration",
+    "Ecommerce automation",
     "MCP Protocol",
-    "SEO/GEO/VEO Optimization",
-    "ChatGPT et Claude",
-    "Formation IA",
-    "Modules PrestaShop",
-    "E-commerce Architecture",
-    "Contenu Technique",
-    "Prompt Engineering"
+    "AI agent orchestration",
+    "Ecommerce AI governance",
+    "Ecommerce governance",
+    "Intelligent process automation",
+    "PrestaShop module development",
+    "Symfony e-commerce architecture"
   ],
   "teaches": [
-    "Formation IA pour débutants",
-    "Art du Prompt",
-    "Impact écologique de l'IA",
-    "Développement PrestaShop"
+    "AI-native e-commerce architecture",
+    "AI agent integration for PrestaShop",
+    "Prompt-Driven Development",
+    "Intelligent automation for online stores"
   ],
   "hasCredential": [
     {
@@ -50,31 +52,38 @@
         "name": "PrestaShop"
       },
       "dateIssued": "2011-2020",
-      "description": "5 PrestaShop Awards remportés pour l'excellence technique"
+      "description": "5 PrestaShop Awards for technical excellence + 4 jury favorites"
     },
     {
       "@type": "EducationalOccupationalCredential",
-      "name": "Expert PHP Senior",
+      "name": "AI-Native E-commerce Architect",
       "credentialCategory": "experience",
       "yearsOfExperience": "15",
-      "description": "15+ années d'expérience en développement PHP professionnel"
+      "description": "15+ years designing e-commerce architectures, pioneer in AI-native commerce transformation"
     }
   ],
   "expertise": [
-    "Création de Contenu IA",
-    "Formation Intelligence Artificielle",
-    "PrestaShop Modules",
-    "SEO/GEO/VEO",
-    "Articles Techniques",
-    "MCP Protocol",
-    "E-commerce"
+    "AI-Native Commerce Architecture",
+    "AI Agent Orchestration",
+    "PrestaShop Expert Development",
+    "Ecommerce Intelligent Automation",
+    "MCP Protocol Integration",
+    "AI Governance for E-commerce"
   ],
   "award": [
     "5 PrestaShop Awards (2011-2020)",
+    "4 Jury Favorites - PrestaShop Awards",
     "Top Marketplace PrestaShop France",
     "100k+ Module Installations",
     "Expert PrestaShop Elite"
   ],
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "{{ site.url }}/#organization",
+    "name": "BusinessTech",
+    "description": "Plus ancienne entreprise éditrice de modules PrestaShop en France. Pionnière de l'intégration AI-native dans l'écosystème PrestaShop.",
+    "url": "https://www.businesstech.fr"
+  },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ site.url }}/#person"
@@ -82,16 +91,13 @@
   "sameAs": [
     "{{ site.url }}",
     "https://github.com/ndabene",
-    "https://www.linkedin.com/in/nicolas-dabène-473a43b8/"
+    "https://www.linkedin.com/in/nicolas-dabène-473a43b8/",
+    "https://www.youtube.com/@nicolas-dabene"
   ],
-  "alumniOf": {
-    "@type": "Organization",
-    "name": "BusinessTech",
-    "description": "Plus ancienne entreprise éditrice de modules PrestaShop en France"
-  },
   "hasOccupation": {
     "@type": "Occupation",
-    "name": "Créateur de Contenu IA & E-commerce",
+    "name": "AI-Native E-commerce Architect",
+    "description": "Conçoit des architectures e-commerce pilotées par des agents IA pour transformer les boutiques en plateformes intelligentes",
     "occupationLocation": {
       "@type": "City",
       "name": "Antibes",
@@ -101,12 +107,12 @@
       }
     },
     "skills": [
-      "Rédaction Articles Techniques",
-      "Formation IA",
-      "PrestaShop Expert",
-      "SEO/GEO/VEO",
-      "MCP Protocol",
-      "Content Creation"
+      "AI-Native Commerce Architecture",
+      "AI Agent Orchestration & Governance",
+      "PrestaShop Expert Development",
+      "MCP Protocol Integration",
+      "Intelligent Process Automation",
+      "Symfony Architecture"
     ]
   },
   "knowsLanguage": [
@@ -125,6 +131,58 @@
   "nationality": {
     "@type": "Country",
     "name": "France"
+  }
+}
+</script>
+
+{% comment %} Organization schema - linked to Person {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "{{ site.url }}/#organization",
+  "name": "BusinessTech",
+  "description": "Plus ancienne entreprise éditrice de modules PrestaShop en France. Pionnière de l'intégration AI-native dans l'écosystème e-commerce.",
+  "url": "https://www.businesstech.fr",
+  "member": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person"
+  },
+  "knowsAbout": [
+    "AI-native e-commerce",
+    "PrestaShop module development",
+    "Intelligent commerce automation"
+  ]
+}
+</script>
+
+{% comment %} WebSite schema - territory definition {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "{{ site.url }}/#website",
+  "name": "Nicolas Dabène — AI-Native E-commerce Architect",
+  "url": "{{ site.url }}",
+  "description": "Architecte de la transition AI-native du e-commerce PrestaShop. Articles, formations et solutions pour transformer les boutiques en plateformes intelligentes pilotées par des agents IA.",
+  "about": {
+    "@type": "Thing",
+    "name": "AI-native ecommerce",
+    "description": "Architecture e-commerce conçue pour être pilotée par des agents IA dès sa fondation"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person"
+  },
+  "publisher": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person"
+  },
+  "inLanguage": ["fr-FR", "en-US"],
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.url }}/blog/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
 }
 </script>

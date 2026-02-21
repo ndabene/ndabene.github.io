@@ -1,13 +1,13 @@
-- id: prestashop
-  name: Expert PrestaShop Elite - 5 Awards
-  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
-  description: "Expert PrestaShop reconnu avec 5 Awards officiels (2011-2020) et 30 modules développés totalisant 100k+ installations actives. Développeur au sein de BusinessTech, une des plus anciennes entreprises éditrices de modules PrestaShop en France."
+- id: ai
+  name: Transformation AI-Native des Boutiques
+  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
+  description: "Pionnier de l'intégration AI-native dans le e-commerce. Je conçois des architectures où les agents IA sont intégrés dès la fondation — pas comme une couche superficielle, mais comme le moteur de décision de la boutique. Gain d'efficacité 4x démontré."
   skills:
-    - "5 PrestaShop Awards + 4 'coups de cœur' du jury"
-    - "30 modules PrestaShop avec 100k+ installations actives"
-    - "Top marketplace PrestaShop France chez BusinessTech"
-    - "Évolution native PrestaShop vers architecture Symfony moderne"
-    - "Expertise approfondie besoins e-commerce et enjeux business"
+    - "Architecture AI-native pour e-commerce PrestaShop"
+    - "Orchestration d'agents IA pour automatisation métier (gain 4x)"
+    - "Gouvernance et supervision des agents IA en production"
+    - "Intégration seamless IA dans architectures existantes"
+    - "Formation d'équipes aux méthodologies AI-native"
 
 - id: ecommerce
   name: Architecture E-commerce Complexe
@@ -20,6 +20,17 @@
     - "Sécurité e-commerce et conformité RGPD"
     - "Migration et refactoring de boutiques existantes"
 
+- id: prestashop
+  name: Leadership Technique PrestaShop — 5 Awards
+  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/></svg>
+  description: "Expert PrestaShop reconnu avec 5 Awards officiels (2011-2020) et 30 modules développés totalisant 100k+ installations actives. Développeur au sein de BusinessTech, une des plus anciennes entreprises éditrices de modules PrestaShop en France."
+  skills:
+    - "5 PrestaShop Awards + 4 'coups de cœur' du jury"
+    - "30 modules PrestaShop avec 100k+ installations actives"
+    - "Top marketplace PrestaShop France chez BusinessTech"
+    - "Évolution native PrestaShop vers architecture Symfony moderne"
+    - "Expertise approfondie besoins e-commerce et enjeux business"
+
 - id: product
   name: Product Management & Vision Business
   icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
@@ -30,18 +41,6 @@
     - "Développement de modules à forte valeur ajoutée"
     - "Stratégie produit et roadmap technique"
     - "Optimisation des conversions et UX e-commerce"
-
-- id: ai
-  name: Pionnier IA E-commerce - Gain 4x
-  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
-  description: "Pionnier de l'intégration d'intelligence artificielle dans le développement e-commerce avec un gain d'efficacité de 4x. Spécialiste de l'orchestration d'agents IA pour révolutionner les workflows de développement et l'automatisation des processus métier."
-  skills:
-    - "Orchestration d'agents IA pour développement (gain 4x efficacité)"
-    - "Prompt-Driven Development et méthodologies IA"
-    - "Automation intelligente des processus e-commerce"
-    - "Formation d'équipes aux méthodologies IA assistées"
-    - "Intégration seamless IA dans architectures existantes"
-
 
 - id: innovation
   name: Innovation & Leadership Technique

@@ -1,19 +1,20 @@
 ---
 layout: page
 title: Me Contacter
-description: "Contactez Nicolas Dabène pour vos projets, collaborations ou consultations
-  techniques."
-keywords: "contact développeur php, expert prestashop, consultant ai orchestrator,
-  consultation technique, développeur freelance"
+description: "Contactez Nicolas Dabène pour vos projets de transformation AI-native,
+  architecture e-commerce IA ou gouvernance d'agents IA."
+keywords: "contact architecte ia e-commerce, transformation ai-native prestashop,
+  gouvernance agents ia, architecture e-commerce ia, consultant ia e-commerce"
 permalink: /contact/
-llm_summary: Contactez Nicolas Dabène pour vos projets, collaborations ou 
-  consultations techniques.
+llm_summary: Contactez Nicolas Dabène, architecte de la transition AI-native du
+  e-commerce PrestaShop, pour vos projets de transformation IA, architecture e-commerce
+  et gouvernance d'agents IA.
 llm_topics:
-- contact développeur php
-- expert prestashop
-- consultant ai orchestrator
-- consultation technique
-- développeur freelance
+- contact architecte ia e-commerce
+- transformation ai-native prestashop
+- gouvernance agents ia
+- architecture e-commerce ia
+- consultant ia e-commerce
 ---
 <section class="contact-section">
     <div class="container">
@@ -25,16 +26,16 @@ llm_topics:
             <div class="contact-columns">
                 <div class="contact-services">
                     <div class="service-card">
-                        <h3>Mission freelance</h3>
-                        <p>Projets de développement, intégration, optimisation</p>
+                        <h3>Transformation AI-Native</h3>
+                        <p>Architecture e-commerce pilotée par des agents IA</p>
                     </div>
                     <div class="service-card">
-                        <h3>Formation</h3>
-                        <p>Sessions de formation IA, PrestaShop, PHP avancé</p>
+                        <h3>Architecture E-commerce IA</h3>
+                        <p>Intégration IA dans PrestaShop, automatisation intelligente</p>
                     </div>
                     <div class="service-card">
-                        <h3>Conseil</h3>
-                        <p>Audit technique, architecture, stratégie</p>
+                        <h3>Gouvernance Agents IA</h3>
+                        <p>Supervision, audit et stratégie d'agents IA en production</p>
                     </div>
                 </div>
                 <div class="contact-form-container card">
@@ -51,9 +52,9 @@ llm_topics:
                         <label for="contact-type">Type de demande :</label>
                         <select id="contact-type" name="contact_type" required>
                             <option value="" disabled selected>Choisir...</option>
-                            <option>Mission freelance</option>
-                            <option>Formation</option>
-                            <option>Conseil</option>
+                            <option>Transformation AI-Native</option>
+                            <option>Architecture E-commerce IA</option>
+                            <option>Gouvernance Agents IA</option>
                         </select>
                     </div>
                     <div class="form-group">

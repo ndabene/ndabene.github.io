@@ -71,6 +71,9 @@ faq:
     pas.
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+La génération d'images par IA transforme les fiches produits et le marketing e-commerce. Voici ce que Gemini Flash Image apporte concrètement.
+</aside>
 
 # Gemini 2.5 Flash Image : la révolution visuelle de Google arrive enfin
 

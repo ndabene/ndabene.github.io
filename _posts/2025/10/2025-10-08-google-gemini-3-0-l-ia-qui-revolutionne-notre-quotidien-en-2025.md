@@ -49,6 +49,9 @@ faq:
 is_future: true
 ---
 
+<aside class="positioning-context" style="font-style: italic; margin-bottom: 1.5rem; padding: 1rem; border-left: 3px solid var(--accent-color, #6366f1); background: var(--bg-secondary, #f8f9fa);">
+Chaque nouveau modèle IA redéfinit les possibilités pour le e-commerce. Gemini 3.0 introduit des capacités agentiques qui changent la donne pour les boutiques en ligne.
+</aside>
 
 # Google Gemini 3.0 : L'IA qui Révolutionne Notre Quotidien en 2025
 
