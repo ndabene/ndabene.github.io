@@ -102,13 +102,13 @@ lang: fr
 # Vibe Coding en e-commerce : pourquoi 80% des modules générés par IA ne passeront jamais en production
 
 **Temps de lecture : 15 min**
-**Dernière mise à jour : Février 2026**
+**Dernière mise à jour : 24 février 2026**
 
 ## Le rêve vendu vs. la réalité du terrain
 
 > "Décris ce que tu veux, l'IA code pour toi."
 
-Depuis que Gene Kim a popularisé le concept de **Vibe Coding** et que des outils comme Cursor, Claude Code ou GitHub Copilot ont explosé, un narratif séduisant s'est installé : tout le monde peut désormais créer des logiciels. Plus besoin de comprendre le code, il suffit de "donner le vibe".
+Depuis qu'Andrej Karpathy a popularisé le concept de **Vibe Coding** dans un tweet viral de février 2025 — et que des outils comme Cursor, Claude Code ou GitHub Copilot ont explosé — un narratif séduisant s'est installé : tout le monde peut désormais créer des logiciels. Plus besoin de comprendre le code, il suffit de "donner le vibe".
 
 Et franchement ? Pour un prototype, une démo, un side-project... ça marche. C'est même bluffant.
 
@@ -214,6 +214,8 @@ L'IA génère très bien les hooks d'affichage (display). Elle oublie systémati
 - Ne gérait pas `hookActionObjectStockAvailableUpdateAfter` → conflit avec le stock natif
 
 **Un seul hook oublié = des données incohérentes sur des centaines de produits.**
+
+> **Note technique :** Les hooks `actionObject[ClassName][Add/Update/Delete]Before/After` sont des hooks dynamiques générés par `ObjectModel`. Ils ne peuvent pas être enregistrés via `$this->registerHook()` dans `install()`. Pour les utiliser, votre module doit implémenter la méthode correspondante (ex : `hookActionObjectCombinationDeleteAfter`) — PrestaShop l'appellera automatiquement si elle existe. Pas besoin de `registerHook`, contrairement aux hooks display.
 
 ---
 
@@ -349,6 +351,8 @@ class MonModuleAjaxModuleFrontController extends ModuleFrontController
 
 On est passé de **8 lignes à 65 lignes**. Et chaque ligne supplémentaire bloque un vecteur d'attaque réel.
 
+> **Point d'architecture :** Cet exemple illustre la sécurisation d'un endpoint front. Mais modifier le prix d'un produit est une action d'administration — elle devrait idéalement passer par un `ModuleAdminController` ou un controller Symfony avec vérification de permissions native. Sur PrestaShop 8+, le cookie `psAdmin` est en cours de dépréciation au profit du système d'auth Symfony. Pour une action admin réelle, préférez un endpoint déclaré dans `config/routes.yml` avec `@IsGranted('ROLE_MOD_TAB_MONMODULE_UPDATE')`.
+
 ### Les injections SQL : toujours là en 2026
 
 L'IA adore générer des requêtes SQL "lisibles" :
@@ -444,8 +448,11 @@ public function hookDisplayShoppingCartFooter($params)
     // Cache : on ne recalcule pas à chaque affichage
     $cacheKey = 'monmodule_reco_' . $cart->id . '_' . md5(serialize(array_column($products, 'id_product')));
 
-    if ($cachedOutput = $this->getCachedRecommendations($cacheKey)) {
-        return $cachedOutput;
+    // Mise en cache via le système natif PrestaShop
+    $cacheId = 'MonModule_reco_' . $cacheKey;
+
+    if (Cache::isStored($cacheId)) {
+        return Cache::retrieve($cacheId);
     }
 
     $productIds = array_column($products, 'id_product');
@@ -500,14 +507,18 @@ public function hookDisplayShoppingCartFooter($params)
     $this->context->smarty->assign('recommendations', $recommendations);
     $output = $this->display(__FILE__, 'views/templates/hook/recommendations.tpl');
 
-    // Mise en cache pour 30 minutes
-    $this->cacheRecommendations($cacheKey, $output, 1800);
+    // Mise en cache via le système natif PrestaShop
+    Cache::store($cacheId, $output);
+    // Note : Cache::getInstance() utilise CacheFs par défaut (filesystem).
+    // Pour du Memcached ou Redis, configurer dans Paramètres Avancés > Performances.
 
     return $output;
 }
 ```
 
 Résultat : **1 requête au lieu de 1 000**. Cache en prime. Prêt pour le trafic.
+
+> **Note** : Sur des installations haute performance, préférer une clé d'invalidation liée au `date_upd` du panier pour éviter de servir un cache obsolète après modification du panier.
 
 ---
 
@@ -772,6 +783,8 @@ function upgrade_module_1_2_0($module)
 
 Sans fichier d'upgrade, la mise à jour du module casse toutes les installations existantes. C'est le genre de chose qu'on apprend après avoir reçu 200 tickets de support en une journée.
 
+> **Important PS 8+ :** Depuis PrestaShop 8.0, les scripts d'upgrade du Core ont été entièrement déplacés dans le module `autoupgrade`. Pour vos propres modules, les fichiers `upgrade/upgrade-X.Y.Z.php` restent la bonne approche et sont toujours pris en charge. Mais assurez-vous que votre module déclare correctement sa version dans `monmodule.php` (`$this->version`) et dans `config.xml` — c'est ce que le système d'upgrade utilise pour déclencher les bons scripts de migration.
+
 ---
 
 ## 6. La compatibilité : le vrai métier
@@ -799,10 +812,8 @@ public function hookDisplayHeader()
 // Ce qu'il faut faire
 public function hookDisplayHeader()
 {
-    $controller = $this->context->controller;
-
-    // Ne charger que sur les pages concernées
-    if ($controller instanceof ProductController) {
+    // Méthode recommandée par PrestaShop devdocs
+    if ($this->context->controller->php_self === 'product') {
         $this->context->controller->registerStylesheet(
             'monmodule-product',
             'modules/' . $this->name . '/views/css/product.css',
@@ -816,6 +827,8 @@ public function hookDisplayHeader()
     }
 }
 ```
+
+> **Pourquoi `php_self` plutôt que `instanceof` ?** La propriété `$php_self` est une string définie sur chaque controller PrestaShop (`'product'`, `'category'`, `'cart'`, etc.) et reste cohérente même avec des thèmes custom ou des surcharges de controller. L'`instanceof` dépend de la chaîne d'héritage et peut être brisé par des overrides.
 
 ### Compatibilité de version PrestaShop
 
@@ -838,7 +851,45 @@ if (version_compare(_PS_VERSION_, '8.0.0', '>=')) {
 
 ---
 
-## 7. Le bilan : ce que le Vibe Coding fait bien, et où il s'arrête
+## 7. PrestaShop 9 : les ruptures que l'IA ignore complètement
+
+Si les sections précédentes s'appliquaient à PrestaShop 1.7.x et 8.x, PrestaShop 9.0 (sorti en juin 2025) introduit des ruptures supplémentaires qui rendent les modules vibe-codés encore plus fragiles.
+
+**La page produit legacy est supprimée.**
+
+Dans PrestaShop 8, deux pages produit coexistaient (legacy et Symfony). Dans PrestaShop 9, **seule la page Symfony existe**. Tout module qui ciblait `hookActionProductSave` ou les hooks de la legacy page produit sans adaptation Symfony est cassé sans migration.
+
+```php
+// Ce pattern fonctionnait en PS 8 legacy — cassé en PS 9
+public function hookActionProductSave($params) { ... }
+
+// PS 9 : utiliser les nouveaux Form Handlers
+public function hookActionAfterUpdateCreateProductFormHandler($params) { ... }
+public function hookActionAfterCreateCreateProductFormHandler($params) { ... }
+```
+
+**Les hooks d'alias déclenchent des deprecation notices.**
+
+PrestaShop 8.0 avait introduit une alerte en mode développeur quand un alias de hook est utilisé. En PS 9, `Using a hook alias will trigger a deprecation notice` est documenté officiellement. Si votre module utilise encore `displayProductButtons` (alias de `displayProductAdditionalInfo`), préparez-vous à devoir le corriger.
+
+**L'authentification admin back-office est désormais 100% Symfony.**
+
+Fini `Context::$cookie` pour l'auth admin. Le système est maintenant basé sur Symfony Security avec des sessions côté serveur. Tout module qui lisait `$cookie->id_employee` pour vérifier une permission admin dans un contexte non-standard doit être revu.
+
+**Le bon réflexe avant de commencer un module en 2026 :**
+
+```
+1. Vérifier la version cible : PS 1.7 / PS 8 / PS 9
+2. Consulter "Changes in PrestaShop X.0.x" sur devdocs.prestashop-project.org
+3. Vérifier la liste des hooks supprimés pour cette version
+4. Adapter l'architecture en conséquence (legacy vs Symfony)
+```
+
+> Un module vibe-codé en 2024 ciblant PS 1.7 peut être incompatible avec PS 9 sur 40% de ses fonctionnalités. L'IA qui génère du code en 2026 ne sait pas forcément quelle version vous ciblez — et ne le demandera jamais.
+
+---
+
+## 8. Le bilan : ce que le Vibe Coding fait bien, et où il s'arrête
 
 Soyons honnête. Voici mon bilan après 6 mois d'utilisation quotidienne de l'IA dans mon développement PrestaShop :
 
@@ -863,13 +914,15 @@ Soyons honnête. Voici mon bilan après 6 mois d'utilisation quotidienne de l'IA
 | Hooks d'action complets | Données incohérentes, ERP/CRM désynchronisés |
 | Fichiers d'upgrade | Module impossible à mettre à jour |
 | Compatibilité cross-version | Module qui crashe sur d'autres versions |
+| Compatibilité PS 9 (page produit legacy) | Module cassé sur toutes les boutiques PS 9.0+ |
+| Hooks dynamiques `actionObject*` mal utilisés | `registerHook()` silencieux, hook jamais déclenché |
 | Gestion d'erreurs robuste | Écrans blancs, 500 errors |
 | Conformité RGPD | Risque juridique |
 | Accessibilité (a11y) | Non conformité légale |
 
 ---
 
-## 8. Ma méthode : l'IA comme accélérateur, pas comme remplaçant
+## 9. Ma méthode : l'IA comme accélérateur, pas comme remplaçant
 
 Je ne suis pas contre le Vibe Coding. **Je suis contre le Vibe Coding sans filet.**
 
