@@ -296,3 +296,13 @@
   channel: ndabene06
   duration: PT6M23S
   category: PrestaShop & E-commerce
+- title: 'Développeur en 2026 : Codeur ou Chef d’Orchestre ?'
+  video_id: uymJjJxcvrs
+  url: https://www.youtube.com/watch?v=uymJjJxcvrs
+  thumbnail: https://i.ytimg.com/vi/uymJjJxcvrs/hqdefault.jpg
+  description: De Codeur à Chef d'Orchestre Pendant longtemps, j'ai pensé que la valeur
+    d'un développeur se mesurait à la quantité de code ...
+  published_at: '2026-02-24T23:30:20Z'
+  channel: ndabene06
+  duration: PT6M
+  category: IA & Automatisation
