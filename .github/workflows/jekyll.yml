@@ -109,7 +109,8 @@ jobs:
       - name: Install ImageMagick for responsive images
         run: |
           echo "📦 Installation d'ImageMagick pour images responsive..."
-          sudo apt-get install -y imagemagick
+          sudo apt-get update
+          sudo apt-get install -y --fix-missing imagemagick
           convert -version
           echo "✅ ImageMagick installé avec succès"
 
