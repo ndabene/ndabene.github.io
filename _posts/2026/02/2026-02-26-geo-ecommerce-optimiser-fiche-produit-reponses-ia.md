@@ -529,6 +529,18 @@ Si vous voulez savoir ou vous en etes, voici le protocole minimal que je recomma
 
 5. **Repetez tous les 30 jours** pour mesurer l'evolution.
 
+{% include contextual-cta.html
+  cta_type="related-article"
+  zone="mid-article"
+  context="Vous souhaitez aller plus loin dans la mesure ?"
+  title="Guide complet : mesurer votre visibilité GEO en 2025"
+  description="Protocoles de suivi, outils recommandés et indicateurs clés pour tracker votre présence dans les réponses de ChatGPT, Gemini et Perplexity."
+  button_text="Lire le guide de mesure"
+  button_url="/articles/2025/11/03/guide-complet-mesurer-geo/"
+  icon="fas fa-chart-line"
+  variant="subtle"
+%}
+
 ---
 
 ## Conclusion : le GEO n'est pas le futur du e-commerce, c'est le present
@@ -538,5 +550,17 @@ Pendant que vous lisez cet article, des milliers de consommateurs demandent a Ch
 La bonne nouvelle : comme ce cas pratique le montre, les leviers du GEO sont **accessibles et actionnables**. Vous n'avez pas besoin d'un budget de multinationale. Vous avez besoin d'un contenu de qualite, bien structure, source, et soutenu par un ecosysteme de mentions coherentes.
 
 Le GEO est encore un territoire emergent. Ceux qui s'y positionnent maintenant auront un avantage competitif majeur quand la vague deviendra mainstream.
+
+{% include contextual-cta.html
+  cta_type="consultation"
+  zone="post-conclusion"
+  context="Ce cas pratique vous parle ? Votre boutique est peut-être dans la même situation."
+  title="Audit GEO gratuit : où en est votre visibilité dans les réponses IA ?"
+  description="En 30 minutes, j'analyse votre présence actuelle sur ChatGPT, Gemini et Perplexity, et vous identifie les 3 leviers prioritaires à activer."
+  button_text="Demander mon audit gratuit"
+  button_url="/contact/"
+  icon="fas fa-robot"
+  variant="emphasis"
+%}
 
 **La question n'est pas de savoir si les IA vont influencer les decisions d'achat. C'est de savoir si votre produit sera dans leurs recommandations quand ca arrivera.**
