@@ -1,31 +1,72 @@
 {% if site.google_analytics %}
 <!-- Google Analytics 4 avec Google Consent Mode v2 + pings anonymes -->
+<!--
+  AUDIT GA4 - Sessions non identifiées :
+  Exclusions de référents à configurer dans GA4 Admin > Flux de données > Paramètres de tag :
+    - nicolas-dabene.fr   (domaine principal - évite les auto-référencements)
+    - ndabene.github.io   (domaine GitHub Pages - idem)
+  URL : https://analytics.google.com > Admin > Flux de données > [flux] > Configurer les paramètres de tag > Lister les référents à exclure
+-->
 <script>
-  // Définir d'abord le consentement par défaut avant de charger gtag.js
-  // wait_for_update : laisse 500 ms au bandeau cookies pour mettre à jour le consentement
+  // ─── Étape 1 : Consent Mode v2 ───────────────────────────────────────────────
+  // DOIT être exécuté avant le chargement de gtag.js
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
-  });
+
+  // Restauration immédiate du consentement pour les visiteurs connus.
+  // Évite la mesure en mode "cookieless" pour les utilisateurs ayant déjà consenti,
+  // même lorsque cookie-consent.js est chargé en différé (defer).
+  (function() {
+    try {
+      var saved = localStorage.getItem('ndabene_cookie_consent');
+      if (saved) {
+        var consent = JSON.parse(saved);
+        var age = Date.now() - (consent.timestamp || 0);
+        // Consentement valide si < 1 an
+        if (age < 365 * 24 * 60 * 60 * 1000 && consent.preferences) {
+          var p = consent.preferences;
+          // Appliquer directement les préférences stockées comme consentement par défaut.
+          // Pas de wait_for_update nécessaire : on connaît déjà les préférences.
+          gtag('consent', 'default', {
+            'analytics_storage':   p.analytics        ? 'granted' : 'denied',
+            'ad_storage':          p.ad               ? 'granted' : 'denied',
+            'ad_user_data':        p.adUserData        ? 'granted' : 'denied',
+            'ad_personalization':  p.adPersonalization ? 'granted' : 'denied'
+          });
+          return;
+        }
+      }
+    } catch(e) {}
+
+    // Nouveau visiteur (pas de consentement stocké) :
+    // wait_for_update à 2000 ms pour laisser le temps aux scripts defer de
+    // charger le bandeau et mettre à jour le consentement avant que GA4 ne
+    // procède à la mesure en mode cookieless.
+    gtag('consent', 'default', {
+      'analytics_storage':  'denied',
+      'ad_storage':         'denied',
+      'ad_user_data':       'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 2000
+    });
+  })();
+
   // Modélisation comportementale : rédaction des données publicitaires + passthrough URL
   gtag('set', 'ads_data_redaction', true);
   gtag('set', 'url_passthrough', true);
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
-  // Configuration GA4 avec Consent Mode v2
+  // ─── Étape 2 : Configuration GA4 ─────────────────────────────────────────────
   gtag('js', new Date());
   gtag('config', '{{ site.google_analytics }}', {
     'anonymize_ip': true,
     'allow_google_signals': false,
     'allow_ad_personalization_signals': false,
     'cookie_flags': 'SameSite=Strict;Secure',
-    'send_page_view': true
+    'send_page_view': true,
+    // Mode debug : activer avec ?ga_debug=1 dans l'URL pour utiliser GA4 DebugView
+    'debug_mode': (new URLSearchParams(window.location.search).get('ga_debug') === '1')
   });
   window.GA_MEASUREMENT_ID = '{{ site.google_analytics }}';
 </script>
