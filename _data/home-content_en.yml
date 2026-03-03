@@ -11,9 +11,9 @@ hero:
   photo: "assets/images/hero/profile-hero.jpg"
   cta:
     primary:
-      text: "Discover my AI projects"
-      url: "/en/modules/mcp-tools-plus/"
-      icon: "fas fa-robot"
+      text: "Book a free exploratory session"
+      url: "https://calendly.com/ndabene2807/mcp-tools-plus"
+      icon: "fas fa-calendar-check"
     secondary:
       text: "Read the blog"
       url: "/en/blog/"
@@ -42,17 +42,17 @@ value_proposition:
 # 3. CORE PROJECT - MCP Tools Plus
 # ============================================
 core_project:
-  title: "MCP Tools Plus"
-  tagline: "AI connected to PrestaShop"
-  description: "A platform connecting artificial intelligence directly to the PrestaShop back-office to automate, analyze and manage intelligent e-commerce."
+  title: "Free exploratory session"
+  tagline: "30 minutes to clarify your AI transformation for PrestaShop"
+  description: "A scoping and alignment session to understand your context and assess what would realistically make sense around AI in your PrestaShop environment. Not an audit, not deep consulting — just an honest first alignment."
   benefits:
-    - "Business process automation"
-    - "Operational AI agents"
-    - "Data-driven decisions"
+    - "Current architecture, AI usage intentions, technical & organizational constraints"
+    - "Governance challenges: control, validation, security, accountability of AI agents"
+    - "Realistic orchestration leads — and whether an AI-native approach fits your situation"
   cta:
-    text: "Discover MCP Tools Plus"
-    url: "/en/modules/mcp-tools-plus/"
-    icon: "fas fa-arrow-right"
+    text: "Book my free session"
+    url: "https://calendly.com/ndabene2807/mcp-tools-plus"
+    icon: "fas fa-calendar-check"
 
 # ============================================
 # 4. ECOSYSTEM - Other projects & solutions
