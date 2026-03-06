@@ -1,4 +1,10 @@
 <footer class="footer">
+    {% assign current_lang = page.lang | default: site.default_lang %}
+    {% if current_lang == 'en' %}
+        {% assign footer_navigation = site.data.navigation_en %}
+    {% else %}
+        {% assign footer_navigation = site.data.navigation_fr %}
+    {% endif %}
     <div class="container">
         <div class="footer-grid">
             <div class="footer-section">
@@ -8,7 +14,7 @@
             <div class="footer-section">
                 <h3>Liens rapides</h3>
                 <ul class="footer-links">
-                    {% for item in site.data.navigation %}
+                    {% for item in footer_navigation %}
                     <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
                     {% endfor %}
                 </ul>
@@ -39,7 +45,6 @@
         </div>
 
         <!-- Section cookies intégrée dans le footer -->
-        {% assign current_lang = page.lang | default: site.default_lang %}
         <div class="footer-cookies" id="cookie-consent" style="display: none;" data-lang="{{ current_lang }}">
             <div class="cookie-content-wrapper">
                 <div class="cookie-info">

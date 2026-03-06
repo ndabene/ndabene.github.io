@@ -56,6 +56,43 @@
   status = 301
   force = false
 
+# Canonicalisation des anciens chemins source et contenus internes
+[[redirects]]
+  from = "/pages/case-studies.html"
+  to = "/case-studies/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/modules/mcp-tools-plus.md"
+  to = "/modules/mcp-tools-plus/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/publications.html"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/publications.md"
+  to = "/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pages/*"
+  to = "/"
+  status = 301
+  force = true
+
 # Cache aggressive pour assets statiques
 [[headers]]
   for = "/assets/images/*"
