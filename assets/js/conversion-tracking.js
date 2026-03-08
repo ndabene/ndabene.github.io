@@ -59,6 +59,9 @@
 
     // 9. Track "Me contacter" CTA clicks
     trackContactCTAClicks();
+
+    // 10. Track "Demander un devis" CTA on the Expert PrestaShop page (hero)
+    trackExpertPageDevisCTA();
   }
 
   // Track clicks on marketplace links (PRIMARY CONVERSION)
@@ -185,6 +188,24 @@
           cta_location: window.location.pathname,
           link_location: linkLocation,
           value: 3
+        });
+      });
+    });
+  }
+
+  // Track "Demander un devis" hero CTA on Expert PrestaShop page (PRIMARY CONVERSION)
+  function trackExpertPageDevisCTA() {
+    const devisBtns = document.querySelectorAll('.btn-cta-devis-expert, [data-cta="devis-prestashop-hero"]');
+
+    devisBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        trackConversion('generate_lead', {
+          event_category: 'conversion',
+          event_label: 'Demander un devis - Expert PrestaShop',
+          cta_name: 'Demander un devis',
+          cta_location: window.location.pathname,
+          cta_source: 'hero_expert_prestashop',
+          value: 10
         });
       });
     });

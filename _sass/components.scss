@@ -1948,6 +1948,27 @@ body.dark-mode {
   color: #ffffff;
 }
 
+.btn--cta {
+  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  color: #0f172a;
+  border-color: #d4af37;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  animation: cta-pulse 2.5s ease-in-out infinite;
+}
+
+.btn--cta:hover {
+  background: linear-gradient(135deg, #e8c847 0%, #d4af37 100%);
+  color: #0f172a;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+  animation: none;
+}
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); }
+  50% { box-shadow: 0 4px 25px rgba(212, 175, 55, 0.7); }
+}
+
 .btn--secondary {
   background-color: #ffffff;
   color: $primary-color;

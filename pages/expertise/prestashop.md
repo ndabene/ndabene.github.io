@@ -74,6 +74,9 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
         </div>
 
         <div class="hero-actions" style="margin-top: 2rem;">
+          <a href="/contact/?ref=expert-prestashop" class="btn btn--cta btn--large btn-cta-devis-expert" data-cta="devis-prestashop-hero">
+            <span>Demander un devis</span>
+          </a>
           <a href="https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html" target="_blank" class="btn btn--primary btn--large">
             <span>🚀 Découvrir MCP Tools</span>
           </a>

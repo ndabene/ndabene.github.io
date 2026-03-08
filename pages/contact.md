@@ -52,9 +52,10 @@ llm_topics:
                         <label for="contact-type">Type de demande :</label>
                         <select id="contact-type" name="contact_type" required>
                             <option value="" disabled selected>Choisir...</option>
-                            <option>Transformation AI-Native</option>
-                            <option>Architecture E-commerce IA</option>
-                            <option>Gouvernance Agents IA</option>
+                            <option value="Projet PrestaShop">Projet PrestaShop</option>
+                            <option value="Transformation AI-Native">Transformation AI-Native</option>
+                            <option value="Architecture E-commerce IA">Architecture E-commerce IA</option>
+                            <option value="Gouvernance Agents IA">Gouvernance Agents IA</option>
                         </select>
                     </div>
                     <div class="form-group">
