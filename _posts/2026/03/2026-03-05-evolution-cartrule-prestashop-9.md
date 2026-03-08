@@ -295,3 +295,9 @@ Ce que tout développeur de module PrestaShop doit retenir de l'évolution CartR
 - [GitHub — CartRule.php (develop/9.1.x)](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/CartRule.php)
 - [GitHub — CartRule.php (9.0.x)](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/CartRule.php)
 - [PR #40424 — Fixed inconsistency use of variable in CartRule.php](https://github.com/PrestaShop/PrestaShop/pull/40424)
+
+{% include you-may-also-like.html
+   ref1="vibe-coding-ecommerce-modules-ia-production-2026"
+   ref2="ai-governance-framework-prestashop-2026"
+   ref3="prestashop-claude-chatgpt-mcp-tools-plus-2026"
+%}

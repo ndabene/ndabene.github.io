@@ -254,6 +254,17 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
   </div>
 </section>
 
+<!-- VOUS POURRIEZ AUSSI AIMER -->
+<section class="section-unified">
+  <div class="container">
+    {% include you-may-also-like.html
+       ref1="vibe-coding-ecommerce-modules-ia-production-2026"
+       ref2="prestashop-claude-chatgpt-mcp-tools-plus-2026"
+       ref3="ai-governance-framework-prestashop-2026"
+    %}
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="section-unified publications-cta">
   <div class="container">
