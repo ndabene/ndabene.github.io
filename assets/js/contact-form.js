@@ -56,6 +56,33 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove the parameter from URL without refreshing
         window.history.replaceState({}, document.title, window.location.pathname);
     }
+
+    // Pre-select contact type and track lead source from referral param
+    const refParam = urlParams.get('ref');
+    if (refParam) {
+        const contactTypeSelect = document.getElementById('contact-type');
+        const refToOption = {
+            'expert-prestashop': 'Projet PrestaShop'
+        };
+        const optionLabel = refToOption[refParam];
+        if (contactTypeSelect && optionLabel) {
+            for (let i = 0; i < contactTypeSelect.options.length; i++) {
+                if (contactTypeSelect.options[i].value === optionLabel) {
+                    contactTypeSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+        // Track landing on contact page from expert page CTA in GA4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'contact_page_reached', {
+                event_category: 'conversion',
+                event_label: 'Contact depuis Expert PrestaShop',
+                lead_source: refParam,
+                value: 5
+            });
+        }
+    }
     
     // Form submission handler
     form.addEventListener('submit', function(e) {

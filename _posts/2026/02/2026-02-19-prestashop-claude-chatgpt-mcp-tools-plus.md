@@ -373,6 +373,26 @@ Pour ceux qui se demandent comment techniquement les deux IA accèdent aux même
 
 Découvrir toutes les fonctionnalités : [nicolas-dabene.fr/modules/mcp-tools-plus/](https://nicolas-dabene.fr/modules/mcp-tools-plus/)
 
+{% capture takeaway_claudechatgpt %}
+Les 5 enseignements clés de ce comparatif Claude vs ChatGPT pour piloter PrestaShop :
+
+1. **La valeur vient des données, pas du modèle.** Sans connexion à vos données métier réelles, Claude et ChatGPT ne sont que des chatbots génériques. Avec MCP Tools Plus, ils deviennent des collaborateurs opérationnels qui travaillent sur votre vrai catalogue, vos vraies commandes, vos vrais stocks.
+2. **Claude excelle dans la profondeur analytique.** Analyse multi-étapes, croisement de données non demandé, prudence sur l'exécution — Claude est le choix pour les décisions stratégiques et les diagnostics complexes (score 92/100 dans ce test).
+3. **ChatGPT excelle dans la vitesse et la présentation.** Exécution directe, rapports immédiatement présentables, génération de contenu en masse — ChatGPT est le choix pour l'opérationnel rapide et le contenu SEO à grande échelle.
+4. **La stratégie optimale : combiner les deux.** Le même module MCP Tools Plus connecte les deux IA. Claude pour analyser et décider, ChatGPT pour exécuter et produire du contenu. Le coût additionnel est quasi nul.
+5. **La connexion temps réel change tout.** Un assistant IA qui accède à vos vraies données peut repérer une rupture imminente, un problème de prix ou une anomalie que vous n'auriez jamais vue à temps.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Points Clés à Retenir — Claude vs ChatGPT pour PrestaShop"
+   content=takeaway_claudechatgpt
+   icon="🔑"
+   variant="important"
+   cite_id="claude-chatgpt-mcp-key-takeaways"
+%}
+
+---
+
 ## La question qui reste
 
 Ce comparatif est une photo à un instant T. Les deux plateformes évoluent à une vitesse folle. Claude 4 est attendu, GPT-5 aussi.

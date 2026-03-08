@@ -892,6 +892,24 @@ Every generated line goes through my mental checklist:
 
 AI is excellent at iterating quickly on variations. But the final validation is human, with tests on a real store, with real data, in a real multi-shop context.
 
+{% capture takeaway_vibecoding_en %}
+What every developer (and every merchant ordering a module) must understand about Vibe Coding applied to PrestaShop:
+
+1. **AI generates functional code — not production-ready code.** Vibe-coded modules compile and work in demos. They break on edge cases, real load, and inter-module interactions. That's precisely what makes them dangerous.
+2. **Three unavoidable failure vectors:** security (AJAX without CSRF token, SQL injections), multi-shop (missing `_shop` and `_lang` joins, `hookActionShopDataDuplication` never generated), and performance (N+1 queries that bring a server down within 24h of traffic).
+3. **Critical action hooks are systematically forgotten.** AI generates display hooks well, never the `hookActionObject*Delete/Update/Add` hooks required for data consistency with ERPs and CRMs.
+4. **PrestaShop 9 introduces breaking changes AI doesn't know about.** Legacy product page removed, 100% Symfony admin auth, hook alias deprecation — a vibe-coded module without an audit can be incompatible on 40% of its features.
+5. **The right approach: AI to accelerate, expert to validate.** AI saves 40–80% on scaffolding. But every generated line must pass through a mental checklist: security, multi-shop, multi-language, performance, complete hooks, version compatibility.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Key Takeaways — Vibe Coding & PrestaShop Modules"
+   content=takeaway_vibecoding_en
+   icon="🔑"
+   variant="technical"
+   cite_id="vibe-coding-prestashop-key-takeaways-en"
+%}
+
 ---
 
 ## Conclusion: Vibe Coding doesn't replace 10 years of production failures

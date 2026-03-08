@@ -564,3 +564,9 @@ Le GEO est encore un territoire emergent. Ceux qui s'y positionnent maintenant a
 %}
 
 **La question n'est pas de savoir si les IA vont influencer les decisions d'achat. C'est de savoir si votre produit sera dans leurs recommandations quand ca arrivera.**
+
+{% include you-may-also-like.html
+   ref1="prestashop-claude-chatgpt-mcp-tools-plus-2026"
+   ref2="ai-governance-framework-prestashop-2026"
+   ref3="google-ucp-prestashop-agentic-commerce"
+%}

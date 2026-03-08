@@ -515,4 +515,24 @@ C'est là que commence la vraie transformation.
 
 ---
 
+{% capture takeaway_gouvernance %}
+Les 5 points essentiels à retenir sur la gouvernance IA dans PrestaShop en 2026 :
+
+1. **L'IA est un client gouverné, pas un administrateur.** Elle doit être identifiée, limitée dans ses droits, journalisée et révocable à tout moment. Ouvrir PrestaShop à l'IA ne signifie pas abandonner le contrôle — c'est l'inverse.
+2. **Les 6 piliers indispensables :** registre des systèmes IA, gouvernance des données, contrôle humain proportionné (feature flags, override), sécurité LLM (filtrage prompts/sorties, OWASP), monitoring anti-dérive, gestion des dépendances fournisseurs.
+3. **Commencer petit, gouverner dès le premier jour.** Un registre IA simple (tableau partagé) et un pilote sur un cas non critique (génération de descriptions) suffisent pour démarrer. L'important est d'instaurer la traçabilité avant d'industrialiser.
+4. **AI Act + RGPD rendent la gouvernance obligatoire.** En 2026, l'IA en e-commerce n'est plus uniquement un sujet technique : c'est un sujet stratégique, organisationnel et juridique. Les risques incluent profilage, décisions automatisées non tracées et dépendances fournisseurs mal évaluées.
+5. **La compétence différenciante 2026 : l'orchestration gouvernée.** Le développeur PrestaShop ne code plus seulement des modules — il conçoit des systèmes maîtrisés où l'IA agit dans un cadre défini. C'est cette capacité qui crée de la valeur durable.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Points Clés à Retenir — Gouvernance IA & PrestaShop"
+   content=takeaway_gouvernance
+   icon="🔑"
+   variant="important"
+   cite_id="gouvernance-ia-prestashop-key-takeaways"
+%}
+
+---
+
 **À propos de l'auteur :** Nicolas Dabène accompagne depuis plus de 15 ans les entreprises dans leur transformation e-commerce. Spécialiste PrestaShop et architecte d'orchestrations IA, il partage son expertise sur [ndabene.com](https://ndabene.com).

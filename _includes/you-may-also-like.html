@@ -1,0 +1,262 @@
+{% comment %}
+Section "Vous pourriez aussi aimer" — 3 articles curatés
+Usage: {% include you-may-also-like.html ref1="ref-val" ref2="ref-val" ref3="ref-val" %}
+Les refs correspondent au champ `ref:` des frontmatters d'articles.
+{% endcomment %}
+
+{% assign ymal_post1 = site.posts | where: "ref", include.ref1 | first %}
+{% assign ymal_post2 = site.posts | where: "ref", include.ref2 | first %}
+{% assign ymal_post3 = site.posts | where: "ref", include.ref3 | first %}
+
+{% if ymal_post1 or ymal_post2 or ymal_post3 %}
+<section class="you-may-also-like" data-pagefind-ignore>
+  <div class="ymal-header">
+    <h2 class="ymal-title">Vous pourriez aussi aimer</h2>
+    <p class="ymal-subtitle">Articles sélectionnés pour approfondir le sujet</p>
+  </div>
+
+  <div class="ymal-grid">
+
+    {% if ymal_post1 %}
+    <a href="{{ ymal_post1.url | relative_url }}" class="ymal-card">
+      <div class="ymal-card-inner">
+        {% if ymal_post1.image %}
+        <div class="ymal-card-image">
+          <img src="{{ ymal_post1.image }}" alt="{{ ymal_post1.title }}" loading="lazy" width="400" height="220">
+          {% if ymal_post1.difficulty %}<span class="ymal-badge">{{ ymal_post1.difficulty }}</span>{% endif %}
+        </div>
+        {% endif %}
+        <div class="ymal-card-content">
+          <p class="ymal-card-category">{{ ymal_post1.categories[0] }}</p>
+          <h3 class="ymal-card-title">{{ ymal_post1.title }}</h3>
+          <p class="ymal-card-excerpt">{{ ymal_post1.excerpt | strip_html | truncate: 100 }}</p>
+          <div class="ymal-card-meta">
+            {% if ymal_post1.estimated_reading_time %}<span>{{ ymal_post1.estimated_reading_time }}</span>{% endif %}
+            <span class="ymal-read-more">Lire l'article →</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+
+    {% if ymal_post2 %}
+    <a href="{{ ymal_post2.url | relative_url }}" class="ymal-card">
+      <div class="ymal-card-inner">
+        {% if ymal_post2.image %}
+        <div class="ymal-card-image">
+          <img src="{{ ymal_post2.image }}" alt="{{ ymal_post2.title }}" loading="lazy" width="400" height="220">
+          {% if ymal_post2.difficulty %}<span class="ymal-badge">{{ ymal_post2.difficulty }}</span>{% endif %}
+        </div>
+        {% endif %}
+        <div class="ymal-card-content">
+          <p class="ymal-card-category">{{ ymal_post2.categories[0] }}</p>
+          <h3 class="ymal-card-title">{{ ymal_post2.title }}</h3>
+          <p class="ymal-card-excerpt">{{ ymal_post2.excerpt | strip_html | truncate: 100 }}</p>
+          <div class="ymal-card-meta">
+            {% if ymal_post2.estimated_reading_time %}<span>{{ ymal_post2.estimated_reading_time }}</span>{% endif %}
+            <span class="ymal-read-more">Lire l'article →</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+
+    {% if ymal_post3 %}
+    <a href="{{ ymal_post3.url | relative_url }}" class="ymal-card">
+      <div class="ymal-card-inner">
+        {% if ymal_post3.image %}
+        <div class="ymal-card-image">
+          <img src="{{ ymal_post3.image }}" alt="{{ ymal_post3.title }}" loading="lazy" width="400" height="220">
+          {% if ymal_post3.difficulty %}<span class="ymal-badge">{{ ymal_post3.difficulty }}</span>{% endif %}
+        </div>
+        {% endif %}
+        <div class="ymal-card-content">
+          <p class="ymal-card-category">{{ ymal_post3.categories[0] }}</p>
+          <h3 class="ymal-card-title">{{ ymal_post3.title }}</h3>
+          <p class="ymal-card-excerpt">{{ ymal_post3.excerpt | strip_html | truncate: 100 }}</p>
+          <div class="ymal-card-meta">
+            {% if ymal_post3.estimated_reading_time %}<span>{{ ymal_post3.estimated_reading_time }}</span>{% endif %}
+            <span class="ymal-read-more">Lire l'article →</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+
+  </div>
+</section>
+
+<style>
+.you-may-also-like {
+  margin: 3rem 0 2rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.ymal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ymal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  border: none;
+  padding: 0;
+}
+
+.ymal-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ymal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ymal-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ymal-card:hover {
+  border-color: #0f172a;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transform: translateY(-3px);
+}
+
+.ymal-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ymal-card-image {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  flex-shrink: 0;
+}
+
+.ymal-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.ymal-card:hover .ymal-card-image img {
+  transform: scale(1.04);
+}
+
+.ymal-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+
+.ymal-card-content {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ymal-card-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.ymal-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ymal-card-excerpt {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ymal-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.ymal-read-more {
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: color 0.2s;
+}
+
+.ymal-card:hover .ymal-read-more {
+  color: #7c3aed;
+}
+
+@media (max-width: 1024px) {
+  .ymal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .you-may-also-like {
+    padding: 1.5rem 1.25rem;
+  }
+  .ymal-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .ymal-card-image {
+    height: 120px;
+  }
+  .ymal-title {
+    font-size: 1.35rem;
+  }
+}
+</style>
+{% endif %}
