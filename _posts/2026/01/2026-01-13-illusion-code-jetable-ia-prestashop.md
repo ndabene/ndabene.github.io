@@ -3,6 +3,7 @@ layout: post
 title: 'L''illusion du code jetable : Pourquoi l''IA va tuer votre boutique PrestaShop
   (si vous ne redevenez pas architecte)'
 date: 2026-01-13
+last_modified_at: 2026-03-08
 ref: disposable-code-illusion-ai-prestashop
 author: Nicolas Dabène
 category: developpement-web
