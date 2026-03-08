@@ -3,6 +3,7 @@ layout: post
 title: Rapport exhaustif sur les protocoles de sécurité et les standards de développement
   pour les modules PrestaShop
 date: 2026-01-05
+last_modified_at: 2026-03-08
 ref: rapport-securite-modules-prestashop
 author: Nicolas Dabène
 category: prestashop-ecommerce

@@ -2,6 +2,7 @@
 layout: post
 title: 'MIRROR et Engram : Comment l''IA Apprend à Penser et à Se Souvenir'
 date: 2026-02-03
+last_modified_at: 2026-03-08
 ref: architectures-cognitives-memoire-llm
 author: Nicolas Dabène
 category: intelligence-artificielle

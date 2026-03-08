@@ -2,6 +2,7 @@
 layout: post
 title: 'Évolution de CartRule.php : PrestaShop 9.0.x → 9.1.x'
 date: 2026-03-05
+last_modified_at: 2026-03-08
 ref: evolution-cartrule-prestashop-9-0-9-1
 author: Nicolas Dabène
 category: prestashop-ecommerce

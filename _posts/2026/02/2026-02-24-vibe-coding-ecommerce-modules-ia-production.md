@@ -3,6 +3,7 @@ layout: post
 title: 'Vibe Coding en e-commerce : pourquoi 80% des modules generés par IA ne passeront
   jamais en production'
 date: 2026-02-24
+last_modified_at: 2026-03-08
 ref: vibe-coding-ecommerce-modules-ia-production-2026
 author: Nicolas Dabène
 category: prestashop-ecommerce
