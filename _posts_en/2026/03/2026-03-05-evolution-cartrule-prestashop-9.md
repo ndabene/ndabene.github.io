@@ -262,6 +262,24 @@ The 9.1.x introduces schema modifications to support the new discount system (vi
 
 5. **Be careful with shipping calculation**: if your module calculates discount totals, behavior changes based on discount type in 9.1.x.
 
+{% capture takeaway_cartrule_en %}
+What every PrestaShop module developer must remember about the CartRule evolution from 9.0.x to 9.1.x:
+
+1. **The feature flag protects backward compatibility.** The new Discount system is disabled by default — 9.1.x behaves exactly like 9.0.x as long as the flag remains off. No forced migration pressure.
+2. **ORDER_LEVEL calculation changes fundamentally.** With the flag enabled, percentage and fixed-amount discounts now apply to products + shipping, not products alone. Your cart calculation tests must cover both modes.
+3. **Use `getType()` instead of individual fields.** The new method cleanly encapsulates the discount type (Catalog, Cart, Free Shipping, Free Gift) — no more manually checking `reduction_product`, `free_shipping`, `gift_product`.
+4. **Don't override CartRule.php.** This file is actively evolving. Use hooks and Symfony services instead to interact with the discount system.
+5. **Test both flag states in your CI:** flag disabled (9.0.x behavior) and flag enabled (new system). It's the only way to guarantee compatibility across your clients' stores.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Key Takeaways — CartRule.php in PrestaShop 9.1.x"
+   content=takeaway_cartrule_en
+   icon="🔑"
+   variant="technical"
+   cite_id="cartrule-9-1-key-takeaways-en"
+%}
+
 ---
 
 ## Sources and references

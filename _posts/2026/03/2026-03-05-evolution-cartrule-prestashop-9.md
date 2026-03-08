@@ -266,6 +266,26 @@ La 9.1.x introduit des modifications de schéma pour supporter le nouveau systè
 
 ---
 
+{% capture takeaway_cartrule %}
+Ce que tout développeur de module PrestaShop doit retenir de l'évolution CartRule 9.0.x → 9.1.x :
+
+1. **Le feature flag protège la rétro-compatibilité.** Le nouveau système Discount est désactivé par défaut — la 9.1.x se comporte exactement comme la 9.0.x tant que le flag reste désactivé. Aucune urgence de migration forcée.
+2. **Le calcul ORDER_LEVEL change radicalement.** Avec le flag activé, les réductions en pourcentage et en montant fixe s'appliquent désormais sur produits + frais de port, pas sur les produits seuls. Vos tests de calcul de panier doivent couvrir les deux modes.
+3. **Utilisez `getType()` au lieu des champs individuels.** La nouvelle méthode encapsule proprement le type de remise (Catalog, Cart, Free Shipping, Free Gift) — plus besoin de vérifier `reduction_product`, `free_shipping`, `gift_product` manuellement.
+4. **N'override pas CartRule.php.** Ce fichier est en pleine évolution. Préférez les hooks et les services Symfony pour interagir avec le système de remises.
+5. **Testez les deux états du flag** dans votre CI : flag désactivé (comportement 9.0.x) et flag activé (nouveau système). C'est le seul moyen de garantir la compatibilité sur les boutiques de vos clients.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Points Clés à Retenir — CartRule.php en PrestaShop 9.1.x"
+   content=takeaway_cartrule
+   icon="🔑"
+   variant="technical"
+   cite_id="cartrule-9-1-key-takeaways"
+%}
+
+---
+
 ## Sources et références
 
 - [PrestaShop DevDocs — Changes in 9.1.x](https://devdocs.prestashop-project.org/9/modules/core-updates/9.1/)

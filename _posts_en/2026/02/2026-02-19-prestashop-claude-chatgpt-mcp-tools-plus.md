@@ -373,6 +373,26 @@ For those wondering how both AIs technically access the same data, here's what t
 
 Discover all features: [nicolas-dabene.fr/modules/mcp-tools-plus/](https://nicolas-dabene.fr/modules/mcp-tools-plus/)
 
+{% capture takeaway_claudechatgpt_en %}
+The 5 key takeaways from this Claude vs ChatGPT comparison for managing PrestaShop:
+
+1. **The value comes from the data, not the model.** Without a connection to your real business data, Claude and ChatGPT are just generic chatbots. With MCP Tools Plus, they become operational collaborators working with your real catalog, real orders, and real stock.
+2. **Claude excels at analytical depth.** Multi-step analysis, spontaneous data cross-referencing, cautious execution — Claude is the choice for strategic decisions and complex diagnostics (score: 92/100 in this test).
+3. **ChatGPT excels at speed and presentation.** Direct execution, immediately presentable reports, mass content generation — ChatGPT is the choice for fast operations and large-scale SEO content.
+4. **Optimal strategy: combine both.** The same MCP Tools Plus module connects both AIs. Use Claude to analyze and decide, ChatGPT to execute and produce content. The additional cost is near zero.
+5. **Real-time data connection is the actual game-changer.** An AI assistant with access to your real data can spot an imminent stockout, a pricing error, or a data anomaly you would never have caught in time.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Key Takeaways — Claude vs ChatGPT for PrestaShop"
+   content=takeaway_claudechatgpt_en
+   icon="🔑"
+   variant="important"
+   cite_id="claude-chatgpt-mcp-key-takeaways-en"
+%}
+
+---
+
 ## The Remaining Question
 
 This comparison is a snapshot in time. Both platforms evolve at breakneck speed. Claude 4 is expected, GPT-5 as well.

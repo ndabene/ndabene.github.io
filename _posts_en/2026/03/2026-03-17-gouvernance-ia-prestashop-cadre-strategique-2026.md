@@ -461,4 +461,24 @@ That's where true transformation begins.
 
 ---
 
+{% capture takeaway_gouvernance_en %}
+The 5 essential points to retain about AI governance in PrestaShop for 2026:
+
+1. **AI is a governed client, not an administrator.** It must be identified, limited in its permissions, logged, and revocable at any time. Opening PrestaShop to AI doesn't mean surrendering control — it means structuring it more rigorously.
+2. **The 6 indispensable pillars:** AI system registry, data governance, proportionate human control (feature flags, override), LLM security (prompt/output filtering, OWASP), drift monitoring, vendor dependency management.
+3. **Start small, govern from day one.** A simple AI registry (shared spreadsheet) and a pilot on a non-critical use case (product description generation) is enough to begin. The key is establishing traceability before scaling.
+4. **AI Act + GDPR make governance mandatory.** In 2026, AI in e-commerce is no longer purely a technical topic — it's strategic, organizational, and legal. Risks include untracked automated decisions, poorly controlled data access, and underestimated vendor dependencies.
+5. **The differentiating skill in 2026: governed orchestration.** PrestaShop developers no longer just code modules — they design controlled systems where AI operates within a defined framework. That capability is what creates lasting value.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Key Takeaways — AI Governance & PrestaShop"
+   content=takeaway_gouvernance_en
+   icon="🔑"
+   variant="important"
+   cite_id="gouvernance-ia-prestashop-key-takeaways-en"
+%}
+
+---
+
 **About the author:** Nicolas Dabène has been supporting companies in their e-commerce transformation for over 15 years. PrestaShop specialist and AI orchestration architect, he shares his expertise on [ndabene.com](https://ndabene.com).

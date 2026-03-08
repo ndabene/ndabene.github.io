@@ -953,6 +953,26 @@ L'IA est excellente pour itérer rapidement sur des variantes. Mais la validatio
 
 ---
 
+{% capture takeaway_vibecoding %}
+Ce que chaque développeur (et chaque marchand qui commande un module) doit comprendre sur le Vibe Coding appliqué à PrestaShop :
+
+1. **L'IA génère du code fonctionnel — pas du code de production.** Les modules vibe-codés compilent et fonctionnent en démo. Ils cassent sur les cas limites, la charge réelle et les interactions entre modules. C'est précisément ce qui les rend dangereux.
+2. **Trois vecteurs d'échec inévitables :** sécurité (AJAX sans token CSRF, injections SQL), multi-shop (jointures `_shop` et `_lang` manquantes, `hookActionShopDataDuplication` jamais généré), et performance (requêtes N+1 qui mettent un serveur à genoux en 24h de trafic).
+3. **Les hooks d'action critiques sont systématiquement oubliés.** L'IA génère bien les hooks display, jamais les `hookActionObject*Delete/Update/Add` nécessaires à la cohérence des données avec les ERP et CRM.
+4. **PrestaShop 9 introduit des ruptures que l'IA ignore.** Page produit legacy supprimée, authentification admin 100% Symfony, déprecation des hooks aliases — un module vibe-codé sans audit peut être incompatible sur 40% de ses fonctionnalités.
+5. **La bonne méthode : IA pour accélérer, expert pour valider.** L'IA gagne 40–80% sur le scaffolding. Mais chaque ligne générée doit passer par une checklist mentale : sécurité, multi-shop, multi-langue, performance, hooks complets, compatibilité de version.
+{% endcapture %}
+
+{% include key-takeaway.html
+   title="Points Clés à Retenir — Vibe Coding & Modules PrestaShop"
+   content=takeaway_vibecoding
+   icon="🔑"
+   variant="technical"
+   cite_id="vibe-coding-prestashop-key-takeaways"
+%}
+
+---
+
 ## Conclusion : le Vibe Coding ne remplace pas 10 ans de production cassée
 
 Le Vibe Coding est un outil formidable **entre les mains d'un développeur qui sait ce qu'il fait**. Il accélère le travail de 30 à 50%.
