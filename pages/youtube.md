@@ -53,6 +53,8 @@ twitter_site: "@nicolasdabene"
 <!-- Include SEO/GEO metadata -->
 {% include youtube-seo-meta.html %}
 
+{% assign sorted_videos = site.data.youtube_videos | sort: 'published_at' | reverse %}
+
 <!-- Structured Data JSON-LD pour SEO et GEO -->
 <script type="application/ld+json">
 {
@@ -138,7 +140,6 @@ twitter_site: "@nicolasdabene"
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign sorted_videos = site.data.youtube_videos | sort: 'published_at' | reverse %}
         {% assign total_videos = sorted_videos | size %}
 
         <div class="blog-grid-news" itemscope itemtype="https://schema.org/CollectionPage">
@@ -242,6 +243,7 @@ twitter_site: "@nicolasdabene"
                                         </div>
                                     </a>
                                     <meta itemprop="url" content="{{ video.url }}">
+                                    <meta itemprop="embedUrl" content="https://www.youtube.com/embed/{{ video.video_id }}">
                                     <meta itemprop="name" content="{{ video.title }}">
                                     <meta itemprop="description" content="{{ video.description | truncate: 200 }}">
                                     <meta itemprop="uploadDate" content="{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
