@@ -83,8 +83,8 @@ twitter_site: "@nicolasdabene"
       {% for video in sorted_videos limit: 10 %}
       {
         "@type": "VideoObject",
-        "name": "{{ video.title | escape }}",
-        "description": "{{ video.description | escape | truncate: 200 }}",
+        "name": {{ video.title | truncate: 100 | jsonify }},
+        "description": {{ video.description | truncate: 200 | jsonify }},
         "url": "{{ video.url }}",
         "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}",
         "thumbnailUrl": "{{ video.thumbnail }}",
@@ -244,8 +244,8 @@ twitter_site: "@nicolasdabene"
                                     </a>
                                     <meta itemprop="url" content="{{ video.url }}">
                                     <meta itemprop="embedUrl" content="https://www.youtube.com/embed/{{ video.video_id }}">
-                                    <meta itemprop="name" content="{{ video.title }}">
-                                    <meta itemprop="description" content="{{ video.description | truncate: 200 }}">
+                                    <meta itemprop="name" content="{{ video.title | escape }}">
+                                    <meta itemprop="description" content="{{ video.description | truncate: 200 | escape }}">
                                     <meta itemprop="uploadDate" content="{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
                                     <meta itemprop="duration" content="{{ video.duration }}">
                                     <meta itemprop="inLanguage" content="fr">
