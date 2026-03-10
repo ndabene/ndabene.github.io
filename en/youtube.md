@@ -54,6 +54,8 @@ twitter_site: "@nicolasdabene"
 <!-- Include SEO/GEO metadata -->
 {% include youtube-seo-meta.html %}
 
+{% assign sorted_videos = site.data.youtube_videos | sort: 'published_at' | reverse %}
+
 <!-- Structured Data JSON-LD for SEO and GEO -->
 <script type="application/ld+json">
 {
@@ -82,8 +84,8 @@ twitter_site: "@nicolasdabene"
       {% for video in sorted_videos limit: 10 %}
       {
         "@type": "VideoObject",
-        "name": "{{ video.title | escape }}",
-        "description": "{{ video.description | escape | truncate: 200 }}",
+        "name": {{ video.title | truncate: 100 | jsonify }},
+        "description": {{ video.description | truncate: 200 | jsonify }},
         "url": "{{ video.url }}",
         "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}",
         "thumbnailUrl": "{{ video.thumbnail }}",
@@ -139,7 +141,6 @@ twitter_site: "@nicolasdabene"
 
 <section class="blog-content-section">
     <div class="container">
-        {% assign sorted_videos = site.data.youtube_videos | sort: 'published_at' | reverse %}
         {% assign total_videos = sorted_videos | size %}
 
         <div class="blog-grid-news" itemscope itemtype="https://schema.org/CollectionPage">
@@ -243,8 +244,8 @@ twitter_site: "@nicolasdabene"
                                         </div>
                                     </a>
                                     <meta itemprop="url" content="{{ video.url }}">
-                                    <meta itemprop="name" content="{{ video.title }}">
-                                    <meta itemprop="description" content="{{ video.description | truncate: 200 }}">
+                                    <meta itemprop="name" content="{{ video.title | escape }}">
+                                    <meta itemprop="description" content="{{ video.description | truncate: 200 | escape }}">
                                     <meta itemprop="uploadDate" content="{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
                                     <meta itemprop="duration" content="{{ video.duration }}">
                                     <meta itemprop="inLanguage" content="fr">
