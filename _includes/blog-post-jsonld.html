@@ -179,20 +179,18 @@
   {% if page.sources %}
   "isBasedOn": [
     {% for source in page.sources %}
+    {% assign source_url = source.url | default: source %}
+    {% assign source_name = source.name | default: source %}
     {
       "@type": "{% if source.type %}{{ source.type }}{% else %}WebPage{% endif %}",
-      "name": "{{ source.name | escape }}",
-      "url": "{{ source.url }}",
-      {% if source.organization %}
+      "name": "{{ source_name | escape }}",
+      "url": "{{ source_url }}"{% if source.organization %},
       "sourceOrganization": {
         "@type": "Organization",
         "name": "{{ source.organization }}"{% if source.organization_url %},
         "url": "{{ source.organization_url }}"{% endif %}
-      }{% if source.date %},{% endif %}
-      {% endif %}
-      {% if source.date %}
-      "datePublished": "{{ source.date }}"
-      {% endif %}
+      }{% endif %}{% if source.date %},
+      "datePublished": "{{ source.date }}"{% endif %}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

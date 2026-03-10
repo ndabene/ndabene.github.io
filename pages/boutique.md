@@ -49,8 +49,8 @@ llm_context: |
           "@type": "ImageObject",
           "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
           "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
-          "width": "800",
-          "height": "600",
+          "width": 800,
+          "height": 600,
           "caption": "{{ product.nom | escape }}"
         },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
@@ -130,8 +130,8 @@ llm_context: |
           "@type": "ImageObject",
           "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
           "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
-          "width": "800",
-          "height": "600",
+          "width": 800,
+          "height": 600,
           "caption": "{{ product.nom | escape }}"
         },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
@@ -207,8 +207,8 @@ llm_context: |
           "@type": "ImageObject",
           "url": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
           "contentUrl": "{{ site.url }}{{ site.baseurl }}/{{ product.image }}",
-          "width": "800",
-          "height": "600",
+          "width": 800,
+          "height": 600,
           "caption": "{{ product.nom | escape }}"
         },
         "url": "{{ site.url }}{{ site.baseurl }}/boutique/{{ product.nom | slugify }}/",
@@ -270,8 +270,8 @@ llm_context: |
   "image": {
     "@type": "ImageObject",
     "url": "{{ site.url }}{{ site.baseurl }}/assets/images/produits/boutique-og-image.jpg",
-    "width": "1200",
-    "height": "630"
+    "width": 1200,
+    "height": 630
   },
   "inLanguage": "fr-FR",
   "isPartOf": {
@@ -281,7 +281,7 @@ llm_context: |
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": "{% assign active_count = 0 %}{% for p in site.data.produits %}{% assign is_inactive = false %}{% if p.actif == false or p.active == false or p.enabled == false or p.status == 'inactive' %}{% assign is_inactive = true %}{% endif %}{% if is_inactive == false %}{% assign active_count = active_count | plus: 1 %}{% endif %}{% endfor %}{{ active_count }}",
+    "numberOfItems": {% assign active_count = 0 %}{% for p in site.data.produits %}{% assign is_inactive = false %}{% if p.actif == false or p.active == false or p.enabled == false or p.status == 'inactive' %}{% assign is_inactive = true %}{% endif %}{% if is_inactive == false %}{% assign active_count = active_count | plus: 1 %}{% endif %}{% endfor %}{{ active_count }},
     "itemListElement": [
       {% for product in site.data.produits %}
       {% assign is_inactive = false %}
