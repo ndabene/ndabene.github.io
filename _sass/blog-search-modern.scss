@@ -56,6 +56,9 @@ $search-highlight-text: #92400e;
     background: $search-bg;
     color: $search-text;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    cursor: pointer; // Visual cue: click to open search modal
+    appearance: none;
+    -webkit-appearance: none;
 
     &:focus {
       outline: none;
@@ -265,6 +268,10 @@ $search-highlight-text: #92400e;
   outline: none;
   padding: 0;
   min-width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
 
   &::placeholder {
     color: $search-text-light;
@@ -352,6 +359,10 @@ $search-highlight-text: #92400e;
     font-size: 18px;
     font-weight: 500;
     color: $search-text;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
   }
 
   .search-modal-close {
@@ -363,6 +374,8 @@ $search-highlight-text: #92400e;
     height: 32px;
     border-radius: 8px;
     padding: 8px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
   }
 
   .search-modal-content {
