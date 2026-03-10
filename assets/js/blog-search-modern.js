@@ -541,14 +541,15 @@
         }
 
         // Page Input Listeners - Now act as triggers
-        pageSearchInput.addEventListener('focus', function (e) {
-            e.preventDefault();
-            this.blur(); // Remove focus from page input
+        // Use touchstart on mobile (fires before focus, prevents keyboard from showing)
+        pageSearchInput.addEventListener('touchstart', function (e) {
+            e.preventDefault(); // Prevent focus/keyboard on mobile
             openSearchModal();
-        });
+        }, { passive: false });
 
-        pageSearchInput.addEventListener('click', function (e) {
-            e.preventDefault();
+        // Use click for desktop (mousedown prevents focus before it happens)
+        pageSearchInput.addEventListener('mousedown', function (e) {
+            e.preventDefault(); // Prevent the input from receiving focus
             openSearchModal();
         });
 
