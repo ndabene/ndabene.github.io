@@ -48,7 +48,7 @@ faq:
   answer: MCP Tools Plus est un module premium développé par BusinessTech/PrestaModule
     qui étend les capacités du PS MCP Server. Il ajoute des outils avancés pour une
     communication enrichie, permettant à votre LLM d'accéder à des requêtes plus sophistiquées
-    et de s'intégrer avec des modules compatibles comme Sales Reports Pro. C'est l'extension
+    et de s'intégrer avec des modules compatibles comme Google Merchant Center Pro. C'est l'extension
     qui transforme l'IA en un assistant de gestion polyvalent.
 - question: Quelle est la différence entre le PS MCP Server et MCP Tools Plus ?
   answer: Le PS MCP Server pose les fondations en créant le canal de communication
@@ -119,9 +119,9 @@ Pourquoi c'est stratégique ? PrestaShop normalise tout ça. Au lieu que chaque 
 
 ### L'avènement de MCP Tools Plus : L'extension premium qui change tout
 
-Le PS MCP Server pose les fondations, mais pour un assistant de gestion vraiment puissant, entrez **MCP Tools Plus**, développé par BusinessTech/PrestaModule (nous, les experts en modules PrestaShop !). C'est un module premium qui étend les capacités du serveur, en ajoutant des outils avancés pour une communication enrichie.
+Le PS MCP Server pose les fondations, mais pour un assistant de gestion vraiment puissant, découvrez **MCP Tools Plus**, développé par BusinessTech/PrestaModule (nous, les experts en modules PrestaShop !). C'est un module premium qui étend les capacités du serveur, en ajoutant des outils avancés pour une communication enrichie.
 
-Avec MCP Tools Plus, votre LLM gagne en super-pouvoirs : accès à des requêtes plus sophistiquées, intégration avec des modules compatibles (comme Sales Reports Pro pour des rapports avancés). Configuration simple : activez-le via le PS MCP Server, achetez-le sur la Marketplace Addons, et c'est parti. Associé à d'autres modules MCP-compatibles, il transforme l'IA en un assistant polyvalent qui interroge, analyse et agit.
+Avec MCP Tools Plus, votre LLM gagne en super-pouvoirs : accès à des requêtes plus sophistiquées, intégration avec des modules compatibles (comme Google Merchant Center Pro pour des rapports avancés). Configuration simple : activez-le via le PS MCP Server, achetez-le sur la Marketplace Addons, et c'est parti. Associé à d'autres modules MCP-compatibles, il transforme l'IA en un assistant polyvalent qui interroge, analyse et agit.
 
 ### Quel LLM choisir pour maximiser l'impact ?
 
@@ -141,7 +141,7 @@ Assez de théorie ! Voyons comment le PS MCP Server et MCP Tools Plus résolvent
 
 **Votre prompt :** "Générez le rapport des ventes comptables pour le dernier mois, incluant tous les produits et tous les clients. Exportez le rapport au format PDF, puis envoyez-le par e-mail au comptable (comptable@email.com)."
 
-**En action :** Le PS MCP Server connecte l'IA à PrestaShop. MCP Tools Plus, avec un module comme Sales Reports Pro, extrait et analyse les données. L'IA orchestre l'export PDF et l'envoi email (via un tool tiers). **Résultat :** fait en minutes, sans intervention humaine. Un marchand que je conseille a gagné 5h/mois comme ça !
+**En action :** Le PS MCP Server connecte l'IA à PrestaShop. MCP Tools Plus, avec un module comme Google Merchant Center Pro, extrait et analyse les données. L'IA orchestre l'export PDF et l'envoi email (via un tool tiers). **Résultat :** fait en minutes, sans intervention humaine. Un marchand que je conseille a gagné 5h/mois comme ça !
 
 ### 🎯 Scénario 2 : Actions marketing interconnectées
 
