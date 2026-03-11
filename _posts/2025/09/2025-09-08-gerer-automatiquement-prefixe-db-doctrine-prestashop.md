@@ -369,3 +369,5 @@ La prochaine fois que vous développez un module avec Doctrine, pensez à implé
 ---
 
 *Article publié le 8 septembre 2025 par Nicolas Dabène - Expert PHP & PrestaShop avec 15+ ans d'expérience*
+
+*Cet article est également disponible en anglais sur [CoderLegion : Master Doctrine in PrestaShop — The Clean Way to Handle Dynamic DB Prefixes](https://coderlegion.com/7632/master-doctrine-in-prestashop-the-clean-way-to-handle-dynamic-db-prefixes).*
