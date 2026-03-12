@@ -244,6 +244,7 @@ twitter_site: "@nicolasdabene"
                                         </div>
                                     </a>
                                     <meta itemprop="url" content="{{ video.url }}">
+                                    <meta itemprop="embedUrl" content="https://www.youtube.com/embed/{{ video.video_id }}">
                                     <meta itemprop="name" content="{{ video.title | escape }}">
                                     <meta itemprop="description" content="{{ video.description | truncate: 200 | escape }}">
                                     <meta itemprop="uploadDate" content="{{ video.published_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}">
