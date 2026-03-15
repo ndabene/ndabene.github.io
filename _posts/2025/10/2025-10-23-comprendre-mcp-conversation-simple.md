@@ -272,5 +272,6 @@ Dans un prochain article, nous mettrons les mains dans le code : initialisation 
 - [Créer son Premier Serveur MCP : Setup du Projet TypeScript](/articles/2025/10/30/setup-serveur-mcp-typescript)
 - [Créer votre Premier Outil MCP : L'Outil readFile Expliqué](/articles/2025/11/12/creer-votre-premier-outil-mcp-l-outil-readfile-explique)
 - [Le Menu MCP : Comment l'IA Découvre et Utilise vos Outils](/articles/2025/12/03/menu-mcp-comment-l-ia-decouvre-et-utilise-vos-outils)
+- [Agents IA pour e-commerce : PS MCP Server & Tools Plus](/articles/2025/11/24/agents-ia-ecommerce-mcp/) — Cas d'usage concrets d'agents IA connectés à une boutique PrestaShop via MCP.
 - [Sécuriser votre Serveur MCP : Permissions, Validation et Protection](/articles/2025/12/10/securiser-serveur-mcp-permissions-validation-protection)
 - [Connecter votre Serveur MCP à Claude Desktop : L'Intégration Complète](/articles/2025/12/17/connecter-serveur-mcp-claude-desktop-integration-complete)

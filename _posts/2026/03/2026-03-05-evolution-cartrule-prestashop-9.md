@@ -38,6 +38,13 @@ keywords:
 - développement prestashop
 - migration 9.0 9.1
 published: true
+faq:
+  - question: "Qu'est-ce que le nouveau système de remises dans PrestaShop 9.1.x ?"
+    answer: "PrestaShop 9.1.x introduit un nouveau système de remises (Discounts) protégé par un feature flag. Il repose sur les classes DiscountType et DiscountApplicationService, et coexiste avec l'ancien système CartRule via une détection automatique avec isDiscountFeatureFlagEnabled()."
+  - question: "Comment le calcul des remises a-t-il changé entre 9.0.x et 9.1.x ?"
+    answer: "En 9.1.x avec le feature flag activé, les remises ORDER_LEVEL en pourcentage incluent désormais les frais de port dans leur base de calcul. Le montant du panier courant (currentCartAmount) inclut aussi la livraison pour les remises de niveau commande."
+  - question: "Mon module PrestaShop est-il compatible avec PrestaShop 9.1.x ?"
+    answer: "Si votre module surcharge CartRule.php ou utilise getContextualValue(), vérifiez la compatibilité avec le feature flag. Utilisez isDiscountFeatureFlagEnabled() pour adapter votre logique, et testez les deux états du flag (activé/désactivé). Évitez de surcharger directement CartRule.php — préférez les hooks ou CartRuleCalculator."
 ---
 
 ## Contexte

@@ -673,3 +673,11 @@ MCP représente une révolution dans la façon dont nos boutiques PrestaShop int
 Les cas d'usage sont infinis : gestion automatisée des produits, analyse prédictive des ventes, support client intelligent, génération de rapports sur demande, optimisation dynamique des prix. L'imagination est la seule limite.
 
 Commencez par un outil simple (comme la recherche de produits), testez-le avec MCP Inspector, puis connectez Claude ou Gemini pour expérimenter l'automatisation intelligente. Vous découvrirez rapidement le potentiel transformateur de MCP pour votre e-commerce.
+
+---
+
+## Pour aller plus loin
+
+Vous souhaitez approfondir l'intégration des agents IA dans votre e-commerce ?
+
+- [Agents IA pour e-commerce : PS MCP Server & Tools Plus](/articles/2025/11/24/agents-ia-ecommerce-mcp/) — Architecture complète avec 3 scénarios réels d'automatisation : rapports comptables, actions marketing ciblées et optimisation produits.

@@ -41,6 +41,8 @@ faq:
 
 {% include home-content/blog-featured.html %}
 
+{% include home-content/rss-subscribe.html %}
+
 {% include home-content/about-short.html %}
 
 {% include home-content/cta-final.html %}
