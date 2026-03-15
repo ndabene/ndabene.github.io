@@ -117,4 +117,12 @@ Alors la prochaine fois que vous voyez un module au code épuré, propre et conc
 ---
 *Sources :*
 *   *Standards de code PrestaShop 9 - [DevDocs](https://devdocs.prestashop-project.org/)*
+
+---
+
+## Pour aller plus loin
+
+Si vous développez des modules PrestaShop 9 et souhaitez comprendre les évolutions récentes du core :
+
+- [Évolution de CartRule.php : PrestaShop 9.0.x → 9.1.x](/articles/2026/03/05/evolution-cartrule-prestashop-9/) — Analyse technique des changements du système de remises et impacts concrets pour les développeurs de modules.
 *   *Principes SOLID en PHP 8.4 - [Wikipedia](https://fr.wikipedia.org/wiki/SOLID)*

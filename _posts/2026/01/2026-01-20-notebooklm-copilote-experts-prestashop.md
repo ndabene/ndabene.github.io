@@ -219,6 +219,10 @@ Pour le développeur PrestaShop de demain, la compétence clé ne sera plus de c
 
 C'est une excellente nouvelle. Cela signifie moins de tâches répétitives (lire des docs, copier-coller des CSV) et plus de temps pour ce qui compte vraiment : **l'expérience utilisateur et la stratégie business**.
 
+> **Vous utilisez NotebookLM pour explorer l'IA & PrestaShop ?** Ces articles sont des sources idéales à ajouter à votre notebook :
+> - [Agents IA pour e-commerce : PS MCP Server & Tools Plus](/articles/2025/11/24/agents-ia-ecommerce-mcp/) — Architecture concrète et scénarios réels d'automatisation PrestaShop avec des agents IA.
+> - [Gouvernance IA dans PrestaShop : cadre stratégique 2026](/articles/2026/03/17/gouvernance-ia-prestashop-cadre-strategique-2026/) — Les 6 piliers pour industrialiser l'IA en maintenant le contrôle technique et légal.
+
 ## Conclusion
 
 Pour l'écosystème PrestaShop, NotebookLM est l'assistant ultime. Il comble le fossé entre la complexité technique croissante de la solution et le besoin de rapidité des marchands.
