@@ -459,11 +459,32 @@ product:
   "@type": "SoftwareApplication",
   "name": "MCP Tools Plus",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web",
+  "operatingSystem": "PrestaShop 1.7+, PrestaShop 8.x",
   "inLanguage": "fr",
   "url": "{{ site.url }}{{ page.url }}",
   "description": "{{ page.description | escape }}",
   "image": "{{ site.url }}{{ page.image }}",
+  "offers": {
+    "@type": "Offer",
+    "price": "9.90",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2027-12-31",
+    "seller": {
+      "@type": "Person",
+      "name": "Nicolas Dabène"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Nicolas Dabène",
+    "url": "https://nicolas-dabene.fr"
+  },
   "publisher": {
     "@type": "Person",
     "name": "Nicolas Dabene",

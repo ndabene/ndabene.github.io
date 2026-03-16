@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <!-- Métadonnées optimisées pour IA génératives (GEO) -->
-<title>{{ site.title }} | {{ page.title }}</title>
+<title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.title }} | {{ page.title }}{% endif %}</title>
 {% if page.layout == 'quiz' %}
 <meta name="description"
   content="{{ page.subtitle | default: page.description }} {% if page.questions_count %}{{ page.questions_count }} questions{% endif %}{% if page.difficulty %} • {{ page.difficulty }}{% endif %}{% if page.topics %} • {{ page.topics | join: ', ' }}{% endif %}">
@@ -115,6 +115,14 @@
 {% elsif page.robots %}
 {% comment %} Utiliser la valeur personnalisée si définie {% endcomment %}
 <meta name="robots" content="{{ page.robots }}">
+{% elsif page.tag %}
+{% comment %} Pages de tags avec peu de contenus : noindex pour économiser le crawl budget {% endcomment %}
+{% assign tag_posts = site.tags[page.tag] %}
+{% if tag_posts.size < 3 %}
+<meta name="robots" content="noindex, follow">
+{% else %}
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{% endif %}
 {% else %}
 {% comment %} Défaut pour tous les autres contenus {% endcomment %}
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">

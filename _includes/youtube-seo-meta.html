@@ -77,6 +77,44 @@
 <meta name="video:tag" content="Développement Web">
 <meta name="video:tag" content="Tutoriels">
 
+<!-- VideoObject ItemList Schema (JSON-LD) -->
+{% if site.data.youtube_videos %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "numberOfItems": {{ site.data.youtube_videos | size }},
+  "itemListElement": [
+    {% assign videos = site.data.youtube_videos | slice: 0, 10 %}
+    {% for video in videos %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "VideoObject",
+        "name": {{ video.title | jsonify }},
+        "description": {{ video.description | jsonify }},
+        "thumbnailUrl": "{{ video.thumbnail }}",
+        "uploadDate": "{{ video.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+        "duration": "{{ video.duration }}",
+        "contentUrl": "{{ video.url }}",
+        "embedUrl": "https://www.youtube.com/embed/{{ video.video_id }}",
+        "author": {
+          "@type": "Person",
+          "name": "Nicolas Dabène",
+          "url": "https://nicolas-dabene.fr"
+        }
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
 <!-- Schema.org Breadcrumbs (JSON-LD) -->
 <script type="application/ld+json">
 {

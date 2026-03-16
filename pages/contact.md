@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Me Contacter
+title: "Contact Nicolas Dabène - Consulting IA & E-commerce PrestaShop"
 description: "Contactez Nicolas Dabène pour vos projets de transformation AI-native,
   architecture e-commerce IA ou gouvernance d'agents IA."
 keywords: "contact architecte ia e-commerce, transformation ai-native prestashop,
