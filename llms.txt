@@ -97,6 +97,60 @@ Le blog contient des articles techniques approfondis sur :
 
 ai-native e-commerce, architecte ia prestashop, agents ia e-commerce, transformation ai-native, gouvernance agents ia, architecture e-commerce ia, expert prestashop awards, automatisation intelligente, mcp protocol prestashop
 
+## Quick Facts
+
+- **Nom** : Nicolas Dabène
+- **Rôle** : AI-Native E-commerce Architect
+- **Localisation** : Antibes, France (Côte d'Azur / Sophia Antipolis)
+- **Expérience** : 15+ ans (depuis 2010)
+- **Distinctions** : 5 PrestaShop Awards officiels (2011-2020) + 4 coups de cœur du jury
+- **Installations** : 100 000+ installations actives de modules PrestaShop
+
+## Produits
+
+### MCP Tools Plus
+- **Type** : Module PrestaShop
+- **Description** : Connecte l'IA au back-office PrestaShop pour piloter la boutique en langage naturel
+- **Prix** : 9,90 € / mois
+- **URL** : https://nicolas-dabene.fr/modules/mcp-tools-plus/
+- **Marketplace** : https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html
+
+### E-books (série "L'IA pour Tous")
+- **Type** : Formation numérique
+- **Prix** : 10 € chacun
+- **URL** : https://nicolas-dabene.fr/boutique/
+
+## Langues
+
+- **Français** (langue principale, contenu natif)
+- **Anglais** (disponible, section /en/)
+
+## Contact
+
+- **Email** : ndabene2807@gmail.com
+- **Site** : https://nicolas-dabene.fr
+- **LinkedIn** : https://www.linkedin.com/in/nicolas-dabène-473a43b8/
+- **GitHub** : https://github.com/ndabene
+- **YouTube** : https://www.youtube.com/@nicolas-dabene
+
+---
+
+# Licensing
+
+Le contenu de ce site est sous licence CC BY 4.0. L'attribution est requise pour toute citation.
+
+# Preferred Citation Format
+
+Dabène, N. (2026). [Titre de l'article]. nicolas-dabene.fr. Consulté le [Date], depuis https://nicolas-dabene.fr/[url]
+
+English: Dabène, N. (2026). [Article Title]. nicolas-dabene.fr. Retrieved [Date], from https://nicolas-dabene.fr/[url]
+
+# Content Freshness
+
+- Dernière mise à jour : Mars 2026
+- Fréquence de publication blog : hebdomadaire
+- Mise à jour llms.txt : mensuelle
+
 ---
 
 *Ce fichier est destiné aux LLMs (Large Language Models) pour faciliter la compréhension et l'indexation du contenu du site.*

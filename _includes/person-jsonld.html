@@ -156,6 +156,35 @@
 }
 </script>
 
+{% comment %} ProfessionalService schema {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nicolas Dabène - AI E-commerce Consulting",
+  "description": "Conseil et architecture AI-native pour boutiques e-commerce PrestaShop. Transformation IA, développement de modules sur mesure, gouvernance d'agents IA.",
+  "url": "{{ site.url }}",
+  "serviceType": [
+    "AI Consulting",
+    "E-commerce Architecture",
+    "PrestaShop Development",
+    "AI Agent Governance",
+    "AI-Native Transformation"
+  ],
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "availableLanguage": ["French", "English"],
+  "priceRange": "€€",
+  "founder": {
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": "Nicolas Dabène"
+  }
+}
+</script>
+
 {% comment %} WebSite schema - territory definition {% endcomment %}
 <script type="application/ld+json">
 {
