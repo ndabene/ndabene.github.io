@@ -459,7 +459,7 @@ product:
   "@type": "SoftwareApplication",
   "name": "MCP Tools Plus",
   "applicationCategory": "BusinessApplication",
-  "operatingSystem": "PrestaShop 1.7+, PrestaShop 8.x",
+  "operatingSystem": "PrestaShop 8, PrestaShop 9",
   "inLanguage": "fr",
   "url": "{{ site.url }}{{ page.url }}",
   "description": "{{ page.description | escape }}",
