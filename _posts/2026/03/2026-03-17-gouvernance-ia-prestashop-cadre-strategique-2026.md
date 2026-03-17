@@ -132,7 +132,7 @@ Cet article propose un modèle complet, pragmatique et adapté à l'écosystème
 
 Le contexte réglementaire européen a profondément évolué.
 
-Le [règlement européen sur l'intelligence artificielle](https://artificialintelligenceact.eu/), adopté par la Commission européenne, entre progressivement en application.
+Le [règlement européen sur l'intelligence artificielle](https://artificialintelligenceact.eu/) (AI Act) est entré en vigueur le 1er août 2024. Il sera pleinement applicable le 2 août 2026, avec des obligations qui s'activent progressivement selon le niveau de risque des systèmes concernés.
 
 Il introduit une approche par niveau de risque.
 
@@ -231,6 +231,8 @@ Le modèle que je propose s'inspire notamment des bonnes pratiques de gestion de
 
 Il repose sur six piliers structurants.
 
+> **Exemple concret :** Un module génère automatiquement les descriptions de vos fiches produits via un LLM. Sans gouvernance : il accède à l'ensemble du catalogue, envoie potentiellement des données sensibles (tarifs, références fournisseurs) vers une API externe, sans log ni possibilité de rollback. Avec un cadre structuré : accès limité aux seuls champs nécessaires, sorties filtrées avant écriture en base, chaque génération journalisée, override manuel possible à tout moment. Même périmètre fonctionnel — maîtrise radicalement différente.
+
 ### 4.1 Registre des systèmes IA
 
 On ne gouverne que ce que l'on inventorie.
@@ -271,9 +273,9 @@ Avant toute intégration IA :
 4. Séparer test et production
 5. Encadrer l'usage de l'API Webservice
 
-Si le système personnalise ou segmente, le sujet du profilage devient central.
+Si le système personnalise, segmente ou influence des décisions d'achat, le sujet du profilage devient central. L'article 22 du RGPD encadre spécifiquement les décisions fondées exclusivement sur un traitement automatisé — en particulier lorsqu'elles produisent des effets significatifs sur la personne concernée. En e-commerce, cela peut concerner la segmentation tarifaire, le scoring client ou la personnalisation d'offres.
 
-Une AIPD (analyse d'impact) peut être nécessaire selon le cas d'usage.
+Une AIPD (analyse d'impact sur la protection des données) peut s'avérer nécessaire selon le cas d'usage et l'ampleur du traitement.
 
 ---
 
@@ -312,18 +314,6 @@ Principes essentiels :
 La sécurité IA ne doit pas être ajoutée après coup.
 
 Elle doit être conçue dès l'architecture.
-
-{% capture takeaway_llm_security %}
-**Sécurité LLM (OWASP)** : Ne jamais injecter directement des données sensibles dans un prompt, filtrer les sorties avant écriture en base, isoler les environnements, journaliser les interactions. La sécurité IA doit être conçue dès l'architecture, pas ajoutée après coup.
-{% endcapture %}
-
-{% include key-takeaway.html
-   title="Sécurité LLM"
-   content=takeaway_llm_security
-   icon="🔐"
-   variant="important"
-   cite_id="llm-security-owasp"
-%}
 
 ---
 
@@ -492,24 +482,21 @@ L'IA dans PrestaShop n'est pas dangereuse.
 
 L'improvisation l'est.
 
-La gouvernance transforme l'IA :
+Un système intelligent sans cadre n'est pas une avancée — c'est une dette technique qui s'accumule silencieusement.
 
-* d'un risque invisible
-* en levier maîtrisé
-* d'un outil expérimental
-* en infrastructure stratégique
+La gouvernance ne bride pas l'IA. Elle la rend opérationnelle, durable et défendable.
 
-En 2026, la vraie compétence différenciante est l'orchestration gouvernée.
+En 2026, la vraie maturité IA ne se mesure pas à la sophistication du modèle utilisé. Elle se mesure à la capacité à répondre à trois questions simples : où agit l'agent ? dans quelles limites ? comment l'arrête-t-on si nécessaire ?
 
-Et dans l'e-commerce moderne, l'orchestration sans gouvernance n'est qu'un pari.
+La maîtrise du cadre vaut plus que la vitesse d'adoption.
 
 La question n'est donc plus :
 
-"Comment ajouter de l'IA ?"
+> "Comment ajouter de l'IA ?"
 
 Mais :
 
-"Comment construire une IA maîtrisée, traçable et stratégique dans PrestaShop ?"
+> "Comment construire une IA maîtrisée, traçable et stratégique dans PrestaShop ?"
 
 C'est là que commence la vraie transformation.
 
