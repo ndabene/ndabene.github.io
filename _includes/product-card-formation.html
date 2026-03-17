@@ -41,7 +41,7 @@
   {% if p.image %}
   <div class="product-card-image">
     {% if p.univers %}<span class="badge-overlay">{{ p.univers }}</span>{% endif %}
-    <img src="{{ site.baseurl }}/{{ p.image }}" alt="Image pour {{ p.nom }}" loading="lazy" decoding="async">
+    <img src="{{ site.baseurl }}/{{ p.image }}" alt="{{ p.nom | escape }}" loading="lazy" decoding="async">
     {% if is_pack %}<span class="card-ribbon">Pack</span>{% endif %}
     {% if p.last_update %}
       <span class="card-tag update" aria-label="Mis à jour le {{ p.last_update | date: '%d/%m/%Y' }}">
