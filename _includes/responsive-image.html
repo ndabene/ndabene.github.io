@@ -1,5 +1,5 @@
 {% comment %}
-Responsive image component with srcset for optimal mobile performance
+Responsive image component with AVIF + WebP srcset for optimal performance
 
 Usage:
 {% include responsive-image.html
@@ -12,10 +12,13 @@ fetchpriority="high"
 class="post-banner-image"
 %}
 
-Automatically generates srcset with -480, -720, -1080 variants if they exist
+Generates <picture> with:
+  1. AVIF source (variants -480, -720, -1080 only — no missing original-size file)
+  2. WebP source (variants -480, -720, -1080 + original)
+  3. <img> fallback
 {% endcomment %}
 
-{%- comment -%} Extract base path and handle potential multiple dots by removing the last extension part {%- endcomment -%}
+{%- comment -%} Extract base path (strip last extension) {%- endcomment -%}
 {%- assign parts = include.src | split: "." -%}
 {%- assign part_count = parts | size | minus: 1 -%}
 {%- assign base_path = "" -%}
@@ -27,22 +30,38 @@ Automatically generates srcset with -480, -720, -1080 variants if they exist
     {%- assign base_path = base_path | append: parts[i] -%}
   {%- endif -%}
 {%- endfor -%}
+
 {%- assign sizes_array = "480,720,1080" | split: "," -%}
-{%- assign srcset_parts = "" | split: "" -%}
-{%- for size in sizes_array -%}
-  {%- comment -%} Variants are always generated as .webp for maximum performance {%- endcomment -%}
-  {%- assign variant_path = base_path | append: "-" | append: size | append: ".webp" -%}
-  {%- capture srcset_item -%}{{ variant_path }} {{ size }}w{%- endcapture -%}
-  {%- assign srcset_parts = srcset_parts | push: srcset_item -%}
-{%- endfor -%}
-{%- comment -%} Add original image as largest size {%- endcomment -%}
 {%- assign original_width = include.width | default: "1024" -%}
-{%- capture srcset_original -%}{{ include.src }} {{ original_width }}w{%- endcapture -%}
-{%- assign srcset_parts = srcset_parts | push: srcset_original -%}
-{%- assign srcset_value = srcset_parts | join: ", " -%}
-<img src="{{ include.src }}" srcset="{{ srcset_value }}"
-  sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px"
-  alt="{{ include.alt | default: page.title }}" {% if include.class %}class="{{ include.class }}" {% endif %}
-  width="{{ include.width | default: '1024' }}" height="{{ include.height | default: '1024' }}"
-  loading="{{ include.loading | default: 'lazy' }}" {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}" {% endif %}
-  decoding="async">
+{%- assign sizes_attr = "(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px" -%}
+
+{%- comment -%} AVIF srcset — variants only, no original-size reference {%- endcomment -%}
+{%- assign avif_parts = "" | split: "" -%}
+{%- for size in sizes_array -%}
+  {%- capture avif_item -%}{{ base_path }}-{{ size }}.avif {{ size }}w{%- endcapture -%}
+  {%- assign avif_parts = avif_parts | push: avif_item -%}
+{%- endfor -%}
+{%- assign avif_srcset = avif_parts | join: ", " -%}
+
+{%- comment -%} WebP srcset — variants + original {%- endcomment -%}
+{%- assign webp_parts = "" | split: "" -%}
+{%- for size in sizes_array -%}
+  {%- capture webp_item -%}{{ base_path }}-{{ size }}.webp {{ size }}w{%- endcapture -%}
+  {%- assign webp_parts = webp_parts | push: webp_item -%}
+{%- endfor -%}
+{%- capture webp_original -%}{{ include.src }} {{ original_width }}w{%- endcapture -%}
+{%- assign webp_parts = webp_parts | push: webp_original -%}
+{%- assign webp_srcset = webp_parts | join: ", " -%}
+
+<picture>
+  <source srcset="{{ avif_srcset }}" sizes="{{ sizes_attr }}" type="image/avif">
+  <source srcset="{{ webp_srcset }}" sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px" type="image/webp">
+  <img src="{{ include.src }}"
+    alt="{{ include.alt | default: page.title }}"
+    {% if include.class %}class="{{ include.class }}" {% endif %}
+    width="{{ include.width | default: '1024' }}"
+    height="{{ include.height | default: '1024' }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}" {% endif %}
+    decoding="async">
+</picture>
