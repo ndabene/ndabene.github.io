@@ -12,7 +12,7 @@ try {
   await sharp(file).webp({ quality: 82, effort: 3 }).toFile(tmp);
   console.log('recompress OK → wrote', tmp);
   // cleanup
-  import('fs').then(({default: fs}) => { fs.unlinkSync(tmp); console.log('cleanup OK'); });
-} catch(e) {
+  import('fs').then(({ default: fs }) => { fs.unlinkSync(tmp); console.log('cleanup OK'); });
+} catch (e) {
   console.error('FAIL:', e.message);
 }
