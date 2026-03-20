@@ -78,7 +78,7 @@ schema:
   - "@context": https://schema.org
     "@type": Event
     name: EO2S 2026 — Ecommerce Open Source Summit
-    description: Première édition de l'EO2S : PrestaShop et Sylius pour la première fois sur la même scène, révélation du 1er Baromètre des CMS e-commerce en France, tables rondes et workshops.
+    description: "Première édition de l'EO2S : PrestaShop et Sylius pour la première fois sur la même scène, révélation du 1er Baromètre des CMS e-commerce en France, tables rondes et workshops."
     url: https://dabene.github.io/fr/evenements/eo2s-2026-sommet-ecommerce-open-source/
     image: https://dabene.github.io/assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source.webp
     eventStatus: https://schema.org/EventScheduled
