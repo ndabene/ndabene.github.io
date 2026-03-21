@@ -175,11 +175,11 @@ schema:
 
 ## EO2S 2026 : un sommet e-commerce open source qui redéfinit la donne
 
-L'EO2S 2026 — Ecommerce Open Source Summit — est le premier sommet européen de l'e-commerce open source. Il se tient le **26 mars 2026** au [Nida](https://www.lenida.fr/), Issy-les-Moulineaux (Paris), organisé par **Friends of Presta** ([association loi 1901](https://friendsofpresta.org/), 1 000+ membres Slack).
+L'EO2S 2026 — Ecommerce Open Source Summit — est le premier sommet européen de l'e-commerce open source. Il se tient le **26 mars 2026** au [Nida](https://www.lenida.fr/){:target="_blank" rel="noopener noreferrer"}, Issy-les-Moulineaux (Paris), organisé par **Friends of Presta** ([association loi 1901](https://friendsofpresta.org/){:target="_blank" rel="noopener noreferrer"}, 1 000+ membres Slack).
 
-C'est la première apparition commune de **PrestaShop** et **Sylius** depuis le rapprochement fin 2025, suite au rachat de PrestaShop par **cyber_Pixel**. [Mikołaj Król](https://www.linkedin.com/in/mikolajkrol/), CEO des deux projets, prononcera la keynote de clôture. 17+ sessions couvrent IA, cybersécurité, facturation électronique et souveraineté numérique.
+C'est la première apparition commune de **PrestaShop** et **Sylius** depuis le rapprochement fin 2025, suite au rachat de PrestaShop par **cyber_Pixel**. [Mikołaj Król](https://www.linkedin.com/in/bitbager/){:target="_blank" rel="noopener noreferrer"}, CEO des deux projets, prononcera la keynote de clôture. 17+ sessions couvrent IA, cybersécurité, facturation électronique et souveraineté numérique.
 
-Billet à **30 €** — [shop.friendsofpresta.org](https://shop.friendsofpresta.org).
+Billet à **30 €** — [shop.friendsofpresta.org](https://shop.friendsofpresta.org){:target="_blank" rel="noopener noreferrer"}.
 
 > **TL;DR** — Si vous n'avez que 30 secondes : PrestaShop + Sylius sur scène ensemble pour la 1ère fois, révélation du 1er Baromètre CMS e-commerce France, 17+ sessions, 150+ pros. 26 mars, Paris. 30 €.
 
@@ -193,19 +193,19 @@ La matinée s'ouvre avec ce qui pourrait bien être l'annonce la plus significat
 
 Pourquoi c'est important ? Parce que le marché français de l'e-commerce open source n'a jamais été cartographié de manière indépendante et chiffrée. Entre les chiffres de Shopify, les estimations de WooCommerce et les intuitions sur PrestaShop, il manquait une vision claire et factuelle.
 
-> **Olivier Binet** (Dirigeant, [PrestaShop](https://prestashop.com)), **Christophe Vidal** (Président, [Friends of Presta](https://friendsofpresta.org)) et **Thomas Rayrat** (Vice-Président, Friends of Presta) cosignent cette keynote d'ouverture. Si vous êtes professionnel du e-commerce, ces données vous concernent directement — que vous soyez développeur, intégrateur, marchand ou éditeur.
+> **Olivier Binet** (Dirigeant, [PrestaShop](https://prestashop.com){:target="_blank" rel="noopener noreferrer"}), **Christophe Vidal** (Président, [Friends of Presta](https://friendsofpresta.org){:target="_blank" rel="noopener noreferrer"}) et **Thomas Rayrat** (Vice-Président, Friends of Presta) cosignent cette keynote d'ouverture. Si vous êtes professionnel du e-commerce, ces données vous concernent directement — que vous soyez développeur, intégrateur, marchand ou éditeur.
 
 J'ai eu l'occasion d'échanger avec plusieurs acteurs de cet écosystème ces derniers mois. Ce baromètre, s'il est à la hauteur de ce qu'on nous annonce, pourrait bien devenir **la référence** pour tous les cabinets de conseil, les médias et les décideurs qui parlent d'e-commerce sans jamais avoir de chiffres fiables sur le segment open source.
 
 ### 2. PrestaShop et Sylius : première apparition commune sur scène
 
-Un an après le lancement du **Call for Contribution** de PrestaShop, **Paule Morizot** (Head of Product, [PrestaShop](https://prestashop.com)) revient avec les contributeurs pour dresser un bilan. Qu'est-ce qui a fonctionné ? Comment la gouvernance communautaire a-t-elle évolué ? Quels sont les chantiers en cours ?
+Un an après le lancement du **Call for Contribution** de PrestaShop, **Paule Morizot** (Head of Product, [PrestaShop](https://prestashop.com){:target="_blank" rel="noopener noreferrer"}) revient avec les contributeurs pour dresser un bilan. Qu'est-ce qui a fonctionné ? Comment la gouvernance communautaire a-t-elle évolué ? Quels sont les chantiers en cours ?
 
 C'est aussi l'occasion de comprendre comment Sylius s'inscrit dans cette dynamique — et surtout, comment les deux projets comptent travailler ensemble sur une base Symfony partagée.
 
 ### 3. Facturation électronique PrestaShop : obligations 2026
 
-La **facturation électronique obligatoire** en France (et en Europe avec la [directive 2014/55/UE](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32014L0055)) reste un sujet où beaucoup de marchands naviguent à vue. La table ronde animée par **Marie-Sophie Cuinet** (VP Category Management, PrestaShop) réunit **Atoo Next** et **OpenSI** pour un échange concret :
+La **facturation électronique obligatoire** en France (et en Europe avec la [directive 2014/55/UE](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32014L0055){:target="_blank" rel="noopener noreferrer"}) reste un sujet où beaucoup de marchands naviguent à vue. La table ronde animée par **Marie-Sophie Cuinet** (VP Category Management, PrestaShop) réunit **Atoo Next** et **OpenSI** pour un échange concret :
 
 - Où en est l'obligation ? Calendrier, sanctions, exceptions
 - Quelles solutions open source existent aujourd'hui ?
@@ -229,7 +229,7 @@ Le programme couvre un spectre large de sujets :
 
 ### 5. Mikołaj Król — Keynote de clôture PrestaShop & Sylius
 
-Le closing est signé par **Mikołaj Król**, CEO de PrestaShop et [Sylius](https://sylius.com) depuis le rapprochement fin 2025. C'est la première fois qu'il s'exprime publiquement devant les deux communautés réunies.
+Le closing est signé par **Mikołaj Król**, CEO de PrestaShop et [Sylius](https://sylius.com){:target="_blank" rel="noopener noreferrer"} depuis le rapprochement fin 2025. C'est la première fois qu'il s'exprime publiquement devant les deux communautés réunies.
 
 Au-delà du discours de vision, on peut s'attendre à des annonces concrètes sur :
 
@@ -243,7 +243,7 @@ Au-delà du discours de vision, on peut s'attendre à des annonces concrètes su
 
 Derrière cette keynote de clôture, il y a un homme : **Mikołaj Król**. Avant de diriger PrestaShop et Sylius, il a piloté la croissance de Sylius pour en faire l'un des frameworks e-commerce Symfony les plus avancés d'Europe. Son profil est technique, pas marketing — ce qui change des prises de parole habituelles dans l'écosystème.
 
-Quand [cyber_Pixel a racheté PrestaShop fin 2025](https://friendsofpresta.org/fr/actualites/prestashop-cyberfolks-rachat-2025/), c'est lui qui a été nommé à la tête des deux projets. Son arrivée n'est pas un accident : c'est le choix d'un acteur qui connaît le terrain, la technique, et qui veut construire plutôt que gérer.
+Quand [cyber_Pixel a racheté PrestaShop fin 2025](https://friendsofpresta.org/fr/actualites/prestashop-cyberfolks-rachat-2025/){:target="_blank" rel="noopener noreferrer"}, c'est lui qui a été nommé à la tête des deux projets. Son arrivée n'est pas un accident : c'est le choix d'un acteur qui connaît le terrain, la technique, et qui veut construire plutôt que gérer.
 
 Sa keynote de clôture à l'EO2S 2026 sera probablement la plus importante de sa jeune carrière commune à la tête des deux plateformes.
 
@@ -269,21 +269,21 @@ Le saut en maturité est perceptible. Friends of Presta passe d'un meetup commun
 
 L'EO2S 2026 réunit un panel de partenaires représentatif de l'écosystème e-commerce open source :
 
-| Partenaire | Positionnement | Site |
-|-------------|----------------|------|
-| **[PrestaShop](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | CMS e-commerce open source | friendsofpresta.org |
-| **[Sylius](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Framework e-commerce Symfony | friendsofpresta.org |
-| **[OpenSi](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | ERP/PGI open source pour le commerce | friendsofpresta.org |
-| **[Atoo Next](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Solutions de facturation électronique | friendsofpresta.org |
-| **[Lyra](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Paiement en ligne | friendsofpresta.org |
-| **[Mollie](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Plateforme de paiement | friendsofpresta.org |
-| **[Crisp](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Chat et support client | friendsofpresta.org |
-| **[Doofinder](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Recherche e-commerce / SEO | friendsofpresta.org |
-| **[Store Commander](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Outils d'administration PrestaShop | friendsofpresta.org |
-| **[KerAwen](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logiciel de caisse open source | friendsofpresta.org |
-| **[Motive](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logistique e-commerce | friendsofpresta.org |
-| **[Gladhost](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Hébergement | friendsofpresta.org |
-| **[Versus Venture](https://friendsofpresta.org/fr/directory/versus)** | Holding PrestaModule & BusinessTech | friendsofpresta.org |
+| Partenaire | Positionnement |
+|-------------|----------------|
+| **[PrestaShop](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | CMS e-commerce open source |
+| **[Sylius](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Framework e-commerce Symfony |
+| **[OpenSi](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | ERP/PGI open source pour le commerce |
+| **[Atoo Next](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Solutions de facturation électronique |
+| **[Lyra](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Paiement en ligne |
+| **[Mollie](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Plateforme de paiement |
+| **[Crisp](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Chat et support client |
+| **[Doofinder](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Recherche e-commerce / SEO |
+| **[Store Commander](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Outils d'administration PrestaShop |
+| **[KerAwen](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Logiciel de caisse open source |
+| **[Motive](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Logistique e-commerce |
+| **[Gladhost](https://friendsofpresta.org/fr/evenements/eo2s-2026){:target="_blank" rel="noopener noreferrer"}** | Hébergement |
+| **[Versus Venture](https://friendsofpresta.org/fr/directory/versus){:target="_blank" rel="noopener noreferrer"}** | Holding PrestaModule & BusinessTech |
 
 De quoi couvrir l'ensemble de la chaîne de valeur d'une boutique en ligne.
 
@@ -295,7 +295,7 @@ Au-delà du programme, l'EO2S 2026 envoie un signal clair : **l'e-commerce open 
 
 Quelques faits :
 
-- **PrestaShop compte 200 000+ boutiques actives dans 80+ pays**, occupant les positions n°1 en France, Pologne et Espagne ([source : PrestaShop](https://prestashop.com))
+- **PrestaShop compte 200 000+ boutiques actives dans 80+ pays**, occupant les positions n°1 en France, Pologne et Espagne ([source : PrestaShop](https://prestashop.com){:target="_blank" rel="noopener noreferrer"})
 - Le rapprochement PrestaShop + Sylius crée un acteur technique cohérent (base Symfony partagée, roadmap convergente)
 - La communauté Friends of Presta (association loi 1901, 1 000+ membres) apporte une gouvernance stable et indépendante
 - La demande pour des solutions souveraineté-aware (hébergement européen, données en Europe, pas de dépendance à un hyperscaler US) crée une fenêtre d'opportunité
@@ -349,10 +349,10 @@ Si vous allez à l'EO2S 2026, voici les questions que je vous encourage à poser
 **EO2S — Ecommerce Open Source Summit**
 
 - **Date :** 26 mars 2026
-- **Lieu :** [Le Nida](https://www.lenida.fr/), Issy-les-Moulineaux (Paris)
+- **Lieu :** [Le Nida](https://www.lenida.fr/){:target="_blank" rel="noopener noreferrer"}, Issy-les-Moulineaux (Paris)
 - **Accueil :** 8h30 (café + networking)
-- **Billetterie :** 30 € — [shop.friendsofpresta.org](https://shop.friendsofpresta.org)
-- **Organisateur :** [Friends of Presta](https://friendsofpresta.org) (association loi 1901)
+- **Billetterie :** 30 € — [shop.friendsofpresta.org](https://shop.friendsofpresta.org){:target="_blank" rel="noopener noreferrer"}
+- **Organisateur :** [Friends of Presta](https://friendsofpresta.org){:target="_blank" rel="noopener noreferrer"} (association loi 1901)
 - **Public attendu :** ~150+ professionnels
 - **Hashtag :** #EO2S2026
 
