@@ -7,6 +7,7 @@ author: Nicolas Dabène
 category: strategy-ecommerce
 subcategory: ressources
 canonical: /fr/articles/2026/03/26/friendsofpresta-annuaire-experts-prestashop/
+permalink: /fr/articles/2026/03/26/friendsofpresta-annuaire-experts-prestashop/
 categories:
   - PrestaShop
   - E-commerce
@@ -23,10 +24,10 @@ tags:
   - e-commerce
   - open source
 excerpt: "Friends of Presta : annuaire des experts PrestaShop en France et en Europe. Agences, freelances, éditeurs de modules — trouvez des prestataires certifiés et participez à la communauté."
-image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts.png
+image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts/image-principale.webp
 og_title: "Friends of Presta : l'annuaire des experts PrestaShop et e-commerce open source"
 og_description: "Annuaire des experts PrestaShop en France et en Europe. Agences, freelances, éditeurs de modules — trouvez des prestataires certifiés."
-og_image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts.png
+og_image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts/image-principale.webp
 og_type: article
 og_locale: fr_FR
 twitter_card: summary_large_image

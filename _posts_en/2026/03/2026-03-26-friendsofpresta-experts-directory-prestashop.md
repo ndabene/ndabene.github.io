@@ -24,10 +24,10 @@ tags:
   - e-commerce
   - open source
 excerpt: "Friends of Presta: directory of PrestaShop experts in France and Europe. Agencies, freelancers, module vendors — find certified professionals and join the community."
-image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts.png
+image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts/image-principale.webp
 og_title: "Friends of Presta: The PrestaShop Expert Directory and Open Source E-commerce Community"
 og_description: "Directory of PrestaShop experts in France and Europe. Agencies, freelancers, module vendors — find certified professionals."
-og_image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts.png
+og_image: /assets/images/blog/2026/03/friendsofpresta-annuaire-experts/image-principale.webp
 og_type: article
 og_locale: en_US
 twitter_card: summary_large_image
