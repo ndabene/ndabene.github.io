@@ -269,21 +269,21 @@ Le saut en maturité est perceptible. Friends of Presta passe d'un meetup commun
 
 L'EO2S 2026 réunit un panel de partenaires représentatif de l'écosystème e-commerce open source :
 
-| Partenaire | Positionnement | Site |
-|-------------|----------------|------|
-| **[PrestaShop](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | CMS e-commerce open source | friendsofpresta.org |
-| **[Sylius](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Framework e-commerce Symfony | friendsofpresta.org |
-| **[OpenSi](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | ERP/PGI open source pour le commerce | friendsofpresta.org |
-| **[Atoo Next](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Solutions de facturation électronique | friendsofpresta.org |
-| **[Lyra](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Paiement en ligne | friendsofpresta.org |
-| **[Mollie](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Plateforme de paiement | friendsofpresta.org |
-| **[Crisp](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Chat et support client | friendsofpresta.org |
-| **[Doofinder](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Recherche e-commerce / SEO | friendsofpresta.org |
-| **[Store Commander](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Outils d'administration PrestaShop | friendsofpresta.org |
-| **[KerAwen](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logiciel de caisse open source | friendsofpresta.org |
-| **[Motive](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logistique e-commerce | friendsofpresta.org |
-| **[Gladhost](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Hébergement | friendsofpresta.org |
-| **[Versus Venture](https://friendsofpresta.org/fr/directory/versus)** | Holding PrestaModule & BusinessTech | friendsofpresta.org |
+| Partenaire | Positionnement |
+|-------------|----------------|
+| **[PrestaShop](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | CMS e-commerce open source |
+| **[Sylius](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Framework e-commerce Symfony |
+| **[OpenSi](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | ERP/PGI open source pour le commerce |
+| **[Atoo Next](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Solutions de facturation électronique |
+| **[Lyra](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Paiement en ligne |
+| **[Mollie](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Plateforme de paiement |
+| **[Crisp](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Chat et support client |
+| **[Doofinder](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Recherche e-commerce / SEO |
+| **[Store Commander](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Outils d'administration PrestaShop |
+| **[KerAwen](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logiciel de caisse open source |
+| **[Motive](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Logistique e-commerce |
+| **[Gladhost](https://friendsofpresta.org/fr/evenements/eo2s-2026)** | Hébergement |
+| **[Versus Venture](https://friendsofpresta.org/fr/directory/versus)** | Holding PrestaModule & BusinessTech |
 
 De quoi couvrir l'ensemble de la chaîne de valeur d'une boutique en ligne.
 
