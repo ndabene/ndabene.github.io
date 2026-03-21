@@ -5,6 +5,7 @@ date: 2026-03-03
 ref: vibecoding-detruit-open-source-2026
 author: Nicolas Dabène
 lang: en
+permalink: /en/articles/2026/03/03/vibecoding-destroys-open-source/
 category: intelligence-artificielle
 subcategory: ai-assisted-development
 categories:

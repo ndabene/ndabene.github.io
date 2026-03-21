@@ -4,6 +4,8 @@ title: "Mistral 3 vs Claude & ChatGPT + MCP Tools Plus: GDPR & AI Governance for
 date: 2026-03-24
 ref: mistral-3-mcp-tools-plus-rgpd-prestashop-2026
 author: Nicolas Dabène
+lang: en
+permalink: /en/articles/2026/03/24/mistral-3-vs-claude-chatgpt-mcp-tools-plus-gdpr/
 category: artificial-intelligence
 subcategory: ai-tools
 categories:

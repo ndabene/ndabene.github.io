@@ -5,9 +5,10 @@ date: 2026-03-21
 ref: eo2s-2026-open-source-ecommerce-summit
 author: Nicolas Dabène
 lang: en
+permalink: /en/articles/2026/03/21/eo2s-2026-open-source-ecommerce-summit/
 category: strategy-ecommerce
 subcategory: events
-canonical: /fr/articles/2026/03/21/eo2s-2026-sommet-ecommerce-open-source/
+canonical: /en/articles/2026/03/21/eo2s-2026-open-source-ecommerce-summit/
 categories:
   - E-commerce
   - Open Source
@@ -28,10 +29,10 @@ tags:
   - Mikołaj Król
   - cyber_Pixel
 excerpt: "EO2S 2026 — Open Source E-commerce Summit on March 26 in Paris: PrestaShop + Sylius, CMS Barometer, e-invoicing. €30. First joint appearance of both communities."
-image: /assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source.webp
+image: /assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source/image-principale.webp
 og_title: "EO2S 2026: Open Source E-commerce Summit — March 26, Paris"
 og_description: "PrestaShop + Sylius, CMS Barometer, e-invoicing: March 26 in Paris. €30. First joint appearance of both communities on stage."
-og_image: /assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source.webp
+og_image: /assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source/image-principale.webp
 og_type: article
 og_locale: en_US
 twitter_card: summary_large_image
@@ -81,7 +82,7 @@ schema:
     name: EO2S 2026 — Ecommerce Open Source Summit
     description: "First edition of EO2S: PrestaShop and Sylius on the same stage for the first time, unveiling of the first-ever French CMS E-commerce Barometer, roundtables and workshops."
     url: https://dabene.github.io/en/events/eo2s-2026-open-source-ecommerce-summit/
-    image: https://dabene.github.io/assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source.webp
+    image: https://dabene.github.io/assets/images/blog/2026/03/eo2s-2026-sommet-ecommerce-open-source/image-principale.webp
     eventStatus: https://schema.org/EventScheduled
     eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
     location:
