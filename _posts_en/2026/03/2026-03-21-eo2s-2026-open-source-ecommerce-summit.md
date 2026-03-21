@@ -178,7 +178,7 @@ schema:
 
 EO2S 2026 — Ecommerce Open Source Summit — is Europe's first open source e-commerce summit. It takes place on **March 26, 2026** at [Le Nida](https://www.lenida.fr/), Issy-les-Moulineaux (Paris), organized by **Friends of Presta** ([non-profit association](https://friendsofpresta.org/), 1,000+ Slack members).
 
-This is the first joint appearance of **PrestaShop** and **Sylius** since their merger at the end of 2025, following PrestaShop's acquisition by **cyber_Pixel**. [Mikołaj Król](https://www.linkedin.com/in/mikolajkrol/), CEO of both projects, will deliver the closing keynote. 17+ sessions cover AI, cybersecurity, e-invoicing, and digital sovereignty.
+This is the first joint appearance of **PrestaShop** and **Sylius** since their merger at the end of 2025, following PrestaShop's acquisition by **cyber_Pixel**. [Mikołaj Król](https://www.linkedin.com/in/bitbager/), CEO of both projects, will deliver the closing keynote. 17+ sessions cover AI, cybersecurity, e-invoicing, and digital sovereignty.
 
 Ticket at **€30** — [shop.friendsofpresta.org](https://shop.friendsofpresta.org).
 
