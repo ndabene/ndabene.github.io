@@ -8,6 +8,7 @@ lang: en
 category: strategy-ecommerce
 subcategory: resources
 canonical: /en/articles/2026/03/26/friendsofpresta-experts-directory-prestashop/
+permalink: /en/articles/2026/03/26/friendsofpresta-experts-directory-prestashop/
 categories:
   - PrestaShop
   - E-commerce

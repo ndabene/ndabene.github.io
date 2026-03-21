@@ -57,7 +57,7 @@ faq:
   - question: Comment rejoindre Friends of Presta ?
     answer: Il suffit de s'inscrire sur friendsofpresta.org. L'adhésion est ouverte à tous les professionnels de l'écosystème PrestaShop : développeurs, agences, marchands ou éditeurs de solutions.
   - question: Friends of Presta est-elle liée à PrestaShop ?
-    answer: Non, Friends of Presta est une association indépendante de l'éditeur. Elle apporte une gouvernance communautaire neutre et transparente,区别于由编辑直接组织的活动。
+    answer: Non, Friends of Presta est une association indépendante de l'éditeur. Elle apporte une gouvernance communautaire neutre et transparente, contrairement aux événements organisés directement par l'éditeur.
   - question: Quel est le lien entre Friends of Presta et l'EO2S ?
     answer: Friends of Presta organise l'EO2S — Ecommerce Open Source Summit, anciennement FOP Days. C'est le principal événement communautaire de l'association, qui se tient le 26 mars 2026 à Paris.
 ---
@@ -83,7 +83,7 @@ La communauté compte **1 000+ membres** sur son espace Slack et continue de cro
 
 ## L'annuaire : trouver un expert PrestaShop
 
-Le cœur de l'association, c'est son **[annuaire des experts](https://friendsofpresta.org/fr/annuaire)**. On y trouve三类 profils :
+Le cœur de l'association, c'est son **[annuaire des experts](https://friendsofpresta.org/fr/annuaire)**. On y trouve trois types de profils :
 
 | Profil | Exemples |
 |--------|----------|
