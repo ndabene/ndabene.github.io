@@ -99,31 +99,45 @@ jobs:
 
       - name: Generate WebP images with sharp
         run: |
-          echo "🖼️  Génération des images WebP avec sharp (plus rapide et robuste)..."
+          echo "🖼️  Génération des images WebP avec sharp..."
           npm run generate:webp
           echo ""
-          echo "📊 Vérification des fichiers générés..."
-          find assets/images/blog -name "*.webp" -type f | wc -l
+          echo "📊 Vérification des fichiers WebP générés..."
+          find assets/images -name "*.webp" -not -name "*-480.webp" -not -name "*-720.webp" -not -name "*-1080.webp" -type f | wc -l
           echo "✅ Images WebP générées avec succès"
 
-      - name: Install ImageMagick for responsive images
+      - name: Generate WebP variants and AVIF with sharp
         run: |
-          echo "📦 Installation d'ImageMagick pour images responsive..."
-          sudo apt-get update
-          sudo apt-get install -y --fix-missing imagemagick
-          convert -version
-          echo "✅ ImageMagick installé avec succès"
-
-      - name: Generate responsive images
-        run: |
-          echo "🖼️  Génération des images responsive (480px, 720px, 1080px)..."
-          bash scripts/generate-responsive-images.sh
+          echo "🖼️  Génération des variants responsive (480/720/1080) et AVIF avec sharp..."
+          npm run generate:variants
           echo ""
-          echo "📊 Vérification des variants responsive générés..."
-          echo "   - Variants 480px: $(find assets/images/blog -name "*-480.webp" -type f | wc -l)"
-          echo "   - Variants 720px: $(find assets/images/blog -name "*-720.webp" -type f | wc -l)"
-          echo "   - Variants 1080px: $(find assets/images/blog -name "*-1080.webp" -type f | wc -l)"
-          echo "✅ Images responsive générées avec succès"
+          echo "📊 Vérification des variants générés..."
+          echo "   - Variants WebP 480px:  $(find assets/images -name '*-480.webp' -type f | wc -l)"
+          echo "   - Variants WebP 720px:  $(find assets/images -name '*-720.webp' -type f | wc -l)"
+          echo "   - Variants WebP 1080px: $(find assets/images -name '*-1080.webp' -type f | wc -l)"
+          echo "   - Variants AVIF 480px:  $(find assets/images -name '*-480.avif' -type f | wc -l)"
+          echo "   - Variants AVIF 720px:  $(find assets/images -name '*-720.avif' -type f | wc -l)"
+          echo "   - Variants AVIF 1080px: $(find assets/images -name '*-1080.avif' -type f | wc -l)"
+          echo "✅ Variants et AVIF générés avec succès"
+
+      - name: Verify all images are complete before build
+        run: |
+          echo "🔍 Vérification que toutes les images WebP ont leurs variants AVIF..."
+          missing=0
+          while IFS= read -r webp; do
+            base="${webp%.webp}"
+            for size in 480 720 1080; do
+              if [ -f "${base}-${size}.webp" ] && [ ! -f "${base}-${size}.avif" ]; then
+                echo "   ❌ MANQUANT: ${base}-${size}.avif"
+                missing=$((missing + 1))
+              fi
+            done
+          done < <(find assets/images -name "*.webp" -not -name "*-480.webp" -not -name "*-720.webp" -not -name "*-1080.webp" -type f)
+          if [ $missing -gt 0 ]; then
+            echo "❌ $missing fichier(s) AVIF manquant(s) — build annulé pour éviter une MEP incomplète."
+            exit 1
+          fi
+          echo "✅ Toutes les images sont complètes (WebP + AVIF)"
 
       - name: Build with Jekyll
         run: |

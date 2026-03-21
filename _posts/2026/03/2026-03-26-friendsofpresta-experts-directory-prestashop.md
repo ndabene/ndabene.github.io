@@ -53,9 +53,9 @@ faq:
   - question: Qu'est-ce que Friends of Presta ?
     answer: Friends of Presta est une association loi 1901 créée en 2021 qui réunit agences, freelances et éditeurs de modules spécialisés dans l'e-commerce PrestaShop en France et en Europe. Elle compte plus de 1 000 membres sur son espace Slack.
   - question: Que propose l'annuaire Friends of Presta ?
-    answer: L'annuaire permet de trouver des prestataires certifiés PrestaShop : agences web, freelances développeurs, intégrateurs et éditeurs de modules. Chaque membre est évalué par la communauté.
+    answer: "L'annuaire permet de trouver des prestataires certifiés PrestaShop : agences web, freelances développeurs, intégrateurs et éditeurs de modules. Chaque membre est évalué par la communauté."
   - question: Comment rejoindre Friends of Presta ?
-    answer: Il suffit de s'inscrire sur friendsofpresta.org. L'adhésion est ouverte à tous les professionnels de l'écosystème PrestaShop : développeurs, agences, marchands ou éditeurs de solutions.
+    answer: "Il suffit de s'inscrire sur friendsofpresta.org. L'adhésion est ouverte à tous les professionnels de l'écosystème PrestaShop : développeurs, agences, marchands ou éditeurs de solutions."
   - question: Friends of Presta est-elle liée à PrestaShop ?
     answer: Non, Friends of Presta est une association indépendante de l'éditeur. Elle apporte une gouvernance communautaire neutre et transparente, contrairement aux événements organisés directement par l'éditeur.
   - question: Quel est le lien entre Friends of Presta et l'EO2S ?
