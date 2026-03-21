@@ -57,7 +57,7 @@ Generates <picture> with:
   <source srcset="{{ avif_srcset }}" sizes="{{ sizes_attr }}" type="image/avif">
   <source srcset="{{ webp_srcset }}" sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px" type="image/webp">
   <img src="{{ include.src }}"
-    alt="{{ include.alt | default: page.title }}"
+    alt="{{ include.alt | default: page.title | escape }}"
     {% if include.class %}class="{{ include.class }}" {% endif %}
     width="{{ include.width | default: '1024' }}"
     height="{{ include.height | default: '1024' }}"
