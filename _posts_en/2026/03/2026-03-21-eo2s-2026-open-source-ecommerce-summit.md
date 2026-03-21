@@ -376,14 +376,4 @@ I'll be there personally. The program more than justifies the trip, and the atmo
 
 ---
 
-## Further Resources
-
-To go further:
-
-- [PrestaShop Acquired by cyber_Folks & Sylius: The European Open Source Big Bang](/en/articles/2025/12/prestashop-cyberfolks-sylius-european-open-source-big-bang/) — acquisition context
-- [PrestaShop vs Sylius: From Module to Product, What If the Future Was Hybrid?](/en/articles/2026/01/prestashop-sylius-module-product-hybrid-future/) — technical analysis
-- [AI Governance in PrestaShop: The Essential Strategic Framework for 2026](/en/articles/2026/03/prestashop-ai-governance-strategic-framework-2026/) — AI sessions at EO2S
-
----
-
 *A debrief will be published within 48 hours of the event with key announcements and speaker slides.*
