@@ -10,7 +10,8 @@
     "rebuild": "npm run clean && npm run build",
     "validate:produits": "ruby scripts/validate_produits.rb",
     "validate:frontmatter": "ruby scripts/validate_frontmatter.rb",
-    "generate:webp": "node scripts/generate-webp.js"
+    "generate:webp": "node scripts/generate-webp.js",
+    "generate:variants": "node scripts/optimize-images.mjs"
   },
   "repository": {
     "type": "git",

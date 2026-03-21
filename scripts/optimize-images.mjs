@@ -48,6 +48,7 @@ async function convertToWebp() {
   const sources = walk(ASSETS, ['.jpg', '.jpeg', '.png']).filter(f => !isVariant(f));
   let converted = 0;
   let skipped = 0;
+  let errors = 0;
 
   for (const src of sources) {
     const webpPath = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
@@ -62,10 +63,11 @@ async function convertToWebp() {
       converted++;
     } catch (e) {
       console.error(`  ✗ ${path.relative(ROOT, src)}: ${e.message}`);
+      errors++;
     }
   }
-  console.log(`  → ${converted} converted, ${skipped} already had WebP`);
-  return converted;
+  console.log(`  → ${converted} converted, ${skipped} already had WebP, ${errors} errors`);
+  return errors;
 }
 
 // ─── P3b: Recompress oversized WebP ─────────────────────────────────────────
@@ -132,6 +134,7 @@ async function generateAvifVariants() {
   const allWebp = walk(ASSETS, ['.webp']).filter(f => !isVariant(f));
   let generated = 0;
   let skipped = 0;
+  let errors = 0;
 
   for (const webpFile of allWebp) {
     const base = webpFile.replace(/\.webp$/, '');
@@ -156,19 +159,26 @@ async function generateAvifVariants() {
         generated++;
       } catch (e) {
         console.error(`  ✗ ${path.relative(ROOT, avifVariant)}: ${e.message}`);
+        errors++;
       }
     }
   }
-  console.log(`  → ${generated} AVIF variants generated, ${skipped} already existed`);
+  console.log(`  → ${generated} AVIF variants generated, ${skipped} already existed, ${errors} errors`);
+  return errors;
 }
 
 // ─── main ────────────────────────────────────────────────────────────────────
 
 (async () => {
   console.log('=== Image optimization ===\n');
-  await convertToWebp();
+  const webpErrors = await convertToWebp();
   await recompressOversized();
   updateFrontMatter();
-  await generateAvifVariants();
+  const avifErrors = await generateAvifVariants();
+  const totalErrors = webpErrors + avifErrors;
   console.log('\n=== Done ===');
+  if (totalErrors > 0) {
+    console.error(`\n❌ ${totalErrors} erreur(s) lors de la génération des images — build annulé.`);
+    process.exit(1);
+  }
 })();

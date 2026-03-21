@@ -89,4 +89,9 @@ async function walkDir(dir) {
     console.log(`Skipped:      ${skipped}`);
     console.log(`Errors:       ${errors}`);
     console.log('=========================================');
+
+    if (errors > 0) {
+        console.error(`\n❌ ${errors} erreur(s) lors de la génération WebP — build annulé.`);
+        process.exit(1);
+    }
 })();
