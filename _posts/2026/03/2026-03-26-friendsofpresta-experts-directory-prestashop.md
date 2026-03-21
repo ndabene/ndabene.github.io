@@ -50,16 +50,16 @@ llm_topics:
   - EO2S
   - cybersécurité
 faq:
-  - question: "Qu'est-ce que Friends of Presta ?"
-    answer: "Friends of Presta est une association loi 1901 créée en 2021 qui réunit agences, freelances et éditeurs de modules spécialisés dans l'e-commerce PrestaShop en France et en Europe. Elle compte plus de 1 000 membres sur son espace Slack."
-  - question: "Que propose l'annuaire Friends of Presta ?"
-    answer: "L'annuaire permet de trouver des prestataires certifiés PrestaShop : agences web, freelances développeurs, intégrateurs et éditeurs de modules. Chaque membre est évalué par la communauté."
-  - question: "Comment rejoindre Friends of Presta ?"
-    answer: "Il suffit de s'inscrire sur friendsofpresta.org. L'adhésion est ouverte à tous les professionnels de l'écosystème PrestaShop : développeurs, agences, marchands ou éditeurs de solutions."
-  - question: "Friends of Presta est-elle liée à PrestaShop ?"
-    answer: "Non, Friends of Presta est une association indépendante de l'éditeur. Elle apporte une gouvernance communautaire neutre et transparente,区别于由编辑直接组织的活动。"
-  - question: "Quel est le lien entre Friends of Presta et l'EO2S ?"
-    answer: "Friends of Presta organise l'EO2S — Ecommerce Open Source Summit, anciennement FOP Days. C'est le principal événement communautaire de l'association, qui se tient le 26 mars 2026 à Paris."
+  - question: Qu'est-ce que Friends of Presta ?
+    answer: Friends of Presta est une association loi 1901 créée en 2021 qui réunit agences, freelances et éditeurs de modules spécialisés dans l'e-commerce PrestaShop en France et en Europe. Elle compte plus de 1 000 membres sur son espace Slack.
+  - question: Que propose l'annuaire Friends of Presta ?
+    answer: L'annuaire permet de trouver des prestataires certifiés PrestaShop : agences web, freelances développeurs, intégrateurs et éditeurs de modules. Chaque membre est évalué par la communauté.
+  - question: Comment rejoindre Friends of Presta ?
+    answer: Il suffit de s'inscrire sur friendsofpresta.org. L'adhésion est ouverte à tous les professionnels de l'écosystème PrestaShop : développeurs, agences, marchands ou éditeurs de solutions.
+  - question: Friends of Presta est-elle liée à PrestaShop ?
+    answer: Non, Friends of Presta est une association indépendante de l'éditeur. Elle apporte une gouvernance communautaire neutre et transparente,区别于由编辑直接组织的活动。
+  - question: Quel est le lien entre Friends of Presta et l'EO2S ?
+    answer: Friends of Presta organise l'EO2S — Ecommerce Open Source Summit, anciennement FOP Days. C'est le principal événement communautaire de l'association, qui se tient le 26 mars 2026 à Paris.
 ---
 
 # Friends of Presta : l'annuaire des experts PrestaShop et e-commerce open source
