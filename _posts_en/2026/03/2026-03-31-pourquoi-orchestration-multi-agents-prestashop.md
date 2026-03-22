@@ -21,7 +21,7 @@ tags:
 excerpt: "AI alone produces questionable PrestaShop code. Discover why structured multi-agent orchestration is the effective solution for your project."
 image: "/assets/images/blog/2026/03/pourquoi-orchestration-multi-agents-prestashop/image-principale.webp"
 featured: false
-canonical_url: "https://nicolas-dabene.fr/en/blog/multi-agent-orchestration-prestashop/"
+canonical_url: "https://nicolas-dabene.fr/en/blog/pourquoi-orchestration-multi-agents-prestashop/"
 difficulty: "Advanced"
 technologies:
   - "PrestaShop"
