@@ -50,6 +50,14 @@ Generates <picture> with:
   {%- assign src_fallback = base_path | append: "-480.webp" -%}
 {%- endif -%}
 
+{%- comment -%} decoding="sync" pour eager (render immédiat) ; "async" pour lazy (décalage OK) {%- endcomment -%}
+{%- assign loading_val = include.loading | default: "lazy" -%}
+{%- if loading_val == "eager" -%}
+  {%- assign decoding_val = "sync" -%}
+{%- else -%}
+  {%- assign decoding_val = "async" -%}
+{%- endif -%}
+
 {%- comment -%} AVIF srcset — variants only, no original-size reference {%- endcomment -%}
 {%- assign avif_parts = "" | split: "" -%}
 {%- for size in sizes_array -%}
@@ -74,7 +82,7 @@ Generates <picture> with:
     {% if include.class %}class="{{ include.class }}" {% endif %}
     width="{{ include.width | default: '1024' }}"
     height="{{ include.height | default: '1024' }}"
-    loading="{{ include.loading | default: 'lazy' }}"
+    loading="{{ loading_val }}"
     {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}" {% endif %}
-    decoding="async">
+    decoding="{{ decoding_val }}">
 </picture>
