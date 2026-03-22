@@ -317,6 +317,18 @@ endif %}
 <link rel="stylesheet" href="{{ page.custom_css | relative_url }}">
 {% endif %}
 
+<!-- CSS spécifique à la boutique (chargé async, non-bloquant) -->
+{% if page.url contains '/boutique/' or page.url contains '/shop/' %}
+<link rel="preload" as="style" href="{{ '/assets/css/boutique.css' | relative_url }}?v=1.0.1" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/boutique.css' | relative_url }}?v=1.0.1"></noscript>
+{% endif %}
+
+<!-- CSS spécifique YouTube (chargé async) -->
+{% if page.url contains '/youtube/' %}
+<link rel="preload" as="style" href="{{ '/assets/css/youtube.css' | relative_url }}?v=1.0.1" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/youtube.css' | relative_url }}?v=1.0.1"></noscript>
+{% endif %}
+
 <!-- Preconnect optimisé pour ressources tierces critiques -->
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">

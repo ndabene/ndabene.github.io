@@ -37,7 +37,7 @@ body {
 @import "skills-modern"; // NOUVEAU - Skills redesign 2025 cohérent blog/home
 @import "homepage-enhanced";
 @import "publications"; // STYLES PUBLICATIONS - CRITIQUE POUR HOMEPAGE ET BLOG
-@import "boutique"; // STYLES POUR LA NOUVELLE PAGE BOUTIQUE
+// @import "boutique"; // MOVED to boutique.scss (loaded conditionally)
 @import "home-content"; // STYLES HOMEPAGE CRÉATEUR DE CONTENU
 @import "homepage-optimized"; // STYLES HOMEPAGE OPTIMISÉE 2025
 @import "components/cookie-banner"; // RGPD Cookie Banner
