@@ -16,18 +16,7 @@ llm_topics:
 ---
 <main>
 
-<section class="page-hero-section">
- <div class="container">
-  <nav class="breadcrumb">
-   <a href="/en/">Home</a>
-   <span>{{ page.title }}</span>
-  </nav>
-  <div class="hero-content">
-   <h1>{{ page.title }}</h1>
-   <p class="section-description">{{ page.description }}</p>
- </div>
- </div>
-</section>
+{% include page-hero.html %}
 
 
 <section class="section publications-page-section external-publications-section">

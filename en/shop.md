@@ -335,24 +335,14 @@ llm_context: |
 }
 </script>
 
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/en/">Home</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>{{ page.title }}</h1>
-            <p class="section-description">{{ page.description }}</p>
-            {% assign total_products = site.data.produits | size %}
-            {% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
-            <p class="section-description" style="margin-top:.5rem;color:#475569;">
-                Choose a universe (AI, PrestaShop e-commerce, development...) and explore resources structured by levels and themes. Objective: learn fast, apply immediately.
-            </p>
-
-        </div>
-    </div>
-</section>
+{% capture shop_hero_extra %}
+{% assign total_products = site.data.produits | size %}
+{% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
+<p class="section-description" style="margin-top:.5rem;color:#475569;">
+    Choose a universe (AI, PrestaShop e-commerce, development...) and explore resources structured by levels and themes. Objective: learn fast, apply immediately.
+</p>
+{% endcapture %}
+{% include page-hero.html post_content=shop_hero_extra %}
 
 {%- comment -%} Hero pack removed to lighten the shop page {%- endcomment -%}
 

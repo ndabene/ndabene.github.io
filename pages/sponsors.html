@@ -14,18 +14,10 @@ llm_topics:
 - outils développement
 ---
 
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/">Accueil</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>Sponsors & Partenaires 🤝</h1>
-            <p class="section-description">Les outils et services que j'utilise quotidiennement pour développer mes projets, automatiser mes workflows et améliorer ma productivité. En utilisant mes liens de parrainage, vous bénéficiez d'offres exclusives tout en soutenant mon travail.</p>
-        </div>
-    </div>
-</section>
+{% include page-hero.html
+  title="Sponsors & Partenaires 🤝"
+  description="Les outils et services que j'utilise quotidiennement pour développer mes projets, automatiser mes workflows et améliorer ma productivité. En utilisant mes liens de parrainage, vous bénéficiez d'offres exclusives tout en soutenant mon travail."
+%}
 
 <section class="sponsors-section">
   <div class="container">

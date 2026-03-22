@@ -11,18 +11,9 @@ body_class: "page-cgu"
 llm_summary: General terms and conditions applicable to the shop (training courses and digital products).
 llm_topics: [terms, shop]
 ---
-<section class="page-hero-section">
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="/en/">Home</a>
-      <span>{{ page.title }}</span>
-    </nav>
-    <div class="hero-content">
-      <h1>{{ page.title }}</h1>
-      <p class="section-description">Please read these terms carefully before making any purchase. This page is provided as a structure to be completed.</p>
-    </div>
-  </div>
-  </section>
+{% include page-hero.html
+  description="Please read these terms carefully before making any purchase. This page is provided as a structure to be completed."
+%}
 
 <section class="section">
   <div class="container">

@@ -12,18 +12,7 @@ llm_summary: Discover a selection of my projects, including custom PrestaShop
   BusinessTech.
 llm_topics: [projects, prestashop, innovation]
 ---
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/en/">Home</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>{{ page.title }}</h1>
-            <p class="section-description">{{ page.description }}</p>
-        </div>
-    </div>
-</section>
+{% include page-hero.html %}
 
 <section class="projects-main-section">
     <div class="container">

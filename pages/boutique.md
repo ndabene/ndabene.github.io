@@ -334,24 +334,14 @@ llm_context: |
 }
 </script>
 
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/">Accueil</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>{{ page.title }}</h1>
-            <p class="section-description">{{ page.description }}</p>
-            {% assign total_products = site.data.produits | size %}
-            {% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
-            <p class="section-description" style="margin-top:.5rem;color:#475569;">
-                Choisissez un univers (IA, e‑commerce PrestaShop, développement…) et explorez des ressources structurées par niveaux et thématiques. Objectif&nbsp;: apprendre vite, appliquer tout de suite.
-            </p>
-            
-        </div>
-    </div>
-</section>
+{% capture shop_hero_extra %}
+{% assign total_products = site.data.produits | size %}
+{% assign univers_all = site.data.produits | map: 'univers' | compact | uniq %}
+<p class="section-description" style="margin-top:.5rem;color:#475569;">
+    Choisissez un univers (IA, e-commerce PrestaShop, développement...) et explorez des ressources structurées par niveaux et thématiques. Objectif&nbsp;: apprendre vite, appliquer tout de suite.
+</p>
+{% endcapture %}
+{% include page-hero.html post_content=shop_hero_extra %}
 
 {%- comment -%} Hero pack retiré pour alléger la page boutique {%- endcomment -%}
 

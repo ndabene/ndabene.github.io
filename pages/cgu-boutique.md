@@ -12,18 +12,9 @@ llm_summary: Conditions générales applicables à la boutique (formations et
   produits numériques).
 llm_topics: [conditions, boutique]
 ---
-<section class="page-hero-section">
-  <div class="container">
-    <nav class="breadcrumb">
-      <a href="/">Accueil</a>
-      <span>{{ page.title }}</span>
-    </nav>
-    <div class="hero-content">
-      <h1>{{ page.title }}</h1>
-      <p class="section-description">Veuillez lire attentivement ces conditions avant tout achat. Cette page est fournie comme structure à compléter.</p>
-    </div>
-  </div>
-  </section>
+{% include page-hero.html
+  description="Veuillez lire attentivement ces conditions avant tout achat. Cette page est fournie comme structure à compléter."
+%}
 
 <section class="section">
   <div class="container">
