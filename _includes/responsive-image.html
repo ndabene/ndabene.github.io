@@ -35,6 +35,21 @@ Generates <picture> with:
 {%- assign original_width = include.width | default: "1024" -%}
 {%- assign sizes_attr = "(max-width: 600px) 480px, (max-width: 900px) 720px, 1080px" -%}
 
+{%- comment -%} Détection : si le chemin de base est déjà une variante (se termine par -480, -720, -1080), ne pas modifier {%- endcomment -%}
+{%- assign base_last = base_path | split: "/" | last -%}
+{%- if base_last contains "-480" or base_last contains "-720" or base_last contains "-1080" -%}
+  {%- assign is_variant = true -%}
+{%- else -%}
+  {%- assign is_variant = false -%}
+{%- endif -%}
+
+{%- comment -%} src fallback = smallest variant (480w) uniquement si ce n'est pas déjà une variante {%- endcomment -%}
+{%- if is_variant -%}
+  {%- assign src_fallback = include.src -%}
+{%- else -%}
+  {%- assign src_fallback = base_path | append: "-480.webp" -%}
+{%- endif -%}
+
 {%- comment -%} AVIF srcset — variants only, no original-size reference {%- endcomment -%}
 {%- assign avif_parts = "" | split: "" -%}
 {%- for size in sizes_array -%}
@@ -43,20 +58,18 @@ Generates <picture> with:
 {%- endfor -%}
 {%- assign avif_srcset = avif_parts | join: ", " -%}
 
-{%- comment -%} WebP srcset — variants + original {%- endcomment -%}
+{%- comment -%} WebP srcset — variants only, no original-size reference {%- endcomment -%}
 {%- assign webp_parts = "" | split: "" -%}
 {%- for size in sizes_array -%}
   {%- capture webp_item -%}{{ base_path }}-{{ size }}.webp {{ size }}w{%- endcapture -%}
   {%- assign webp_parts = webp_parts | push: webp_item -%}
 {%- endfor -%}
-{%- capture webp_original -%}{{ include.src }} {{ original_width }}w{%- endcapture -%}
-{%- assign webp_parts = webp_parts | push: webp_original -%}
 {%- assign webp_srcset = webp_parts | join: ", " -%}
 
 <picture>
   <source srcset="{{ avif_srcset }}" sizes="{{ sizes_attr }}" type="image/avif">
-  <source srcset="{{ webp_srcset }}" sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, (max-width: 1400px) 1080px, {{ original_width }}px" type="image/webp">
-  <img src="{{ include.src }}"
+  <source srcset="{{ webp_srcset }}" sizes="{{ sizes_attr }}" type="image/webp">
+  <img src="{{ src_fallback }}"
     alt="{{ include.alt | default: page.title | escape }}"
     {% if include.class %}class="{{ include.class }}" {% endif %}
     width="{{ include.width | default: '1024' }}"

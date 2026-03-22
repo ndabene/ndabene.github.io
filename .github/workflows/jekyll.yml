@@ -106,6 +106,14 @@ jobs:
           find assets/images -name "*.webp" -not -name "*-480.webp" -not -name "*-720.webp" -not -name "*-1080.webp" -type f | wc -l
           echo "✅ Images WebP générées avec succès"
 
+      - name: Commit generated image variants
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add assets/images/
+          git diff --cached --quiet || git commit -m "chore(images): generate WebP responsive variants $(date -u +'%Y-%m-%d')"
+          git push || echo "No variants to commit"
+
       - name: Generate WebP variants and AVIF with sharp
         run: |
           echo "🖼️  Génération des variants responsive (480/720/1080) et AVIF avec sharp..."
