@@ -147,21 +147,18 @@ Without orchestration: you do this in full sequence, manually.
 With orchestration, `master` analyzes dependencies and structures the flow:
 
 <div class="diagram-container diagram-animation" role="img" aria-label="Orchestration flow diagram for PrestaShop product listing: prestashop-architect (sequential), then prestashop-module-dev, prestashop-security, prestashop-testing (parallel), then qa-reviewer (sequential)">
-
-```
-Step 1 (sequential — arch must precede implementation)
-└── prestashop-architect
-    Defines structure: Symfony controller, Grid, services, hooks
-
-Step 2 (parallel — independent work)
-├── prestashop-module-dev    Implements controller and Grid
-├── prestashop-security      Audit permissions and BO access control
-└── prestashop-testing       Test strategy for the listing
-
-Step 3 (sequential)
-└── qa-reviewer              Final validation before delivery
-```
-
+<pre><code><span class="line">Step 1 (sequential — arch must precede implementation)</span>
+<span class="line">└── prestashop-architect</span>
+<span class="line">    Defines structure: Symfony controller, Grid, services, hooks</span>
+<span class="line"></span>
+<span class="line">Step 2 (parallel — independent work)</span>
+<span class="line">├── prestashop-module-dev    Implements controller and Grid</span>
+<span class="line">├── prestashop-security      Audit permissions and BO access control</span>
+<span class="line">└── prestashop-testing       Test strategy for the listing</span>
+<span class="line"></span>
+<span class="line">Step 3 (sequential)</span>
+<span class="line">└── qa-reviewer              Final validation before delivery</span>
+</code></pre>
 </div>
 
 The parallelization rule is precise: **anything that can be done independently is done in parallel**. What has real dependencies — architecture before implementation, implementation before QA — stays sequential. `master` analyzes these constraints before routing, not after.
@@ -197,25 +194,22 @@ Request: *"Create a PrestaShop module that receives an incoming webhook to updat
 `master` analyzes the request and detects a real dependency: `prestashop-module-dev` cannot implement without the architecture being set. Step 1 is therefore sequential. However, once the structure is defined, security, implementation, and API design have no dependencies between them.
 
 <div class="diagram-container diagram-animation" role="img" aria-label="Flow diagram for stock webhook module: prestashop-architect (sequential), then prestashop-module-dev, prestashop-security, prestashop-webservice (parallel), then qa-reviewer (sequential)">
-
-```
-Step 1 (sequential — real dependency)
-└── prestashop-architect
-    Sets structure: hook, ObjectModel or Doctrine, queue management
-
-Step 2 (parallel — independent work based on arch)
-├── prestashop-module-dev
-│   Implements endpoint, handler, stock update
-├── prestashop-security
-│   Validates webhook signature, controls inputs, rate limiting
-└── prestashop-webservice
-    Designs API contract, verifies Admin API PS9 compatibility
-
-Step 3 (sequential)
-└── qa-reviewer
-    Full diff review before delivery
-```
-
+<pre><code><span class="line">Step 1 (sequential — real dependency)</span>
+<span class="line">└── prestashop-architect</span>
+<span class="line">    Sets structure: hook, ObjectModel or Doctrine, queue management</span>
+<span class="line"></span>
+<span class="line">Step 2 (parallel — independent work based on arch)</span>
+<span class="line">├── prestashop-module-dev</span>
+<span class="line">│   Implements endpoint, handler, stock update</span>
+<span class="line">├── prestashop-security</span>
+<span class="line">│   Validates webhook signature, controls inputs, rate limiting</span>
+<span class="line">└── prestashop-webservice</span>
+<span class="line">    Designs API contract, verifies Admin API PS9 compatibility</span>
+<span class="line"></span>
+<span class="line">Step 3 (sequential)</span>
+<span class="line">└── qa-reviewer</span>
+<span class="line">    Full diff review before delivery</span>
+</code></pre>
 </div>
 
 That's the real value of orchestration: not blind parallelization, but parallelization where dependencies allow. `master` analyzes constraints, decides what can be parallelized and what must remain sequential. A generalist agent doesn't have this mechanism — it does everything in one go or waits for manual instructions.
@@ -229,27 +223,24 @@ Request: *"The module is ready. Prepare everything for Marketplace submission."*
 This is the perfect case for total parallelization. The 6 packaging agents have no dependencies between them — they all work on distinct files.
 
 <div class="diagram-container diagram-animation" role="img" aria-label="Marketplace packaging flow diagram: prestashop-htaccess, prestashop-license, prestashop-php-headers, prestashop-phpstan, prestashop-phpcsfixer, prestashop-changelog (parallel), then qa-reviewer (sequential)">
-
-```
-Step 1 (total parallel)
-├── prestashop-htaccess
-│   Generates sensitive file protection rules
-├── prestashop-license
-│   Verifies and applies license headers on all PHP files
-├── prestashop-php-headers
-│   Controls PHP version declarations and PS compatibility
-├── prestashop-phpstan
-│   Runs static analysis at configured level, zero blocking errors
-├── prestashop-phpcsfixer
-│   Applies PSR code standards + PrestaShop conventions
-└── prestashop-changelog
-    Generates CHANGELOG from commits since last release
-
-Step 2 (sequential)
-└── qa-reviewer
-    Final validation: packaging coherence, nothing forgotten
-```
-
+<pre><code><span class="line">Step 1 (total parallel)</span>
+<span class="line">├── prestashop-htaccess</span>
+<span class="line">│   Generates sensitive file protection rules</span>
+<span class="line">├── prestashop-license</span>
+<span class="line">│   Verifies and applies license headers on all PHP files</span>
+<span class="line">├── prestashop-php-headers</span>
+<span class="line">│   Controls PHP version declarations and PS compatibility</span>
+<span class="line">├── prestashop-phpstan</span>
+<span class="line">│   Runs static analysis at configured level, zero blocking errors</span>
+<span class="line">├── prestashop-phpcsfixer</span>
+<span class="line">│   Applies PSR code standards + PrestaShop conventions</span>
+<span class="line">└── prestashop-changelog</span>
+<span class="line">    Generates CHANGELOG from commits since last release</span>
+<span class="line"></span>
+<span class="line">Step 2 (sequential)</span>
+<span class="line">└── qa-reviewer</span>
+<span class="line">    Final validation: packaging coherence, nothing forgotten</span>
+</code></pre>
 </div>
 
 Without orchestration, this is a manual checklist you do by hand — or forget to do. With orchestration, it's one command, one synthesis, and a module ready to submit.
