@@ -61,11 +61,11 @@ ai:
       category: "Innovation"
       metric: "Productivité x4"
     
-    - name: "Orchestration Agents IA"
-      description: "Management d'agents IA et workflows automatisés (MCP, Perplexity, NotebookLM)"
-      tags: ["MCP", "Agents"]
+    - name: "AI Orchestration Dev"
+      description: "Architecture multi-agents pour PrestaShop : master orchestrateur, 14 agents spécialisés, skills contextualisés — code PS9 dès la première passe"
+      tags: ["multi-agent", "MCP", "Claude", "AI Dev"]
       category: "Orchestration"
-      metric: "Multi-agents"
+      metric: "14 agents"
     
     - name: "IA Business Applications"
       description: "Collaboration technique-marketing pour processus IA business et vision transversale"

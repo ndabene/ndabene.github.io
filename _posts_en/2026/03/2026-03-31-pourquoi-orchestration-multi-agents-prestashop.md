@@ -14,6 +14,7 @@ categories:
 tags:
   - "multi-agent"
   - "orchestration"
+  - "ai-orchestrator"
   - "prestaShop"
   - "ai"
   - "mcp"

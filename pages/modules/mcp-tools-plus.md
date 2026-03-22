@@ -156,7 +156,7 @@ product:
       </div>
       <img
         src="/assets/images/hero/profile-hero.webp"
-        alt="Nicolas Dabene, expert PrestaShop et createur de MCP Tools Plus"
+        alt="Nicolas Dabene, AI Orchestrator & PrestaShop Expert — createur de MCP Tools Plus"
         class="w-full rounded-xl border border-white/10"
         style="max-height: 320px; object-fit: contain; object-position: center; background: #0b1220;"
         loading="lazy"
@@ -294,7 +294,7 @@ product:
     <div class="card p-8 text-center">
       <h2 class="text-[2rem] font-bold mb-4 text-[#111827]">Autorite</h2>
       <p class="text-lg text-[#374151] leading-relaxed max-w-4xl mx-auto">
-        MCP Tools Plus est developpe par un specialiste PrestaShop avec plus de 10 ans d'experience, createur de modules reconnus et aligne sur les enjeux reels des marchands : marge, vitesse d'execution, priorites business.
+        MCP Tools Plus est developpe par un AI Orchestrator & expert PrestaShop avec plus de 10 ans d'experience — createur de modules reconnus et architecte d'orchestrations IA pour e-commerce.
       </p>
     </div>
   </div>
