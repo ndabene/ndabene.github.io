@@ -48,7 +48,7 @@ faq:
 
 # Pourquoi l'orchestration multi-agents n'est plus optionnelle pour PrestaShop
 
-*Par Nicolas Dabène — Senior PrestaShop Engineer & AI Orchestrator*
+*Par Nicolas Dabène — AI-Native E-commerce Architect*
 
 ---
 
@@ -145,19 +145,98 @@ Sans orchestration : tu fais ça en séquence complète, manuellement.
 
 Avec orchestration, `master` analyse les dépendances et structure le flux :
 
-<div class="diagram-container diagram-animation" role="img" aria-label="Diagramme du flux d'orchestration pour un listing produit PrestaShop : prestashop-architect (séquentiel), puis prestashop-module-dev, prestashop-security, prestashop-testing (parallèle), puis qa-reviewer (séquentiel)">
-<pre><code><span class="line">Étape 1 (séquentiel — l'archi doit précéder l'implémentation)</span>
-<span class="line">└── prestashop-architect</span>
-<span class="line">    Définit la structure : contrôleur Symfony, Grid, services, hooks</span>
-<span class="line"></span>
-<span class="line">Étape 2 (parallèle — travaux indépendants)</span>
-<span class="line">├── prestashop-module-dev    Implémente le contrôleur et la Grid</span>
-<span class="line">├── prestashop-security      Audit des permissions et contrôle d'accès BO</span>
-<span class="line">└── prestashop-testing       Stratégie de tests pour le listing</span>
-<span class="line"></span>
-<span class="line">Étape 3 (séquentiel)</span>
-<span class="line">└── qa-reviewer              Validation finale avant livraison</span>
-</code></pre>
+<div class="workflow-diagram">
+  <div class="workflow-timeline">
+    
+    <!-- Étape 1 : Séquentiel -->
+    <div class="workflow-step sequential" style="animation-delay: 0.2s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          Étape 1 — Séquentiel
+        </span>
+      </div>
+      <div class="workflow-agents">
+        <div class="workflow-agent" data-type="architect" style="animation-delay: 0.5s;">
+          <span class="workflow-agent-icon">🏗️</span>
+          <div>
+            <div>prestashop-architect</div>
+            <div class="workflow-agent-text">Définit la structure : contrôleur Symfony, Grid, services, hooks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Étape 2 : Parallèle -->
+    <div class="workflow-step parallel" style="animation-delay: 0.8s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+          Étape 2 — Travaux indépendants
+        </span>
+      </div>
+      <div class="workflow-parallel-group">
+        <div class="workflow-agents">
+          <div class="workflow-agent" data-type="dev" style="animation-delay: 1.1s;">
+            <span class="workflow-agent-icon">💻</span>
+            <div>
+              <div>prestashop-module-dev</div>
+              <div class="workflow-agent-text">Implémente le contrôleur et la Grid</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="security" style="animation-delay: 1.3s;">
+            <span class="workflow-agent-icon">🔒</span>
+            <div>
+              <div>prestashop-security</div>
+              <div class="workflow-agent-text">Audit des permissions et contrôle d'accès BO</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="testing" style="animation-delay: 1.5s;">
+            <span class="workflow-agent-icon">🧪</span>
+            <div>
+              <div>prestashop-testing</div>
+              <div class="workflow-agent-text">Stratégie de tests pour le listing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Étape 3 : Validation -->
+    <div class="workflow-step qa" style="animation-delay: 1.8s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Étape 3 — Validation finale
+        </span>
+      </div>
+      <div class="workflow-agents">
+        <div class="workflow-agent" data-type="qa" style="animation-delay: 2.1s;">
+          <span class="workflow-agent-icon">✅</span>
+          <div>
+            <div>qa-reviewer</div>
+            <div class="workflow-agent-text">Validation finale avant livraison</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="workflow-legend">
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #f472b6;"></div>
+      <span>Séquentiel</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #22d3ee;"></div>
+      <span>Parallèle</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #4ade80;"></div>
+      <span>Validation</span>
+    </div>
+  </div>
 </div>
 
 La règle de parallélisation est précise : **tout ce qui peut être fait indépendamment est fait en parallèle**. Ce qui a des dépendances réelles — l'architecture avant l'implémentation, l'implémentation avant la QA — reste séquentiel. `master` analyse ces contraintes avant de router, pas après.
@@ -192,23 +271,98 @@ Demande : *"Crée un module PrestaShop qui reçoit un webhook entrant pour mettr
 
 `master` analyse la demande et détecte une dépendance réelle : `prestashop-module-dev` ne peut pas implémenter sans que l'architecture soit posée. L'étape 1 est donc séquentielle. En revanche, une fois la structure définie, sécurité, implémentation et conception d'API n'ont plus aucune dépendance entre elles.
 
-<div class="diagram-container diagram-animation" role="img" aria-label="Diagramme du flux pour un module webhook de synchronisation stocks : prestashop-architect (séquentiel), puis prestashop-module-dev, prestashop-security, prestashop-webservice (parallèle), puis qa-reviewer (séquentiel)">
-<pre><code><span class="line">Étape 1 (séquentiel — dépendance réelle)</span>
-<span class="line">└── prestashop-architect</span>
-<span class="line">    Pose la structure : hook, ObjectModel ou Doctrine, gestion de la queue</span>
-<span class="line"></span>
-<span class="line">Étape 2 (parallèle — travaux indépendants sur la base de l'archi)</span>
-<span class="line">├── prestashop-module-dev</span>
-<span class="line">│   Implémente le endpoint, le handler, la mise à jour de stock</span>
-<span class="line">├── prestashop-security</span>
-<span class="line">│   Valide la signature du webhook, contrôle les entrées, rate limiting</span>
-<span class="line">└── prestashop-webservice</span>
-<span class="line">    Conçoit le contrat d'API, vérifie la compatibilité Admin API PS9</span>
-<span class="line"></span>
-<span class="line">Étape 3 (séquentiel)</span>
-<span class="line">└── qa-reviewer</span>
-<span class="line">    Review du diff complet avant livraison</span>
-</code></pre>
+<div class="workflow-diagram">
+  <div class="workflow-timeline">
+    
+    <!-- Étape 1 -->
+    <div class="workflow-step sequential" style="animation-delay: 0.2s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+          Étape 1 — Séquentiel
+        </span>
+      </div>
+      <div class="workflow-agents">
+        <div class="workflow-agent" data-type="architect" style="animation-delay: 0.5s;">
+          <span class="workflow-agent-icon">🏗️</span>
+          <div>
+            <div>prestashop-architect</div>
+            <div class="workflow-agent-text">Pose la structure : hook, ObjectModel ou Doctrine, gestion de la queue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Étape 2 -->
+    <div class="workflow-step parallel" style="animation-delay: 0.8s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+          Étape 2 — Travaux indépendants
+        </span>
+      </div>
+      <div class="workflow-parallel-group">
+        <div class="workflow-agents">
+          <div class="workflow-agent" data-type="dev" style="animation-delay: 1.1s;">
+            <span class="workflow-agent-icon">💻</span>
+            <div>
+              <div>prestashop-module-dev</div>
+              <div class="workflow-agent-text">Implémente le endpoint, le handler, la mise à jour de stock</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="security" style="animation-delay: 1.3s;">
+            <span class="workflow-agent-icon">🔒</span>
+            <div>
+              <div>prestashop-security</div>
+              <div class="workflow-agent-text">Valide la signature du webhook, contrôle les entrées, rate limiting</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="webservice" style="animation-delay: 1.5s;">
+            <span class="workflow-agent-icon">🔌</span>
+            <div>
+              <div>prestashop-webservice</div>
+              <div class="workflow-agent-text">Conçoit le contrat d'API, vérifie la compatibilité Admin API PS9</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Étape 3 -->
+    <div class="workflow-step qa" style="animation-delay: 1.8s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Étape 3 — Validation finale
+        </span>
+      </div>
+      <div class="workflow-agents">
+        <div class="workflow-agent" data-type="qa" style="animation-delay: 2.1s;">
+          <span class="workflow-agent-icon">✅</span>
+          <div>
+            <div>qa-reviewer</div>
+            <div class="workflow-agent-text">Review du diff complet avant livraison</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="workflow-legend">
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #f472b6;"></div>
+      <span>Séquentiel</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #22d3ee;"></div>
+      <span>Parallèle</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #4ade80;"></div>
+      <span>Validation</span>
+    </div>
+  </div>
 </div>
 
 C'est ça la vraie valeur de l'orchestration : pas de la parallélisation aveugle, mais de la parallélisation là où les dépendances le permettent. `master` analyse les contraintes, décide ce qui peut être parallélisé et ce qui doit rester séquentiel. Un agent généraliste n'a pas ce mécanisme — il fait tout d'un seul tenant ou attend des instructions manuelles.
@@ -221,25 +375,100 @@ Demande : *"Le module est prêt. Prépare tout pour la soumission Marketplace."*
 
 C'est le cas parfait pour la parallélisation totale. Les 6 agents de packaging n'ont aucune dépendance entre eux — ils travaillent tous sur des fichiers distincts.
 
-<div class="diagram-container diagram-animation" role="img" aria-label="Diagramme du flux de packaging Marketplace : prestashop-htaccess, prestashop-license, prestashop-php-headers, prestashop-phpstan, prestashop-phpcsfixer, prestashop-changelog (parallèle), puis qa-reviewer (séquentiel)">
-<pre><code><span class="line">Étape 1 (parallèle totale)</span>
-<span class="line">├── prestashop-htaccess</span>
-<span class="line">│   Génère les règles de protection des fichiers sensibles</span>
-<span class="line">├── prestashop-license</span>
-<span class="line">│   Vérifie et applique les headers de licence sur tous les fichiers PHP</span>
-<span class="line">├── prestashop-php-headers</span>
-<span class="line">│   Contrôle les déclarations de version PHP et compatibilité PS</span>
-<span class="line">├── prestashop-phpstan</span>
-<span class="line">│   Lance l'analyse statique au niveau configuré, zéro erreur bloquante</span>
-<span class="line">├── prestashop-phpcsfixer</span>
-<span class="line">│   Applique les standards de code PSR + conventions PrestaShop</span>
-<span class="line">└── prestashop-changelog</span>
-<span class="line">    Génère le CHANGELOG à partir des commits depuis la dernière release</span>
-<span class="line"></span>
-<span class="line">Étape 2 (séquentiel)</span>
-<span class="line">└── qa-reviewer</span>
-<span class="line">    Validation finale : cohérence du packaging, rien d'oublié</span>
-</code></pre>
+<div class="workflow-diagram">
+  <div class="workflow-timeline">
+    
+    <!-- Étape 1 : PACKAGING -->
+    <div class="workflow-step parallel" style="animation-delay: 0.2s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
+          Packaging — Tout en parallèle
+        </span>
+      </div>
+      <div class="workflow-parallel-group">
+        <div class="workflow-agents">
+          <div class="workflow-agent" data-type="packaging" style="animation-delay: 0.4s;">
+            <span class="workflow-agent-icon">🛡️</span>
+            <div>
+              <div>prestashop-htaccess</div>
+              <div class="workflow-agent-text">Protection fichiers sensibles</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="packaging" style="animation-delay: 0.55s;">
+            <span class="workflow-agent-icon">📄</span>
+            <div>
+              <div>prestashop-license</div>
+              <div class="workflow-agent-text">Headers de licence</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="packaging" style="animation-delay: 0.7s;">
+            <span class="workflow-agent-icon">🔧</span>
+            <div>
+              <div>prestashop-php-headers</div>
+              <div class="workflow-agent-text">Version PHP & compatibilité</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="ops" style="animation-delay: 0.85s;">
+            <span class="workflow-agent-icon">🔍</span>
+            <div>
+              <div>prestashop-phpstan</div>
+              <div class="workflow-agent-text">Analyse statique, zéro erreur</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="ops" style="animation-delay: 1.0s;">
+            <span class="workflow-agent-icon">✨</span>
+            <div>
+              <div>prestashop-phpcsfixer</div>
+              <div class="workflow-agent-text">Standards PSR + conventions</div>
+            </div>
+          </div>
+          <div class="workflow-agent" data-type="packaging" style="animation-delay: 1.15s;">
+            <span class="workflow-agent-icon">📝</span>
+            <div>
+              <div>prestashop-changelog</div>
+              <div class="workflow-agent-text">CHANGELOG depuis dernière release</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Étape 2 : Validation -->
+    <div class="workflow-step qa" style="animation-delay: 1.4s;">
+      <div class="workflow-step-header">
+        <span class="workflow-step-label">
+          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Validation finale
+        </span>
+      </div>
+      <div class="workflow-agents">
+        <div class="workflow-agent" data-type="qa" style="animation-delay: 1.7s;">
+          <span class="workflow-agent-icon">✅</span>
+          <div>
+            <div>qa-reviewer</div>
+            <div class="workflow-agent-text">Cohérence du packaging, rien d'oublié</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="workflow-legend">
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #f472b6;"></div>
+      <span>Séquentiel</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #22d3ee;"></div>
+      <span>Parallèle</span>
+    </div>
+    <div class="workflow-legend-item">
+      <div class="workflow-legend-dot" style="border-color: #4ade80;"></div>
+      <span>Validation</span>
+    </div>
+  </div>
 </div>
 
 Sans orchestration, c'est une checklist manuelle que tu fais à la main — ou que tu oublies de faire. Avec orchestration, c'est une commande, une synthèse, et un module prêt à soumettre.
