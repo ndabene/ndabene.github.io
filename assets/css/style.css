@@ -116,7 +116,6 @@ body.nexus-mode a:hover {
 /* ===== ORIGINAL SITE STYLES ===== */
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@600;700;800;900&display=swap");
 html, body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 
 :root { --color-success: #059669; --color-warning: #d4af37; --color-error: #dc2626; --color-accent-1: #d4af37; --color-accent-2: #059669; --bg-card: rgba(255, 255, 255, 0.95); --bg-overlay: rgba(15, 23, 42, 0.1); --bg-hover: rgba(15, 23, 42, 0.05); --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1); --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
