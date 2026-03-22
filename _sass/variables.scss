@@ -74,11 +74,11 @@ $font-bold: 700;
 //================================================
 
 // Importation des polices depuis Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
 
 // Familles de polices
-$font-family-primary: 'Inter', sans-serif; // Pour le corps du texte
-$font-family-headings: 'Poppins', sans-serif; // Pour les titres
+$font-family-primary: 'DM Sans', sans-serif; // Pour le corps du texte
+$font-family-headings: 'Sora', sans-serif; // Pour les titres
 
 // Tailles de police (Base: 16px)
 $font-size-base: 1rem;

@@ -1093,6 +1093,8 @@
     color: $text-color;
     text-decoration: none;
     transition: $transition-fast;
+    font-weight: $font-weight-semibold;
+    font-family: $font-family-headings;
 
     &::after {
       content: '';
