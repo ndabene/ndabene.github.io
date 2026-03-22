@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mistral Small 4 : le modèle tout-en-un qui simplifie l'IA pour les marchands e-commerce"
-date: 2026-03-31
+date: 2026-04-07
 ref: mistral-small-4-ia-ecommerce-prestashop
 author: Nicolas Dabène
 category: intelligence-artificielle
@@ -19,7 +19,7 @@ tags:
   - Multimodal
   - Programmation
 excerpt: "Mistral Small 4 unifie raisonnement, codage et multimodalité dans un seul modèle open source. Une révolution pragmatique pour les marchands PrestaShop qui veulent une IA maîtrisée sans multiplier les outils."
-image: /assets/images/blog/2026/03/mistral-small-4-ia-ecommerce/image-principale.webp
+image: /assets/images/blog/2026/04/mistral-small-4-ia-ecommerce/image-principale.webp
 featured: false
 sitemap:
   priority: 0.8
