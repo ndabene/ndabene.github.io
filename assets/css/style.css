@@ -599,28 +599,22 @@ body.dark-mode .blog-perplexity-section .perplexity-blog-cta { background: linea
 body.dark-mode .blog-perplexity-section .perplexity-blog-cta .perplexity-blog-btn { background: #d4af37; color: #ffffff; border-color: #d4af37; }
 body.dark-mode .blog-perplexity-section .perplexity-blog-cta .perplexity-blog-btn:hover { background: #ddc061; }
 
-.toc-perplexity-block { text-align: center; padding: 1.5rem; margin-bottom: 2rem; }
-@media (min-width: 1025px) { .toc-perplexity-block { display: none; } }
-@media (max-width: 768px) { .toc-perplexity-block { margin: 1.5rem 0; padding: 1rem; } }
-.toc-perplexity-block h4 { margin: 0 0 1rem 0; color: #111827; font-size: 1.25rem; }
+.toc-hostinger-block { text-align: center; padding: 1.5rem; margin-bottom: 2rem; }
+@media (min-width: 1025px) { .toc-hostinger-block { display: none; } }
+@media (max-width: 768px) { .toc-hostinger-block { margin: 1.5rem 0; padding: 1rem; } }
+.toc-hostinger-block h4 { margin: 0 0 1rem 0; color: #111827; font-size: 1.25rem; }
 
-.toc-perplexity-link { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; padding: 0.25rem 0.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); }
-.toc-perplexity-link:hover { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
-.toc-perplexity-link:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); }
+body.dark-mode .toc-hostinger-block { background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); border-color: #4a5568; }
+body.dark-mode .toc-hostinger-block p:first-child { color: #111827; }
+body.dark-mode .toc-hostinger-block p { color: #111827; }
 
-body.dark-mode .toc-perplexity-block { background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); border-color: #4a5568; }
-body.dark-mode .toc-perplexity-block p:first-child { color: #111827; }
-body.dark-mode .toc-perplexity-block p { color: #111827; }
-body.dark-mode .toc-perplexity-link { background: #d4af37; }
-body.dark-mode .toc-perplexity-link:hover { background: #ddc061; }
+.hostinger-sidebar-content, .toc-hostinger-block .hostinger-sidebar-content { text-align: center; }
+.hostinger-sidebar-content p:first-child { color: #ff6b35; font-weight: 700; margin: 0 0 0.5rem 0; }
+.hostinger-sidebar-content .sidebar-hostinger-text { font-size: 0.875rem; color: #374151; margin: 0 0 1rem 0; line-height: 1.4; }
 
-.perplexity-sidebar-content, .toc-perplexity-block .perplexity-sidebar-content { text-align: center; }
-.perplexity-sidebar-content p:first-child { color: #d4af37; font-weight: 700; margin: 0 0 0.5rem 0; }
-.perplexity-sidebar-content .sidebar-perplexity-text { font-size: 0.875rem; color: #374151; margin: 0 0 1rem 0; line-height: 1.4; }
-
-.perplexity-sidebar-btn { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; padding: 0.25rem 0.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); border: 2px solid transparent; }
-.perplexity-sidebar-btn:hover { background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
-.perplexity-sidebar-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3); }
+.hostinger-sidebar-btn { display: inline-block; background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: #ffffff; padding: 0.25rem 0.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.875rem; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3); border: 2px solid transparent; }
+.hostinger-sidebar-btn:hover { background: linear-gradient(135deg, #e55a2b 0%, #e88410 100%); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4); }
+.hostinger-sidebar-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3); }
 
 .blog-hostinger-section { background: linear-gradient(135deg, #fef3ec 0%, #fce9d8 100%); padding: 3rem 0; border-top: 1px solid #f4d4b8; border-bottom: 1px solid #f4d4b8; }
 .blog-hostinger-section .hostinger-blog-content { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center; }
