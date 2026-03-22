@@ -48,6 +48,29 @@ Allow: /contact/
 Allow: /search/
 
 # ============================================================
+# BLOC 1 — HTML parasites à désindexer
+# ============================================================
+# Fichiers HTML parasites générés par divers outils
+Disallow: /PAGEFIND_README.html
+Disallow: /audit-blog-positionnement.html
+Disallow: /COOKIE_SYSTEM.html
+Disallow: /PERFORMANCE_OPTIMIZATIONS.html
+Disallow: /PAGEFIND_OPTIMIZATION.html
+Disallow: /GSC_DEINDEX_GUIDE.html
+Disallow: /CHARTE_GRAPHIQUE.html
+Disallow: /FILTER_IMPROVEMENTS.html
+Disallow: /INTEGRATION_EXAMPLE.html
+
+# Bloc 1 — Dossiers techniques à bloquer
+Disallow: /docs/optimisation/
+Disallow: /pages/modules/mcp-tools-plus-seo-geo.html
+
+# Images - Bloquer les fichiers HTML parasites dans les images
+# Note: /assets/images/ est un répertoire, donc tous les fichiers dedans sont bloqués
+# Cela inclut les fichiers HTML parasites comme IMAGE-DESCRIPTION.html
+Disallow: /assets/images/
+
+# ============================================================
 # CRAWLERS IA SPÉCIALISÉS
 # ============================================================
 User-agent: ChatGPT-User

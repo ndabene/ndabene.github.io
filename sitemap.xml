@@ -30,7 +30,7 @@ layout: null
 
   <!-- Pages FR/EN -->
   {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "redirect.html" or page.name == "maintenance.html" %}
+    {% unless page.sitemap.exclude == "yes" or page.robots contains 'noindex' or page.name contains ".xml" or page.name contains ".txt" or page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".sh" or page.name contains "robots" or page.url == "/" or page.name == "redirect.html" or page.name == "maintenance.html" %}
     {% assign last = page.last_modified_at | default: page.date | default: site.time %}
     {% assign page_lang = page.lang | default: "fr" %}
     <url>
@@ -76,7 +76,7 @@ layout: null
 
   <!-- Blog Posts FR -->
   {% for post in site.posts %}
-    {% unless post.sitemap.exclude == "yes" %}
+    {% unless post.sitemap.exclude == "yes" or post.robots contains 'noindex' %}
     {% comment %} Masquer uniquement si hide_until_published est true ET la date est dans le futur {% endcomment %}
     {% if post.hide_until_published != true or post.date <= site.time %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
@@ -109,7 +109,7 @@ layout: null
 
   <!-- Blog Posts EN -->
   {% for post in site.posts_en %}
-    {% unless post.sitemap.exclude == "yes" %}
+    {% unless post.sitemap.exclude == "yes" or post.robots contains 'noindex' %}
     {% comment %} Masquer uniquement si hide_until_published est true ET la date est dans le futur {% endcomment %}
     {% if post.hide_until_published != true or post.date <= site.time %}
     {% assign last = post.last_modified_at | default: post.date | default: site.time %}
@@ -142,7 +142,7 @@ layout: null
 
   <!-- Projects FR -->
   {% for project in site.projects %}
-    {% unless project.sitemap.exclude == "yes" %}
+    {% unless project.sitemap.exclude == "yes" or project.robots contains 'noindex' %}
     {% assign last = project.last_modified_at | default: project.date | default: site.time %}
     <url>
       <loc>{{ project.url | prepend: site.url }}</loc>
@@ -170,7 +170,7 @@ layout: null
 
   <!-- Projects EN -->
   {% for project in site.projects_en %}
-    {% unless project.sitemap.exclude == "yes" %}
+    {% unless project.sitemap.exclude == "yes" or project.robots contains 'noindex' %}
     {% assign last = project.last_modified_at | default: project.date | default: site.time %}
     <url>
       <loc>{{ project.url | prepend: site.url }}</loc>
@@ -198,7 +198,7 @@ layout: null
 
   <!-- Case Studies FR -->
   {% for case_study in site.case_studies %}
-    {% unless case_study.sitemap.exclude == "yes" %}
+    {% unless case_study.sitemap.exclude == "yes" or case_study.robots contains 'noindex' %}
     {% assign last = case_study.last_modified_at | default: case_study.date | default: site.time %}
     <url>
       <loc>{{ case_study.url | prepend: site.url }}</loc>
@@ -226,7 +226,7 @@ layout: null
 
   <!-- Case Studies EN -->
   {% for case_study in site.case_studies_en %}
-    {% unless case_study.sitemap.exclude == "yes" %}
+    {% unless case_study.sitemap.exclude == "yes" or case_study.robots contains 'noindex' %}
     {% assign last = case_study.last_modified_at | default: case_study.date | default: site.time %}
     <url>
       <loc>{{ case_study.url | prepend: site.url }}</loc>
@@ -254,7 +254,7 @@ layout: null
 
   <!-- Quizzes FR -->
   {% for quiz in site.quizz %}
-    {% unless quiz.sitemap.exclude == "yes" %}
+    {% unless quiz.sitemap.exclude == "yes" or quiz.robots contains 'noindex' %}
     {% assign last = quiz.last_modified_at | default: quiz.date | default: site.time %}
     <url>
       <loc>{{ quiz.url | prepend: site.url }}</loc>
@@ -281,7 +281,7 @@ layout: null
 
   <!-- Quizzes EN -->
   {% for quiz in site.quizz_en %}
-    {% unless quiz.sitemap.exclude == "yes" %}
+    {% unless quiz.sitemap.exclude == "yes" or quiz.robots contains 'noindex' %}
     {% assign last = quiz.last_modified_at | default: quiz.date | default: site.time %}
     <url>
       <loc>{{ quiz.url | prepend: site.url }}</loc>
