@@ -17,7 +17,7 @@ tags:
 - Agentic AI
 - Méthodologies
 - Vibe Coding
-excerpt: BMAD vs RALPH : deux méthodes agiles pour coder avec l'IA. Comparaison complète avec exemples concrets sur PrestaShop.
+excerpt: "BMAD vs RALPH : deux méthodes agiles pour coder avec l'IA. Comparaison complète avec exemples concrets sur PrestaShop."
 image: /assets/images/blog/2026/01/comparaison-methodologies-developpement-ia-bmad-vs-ralph/image-principale.webp
 difficulty: Avancé
 technologies:

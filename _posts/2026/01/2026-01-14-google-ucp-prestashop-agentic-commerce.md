@@ -15,7 +15,7 @@ tags:
 - AI Agents
 - PrestaShop
 - API
-excerpt: Google UCP arrive sur PrestaShop : ce que ça change pour le commerce agentique. Guide complet avec exemples.
+excerpt: "Google UCP arrive sur PrestaShop : ce que ça change pour le commerce agentique. Guide complet avec exemples."
 image: /assets/images/blog/2026/01/google-ucp-prestashop-agentic-commerce/image-principale.webp
 sitemap:
   priority: 0.8

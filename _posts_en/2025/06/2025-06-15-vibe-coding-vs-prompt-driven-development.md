@@ -14,7 +14,7 @@ tags:
 - development
 - prompt engineering
 - security
-excerpt: 'Vibe Coding vs Prompt Engineering — a practical comparison with real examples and use cases for AI-assisted development.''
+excerpt: "Vibe Coding vs Prompt Engineering — a practical comparison with real examples and use cases for AI-assisted development."
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.webp
 featured: true
 llm_summary: 'Exploring two approaches to AI-assisted development: spontaneous Vibe

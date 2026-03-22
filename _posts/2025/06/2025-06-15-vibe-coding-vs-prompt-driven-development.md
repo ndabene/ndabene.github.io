@@ -15,7 +15,7 @@ tags:
 - développement
 - prompt engineering
 - sécurité
-excerpt: 'Vibe Coding vs Prompt-Driven Development : quelle méthode choisir pour développer avec l'IA ? Comparaison pratique avec exemples et cas d'usage.''
+excerpt: "Vibe Coding vs Prompt-Driven Development : quelle méthode choisir pour développer avec l'IA ? Comparaison pratique avec exemples et cas d'usage."
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.webp
 featured: true
 llm_summary: 'Exploration de deux approches du développement assisté par IA : le Vibe
