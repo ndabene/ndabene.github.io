@@ -8,28 +8,37 @@ body_class: "page-skills-modern"
 ---
 
 <!-- HERO SKILLS -->
-<section class="hero-skills">
-    <div class="container">
-        <div class="hero-badge">
-            <span class="badge-ai">🤖 AI-Native</span>
-            <span class="badge-pioneer">Pionnier MCP Protocol</span>
-        </div>
-        <h1>De l'IA Native au E-commerce de Demain</h1>
-        <p class="lead">15+ ans d'architecture e-commerce • 5 PrestaShop Awards • 150K+ installations</p>
-        
-        <div class="stats-pills">
-            {% for stat in site.data.skills_featured.hero_stats %}
-            <div class="stat-pill">
-                <i class="fas {{ stat.icon }}"></i>
-                <div>
-                    <span class="stat-value">{{ stat.value }}</span>
-                    <span class="stat-label">{{ stat.label }}</span>
-                </div>
-            </div>
-            {% endfor %}
+{% capture skills_hero_badges %}
+<div class="hero-badge">
+    <span class="badge-ai">AI-Native</span>
+    <span class="badge-pioneer">Pionnier MCP Protocol</span>
+</div>
+{% endcapture %}
+{% capture skills_hero_stats %}
+<div class="stats-pills">
+    {% for stat in site.data.skills_featured.hero_stats %}
+    <div class="stat-pill">
+        <i class="fas {{ stat.icon }}"></i>
+        <div class="stat-pill-content">
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
         </div>
     </div>
-</section>
+    {% endfor %}
+</div>
+{% endcapture %}
+{% include page-hero.html
+  title="De l'IA Native au E-commerce de Demain"
+  description="15+ ans d'architecture e-commerce • 5 PrestaShop Awards • 150K+ installations"
+  description_class="lead"
+  modifier_class="page-hero-section--prestashop-ai page-hero-section--skills-index"
+  section_class="fade-in is-visible"
+  content_class="hero-content--skills"
+  pre_content=skills_hero_badges
+  pre_content_class="page-hero-slot page-hero-slot--pre"
+  post_content=skills_hero_stats
+  post_content_class="page-hero-slot page-hero-slot--post"
+%}
 
 <!-- INTELLIGENCE ARTIFICIELLE -->
 <section class="skills-category-section ai-section">

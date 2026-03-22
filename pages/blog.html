@@ -18,18 +18,34 @@ llm_topics:
 - architecture modules prestashop
 - automatisation intelligente commerce
 ---
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/">Accueil</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>E-commerce AI-Native : Analyses & Architecture</h1>
-            <p class="section-description">Comprendre la transition AI-native du e-commerce PrestaShop. Architecture d'agents IA, protocole MCP, gouvernance algorithmique et GEO — je clarifie ce qui est complexe pour que vous puissiez l'appliquer.</p>
+{% capture blog_hero_kicker %}
+<div class="page-hero-kicker">Analyses, architecture, gouvernance</div>
+{% endcapture %}
+{% capture blog_hero_search %}
+<div class="blog-search-wrapper">
+    <div class="blog-search-bar">
+        <div class="search-input-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input"
+                placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off">
+            <button id="clear-search" class="clear-search-btn" style="display: none;"
+                title="Effacer la recherche">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
     </div>
-</section>
+</div>
+{% endcapture %}
+{% include page-hero.html
+  title="E-commerce AI-Native : Analyses & Architecture"
+  description="Comprendre la transition AI-native du e-commerce PrestaShop. Architecture d'agents IA, protocole MCP, gouvernance algorithmique et GEO — je clarifie ce qui est complexe pour que vous puissiez l'appliquer."
+  modifier_class="page-hero-section--prestashop-ai page-hero-section--blog-index"
+  content_class="hero-content--blog"
+  pre_content=blog_hero_kicker
+  pre_content_class="page-hero-slot page-hero-slot--pre"
+  post_content=blog_hero_search
+  post_content_class="page-hero-slot page-hero-slot--post"
+%}
 
 <section class="blog-content-section">
     <div class="container">
@@ -58,21 +74,6 @@ llm_topics:
 <section class="blog-main-section">
     <div class="blog-content-full-width">
         <div class="main-blog-content-full">
-            <!-- 1. Barre de recherche (Clean & Minimalist) -->
-            <div class="blog-search-wrapper">
-                <div class="blog-search-bar">
-                    <div class="search-input-wrapper">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-input"
-                            placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off">
-                        <button id="clear-search" class="clear-search-btn" style="display: none;"
-                            title="Effacer la recherche">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
             <!-- The blog-filters-container has been removed -->
 
             <!-- 3. Liste des Articles -->

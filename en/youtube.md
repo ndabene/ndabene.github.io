@@ -6,6 +6,7 @@ permalink: /en/youtube/
 lang: en
 keywords: "youtube videos, prestashop tutorials, php development, artificial intelligence, e-commerce, web development, developer training, technical videos, ndabene06"
 author: "Nicolas Dabène"
+body_class: "page-youtube"
 date: 2025-10-15
 last_modified_at: 2025-10-15
 sitemap:
@@ -38,18 +39,13 @@ twitter_image: "/assets/images/logo.png"
 twitter_site: "@nicolasdabene"
 ---
 
-<section class="page-hero-section">
-    <div class="container">
-        <nav class="breadcrumb">
-            <a href="/en/">Home</a>
-            <span>{{ page.title }}</span>
-        </nav>
-        <div class="hero-content">
-            <h1>YouTube Videos</h1>
-            <p class="section-description">Explore my technical tutorials on PrestaShop, PHP and artificial intelligence. Discover practical tips, in-depth analysis and demonstrations to boost your development skills.</p>
-        </div>
-    </div>
-</section>
+{% include page-hero.html
+  title="YouTube Videos"
+  description="Explore my technical tutorials on PrestaShop, PHP and artificial intelligence. Discover practical tips, in-depth analysis and demonstrations to boost your development skills."
+  modifier_class="page-hero-section--prestashop-ai page-hero-section--youtube-index"
+  section_class="fade-in is-visible"
+  content_class="hero-content--youtube"
+%}
 
 <!-- Include SEO/GEO metadata -->
 {% include youtube-seo-meta.html %}

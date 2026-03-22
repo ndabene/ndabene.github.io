@@ -1,0 +1,62 @@
+{% assign hero_home_url = include.home_url %}
+{% if hero_home_url == nil or hero_home_url == '' %}
+  {% if page.lang == 'en' %}
+    {% assign hero_home_url = '/en/' %}
+  {% else %}
+    {% assign hero_home_url = '/' %}
+  {% endif %}
+{% endif %}
+
+{% assign hero_home_label = include.home_label %}
+{% if hero_home_label == nil or hero_home_label == '' %}
+  {% if page.lang == 'en' %}
+    {% assign hero_home_label = 'Home' %}
+  {% else %}
+    {% assign hero_home_label = 'Accueil' %}
+  {% endif %}
+{% endif %}
+
+{% assign hero_title = include.title | default: page.title %}
+{% assign hero_current_label = include.current_label | default: page.title %}
+{% assign hero_description = include.description | default: page.description %}
+{% assign hero_modifier_class = include.modifier_class | default: '' %}
+{% assign hero_section_class = include.section_class | default: '' %}
+{% assign hero_description_class = include.description_class | default: '' %}
+{% assign hero_content_class = include.content_class | default: '' %}
+{% assign hero_pre_content = include.pre_content | default: include.extra_content %}
+{% assign hero_pre_content_class = include.pre_content_class | default: '' %}
+{% assign hero_post_content = include.post_content %}
+{% assign hero_post_content_class = include.post_content_class | default: '' %}
+
+<section class="page-hero-section{% if hero_modifier_class != '' %} {{ hero_modifier_class }}{% endif %}{% if hero_section_class != '' %} {{ hero_section_class }}{% endif %}">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="{{ hero_home_url }}">{{ hero_home_label }}</a>
+      <span>{{ hero_current_label }}</span>
+    </nav>
+    <div class="hero-content{% if hero_content_class != '' %} {{ hero_content_class }}{% endif %}">
+      {% if hero_pre_content %}
+        {% if hero_pre_content_class != '' %}
+          <div class="{{ hero_pre_content_class }}">
+            {{ hero_pre_content }}
+          </div>
+        {% else %}
+          {{ hero_pre_content }}
+        {% endif %}
+      {% endif %}
+      <h1>{{ hero_title }}</h1>
+      {% if hero_description %}
+        <p class="section-description{% if hero_description_class != '' %} {{ hero_description_class }}{% endif %}">{{ hero_description }}</p>
+      {% endif %}
+      {% if hero_post_content %}
+        {% if hero_post_content_class != '' %}
+          <div class="{{ hero_post_content_class }}">
+            {{ hero_post_content }}
+          </div>
+        {% else %}
+          {{ hero_post_content }}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</section>
