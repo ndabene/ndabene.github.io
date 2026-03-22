@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% comment %} CSS personnalisé par article {% endcomment %}
+{% if page.custom_css %}
+<link rel="stylesheet" href="{{ page.custom_css | relative_url }}">
+{% endif %}
+
 {% comment %} Redirection JavaScript immédiate pour les articles non encore publiés {% endcomment %}
 {% if page.hide_until_published == true %}
 <script>

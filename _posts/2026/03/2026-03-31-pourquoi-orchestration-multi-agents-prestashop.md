@@ -20,6 +20,7 @@ tags:
 excerpt: "L'IA seule produit du code PrestaShop de qualité discutable. Découvrez pourquoi l'orchestration multi-agents structurée est la réponse efficace pour votre projet."
 image: "/assets/images/blog/2026/03/pourquoi-orchestration-multi-agents-prestashop/image-principale.webp"
 featured: false
+custom_css: "/assets/css/orchestration-multi-agents.css"
 canonical_url: "https://nicolas-dabene.fr/blog/pourquoi-orchestration-multi-agents-prestashop/"
 difficulty: "Avancé"
 technologies:
@@ -161,81 +162,6 @@ Avec orchestration, `master` analyse les dépendances et structure le flux :
 ```
 
 </div>
-
-<style>
-:root {
-  --diagram-font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
-  --diagram-bg: #1a1a2e;
-  --diagram-line-height: 1.6;
-  --diagram-animation-duration: 2.5s;
-}
-
-.diagram-container {
-  background: var(--diagram-bg);
-  border-radius: 12px;
-  padding: 24px;
-  margin: 24px 0;
-  overflow-x: auto;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.diagram-container pre {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  font-family: var(--diagram-font-family);
-  font-size: 13px;
-  line-height: var(--diagram-line-height);
-  white-space: pre;
-}
-
-.diagram-container .line {
-  opacity: 0;
-  transform: translateX(-10px);
-  animation: lineReveal var(--diagram-animation-duration) ease-out forwards;
-}
-
-.diagram-container .line:nth-child(1) { animation-delay: 0.1s; }
-.diagram-container .line:nth-child(2) { animation-delay: 0.25s; }
-.diagram-container .line:nth-child(3) { animation-delay: 0.4s; }
-.diagram-container .line:nth-child(4) { animation-delay: 0.55s; }
-.diagram-container .line:nth-child(5) { animation-delay: 0.7s; }
-.diagram-container .line:nth-child(6) { animation-delay: 0.85s; }
-.diagram-container .line:nth-child(7) { animation-delay: 1.0s; }
-.diagram-container .line:nth-child(8) { animation-delay: 1.15s; }
-.diagram-container .line:nth-child(9) { animation-delay: 1.3s; }
-.diagram-container .line:nth-child(10) { animation-delay: 1.45s; }
-.diagram-container .line:nth-child(11) { animation-delay: 1.6s; }
-.diagram-container .line:nth-child(12) { animation-delay: 1.75s; }
-.diagram-container .line:nth-child(13) { animation-delay: 1.9s; }
-.diagram-container .line:nth-child(14) { animation-delay: 2.05s; }
-
-@keyframes lineReveal {
-  0% {
-    opacity: 0;
-    transform: translateX(-10px);
-    filter: blur(2px);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.85;
-  }
-}
-
-/* Syntax highlighting */
-.diagram-container .folder { color: #4ade80; }
-.diagram-container .agent { color: #22d3ee; }
-.diagram-container .step { color: #f472b6; }
-.diagram-container .comment { color: #94a3b8; font-style: italic; }
-.diagram-container .highlight { color: #fbbf24; }
-</style>
 
 La règle de parallélisation est précise : **tout ce qui peut être fait indépendamment est fait en parallèle**. Ce qui a des dépendances réelles — l'architecture avant l'implémentation, l'implémentation avant la QA — reste séquentiel. `master` analyse ces contraintes avant de router, pas après.
 
