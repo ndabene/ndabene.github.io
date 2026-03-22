@@ -104,7 +104,7 @@ twitter_site: "@nicolasdabene"
           }
         },
         "keywords": "{{ video.category }}",
-        "inLanguage": "fr"
+"inLanguage": "en-US"
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ]

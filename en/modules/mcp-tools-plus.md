@@ -1,6 +1,6 @@
 ﻿---
 layout: product-landing
-title: "MCP Tools Plus - Run PrestaShop in Natural Language"
+title: "PrestaShop MCP Server - Connect AI to Your Store | MCP Tools Plus"
 permalink: /en/modules/mcp-tools-plus/
 lang: en
 ref: mcp-tools-plus-module
@@ -11,7 +11,7 @@ alternates:
 sitemap:
   priority: 1.0
   changefreq: weekly
-description: "MCP Tools Plus connects AI to PrestaShop so non-technical merchants can run store operations in natural language and save measurable time every week."
+description: "Connect your PrestaShop store to Claude, ChatGPT and any AI agent via MCP. 100+ tools. Works with PS 8 & 9."
 image: /assets/images/produits/mcp-tools-plus-og.jpg
 keywords: [MCP Tools Plus, PrestaShop AI module, natural language ecommerce operations, merchant productivity, demo call]
 og_type: product
@@ -29,6 +29,10 @@ faq:
     answer: "Yes. The demo call lasts 30 minutes and has no commercial commitment."
   - question: "What questions can MCP Tools Plus answer?"
     answer: "Examples include top profitable products, delayed orders, stock risk signals, product performance, and customer segment insights."
+  - question: "How to connect PrestaShop to AI?"
+    answer: "MCP Tools Plus uses the Model Context Protocol to connect your PrestaShop store to any AI agent (Claude, ChatGPT, Grok, etc.) without custom API integrations. Install the module, configure the MCP server URL in the admin panel, and start running store operations in natural language."
+  - question: "Does MCP Tools Plus work with Claude?"
+    answer: "Yes. MCP Tools Plus is compatible with Claude (via Anthropic's MCP integration), ChatGPT (via OpenAI's tools), and any other AI agent supporting the Model Context Protocol standard."
 product:
   name: "MCP Tools Plus"
   addons_url: "https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html"
@@ -462,6 +466,20 @@ product:
     "@type": "Person",
     "name": "Nicolas Dabene",
     "url": "https://www.linkedin.com/in/nicolas-dabene/"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "9.90",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2027-12-31"
   }
 }
 </script>

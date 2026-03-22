@@ -142,7 +142,14 @@ layout: default
     "@type": "Offer",
     "priceCurrency": "EUR",
     "price": "{{ p.prix | remove: '€' | strip }}",
-    "url": "{{ p.lien_paiement }}"
+    "url": "{{ p.lien_paiement }}",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2027-12-31",
+    "seller": {
+      "@type": "Person",
+      "name": "Nicolas Dabène",
+      "url": "https://nicolas-dabene.fr"
+    }
   }
 }
 </script>
