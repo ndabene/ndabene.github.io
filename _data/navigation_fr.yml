@@ -1,12 +1,8 @@
-﻿- name: "A propos"
+- name: "A propos"
   link: /
 - name: "Competences"
   link: /skills/
-- name: "Quiz"
-  link: /quizz/
 - name: "Videos"
   link: /youtube/
 - name: "Blog"
   link: /blog/
-- name: "Sponsors"
-  link: /sponsors/

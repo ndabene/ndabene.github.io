@@ -1,149 +1,149 @@
-# Compétences techniques - Version simplifiée et moderne
-# Structure optimisée pour featured-article-card
-
-prestashop:
-  title: "PrestaShop & E-commerce"
-  subtitle: "Expert Elite avec 12 ans d'expérience et 150K+ installations"
-  icon: "🏆"
-  color: "prestashop"
-  skills:
-    - name: "Expert PrestaShop"
-      description: "5 PrestaShop Awards (2011-2020), position TOP marketplace officielle"
-      tags: ["Expert Elite", "5 Awards"]
-      category: "Expert"
-      metric: "150K+ installations"
-    
-    - name: "Développement Modules"
-      description: "30 modules développés chez BusinessTech, TOP 3 éditeur français"
-      tags: ["30 modules", "TOP 3"]
-      category: "Développeur"
-      metric: "75K+ téléchargements"
-    
-    - name: "Google & Facebook Ads"
-      description: "Intégrations complexes Google Merchant Center et Facebook Dynamic Ads"
-      tags: ["Google", "Facebook"]
-      category: "Intégration"
-      metric: "Production"
-
-backend:
-  title: "PHP & Backend"
-  subtitle: "15 ans d'expertise en développement backend et architectures modernes"
-  icon: "🚀"
-  color: "backend"
-  skills:
-    - name: "PHP Expert"
-      description: "Approche polyvalente : PHP natif, Symfony sous PrestaShop, Laravel SaaS"
-      tags: ["PHP 8", "Symfony"]
-      category: "Expert"
-      metric: "15+ ans"
-    
-    - name: "Architecture Web"
-      description: "Monolithes structurés avec API REST, approche pragmatique et fiable"
-      tags: ["Architecture", "API"]
-      category: "Architecte"
-      metric: "30 projets"
-    
-    - name: "MySQL Expert"
-      description: "Optimisation bases de données e-commerce haute charge et performance"
-      tags: ["MySQL", "Performance"]
-      category: "Database"
-      metric: "75K+ installations"
+# Compétences techniques - Refonte AI-Native
+# Nouvelle hiérarchie : IA en premier, alignée persona "AI-Native E-commerce Architect"
 
 ai:
-  title: "Intelligence Artificielle"
-  subtitle: "Innovation et efficacité via l'intégration IA dans les workflows"
+  title: "Intelligence Artificielle & Agents"
+  subtitle: "Pionnier MCP Protocol — Architecte de workflows IA multi-agents pour e-commerce"
   icon: "🤖"
   color: "ai"
   skills:
-    - name: "Développement Assisté IA"
-      description: "Transformation des méthodes : gain productivité 4x sur projets similaires"
-      tags: ["Claude", "GPT"]
-      category: "Innovation"
+    - name: "MCP Protocol & Multi-Agent Orchestration"
+      description: "Architecture maître-orchestrateur avec 14 agents spécialisés, skills contextualisés, context management intelligent. Développement PrestaShop 9 dès la première passe."
+      tags: ["MCP", "Multi-Agent", "Claude", "Claude Code"]
+      category: "Orchestration"
+      metric: "14 agents actifs"
+    
+    - name: "AI-Augmented Development"
+      description: "Transformation méthodologique : coding assistant, refactoring intelligent, code review automatisé. Productivité x4 mesurée sur projets e-commerce."
+      tags: ["Claude", "GPT-4", "Mistral", "Vibe Coding"]
+      category: "Dev Tools"
       metric: "Productivité x4"
     
-    - name: "AI Orchestration Dev"
-      description: "Architecture multi-agents pour PrestaShop : master orchestrateur, 14 agents spécialisés, skills contextualisés — code PS9 dès la première passe"
-      tags: ["multi-agent", "MCP", "Claude", "AI Dev"]
-      category: "Orchestration"
-      metric: "14 agents"
+    - name: "AI Automation & n8n"
+      description: "Automatisation de workflows e-commerce : mise à jour stocks, notifications clients, synchronisation ERP/CRM. Déploiement en production sur infrastructure existante."
+      tags: ["n8n", "Zapier", "Webhooks", "API"]
+      category: "Automation"
+      metric: "Production"
+
+prestashop:
+  title: "PrestaShop & E-commerce"
+  subtitle: "5 PrestaShop Awards, 150K+ installations, éditeur fondateur de l'écosystème français"
+  icon: "🏆"
+  color: "prestashop"
+  skills:
+    - name: "Module Development Expert"
+      description: "30 modules développés chez BusinessTech (TOP 3 éditeur français). Couverture fonctionnelle complète : shipping, payment, RGPD, performance."
+      tags: ["PHP 8", "PrestaShop 9", "Symfony"]
+      category: "Développeur"
+      metric: "30 modules actifs"
     
-    - name: "IA Business Applications"
-      description: "Collaboration technique-marketing pour processus IA business et vision transversale"
-      tags: ["Business", "Stratégie"]
-      category: "Stratégie"
-      metric: "Plateforme prod"
+    - name: "MCP Tools Plus"
+      description: "Module signature : intégration native Claude/OpenAI via MCP Protocol. Premier module e-commerce français certifié pour l'orchestration IA."
+      tags: ["MCP Tools Plus", "Claude", "IA Native"]
+      category: "Module Flaghip"
+      metric: "TOP Marketplace"
+    
+    - name: "Performance & Scale"
+      description: "Optimisation de boutiques 100K+ visiteurs/jour. Cache intelligent, requêtes SQL optimisées, infrastructure scalable."
+      tags: ["Performance", "Redis", "MySQL"]
+      category: "Performance"
+      metric: "150K+ installations"
+
+backend:
+  title: "PHP & Architecture"
+  subtitle: "15+ ans d'expertise — Du code monolithique aux architectures IA-native"
+  icon: "⚡"
+  color: "backend"
+  skills:
+    - name: "PHP 8 Expert"
+      description: "Polyvalence technique : PHP natif haute performance, Symfony sous PrestaShop, Laravel pour SaaS. Typage fort, PSR-12, tests automatisés."
+      tags: ["PHP 8", "Symfony", "Laravel"]
+      category: "Expert"
+      metric: "15+ ans"
+    
+    - name: "API Architecture"
+      description: "Design d'APIs RESTful pour e-commerce : gestion produits, commandes, clients. Documentation OpenAPI, authentification OAuth2."
+      tags: ["REST API", "OpenAPI", "OAuth2"]
+      category: "API Design"
+      metric: "30+ APIs"
+    
+    - name: "Database Engineering"
+      description: "MySQL/MariaDB pour e-commerce haute charge. Partitionnement, indexation, requêtes optimisées. PostgreSQL pour analytics."
+      tags: ["MySQL", "PostgreSQL", "Redis"]
+      category: "Database"
+      metric: "75K+ installations"
 
 frontend:
   title: "Frontend & UX"
-  subtitle: "Interfaces e-commerce performantes et centrées utilisateur"
+  subtitle: "Interfaces marchandes performantes et expériences IA-augmentées"
   icon: "🎨"
   color: "frontend"
   skills:
-    - name: "UX E-commerce"
-      description: "Optimisation interfaces back-office pour fluidité et expérience marchands"
-      tags: ["UX", "E-commerce"]
+    - name: "AI-Augmented UI/UX"
+      description: "Interfaces générées et optimisées par IA : prototypage rapide, design systems, composants réutilisables. Focus fluidité et conversion."
+      tags: ["AI Design", "Figma", "UI/UX"]
       category: "Design"
       metric: "30 interfaces"
     
-    - name: "HTML5/CSS3 Expert"
-      description: "Maîtrise complète standards web modernes et responsive multi-devices"
-      tags: ["HTML5", "CSS3"]
-      category: "Frontend"
-      metric: "Standards modernes"
+    - name: "Modern Web Standards"
+      description: "HTML5 sémantique, CSS3 moderne (Grid, Flexbox, Custom Properties), JavaScript ES2024+. Accessibilité WCAG 2.1, SEO technique."
+      tags: ["HTML5", "CSS3", "JavaScript"]
+      category: "Standards"
+      metric: "Mobile-first"
     
-    - name: "JavaScript/jQuery"
-      description: "Développement dynamique PrestaShop, focus interactivité et performance"
-      tags: ["JavaScript", "jQuery"]
+    - name: "Interactive Modules"
+      description: "Composants JavaScript performants pour PrestaShop : selectors advanced, configurateurs produits, real-time updates."
+      tags: ["JavaScript", "TypeScript", "React"]
       category: "Interactivité"
       metric: "30 modules JS"
 
 devops:
-  title: "DevOps & Tools"
-  subtitle: "Autonomie technique complète et environnements optimisés"
-  icon: "⚙️"
+  title: "DevOps & Production"
+  subtitle: "Déploiement zero-incident — 75K+ installations en production"
+  icon: "🚀"
   color: "devops"
   skills:
-    - name: "Git Expert"
-      description: "Maîtrise avancée contrôle de version et gestion repositories complexes"
-      tags: ["Git", "GitHub"]
+    - name: "Git Flow & CI/CD"
+      description: "Workflows Git structurés : branching model, code review, CI/CD pipelines automatisés. GitHub Actions, déploiement continu."
+      tags: ["Git", "GitHub Actions", "CI/CD"]
       category: "Version Control"
-      metric: "30 projets Git"
+      metric: "30+ projets"
     
-    - name: "Déploiement Production"
-      description: "Déploiement modules sur 75K+ installations avec zéro défaillance critique"
-      tags: ["Production", "Monitoring"]
+    - name: "Production Deployment"
+      description: "Déploiement sur 75K+ installations avec zéro défaillance critique. Monitoring, alerting, rollback automatisé."
+      tags: ["Production", "Monitoring", "DevOps"]
       category: "Déploiement"
-      metric: "Zéro incident"
+      metric: "Zero incident"
     
-    - name: "Jekyll/GitHub Pages"
-      description: "Sites statiques performants optimisés SEO et performance"
-      tags: ["Jekyll", "Static"]
-      category: "JAMstack"
-      metric: "Sites pros"
+    - name: "Docker & Environments"
+      description: "Environnements containerisés pour développement et staging. Docker Compose multi-services, sync avec production."
+      tags: ["Docker", "Compose", "Environment"]
+      category: "Infrastructure"
+      metric: "Container ready"
 
 leadership:
-  title: "Leadership & Excellence"
-  subtitle: "Leadership technique et communication adaptative"
+  title: "Leadership & Business"
+  subtitle: "Communication technique et vision IA pour décideurs e-commerce"
   icon: "💎"
   color: "leadership"
   skills:
-    - name: "Technical Leadership"
-      description: "Chef de projet autonome, auto-gestion complète objectifs techniques et business"
-      tags: ["Leadership", "Autonomie"]
-      category: "Management"
-      metric: "30 projets solo"
+    - name: "AI Strategy Consulting"
+      description: "Accompagnement des marchands dans la transition IA-native : audit, roadmap, formation. Vision transversale technique-business."
+      tags: ["Consulting", "Formation", "AI Strategy"]
+      category: "Strategy"
+      metric: "Early adopter IA"
     
-    - name: "Communication Adaptative"
-      description: "Interface naturelle CTOs et dirigeants business, communication multi-audiences"
-      tags: ["Communication", "Business"]
+    - name: "Technical Communication"
+      description: "Interface naturelle entre équipes techniques et direction : explicitation de concepts complexes, storytelling technique."
+      tags: ["Communication", "CTO", "Stakeholders"]
       category: "Soft Skills"
       metric: "Multi-audiences"
     
-    - name: "Veille & Innovation"
-      description: "Adoption précoce IA avec résultats mesurables, avantage concurrentiel"
-      tags: ["Innovation", "Veille"]
-      category: "Prospective"
-      metric: "Early adopter"
+    - name: "Ecosystem Leadership"
+      description: "Contribution active à l'écosystème PrestaShop : 5 Awards, formations, veille normative. Influence sur la roadmap PS9."
+      tags: ["Awards", "Community", "Veille"]
+      category: "Leadership"
+      metric: "5 PrestaShop Awards"
 
 # Stats globales pour le hero
 hero_stats:
@@ -162,4 +162,3 @@ hero_stats:
   - label: "ans d'expérience"
     value: "15+"
     icon: "fa-clock"
-
