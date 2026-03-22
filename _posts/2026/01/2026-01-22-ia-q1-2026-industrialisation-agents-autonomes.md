@@ -33,6 +33,9 @@ technologies:
 - Automation
 estimated_reading_time: 12 minutes
 lang: fr
+canonical_url: "https://nicolas-dabene.fr/en/articles/2026/01/22/ai-q1-2026-industrialization-autonomous-agents/"
+redirect_from:
+  - "/articles/2026/01/22/ai-q1-2026-industrialization-autonomous-agents/"
 keywords:
 - IA 2026
 - Agents autonomes

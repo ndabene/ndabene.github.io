@@ -38,6 +38,9 @@ technologies:
 - AI/LLM
 estimated_reading_time: 35 minutes
 lang: fr
+canonical_url: "https://nicolas-dabene.fr/en/articles/2026/01/08/retrospective-cybersecurite-ecommerce-2025/"
+redirect_from:
+  - "/articles/2026/01/08/retrospective-cybersecurite-ecommerce-2025-en/"
 keywords:
 - cybersécurité e-commerce 2025
 - attaques retail France

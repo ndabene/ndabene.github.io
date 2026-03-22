@@ -15,9 +15,7 @@ tags:
 - AI Agents
 - PrestaShop
 - API
-excerpt: Google vient de dévoiler le Universal Commerce Protocol (UCP). Une révolution
-  qui permet aux IA d'acheter directement dans votre boutique PrestaShop. Analyse
-  technique et opportunités.
+excerpt: Google UCP arrive sur PrestaShop : ce que ça change pour le commerce agentique. Guide complet avec exemples.
 image: /assets/images/blog/2026/01/google-ucp-prestashop-agentic-commerce/image-principale.webp
 sitemap:
   priority: 0.8
@@ -28,6 +26,9 @@ technologies:
 - MCP
 - PrestaShop Hooks
 lang: fr
+canonical_url: "https://nicolas-dabene.fr/en/articles/2026/01/14/google-ucp-prestashop-agentic-commerce/"
+redirect_from:
+  - "/articles/2026/01/14/google-ucp-prestashop-agentic-commerce-en/"
 keywords:
 - Google UCP
 - Universal Commerce Protocol

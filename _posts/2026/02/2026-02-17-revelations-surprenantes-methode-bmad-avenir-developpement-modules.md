@@ -28,6 +28,9 @@ technologies:
   - Agentic AI
 estimated_reading_time: 15 minutes
 lang: fr
+canonical_url: "https://nicolas-dabene.fr/en/articles/2026/02/17/revelations-surprenantes-methode-bmad-avenir-developpement-modules/"
+redirect_from:
+  - "/articles/2026/02/18/revelations-surprenantes-methode-bmad-avenir-developpement-modules/"
 published: true
 ---
 

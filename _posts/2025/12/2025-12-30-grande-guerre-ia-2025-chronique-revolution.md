@@ -79,6 +79,9 @@ keywords:
 - AI Act Europe
 - guerre des IA
 lang: fr
+canonical_url: "https://nicolas-dabene.fr/en/articles/2025/12/30/great-ai-war-2025-chronicle-revolution/"
+redirect_from:
+  - "/articles/2025/12/30/great-ai-war-2025-chronicle-revolution/"
 ---
 
 
