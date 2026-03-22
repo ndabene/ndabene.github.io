@@ -42,9 +42,6 @@ keywords:
 - événements PrestaShop
 ---
 
-
-# Rétrospective Complète des Événements PrestaShop 2025
-
 Je vous propose aujourd'hui un résumé complet et détaillé de tous les événements majeurs de PrestaShop en 2025, une année exceptionnelle marquée par des lancements importants, des innovations majeures et une forte mobilisation de la communauté.
 
 ## Les Live Updates : La Connexion Continue avec la Communauté

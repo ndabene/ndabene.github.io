@@ -93,9 +93,6 @@ llm_topics:
 - prestashop visibilité ia
 ---
 
-
-# Le Guide Définitif pour Mesurer le GEO : Du Classement SEO à l'Influence IA
-
 ## Introduction : Le Nouvel Impératif de Mesure
 
 L'émergence de l'intelligence artificielle générative a catalysé une transformation fondamentale dans la manière dont les utilisateurs découvrent l'information. Le paysage du marketing numérique a basculé d'un modèle centré sur la recherche à un modèle centré sur la réponse. Cette évolution crée une nécessité parallèle : une révolution dans la mesure de la performance.

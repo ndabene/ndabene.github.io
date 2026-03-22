@@ -47,9 +47,6 @@ faq:
     devient naturel.'
 ---
 
-
-# L'IA ne remplace pas les métiers, elle transforme notre façon de travailler
-
 ## Une histoire qui se répète (mais en mieux)
 
 Imaginez-vous en 1985. Votre collègue arrive avec un étrange objet beige : un ordinateur personnel. "Ça va tous nous remplacer !" s'exclame Robert de la comptabilité. 40 ans plus tard, Robert est devenu directeur financier, et il ne pourrait plus travailler sans Excel.

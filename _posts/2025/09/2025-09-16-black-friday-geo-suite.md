@@ -51,9 +51,6 @@ faq:
     l'international.
 ---
 
-
-# Black Friday 2025 : La révolution GEO arrive sur PrestaShop
-
 ## Introduction
 
 Imaginez le scénario : un consommateur cherche un cadeau pour le Black Friday. Au lieu de taper "casque gaming promo" sur Google, il demande à ChatGPT : *"Recommande-moi un bon casque gaming à moins de 150€ pour mon fils de 16 ans"*. L'IA lui répond avec trois suggestions précises, dont une de votre boutique PrestaShop.

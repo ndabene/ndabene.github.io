@@ -51,9 +51,6 @@ faq:
     Les deux sont complémentaires.
 ---
 
-
-# ChatGPT renforce sa sécurité : contrôles parentaux et IA de raisonnement au service de la protection des utilisateurs
-
 ## Introduction
 
 Imaginez un instant : vous confieriez-vous vos préoccupations les plus intimes à un inconnu dans la rue ? Probablement pas. Pourtant, c'est exactement ce que font des millions d'utilisateurs chaque jour avec ChatGPT, partageant leurs pensées, leurs angoisses et parfois leurs moments de détresse les plus profonds avec cette intelligence artificielle.

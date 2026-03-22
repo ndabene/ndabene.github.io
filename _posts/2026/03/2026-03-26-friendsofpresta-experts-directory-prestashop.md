@@ -62,11 +62,6 @@ faq:
     answer: Friends of Presta organise l'EO2S — Ecommerce Open Source Summit, anciennement FOP Days. C'est le principal événement communautaire de l'association, qui se tient le 26 mars 2026 à Paris.
 ---
 
-# Friends of Presta : l'annuaire des experts PrestaShop et e-commerce open source
-
-**Temps de lecture : 5 min**
-**Dernière mise à jour : 26 mars 2026**
-
 ## Friends of Presta : kézako ?
 
 **Friends of Presta** est une [association loi 1901](https://friendsofpresta.org/) créée en **2021** en France. Elle réunit **agences**, **freelances** et **éditeurs de modules** spécialisés dans l'e-commerce PrestaShop — en France et en Europe.

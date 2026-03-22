@@ -57,9 +57,6 @@ faq:
     pas.
 ---
 
-
-# Évolution des Compétences des Développeurs : de l'Expertise Technique à l'Hybride Visionnaire
-
 ## Introduction
 
 En quelques mois à peine, l'intelligence artificielle (IA) s'est imposée dans le quotidien des développeurs et a bouleversé leur manière de travailler. Les outils d'IA générative comme ChatGPT ou GitHub Copilot sont devenus de véritables partenaires de code, capables d'automatiser ou d'accélérer une grande partie des tâches techniques.

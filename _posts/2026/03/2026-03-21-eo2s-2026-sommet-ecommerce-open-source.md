@@ -168,11 +168,6 @@ schema:
           text: L'EO2S est organisé par Friends of Presta, association loi 1901 créée en 2021 fédérant 1 000+ membres. Anciens FOP Days, l'événement change de nom pour symboliser l'élargissement à l'ensemble de l'écosystème open source européen, incluant Sylius.
 ---
 
-# EO2S 2026 : Sommet E-commerce Open Source
-
-**Temps de lecture : 12 min**
-**Dernière mise à jour : 21 mars 2026**
-
 ## EO2S 2026 : un sommet e-commerce open source qui redéfinit la donne
 
 L'EO2S 2026 — Ecommerce Open Source Summit — est le premier sommet européen de l'e-commerce open source. Il se tient le **26 mars 2026** au [Nida](https://www.lenida.fr/){:target="_blank" rel="noopener noreferrer"}, Issy-les-Moulineaux (Paris), organisé par **Friends of Presta** ([association loi 1901](https://friendsofpresta.org/){:target="_blank" rel="noopener noreferrer"}, 1 000+ membres Slack).

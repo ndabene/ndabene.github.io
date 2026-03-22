@@ -85,9 +85,6 @@ lang: fr
 
 **Un cas pratique step-by-step avec mesures avant/apres**
 
-**Temps de lecture : 20 min**
-*Derniere mise a jour : fevrier 2026*
-
 Vous investissez du temps et de l'argent dans le SEO de votre boutique PrestaShop. Vos fiches produits sont bien positionnees sur Google. Pourtant, une revolution silencieuse est en train de redistribuer les cartes : **de plus en plus de consommateurs ne cherchent plus sur Google. Ils demandent directement a ChatGPT, Gemini ou Perplexity quel produit acheter.**
 
 Et quand ces IA repondent, votre fiche produit n'apparait nulle part.

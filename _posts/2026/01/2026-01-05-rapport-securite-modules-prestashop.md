@@ -40,9 +40,6 @@ keywords:
 - Validation des données
 ---
 
-
-# Rapport exhaustif sur les protocoles de sécurité et les standards de développement pour les modules PrestaShop
-
 ## 1. Introduction : le paysage de la cybersécurité dans l'écosystème e-commerce
 
 Les plateformes de commerce électronique manipulent des données à très forte valeur (identifiants, paiements, données clients) et constituent des cibles privilégiées. Dans PrestaShop, la surface d'attaque est largement conditionnée par la qualité des modules tiers : un seul connecteur vulnérable suffit à compromettre toute la boutique. Ce rapport propose un référentiel complet des pratiques de sécurité pour le développement de modules PrestaShop (1.7 et 8), en s'appuyant sur la documentation officielle, les exigences de la Marketplace Addons et les retours d'audits de la communauté (notamment Friends of Presta). Objectif : produire un code résilient face aux injections SQL, XSS, CSRF, traversées de répertoires et failles structurelles.

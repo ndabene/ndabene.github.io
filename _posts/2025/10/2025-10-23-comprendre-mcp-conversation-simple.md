@@ -48,9 +48,6 @@ faq:
     des serveurs MCP.
 ---
 
-
-# Comprendre le Model Context Protocol (MCP) : Une Conversation Simple
-
 Vous êtes-vous déjà demandé comment les intelligences artificielles comme ChatGPT ou Claude pourraient accéder à vos fichiers personnels, vos e-mails ou votre base de données ? La réponse tient en trois lettres : **MCP** (Model Context Protocol). Mais avant de plonger dans le code, prenons le temps de comprendre cette architecture révolutionnaire à travers une analogie simple et une conversation guidée.
 
 ## Introduction

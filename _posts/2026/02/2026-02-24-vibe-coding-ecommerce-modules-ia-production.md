@@ -100,11 +100,6 @@ lang: fr
 ---
 
 
-# Vibe Coding en e-commerce : pourquoi 80% des modules générés par IA ne passeront jamais en production
-
-**Temps de lecture : 15 min**
-**Dernière mise à jour : 24 février 2026**
-
 ## Le rêve vendu vs. la réalité du terrain
 
 > "Décris ce que tu veux, l'IA code pour toi."

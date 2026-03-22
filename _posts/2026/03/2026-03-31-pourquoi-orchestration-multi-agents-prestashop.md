@@ -47,12 +47,6 @@ faq:
     answer: "En analysant les dépendances entre tâches, l'orchestrateur décide ce qui peut être parallélisé (travaux indépendants) et ce qui doit rester séquentiel (dépendances réelles). Exemple : architecture avant implémentation."
 ---
 
-# Pourquoi l'orchestration multi-agents n'est plus optionnelle pour PrestaShop
-
-*Par Nicolas Dabène — AI-Native E-commerce Architect*
-
----
-
 ## Le problème que personne ne dit à voix haute
 
 On parle beaucoup d'"IA pour PrestaShop". On parle de Copilot, de Claude, de "vibe coding". On parle de gain de temps, de productivité, de tout ce que l'IA peut générer en quelques secondes.

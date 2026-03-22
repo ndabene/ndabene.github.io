@@ -7,22 +7,61 @@
   {% assign navigation = site.data.navigation_en %}
   {% assign home_url = "/en/" %}
 {% endif %}
-
-<header class="header-executive nav-modern" id="modern-nav">
-  <div class="header-container">
-    <div class="header-logo nav-brand">
-      <a href="{{ home_url | relative_url }}" class="brand-link">
-        <img src="/assets/images/logo.png" alt="Nicolas Dabène" class="logo animate-float" width="95" height="95">
-      </a>
-    </div>
-
-    <nav class="header-nav main-navigation">
-      <ul class="nav-links" role="menubar" aria-label="Navigation principale">
-        {% for item in navigation %}
-          {% unless item.hidden %}
+{% assign current_url = page.url | default: '/' %}
+{% assign desktop_nav_items = '' %}
+{% assign mobile_nav_items = '' %}
+{% for item in navigation %}
+  {% unless item.hidden %}
+    {% assign item_link = item.link | default: '#' %}
+    {% assign current_url_normalized = current_url %}
+    {% assign item_link_normalized = item_link %}
+    {% unless current_url_normalized == '/' %}
+      {% assign current_url_last_char = current_url_normalized | slice: -1, 1 %}
+      {% unless current_url_last_char == '/' %}
+        {% assign current_url_normalized = current_url_normalized | append: '/' %}
+      {% endunless %}
+    {% endunless %}
+    {% unless item_link_normalized == '/' %}
+      {% assign item_link_last_char = item_link_normalized | slice: -1, 1 %}
+      {% unless item_link_last_char == '/' %}
+        {% assign item_link_normalized = item_link_normalized | append: '/' %}
+      {% endunless %}
+    {% endunless %}
+    {% assign active_path_candidates = item_link_normalized %}
+    {% if item_link_normalized == '/blog/' %}
+      {% assign active_path_candidates = active_path_candidates | append: '|/articles/|/blog/tags/' %}
+    {% elsif item_link_normalized == '/en/blog/' %}
+      {% assign active_path_candidates = active_path_candidates | append: '|/en/articles/|/en/blog/tags/' %}
+    {% elsif item_link_normalized == '/en/about/' %}
+      {% assign active_path_candidates = active_path_candidates | append: '|/en/' %}
+    {% endif %}
+    {% assign is_active = false %}
+    {% assign active_paths = active_path_candidates | split: '|' %}
+    {% for active_path in active_paths %}
+      {% assign active_path_normalized = active_path %}
+      {% unless active_path_normalized == '/' %}
+        {% assign active_path_last_char = active_path_normalized | slice: -1, 1 %}
+        {% unless active_path_last_char == '/' %}
+          {% assign active_path_normalized = active_path_normalized | append: '/' %}
+        {% endunless %}
+      {% endunless %}
+      {% assign active_path_length = active_path_normalized | size %}
+      {% assign current_url_prefix = current_url_normalized | slice: 0, active_path_length %}
+      {% assign is_home_link = active_path_normalized == home_url %}
+      {% if is_home_link %}
+        {% if current_url_normalized == active_path_normalized %}
+          {% assign is_active = true %}
+          {% break %}
+        {% endif %}
+      {% elsif current_url_normalized == active_path_normalized or current_url_prefix == active_path_normalized %}
+        {% assign is_active = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% capture desktop_nav_item %}
           <li class="nav-item{% if item.subitems %} has-submenu{% endif %}" role="none">
             <a href="{{ item.link | default: '#' | relative_url }}" 
-               class="nav-link {% if page.url == item.link %}active{% endif %}" role="menuitem" aria-haspopup="{% if item.subitems %}true{% else %}false{% endif %}" aria-expanded="false">
+               class="nav-link {% if is_active %}active{% endif %}" role="menuitem" aria-haspopup="{% if item.subitems %}true{% else %}false{% endif %}" aria-expanded="false">
               {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
             </a>
             {% if item.subitems %}
@@ -35,8 +74,37 @@
               </ul>
             {% endif %}
           </li>
-          {% endunless %}
-        {% endfor %}
+    {% endcapture %}
+    {% capture mobile_nav_item %}
+        <li class="mobile-item{% if item.subitems %} has-submenu{% endif %}">
+          <a href="{{ item.link | default: '#' | relative_url }}" class="mobile-nav-link {% if is_active %}active{% endif %}" aria-expanded="false">
+            {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
+          </a>
+          {% if item.subitems %}
+            <ul class="mobile-submenu">
+              {% for sub in item.subitems %}
+                <li><a class="mobile-nav-link mobile-submenu-link" href="{{ sub.link | relative_url }}">{{ sub.name }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+    {% endcapture %}
+    {% assign desktop_nav_items = desktop_nav_items | append: desktop_nav_item %}
+    {% assign mobile_nav_items = mobile_nav_items | append: mobile_nav_item %}
+  {% endunless %}
+{% endfor %}
+
+<header class="header-executive nav-modern" id="modern-nav">
+  <div class="header-container">
+    <div class="header-logo nav-brand">
+      <a href="{{ home_url | relative_url }}" class="brand-link">
+        <img src="/assets/images/logo.png" alt="Nicolas Dabène" class="logo animate-float" width="95" height="95">
+      </a>
+    </div>
+
+    <nav class="header-nav main-navigation">
+      <ul class="nav-links" role="menubar" aria-label="Navigation principale">
+        {{ desktop_nav_items }}
       </ul>
     </nav>
 
@@ -163,22 +231,7 @@
   <!-- Mobile Navigation - Collapsible submenus -->
   <div class="mobile-nav" id="mobile-nav-panel">
     <ul>
-      {% for item in navigation %}
-        {% unless item.hidden %}
-        <li class="mobile-item{% if item.subitems %} has-submenu{% endif %}">
-          <a href="{{ item.link | default: '#' | relative_url }}" class="mobile-nav-link {% if page.url == item.link %}active{% endif %}" aria-expanded="false">
-            {{ item.name }}{% if item.subitems %}<span class="chevron" aria-hidden="true">▾</span>{% endif %}
-          </a>
-          {% if item.subitems %}
-            <ul class="mobile-submenu">
-              {% for sub in item.subitems %}
-                <li><a class="mobile-nav-link mobile-submenu-link" href="{{ sub.link | relative_url }}">{{ sub.name }}</a></li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-        {% endunless %}
-      {% endfor %}
+      {{ mobile_nav_items }}
       <li>{% include language-switcher-modern.html %}</li>
       <li><a href="{% if current_lang == 'fr' %}/contact{% else %}/en/contact{% endif %}" class="btn btn--primary">{{ t.nav.contact }}</a></li>
     </ul>

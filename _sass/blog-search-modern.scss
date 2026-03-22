@@ -17,6 +17,27 @@ $search-hover: #f8fafc;
 $search-highlight-bg: #fef3c7;
 $search-highlight-text: #92400e;
 
+%search-input-control {
+  outline: none;
+  font-weight: 500;
+  color: $search-text;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+}
+
+%search-danger-button {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 // ========================================
 // Barre de recherche moderne
 // ========================================
@@ -46,19 +67,16 @@ $search-highlight-text: #92400e;
 
   // Champ de recherche redesigné
   #search-input {
+    @extend %search-input-control;
     width: 100%;
     padding: 18px 56px 18px 56px;
     border: 2px solid $search-border;
     border-radius: 16px;
     font-size: 16px;
-    font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: $search-bg;
-    color: $search-text;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     cursor: pointer; // Visual cue: click to open search modal
-    appearance: none;
-    -webkit-appearance: none;
 
     &:focus {
       outline: none;
@@ -83,20 +101,13 @@ $search-highlight-text: #92400e;
 
   // Bouton de suppression redesigné
   .clear-search-btn {
+    @extend %search-danger-button;
     position: absolute;
     right: 18px;
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-    border: none;
-    color: white;
-    cursor: pointer;
     padding: 10px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25);
 
@@ -227,7 +238,8 @@ $search-highlight-text: #92400e;
   animation: fadeIn 0.3s ease;
 }
 
-.search-modal-box {
+.search-modal-box,
+.page-blog .search-modal .search-modal-box {
   position: relative;
   width: 90%;
   max-width: 700px;
@@ -242,7 +254,8 @@ $search-highlight-text: #92400e;
   flex-direction: column;
 }
 
-.search-modal-header {
+.search-modal-header,
+.page-blog .search-modal .search-modal-header {
   display: flex;
   align-items: center;
   padding: 20px 24px;
@@ -258,21 +271,16 @@ $search-highlight-text: #92400e;
   }
 }
 
-.search-modal-input {
+.search-modal-input,
+.page-blog .search-modal .search-modal-input {
+  @extend %search-input-control;
   flex: 1;
   border: 2px solid transparent;
   font-size: 18px;
-  font-weight: 500;
   font-family: $font-family-primary;
-  color: $search-text;
   background: transparent;
-  outline: none;
   padding: 12px 16px;
   min-width: 0;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  box-shadow: none;
   border-radius: 12px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
@@ -289,19 +297,14 @@ $search-highlight-text: #92400e;
   }
 }
 
-.search-modal-close {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
-  border: none;
-  color: white;
-  cursor: pointer;
+.search-modal-close,
+.page-blog .search-modal .search-modal-close {
+  @extend %search-danger-button;
+  position: static;
   padding: 8px;
   border-radius: 8px;
   width: 32px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
   margin-left: 12px;
 
@@ -316,8 +319,10 @@ $search-highlight-text: #92400e;
   }
 }
 
-.search-modal-content {
+.search-modal-content,
+.page-blog .search-modal .search-modal-content {
   flex: 1;
+  padding: 0;
   overflow-y: auto;
   min-height: 0; // Crucial for flex nested scrolling
 
@@ -338,71 +343,6 @@ $search-highlight-text: #92400e;
     &:hover {
       background: linear-gradient(to bottom, #94a3b8, #64748b);
     }
-  }
-}
-
-// Guard rail: override legacy `.page-blog .search-modal ...` rules from `blog-news.scss`.
-.page-blog .search-modal {
-  .search-modal-box {
-    max-width: 700px;
-    max-height: 80vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .search-modal-header {
-    display: flex;
-    align-items: center;
-    padding: 20px 24px;
-    border-bottom: 1px solid $search-border;
-    background: $search-bg;
-  }
-
-  .search-modal-input {
-    flex: 1;
-    min-width: 0;
-    border: 2px solid transparent;
-    outline: none;
-    background: transparent;
-    padding: 12px 16px;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: $font-family-primary;
-    color: $search-text;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    box-shadow: none;
-    border-radius: 12px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-
-    &:focus {
-      border-color: $primary-color;
-      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
-      background: rgba($white, 0.5);
-      outline: none;
-    }
-  }
-
-  .search-modal-close {
-    position: static;
-    top: auto;
-    right: auto;
-    margin-left: 12px;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    padding: 8px;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-    color: white;
-  }
-
-  .search-modal-content {
-    padding: 0;
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
   }
 }
 

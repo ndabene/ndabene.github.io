@@ -70,12 +70,6 @@ faq:
     answer: "La feuille de route se décompose en 4 phases : Phase 1 (Fondations) - créer le registre, cartographier les flux, définir rôles et politique données. Phase 2 (Pilote contrôlé) - tester sur un cas non critique avec logs, contrôle humain et monitoring. Phase 3 (Industrialisation) - intégrer CI/CD sécurisée, gestion secrets, tests automatisés, versionnement modèles. Phase 4 (Conformité démontrable) - documentation formalisée, preuves monitoring, journalisation complète, gestion incidents, revue annuelle."
 ---
 
-# Gouvernance IA dans PrestaShop : le cadre stratégique indispensable en 2026
-
-*17 mars 2026*
-
----
-
 ## Introduction
 
 L'intelligence artificielle n'est plus un simple gadget marketing dans l'e-commerce.

@@ -61,9 +61,6 @@ keywords:
 - module PrestaShop
 ---
 
-
-# Comment l'IA découvre vos outils MCP ?
-
 Dans le quotidien d'un e-commerçant PrestaShop, les tâches répétitives comme les rapports de ventes ou les analyses de stock peuvent vite devenir un frein à la productivité. Le PS MCP Server et le module MCP Tools Plus changent la donne en permettant à un assistant IA de s'intégrer directement à votre boutique. Ces outils ne sont pas là pour révolutionner le monde, mais pour résoudre des problèmes concrets : gagner du temps sur les analyses, automatiser les rapports et faciliter les décisions basées sur des données fiables.
 
 Cet article explore comment ces outils fonctionnent ensemble, sans plonger dans les détails techniques. Nous verrons les enjeux pratiques, les fonctionnalités clés de MCP Tools Plus, et des exemples concrets de leur utilisation. L'objectif ? Montrer la valeur ajoutée réelle pour les marchands et les agences, en se concentrant sur des gains mesurables comme la réduction du temps passé sur les tâches administratives.

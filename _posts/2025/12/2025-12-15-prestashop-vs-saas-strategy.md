@@ -48,9 +48,6 @@ faq:
 lang: fr
 ---
 
-
-# Pourquoi PrestaShop gagne justement parce qu'il n'est PAS un SaaS
-
 Si vous lisez la presse tech ou écoutez les gourous du marketing, le verdict semble sans appel : *"L'avenir est au SaaS (Software as a Service). Si vous n'êtes pas dans le Cloud tout-en-un, vous êtes dépassé."*
 
 Les solutions comme Shopify ou BigCommerce ont popularisé ce modèle séduisant : vous payez un abonnement, et ils s'occupent de tout. C'est propre, c'est rassurant, c'est clé en main.

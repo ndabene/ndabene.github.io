@@ -50,10 +50,6 @@ faq:
     answer: "Plusieurs semaines de travail : construire l'architecture, définir les périmètres d'agents sans chevauchement, écrire les skills qui portent le contexte métier."
 ---
 
-*Par Nicolas Dabène — AI-Native E-commerce Architect*
-
----
-
 ## Ce n'est pas un article anti-BMAD
 
 Je veux être clair là-dessus avant même de commencer.
