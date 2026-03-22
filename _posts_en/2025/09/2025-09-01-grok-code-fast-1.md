@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Grok Code Fast 1: xAI''s Ultra-Fast Coding AI'
+title: "Grok Code Fast 1: What It Can (and Can't) Do for Developers"
 date: 2025-09-01
 author: Nicolas Dabène
 lang: en

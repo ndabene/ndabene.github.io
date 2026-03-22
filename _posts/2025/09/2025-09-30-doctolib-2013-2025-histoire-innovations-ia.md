@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Doctolib : de l''idée à la licorne (2013-2025)'
+title: "Doctolib 2013–2025: From Startup to €1B+ Valuation — Full Story"
 date: 2025-09-30
 ref: doctolib-2013-2025-histoire-innovations-ia
 author: Nicolas Dabène

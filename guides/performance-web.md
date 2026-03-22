@@ -15,6 +15,8 @@ hub_tags:
 articles_limit: 20
 show_resources: true
 keywords: "performance web, optimisation php, core web vitals, cache, cdn, speed optimization"
+sitemap: false
+robots: noindex
 stats:
   - category: "Performance"
     label: "Articles Performance"

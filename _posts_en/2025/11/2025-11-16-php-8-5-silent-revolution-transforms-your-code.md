@@ -14,9 +14,7 @@ tags:
 - pipe operator
 - new features
 - modernization
-excerpt: Discover how PHP 8.5's pipe operator, mandatory OPcache, and 40+ improvements
-  deliver 5-10% faster apps, 10x faster debugging, and bulletproof security. Everything
-  developers need for high-performance applications.
+excerpt: PHP 8.5 changes how opcache, JIT, and type handling work. Here's what every developer needs to update before deploying.
 image: /assets/images/blog/2025/11/php-8-5-revolution-silencieuse.webp
 featured: true
 difficulty: Intermediate

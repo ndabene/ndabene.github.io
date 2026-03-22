@@ -60,7 +60,18 @@ faq:
 En 2025, une question revient souvent dans les boardrooms des enseignes e-commerce : faut-il opter pour la **simplicité immédiate de Shopify Plus**, ou investir dans la **maîtrise long terme avec PrestaShop Enterprise** ?  
 Derrière deux offres qui paraissent proches en prix mensuel, la différence est en réalité abyssale. D’un côté, une boîte noire propriétaire qui prélève sa marge au fil de ta croissance. De l’autre, une solution ouverte qui te permet de bâtir un actif technologique durable.  
 
-En tant qu’expert PrestaShop depuis plus de 15 ans, j’ai vu passer des dizaines de projets et de migrations. Mon constat est clair : **à horizon 3–5 ans, PrestaShop Enterprise offre un meilleur ROI et une vraie souveraineté technique**. Voici pourquoi.
+
+<h2>PrestaShop Enterprise vs Shopify Plus: Comparative Table</h2>
+
+| Criteria | PrestaShop Enterprise | Shopify Plus |
+|---|---|---|
+| **Starting price** | Custom quote | $2,000/month |
+| **Hosted solution** | Self-hosted | Fully managed |
+| **Customization** | Full source code access | App ecosystem |
+| **Transaction fees** | None (you choose payment provider) | 0.15%–2% per transaction |
+| **Scalability** | High (you manage infrastructure) | High (managed by Shopify) |
+| **EULA** | Open source (AFDL) | Proprietary |
+| **Best for** | Businesses needing full control | Merchants wanting simplicity |
 
 ---
 

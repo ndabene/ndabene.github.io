@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'PrestaShop: From Student Project to Leader'
+title: 'PrestaShop: From Student Project to European E-Commerce Leader (2005–2025)'
 date: 2025-07-24
 author: Nicolas Dabène
 lang: en
@@ -13,11 +13,7 @@ tags:
 - PrestaShop
 - development
 - e-commerce
-excerpt: PrestaShop embodies one of the finest French entrepreneurial successes of
-  the digital era. From an Epitech student project in 2005 to an e-commerce platform
-  generating 22 billion euros in sales for 300,000 merchants worldwide, this 20-year
-  success story perfectly illustrates French innovation capacity against American
-  industry giants.
+excerpt: How PrestaShop grew from a student project in 2005 to powering 300,000+ stores across Europe. The full story of France's biggest open-source e-commerce platform.
 image: /assets/images/blog/2025/07/2025-07-24-prestashop-projet-etudiant-leader-europeen.webp
 featured: true
 difficulty: Intermediate

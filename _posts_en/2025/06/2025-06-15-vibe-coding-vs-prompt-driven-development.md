@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Vibe Coding vs Prompt-Driven Development: Generative AI'
+title: 'Vibe Coding vs Prompt Engineering: Which Approach Wins?'
 date: 2025-06-15
 author: Nicolas Dabène
 lang: en
@@ -14,9 +14,7 @@ tags:
 - development
 - prompt engineering
 - security
-excerpt: 'Exploring two approaches to AI-assisted development: spontaneous Vibe Coding
-  versus structured Prompt-Driven Development. Analysis of risks, benefits, and best
-  practices for responsible code generation.'
+excerpt: 'Vibe Coding vs Prompt Engineering — a practical comparison with real examples and use cases for AI-assisted development.''
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.webp
 featured: true
 llm_summary: 'Exploring two approaches to AI-assisted development: spontaneous Vibe

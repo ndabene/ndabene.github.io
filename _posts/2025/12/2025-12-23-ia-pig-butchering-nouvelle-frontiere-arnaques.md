@@ -1,7 +1,6 @@
 ---
 layout: post
-title: 'L''IA, le Pig Butchering et la Nouvelle Frontière des Arnaques : Pourquoi
-  les Arnaqueurs Deviennent des Développeurs'
+title: "Pig Butchering & IA : Comment les Arnaqueurs Utilisent l'Intelligence Artificielle pour Tromper"
 date: 2025-12-23
 ref: ia-pig-butchering-scam-frontier
 author: Nicolas Dabène

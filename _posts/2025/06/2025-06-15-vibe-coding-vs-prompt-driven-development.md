@@ -15,9 +15,7 @@ tags:
 - développement
 - prompt engineering
 - sécurité
-excerpt: 'Exploration de deux approches du développement assisté par IA : le Vibe
-  Coding spontané versus le Prompt-Driven Development structuré. Analyse des risques,
-  bénéfices et bonnes pratiques pour une génération de code responsable.'
+excerpt: 'Vibe Coding vs Prompt-Driven Development : quelle méthode choisir pour développer avec l'IA ? Comparaison pratique avec exemples et cas d'usage.''
 image: /assets/images/blog/2025/06/vibe-coding-prompt-driven.webp
 featured: true
 llm_summary: 'Exploration de deux approches du développement assisté par IA : le Vibe
@@ -74,6 +72,8 @@ L'avènement des intelligences artificielles génératives comme ChatGPT, Claude
 ## Introduction : Deux philosophies, deux approches
 
 Dans l'écosystème actuel du développement logiciel, nous assistons à l'émergence de deux paradigmes de programmation assistée par IA qui reflètent des philosophies radicalement différentes :
+
+## Vibe Coding vs Prompt Engineering: Which Approach Wins?
 
 ### Le Vibe Coding : L'approche intuitive
 
