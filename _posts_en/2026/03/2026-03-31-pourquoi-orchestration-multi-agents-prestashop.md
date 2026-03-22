@@ -146,96 +146,117 @@ Without orchestration: you do this in full sequence, manually.
 
 With orchestration, `master` analyzes dependencies and structures the flow:
 
-<div class="workflow-diagram">
-  <div class="workflow-timeline">
+<div class="workflow-demo">
+  <div class="workflow-player">
+    <div class="workflow-player-play">▶</div>
+    <span class="workflow-progress-text"><span id="demo-step">1</span>/3</span>
+  </div>
+  <div class="workflow-progress-bar">
+    <div class="workflow-progress-fill"></div>
+  </div>
+  <div class="workflow-scenes">
     
-    <!-- Step 1 -->
-    <div class="workflow-step sequential" style="animation-delay: 0.2s;">
-      <div class="workflow-step-header">
-        <span class="workflow-step-label">
-          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
-          Step 1 — Sequential
-        </span>
+    <!-- Scene 1 -->
+    <div class="workflow-scene sequential" style="animation: sceneAppear 0.6s ease-out 0.3s forwards;">
+      <div class="workflow-scene-header">
+        <div class="workflow-scene-number">1</div>
+        <span class="workflow-scene-badge">Sequential</span>
       </div>
-      <div class="workflow-agents">
-        <div class="workflow-agent" data-type="architect" style="animation-delay: 0.5s;">
-          <span class="workflow-agent-icon">🏗️</span>
-          <div>
-            <div>prestashop-architect</div>
-            <div class="workflow-agent-text">Defines structure: Symfony controller, Grid, services, hooks</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="workflow-step parallel" style="animation-delay: 0.8s;">
-      <div class="workflow-step-header">
-        <span class="workflow-step-label">
-          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
-          Step 2 — Independent work
-        </span>
-      </div>
-      <div class="workflow-parallel-group">
-        <div class="workflow-agents">
-          <div class="workflow-agent" data-type="dev" style="animation-delay: 1.1s;">
-            <span class="workflow-agent-icon">💻</span>
+      <div class="workflow-execution-zone">
+        <div class="workflow-agents-grid">
+          <div class="workflow-agent-card" data-type="architect" style="animation-delay: 0.6s;">
+            <div class="workflow-agent-icon">🏗️</div>
             <div>
-              <div>prestashop-module-dev</div>
-              <div class="workflow-agent-text">Implements controller and Grid</div>
-            </div>
-          </div>
-          <div class="workflow-agent" data-type="security" style="animation-delay: 1.3s;">
-            <span class="workflow-agent-icon">🔒</span>
-            <div>
-              <div>prestashop-security</div>
-              <div class="workflow-agent-text">Audit permissions and BO access control</div>
-            </div>
-          </div>
-          <div class="workflow-agent" data-type="testing" style="animation-delay: 1.5s;">
-            <span class="workflow-agent-icon">🧪</span>
-            <div>
-              <div>prestashop-testing</div>
-              <div class="workflow-agent-text">Test strategy for the listing</div>
+              <div class="workflow-agent-name">prestashop-architect</div>
+              <div class="workflow-agent-desc">Defines structure: Symfony controller, Grid, services, hooks</div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Step 3 -->
-    <div class="workflow-step qa" style="animation-delay: 1.8s;">
-      <div class="workflow-step-header">
-        <span class="workflow-step-label">
-          <svg class="workflow-step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Step 3 — Final validation
-        </span>
+    <!-- Connector -->
+    <div class="workflow-connector" style="animation-delay: 0.9s;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+
+    <!-- Scene 2 -->
+    <div class="workflow-scene parallel" style="animation: sceneAppear 0.6s ease-out 1.2s forwards;">
+      <div class="workflow-scene-header">
+        <div class="workflow-scene-number">2</div>
+        <span class="workflow-scene-badge">Parallel</span>
       </div>
-      <div class="workflow-agents">
-        <div class="workflow-agent" data-type="qa" style="animation-delay: 2.1s;">
-          <span class="workflow-agent-icon">✅</span>
-          <div>
-            <div>qa-reviewer</div>
-            <div class="workflow-agent-text">Final validation before delivery</div>
+      <div class="workflow-execution-zone">
+        <div class="workflow-agents-grid">
+          <div class="workflow-agent-card" data-type="dev" style="animation-delay: 1.5s;">
+            <div class="workflow-agent-icon">💻</div>
+            <div>
+              <div class="workflow-agent-name">prestashop-module-dev</div>
+              <div class="workflow-agent-desc">Implements controller and Grid</div>
+            </div>
+            <div class="workflow-agent-running"></div>
+          </div>
+          <div class="workflow-agent-card" data-type="security" style="animation-delay: 1.6s;">
+            <div class="workflow-agent-icon">🔒</div>
+            <div>
+              <div class="workflow-agent-name">prestashop-security</div>
+              <div class="workflow-agent-desc">Audit permissions and BO access control</div>
+            </div>
+            <div class="workflow-agent-running"></div>
+          </div>
+          <div class="workflow-agent-card" data-type="testing" style="animation-delay: 1.7s;">
+            <div class="workflow-agent-icon">🧪</div>
+            <div>
+              <div class="workflow-agent-name">prestashop-testing</div>
+              <div class="workflow-agent-desc">Test strategy for the listing</div>
+            </div>
+            <div class="workflow-agent-running"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connector -->
+    <div class="workflow-connector" style="animation-delay: 2.1s;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+
+    <!-- Scene 3 -->
+    <div class="workflow-scene qa" style="animation: sceneAppear 0.6s ease-out 2.4s forwards;">
+      <div class="workflow-scene-header">
+        <div class="workflow-scene-number">3</div>
+        <span class="workflow-scene-badge">Validation</span>
+      </div>
+      <div class="workflow-execution-zone">
+        <div class="workflow-agents-grid">
+          <div class="workflow-agent-card" data-type="qa" style="animation-delay: 2.7s;">
+            <div class="workflow-agent-icon">✅</div>
+            <div>
+              <div class="workflow-agent-name">qa-reviewer</div>
+              <div class="workflow-agent-desc">Final validation before delivery</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
   </div>
-
   <div class="workflow-legend">
-    <div class="workflow-legend-item">
-      <div class="workflow-legend-dot" style="border-color: #f472b6;"></div>
-      <span>Sequential</span>
+    <div class="workflow-legend-item sequential">
+      <div class="workflow-legend-dot"></div>
+      <span>Sequential — one step after another</span>
     </div>
-    <div class="workflow-legend-item">
-      <div class="workflow-legend-dot" style="border-color: #22d3ee;"></div>
-      <span>Parallel</span>
+    <div class="workflow-legend-item parallel">
+      <div class="workflow-legend-dot"></div>
+      <span>Parallel — simultaneous execution</span>
     </div>
-    <div class="workflow-legend-item">
-      <div class="workflow-legend-dot" style="border-color: #4ade80;"></div>
-      <span>Validation</span>
+    <div class="workflow-legend-item qa">
+      <div class="workflow-legend-dot"></div>
+      <span>Validation — review before delivery</span>
     </div>
   </div>
 </div>
