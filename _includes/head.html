@@ -303,10 +303,10 @@ endif %}
 <!-- Preload critical LCP image (hero) with highest priority -->
 <link rel="preload" as="image" href="/assets/images/hero/profile-hero.webp" type="image/webp" fetchpriority="high">
 
-<!-- style.css = SYNCHRONE (requis pour éviter FOUC). Préchargé pour anticiper le réseau. -->
+<!-- style.css = ASYNC via preload (évite FOUCgrâce au critical CSS inline先行). Le critical CSS inline гарантирует les couleurs dès le premier render. -->
 <!-- homepage-cards/prestashop-ai = ASYNC (sections below-the-fold uniquement) -->
-<link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}?v=1.0.0" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=1.0.0">
+<link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}?v=1.0.1" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=1.0.1"></noscript>
 <link rel="preload" as="style" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v=1.0.0" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v=1.0.0"></noscript>
 <link rel="preload" as="style" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}?v=1.0.0" onload="this.onload=null;this.rel='stylesheet'">
