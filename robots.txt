@@ -97,7 +97,6 @@ Disallow: /
 # SITEMAP
 # ============================================================
 Sitemap: https://nicolas-dabene.fr/sitemap.xml
-Sitemap: https://nicolas-dabene.fr/sitemap-en.xml
 
 # ============================================================
 # MÉTADONNÉES POUR IA GÉNÉRATIVES

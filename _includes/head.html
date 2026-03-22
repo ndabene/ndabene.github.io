@@ -189,7 +189,7 @@ endif %}
 {% elsif page.image %}
 {% assign _og_image = page.image | absolute_url %}
 {% else %}
-{% assign _og_image = '/assets/images/hero/profile-hero.jpg' | absolute_url %}
+{% assign _og_image = '/assets/images/hero/profile-hero.webp' | absolute_url %}
 {% endif %}
 <meta property="og:type"
   content="{% if page.layout == 'product' %}product{% elsif page.layout == 'post' or page.layout == 'quiz' %}article{% else %}website{% endif %}">
@@ -302,26 +302,21 @@ endif %}
 
 <!-- Preload critical LCP image (hero) with highest priority -->
 <link rel="preload" as="image" href="/assets/images/hero/profile-hero.webp" type="image/webp" fetchpriority="high">
-<link rel="preload" as="image" href="/assets/images/hero/profile-hero.jpg" type="image/jpeg" fetchpriority="high">
 
-<!-- Styles - Preload pour CSS critiques -->
+<!-- Styles - style.css est SYNCHRONE (preload pour anticipation réseau)
+     homepage-cards et homepage-prestashop-ai sont ASYNC (sections below-the-fold)
+     Ce pattern élimine le FOUC tout en optimisant le temps de téléchargement -->
 {% if site.cache_busting %}
 {% assign cache_buster = site.time | date: '%s' %}
 {% endif %}
-<link rel="preload"
-  href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" as="style">
-<link rel="stylesheet"
-  href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
-<link rel="preload"
-  href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}"
-  as="style">
-<link rel="stylesheet"
-  href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
-<link rel="preload"
-  href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}"
-  as="style">
-<link rel="stylesheet"
-  href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<link rel="preload" as="style" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.rel='stylesheet'" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}"></noscript>
+<link rel="preload" as="style" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.rel='stylesheet'" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}{% if cache_buster %}?v={{ cache_buster }}{% endif %}"></noscript>
 
 <!-- CSS personnalisé par article -->
 {% if page.custom_css %}

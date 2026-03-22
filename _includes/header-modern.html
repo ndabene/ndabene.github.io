@@ -237,7 +237,6 @@
         e.stopPropagation();
         
         const isOpen = mobileNav.classList.contains('open');
-        console.log('Menu toggle clicked, currently open:', isOpen);
         
         if (isOpen) {
           mobileNav.classList.remove('open');
@@ -248,8 +247,6 @@
           mobileToggle.classList.add('active');
           document.body.style.overflow = 'hidden';
         }
-        
-        console.log('Menu state after toggle:', mobileNav.classList.contains('open'));
       });
       
       // Close mobile nav when clicking on links (but NOT when opening a submenu)
