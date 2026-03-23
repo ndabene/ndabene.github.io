@@ -550,13 +550,46 @@
             openSearchModal();
         };
 
+        // Track touch start position to distinguish taps from swipe/scroll gestures.
+        const TAP_THRESHOLD = 10;
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchWasSwipe = false;
+
+        pageSearchInput.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].clientX;
+            touchStartY = e.changedTouches[0].clientY;
+            touchWasSwipe = false;
+        }, { passive: true });
+
+        pageSearchInput.addEventListener('touchmove', function (e) {
+            const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+            const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+            if (dx > TAP_THRESHOLD || dy > TAP_THRESHOLD) {
+                touchWasSwipe = true;
+            }
+        }, { passive: true });
+
+        pageSearchInput.addEventListener('touchend', function (e) {
+            if (!touchWasSwipe) {
+                // Prevent the synthesised click/focus that follows on touch devices.
+                e.preventDefault();
+                requestOpenSearchModal();
+            }
+        });
+
         pageSearchInput.addEventListener('click', function () {
+            // Fires for mouse clicks; touch taps are handled by touchend above.
             requestOpenSearchModal();
         });
 
         pageSearchInput.addEventListener('focus', function () {
             this.blur();
-            requestOpenSearchModal();
+            // On touch devices the modal is already opened by touchend; only
+            // trigger here for keyboard / mouse navigation (i.e. no recent touch).
+            if (!touchWasSwipe) {
+                requestOpenSearchModal();
+            }
         });
 
         pageSearchInput.addEventListener('keydown', function (e) {
