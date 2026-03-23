@@ -105,7 +105,7 @@
     text-align: center;
     position: relative;
     z-index: 10;
-    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     
     h1 {
@@ -182,13 +182,13 @@
 
 .page-youtube .page-hero-section {
   .hero-content {
-    max-width: 960px;
+    width: 100%;
   }
 }
 
 .page-skills-modern .page-hero-section {
   .hero-content--skills {
-    max-width: 1100px;
+    width: 100%;
   }
 
   .page-hero-slot--post {
@@ -390,7 +390,7 @@
 
 .page-hero-section--prestashop-ai {
   .hero-content {
-    max-width: 980px;
+    width: 100%;
   }
 
   .page-hero-slot--pre,
@@ -483,7 +483,7 @@
 
 .page-hero-section--blog-index {
   .hero-content--blog {
-    max-width: 980px;
+    width: 100%;
 
     h1,
     .section-description {
