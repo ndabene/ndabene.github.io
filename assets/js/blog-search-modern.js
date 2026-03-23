@@ -576,7 +576,7 @@
                 e.preventDefault();
                 requestOpenSearchModal();
             }
-        });
+        }, { passive: false });
 
         pageSearchInput.addEventListener('click', function () {
             // Fires for mouse clicks; touch taps are handled by touchend above.
