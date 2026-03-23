@@ -1,0 +1,63 @@
+Configuration file: C:/Users/ndabe/Documents/GitHub/ndabene.github.io/_config.yml
+C:/Ruby34-x64/lib/ruby/3.4.0/win32/registry.rb:2: warning: fiddle/import is found in fiddle, which will no longer be part of the default gems starting from Ruby 3.5.0.
+You can add fiddle to your Gemfile or gemspec to silence this warning.
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: C:/Users/ndabe/Documents/GitHub/ndabene.github.io
+       Destination: C:/Users/ndabe/Documents/GitHub/ndabene.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+                    done in 99.895 seconds.
+ Auto-regeneration: enabled for 'C:/Users/ndabe/Documents/GitHub/ndabene.github.io'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2026-03-23 06:38:40
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 118.4937344 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 06:57:26
+                    .trigger
+       Jekyll Feed: Generating feed for posts
+                    ...done in 76.7637012 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 06:58:42
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 80.272484 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:01:40
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 79.8409461 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:03:00
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 79.7862008 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:09:35
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 81.1679946 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:10:56
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+                    ...done in 90.7849663 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:13:07
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
+[33m             Error: Invalid argument @ rb_sysopen - C:/Users/ndabe/Documents/GitHub/ndabene.github.io/_site/en/articles/2025/12/22/rigueur-code-chaos-ia-php-prestashop/index.html[0m
+[33m             Error: Run jekyll build --trace for more information.[0m
+                    
+      Regenerating: 2 file(s) changed at 2026-03-23 07:14:33
+                    .jekyll-serve.log
+                    .trigger-rebuild
+       Jekyll Feed: Generating feed for posts
+                    ...done in 90.049622 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-03-23 07:19:37
+                    .jekyll-serve.log
+       Jekyll Feed: Generating feed for posts
