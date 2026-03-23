@@ -307,10 +307,10 @@ endif %}
 <!-- homepage-cards/prestashop-ai = ASYNC (sections below-the-fold uniquement) -->
 <link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-<link rel="preload" as="style" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v=1.0.0" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v=1.0.0"></noscript>
-<link rel="preload" as="style" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}?v=1.0.0" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}?v=1.0.0"></noscript>
+<link rel="preload" as="style" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v={{ site.time | date: '%s' }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-cards.css' | relative_url }}?v={{ site.time | date: '%s' }}"></noscript>
+<link rel="preload" as="style" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}?v={{ site.time | date: '%s' }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/assets/css/homepage-prestashop-ai.css' | relative_url }}?v={{ site.time | date: '%s' }}"></noscript>
 
 <!-- CSS personnalisé par article -->
 {% if page.custom_css %}
