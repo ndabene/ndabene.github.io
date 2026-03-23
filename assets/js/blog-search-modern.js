@@ -540,17 +540,30 @@
             });
         }
 
-        // Page Input Listeners - Now act as triggers
-        // Use touchstart on mobile (fires before focus, prevents keyboard from showing)
-        pageSearchInput.addEventListener('touchstart', function (e) {
-            e.preventDefault(); // Prevent focus/keyboard on mobile
+        // Page input acts as a reliable modal trigger on desktop and mobile.
+        // Keep the field readonly in markup so mobile browsers do not try to edit it directly.
+        let lastOpenTriggerAt = 0;
+        const requestOpenSearchModal = () => {
+            const now = Date.now();
+            if (now - lastOpenTriggerAt < 150) return;
+            lastOpenTriggerAt = now;
             openSearchModal();
-        }, { passive: false });
+        };
 
-        // Use click for desktop (mousedown prevents focus before it happens)
-        pageSearchInput.addEventListener('mousedown', function (e) {
-            e.preventDefault(); // Prevent the input from receiving focus
-            openSearchModal();
+        pageSearchInput.addEventListener('click', function () {
+            requestOpenSearchModal();
+        });
+
+        pageSearchInput.addEventListener('focus', function () {
+            this.blur();
+            requestOpenSearchModal();
+        });
+
+        pageSearchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                requestOpenSearchModal();
+            }
         });
 
         // Clear button on page - just clears page input
