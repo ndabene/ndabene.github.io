@@ -554,6 +554,13 @@
             requestOpenSearchModal();
         });
 
+        // On mobile, readonly inputs may not fire click/focus reliably (iOS Safari).
+        // touchend ensures the modal opens on tap.
+        pageSearchInput.addEventListener('touchend', function (e) {
+            e.preventDefault(); // prevent subsequent click/focus from double-triggering
+            requestOpenSearchModal();
+        });
+
         pageSearchInput.addEventListener('focus', function () {
             this.blur();
             requestOpenSearchModal();
