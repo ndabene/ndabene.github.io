@@ -644,6 +644,10 @@ $search-highlight-text: #92400e;
 // ========================================
 
 @media (max-width: 768px) {
+  .blog-search-wrapper {
+    display: none;
+  }
+
   .search-input-wrapper {
     #search-input {
       padding: 16px 50px 16px 50px;
