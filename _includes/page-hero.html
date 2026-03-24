@@ -28,13 +28,13 @@
 {% assign hero_post_content = include.post_content %}
 {% assign hero_post_content_class = include.post_content_class | default: '' %}
 
-<section class="page-hero-section{% if hero_modifier_class != '' %} {{ hero_modifier_class }}{% endif %}{% if hero_section_class != '' %} {{ hero_section_class }}{% endif %}">
+<section class="page-hero-section post-header-fullwidth{% if hero_modifier_class != '' %} {{ hero_modifier_class }}{% endif %}{% if hero_section_class != '' %} {{ hero_section_class }}{% endif %}">
   <div class="container">
     <nav class="breadcrumb">
       <a href="{{ hero_home_url }}">{{ hero_home_label }}</a>
       <span>{{ hero_current_label }}</span>
     </nav>
-    <div class="hero-content{% if hero_content_class != '' %} {{ hero_content_class }}{% endif %}">
+    <div class="post-header-content{% if hero_content_class != '' %} {{ hero_content_class }}{% endif %}">
       {% if hero_pre_content %}
         {% if hero_pre_content_class != '' %}
           <div class="{{ hero_pre_content_class }}">

@@ -1061,7 +1061,8 @@ $blog-content-bg: $white;
     padding: 0 2rem;
     text-align: center;
 
-    .post-breadcrumb {
+    .post-breadcrumb,
+    .breadcrumb {
       margin-bottom: 1.5rem;
 
       a {
