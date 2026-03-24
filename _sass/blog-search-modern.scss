@@ -215,13 +215,16 @@ $search-highlight-text: #92400e;
   width: 100%;
   height: 100%;
   z-index: 9999;
-  display: none;
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   padding-top: 10vh;
+  visibility: hidden;
+  pointer-events: none;
 
   &.active {
-    display: flex;
+    visibility: visible;
+    pointer-events: auto;
     animation: fadeIn 0.3s ease;
   }
 }

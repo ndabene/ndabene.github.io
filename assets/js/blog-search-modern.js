@@ -496,6 +496,11 @@
                 buildSearchIndex();
             }
 
+            // Focus FIRST — must be synchronous within the user gesture handler so that
+            // iOS Safari opens the virtual keyboard. The modal is kept in the rendering
+            // tree (visibility:hidden) so focus() works before the class is added.
+            modalSearchInput.focus();
+
             suggestionsModal.classList.add('active');
 
             // Sync value from page input if any
@@ -507,8 +512,6 @@
                 // Show history/initial state
                 showSearchSuggestions(modalSearchInput, suggestionsModal);
             }
-
-            setTimeout(() => modalSearchInput.focus(), 50);
         };
 
         // Debounced search logic (inside modal)
