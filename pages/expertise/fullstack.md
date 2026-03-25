@@ -20,7 +20,7 @@ llm_topics: [fullstack, developpement]
           {% endfor %}
         </ul>
         <div class="expertise-cta">
-          <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}">Me contacter</a>
+          <a class="btn btn--primary" href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Me contacter</a>
         </div>
       </article>
       <aside>

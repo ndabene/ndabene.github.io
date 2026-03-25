@@ -53,7 +53,7 @@ llm_topics: [privacy, GDPR, cookies, personal data]
                     <span class="icon">📧</span>
                     <div>
                         <strong>Contact</strong>
-                        <p><a href="/en/contact/">Contact Form</a><br>
+                        <p><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact Form</a><br>
                         Website: <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a></p>
                     </div>
                 </div>
@@ -310,7 +310,7 @@ llm_topics: [privacy, GDPR, cookies, personal data]
 
             <div class="info-box">
                 <h3>How to Exercise Your Rights?</h3>
-                <p>Contact us via the <a href="/en/contact/">contact form</a>.</p>
+                <p>Contact us via the <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">contact form</a>.</p>
                 <p>Your request will be processed within <strong>1 month</strong>.</p>
             </div>
 
@@ -368,7 +368,7 @@ llm_topics: [privacy, GDPR, cookies, personal data]
                 <p><strong>Nicolas Dabène</strong><br>
                 Senior PHP Developer & AI Architect</p>
                 <p>🌐 <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a><br>
-                📝 <a href="/en/contact/">Contact Form</a></p>
+                📝 <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact Form</a></p>
             </div>
         </section>
 

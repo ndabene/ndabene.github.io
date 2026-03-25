@@ -272,7 +272,7 @@ body_class: "page-skills-modern"
                 <i class="fas fa-blog"></i>
                 <span>AI & E-commerce Articles</span>
             </a>
-            <a href="{{ '/en/contact/' | relative_url }}" class="btn-cta btn-secondary">
+            <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-cta btn-secondary">
                 <i class="fas fa-envelope"></i>
                 <span>Contact me</span>
             </a>

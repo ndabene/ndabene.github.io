@@ -193,7 +193,7 @@ llm_topics:
     <p>Book a free 30-minute exploratory session to scope your context together and assess realistic next steps.</p>
 
     <div class="cta-buttons">
-      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-cta btn-primary" target="_blank" rel="noopener">
+      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-cta btn-primary" target="_blank" rel="noopener">
         <i class="fas fa-calendar-check"></i>
         <span>Book a free session</span>
       </a>
@@ -201,7 +201,7 @@ llm_topics:
         <i class="fas fa-briefcase"></i>
         <span>My expertise</span>
       </a>
-      <a href="{{ '/en/contact/' | relative_url }}" class="btn-cta btn-secondary">
+      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-cta btn-secondary">
         <i class="fas fa-envelope"></i>
         <span>Contact me</span>
       </a>

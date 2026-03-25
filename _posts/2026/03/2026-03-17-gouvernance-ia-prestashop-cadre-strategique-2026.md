@@ -383,7 +383,7 @@ Les **6 piliers de gouvernance IA** pour PrestaShop :
    title="Construisez votre cadre de gouvernance IA"
    description="Accompagnement stratégique pour industrialiser l'IA dans votre écosystème PrestaShop."
    button_text="Échanger sur la gouvernance"
-   button_url="/contact/?subject=Gouvernance%20IA%20PrestaShop"
+   button_url="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
    icon="fas fa-shield-alt"
    variant="emphasis"
 %}
