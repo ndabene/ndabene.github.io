@@ -26,7 +26,7 @@ llm_topics: [conditions, boutique]
       <p>
         Dénomination / Nom&nbsp;: <strong>Nicolas Dabène</strong><br>
         Adresse&nbsp;: <strong>324 route de Grasse, Antibes, France</strong><br>
-        Contact&nbsp;: <a href="/contact/">Formulaire de contact</a><br>
+        Contact&nbsp;: <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Formulaire de contact</a><br>
         SIRET&nbsp;: <strong>En cours de validation</strong>
       </p>
 
@@ -90,7 +90,7 @@ llm_topics: [conditions, boutique]
 
       <h2>Contact</h2>
       <p>
-        Support et réclamations&nbsp;: <a href="/contact/">Formulaire de contact</a><br>
+        Support et réclamations&nbsp;: <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Formulaire de contact</a><br>
         Adresse postale&nbsp;: <strong>324 route de Grasse, Antibes, France</strong>
       </p>
     </div>

@@ -21,7 +21,7 @@ llm_topics: [ecommerce, digital solutions]
           {% endfor %}
         </ul>
         <div class="expertise-cta">
-          <a class="btn btn--primary" href="{{ '/en/contact/' | relative_url }}">Contact me</a>
+          <a class="btn btn--primary" href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact me</a>
         </div>
       </article>
       <aside>

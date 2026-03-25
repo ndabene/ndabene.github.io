@@ -569,7 +569,7 @@ llm_context: |
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-question">How to access your e-book or training after purchase?</div>
-        <div class="faq-answer">After secure payment, you immediately receive a confirmation email with your access/download link. Keep it, it remains active. Need help? <strong>Response within 48h</strong> via the <a href="/en/contact/">contact form</a>.</div>
+        <div class="faq-answer">After secure payment, you immediately receive a confirmation email with your access/download link. Keep it, it remains active. Need help? <strong>Response within 48h</strong> via the <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">contact form</a>.</div>
       </div>
 
       <div class="faq-item">

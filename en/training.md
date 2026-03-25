@@ -62,7 +62,7 @@ llm_topics: [training, ai, developers]
 </section>
 
 
-<p>Want to go further? Discover my <a href="/en/training/">training courses</a>, browse my <a href="/en/blog/">articles</a> or <a href="/en/contact/">Contact me to discuss</a>.</p>
+<p>Want to go further? Discover my <a href="/en/training/">training courses</a>, browse my <a href="/en/blog/">articles</a> or <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact me to discuss</a>.</p>
 
 <script type="application/ld+json">
 {

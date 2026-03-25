@@ -129,7 +129,7 @@ product:
                         <i class="fab fa-prestashop"></i>
                         Obtenir sur PrestaShop Addons
                     </a>
-                    <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition flex items-center gap-2">
+                    <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition flex items-center gap-2">
                         <i class="far fa-calendar-alt"></i>
                         Réserver une démo
                     </a>
@@ -580,7 +580,7 @@ product:
 
         <!-- Calendly Link -->
         <div class="mt-6">
-            <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="text-[#D4AF37] hover:text-white font-medium underline text-sm transition">
+            <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="text-[#D4AF37] hover:text-white font-medium underline text-sm transition">
                 Besoin d'aide ? Prendre RDV avec le créateur
             </a>
         </div>
@@ -619,7 +619,7 @@ product:
                 <h4 class="font-bold mb-4">Support</h4>
                 <ul class="space-y-2 text-white/60">
                     <li><a href="https://addons.prestashop.com/en/contact-us?id_product=96638" target="_blank" rel="noopener" class="hover:text-white transition">Contacter le Support</a></li>
-                    <li><a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Prendre RDV avec le créateur</a></li>
+                    <li><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Prendre RDV avec le créateur</a></li>
                 </ul>
                 <div class="mt-6">
                     <a href="{{ page.product.addons_url }}" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-[#D4AF37] hover:underline text-sm">

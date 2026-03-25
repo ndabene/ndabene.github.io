@@ -945,7 +945,7 @@ class ServeurMCPOptimise
    title="Besoin d'accompagnement sur votre implémentation MCP ?"
    description="Discutons de votre cas d'usage spécifique et de l'architecture adaptée."
    button_text="Échanger sur mon projet"
-   button_url="/contact/?subject=Consultation%20MCP"
+   button_url="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
    icon="fas fa-comments"
    variant="emphasis"
 %}

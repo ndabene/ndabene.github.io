@@ -25,7 +25,7 @@ llm_topics: [terms, shop]
       <p>
         Business Name: <strong>Nicolas Dabène</strong><br>
         Address: <strong>324 route de Grasse, Antibes, France</strong><br>
-        Contact: <a href="/en/contact/">Contact Form</a><br>
+        Contact: <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact Form</a><br>
         SIRET: <strong>Under validation</strong>
       </p>
 
@@ -89,7 +89,7 @@ llm_topics: [terms, shop]
 
       <h2>Contact</h2>
       <p>
-        Support and complaints: <a href="/en/contact/">Contact Form</a><br>
+        Support and complaints: <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact Form</a><br>
         Postal address: <strong>324 route de Grasse, Antibes, France</strong>
       </p>
     </div>

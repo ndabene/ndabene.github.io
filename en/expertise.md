@@ -50,6 +50,6 @@ llm_topics:
     <div class="expertise-contact">
         <h2>Ready to make your e-commerce AI-native?</h2>
         <p>Let's discuss transforming your store into an intelligent platform driven by AI agents.</p>
-        <a href="/en/contact/" class="btn btn--primary">Contact me</a>
+        <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn btn--primary">Contact me</a>
     </div>
 </div>

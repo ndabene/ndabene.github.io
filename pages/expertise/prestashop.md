@@ -74,7 +74,7 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
         </div>
 
         <div class="hero-actions" style="margin-top: 2rem;">
-          <a href="/contact/?ref=expert-prestashop" class="btn btn--cta btn--large btn-cta-devis-expert" data-cta="devis-prestashop-hero">
+          <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn btn--cta btn--large btn-cta-devis-expert" data-cta="devis-prestashop-hero">
             <span>Demander un devis</span>
           </a>
           <a href="https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html" target="_blank" class="btn btn--primary btn--large">
@@ -276,7 +276,7 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
       </p>
       
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-        <a href="/contact/" class="btn btn--primary btn--large">
+        <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn btn--primary btn--large">
           <span>📞 Me Contacter</span>
         </a>
         <a href="/boutique/" class="btn btn--secondary btn--large">
