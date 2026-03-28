@@ -18,7 +18,7 @@ body_class: homepage-creator
             <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
                 <span class="hero-title-main">Une équipe d'experts disponibles 24h/24</span>
             </h1>
-            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
                 Chaque agent est spécialisé sur un domaine précis du développement PrestaShop. Ensemble, ils couvrent l'intégralité du cycle de vie d'un module — de la spec fonctionnelle à la mise en production.
             </p>
         </div>

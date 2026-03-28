@@ -48,7 +48,7 @@ twitter_site: "@nicolasdabene"
             <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
                 <span class="hero-title-main">Vidéos YouTube</span>
             </h1>
-            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
                 Explorez mes tutoriels techniques sur PrestaShop, PHP et l'intelligence artificielle. Découvrez des astuces pratiques, des analyses approfondies et des démonstrations pour booster vos compétences en développement.
             </p>
         </div>

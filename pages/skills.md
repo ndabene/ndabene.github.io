@@ -17,7 +17,7 @@ body_class: "page-skills-modern"
             <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
                 <span class="hero-title-main">De l'IA Native au E-commerce de Demain</span>
             </h1>
-            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
                 15+ ans d'architecture e-commerce · 5 PrestaShop Awards · 150K+ installations
             </p>
         </div>
