@@ -9,33 +9,26 @@ image: "/assets/images/agence-prestashop-ia/og-image.webp"
 body_class: homepage-creator
 ---
 
-<style>
-.page-hero-section { background: linear-gradient(135deg, #0a0a12 0%, #12121f 100%) !important; }
-.page-hero-section::before { background-image: radial-gradient(circle at 25% 25%, rgba(71, 117, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(71, 117, 255, 0.1) 0%, transparent 50%) !important; }
-.page-hero-section .breadcrumb a { color: #9ca3af !important; }
-.page-hero-section .breadcrumb span { color: white !important; background: rgba(71, 117, 255, 0.2) !important; }
-.page-hero-section .hero-content h1 { background: linear-gradient(135deg, white 0%, #e2e8f0 100%) !important; -webkit-background-clip: text !important; background-clip: text !important; }
-.page-hero-section .section-description { color: #9ca3af !important; }
-</style>
-
-{% capture hero_badges %}
-<div class="hero-badge" style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600;">
-    13 agents · PS 8 & 9 · 24/7
-</div>
-{% endcapture %}
-
-{% capture hero_description %}
-Each agent specializes in a specific area of PrestaShop module development. Together, they cover the entire lifecycle of a module — from functional spec to production deployment.
-{% endcapture %}
-
-{% include page-hero.html
-    title="A Team of Experts Available 24/7"
-    description=hero_description
-    modifier_class="page-hero-section--prestashop-ai page-hero-section--agence"
-    section_class="fade-in is-visible"
-    pre_content=hero_badges
-    pre_content_class="page-hero-slot"
-%}
+<!-- HERO SECTION - Same as homepage -->
+<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
+    <div class="container-creator">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+                13 agents · PS 8 & 9 · 24/7
+            </span>
+            <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                <span class="hero-title-main">A Team of Experts Available 24/7</span>
+            </h1>
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+                Each agent specializes in a specific area of PrestaShop module development. Together, they cover the entire lifecycle of a module — from functional spec to production deployment.
+            </p>
+        </div>
+    </div>
+    <div class="hero-decoration">
+        <div class="hero-decoration-circle hero-decoration-circle-1"></div>
+        <div class="hero-decoration-circle hero-decoration-circle-2"></div>
+    </div>
+</section>
 
 <!-- SQUAD CORE -->
 <section class="section-creator" style="padding: 3rem 0 4rem; background: #0d0d14; margin: 0;">
