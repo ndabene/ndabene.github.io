@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Developing PrestaShop Modules with AI Agents: What Actually Changes"
-date: 2026-03-28
+date: 2026-03-31
 ref: "ai-agents-prestashop-module-development"
 lang: en
 author: "Nicolas Dabène"
