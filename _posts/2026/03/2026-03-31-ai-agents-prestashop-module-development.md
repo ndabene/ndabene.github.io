@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Développer des modules PrestaShop avec des agents IA : ce que ça change vraiment"
-date: 2026-03-28
+date: 2026-03-31
 ref: "ai-agents-prestashop-module-development"
 author: "Nicolas Dabène"
 category: "intelligence-artificielle"
