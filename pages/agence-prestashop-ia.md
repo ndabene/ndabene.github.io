@@ -3,8 +3,11 @@ layout: default
 title: "Agence PrestaShop IA — Squad d'agents spécialisés"
 permalink: /agence-prestashop-ia/
 ref: prestashop-ai-agency
-description: "Découvrez la squad d'agents IA spécialisés PrestaShop : builder, ops, packager, traduction, sécurité, release et migration. Une équipe disponible 24h/24."
+description: "Agence PrestaShop IA : 13 agents spécialisés (builder, ops, sécurité, packaging, migration). Équipe disponible 24h/24 pour vos modules PS 8 & 9."
+date: 2025-01-15
+last_modified_at: 2026-03-28
 image: "/assets/images/agence-prestashop-ia/og-image.webp"
+image_alt: "Agence PrestaShop IA - Nicolas Dabène - Squad d'agents IA spécialisés"
 body_class: homepage-creator
 ---
 
@@ -16,7 +19,7 @@ body_class: homepage-creator
                 13 agents · PS 8 & 9 · 24h/24
             </span>
             <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
-                <span class="hero-title-main">Une équipe d'experts disponibles 24h/24</span>
+                <span class="hero-title-main">Agence PrestaShop IA — Squad d'agents spécialisés</span>
             </h1>
             <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
                 Chaque agent est spécialisé sur un domaine précis du développement PrestaShop. Ensemble, ils couvrent l'intégralité du cycle de vie d'un module — de la spec fonctionnelle à la mise en production.
@@ -42,7 +45,7 @@ body_class: homepage-creator
             <!-- Mathieu - Builder -->
             <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
+                    <svg role="img" aria-label="Mathieu - Builder" viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
                         <ellipse cx="50" cy="75" rx="25" ry="15" fill="#1a1a2e" stroke="#4775ff" stroke-width="2"/>
                         <circle cx="50" cy="45" r="22" fill="#1a1a2e" stroke="#4775ff" stroke-width="2" stroke-dasharray="4 3"/>
                         <circle cx="42" cy="42" r="3" fill="#4775ff"/>
@@ -456,6 +459,12 @@ body_class: homepage-creator
                     <i class="fas fa-calendar-check"></i>
                     Réserver une session gratuite
                 </a>
+                <a href="{{ site.url }}" class="btn-hero" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: #9ca3af; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid #374151;">
+                    ← Accueil
+                </a>
+                <a href="{{ site.url }}/blog/" class="btn-hero" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: #9ca3af; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid #374151;">
+                    Blog →
+                </a>
             </div>
         </div>
     </div>
@@ -466,13 +475,14 @@ body_class: homepage-creator
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://ndabene.github.io/agence-prestashop-ia/#professionalservice",
   "name": "Agence PrestaShop IA — Nicolas Dabène",
-  "url": "https://nicolas-dabene.fr/agence-prestashop-ia/",
+  "url": "https://ndabene.github.io/agence-prestashop-ia/",
   "description": "Squad d'agents IA spécialisés PrestaShop couvrant le cycle de vie complet des modules : conception, sécurité, packaging, release, migration.",
   "provider": {
     "@type": "Person",
     "name": "Nicolas Dabène",
-    "url": "https://nicolas-dabene.fr",
+    "url": "https://ndabene.github.io",
     "jobTitle": "AI Orchestrator & PrestaShop Expert"
   },
   "areaServed": "FR",
