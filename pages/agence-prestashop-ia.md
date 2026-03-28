@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: default
 title: "Agence PrestaShop IA — Squad d'agents spécialisés"
 permalink: /agence-prestashop-ia/
-ref: "prestashop-ai-agency"
-lang: fr
+ref: prestashop-ai-agency
 description: "Découvrez la squad d'agents IA spécialisés PrestaShop : builder, ops, packager, traduction, sécurité, release et migration. Une équipe disponible 24h/24."
 image: "/assets/images/agence-prestashop-ia/og-image.webp"
+body_class: homepage-creator
 ---
 
 <!-- HERO SECTION -->
