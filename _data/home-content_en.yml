@@ -55,7 +55,28 @@ core_project:
     icon: "fas fa-calendar-check"
 
 # ============================================
-# 4. ECOSYSTEM - Other projects & solutions
+# 4. AGENCE - PrestaShop AI Agency
+# ============================================
+agence:
+  title: "PrestaShop AI Agency"
+  eyebrow: "Specialized agent squad"
+  description: "13 specialized AI agents cover the entire lifecycle of a PrestaShop module — architecture, security, packaging, translation, release and migration. A team available 24/7, driven by precise knowledge of PrestaShop 8 and 9."
+  features:
+    - icon: "fas fa-hammer"
+      title: "Design to delivery"
+      description: "From functional spec to implementation, including Symfony architecture and PS 9 hooks."
+    - icon: "fas fa-shield-alt"
+      title: "Security & quality integrated"
+      description: "OWASP audit, PHPUnit tests and QA gate at every delivery — not at end of sprint."
+    - icon: "fas fa-rocket"
+      title: "Frictionless release"
+      description: "PHPStan, semantic changelog, CI/CD pipeline and marketplace packaging autonomously."
+  cta:
+    text: "Discover the squad"
+    url: "/en/prestashop-ai-agency/"
+
+# ============================================
+# 5. ECOSYSTEM - Other projects & solutions
 # ============================================
 ecosystem:
   title: "Ecosystem & Solutions"
