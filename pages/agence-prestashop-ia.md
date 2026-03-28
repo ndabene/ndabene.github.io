@@ -463,10 +463,6 @@ Chaque agent est spécialisé sur un domaine précis du développement PrestaSho
                     <i class="fas fa-calendar-check"></i>
                     Réserver une session gratuite
                 </a>
-                <a href="/blog/2026/03/28/agents-ia-developpement-modules-prestashop/" class="btn-hero btn-hero-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border: 1px solid #4775ff; color: #4775ff; text-decoration: none; border-radius: 8px; font-weight: 600;">
-                    <i class="fas fa-book-open"></i>
-                    Lire l'article
-                </a>
             </div>
         </div>
     </div>

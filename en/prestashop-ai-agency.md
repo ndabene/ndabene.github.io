@@ -462,10 +462,6 @@ Each agent specializes in a specific area of PrestaShop module development. Toge
                     <i class="fas fa-calendar-check"></i>
                     Book a Free Session
                 </a>
-                <a href="/en/blog/2026/03/28/agents-ia-developpement-modules-prestashop/" class="btn-hero btn-hero-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border: 1px solid #4775ff; color: #4775ff; text-decoration: none; border-radius: 8px; font-weight: 600;">
-                    <i class="fas fa-book-open"></i>
-                    Read the Article
-                </a>
             </div>
         </div>
     </div>
