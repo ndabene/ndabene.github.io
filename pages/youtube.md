@@ -38,13 +38,26 @@ twitter_image: "/assets/images/logo.png"
 twitter_site: "@nicolasdabene"
 ---
 
-{% include page-hero.html
-  title="Vidéos YouTube"
-  description="Explorez mes tutoriels techniques sur PrestaShop, PHP et l'intelligence artificielle. Découvrez des astuces pratiques, des analyses approfondies et des démonstrations pour booster vos compétences en développement."
-  modifier_class="page-hero-section--prestashop-ai page-hero-section--youtube-index"
-  section_class="fade-in is-visible"
-  content_class="hero-content--youtube"
-%}
+<!-- HERO SECTION - Same as homepage -->
+<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
+    <div class="container-creator">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+                Tutoriels PrestaShop · PHP · IA
+            </span>
+            <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                <span class="hero-title-main">Vidéos YouTube</span>
+            </h1>
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
+                Explorez mes tutoriels techniques sur PrestaShop, PHP et l'intelligence artificielle. Découvrez des astuces pratiques, des analyses approfondies et des démonstrations pour booster vos compétences en développement.
+            </p>
+        </div>
+    </div>
+    <div class="hero-decoration">
+        <div class="hero-decoration-circle hero-decoration-circle-1"></div>
+        <div class="hero-decoration-circle hero-decoration-circle-2"></div>
+    </div>
+</section>
 
 <!-- Include SEO/GEO metadata -->
 {% include youtube-seo-meta.html %}
@@ -134,7 +147,7 @@ twitter_site: "@nicolasdabene"
 }
 </script>
 
-<section class="blog-content-section">
+<section class="blog-content-section" style="margin: 0;">
     <div class="container">
         {% assign total_videos = sorted_videos | size %}
 

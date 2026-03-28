@@ -2,6 +2,8 @@
   link: /a-propos/
 - name: "Compétences"
   link: /skills/
+- name: "Agence IA"
+  link: /agence-prestashop-ia/
 - name: "Vidéos"
   link: /youtube/
 - name: "Blog"

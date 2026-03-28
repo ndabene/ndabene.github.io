@@ -1,7 +1,9 @@
 - name: "About"
-  link: /en/about/
+  link: /en/
 - name: "Skills"
   link: /en/skills/
+- name: "AI Agency"
+  link: /en/prestashop-ai-agency/
 - name: "Videos"
   link: /en/youtube/
 - name: "Blog"

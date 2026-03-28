@@ -37,6 +37,8 @@ faq:
 
 {% include home-content/core-project-mcp.html %}
 
+{% include home-content/agence-section.html %}
+
 {% include home-content/ecosystem-grid.html %}
 
 {% include home-content/blog-featured.html %}
