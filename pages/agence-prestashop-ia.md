@@ -9,7 +9,7 @@ body_class: homepage-creator
 ---
 
 <!-- HERO SECTION -->
-<section class="hero-prestashop-ai" style="padding: 4rem 0 2rem;">
+<section class="section-creator" style="padding: 6rem 0 4rem; background: #0a0a0f; margin: 0;">
     <div class="container-creator">
         <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
             <p class="hero-subtitle" style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; color: #4775ff; margin-bottom: 1rem;">Squad PrestaShop · Agents IA spécialisés</p>
@@ -27,7 +27,7 @@ body_class: homepage-creator
 </section>
 
 <!-- SQUAD CORE -->
-<section class="section-creator" style="padding: 2rem 0 4rem;">
+<section class="section-creator" style="padding: 3rem 0 4rem; background: #0d0d14; margin: 0;">
     <div class="container-creator">
         <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
             <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Squad core</p>
@@ -134,7 +134,7 @@ body_class: homepage-creator
 </section>
 
 <!-- SPÉCIALISTES -->
-<section class="section-creator" style="padding: 2rem 0 4rem; background: #0a0a0f;">
+<section class="section-creator" style="padding: 3rem 0 4rem; background: #0a0a0f; margin: 0;">
     <div class="container-creator">
         <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
             <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Spécialistes</p>
@@ -336,7 +336,7 @@ body_class: homepage-creator
 </section>
 
 <!-- INFRASTRUCTURE / SYSTÈME -->
-<section class="section-creator" style="padding: 2rem 0 4rem;">
+<section class="section-creator" style="padding: 3rem 0 4rem; background: #0d0d14; margin: 0;">
     <div class="container-creator">
         <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
             <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Infrastructure</p>
@@ -441,7 +441,7 @@ body_class: homepage-creator
 </section>
 
 <!-- CTA SECTION -->
-<section class="section-creator" style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 100%);">
+<section class="section-creator" style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 100%); margin: 0;">
     <div class="container-creator">
         <div style="text-align: center; max-width: 600px; margin: 0 auto;">
             <h2 class="section-title-creator" style="font-size: 1.75rem; margin-bottom: 1rem;">Prêt à faire travailler la squad ?</h2>
