@@ -52,7 +52,7 @@ product:
         <a href="#solution" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Solution</a>
         <a href="#benefices" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Benefices</a>
         <a href="#demo" class="text-[#475569] hover:text-[#0F172A] transition font-medium">Demo</a>
-        <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="btn-primary text-sm py-2.5 px-5 flex items-center gap-2">
+        <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="btn-primary text-sm py-2.5 px-5 flex items-center gap-2">
           <i class="far fa-calendar-alt"></i>
           Reserver une demo
         </a>
@@ -70,7 +70,7 @@ product:
       <a href="#solution" class="block text-[#475569] hover:text-[#0F172A] font-medium">Solution</a>
       <a href="#benefices" class="block text-[#475569] hover:text-[#0F172A] font-medium">Benefices</a>
       <a href="#demo" class="block text-[#475569] hover:text-[#0F172A] font-medium">Demo</a>
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="btn-primary inline-block text-center w-full text-sm py-2.5">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="btn-primary inline-block text-center w-full text-sm py-2.5">
         Reserver une demo
       </a>
     </div>
@@ -96,11 +96,11 @@ product:
         </p>
 
         <div class="flex flex-wrap gap-4 mb-6">
-          <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="btn-primary flex items-center gap-2">
+          <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="btn-primary flex items-center gap-2">
             <i class="far fa-calendar-alt"></i>
             Reserver ma demo en visio
           </a>
-          <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition flex items-center gap-2">
+          <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition flex items-center gap-2">
             <i class="fas fa-play"></i>
             Voir MCP Tools Plus en action
           </a>
@@ -341,7 +341,7 @@ product:
         <h3 class="font-bold text-[#111827] mb-2">Guide IA</h3>
         <p class="text-[#374151] text-sm">Bases et strategie pour exploiter l'IA dans vos operations e-commerce.</p>
       </a>
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="card p-5 hover:border-[#0F172A] border border-[#E2E8F0]">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="card p-5 hover:border-[#0F172A] border border-[#E2E8F0]">
         <h3 class="font-bold text-[#111827] mb-2">Contact direct</h3>
         <p class="text-[#374151] text-sm">Poser une question specifique avant de reserver votre demo.</p>
       </a>
@@ -391,7 +391,7 @@ product:
     </div>
 
     <div class="text-center">
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="gold-gradient text-[#0F172A] px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition inline-flex items-center gap-2">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="gold-gradient text-[#0F172A] px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition inline-flex items-center gap-2">
         <i class="far fa-calendar-check"></i>
         Reserver ma demo en visio
       </a>
@@ -406,11 +406,11 @@ product:
     <h2 class="text-3xl font-bold text-[#111827] mb-4">Reprenez le controle de votre temps dans PrestaShop.</h2>
     <p class="text-[#374151] text-lg mb-8">Voyez MCP Tools Plus en action sur des cas reels et decidez en 30 minutes si cela vaut le coup pour vous.</p>
     <div class="flex flex-wrap justify-center gap-4">
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
         <i class="far fa-calendar-alt"></i>
         Reserver ma demo en visio
       </a>
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition inline-flex items-center gap-2">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl font-semibold border-2 border-[#475569] text-[#475569] hover:border-[#0F172A] hover:text-[#0F172A] transition inline-flex items-center gap-2">
         <i class="fas fa-play"></i>
         Voir MCP Tools Plus en action
       </a>
@@ -442,8 +442,8 @@ product:
       <div>
         <h4 class="font-semibold mb-3">Demonstration</h4>
         <ul class="space-y-2 text-white/70">
-          <li><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Prendre RDV avec le createur</a></li>
-          <li><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" target="_blank" rel="noopener" class="hover:text-white transition">Demo visio 30 min</a></li>
+          <li><a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-calendar-alt text-xs"></i>Prendre RDV avec le createur</a></li>
+          <li><a href="https://calendly.com/ndabene2807/mcp-tools-plus" target="_blank" rel="noopener" class="hover:text-white transition">Demo visio 30 min</a></li>
         </ul>
       </div>
     </div>

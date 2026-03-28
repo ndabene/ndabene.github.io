@@ -23,7 +23,7 @@ llm_topics: [intelligence artificielle, ia]
           {% endfor %}
         </ul>
         <div class="expertise-cta">
-          <a class="btn btn--primary" href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Me contacter</a>
+          <a class="btn btn--primary" href="https://calendly.com/ndabene2807/mcp-tools-plus">Me contacter</a>
         </div>
       </article>
       <aside>

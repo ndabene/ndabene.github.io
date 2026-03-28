@@ -52,7 +52,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                     <span class="icon">📧</span>
                     <div>
                         <strong>Contact</strong>
-                        <p><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Formulaire de contact</a><br>
+                        <p><a href="https://calendly.com/ndabene2807/mcp-tools-plus">Formulaire de contact</a><br>
                         Site : <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a></p>
                     </div>
                 </div>
@@ -309,7 +309,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
 
             <div class="info-box">
                 <h3>Comment exercer vos droits ?</h3>
-                <p>Contactez-nous via le <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">formulaire de contact</a>.</p>
+                <p>Contactez-nous via le <a href="https://calendly.com/ndabene2807/mcp-tools-plus">formulaire de contact</a>.</p>
                 <p>Votre demande sera traitée dans un délai d'<strong>1 mois</strong>.</p>
             </div>
 
@@ -367,7 +367,7 @@ llm_topics: [confidentialité, RGPD, cookies, données personnelles]
                 <p><strong>Nicolas Dabène</strong><br>
                 Développeur PHP Senior & Architecte IA</p>
                 <p>🌐 <a href="https://nicolas-dabene.fr">nicolas-dabene.fr</a><br>
-                📝 <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Formulaire de contact</a></p>
+                📝 <a href="https://calendly.com/ndabene2807/mcp-tools-plus">Formulaire de contact</a></p>
             </div>
         </section>
 

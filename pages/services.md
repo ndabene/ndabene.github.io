@@ -31,7 +31,7 @@ llm_topics: [services, formation ia, prestashop]
       <li>Audit technique et recommandations</li>
     </ul>
 
-    <h3><a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Accompagnement continu</a></h3>
+    <h3><a href="https://calendly.com/ndabene2807/mcp-tools-plus">Accompagnement continu</a></h3>
     <ul>
       <li>Formation collective équipes développement</li>
       <li>Mise en place outils IA dans l'entreprise</li>
@@ -52,7 +52,7 @@ llm_topics: [services, formation ia, prestashop]
 </section>
 
 
-<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contactez-moi pour échanger</a>.</p>
+<p>Vous souhaitez aller plus loin ? Découvrez mes <a href="/formations/">formations</a>, parcourez mes <a href="/blog/">articles</a> ou <a href="https://calendly.com/ndabene2807/mcp-tools-plus">Contactez-moi pour échanger</a>.</p>
 
 <script type="application/ld+json">
 {

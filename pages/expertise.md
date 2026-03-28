@@ -49,6 +49,6 @@ llm_topics:
     <div class="expertise-contact">
         <h2>Pr&ecirc;t &agrave; rendre votre e-commerce AI-native ?</h2>
         <p>Discutons de la transformation de votre boutique en plateforme intelligente pilot&eacute;e par des agents IA.</p>
-        <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn btn--primary">Me contacter</a>
+        <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn btn--primary">Me contacter</a>
     </div>
 </div>

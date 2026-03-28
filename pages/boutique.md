@@ -568,7 +568,7 @@ llm_context: |
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-question">Comment accéder à votre e‑book ou formation après l'achat ?</div>
-        <div class="faq-answer">Après paiement sécurisé, vous recevez immédiatement un e‑mail de confirmation avec votre lien d'accès/téléchargement. Conservez‑le, il reste actif. Besoin d'aide ? <strong>Réponse sous 48h</strong> via le <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">formulaire</a>.</div>
+        <div class="faq-answer">Après paiement sécurisé, vous recevez immédiatement un e‑mail de confirmation avec votre lien d'accès/téléchargement. Conservez‑le, il reste actif. Besoin d'aide ? <strong>Réponse sous 48h</strong> via le <a href="https://calendly.com/ndabene2807/mcp-tools-plus">formulaire</a>.</div>
       </div>
 
       <div class="faq-item">

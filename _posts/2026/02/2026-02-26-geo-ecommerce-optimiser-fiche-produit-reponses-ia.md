@@ -555,7 +555,7 @@ Le GEO est encore un territoire emergent. Ceux qui s'y positionnent maintenant a
   title="Audit GEO gratuit : où en est votre visibilité dans les réponses IA ?"
   description="En 30 minutes, j'analyse votre présence actuelle sur ChatGPT, Gemini et Perplexity, et vous identifie les 3 leviers prioritaires à activer."
   button_text="Demander mon audit gratuit"
-  button_url="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
+  button_url="https://calendly.com/ndabene2807/mcp-tools-plus"
   icon="fas fa-robot"
   variant="emphasis"
 %}

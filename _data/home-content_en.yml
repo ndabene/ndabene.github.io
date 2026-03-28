@@ -12,7 +12,7 @@ hero:
   cta:
     primary:
       text: "Book a free exploratory session"
-      url: "https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
+      url: "https://calendly.com/ndabene2807/mcp-tools-plus"
       icon: "fas fa-calendar-check"
     secondary:
       text: "Read the blog"
@@ -51,7 +51,7 @@ core_project:
     - "Realistic orchestration leads — and whether an AI-native approach fits your situation"
   cta:
     text: "Book my free session"
-    url: "https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
+    url: "https://calendly.com/ndabene2807/mcp-tools-plus"
     icon: "fas fa-calendar-check"
 
 # ============================================
@@ -105,7 +105,7 @@ cta_final:
   title: "Ready to make your e-commerce AI-native?"
   buttons:
     - text: "Contact me"
-      url: "https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
+      url: "https://calendly.com/ndabene2807/mcp-tools-plus"
       style: "primary"
       icon: "fas fa-envelope"
     - text: "Explore my solutions"

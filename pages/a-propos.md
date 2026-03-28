@@ -193,7 +193,7 @@ llm_topics:
     <p>Réservez une session exploratoire gratuite de 30 minutes pour cadrer ensemble votre contexte et évaluer les pistes réalistes.</p>
 
     <div class="cta-buttons">
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-cta btn-primary" target="_blank" rel="noopener">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-cta btn-primary" target="_blank" rel="noopener">
         <i class="fas fa-calendar-check"></i>
         <span>Réserver une session gratuite</span>
       </a>
@@ -201,7 +201,7 @@ llm_topics:
         <i class="fas fa-briefcase"></i>
         <span>Mon expertise</span>
       </a>
-      <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-cta btn-secondary">
+      <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-cta btn-secondary">
         <i class="fas fa-envelope"></i>
         <span>Me contacter</span>
       </a>

@@ -70,7 +70,7 @@ llm_topics:
  </a>
  </div>
 
- <p>Want to go further? Discover my <a href="/en/training/">training courses</a>, browse my <a href="/en/blog/">articles</a>, or <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website">Contact me to discuss</a>.</p>
+ <p>Want to go further? Discover my <a href="/en/training/">training courses</a>, browse my <a href="/en/blog/">articles</a>, or <a href="https://calendly.com/ndabene2807/mcp-tools-plus">Contact me to discuss</a>.</p>
 
  </div>
 </section>

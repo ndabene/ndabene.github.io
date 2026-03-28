@@ -211,7 +211,7 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "development", "expertise"]
       </p>
 
       <div class="cta-buttons">
-        <a href="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website" class="btn-primary-large">
+        <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-primary-large">
           <span>📞 Contact Me</span>
         </a>
         <a href="/en/shop/" class="btn-secondary-large">

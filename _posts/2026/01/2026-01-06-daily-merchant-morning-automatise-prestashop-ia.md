@@ -188,7 +188,7 @@ Regardez le niveau de détail :
    title="Besoin d'aide pour votre workflow n8n ?"
    description="Accompagnement sur l'architecture, les triggers et l'intégration MCP."
    button_text="Demander un accompagnement"
-   button_url="https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website"
+   button_url="https://calendly.com/ndabene2807/mcp-tools-plus"
    icon="fas fa-hands-helping"
    variant="standard"
 %}

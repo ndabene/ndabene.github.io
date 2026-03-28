@@ -10,7 +10,7 @@
 **Expert PrestaShop Elite | Pionnier IA E-commerce | Formateur**
 *Sophia Antipolis - Côte d'Azur, France*
 
-[🌐 Découvrir le portfolio](https://nicolas-dabene.fr) • [📧 Me contacter](https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website • [📚 Lire mes articles](https://nicolas-dabene.fr/blog/)
+[🌐 Découvrir le portfolio](https://nicolas-dabene.fr) • [📧 Me contacter](https://calendly.com/ndabene2807/mcp-tools-plus • [📚 Lire mes articles](https://nicolas-dabene.fr/blog/)
 
 </div>
 
@@ -137,7 +137,7 @@ Disponible pour vos projets e-commerce sur la **Côte d'Azur** (Sophia Antipolis
 [![Email](https://img.shields.io/badge/Email-ndabene2807%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ndabene2807@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Me%20contacter-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nicolas-dabène-473a43b8)
 [![Dev.to](https://img.shields.io/badge/Dev.to-ndabene-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)](https://dev.to/ndabene)
-[![Site Web](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website
+[![Site Web](https://img.shields.io/badge/Portfolio-nicolas--dabene.fr-2563EB?style=for-the-badge&logo=safari&logoColor=white)](https://calendly.com/ndabene2807/mcp-tools-plus
 
 </div>
 
@@ -172,7 +172,7 @@ Disponible pour vos projets e-commerce sur la **Côte d'Azur** (Sophia Antipolis
 | 🛒 **Modules** | [nicolas-dabene.fr/modules](https://nicolas-dabene.fr/modules/) |
 | 🎓 **Formations** | [nicolas-dabene.fr/boutique](https://nicolas-dabene.fr/boutique/) |
 | 💼 **Services** | [nicolas-dabene.fr/services](https://nicolas-dabene.fr/services/) |
-| 📧 **Contact** | [nicolas-dabene.fr/contact](https://versus.pro/fr/contact?subject=AI+Consulting&utm_source=ndabene.github.io&utm_medium=website |
+| 📧 **Contact** | [nicolas-dabene.fr/contact](https://calendly.com/ndabene2807/mcp-tools-plus |
 
 ---
 
