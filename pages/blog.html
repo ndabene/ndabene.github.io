@@ -18,36 +18,28 @@ llm_topics:
 - architecture modules prestashop
 - automatisation intelligente commerce
 ---
-{% capture blog_hero_kicker %}
-<div class="page-hero-kicker">Analyses, architecture, gouvernance</div>
-{% endcapture %}
-{% capture blog_hero_search %}
-<div class="blog-search-wrapper">
-    <div class="blog-search-bar">
-        <div class="search-input-wrapper">
-            <i class="fas fa-search"></i>
-            <input type="text" id="search-input"
-                placeholder="Rechercher un article, un outil, une technologie..." autocomplete="off" readonly aria-label="Ouvrir la recherche d'articles">
-            <button id="clear-search" class="clear-search-btn" style="display: none;"
-                title="Effacer la recherche">
-                <i class="fas fa-times"></i>
-            </button>
+<!-- HERO SECTION - Same as homepage -->
+<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
+    <div class="container-creator">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+                Analyses, architecture, gouvernance
+            </span>
+            <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                <span class="hero-title-main">E-commerce AI-Native : Analyses & Architecture</span>
+            </h1>
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+                Comprendre la transition AI-native du e-commerce PrestaShop. Architecture d'agents IA, protocole MCP, gouvernance algorithmique et GEO — je clarifie ce qui est complexe pour que vous puissiez l'appliquer.
+            </p>
         </div>
     </div>
-</div>
-{% endcapture %}
-{% include page-hero.html
-  title="E-commerce AI-Native : Analyses & Architecture"
-  description="Comprendre la transition AI-native du e-commerce PrestaShop. Architecture d'agents IA, protocole MCP, gouvernance algorithmique et GEO — je clarifie ce qui est complexe pour que vous puissiez l'appliquer."
-  modifier_class="page-hero-section--prestashop-ai page-hero-section--blog-index"
-  content_class="hero-content--blog"
-  pre_content=blog_hero_kicker
-  pre_content_class="page-hero-slot page-hero-slot--pre"
-  post_content=blog_hero_search
-  post_content_class="page-hero-slot page-hero-slot--post"
- %}
+    <div class="hero-decoration">
+        <div class="hero-decoration-circle hero-decoration-circle-1"></div>
+        <div class="hero-decoration-circle hero-decoration-circle-2"></div>
+    </div>
+</section>
 
-<section class="blog-content-section">
+<section class="blog-content-section" style="margin: 0;">
     <div class="container">
         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
             , "post.linkedin != true" %} {% if published_posts.size> 0 %}
@@ -132,7 +124,7 @@ llm_topics:
 
 <!-- Publications externes maintenant intégrées dans le layout principal ci-dessus -->
 {% else %}
-<section class="blog-content-section">
+<section class="blog-content-section" style="margin: 0;">
     <div class="container">
         <div class="no-posts-container">
             <span class="no-posts-icon">📝</span>

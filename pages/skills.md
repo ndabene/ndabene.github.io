@@ -7,41 +7,29 @@ keywords: "AI-Native E-commerce, PrestaShop Expert, MCP Protocol, AI Agents, Pre
 body_class: "page-skills-modern"
 ---
 
-<!-- HERO SKILLS -->
-{% capture skills_hero_badges %}
-<div class="hero-badge">
-    <span class="badge-ai">AI-Native</span>
-    <span class="badge-pioneer">Pionnier MCP Protocol</span>
-</div>
-{% endcapture %}
-{% capture skills_hero_stats %}
-<div class="stats-pills">
-    {% for stat in site.data.skills_featured.hero_stats %}
-    <div class="stat-pill">
-        <i class="fas {{ stat.icon }}"></i>
-        <div class="stat-pill-content">
-            <span class="stat-value">{{ stat.value }}</span>
-            <span class="stat-label">{{ stat.label }}</span>
+<!-- HERO SECTION - Same as homepage -->
+<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
+    <div class="container-creator">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+                AI-Native · Pionnier MCP Protocol
+            </span>
+            <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                <span class="hero-title-main">De l'IA Native au E-commerce de Demain</span>
+            </h1>
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0;">
+                15+ ans d'architecture e-commerce · 5 PrestaShop Awards · 150K+ installations
+            </p>
         </div>
     </div>
-    {% endfor %}
-</div>
-{% endcapture %}
-{% include page-hero.html
-  title="De l'IA Native au E-commerce de Demain"
-  description="15+ ans d'architecture e-commerce • 5 PrestaShop Awards • 150K+ installations"
-  description_class="lead"
-  modifier_class="page-hero-section--prestashop-ai page-hero-section--skills-index"
-  section_class="fade-in is-visible"
-  content_class="hero-content--skills"
-  pre_content=skills_hero_badges
-  pre_content_class="page-hero-slot page-hero-slot--pre"
-  post_content=skills_hero_stats
-  post_content_class="page-hero-slot page-hero-slot--post"
-%}
+    <div class="hero-decoration">
+        <div class="hero-decoration-circle hero-decoration-circle-1"></div>
+        <div class="hero-decoration-circle hero-decoration-circle-2"></div>
+    </div>
+</section>
 
 <!-- INTELLIGENCE ARTIFICIELLE -->
-<section class="skills-category-section ai-section">
+<section class="skills-category-section ai-section" style="margin: 0;">
     <div class="container">
         <div class="category-header">
             <div class="category-icon">{{ site.data.skills_featured.ai.icon }}</div>
