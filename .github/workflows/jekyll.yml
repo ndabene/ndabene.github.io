@@ -120,6 +120,11 @@ jobs:
           echo "   - Variants AVIF 1080px: $(find assets/images -name '*-1080.avif' -type f | wc -l)"
           echo "✅ Variants et AVIF générés avec succès"
 
+      - name: Validate article images are complete
+        run: |
+          echo "🔍 Validation que toutes les images d'articles ont leurs variants WebP et AVIF..."
+          ruby scripts/validate_images_complete.rb
+
       - name: Verify all images are complete before build
         run: |
           echo "🔍 Vérification que toutes les images WebP ont leurs variants AVIF..."
