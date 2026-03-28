@@ -12,10 +12,17 @@ async function convertToWebp(file) {
     if (!['.jpg', '.jpeg', '.png', '.webp'].includes(ext)) return;
 
     // Skip variants themselves to avoid infinite recursion or processing them as sources
-    if (file.match(/-\d+\.webp$/)) return;
+    if (file.match(/-\d+\.(webp|avif)$/)) return;
 
     const baseName = file.substring(0, file.lastIndexOf('.'));
-    const webpFile = baseName + '.webp';
+    const dirName = path.dirname(file);
+
+    // Handle "image-principale.png" -> "image.webp" naming convention
+    const isPrincipale = path.basename(file).startsWith('image-principale');
+    const targetBaseName = isPrincipale 
+        ? path.join(dirName, 'image')
+        : baseName;
+    const webpFile = targetBaseName + '.webp';
 
     let status = 'skipped';
 
@@ -30,17 +37,29 @@ async function convertToWebp(file) {
         }
 
         // 2. Generate responsive variants if they don't exist
-        // Use the original file as source if it exists, otherwise use the webp version
         const sourceForVariants = file;
 
         for (const size of SIZES) {
-            const variantFile = `${baseName}-${size}.webp`;
+            const variantFile = `${targetBaseName}-${size}.webp`;
             if (!fs.existsSync(variantFile)) {
                 await sharp(sourceForVariants)
                     .resize(size, null, { withoutEnlargement: true })
                     .webp({ quality: QUALITY })
                     .toFile(variantFile);
                 console.log(`   📱 Variant: ${path.basename(variantFile)} generated`);
+                status = 'converted';
+            }
+        }
+
+        // 3. Generate AVIF variants if they don't exist
+        for (const size of SIZES) {
+            const avifFile = `${targetBaseName}-${size}.avif`;
+            if (!fs.existsSync(avifFile)) {
+                await sharp(sourceForVariants)
+                    .resize(size, null, { withoutEnlargement: true })
+                    .avif({ quality: QUALITY })
+                    .toFile(avifFile);
+                console.log(`   🖼️ AVIF: ${path.basename(avifFile)} generated`);
                 status = 'converted';
             }
         }
