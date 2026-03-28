@@ -5,7 +5,12 @@ permalink: /en/prestashop-ai-agency/
 ref: prestashop-ai-agency
 lang: en
 description: "Meet the PrestaShop AI agent squad: builder, ops, packager, translator, security, release and migration. A team available 24/7."
+date: 2025-01-15
+last_modified_at: 2026-03-28
 image: "/assets/images/agence-prestashop-ia/og-image.webp"
+alternates:
+  - lang: fr
+    url: /agence-prestashop-ia/
 body_class: homepage-creator
 ---
 

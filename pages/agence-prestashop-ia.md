@@ -8,6 +8,9 @@ date: 2025-01-15
 last_modified_at: 2026-03-28
 image: "/assets/images/agence-prestashop-ia/og-image.webp"
 image_alt: "Agence PrestaShop IA - Nicolas Dabène - Squad d'agents IA spécialisés"
+alternates:
+  - lang: en
+    url: /en/prestashop-ai-agency/
 body_class: homepage-creator
 ---
 
