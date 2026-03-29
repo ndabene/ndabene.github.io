@@ -5719,3 +5719,66 @@ section { position: relative; z-index: 1; }
   66% { transform: translate(-50px, 50px) rotate(240deg); } }
 /* Désactiver sur mobile pour performance */
 @media (max-width: 768px) { .bubble-element { display: none; } }
+
+/* ========================================
+   BLOG SEARCH INLINE - Barre de recherche
+   ======================================== */
+
+.blog-search-inline { position: relative; width: 100%; max-width: 700px; margin: 0 auto 32px; z-index: 10000; }
+
+.blog-search-inline .search-bar-container { display: flex; align-items: center; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 16px 20px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); }
+.blog-search-inline .search-bar-container:focus-within { border-color: #3b82f6; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15), 0 0 0 4px rgba(59, 130, 246, 0.1); transform: translateY(-1px); }
+.blog-search-inline .search-bar-container > i { color: #3b82f6; font-size: 18px; margin-right: 14px; min-width: 20px; }
+.blog-search-inline .search-bar-container input { flex: 1; border: none; outline: none; font-size: 16px; font-weight: 500; color: #1f2937; background: transparent; min-width: 0; }
+.blog-search-inline .search-bar-container input::placeholder { color: #6b7280; opacity: 0.7; font-weight: 400; }
+
+.blog-search-inline .clear-search-btn { background: linear-gradient(135deg, #ef4444, #dc2626); border: none; color: white; width: 32px; height: 32px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; margin-left: 12px; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25); }
+.blog-search-inline .clear-search-btn:hover { background: linear-gradient(135deg, #dc2626, #b91c1c); transform: scale(1.08); }
+.blog-search-inline .clear-search-btn i { font-size: 14px; }
+
+.blog-search-inline .search-results-dropdown { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); width: 700px; max-width: calc(100vw - 32px); background: #ffffff; border-radius: 16px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.15); max-height: 450px; overflow-y: auto; z-index: 99999 !important; }
+
+.search-result-item { display: block; padding: 14px 20px; border-bottom: 1px solid rgba(243, 244, 246, 0.6); text-decoration: none; color: inherit; transition: all 0.2s ease; position: relative; overflow: hidden; }
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover, .search-result-item.active { background: linear-gradient(to right, #f8fafc, #ffffff); padding-left: 28px; }
+.search-result-item .search-result-title { font-size: 15px; font-weight: 600; color: #1f2937; margin-bottom: 6px; line-height: 1.4; }
+.search-result-item .search-result-excerpt { font-size: 13px; color: #6b7280; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.search-no-results { padding: 32px 20px; text-align: center; color: #6b7280; font-size: 14px; }
+.search-no-results i { font-size: 32px; margin-bottom: 12px; opacity: 0.4; display: block; }
+
+.search-more-results { padding: 14px 20px; text-align: center; border-top: 1px solid #e2e8f0; background: linear-gradient(to bottom, #fafbfc, #f8fafc); }
+.search-more-results a { color: #3b82f6; font-weight: 600; font-size: 14px; text-decoration: none; }
+.search-more-results a:hover { text-decoration: underline; }
+
+.search-highlight { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #92400e; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+
+/* Mobile FAB - Bouton flottant bas droite */
+.mobile-search-fab { display: none; position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); color: white; border: none; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4); z-index: 9998; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); align-items: center; justify-content: center; }
+.mobile-search-fab i { font-size: 22px; }
+.mobile-search-fab:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(59, 130, 246, 0.5); }
+.mobile-search-fab:active { transform: scale(0.95); }
+
+/* Mobile Search Modal */
+.mobile-search-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; display: flex; align-items: flex-start; justify-content: center; padding-top: 10vh; }
+.mobile-search-modal-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); }
+.mobile-search-modal-content { position: relative; width: 92%; max-width: 500px; max-height: 80vh; background: #ffffff; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); overflow: hidden; display: flex; flex-direction: column; }
+.mobile-search-header { display: flex; align-items: center; padding: 16px 18px; border-bottom: 1px solid #e2e8f0; background: #ffffff; }
+.mobile-search-header > i { color: #3b82f6; font-size: 18px; margin-right: 14px; }
+.mobile-search-header input { flex: 1; border: none; outline: none; font-size: 17px; font-weight: 500; color: #1f2937; background: transparent; min-width: 0; }
+.mobile-search-header input::placeholder { color: #6b7280; opacity: 0.7; }
+.mobile-search-header #mobile-search-close { background: linear-gradient(135deg, #ef4444, #dc2626); border: none; color: white; width: 36px; height: 36px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-left: 12px; }
+.mobile-search-header #mobile-search-close i { font-size: 14px; }
+.mobile-search-results { flex: 1; overflow-y: auto; min-height: 0; }
+.mobile-search-results .search-result-item { padding: 16px 18px; }
+.mobile-search-results .search-result-title { font-size: 16px; }
+.mobile-search-results .search-result-excerpt { font-size: 14px; }
+.mobile-search-results .search-no-results { padding: 40px 20px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-search-inline { display: none; }
+  .mobile-search-fab { display: flex; }
+  .mobile-search-modal { padding-top: 5vh; }
+  .mobile-search-modal-content { width: 95%; max-height: 85vh; border-radius: 16px; }
+}
