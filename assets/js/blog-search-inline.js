@@ -263,15 +263,26 @@
 
     if (pagefind && isInitialized) {
       try {
-        // P1 fix: filter by current page language to avoid cross-language results
+        // Search without lang filter to get all results, then filter by URL prefix
+        // This avoids 0-results caused by pages without data-pagefind-filter="lang:..."
         const search = await pagefind.search(trimmedQuery, {
-          limit: maxResults + 5,
-          filters: { lang: pageLang }
+          limit: (maxResults + 5) * 3  // Fetch more to account for filtering
         });
 
         if (search.results.length > 0) {
-          const data = await Promise.all(search.results.slice(0, maxResults + 3).map(r => r.data()));
-          displayResults(data, trimmedQuery, container, maxResults);
+          const data = await Promise.all(search.results.slice(0, (maxResults + 5) * 2).map(r => r.data()));
+
+          // Filter results by URL prefix to keep only current language posts
+          const langPrefix = pageLang === 'en' ? '/en/' : '/';
+          const excludePrefix = pageLang === 'en' ? null : '/en/';
+
+          const filteredData = data.filter(r => {
+            const url = r.url || '';
+            if (excludePrefix && url.startsWith(excludePrefix)) return false;
+            return true;
+          });
+
+          displayResults(filteredData, trimmedQuery, container, maxResults);
         } else {
           displayResults([], trimmedQuery, container, maxResults);
         }
