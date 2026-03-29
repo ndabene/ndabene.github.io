@@ -252,10 +252,14 @@
 
     if (!query || query.trim().length < 2) {
       container.style.display = 'none';
+      hideSearchLoading(containerId);
       return;
     }
 
     const trimmedQuery = query.trim();
+
+    // Show loading spinner
+    showSearchLoading(containerId);
 
     if (!isInitialized) {
       await initializePagefind();
@@ -263,34 +267,37 @@
 
     if (pagefind && isInitialized) {
       try {
-        // Search without lang filter to get all results, then filter by URL prefix
-        // This avoids 0-results caused by pages without data-pagefind-filter="lang:..."
+        // Fetch more results than needed to account for language filtering
         const search = await pagefind.search(trimmedQuery, {
-          limit: (maxResults + 5) * 3  // Fetch more to account for filtering
+          limit: (maxResults + 5) * 3
         });
 
         if (search.results.length > 0) {
-          const data = await Promise.all(search.results.slice(0, (maxResults + 5) * 2).map(r => r.data()));
+          const data = await Promise.all(
+            search.results.slice(0, (maxResults + 5) * 2).map(r => r.data())
+          );
 
-          // Filter results by URL prefix to keep only current language posts
-          const langPrefix = pageLang === 'en' ? '/en/' : '/';
+          // Filter by URL prefix to show only current language results
+          // FR posts: /articles/... | EN posts: /en/articles/...
           const excludePrefix = pageLang === 'en' ? null : '/en/';
-
           const filteredData = data.filter(r => {
             const url = r.url || '';
-            if (excludePrefix && url.startsWith(excludePrefix)) return false;
-            return true;
+            return !(excludePrefix && url.startsWith(excludePrefix));
           });
 
+          hideSearchLoading(containerId);
           displayResults(filteredData, trimmedQuery, container, maxResults);
         } else {
+          hideSearchLoading(containerId);
           displayResults([], trimmedQuery, container, maxResults);
         }
       } catch (error) {
         console.error('Erreur recherche Pagefind:', error);
+        hideSearchLoading(containerId);
         displayFallbackResults(trimmedQuery, container, maxResults);
       }
     } else {
+      hideSearchLoading(containerId);
       displayFallbackResults(trimmedQuery, container, maxResults);
     }
   }
@@ -300,6 +307,23 @@
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+  }
+
+  // Show / hide loading spinner on search icon
+  function showSearchLoading(containerId) {
+    const sel = containerId === 'search-results'
+      ? '#blog-search-inline .search-bar-container > i'
+      : '.mobile-search-header > i';
+    const icon = document.querySelector(sel);
+    if (icon) icon.className = 'fas fa-circle-notch search-loading-icon';
+  }
+
+  function hideSearchLoading(containerId) {
+    const sel = containerId === 'search-results'
+      ? '#blog-search-inline .search-bar-container > i'
+      : '.mobile-search-header > i';
+    const icon = document.querySelector(sel);
+    if (icon) icon.className = 'fas fa-search';
   }
 
   // Update dropdown width for responsiveness - now uses CSS position: absolute

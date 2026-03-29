@@ -5782,3 +5782,25 @@ section { position: relative; z-index: 1; }
   .mobile-search-modal { padding-top: 5vh; }
   .mobile-search-modal-content { width: 95%; max-height: 85vh; border-radius: 16px; }
 }
+
+/* Search loading spinner */
+@keyframes search-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.search-loading-icon {
+  animation: search-spin 0.65s linear infinite !important;
+  color: #3b82f6 !important;
+  font-size: 18px;
+  margin-right: 14px;
+  min-width: 20px;
+}
+
+/* Subtle pulse on the search bar container while loading */
+.blog-search-inline .search-bar-container:has(.search-loading-icon),
+.mobile-search-header:has(.search-loading-icon) {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
