@@ -18,8 +18,8 @@ llm_topics:
 - architecture modules prestashop
 - automatisation intelligente commerce
 ---
-<!-- HERO SECTION - Same as homepage -->
-<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
+<!-- HERO SECTION - With search inline -->
+<section class="hero-prestashop-ai" style="padding: 6rem 0 4rem; position: relative; z-index: 100;">
     <div class="container-creator">
         <div style="text-align: center; max-width: 800px; margin: 0 auto;">
             <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
@@ -28,7 +28,7 @@ llm_topics:
             <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
                 <span class="hero-title-main">E-commerce AI-Native : Analyses & Architecture</span>
             </h1>
-            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem; text-align: center;">
                 Comprendre la transition AI-native du e-commerce PrestaShop. Architecture d'agents IA, protocole MCP, gouvernance algorithmique et GEO — je clarifie ce qui est complexe pour que vous puissiez l'appliquer.
             </p>
         </div>
@@ -39,7 +39,15 @@ llm_topics:
     </div>
 </section>
 
-<section class="blog-content-section" style="margin: 0;">
+<!-- Search Bar - Below hero, above bento -->
+<section class="blog-search-section fade-in" style="padding: 2rem 0; position: relative; z-index: 1000; overflow: visible;">
+    <div class="hero-bg-overlay" style="border-radius: inherit;"></div>
+    <div class="container" style="position: relative; z-index: 2000;">
+        {% include blog-search-inline.html %}
+    </div>
+</section>
+
+<section class="blog-content-section" style="margin: 0; position: relative; z-index: 1;">
     <div class="container">
         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
             , "post.linkedin != true" %} {% if published_posts.size> 0 %}
@@ -138,8 +146,7 @@ llm_topics:
 {% endif %}
 
 <!-- Scripts optimisés pour de meilleures performances avec chargement différé -->
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-<script src="{{ '/assets/js/blog-search-modern.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-search-inline.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>

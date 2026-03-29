@@ -21,20 +21,6 @@ llm_topics:
 {% capture blog_hero_kicker %}
 <div class="page-hero-kicker">Insights, architecture, governance</div>
 {% endcapture %}
-{% capture blog_hero_search %}
-<div class="blog-search-wrapper">
-    <div class="blog-search-bar">
-        <div class="search-input-wrapper">
-            <i class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Search for an article, tool, technology..."
-                autocomplete="off" readonly aria-label="Open article search">
-            <button id="clear-search" class="clear-search-btn" style="display: none;" title="Clear search">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-</div>
-{% endcapture %}
 {% include page-hero.html
   title="AI-Native E-commerce: Insights & Architecture"
   description="Understanding the AI-native transition of PrestaShop e-commerce. AI agent architecture, MCP protocol, algorithmic governance and GEO — I clarify what's complex so you can put it into practice."
@@ -42,11 +28,17 @@ llm_topics:
   content_class="hero-content--blog"
   pre_content=blog_hero_kicker
   pre_content_class="page-hero-slot page-hero-slot--pre"
-  post_content=blog_hero_search
-  post_content_class="page-hero-slot page-hero-slot--post"
- %}
+  %}
 
-<section class="blog-content-section">
+<!-- Search Bar - Below hero, above bento -->
+<section class="blog-search-section fade-in" style="padding: 2rem 0; position: relative; z-index: 1000; overflow: visible;">
+    <div class="hero-bg-overlay" style="border-radius: inherit;"></div>
+    <div class="container" style="position: relative; z-index: 2000;">
+        {% include blog-search-inline.html %}
+    </div>
+</section>
+
+<section class="blog-content-section" style="position: relative; z-index: 1;">
     <div class="container">
         {% assign published_posts = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date <= site.time"
             | where_exp: "post" , "post.linkedin != true" %} {% if published_posts.size> 0 %}
@@ -143,6 +135,7 @@ llm_topics:
 {% endif %}
 
 <!-- Scripts optimized for better performance with deferred loading -->
+<script src="{{ '/assets/js/blog-search-inline.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-pagination.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/blog-filters.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/future-posts-renderer.js' | relative_url }}" defer></script>
