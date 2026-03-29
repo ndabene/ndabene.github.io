@@ -1,0 +1,64 @@
+<!-- Blog Search Inline - Desktop visible, Mobile FAB -->
+<!-- Desktop: visible by default -->
+<div class="blog-search-inline" id="blog-search-inline">
+  <div class="search-bar-container">
+    <i class="fas fa-search"></i>
+    {% if page.lang == 'en' %}
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder="Search for an article, tool, technology..." 
+      autocomplete="off"
+      aria-label="Search the blog"
+    >
+    {% else %}
+    <input 
+      type="text" 
+      id="search-input" 
+      placeholder="Rechercher un article, un outil, une technologie..." 
+      autocomplete="off"
+      aria-label="Rechercher sur le blog"
+    >
+    {% endif %}
+    <button id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Effacer la recherche">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="search-results-dropdown" id="search-results" style="display: none;"></div>
+</div>
+
+<!-- Mobile Floating Action Button -->
+<button id="mobile-search-fab" class="mobile-search-fab" aria-label="Ouvrir la recherche">
+  <i class="fas fa-search"></i>
+</button>
+
+<!-- Mobile Search Modal -->
+<div id="mobile-search-modal" class="mobile-search-modal" style="display: none;">
+  <div class="mobile-search-modal-overlay"></div>
+  <div class="mobile-search-modal-content">
+    <div class="mobile-search-header">
+      <i class="fas fa-search"></i>
+      {% if page.lang == 'en' %}
+      <input 
+        type="text" 
+        id="mobile-search-input" 
+        placeholder="Search for an article..." 
+        autocomplete="off"
+        aria-label="Search the blog"
+      >
+      {% else %}
+      <input 
+        type="text" 
+        id="mobile-search-input" 
+        placeholder="Rechercher un article..." 
+        autocomplete="off"
+        aria-label="Rechercher sur le blog"
+      >
+      {% endif %}
+      <button id="mobile-search-close" aria-label="Fermer la recherche">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-search-results" id="mobile-search-results"></div>
+  </div>
+</div>
