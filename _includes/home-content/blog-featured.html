@@ -9,12 +9,12 @@
 
 <!-- BLOG FEATURED - Derniers articles du créateur -->
 <section class="section-creator blog-featured section-with-icons section-blog-icon" id="blog-featured">
-    <div class="container-creator">
+    <div class="container-creator" style="color:#1E293B;">
         <!-- En-tête -->
         <div class="section-header-creator">
             <h2 class="section-title-creator">{{ content_data.blog_featured.title | default: "Derniers Articles" }}</h2>
             {% if content_data.blog_featured.subtitle and content_data.blog_featured.subtitle != "" %}
-            <p class="section-intro-text">{{ content_data.blog_featured.subtitle }}</p>
+            <p class="section-intro-text" style="color:#1E293B;">{{ content_data.blog_featured.subtitle }}</p>
             {% endif %}
         </div>
 
