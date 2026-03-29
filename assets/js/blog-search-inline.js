@@ -149,41 +149,67 @@
   // Display fallback results (DOM search) - Ameliore pour chercher dans tags et categories aussi
   function displayFallbackResults(query, container, maxResults) {
     const postsContainer = document.getElementById('blog-posts-container');
-    if (!postsContainer) {
-      // Fallback: search in all post links on the page
-      return searchAllPageLinks(query, container, maxResults);
-    }
-
     const searchTerm = query.toLowerCase();
-    const posts = postsContainer.querySelectorAll('.post-preview-wrapper, .post-card, article.post, .post-item');
     const results = [];
 
-    posts.forEach(post => {
-      const titleEl = post.querySelector('.post-news-title a, .post-title a, h2 a, h3 a, [class*="title"] a');
-      const excerptEl = post.querySelector('.post-news-excerpt, .post-excerpt, .excerpt, [class*="excerpt"]');
-      const tagsEl = post.querySelector('.post-tags, .tags, [class*="tag"]');
-      const categoryEl = post.querySelector('.post-category, .category, [class*="category"]');
-      
-      const title = titleEl ? titleEl.textContent.trim() : '';
-      const excerpt = excerptEl ? excerptEl.textContent.trim() : '';
-      const tags = tagsEl ? tagsEl.textContent.trim() : '';
-      const category = categoryEl ? categoryEl.textContent.trim() : '';
-      const url = titleEl ? titleEl.getAttribute('href') : '';
+    // Search visible rendered post cards
+    if (postsContainer) {
+      const posts = postsContainer.querySelectorAll('.post-preview-wrapper, .post-card, article.post, .post-item');
 
-      // Search in title, excerpt, tags, and category
-      const searchContent = `${title} ${excerpt} ${tags} ${category}`.toLowerCase();
-      
-      if (searchContent.includes(searchTerm)) {
-        results.push({
-          meta: { title },
-          excerpt: truncateExcerpt(excerpt, CONFIG.EXCERPT_LENGTH),
-          url
-        });
-      }
-    });
+      posts.forEach(post => {
+        const titleEl = post.querySelector('.post-news-title a, .post-title a, h2 a, h3 a, [class*="title"] a');
+        const excerptEl = post.querySelector('.post-news-excerpt, .post-excerpt, .excerpt, [class*="excerpt"]');
+        const tagsEl = post.querySelector('.post-tags, .tags, [class*="tag"]');
+        const categoryEl = post.querySelector('.post-category, .category, [class*="category"]');
+
+        const title = titleEl ? titleEl.textContent.trim() : '';
+        const excerpt = excerptEl ? excerptEl.textContent.trim() : '';
+        const tags = tagsEl ? tagsEl.textContent.trim() : '';
+        const category = categoryEl ? categoryEl.textContent.trim() : '';
+        const url = titleEl ? titleEl.getAttribute('href') : '';
+
+        const searchContent = `${title} ${excerpt} ${tags} ${category}`.toLowerCase();
+
+        if (searchContent.includes(searchTerm) && url) {
+          results.push({
+            meta: { title },
+            excerpt: truncateExcerpt(excerpt, CONFIG.EXCERPT_LENGTH),
+            url
+          });
+        }
+      });
+    }
+
+    // P2 fix: also search hidden lazy-posts-data to catch posts not yet rendered by pagination
+    const lazyContainer = document.getElementById('lazy-posts-data');
+    if (lazyContainer) {
+      const lazyPosts = lazyContainer.querySelectorAll('.lazy-post-data');
+      const existingUrls = new Set(results.map(r => r.url));
+
+      lazyPosts.forEach(post => {
+        const url = post.dataset.url || '';
+        if (!url || existingUrls.has(url)) return;
+
+        const title = post.dataset.title || '';
+        const excerpt = post.dataset.excerpt || '';
+        const tags = post.dataset.tags || '';
+        const categories = post.dataset.categories || '';
+
+        const searchContent = `${title} ${excerpt} ${tags} ${categories}`.toLowerCase();
+
+        if (searchContent.includes(searchTerm)) {
+          results.push({
+            meta: { title },
+            excerpt: truncateExcerpt(excerpt, CONFIG.EXCERPT_LENGTH),
+            url
+          });
+          existingUrls.add(url);
+        }
+      });
+    }
 
     if (results.length === 0) {
-      // Second fallback: search all links on the page
+      // Last resort: search all post links on the page
       return searchAllPageLinks(query, container, maxResults);
     }
 
@@ -237,8 +263,10 @@
 
     if (pagefind && isInitialized) {
       try {
+        // P1 fix: filter by current page language to avoid cross-language results
         const search = await pagefind.search(trimmedQuery, {
-          limit: maxResults + 5
+          limit: maxResults + 5,
+          filters: { lang: pageLang }
         });
 
         if (search.results.length > 0) {
