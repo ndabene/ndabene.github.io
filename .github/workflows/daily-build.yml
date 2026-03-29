@@ -142,7 +142,39 @@ jobs:
           ls -la _site/
         env:
           JEKYLL_ENV: production
-      
+
+      # ========================================
+      # PAGEFIND SEARCH INDEX
+      # ========================================
+      - name: Install Pagefind
+        run: |
+          echo "📦 Installation de Pagefind..."
+          npm install -g pagefind
+          echo "✅ Pagefind installé"
+
+      - name: Build Pagefind index
+        run: |
+          echo "🔍 Génération de l'index de recherche Pagefind..."
+          npx pagefind --site _site \
+            --output-path _site/pagefind \
+            --glob "**/*.html" \
+            --exclude-selectors ".social-sharing-section, nav, footer, .breadcrumb, .reading-progress" \
+            --force-language "multi" \
+            --keep-index-url \
+            --verbose
+
+          echo ""
+          echo "📊 Statistiques Pagefind:"
+          echo "   - Fichiers HTML: $(find _site -name '*.html' -type f | wc -l)"
+          echo "   - Fichiers index: $(find _site/pagefind -name '*.pf_*' -type f 2>/dev/null | wc -l)"
+          if [ -f "_site/pagefind/pagefind.js" ]; then
+            echo "   ✅ Index principal généré"
+          else
+            echo "   ❌ Index principal manquant"
+            exit 1
+          fi
+          echo "✅ Index Pagefind généré avec succès"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
