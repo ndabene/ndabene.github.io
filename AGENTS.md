@@ -325,6 +325,35 @@ The pipeline runs on every push/PR to `main`:
 
 ---
 
+## SEO & GEO Optimization Rules (NON-NEGOTIABLE)
+
+**SEO and GEO optimization must NEVER denature the original content.**
+
+When optimizing a blog post for search engines or AI visibility:
+
+### What is ALLOWED (structural only)
+- Adjust frontmatter fields: `excerpt`, `seo_title`, `canonical_url`, `reading_time`, `difficulty`
+- Add structured `faq:` entries in frontmatter (YAML only, not visible in article body)
+- Optimize image alt text and file names
+- Ensure proper heading hierarchy (H1 → H2 → H3)
+- Add internal links **only if** they naturally fit the existing flow
+
+### What is FORBIDDEN (content distortion)
+- **NEVER** add an SEO intro paragraph before the author's original opening
+- **NEVER** insert comparison tables that weren't in the original text
+- **NEVER** add forced internal links mid-sentence that break the author's rhythm
+- **NEVER** add a visible FAQ section in the article body with meta-commentary like *(optimized for rich snippets)*
+- **NEVER** rewrite the author's voice, tone, or phrasing to "sound more SEO-friendly"
+- **NEVER** remove original content to make room for optimized content
+- **NEVER** add filler paragraphs, definitions, or summaries that the author didn't write
+
+### Core principle
+> **SEO serves the reader first, search engines second.**
+> If an optimization changes what the author meant to say, it's not optimization — it's rewriting.
+> The original voice, structure, and intent of the article are sacred.
+
+---
+
 ## Quick Reference for Agent Tasks
 
 - **Add new article:** Create in `_posts/` (FR) or `_posts_en/` (EN), follow frontmatter template, use `.webp` image

@@ -2,11 +2,12 @@
 title: "Le développeur-orchestrateur #1 — Pourquoi l'agentique change vraiment le développement web"
 layout: post
 date: 2026-04-16 08:00:00 +0200
-author: Nicolas Dabène
+excerpt: "L'agentique ne change pas seulement la vitesse. Elle transforme l'organisation du développement web et le rôle du développeur : moins de code brut, plus d'orchestration."
+description: "L'agentique ne change pas seulement la vitesse de production. Elle transforme l'organisation même du développement web, le rôle du développeur, et la manière de créer de la qualité."
 categories: ["IA", "Développement web", "Agents", "Architecture"]
 tags: ["agentique", "développement web", "IA", "orchestration", "LLM", "productivité", "architecture"]
-excerpt: "L'agentique ne change pas que la vitesse. Découvrez comment elle redéfinit le rôle du développeur web : moins de code brut, plus d'orchestration."
 image: /assets/images/blog/2026/04/developpeur-orchestrateur.webp
+author: Nicolas Dabène
 lang: fr
 canonical_url: /articles/2026/04/16/developpeur-orchestrateur-1-agentique-developpement-web/
 seo_title: "Développeur-orchestrateur : l'agentique et le développement web"
@@ -14,7 +15,6 @@ reading_time: 12
 difficulty: "Intermédiaire"
 series: "Le développeur-orchestrateur"
 series_position: 1
-tags: ["agentique", "développement web", "agents IA", "développeur IA", "orchestration", "architecture", "développeur-orchestrateur"]
 faq:
   - question: "Qu'est-ce que le développeur-orchestrateur ?"
     answer: "Le développeur-orchestrateur est un profil de développeur qui, au lieu de produire du code ligne par ligne, pilote des agents IA dans un workflow structuré. Son rôle se concentre sur le cadrage, la supervision, la validation et l'arbitrage."
@@ -29,8 +29,6 @@ faq:
 ---
 
 # Le développeur-orchestrateur #1 — Pourquoi l'agentique change vraiment le développement web
-
-L'agentique — l'utilisation d'agents IA autonomes capables d'agir dans un environnement de développement — change fondamentalement la manière de concevoir, produire et livrer du code web. Ce n'est pas qu'une question de vitesse : c'est une transformation organisationnelle qui redéfinit le rôle du développeur, désormais orienté vers le cadrage, la supervision et l'arbitrage plutôt que vers la production brute.
 
 Depuis quelques mois, beaucoup de discussions autour de l'IA dans le développement web tournent en boucle autour des mêmes questions :
 
@@ -66,14 +64,6 @@ Une phase où la valeur ne se situe plus uniquement dans la capacité à écrire
 Autrement dit : on se rapproche d'un nouveau profil.
 
 **Le développeur-orchestrateur.**
-
-| | Développement traditionnel | Développement avec agentique |
-|---|---|---|
-| **Rôle principal** | Écrire du code | Orchestrer des agents |
-| **Valeur ajoutée** | Production ligne par ligne | Cadrage, supervision, arbitrage |
-| **Outils** | IDE, terminal, Git | IDE + agents IA + workflow structuré |
-| **Indicateur clé** | Vitesse de production | Qualité + cohérence du livrable |
-| **Risque principal** | Goulot d'étranglement humain | Dérive sans contrôle |
 
 ## Nous ne sommes plus seulement dans l'ère du prompt
 
@@ -432,17 +422,9 @@ Dans le prochain article, j'irai plus loin sur un point clé :
 
 ---
 
-## FAQ — Développeur-orchestrateur et agentique
-
-*(Les réponses structurées ci-dessous sont optimisées pour les extraits enrichis et les moteurs de recherche IA.)*
-
 ## À suivre dans la série
 
 - **#1 — Pourquoi l'agentique change vraiment le développement web**
 - **#2 — Pourquoi un agent seul ne suffit pas**
 - **#3 — Pourquoi les skills, le contexte et la méthode changent tout**
 - **#4 — Le nouveau métier : cadrer, orchestrer, arbitrer**
-
----
-
-*À propos de l'auteur — **Nicolas Dabène** est architecte e-commerce AI-native, 5 PrestaShop Awards, 15+ ans d'expérience en développement PHP et intégration IA. Retrouvez-le sur [LinkedIn](https://www.linkedin.com/in/nicolas-dabène-473a43b8/) et [GitHub](https://github.com/ndabene).*

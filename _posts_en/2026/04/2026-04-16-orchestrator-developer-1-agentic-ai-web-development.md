@@ -2,11 +2,12 @@
 title: "The Orchestrator Developer #1 — Why Agentic AI Is Truly Changing Web Development"
 layout: post
 date: 2026-04-16 08:00:00 +0200
-author: Nicolas Dabène
+excerpt: "Agentic AI doesn't just change speed. It transforms web development organization and the developer's role: less raw code, more orchestration."
+description: "Agentic AI doesn't just change production speed. It transforms the very organization of web development, the developer's role, and how quality is created."
 categories: ["AI", "Web Development", "Agents", "Architecture"]
 tags: ["agentic AI", "web development", "AI", "orchestration", "LLM", "productivity", "architecture"]
-excerpt: "Agentic AI doesn't just change speed. Discover how it redefines the web developer's role: less raw code, more orchestration."
 image: /assets/images/blog/2026/04/developpeur-orchestrateur.webp
+author: Nicolas Dabène
 lang: en
 canonical_url: /en/articles/2026/04/16/orchestrator-developer-1-agentic-ai-web-development/
 seo_title: "Orchestrator Developer: Agentic AI & Web Development"
@@ -14,7 +15,6 @@ reading_time: 12
 difficulty: "Intermediate"
 series: "The Orchestrator Developer"
 series_position: 1
-tags: ["agentic AI", "web development", "AI agents", "AI developer", "orchestration", "architecture", "orchestrator developer"]
 faq:
   - question: "What is an orchestrator developer?"
     answer: "An orchestrator developer is a developer profile that, instead of producing code line by line, steers AI agents within a structured workflow. Their role focuses on framing, supervision, validation, and arbitration."
@@ -29,8 +29,6 @@ faq:
 ---
 
 # The Orchestrator Developer #1 — Why Agentic AI Is Truly Changing Web Development
-
-Agentic AI — the use of autonomous AI agents capable of acting within a development environment — is fundamentally changing how web code is designed, produced, and shipped. It's not just about speed: it's an organizational transformation that redefines the developer's role, now oriented toward framing, supervision, and arbitration rather than raw production.
 
 For the past few months, much of the discussion around AI in web development has been circling the same questions:
 
@@ -67,14 +65,6 @@ In other words: we're moving toward a new profile.
 
 **The orchestrator developer.**
 
-| | Traditional Development | Development with Agentic AI |
-|---|---|---|
-| **Primary role** | Writing code | Orchestrating agents |
-| **Value add** | Line-by-line production | Framing, supervision, arbitration |
-| **Tools** | IDE, terminal, Git | IDE + AI agents + structured workflow |
-| **Key metric** | Production speed | Deliverable quality + coherence |
-| **Main risk** | Human bottleneck | Drift without control |
-
 ## We're No Longer Just in the Prompt Era
 
 The first wave of AI applied to development was mostly based on a simple logic: ask a question, get an answer, correct, repeat.
@@ -107,7 +97,7 @@ In short, a good prompt can produce a good one-off answer.
 
 But it's not enough to steer a real production system.
 
-That's precisely where agentic AI starts becoming a serious topic for web development.
+That's precisely where agentic AI starts becoming a serious topic for web development — a topic I already explored from a different angle in [The End of the Lone Coder](/en/articles/2026/01/27/orchestrateur-ia-developpeurs-futur/).
 
 ## What Changes: AI Enters the Workflow
 
@@ -175,7 +165,7 @@ The problem was never just "writing code."
 
 The problem has always been producing **a reliable change in a living system**.
 
-And that's precisely why agentic AI becomes more important than simple code generation.
+And that's precisely why agentic AI becomes more important than simple code generation — a point that echoes what I explained in [The Illusion of Disposable Code](/en/articles/2026/01/13/illusion-code-jetable-ia-prestashop/).
 
 ## The Breakthrough Is Organizational Before It's Technical
 
@@ -272,7 +262,7 @@ Even a very good model drifts when:
 - the verification method is absent;
 - nobody actually controls the work chain.
 
-In other words, the weakness of an agentic system often comes less from the model than from the framework in which it's used.
+In other words, the weakness of an agentic system often comes less from the model than from the framework in which it's used — a risk I detailed in [AI and Development: Mastering Invisible Traps](/en/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/).
 
 That's excellent news for serious teams.
 
@@ -375,7 +365,7 @@ In short, they won't just try to use AI.
 
 They'll learn to **organize work with it**.
 
-And that's exactly where part of the new differentiation will be decided.
+And that's exactly where part of the new differentiation will be decided — a topic I also explore in [I Stopped BMAD](/en/articles/2026/04/14/jai-arrete-bmad-voici-ce-qui-la-remplace/).
 
 ## The Question Isn't "Should We Use Agents?"
 
@@ -432,17 +422,9 @@ In the next article, I'll go further on a key point:
 
 ---
 
-## FAQ — Orchestrator Developer & Agentic AI
-
-*(Structured answers below are optimized for rich snippets and AI search engines.)*
-
 ## Coming up in this series
 
 - **#1 — Why Agentic AI Is Truly Changing Web Development**
 - **#2 — Why a Single Agent Is Not Enough**
 - **#3 — Why Skills, Context, and Method Change Everything**
 - **#4 — The New Job: Frame, Orchestrate, Arbitrate**
-
----
-
-*About the author — **Nicolas Dabène** is an AI-native e-commerce architect, 5 PrestaShop Awards, 15+ years of experience in PHP development and AI integration. Find him on [LinkedIn](https://www.linkedin.com/in/nicolas-dabène-473a43b8/) and [GitHub](https://github.com/ndabene).*
