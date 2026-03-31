@@ -3159,3 +3159,404 @@ $blog-content-bg: $white;
     justify-content: center;
   }
 }
+
+// ============================================================
+// PREMIUM EDITORIAL TYPOGRAPHY — Article body enhancements
+// ============================================================
+
+// 1. Optimal reading width for body text
+.post-content {
+  // Constrain for readability — 65-75 characters per line
+  max-width: 72ch;
+  margin: 0 auto;
+
+  @media (max-width: 968px) {
+    max-width: 100%;
+  }
+}
+
+// 2. Drop cap on the very first paragraph of article body
+.post-content > p:first-of-type::first-letter {
+  font-family: 'Sora', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+  color: #1e293b;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .post-content > p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+}
+
+// 3. Premium H2 styling — gradient bottom border + spacing
+.post-content h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+
+  // Gradient underline
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+// 4. H3 — subtle left accent bar
+.post-content h3 {
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #334155;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 4px;
+    height: 1em;
+    background: linear-gradient(180deg, #3b82f6 0%, #6366f1 100%);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+// 5. Enhanced blockquotes — editorial pull-quote style
+.post-content blockquote {
+  position: relative;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  padding: 2rem 2rem 2rem 2.5rem;
+  margin: 2.5rem 0;
+  color: #475569;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  box-shadow:
+    inset 4px 0 0 0 #3b82f6,
+    0 2px 8px rgba(0, 0, 0, 0.04);
+
+  // Decorative quote mark
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.2rem;
+    left: 0.6rem;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #3b82f6;
+    opacity: 0.25;
+    line-height: 1;
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+}
+
+// 6. Enhanced unordered lists — custom dot markers
+.post-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.post-content ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.625rem;
+  line-height: 1.7;
+}
+
+.post-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+// 7. Enhanced ordered lists — numbered badges
+.post-content ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+  counter-reset: item;
+}
+
+.post-content ol li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  counter-increment: item;
+}
+
+.post-content ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.3);
+}
+
+// 8. Inline links — animated underline
+.post-content a {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  background-image: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  background-position: 0% 100%;
+  transition: background-size 0.3s ease, color 0.2s ease;
+}
+
+.post-content a:hover {
+  color: #1d4ed8;
+  background-size: 100% 1.5px;
+  border-bottom-color: transparent;
+}
+
+// 9. Bold text — subtle highlight
+.post-content strong,
+.post-content b {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+// 10. Horizontal rule — elegant divider
+.post-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #e2e8f0 80%, transparent 100%);
+  margin: 3rem 0;
+}
+
+// 11. Series navigation — premium card style
+.series-navigation {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem 0 2.5rem;
+  color: white;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.2);
+}
+
+.series-navigation .series-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+
+.series-navigation .series-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.series-navigation .series-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.series-navigation .series-step.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.4);
+}
+
+.series-navigation .series-step a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .series-navigation {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .series-navigation .series-steps {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .series-navigation .series-step {
+    justify-content: center;
+  }
+}
+
+// 12. "À suivre" / "Coming up" section — premium card
+.post-content > ul:last-of-type,
+.post-content > h2 + ul {
+  // Target the series list at the end
+}
+
+// Style for the "À suivre dans la série" / "Coming up in this series" lists
+.post-content h2 + ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+// 13. First paragraph after H2 — subtle emphasis
+.post-content h2 + p {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.8;
+}
+
+// 14. Short paragraphs — tighter spacing for punchy lines
+.post-content > p {
+  // Keep normal spacing
+}
+
+// Single-line paragraphs (punchy statements) — slightly tighter
+.post-content > p:has(br) {
+  margin-bottom: 0.5rem;
+}
+
+// 15. Image captions if present
+.post-content figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.post-content figcaption {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
+// 16. Code blocks — enhanced with language label area
+.post-content pre {
+  position: relative;
+  margin: 2.5rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.post-content pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px 12px 0 0;
+}
+
+// 17. Inline code — pill style
+.post-content :not(pre) > code {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #be123c;
+  padding: 0.15em 0.45em;
+  border-radius: 6px;
+  font-size: 0.88em;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+// 18. Separator before horizontal rules (for the --- before "À suivre")
+.post-content hr + h2 {
+  margin-top: 1rem;
+}
+
+// 19. Smart internal links — visible but not intrusive
+.post-content a[href^="/articles/"],
+.post-content a[href^="/en/articles/"] {
+  position: relative;
+  padding-right: 1.2em;
+}
+
+.post-content a[href^="/articles/"]::after,
+.post-content a[href^="/en/articles/"]::after {
+  content: '→';
+  position: absolute;
+  right: 0.1em;
+  opacity: 0.5;
+  font-size: 0.9em;
+  transition: opacity 0.2s ease;
+}
+
+.post-content a[href^="/articles/"]:hover::after,
+.post-content a[href^="/en/articles/"]:hover::after {
+  opacity: 1;
+}
