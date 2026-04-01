@@ -74,9 +74,9 @@ llm_topics:
             </a>
 
             <!-- SECONDARY - Highlighted articles from previous months (not the most recent) -->
-            {% if published_posts.size > 8 %}
+            {% if published_posts.size > 9 %}
             <div class="editorial-secondary">
-                {% assign secondary_posts = published_posts | offset: 8 | limit: 3 %}
+                {% assign secondary_posts = published_posts | offset: 9 | limit: 3 %}
                 {% for post in secondary_posts %}
                 <a href="{{ post.url | relative_url }}" class="editorial-secondary-card">
                     <div class="editorial-secondary-card__image">
@@ -137,7 +137,7 @@ llm_topics:
             <!-- 3. Article List -->
             <div class="post-list-news grid-view" id="blog-posts-container">
                 {% assign published_posts_list = site.posts_en | sort: "date" | reverse | where_exp: "post", "post.date
-                <= site.time" | where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign
+                <= site.time" | where_exp: "post" , "post.linkedin != true" | offset: 12 %} {% assign
                     initial_load_count=12 %} {% include blog-post-loop.html posts=published_posts_list
                     limit=initial_load_count %} {% if published_posts_list.size> initial_load_count %}
                     <div id="lazy-posts-data" style="display: none;">

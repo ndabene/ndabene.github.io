@@ -147,7 +147,7 @@ llm_topics:
             <!-- 3. Liste des Articles -->
             <div class="post-list-news grid-view" id="blog-posts-container">
                 {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" |
-                    where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign initial_load_count=12 %} {%
+                    where_exp: "post" , "post.linkedin != true" | offset: 12 %} {% assign initial_load_count=12 %} {%
                     include blog-post-loop.html posts=published_posts_list limit=initial_load_count %} {% if
                     published_posts_list.size> initial_load_count %}
                     <div id="lazy-posts-data" style="display: none;">
@@ -181,7 +181,7 @@ llm_topics:
             {% assign posts_per_page = 6 %}
             {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
                 , "post.linkedin != true" %} {% assign published_posts_count=temp_posts_2 | size %} {% assign
-                remaining_posts=published_posts_count | minus: 4 %} {% if remaining_posts> initial_load_count %}
+                remaining_posts=published_posts_count | minus: 12 %} {% if remaining_posts> initial_load_count %}
                 <div class="pagination-container">
                     <div class="pagination">
                         <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>
