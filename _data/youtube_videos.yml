@@ -347,3 +347,14 @@
   channel: ndabene06
   duration: PT6M
   category: Technique
+- title: 'Créer une Agence IA Prestashop avec OpenCode : orchestrateur, experts, skills
+    et workflows'
+  video_id: Wou1uiHWFNQ
+  url: https://www.youtube.com/watch?v=Wou1uiHWFNQ
+  thumbnail: https://i.ytimg.com/vi/Wou1uiHWFNQ/hqdefault.jpg
+  description: Dans cette vidéo, je montre comment concevoir une agence IA structurée
+    avec OpenCode. L'idée n'est pas de lancer un agent ...
+  published_at: '2026-04-01T04:00:33Z'
+  channel: ndabene06
+  duration: PT6M15S
+  category: PrestaShop & E-commerce
