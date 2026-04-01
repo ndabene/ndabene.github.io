@@ -53,6 +53,550 @@ $tag-text: $gris-anthracite;
 $tag-hover-bg: $marine-profond;
 $tag-hover-text: $blanc-pur;
 
+
+//================================================
+// GRILLE ÉDITORIALE - Style Portail de Presse
+//================================================
+
+// À LA UNE - Article dominant
+.editorial-hero {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  &__image {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f1f5f9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.03);
+  }
+
+  &__content {
+    padding: 1.25rem;
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $marine-profond;
+    background: rgba($marine-profond, 0.08);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 0.5rem 0;
+    color: $noir-journal;
+  }
+
+  &__excerpt {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $gris-ardoise;
+    margin: 0 0 0.75rem 0;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: $gris-anthracite;
+
+    time {
+      font-weight: 500;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0;
+
+    &__image {
+      aspect-ratio: unset;
+      height: 100%;
+      min-height: 320px;
+    }
+
+    &__content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__excerpt {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1.4fr 1fr;
+
+    &__image {
+      min-height: 380px;
+    }
+
+    &__content {
+      padding: 2.5rem;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+// ARTICLES SECONDAIRES - Grille
+.editorial-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.editorial-secondary-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #f1f5f9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.04);
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $marine-profond;
+    background: rgba($marine-profond, 0.08);
+    padding: 0.2rem 0.45rem;
+    border-radius: 3px;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.4rem 0;
+    color: $noir-journal;
+  }
+
+  &__excerpt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: $gris-ardoise;
+    margin: 0 0 0.6rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__meta {
+    font-size: 0.75rem;
+    color: $gris-anthracite;
+  }
+
+  @media (min-width: 480px) {
+    border-radius: 10px;
+
+    &__content {
+      padding: 1.25rem;
+    }
+
+    &__title {
+      font-size: 1.05rem;
+    }
+
+    &__excerpt {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// FIL D'ACTUALITÉ - Liste compacte
+.editorial-newsfeed {
+  margin-bottom: 1.5rem;
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: $noir-journal;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $marine-profond;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 2rem;
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+}
+
+.editorial-newsfeed-item {
+  display: flex;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid $gris-clair;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba($marine-profond, 0.02);
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 70px;
+    height: 55px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f1f5f9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $marine-profond;
+    background: rgba($marine-profond, 0.08);
+    padding: 0.15rem 0.35rem;
+    border-radius: 3px;
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 0.25rem 0;
+    color: $noir-journal;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: $gris-ardoise;
+  }
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+    padding: 1rem 0;
+
+    &__image {
+      width: 120px;
+      height: 80px;
+    }
+
+    &__title {
+      font-size: 1.05rem;
+    }
+
+    &__meta {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+//================================================
+// BENTO BLOG LAYOUT (legacy)
+//================================================
+
+.bento-grid-modern {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.bento-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  &__image {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #f1f5f9;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.05);
+  }
+
+  &__content {
+    padding: 1rem;
+
+    @media (min-width: 768px) {
+      padding: 1.25rem;
+    }
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: $marine-profond;
+    background: rgba($marine-profond, 0.08);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 0.5rem 0;
+    color: $noir-journal;
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__excerpt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: $gris-ardoise;
+    margin: 0 0 0.75rem 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: $gris-ardoise;
+
+    time {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+
+  // Hero variant - Full width on mobile, left side on desktop
+  &--hero {
+    @media (min-width: 768px) {
+      grid-row: 1 / span 2;
+    }
+
+    .bento-card__image {
+      @media (min-width: 768px) {
+        aspect-ratio: unset;
+        height: 55%;
+        min-height: 200px;
+        max-height: 300px;
+      }
+    }
+
+    .bento-card__title {
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bento-card__content {
+      @media (min-width: 768px) {
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  // Compact variant for smaller cards
+  &--compact {
+    .bento-card__image {
+      aspect-ratio: 3 / 2;
+    }
+
+    .bento-card__title {
+      font-size: 1rem;
+    }
+
+    .bento-card__content {
+      padding: 0.875rem;
+    }
+  }
+}
+
+.bento-featured-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+
+    /* 3 articles: 2 en haut côte à côte, 1 en bas en pleine largeur */
+    .bento-card--compact:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .bento-card--compact:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .bento-card--compact:nth-child(3) {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+}
+
 //================================================
 // BENTO BLOG LAYOUT
 //================================================
