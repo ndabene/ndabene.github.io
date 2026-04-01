@@ -46,6 +46,8 @@ Pas parce qu'elle remplace magiquement les développeurs. Pas parce qu'elle écr
 
 Et ce déplacement est beaucoup plus profond qu'il n'y paraît.
 
+![Le développeur-orchestrateur ne code plus ligne par ligne — il orchestre des agents IA dans un workflow structuré](/assets/images/blog/article_content/developpeur-orchestrateur-concept.webp)
+
 ## Nous ne sommes plus seulement dans l'ère du prompt
 
 La première grande phase de l'IA pour développeurs a été conversationnelle. On posait une question, on obtenait une réponse, on corrigeait, on relançait. Cette phase a été importante. Elle a permis à beaucoup de monde de toucher du doigt quelque chose de très concret : oui, un modèle peut expliquer un bug, générer une fonction, proposer des tests, documenter un bout de logique, reformuler une idée d'architecture, accélérer un travail fastidieux.
@@ -71,6 +73,8 @@ Tant que l'IA reste un assistant dans une fenêtre, son impact reste limité à 
 À partir du moment où une IA peut lire un dépôt, comprendre une partie de l'existant, proposer un plan d'action, modifier plusieurs fichiers, lancer des commandes, vérifier des résultats, documenter ce qu'elle a fait, préparer une suite de tâches ou passer le relais à une autre étape, on ne parle déjà plus de la même chose.
 
 On ne parle plus seulement d'assistance. On parle d'exécution encadrée.
+
+![Quand l'IA passe de la conversation à l'exécution encadrée : lecture de code, modification de fichiers, tests, documentation](/assets/images/blog/article_content/ia-workflow-execution.webp)
 
 Et cette différence change profondément la manière de penser le métier. Car la bonne question n'est alors plus : *quel modèle code le mieux ?* La bonne question devient : *comment construire un cadre de travail dans lequel des agents peuvent produire quelque chose d'utile sans dégrader la qualité ?*
 
@@ -127,6 +131,8 @@ Certaines tâches deviennent plus faciles à accélérer : générer une base, p
 En parallèle, d'autres compétences prennent plus de valeur. Le cadrage. La compréhension du besoin réel. La qualité du contexte donné au système. Le découpage d'une tâche complexe en étapes vérifiables. La lecture des impacts. L'anticipation des effets de bord. L'architecture. La sécurité. L'arbitrage entre plusieurs options imparfaites. La capacité à dire stop, à corriger une dérive, à refuser une solution séduisante mais fragile.
 
 C'est là que le métier se transforme.
+
+![Le centre de gravité du développeur se déplace : de la production brute vers le cadrage, l'architecture et la validation](/assets/images/blog/article_content/centre-gravite-developpeur.webp)
 
 Le développeur de valeur n'est plus seulement celui qui sait produire. C'est de plus en plus celui qui sait organiser une production augmentée sans perdre la maîtrise du résultat.
 

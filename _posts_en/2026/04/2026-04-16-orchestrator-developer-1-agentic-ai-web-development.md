@@ -46,6 +46,8 @@ Not because it magically replaces developers. Not because it would suddenly writ
 
 And that shift is much deeper than it appears.
 
+![The orchestrator developer no longer codes line by line — they orchestrate AI agents within a structured workflow](/assets/images/blog/article_content/developpeur-orchestrateur-concept.webp)
+
 ## We're No Longer Just in the Prompt Era
 
 The first major phase of AI for developers was conversational. You asked a question, got an answer, corrected, re-prompted. That phase was important. It allowed many people to experience something very concrete: yes, a model can explain a bug, generate a function, propose tests, document a piece of logic, reformulate an architecture idea, speed up tedious work.
@@ -71,6 +73,8 @@ As long as AI remains an assistant in a window, its impact is limited to the qua
 From the moment an AI can read a repository, understand part of the existing codebase, propose an action plan, modify multiple files, run commands, verify results, document what it did, prepare a sequence of tasks, or pass the baton to another step, we're no longer talking about the same thing.
 
 We're no longer just talking about assistance. We're talking about framed execution.
+
+![When AI moves from conversation to framed execution: code reading, file modification, testing, documentation](/assets/images/blog/article_content/ia-workflow-execution.webp)
 
 And that difference profoundly changes how we think about the profession. Because the right question is no longer: *which model codes the best?* The right question becomes: *how do we build a work framework in which agents can produce something useful without degrading quality?*
 
@@ -127,6 +131,8 @@ Some tasks become easier to accelerate: generating a base, proposing multiple va
 In parallel, other skills gain more value. Framing. Understanding the real need. The quality of context given to the system. Breaking down a complex task into verifiable steps. Reading impacts. Anticipating side effects. Architecture. Security. Arbitrating between imperfect options. The ability to say stop, to correct a drift, to refuse a seductive but fragile solution.
 
 That's where the profession transforms.
+
+![The developer's center of gravity shifts: from raw production toward framing, architecture, and validation](/assets/images/blog/article_content/centre-gravite-developpeur.webp)
 
 The valuable developer is no longer just the one who knows how to produce. Increasingly, it's the one who knows how to organize augmented production without losing control of the result.
 
