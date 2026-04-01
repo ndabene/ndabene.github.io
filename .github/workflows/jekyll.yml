@@ -156,6 +156,29 @@ jobs:
           JEKYLL_ENV: production
 
       # ========================================
+      # CSS COMPILATION FIX (Jekyll Sass converter issue)
+      # ========================================
+      - name: Compile CSS with Ruby Sass
+        run: |
+          echo "🎨 Compilation du CSS avec Ruby Sass directement..."
+          ruby -e "
+            require 'sass'
+            scss = File.read('assets/css/style.scss').split('---', 3).last
+            css = Sass::Engine.new(scss, {
+              syntax: :scss,
+              cache: false,
+              read_cache: false,
+              filename: 'style.scss',
+              load_paths: ['_sass', '.'],
+              style: :compressed,
+              precision: 10,
+              quiet_deps: true
+            }).to_css
+            File.write('_site/assets/css/style.css', css)
+            puts '✅ CSS compilé: ' + css.size.to_s + ' octets'
+          "
+
+      # ========================================
       # PAGEFIND SEARCH INDEX
       # ========================================
       - name: Install Pagefind
