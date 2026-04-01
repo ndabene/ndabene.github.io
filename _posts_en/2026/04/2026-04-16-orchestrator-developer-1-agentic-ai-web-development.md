@@ -30,401 +30,199 @@ faq:
 
 # The Orchestrator Developer #1 — Why Agentic AI Is Truly Changing Web Development
 
-For the past few months, much of the discussion around AI in web development has been circling the same questions:
+For months now, there has been a lot of talk about AI in web development. We compare models, test assistants, look at which one codes the fastest, which one explains the best, which one handles a terminal or an IDE the best. That's normal. It's visible, concrete, immediately measurable.
 
-- which model is the best;
-- which tool codes the fastest;
-- which AI best replaces a junior developer;
-- which assistant generates the best codebase.
+But by constantly looking at AI through the lens of speed or the raw quality of generated code, we're missing what's actually happening.
 
-These questions aren't absurd.
+The real issue isn't just that AI helps produce faster. The real issue is that web development is starting to change in nature. Not in some distant future. Now.
 
-But they miss the point.
+We're moving out of a logic where AI was mainly a brilliant conversational partner — sometimes useful, sometimes approximate, often impressive, but still confined to a form of assistance. What's happening today is different. AI no longer just responds. It's starting to act within the workflow. It reads files, proposes plans, modifies code, runs commands, executes tests, reformulates specs, prepares documentation, helps structure a review, inserts itself into Git branches, interacts with tools.
 
-The real change isn't just that AI helps produce code faster.  
-The real change is that web development is becoming **a system of work orchestrated with agents**.
+And when a technology stops being merely consultative and becomes executable, the consequences go far beyond simple time savings.
 
-And that nuance changes everything.
+That's why I believe agentic AI is truly changing web development.
 
-Because from the moment AI no longer just responds in a chat window, but starts interacting with a terminal, an IDE, a Git branch, tests, documentation, a project environment, or a set of business rules, we're no longer simply in "code assistance" territory.
+Not because it magically replaces developers. Not because it would suddenly write everything perfectly. Not because a single prompt would be enough to produce clean, robust, maintainable applications. On the contrary. Agentic AI changes web development because it shifts where value lies. It shifts it from the act of raw production toward the ability to organize, frame, supervise, and ensure the reliability of a work system.
 
-We're entering a different phase.
-
-A phase where value no longer lies solely in the ability to write code line by line, but in the ability to:
-
-- frame a problem;
-- structure context;
-- break down work;
-- organize roles;
-- control execution;
-- review;
-- arbitrate;
-- guarantee final quality.
-
-In other words: we're moving toward a new profile.
-
-**The orchestrator developer.**
+And that shift is much deeper than it appears.
 
 ## We're No Longer Just in the Prompt Era
 
-The first wave of AI applied to development was mostly based on a simple logic: ask a question, get an answer, correct, repeat.
+The first major phase of AI for developers was conversational. You asked a question, got an answer, corrected, re-prompted. That phase was important. It allowed many people to experience something very concrete: yes, a model can explain a bug, generate a function, propose tests, document a piece of logic, reformulate an architecture idea, speed up tedious work.
 
-That step was useful.
+But that logic also showed its limits very quickly.
 
-It allowed many developers to discover what models were capable of when it came to:
+In a conversation, you can get very good one-off answers. You can even have the impression of a real technical dialogue. Yet, as soon as you enter a real project, the difficulty is almost never in the isolated answer. It's in everything surrounding that answer: the application context, internal conventions, architecture choices already made, existing dependencies, versions to support, historical compromises, business rules, security concerns, the way a team reads, maintains, and evolves code.
 
-- generating functions;
-- explaining code;
-- debugging;
-- reformulation;
-- writing tests;
-- technical documentation.
+That's where a simple exchange, even a very good one, starts showing its fragility.
 
-But this conversational logic also showed its limits very quickly.
+A model can very well produce an elegant solution in the abstract and a completely inadequate one in a real project. Not because it's bad, but because it doesn't naturally work from the same level of context as a team, nor with the same memory of constraints, nor with the same understanding of priorities.
 
-Even a brilliant exchange remains fragile when you need to manage:
+For a while, many believed the main topic would be writing better prompts. In reality, that was only an intermediate step. The topic now becomes much broader: how do we make AI systems work in real software production chains, with real constraints, real verifications, and real responsibilities?
 
-- a real application context;
-- internal conventions;
-- security constraints;
-- existing dependencies;
-- specific business logic;
-- multi-version compatibility;
-- an existing architecture;
-- a history of decisions.
+That's where agentic AI begins.
 
-In short, a good prompt can produce a good one-off answer.
+## The Tipping Point Happens When AI Enters the Workflow
 
-But it's not enough to steer a real production system.
+I think it's important to be very clear on this point: the disruption doesn't just come from models getting better. It comes from them becoming operable in concrete working environments.
 
-That's precisely where agentic AI starts becoming a serious topic for web development — a topic I already explored from a different angle in [The End of the Lone Coder](/en/articles/2026/01/27/orchestrateur-ia-developpeurs-futur/).
+As long as AI remains an assistant in a window, its impact is limited to the quality of its responses. As soon as it enters a work system, the question changes completely.
 
-## What Changes: AI Enters the Workflow
+From the moment an AI can read a repository, understand part of the existing codebase, propose an action plan, modify multiple files, run commands, verify results, document what it did, prepare a sequence of tasks, or pass the baton to another step, we're no longer talking about the same thing.
 
-The turning point isn't just model improvement.
+We're no longer just talking about assistance. We're talking about framed execution.
 
-The turning point is their growing ability to act within a real working environment.
+And that difference profoundly changes how we think about the profession. Because the right question is no longer: *which model codes the best?* The right question becomes: *how do we build a work framework in which agents can produce something useful without degrading quality?*
 
-When an AI can:
+That's an engineering question. It's even, in a way, a new layer of engineering.
 
-- read a codebase;
-- propose a plan;
-- modify multiple files;
-- run commands;
-- execute tests;
-- verify results;
-- write documentation;
-- prepare a review;
-- work with Git;
-- fit into a broader execution sequence,
+Because an agent that acts poorly costs more than an assistant that answers poorly. An assistant that hallucinates in a conversation costs you a bit of time. A poorly framed agent that modifies, executes, chains actions, and drifts in a real project can create confusion, debt, and sometimes much more serious risks.
 
-then it's no longer just a text-based assistant.
+The arrival of agentic AI therefore doesn't reduce the need for rigor. It increases it.
 
-It becomes an active component of the workflow.
+## The Real Change Isn't Speed — It's Work Organization
 
-And from that point, the right question is no longer:
+When people talk about AI for developers, they very quickly fall into an imaginary of immediate productivity. Produce faster. Fix faster. Ship faster. And of course, that acceleration exists. It's real. It would be absurd to deny it.
 
-**"Which AI writes code the best?"**
+But if we stop there, we're reading the phenomenon far too superficially.
 
-The right question becomes:
+In a professional setting, the problem has never been simply writing code. The problem has always been producing a reliable change in an existing system. A change that fits correctly into the architecture, that respects project constraints, that doesn't break something else, that remains understandable by others, that passes through a validation cycle, that can be maintained, picked up, tested, corrected, reviewed.
 
-**"How do we organize work so that agents produce something reliable, useful, readable, and controllable?"**
+In other words, what matters isn't the raw speed of generation. What matters is the ability to move a living system forward without losing its coherence.
 
-That's a much more structuring question.
+That's exactly where agentic AI becomes more interesting than simple code generation. Because it forces us to look at development no longer as an addition of technical tasks, but as a work chain to be structured.
 
-And also a much more interesting one.
+Who does what? With what context? In what order? With what boundaries? With what checkpoints? With what human validation? With what guardrails?
 
-## The Real Issue Isn't Raw Speed
+The further we go in this reflection, the more we understand that performance doesn't come from a model miracle. It comes from the quality of orchestration.
 
-When people talk about AI for developers, the temptation is strong to reduce the debate to speed.
+## The Breakthrough Is Organizational First
 
-Code faster.  
-Debug faster.  
-Produce faster.  
-Ship faster.
+This is, in my view, the most important point and probably the most underestimated.
 
-Of course, there is an acceleration effect.
+We often talk about AI as a technical revolution. That's true, of course. But in web development, the major impact is also organizational. Perhaps even primarily organizational.
 
-It would be absurd to deny it.
+Why? Because a useful agent is never just a performant model. It's a model inserted into a role, into a method, into a frame of action.
 
-But that's not where the deepest transformation lies.
+An agent starts to become truly interesting when we know precisely what we expect from it, what it's allowed to do, what it must not do, what resources it can use, what output level we require, how its work will be verified, and at what point a human takes over.
 
-Because in a professional context, producing code fast is never enough.
+In other words, agentic AI pushes teams to make explicit what they sometimes left implicit.
 
-What really matters is producing a result that is:
+It forces clarification. Breakdown. Naming responsibilities. Structuring sequences. Better distinguishing exploration, implementation, validation, review, quality control.
 
-- consistent with what exists;
-- compatible with the project;
-- maintainable;
-- testable;
-- secure;
-- understandable by a team;
-- integrable into a real delivery cycle.
+That's why I think the teams that will extract the most value from agentic AI won't necessarily be the ones with access to the best models. They'll be the ones that have learned to transform how they work.
 
-The problem was never just "writing code."
-
-The problem has always been producing **a reliable change in a living system**.
-
-And that's precisely why agentic AI becomes more important than simple code generation — a point that echoes what I explained in [The Illusion of Disposable Code](/en/articles/2026/01/13/illusion-code-jetable-ia-prestashop/).
-
-## The Breakthrough Is Organizational Before It's Technical
-
-This is probably the most underestimated point today.
-
-Agentic AI isn't just an interface or model innovation.  
-It's a work organization innovation.
-
-Why?
-
-Because an effective agent isn't just a stronger LLM.
-
-A useful agent operates within a framework:
-
-- with a defined role;
-- with clear boundaries;
-- with explicit context;
-- with authorized tools;
-- with an identifiable mission;
-- with a way to deliver its work;
-- with control checkpoints.
-
-From that point, the nature of work changes.
-
-We no longer simply ask an AI "do this for me."
-
-We design a more rigorous sequence:
-
-1. understand the request;
-2. frame the scope;
-3. decide who does what;
-4. sequence the tasks;
-5. control the outputs;
-6. correct deviations;
-7. validate the final result.
-
-In other words: effectiveness comes less and less from the model's magic, and more and more from the quality of orchestration.
+The best won't just be assisted. They'll be better organized.
 
 ## The Developer Doesn't Disappear — They Shift Their Center of Gravity
 
-This is often the point that crystallizes fears or excessive reactions.
+This is often where reactions become caricatured. On one side, we hear that AI will replace developers. On the other, we repeat that it can't properly finish a real project and therefore shouldn't be taken too seriously.
 
-Some imagine AI will replace developers.  
-Others argue it's just a gadget incapable of finishing a real project properly.
+I think both positions miss the point.
 
-Both readings seem insufficient to me.
+The developer doesn't disappear. But their center of gravity shifts.
 
-AI doesn't eliminate the need for developers.
+Some tasks become easier to accelerate: generating a base, proposing multiple variants, documenting a piece of logic, quickly exploring a path, automating part of repetitive work. This movement is real. It will continue. And it will banalize a portion of raw production.
 
-It shifts where value lies.
+In parallel, other skills gain more value. Framing. Understanding the real need. The quality of context given to the system. Breaking down a complex task into verifiable steps. Reading impacts. Anticipating side effects. Architecture. Security. Arbitrating between imperfect options. The ability to say stop, to correct a drift, to refuse a seductive but fragile solution.
 
-Some tasks become easier to accelerate:
+That's where the profession transforms.
 
-- producing a skeleton;
-- generating variants;
-- proposing structures;
-- drafting documentation bases;
-- exploring paths;
-- automating repetitive operations.
+The valuable developer is no longer just the one who knows how to produce. Increasingly, it's the one who knows how to organize augmented production without losing control of the result.
 
-On the other hand, other dimensions grow in importance:
+That's why I use the term **orchestrator developer**.
 
-- the quality of framing;
-- the precision of context;
-- architecture;
-- security;
-- validation;
-- arbitrating between options;
-- overall coherence;
-- the ability to spot drift;
-- responsibility for the final deliverable.
+Not to create a new buzzword, but to name this shift. We remain in development. We remain in technique. We remain responsible for the deliverable. But we add a dimension that has become central: the ability to intelligently make a set of agents, tools, validations, and contexts work together.
 
-The valuable developer is no longer just the one who knows how to produce.  
-Increasingly, it's the one who knows how to **steer assisted production**.
+## The Trap Would Be Believing a Good Model Is Enough
 
-That's why I talk about the orchestrator developer.
+There's a seductive idea circulating widely: as models get better, problems will disappear on their own. It will then be enough to choose the right actor, the right interface, or the right agent, and the machine will produce the rest.
 
-## The Dangerous Illusion: Believing a Good Model Is Enough
+In practice, that's not how it works.
 
-A common mistake is to believe that model progress alone will solve the problem.
+Even an excellent model drifts if the request is vague. Even an excellent model makes mistakes if important constraints aren't explicit. Even an excellent model produces noise if nobody actually verifies what it does. Even an excellent model can give an illusion of coherence while accumulating fragile assumptions.
 
-This idea is seductive.
+That's precisely what makes the topic interesting: final quality depends less on the model's supposed "genius" than on the solidity of the framework in which it's made to work.
 
-It lets you think that tomorrow, all you'll need is to pick the best model to get the best results.
+And that reality changes the nature of differentiation.
 
-But in practice, it doesn't work like that.
+The difference won't come solely from access to a better AI. It will come from the ability to build better work systems around it. Better contexts. Better methods. Better checkpoints. Better rules for passing between stages. Better validation habits.
 
-Even a very good model drifts when:
+In other words, the advantage won't just be technical. It will be methodological.
 
-- the need is unclear;
-- the context is incomplete;
-- constraints aren't explicit;
-- responsibilities are poorly distributed;
-- the verification method is absent;
-- nobody actually controls the work chain.
+## Web Development Becomes a More Explicit System
 
-In other words, the weakness of an agentic system often comes less from the model than from the framework in which it's used — a risk I detailed in [AI and Development: Mastering Invisible Traps](/en/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/).
+For a long time, much of development relied on a form of human compression. The developer absorbed many things on their own: the request, the context, the constraints, historical decisions, the riskiest paths, project habits, how to avoid certain errors, delivery trade-offs.
 
-That's excellent news for serious teams.
+With agentic AI, part of that compression must be reopened and structured.
 
-Why?
+What was implicit must be made explicit. What was held in memory must be documented, transmitted, made operable. What was diffuse across a team must sometimes be transformed into exploitable context, into rules, into patterns, into steps, into controls.
 
-Because it means the difference won't come solely from access to a more powerful AI, but from the ability to build a more solid method.
+This is an important change, because it pushes web development toward a more systemic logic.
 
-## Web Development Enters a Systems Logic
+The project is no longer just a codebase. It also becomes a set of conventions, flows, validation points, decision memories, and tool-enabled roles. The developer doesn't lose their place in this system. On the contrary, they become an even more strategic piece. Because someone has to give it shape. Someone has to decide the level of trust. Someone has to take back control when automation becomes imprecise. Someone has to keep responsibility for the result.
 
-For a long time, much of the value rested on the individual developer's ability to hold everything together:
+Agentic AI doesn't erase the developer. It brings to light what good developers were already often doing without necessarily formalizing it: structuring, prioritizing, coordinating, verifying, connecting.
 
-- understand;
-- decide;
-- write;
-- correct;
-- document;
-- verify;
-- ship.
+## Productivity Changes Its Definition
 
-That model hasn't disappeared.
+This is another major consequence.
 
-But it's starting to be complemented by something else.
+For a long time, productivity could be read fairly simply: execution speed, quantity produced, delivery pace, ability to handle tickets, ship features, fix bugs.
 
-Modern web development is progressively becoming a system composed of:
+With agentic AI, that reading becomes too poor.
 
-- models;
-- agents;
-- tools;
-- context memory;
-- business rules;
-- validation processes;
-- review workflows;
-- Git practices;
-- tests;
-- security guardrails.
+A developer can now go very fast while creating more noise around them. They can produce more code, more changes, more branches, more intermediate outputs… without necessarily increasing the net value for the project. Sometimes even degrading it, if nothing is truly orchestrated.
 
-In this framework, the developer retains a central role, but that role isn't exactly the same anymore.
+Real productivity therefore becomes more demanding. It's no longer just the ability to accelerate. It's the ability to accelerate without losing control, without diluting coherence, without exploding the review load, without creating silent debt that the team will pay for later.
 
-They become the one who connects.
+This nuance is essential. Because it reminds us of something simple: speed only makes sense if it remains compatible with quality.
 
-The one who transforms a request into an exploitable work chain.
+And in an agentic environment, quality no longer comes solely from individual production talent. It also comes from how the work has been framed, distributed, verified, and picked back up.
 
-The one who prevents a powerful system from producing incoherent results.
+## The Best Will Learn to Organize, Not Just to Prompt
 
-The one who knows when to trust, when to verify, when to interrupt, when to resume, when to arbitrate.
+I think the developers who will extract the most value from this phase won't necessarily be the ones who accumulate prompts or change tools every two weeks. They'll be the ones who understand that the core topic is the structuring of work.
 
-This evolution is profound.
+They'll learn faster than others how to transform a vague request into clear steps. To define clear roles. To demand verifiable outputs. To give useful context rather than noise. To bring human review in at the right moment. To distinguish what can be largely automated from what must remain strongly arbitrated.
 
-And it concerns far more than just "AI" projects.
+In short, they'll understand that agentic AI isn't primarily a topic of technological fascination. It's a topic of discipline.
 
-It concerns the very way we develop on real web projects.
+And that's perhaps the most counter-intuitive point of this new phase: the more capable AI becomes, the more it demands a serious framework to produce lasting value.
 
-## Productivity No Longer Means the Same Thing
+Not less method. More method.  
+Not less rigor. More rigor.  
+Not less engineering. Broader engineering.
 
-This is another major shift.
+## The Real Topic Is Already Ahead of Us
 
-Before, a developer's productivity could be read fairly directly:
+At this stage, the question is no longer really whether agents will find a place in web development. That place is being built before our eyes.
 
-- how much they produce;
-- how much they fix;
-- how much they ship;
-- how fast they move forward.
+The real question is rather this one: what kind of work system are we going to build around them?
 
-With agentic AI, that reading becomes too narrow.
+Because an agent without a framework is just an ambiguity amplifier. An AI without context is just a faster approximation. An automation without validation is just a better-packaged risk.
 
-Because a developer can now produce much faster… while introducing more noise, more inconsistencies, more debt, or more risk if nothing is truly orchestrated.
+Agentic AI is not a magic shortcut. It's a new layer of responsibility.
 
-So real productivity changes its definition.
-
-It becomes the ability to move an augmented production system forward **without losing quality**.
-
-That requires:
-
-- knowing how to break things down;
-- reducing ambiguity;
-- creating validation checkpoints;
-- maintaining a high level of readability;
-- securing the final deliverable.
-
-Speed alone is no longer enough as a metric.
-
-The right metric is the ability to accelerate **without losing control**.
-
-## What the Best Developers Will Learn Faster Than Others
-
-In my view, the developers who will extract the most value from this phase won't necessarily be the ones who "prompt" the most.
-
-They'll be the ones who understand early on that agentic AI is a structural topic.
-
-They'll learn faster than others how to:
-
-- provide a framework rather than a simple instruction;
-- transform a vague request into clear sub-tasks;
-- have multiple roles work together rather than one indistinct block;
-- demand verifiable outputs;
-- place human review at the right point;
-- articulate tools, agents, context, and validation.
-
-In short, they won't just try to use AI.
-
-They'll learn to **organize work with it**.
-
-And that's exactly where part of the new differentiation will be decided — a topic I also explore in [I Stopped BMAD](/en/articles/2026/04/14/jai-arrete-bmad-voici-ce-qui-la-remplace/).
-
-## The Question Isn't "Should We Use Agents?"
-
-At this stage, I think the interesting question is no longer whether or not to use agents in web development.
-
-The real question has become:
-
-**what system of work are we going to build around them?**
-
-Because agents are worthless without method.  
-Models are worthless without context.  
-Speed is worthless without control.  
-And automation is worthless if it degrades quality.
-
-Agentic AI is therefore not a magic shortcut.
-
-It's a new layer of engineering.
-
-And like any engineering layer, it rewards rigorous approaches far more than disorganized enthusiasm.
+And that's why it truly changes web development. Not because it would eliminate the need for developers, but because it forces developers to make more explicit, more structured, and more governed everything that actually enables producing quality.
 
 ## Conclusion
 
-Agentic AI is truly changing web development.
+Agentic AI doesn't just mark a new step in code assistance. It opens a phase where web development becomes more systemic, more orchestrated, more dependent on the quality of context, breakdown, validation, and supervision.
 
-Not just because it lets us produce faster.  
-Not just because it improves code assistance.  
-Not just because it automates certain tasks.
+This change is profound, because it touches less the spectacle of generation and more the reality of production.
 
-It changes web development because it transforms the very organization of work.
+In this landscape, the developer doesn't fade away. They become more central on what truly matters: understanding, framing, structuring, arbitrating, verifying, assuming the final result.
 
-It imposes new questions:
+In other words, they don't stop being a developer. They also become an orchestrator.
 
-- how to structure context;
-- how to distribute roles;
-- how to make execution reliable;
-- how to verify;
-- how to maintain control;
-- how to articulate human expertise and specialized agents.
-
-In this new landscape, the developer doesn't disappear.
-
-They become more strategic.
-
-Less focused on raw production alone.  
-More focused on framing, coherence, supervision, and arbitration.
-
-That's why I talk about the **orchestrator developer**.
-
-And this is only the beginning.
-
-In the next article, I'll go further on a key point:
-
-**why a single agent is not enough.**
+And that's precisely what I'll dig into in the next article of this series: why a single agent is not enough.
 
 ---
 
 ## Coming up in this series
 
-- **#1 — Why Agentic AI Is Truly Changing Web Development**
-- **#2 — Why a Single Agent Is Not Enough**
-- **#3 — Why Skills, Context, and Method Change Everything**
-- **#4 — The New Job: Frame, Orchestrate, Arbitrate**
+**The Orchestrator Developer #1 — Why Agentic AI Is Truly Changing Web Development**  
+**The Orchestrator Developer #2 — Why a Single Agent Is Not Enough**  
+**The Orchestrator Developer #3 — Why Skills, Context, and Method Change Everything**  
+**The Orchestrator Developer #4 — The New Job: Frame, Orchestrate, Arbitrate**
