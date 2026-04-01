@@ -60,7 +60,7 @@ Un modèle peut très bien produire une solution élégante dans l'absolu et com
 
 Pendant un moment, beaucoup ont cru que le sujet principal serait d'écrire de meilleurs prompts. En réalité, ce n'était qu'une étape intermédiaire. Le sujet devient maintenant beaucoup plus large : comment fait-on travailler des systèmes d'IA dans de vraies chaînes de production logicielle, avec de vraies contraintes, de vraies vérifications, et de vraies responsabilités ?
 
-C'est là que l'agentique commence.
+C'est là que l'agentique commence — un sujet que j'avais déjà abordé sous un autre angle dans [Fini le codeur solitaire](/articles/2026/01/27/orchestrateur-ia-developpeurs-futur/).
 
 ## Le basculement se produit quand l'IA entre dans le workflow
 
@@ -94,7 +94,7 @@ C'est exactement là que l'agentique devient plus intéressante que la simple g�
 
 Qui fait quoi ? Avec quel contexte ? Dans quel ordre ? Avec quelles limites ? Avec quels points de contrôle ? Avec quelle validation humaine ? Avec quels garde-fous ?
 
-Plus on avance dans cette réflexion, plus on comprend que la performance ne vient pas d'un miracle du modèle. Elle vient de la qualité de l'orchestration.
+Plus on avance dans cette réflexion, plus on comprend que la performance ne vient pas d'un miracle du modèle. Elle vient de la qualité de l'orchestration — un point qui rejoint ce que j'expliquais dans [L'illusion du code jetable](/articles/2026/01/13/illusion-code-jetable-ia-prestashop/).
 
 ## La rupture est d'abord organisationnelle
 
@@ -148,7 +148,7 @@ Et cette réalité change la nature de la différenciation.
 
 La différence ne se fera pas uniquement sur l'accès à une meilleure IA. Elle se fera sur la capacité à construire de meilleurs systèmes de travail autour d'elle. De meilleurs contextes. De meilleures méthodes. De meilleurs points de contrôle. De meilleures règles de passage entre les étapes. De meilleures habitudes de validation.
 
-Autrement dit, l'avantage ne sera pas seulement technique. Il sera méthodologique.
+Autrement dit, l'avantage ne sera pas seulement technique. Il sera méthodologique — un risque que je détaillais dans [IA et développement : maîtriser les pièges invisibles](/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/).
 
 ## Le développement web devient un système plus explicite
 
@@ -192,7 +192,7 @@ Et c'est sans doute là le point le plus contre-intuitif de cette nouvelle phase
 
 Pas moins de méthode. Plus de méthode.  
 Pas moins de rigueur. Plus de rigueur.  
-Pas moins d'ingénierie. Une ingénierie plus large.
+Pas moins d'ingénierie. Une ingénierie plus large — un sujet que j'explore aussi dans [J'ai arrêté BMAD](/articles/2026/04/14/jai-arrete-bmad-voici-ce-qui-la-remplace/).
 
 ## Le vrai sujet est déjà devant nous
 

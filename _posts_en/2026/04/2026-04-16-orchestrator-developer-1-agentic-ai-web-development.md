@@ -60,7 +60,7 @@ A model can very well produce an elegant solution in the abstract and a complete
 
 For a while, many believed the main topic would be writing better prompts. In reality, that was only an intermediate step. The topic now becomes much broader: how do we make AI systems work in real software production chains, with real constraints, real verifications, and real responsibilities?
 
-That's where agentic AI begins.
+That's where agentic AI begins — a topic I already explored from a different angle in [The End of the Lone Coder](/en/articles/2026/01/27/orchestrateur-ia-developpeurs-futur/).
 
 ## The Tipping Point Happens When AI Enters the Workflow
 
@@ -94,7 +94,7 @@ That's exactly where agentic AI becomes more interesting than simple code genera
 
 Who does what? With what context? In what order? With what boundaries? With what checkpoints? With what human validation? With what guardrails?
 
-The further we go in this reflection, the more we understand that performance doesn't come from a model miracle. It comes from the quality of orchestration.
+The further we go in this reflection, the more we understand that performance doesn't come from a model miracle. It comes from the quality of orchestration — a point that echoes what I explained in [The Illusion of Disposable Code](/en/articles/2026/01/13/illusion-code-jetable-ia-prestashop/).
 
 ## The Breakthrough Is Organizational First
 
@@ -148,7 +148,7 @@ And that reality changes the nature of differentiation.
 
 The difference won't come solely from access to a better AI. It will come from the ability to build better work systems around it. Better contexts. Better methods. Better checkpoints. Better rules for passing between stages. Better validation habits.
 
-In other words, the advantage won't just be technical. It will be methodological.
+In other words, the advantage won't just be technical. It will be methodological — a risk I detailed in [AI and Development: Mastering Invisible Traps](/en/articles/2025/12/09/ia-developpement-maitriser-pieges-invisibles/).
 
 ## Web Development Becomes a More Explicit System
 
@@ -192,7 +192,7 @@ And that's perhaps the most counter-intuitive point of this new phase: the more 
 
 Not less method. More method.  
 Not less rigor. More rigor.  
-Not less engineering. Broader engineering.
+Not less engineering. Broader engineering — a topic I also explore in [I Stopped BMAD](/en/articles/2026/04/14/jai-arrete-bmad-voici-ce-qui-la-remplace/).
 
 ## The Real Topic Is Already Ahead of Us
 
