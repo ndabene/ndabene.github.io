@@ -51,90 +51,22 @@ llm_topics:
     <div class="container">
         {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
             , "post.linkedin != true" %} {% if published_posts.size> 0 %}
-            
-            <!-- GRILLE ÉDITORIALE - Style Portail de Presse (Mobile First) -->
-            {% assign published_posts = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post", "post.linkedin != true" | sort: "date" | reverse %}
-            {% assign hero_post = published_posts.first %}
-            
-            <!-- À LA UNE - Article dominant (le plus récent) -->
-            <a href="{{ hero_post.url | relative_url }}" class="editorial-hero">
-                <div class="editorial-hero__image">
-                    {% if hero_post.image %}
-                    {% include responsive-image.html src=hero_post.image alt=hero_post.title loading="eager" fetchpriority="high" %}
-                    {% else %}
-                    {% include responsive-image.html src="/assets/images/default-hero.jpg" alt=hero_post.title loading="eager" %}
-                    {% endif %}
+            <div class="bento-blog-grid">
+                <!-- BENTO HERO: Latest Post -->
+                <div class="bento-hero">
+                    {% assign hero_post = published_posts.first %}
+                    {% include hero-article.html post=hero_post %}
                 </div>
-                <div class="editorial-hero__content">
-                    {% if hero_post.categories.size > 0 %}
-                    <span class="editorial-hero__category">{{ hero_post.categories | first }}</span>
-                    {% endif %}
-                    <h2 class="editorial-hero__title">{{ hero_post.title }}</h2>
-                    {% if hero_post.excerpt %}
-                    <p class="editorial-hero__excerpt">{{ hero_post.excerpt | strip_html | truncate: 150 }}</p>
-                    {% endif %}
-                    <div class="editorial-hero__meta">
-                        <time>{% include date-fr.html date=hero_post.date %}</time>
-                        {% if hero_post.estimated_reading_time %}
-                        <span>{{ hero_post.estimated_reading_time | remove: ' minutes' }} min de lecture</span>
-                        {% endif %}
-                    </div>
-                </div>
-            </a>
 
-            <!-- ARTICLES SECONDAIRES - Articles anciens remis en avant (après le fil d'actualité) -->
-            {% if published_posts.size > 9 %}
-            <div class="editorial-secondary">
-                {% assign secondary_posts = published_posts | offset: 9 | limit: 3 %}
-                {% for post in secondary_posts %}
-                <a href="{{ post.url | relative_url }}" class="editorial-secondary-card">
-                    <div class="editorial-secondary-card__image">
-                        {% include responsive-image.html src=post.image alt=post.title loading="lazy" %}
-                    </div>
-                    <div class="editorial-secondary-card__content">
-                        {% if post.categories.size > 0 %}
-                        <span class="editorial-secondary-card__category">{{ post.categories | first }}</span>
-                        {% endif %}
-                        <h3 class="editorial-secondary-card__title">{{ post.title }}</h3>
-                        {% if post.excerpt %}
-                        <p class="editorial-secondary-card__excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>
-                        {% endif %}
-                        <div class="editorial-secondary-card__meta">
-                            <time>{% include date-fr.html date=post.date %}</time>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-            {% endif %}
-
-            <!-- FIL D'ACTUALITÉ - Articles récents (ceux juste après le hero) -->
-            {% if published_posts.size > 1 %}
-            <div class="editorial-newsfeed">
-                <h3 class="editorial-newsfeed__title">Derniers articles</h3>
-                <div class="editorial-newsfeed__list">
-                    {% for post in published_posts offset: 1 limit: 8 %}
-                    <a href="{{ post.url | relative_url }}" class="editorial-newsfeed-item">
-                        <div class="editorial-newsfeed-item__image">
-                            {% include responsive-image.html src=post.image alt=post.title loading="lazy" %}
-                        </div>
-                        <div class="editorial-newsfeed-item__content">
-                            {% if post.categories.size > 0 %}
-                            <span class="editorial-newsfeed-item__category">{{ post.categories | first }}</span>
-                            {% endif %}
-                            <h4 class="editorial-newsfeed-item__title">{{ post.title }}</h4>
-                            <div class="editorial-newsfeed-item__meta">
-                                <time>{% include date-fr.html date=post.date %}</time>
-                                {% if post.estimated_reading_time %}
-                                <span>{{ post.estimated_reading_time | remove: ' minutes' }} min</span>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </a>
+                <!-- BENTO FEATURED: Articles 2 & 3 -->
+                {% if published_posts.size > 1 %}
+                <div class="bento-featured-list">
+                    {% for post in published_posts offset: 1 limit: 2 %}
+                    {% include featured-article-card.html post=post %}
                     {% endfor %}
                 </div>
+                {% endif %}
             </div>
-            {% endif %}
 
     </div>
 </section>
@@ -147,7 +79,7 @@ llm_topics:
             <!-- 3. Liste des Articles -->
             <div class="post-list-news grid-view" id="blog-posts-container">
                 {% assign published_posts_list = site.posts | where_exp: "post", "post.date <= site.time" |
-                    where_exp: "post" , "post.linkedin != true" | offset: 12 %} {% assign initial_load_count=12 %} {%
+                    where_exp: "post" , "post.linkedin != true" | offset: 4 %} {% assign initial_load_count=12 %} {%
                     include blog-post-loop.html posts=published_posts_list limit=initial_load_count %} {% if
                     published_posts_list.size> initial_load_count %}
                     <div id="lazy-posts-data" style="display: none;">
@@ -181,7 +113,7 @@ llm_topics:
             {% assign posts_per_page = 6 %}
             {% assign temp_posts_2 = site.posts | where_exp: "post", "post.date <= site.time" | where_exp: "post"
                 , "post.linkedin != true" %} {% assign published_posts_count=temp_posts_2 | size %} {% assign
-                remaining_posts=published_posts_count | minus: 12 %} {% if remaining_posts> initial_load_count %}
+                remaining_posts=published_posts_count | minus: 4 %} {% if remaining_posts> initial_load_count %}
                 <div class="pagination-container">
                     <div class="pagination">
                         <button id="prev-page" class="pagination-btn" disabled>&laquo; Précédent</button>

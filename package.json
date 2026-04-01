@@ -4,12 +4,10 @@
   "description": "Portfolio de Nicolas Dabène - Senior PHP Developer & AI Orchestrator",
   "scripts": {
     "build": "bundle exec jekyll build --config _config.yml,_config_github.yml",
-    "build:css": "ruby -e \"require 'sass'; scss = File.read('assets/css/style.scss').split('---', 3).last; css = Sass::Engine.new(scss, {syntax: :scss, cache: false, read_cache: false, filename: 'style.scss', load_paths: ['_sass', '.'], style: :compressed, precision: 10, quiet_deps: true}).to_css; File.write('_site/assets/css/style.css', css)\"",
-    "build:full": "npm run build && npm run build:css",
     "serve": "bundle exec jekyll serve --port 4000",
     "dev": "bundle exec jekyll serve --config _config.yml,_config_dev.yml --limit_posts 5 --port 4000",
     "clean": "bundle exec jekyll clean",
-    "rebuild": "npm run clean && npm run build:full",
+    "rebuild": "npm run clean && npm run build",
     "validate:produits": "ruby scripts/validate_produits.rb",
     "validate:frontmatter": "ruby scripts/validate_frontmatter.rb",
     "generate:webp": "node scripts/generate-webp.js",
