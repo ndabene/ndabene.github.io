@@ -1,31 +1,36 @@
 ---
 layout: default
-title: "Agence PrestaShop IA — Squad d'agents spécialisés"
+title: "Agence IA E-commerce — Vision du développement agentic | Nicolas Dabène"
 permalink: /agence-prestashop-ia/
 ref: prestashop-ai-agency
-description: "Agence PrestaShop IA : 13 agents spécialisés (builder, ops, sécurité, packaging, migration). Équipe disponible 24h/24 pour vos modules PS 8 & 9."
+description: "Le développement e-commerce change de nature. 90+ agents IA spécialisés, 4 plateformes, 15 ans d'expertise. Découvrez la vision agentic et réservez une session exploratoire gratuite."
 date: 2025-01-15
-last_modified_at: 2026-03-28
+last_modified_at: 2026-04-03
 image: "/assets/images/agence-prestashop-ia/og-image.webp"
-image_alt: "Agence PrestaShop IA - Nicolas Dabène - Squad d'agents IA spécialisés"
+image_alt: "Agence IA E-commerce — Vision du développement agentic — Nicolas Dabène"
 alternates:
   - lang: en
     url: /en/prestashop-ai-agency/
 body_class: homepage-creator
 ---
 
-<!-- HERO SECTION - Same as homepage -->
+<!-- ============================================================
+     BLOC 1 — HERO
+     ============================================================ -->
 <section class="hero-prestashop-ai" style="padding: 6rem 0 4rem;">
     <div class="container-creator">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
-                13 agents · PS 8 & 9 · 24h/24
+        <div style="text-align: center; max-width: 820px; margin: 0 auto;">
+            <span style="display: inline-block; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 0.5rem 1.25rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 1.75rem;">
+                Vision 2026 &middot; Développement Agentic
             </span>
-            <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
-                <span class="hero-title-main">Agence PrestaShop IA — Squad d'agents spécialisés</span>
+            <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2; color: white;">
+                Le développement e-commerce est en train de changer de nature
             </h1>
-            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 0; text-align: center;">
-                Chaque agent est spécialisé sur un domaine précis du développement PrestaShop. Ensemble, ils couvrent l'intégralité du cycle de vie d'un module — de la spec fonctionnelle à la mise en production.
+            <p class="hero-description" style="font-size: 1.15rem; line-height: 1.8; color: #9ca3af; max-width: 680px; margin: 0 auto 0.75rem;">
+                Pas d'outils. De nature.
+            </p>
+            <p style="font-size: 1rem; line-height: 1.8; color: #6b7280; max-width: 680px; margin: 0 auto;">
+                6 mois de R&amp;D, beaucoup de café, et 90+ agents IA spécialisés plus tard — voici ce que le développement e-commerce est en train de devenir. Ce n'est pas de la prospective : c'est mon quotidien. Et ça change tout — pour les marchands, les agences et les développeurs.
             </p>
         </div>
     </div>
@@ -35,106 +40,91 @@ body_class: homepage-creator
     </div>
 </section>
 
-<!-- SQUAD CORE -->
-<section class="section-creator" style="padding: 3rem 0 4rem; background: #0d0d14; margin: 0;">
+<!-- ============================================================
+     BLOC 2 — TIMELINE : 3 HORIZONS
+     ============================================================ -->
+<section class="section-creator" style="padding: 5rem 0; background: #0d0d14; margin: 0;">
     <div class="container-creator">
-        <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Squad core</p>
-            <h2 class="section-title-creator" style="font-size: 1.75rem;">Conception, opérations, packaging</h2>
+
+        <div class="section-header-creator" style="text-align: center; margin-bottom: 3.5rem;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">L'évolution en cours</p>
+            <h2 class="section-title-creator" style="font-size: 1.75rem; color: white; margin-bottom: 0.75rem;">Trois étapes d'une transformation qui s'accélère</h2>
+            <p style="color: #6b7280; font-size: 0.95rem;">Où en êtes-vous sur cette courbe ?</p>
         </div>
-        
-        <div class="ecosystem-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            
-            <!-- Mathieu - Builder -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg role="img" aria-label="Mathieu - Builder" viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="75" rx="25" ry="15" fill="#1a1a2e" stroke="#4775ff" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="22" fill="#1a1a2e" stroke="#4775ff" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="42" cy="42" r="3" fill="#4775ff"/>
-                        <circle cx="58" cy="42" r="3" fill="#4775ff"/>
-                        <path d="M42 52 Q50 58 58 52" stroke="#4775ff" stroke-width="2" fill="none"/>
-                        <g transform="translate(50, 25)" opacity="0.4">
-                            <circle cx="0" cy="0" r="8" stroke="#4775ff" stroke-width="2" fill="none"/>
-                            <line x1="-8" y1="0" x2="8" y2="0" stroke="#4775ff" stroke-width="1.5"/>
-                            <line x1="0" y1="-8" x2="0" y2="8" stroke="#4775ff" stroke-width="1.5"/>
-                            <line x1="-6" y1="-6" x2="6" y2="6" stroke="#4775ff" stroke-width="1"/>
-                            <line x1="6" y1="-6" x2="-6" y2="6" stroke="#4775ff" stroke-width="1"/>
-                        </g>
-                        <circle cx="85" cy="15" r="6" fill="#4775ff" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#4775ff"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #4775ff; background: rgba(71, 117, 255, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">Builder</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Mathieu</h3>
-                    </div>
+
+        <!-- Timeline progress bar -->
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 2.5rem; gap: 0; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #475569; flex-shrink: 0;"></div>
+            <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #475569 0%, #4775ff 50%);"></div>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #4775ff; flex-shrink: 0; box-shadow: 0 0 10px rgba(71,117,255,0.5);"></div>
+            <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #4775ff 0%, #1f1f2e 100%);"></div>
+            <div style="width: 14px; height: 14px; border-radius: 50%; background: #1f1f2e; border: 2px solid #334155; flex-shrink: 0;"></div>
+        </div>
+
+        <!-- 3 colonnes -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+
+            <!-- HIER -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.75rem; transition: all 0.3s ease;">
+                <div style="margin-bottom: 1.25rem;">
+                    <span style="font-size: 1.5rem;" aria-hidden="true">🔧</span>
+                    <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: #475569; margin: 0.75rem 0 0.25rem;">Hier</p>
+                    <h3 style="font-size: 1.1rem; color: #9ca3af; margin: 0; font-weight: 600;">Le modèle artisanal</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Architecture module PS 8/9. Patterns Symfony, hooks CQRS, Command Bus. De la spec à l'implémentation.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">PRD</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Architecture</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Hooks</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">PHP</span>
+                <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                    Un développeur par tâche. Des tickets en séquence. Chaque correction de bug, chaque release, chaque audit de sécurité demande du temps humain. Beaucoup de temps humain.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Marchand :</span> chaque évolution coûte cher et prend du temps</p>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Agence :</span> difficile de scaler sans recruter</p>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Dev :</span> journées sur du répétitif au lieu de l'architecture</p>
                 </div>
             </div>
 
-            <!-- Sébastien - Ops -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="75" rx="25" ry="15" fill="#2a1515" stroke="#e85555" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="22" fill="#2a1515" stroke="#e85555" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="42" cy="42" r="3" fill="#e85555"/>
-                        <circle cx="58" cy="42" r="3" fill="#e85555"/>
-                        <path d="M42 52 Q50 58 58 52" stroke="#e85555" stroke-width="2" fill="none"/>
-                        <g transform="translate(50, 30)" opacity="0.4">
-                            <path d="M-8 -5 L-8 8 L8 8 L8 -5 L3 -10 L-3 -10 Z" stroke="#e85555" stroke-width="2" fill="none"/>
-                            <path d="M-3 2 L0 5 L3 2" stroke="#e85555" stroke-width="2" fill="none"/>
-                        </g>
-                        <circle cx="85" cy="15" r="6" fill="#e85555" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#e85555"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #e85555; background: rgba(232, 85, 85, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">Ops</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Sébastien</h3>
-                    </div>
+            <!-- AUJOURD'HUI -->
+            <div class="ecosystem-card" style="background: #0f1526; border: 1px solid #1e2d4a; border-radius: 12px; padding: 1.75rem; transition: all 0.3s ease; position: relative;">
+                <!-- Badge "J'en suis là" -->
+                <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 20px; white-space: nowrap; letter-spacing: 0.5px;">
+                    ← J'en suis là
                 </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Sécurité OWASP, taint analysis, audit de vulnérabilités. Protection des données et conformité.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">OWASP</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Security</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">PHPUnit</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Multistore</span>
+                <div style="margin-bottom: 1.25rem; margin-top: 0.5rem;">
+                    <span style="font-size: 1.5rem;" aria-hidden="true">🤖</span>
+                    <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: #4775ff; margin: 0.75rem 0 0.25rem;">Aujourd'hui</p>
+                    <h3 style="font-size: 1.1rem; color: white; margin: 0; font-weight: 600;">L'orchestration assistée</h3>
+                </div>
+                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.7; margin-bottom: 0.75rem;">
+                    Des agents IA spécialisés par domaine exécutent les tâches techniques. Un expert humain orchestre, supervise et prend les décisions clés. Sécurité, qualité, packaging, SEO — traités en parallèle, pas en séquence.
+                </p>
+                <p style="color: #6b7280; font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                    90+ agents spécialisés couvrant 4 plateformes e-commerce. Conception, sécurité, tests, release, traduction, SEO, contenu — chaque domaine a ses spécialistes IA.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin: 0; line-height: 1.5;"><span style="color: #4775ff; font-weight: 600;">→ Marchand :</span> des livraisons plus rapides et plus fiables</p>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin: 0; line-height: 1.5;"><span style="color: #4775ff; font-weight: 600;">→ Agence :</span> multiplier la capacité sans multiplier l'équipe</p>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin: 0; line-height: 1.5;"><span style="color: #4775ff; font-weight: 600;">→ Dev :</span> se concentrer sur l'architecture et les décisions</p>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem;">
+                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px;">PrestaShop</span>
+                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px;">WooCommerce</span>
+                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px;">Shopware</span>
+                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px;">Sylius</span>
                 </div>
             </div>
 
-            <!-- Élise - Packager -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="75" rx="25" ry="15" fill="#1f1a0f" stroke="#f0b429" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="22" fill="#1f1a0f" stroke="#f0b429" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="42" cy="42" r="3" fill="#f0b429"/>
-                        <circle cx="58" cy="42" r="3" fill="#f0b429"/>
-                        <path d="M42 52 Q50 58 58 52" stroke="#f0b429" stroke-width="2" fill="none"/>
-                        <g transform="translate(50, 25)" opacity="0.4">
-                            <rect x="-10" y="-8" width="20" height="16" rx="2" stroke="#f0b429" stroke-width="2" fill="none"/>
-                            <rect x="-3" y="-12" width="6" height="5" stroke="#f0b429" stroke-width="2" fill="none"/>
-                        </g>
-                        <circle cx="85" cy="15" r="6" fill="#f0b429" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#f0b429"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #f0b429; background: rgba(240, 180, 41, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">Packager</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Élise</h3>
-                    </div>
+            <!-- DEMAIN -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.75rem; transition: all 0.3s ease;">
+                <div style="margin-bottom: 1.25rem;">
+                    <span style="font-size: 1.5rem;" aria-hidden="true">🚀</span>
+                    <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; color: #475569; margin: 0.75rem 0 0.25rem;">Demain</p>
+                    <h3 style="font-size: 1.1rem; color: #9ca3af; margin: 0; font-weight: 600;">L'orchestration autonome</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Release, CI/CD, packaging marketplace. PHP headers, PHPStan, changelog sémantique.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">CI/CD</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">PHPStan</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Pipeline</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Marketplace</span>
+                <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                    Les agents se coordonnent entre domaines. Un brief marchand déclenche une chaîne complète : architecture → développement → audit sécurité → SEO → release. L'humain valide les décisions stratégiques, pas les tâches.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Marchand :</span> du brief à la mise en production, orchestré</p>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Agence :</span> une capacité de delivery inédite</p>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0; line-height: 1.5;"><span style="color: #475569; font-weight: 600;">→ Dev :</span> le métier devient orchestration et gouvernance</p>
                 </div>
             </div>
 
@@ -142,402 +132,209 @@ body_class: homepage-creator
     </div>
 </section>
 
-<!-- SPÉCIALISTES -->
-<section class="section-creator" style="padding: 3rem 0 4rem; background: #0a0a0f; margin: 0;">
+<!-- ============================================================
+     BLOC 3 — SIGNAUX : POURQUOI MAINTENANT
+     ============================================================ -->
+<section class="section-creator" style="padding: 5rem 0; margin: 0;">
     <div class="container-creator">
-        <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Spécialistes</p>
-            <h2 class="section-title-creator" style="font-size: 1.75rem;">Un expert par domaine</h2>
+
+        <div class="section-header-creator" style="text-align: center; margin-bottom: 3.5rem;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Ce n'est pas du futur lointain</p>
+            <h2 class="section-title-creator" style="font-size: 1.75rem; color: white;">4 signaux concrets qui montrent que le shift est en cours</h2>
         </div>
-        
-        <div class="ecosystem-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-            
-            {% assign specialists = "Julien:Release Manager:Étiquette losange:semver · Git tag · Release notes · Marketplace zip:Camille:Traducteur:Bulles dialogue:PHP MD5 legacy · XLIFF · Wording BO:Raphaël:API Webservice:Prise électrique:REST Webservice · Admin API PS9 · OAuth2:Inès:UX/UI Back-office:Moniteur:UX back-office · WCAG 2.1 AA · Composants BO:Thomas:Migration Upgrade:Flèche montants:PS 1.7→8→9 · Scripts migration · Rollback:Antoine:Compat Advisor:Doubles flèches:Tactician→Messenger · Command Bus PS8/9 · Adapters:Léa:Data Migration:Cylindre BDD:CSV · Imports · Upgrade scripts · Rollback" | split: ":" %}
-            
-            <!-- Julien - Release Manager -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+
+            <!-- Signal 1 -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 28)" opacity="0.4">
-                            <rect x="-6" y="-4" width="12" height="10" transform="rotate(45)" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <circle cx="0" cy="0" r="2" fill="#34d399"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">Release</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Julien</h3>
+                    <div style="width: 36px; height: 36px; background: rgba(71,117,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 1.1rem;" aria-hidden="true">🔌</span>
                     </div>
+                    <h3 style="font-size: 1rem; color: white; margin: 0; font-weight: 600;">Le protocole MCP</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">Semver, Git tags, release notes, packaging marketplace.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Semver</span>
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Git</span>
-                </div>
+                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                    Les agents IA peuvent maintenant interagir directement avec les applications e-commerce. Plus besoin de scripts sur mesure — un protocole standardisé connecte l'IA aux boutiques.
+                </p>
             </div>
 
-            <!-- Camille - Traducteur -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
+            <!-- Signal 2 -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 25)" opacity="0.4">
-                            <rect x="-8" y="-5" width="10" height="7" rx="1" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <rect x="-8" y="2" width="10" height="7" rx="1" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">Traducteur</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Camille</h3>
+                    <div style="width: 36px; height: 36px; background: rgba(5,150,105,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 1.1rem;" aria-hidden="true">🧠</span>
                     </div>
+                    <h3 style="font-size: 1rem; color: white; margin: 0; font-weight: 600;">La spécialisation des agents</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">PHP MD5 legacy, XLIFF, wording back-office.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">MD5</span>
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">XLIFF</span>
-                </div>
+                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                    Un agent généraliste fait du travail moyen. Un agent spécialisé sur la sécurité PrestaShop avec 2 000+ lignes de contexte fait un travail d'expert. La spécialisation change la donne.
+                </p>
             </div>
 
-            <!-- Raphaël - API -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
+            <!-- Signal 3 -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 28)" opacity="0.4">
-                            <rect x="-7" y="-5" width="14" height="10" rx="1" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <line x1="-3" y1="-2" x2="-3" y2="2" stroke="#34d399" stroke-width="1.5"/>
-                            <line x1="0" y1="-2" x2="0" y2="2" stroke="#34d399" stroke-width="1.5"/>
-                            <line x1="3" y1="-2" x2="3" y2="2" stroke="#34d399" stroke-width="1.5"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">API</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Raphaël</h3>
+                    <div style="width: 36px; height: 36px; background: rgba(212,175,55,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 1.1rem;" aria-hidden="true">📉</span>
                     </div>
+                    <h3 style="font-size: 1rem; color: white; margin: 0; font-weight: 600;">Le coût qui s'effondre</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">REST Webservice, Admin API PS9, OAuth2.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">REST</span>
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">OAuth2</span>
-                </div>
+                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                    Ce qui coûtait des milliers d'euros en temps humain se fait en minutes avec des agents spécialisés. L'audit de sécurité, le packaging, la traduction — les coûts sont divisés par 10.
+                </p>
             </div>
 
-            <!-- Inès - UX -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
+            <!-- Signal 4 -->
+            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 25)" opacity="0.4">
-                            <rect x="-8" y="-6" width="16" height="11" rx="1" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <line x1="-4" y1="0" x2="2" y2="0" stroke="#34d399" stroke-width="1.5"/>
-                            <circle cx="5" cy="0" r="1.5" fill="#34d399"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">UX</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Inès</h3>
+                    <div style="width: 36px; height: 36px; background: rgba(71,117,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 1.1rem;" aria-hidden="true">✅</span>
                     </div>
+                    <h3 style="font-size: 1rem; color: white; margin: 0; font-weight: 600;">La qualité qui monte</h3>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">UX back-office, WCAG 2.1 AA, composants PrestaShop.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">WCAG</span>
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">BO</span>
-                </div>
-            </div>
-
-            <!-- Thomas - Migration -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 28)" opacity="0.4">
-                            <path d="M-3 -6 L0 -10 L3 -6" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <line x1="-5" y1="0" x2="5" y2="0" stroke="#34d399" stroke-width="1.5"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">Migration</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Thomas</h3>
-                    </div>
-                </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">PS 1.7→8→9, scripts migration, rollback.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Upgrade</span>
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Rollback</span>
-                </div>
-            </div>
-
-            <!-- Antoine - Compat -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 28)" opacity="0.4">
-                            <path d="M-8 0 L-5 -4 L-5 4 Z" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <path d="M8 0 L5 -4 L5 4 Z" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <line x1="-3" y1="0" x2="3" y2="0" stroke="#34d399" stroke-width="1" stroke-dasharray="2 1"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">Compat</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Antoine</h3>
-                    </div>
-                </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">Tactician→Messenger, Command Bus PS8/9.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Adapters</span>
-                </div>
-            </div>
-
-            <!-- Léa - Data -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                    <svg viewBox="0 0 100 100" width="55" height="55">
-                        <ellipse cx="50" cy="75" rx="22" ry="13" fill="#0f1f1a" stroke="#34d399" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="20" fill="#0f1f1a" stroke="#34d399" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="43" cy="42" r="2.5" fill="#34d399"/>
-                        <circle cx="57" cy="42" r="2.5" fill="#34d399"/>
-                        <path d="M43 51 Q50 56 57 51" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                        <g transform="translate(50, 25)" opacity="0.4">
-                            <ellipse cx="0" cy="-5" rx="5" ry="2" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <ellipse cx="0" cy="0" rx="5" ry="2" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <ellipse cx="0" cy="5" rx="5" ry="2" stroke="#34d399" stroke-width="1.5" fill="none"/>
-                            <line x1="0" y1="-8" x2="0" y2="8" stroke="#34d399" stroke-width="1"/>
-                        </g>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; color: #34d399; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.4rem; border-radius: 3px;">Data</span>
-                        <h3 style="font-size: 1.1rem; margin: 0.3rem 0 0; color: white;">Léa</h3>
-                    </div>
-                </div>
-                <p style="color: #9ca3af; font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.75rem;">CSV, imports, upgrade scripts.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
-                    <span style="font-size: 0.6rem; padding: 0.2rem 0.4rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Migration</span>
-                </div>
+                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                    Les agents ne fatiguent pas, n'oublient pas de cas de test, appliquent les mêmes standards à chaque exécution. La régularité de qualité dépasse ce qu'un humain seul peut maintenir.
+                </p>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- INFRASTRUCTURE / SYSTÈME -->
-<section class="section-creator" style="padding: 3rem 0 4rem; background: #0d0d14; margin: 0;">
+<!-- ============================================================
+     BLOC 4 — POSITIONNEMENT
+     ============================================================ -->
+<section class="section-creator" style="padding: 5rem 0; background: #0d0d14; margin: 0;">
     <div class="container-creator">
-        <div class="section-header-creator" style="text-align: center; margin-bottom: 3rem;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Infrastructure</p>
-            <h2 class="section-title-creator" style="font-size: 1.75rem;">Qualité, mémoire, supervision</h2>
+
+        <div class="section-header-creator" style="text-align: center; margin-bottom: 3.5rem;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.5rem;">Mon positionnement</p>
+            <h2 class="section-title-creator" style="font-size: 1.75rem; color: white;">Le pont entre 15 ans de terrain et 6 mois d'immersion IA</h2>
         </div>
-        
-        <div class="ecosystem-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            
-            <!-- Victor - Debugger -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="65" rx="20" ry="25" fill="#1a152a" stroke="#a78bfa" stroke-width="2"/>
-                        <circle cx="50" cy="35" r="18" fill="#1a152a" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="44" cy="32" r="3" fill="#a78bfa"/>
-                        <circle cx="56" cy="32" r="3" fill="#a78bfa"/>
-                        <path d="M45 40 Q50 44 55 40" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                        <line x1="30" y1="30" x2="20" y2="20" stroke="#a78bfa" stroke-width="1.5"/>
-                        <line x1="30" y1="40" x2="18" y2="45" stroke="#a78bfa" stroke-width="1.5"/>
-                        <line x1="70" y1="30" x2="80" y2="20" stroke="#a78bfa" stroke-width="1.5"/>
-                        <line x1="70" y1="40" x2="82" y2="45" stroke="#a78bfa" stroke-width="1.5"/>
-                        <circle cx="85" cy="15" r="6" fill="#a78bfa" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#a78bfa"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a78bfa; background: rgba(167, 139, 250, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">Debugger</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Victor</h3>
-                    </div>
-                </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">ReAct loop, root cause analysis, fix plan. Diagnostic rapide des problèmes complexes.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">ReAct</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Debug</span>
-                </div>
+
+        <style>
+        .positioning-grid { grid-template-columns: 1fr 1fr !important; }
+        @media (max-width: 768px) { .positioning-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } }
+        </style>
+        <div class="positioning-grid" style="display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: start; max-width: 1000px; margin: 0 auto;">
+
+            <!-- Texte principal -->
+            <div>
+                <p style="color: #9ca3af; font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+                    Je ne suis pas un consultant IA qui découvre l'e-commerce. Je suis un développeur e-commerce de 15 ans qui a plongé dans l'IA agentic il y a 6 mois — et qui n'en est pas ressorti.
+                </p>
+                <p style="color: #9ca3af; font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem;">
+                    Mon quotidien aujourd'hui, c'est orchestrer des agents IA spécialisés pour développer, auditer, packager et déployer des modules e-commerce sur PrestaShop, WooCommerce, Shopware et Sylius.
+                </p>
+                <p style="color: #9ca3af; font-size: 1rem; line-height: 1.8; margin-bottom: 0;">
+                    Ce que j'ai appris en 6 mois de R&amp;D intensive, je le partage pour aider les marchands, les agences et les développeurs à comprendre ce qui arrive — et à s'y préparer.
+                </p>
             </div>
 
-            <!-- Sophie - QA -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="75" rx="25" ry="15" fill="#1a152a" stroke="#a78bfa" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="22" fill="#1a152a" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="42" cy="42" r="3" fill="#a78bfa"/>
-                        <circle cx="58" cy="42" r="3" fill="#a78bfa"/>
-                        <path d="M42 52 Q50 58 58 52" stroke="#a78bfa" stroke-width="2" fill="none"/>
-                        <g transform="translate(50, 22)" opacity="0.4">
-                            <rect x="-8" y="-10" width="16" height="20" rx="1" stroke="#a78bfa" stroke-width="2" fill="none"/>
-                            <line x1="-4" y1="-4" x2="4" y2="-4" stroke="#a78bfa" stroke-width="1.5"/>
-                            <line x1="-4" y1="2" x2="4" y2="2" stroke="#a78bfa" stroke-width="1.5"/>
-                            <path d="M-2 6 L0 8 L2 6" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                        </g>
-                        <circle cx="85" cy="15" r="6" fill="#a78bfa" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#a78bfa"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a78bfa; background: rgba(167, 139, 250, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">QA Gate</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Sophie</h3>
+            <!-- Stats / preuves -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #4775ff; margin: 0 0 0.25rem; line-height: 1;">90+</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">agents IA spécialisés en production</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #4775ff; margin: 0 0 0.25rem; line-height: 1;">4</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">plateformes e-commerce couvertes</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #d4af37; margin: 0 0 0.25rem; line-height: 1;">15+</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">ans d'expertise PrestaShop</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #d4af37; margin: 0 0 0.25rem; line-height: 1;">5</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">PrestaShop Awards</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #059669; margin: 0 0 0.25rem; line-height: 1;">100K+</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">installations de modules</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center;">
+                    <p style="font-size: 2rem; font-weight: 800; color: #059669; margin: 0 0 0.25rem; line-height: 1;">8</p>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0; line-height: 1.4;">domaines d'expertise couverts</p>
+                </div>
+
+                <div style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.25rem; text-align: center; grid-column: span 2;">
+                    <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                        <span style="font-size: 0.75rem; padding: 0.25rem 0.6rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px; font-weight: 600;">Speaker PSD 2025</span>
+                        <span style="font-size: 0.75rem; padding: 0.25rem 0.6rem; background: rgba(71,117,255,0.1); color: #4775ff; border-radius: 20px; font-weight: 600;">Speaker EO2S 2026</span>
                     </div>
                 </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">Checklist QA, détection régression, severity matrix. Validation avant mise en production.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Checklist</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Regression</span>
-                </div>
-            </div>
 
-            <!-- Ariane - Mémoire -->
-            <div class="ecosystem-card" style="background: #0f0f14; border: 1px solid #1f1f2e; border-radius: 12px; padding: 1.5rem;">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg viewBox="0 0 100 100" width="70" height="70" style="flex-shrink: 0;">
-                        <ellipse cx="50" cy="75" rx="25" ry="15" fill="#1a152a" stroke="#a78bfa" stroke-width="2"/>
-                        <circle cx="50" cy="45" r="22" fill="#1a152a" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="42" cy="42" r="3" fill="#a78bfa"/>
-                        <circle cx="58" cy="42" r="3" fill="#a78bfa"/>
-                        <path d="M42 52 Q50 58 58 52" stroke="#a78bfa" stroke-width="2" fill="none"/>
-                        <g transform="translate(50, 28)" opacity="0.4">
-                            <circle cx="-8" cy="0" r="4" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                            <circle cx="8" cy="0" r="4" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                            <circle cx="0" cy="-8" r="4" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-                            <line x1="-4" y1="0" x2="-4" y2="-4" stroke="#a78bfa" stroke-width="1"/>
-                            <line x1="4" y1="0" x2="4" y2="-4" stroke="#a78bfa" stroke-width="1"/>
-                            <line x1="-6" y1="-2" x2="-2" y2="-6" stroke="#a78bfa" stroke-width="1"/>
-                            <line x1="6" y1="-2" x2="2" y2="-6" stroke="#a78bfa" stroke-width="1"/>
-                        </g>
-                        <circle cx="85" cy="15" r="6" fill="#a78bfa" opacity="0.3"/>
-                        <circle cx="85" cy="15" r="3" fill="#a78bfa"/>
-                    </svg>
-                    <div>
-                        <span style="font-family: monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a78bfa; background: rgba(167, 139, 250, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">Mémoire</span>
-                        <h3 style="font-size: 1.25rem; margin: 0.5rem 0 0; color: white;">Ariane</h3>
-                    </div>
-                </div>
-                <p style="color: #9ca3af; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1rem;">READ, WRITE, LEARN. Décisions architecturales, patterns validés, contexte persistant.</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Contexte</span>
-                    <span style="font-size: 0.7rem; padding: 0.25rem 0.5rem; background: #1f1f2e; color: #9ca3af; border-radius: 20px;">Patterns</span>
-                </div>
             </div>
-
         </div>
+
+
     </div>
 </section>
 
-<!-- CTA SECTION -->
-<section class="section-creator" style="padding: 4rem 0; background: linear-gradient(135deg, #0f0f14 0%, #1a1a2e 100%); margin: 0;">
+<!-- ============================================================
+     BLOC 5 — CTA
+     ============================================================ -->
+<section class="section-creator" style="padding: 5rem 0; margin: 0; background: linear-gradient(180deg, #0d0d14 0%, #080810 100%);">
     <div class="container-creator">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <h2 class="section-title-creator" style="font-size: 1.75rem; margin-bottom: 1rem;">Prêt à faire travailler la squad ?</h2>
-            <p style="color: #9ca3af; font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">
-                Réservez une session exploratoire gratuite pour évaluer comment cette orchestration peut s'appliquer à votre contexte PrestaShop.
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #6b7280; margin-bottom: 0.75rem;">La conversation</p>
+            <h2 style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; color: white; margin-bottom: 1.5rem; line-height: 1.3;">
+                Où en êtes-vous sur cette courbe ?
+            </h2>
+            <p style="color: #9ca3af; font-size: 1rem; line-height: 1.8; margin-bottom: 0.75rem;">
+                Que vous soyez marchand, agence ou développeur, la question n'est plus "est-ce que l'IA va changer le e-commerce" mais "comment m'y préparer concrètement".
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-hero btn-hero-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #4775ff; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
-                    <i class="fas fa-calendar-check"></i>
-                    Réserver une session gratuite
+            <p style="color: #9ca3af; font-size: 1rem; line-height: 1.8; margin-bottom: 2.5rem;">
+                30 minutes. Pas un pitch commercial — une conversation pour situer où vous en êtes et ce qui est actionnable pour vous maintenant.
+            </p>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn-hero btn-hero-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; background: linear-gradient(135deg, #4775ff 0%, #2c5aa0 100%); color: white; padding: 1rem 2rem; border-radius: 10px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;" rel="noopener noreferrer" target="_blank">
+                    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    Réserver une session exploratoire gratuite
                 </a>
-                <a href="{{ site.url }}" class="btn-hero" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: #9ca3af; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid #374151;">
-                    ← Accueil
-                </a>
-                <a href="{{ site.url }}/blog/" class="btn-hero" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: #9ca3af; text-decoration: none; border-radius: 8px; font-weight: 600; border: 1px solid #374151;">
-                    Blog →
+                <a href="/blog/" class="btn-hero btn-hero-secondary" style="display: inline-flex; align-items: center; gap: 0.6rem; color: #6b7280; padding: 0.75rem 1.5rem; border-radius: 10px; font-size: 0.95rem; font-weight: 500; text-decoration: none; transition: all 0.3s ease; border: 1px solid #1f1f2e;">
+                    <i class="fas fa-rss" aria-hidden="true"></i>
+                    Lire le blog
                 </a>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- SCHEMA.ORG JSON-LD -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://ndabene.github.io/agence-prestashop-ia/#professionalservice",
-  "name": "Agence PrestaShop IA — Nicolas Dabène",
-  "url": "https://ndabene.github.io/agence-prestashop-ia/",
-  "description": "Squad d'agents IA spécialisés PrestaShop couvrant le cycle de vie complet des modules : conception, sécurité, packaging, release, migration.",
+  "@id": "https://nicolas-dabene.fr/agence-prestashop-ia/#professionalservice",
+  "name": "Agence IA E-commerce — Nicolas Dabène",
+  "url": "https://nicolas-dabene.fr/agence-prestashop-ia/",
+  "description": "Vision du développement e-commerce agentic. 90+ agents IA spécialisés couvrant 4 plateformes. Orchestration humain-IA pour marchands, agences et développeurs.",
   "provider": {
     "@type": "Person",
     "name": "Nicolas Dabène",
-    "url": "https://ndabene.github.io",
-    "jobTitle": "AI Orchestrator & PrestaShop Expert"
+    "url": "https://nicolas-dabene.fr",
+    "jobTitle": "AI Orchestrator & E-commerce Architect"
   },
   "areaServed": "FR",
-  "serviceType": "Développement modules PrestaShop avec agents IA"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Qu'est-ce qu'une agence PrestaShop IA ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Une agence PrestaShop IA est une organisation qui utilise des agents IA spécialisés pour développer, auditer et maintenir des modules PrestaShop. Chaque agent couvre un domaine précis : architecture, sécurité, packaging, traduction, migration. Ils travaillent en parallèle ou en séquence selon la complexité de la tâche."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quels agents IA composent la squad PrestaShop de Nicolas Dabène ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La squad comprend 13 agents : Mathieu (builder, architecture PS 8/9), Sébastien (sécurité OWASP), Élise (packaging et CI/CD), Julien (release manager), Camille (traductions MD5/XLIFF), Raphaël (API REST et Admin API), Inès (UX back-office WCAG 2.1), Thomas (migration 1.7→8→9), Antoine (compatibilité Command Bus), Léa (data migration), Victor (debugger ReAct), Sophie (QA gate), Ariane (mémoire de contexte)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Les agents IA remplacent-ils le développeur PrestaShop ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Non. Les agents IA spécialisés délèguent le travail répétitif et contextuel (sécurité, packaging, traduction, release), mais le jugement sur les choix d'architecture, la dette technique et les priorités business reste humain. Nicolas Dabène orchestre la squad et valide les décisions clés."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quelle est la différence entre ces agents et GitHub Copilot ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "GitHub Copilot complète du code générique. Les agents spécialisés PrestaShop connaissent les patterns spécifiques à la plateforme, les incompatibilités entre PS 8 et PS 9, les règles de sécurité, les contraintes de packaging marketplace et les conventions de traduction MD5. Ils agissent en autonomie sur une tâche complète, pas ligne par ligne."
-      }
-    }
-  ]
+  "serviceType": "Développement e-commerce agentic avec agents IA spécialisés"
 }
 </script>
 
 <!-- LLM Optimization -->
 <!--
-llm:page-type: team-page
-llm:entity: Nicolas Dabène — PrestaShop AI Agency
-llm:summary: Squad of 13 specialized AI agents for PrestaShop module development. Agents cover: architecture (Mathieu), security OWASP (Sébastien), packaging CI/CD (Élise), semantic release (Julien), MD5/XLIFF translation (Camille), REST API (Raphaël), back-office UX WCAG 2.1 (Inès), version migration 1.7→9 (Thomas), Command Bus compatibility (Antoine), data migration (Léa), ReAct debugger (Victor), QA gate (Sophie), context memory (Ariane). All agents specialize in PrestaShop 8 and 9. Orchestrated by Nicolas Dabène, AI Orchestrator, Antibes, France.
-llm:keywords: prestashop ai agents, module development squad, prestashop 9, ai orchestration, nicolas dabene
+llm:page-type: vision-page
+llm:entity: Nicolas Dabène — AI E-commerce Agency
+llm:summary: Vision page on agentic e-commerce development. 90+ specialized AI agents covering PrestaShop, WooCommerce, Shopware, Sylius. 15+ years e-commerce expertise, 5 PrestaShop Awards, 100K+ module installs. Speaker PSD 2025, EO2S 2026. Free 30-min exploratory session via Calendly.
+llm:keywords: agence ia e-commerce, développement agentic, prestashop ia, agents ia spécialisés, nicolas dabene, orchestration ia
 -->
