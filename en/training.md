@@ -1,76 +1,26 @@
 ---
 layout: page
 title: Training
-heading: AI Training for Developers
+heading: AI Training
 permalink: /en/training/
 lang: en
 alternates:
   - lang: fr
     url: /formations/
-description: "AI training for developers: practical programs, on-site in Sophia
-  Antipolis, remote and in-company."
-llm_summary: 'AI training for developers: practical programs, on-site in Sophia
-  Antipolis, remote and in-company.'
+description: "Custom AI training — let's talk about your needs."
+llm_summary: "Custom AI training — let's talk about your needs."
 llm_topics: [training, ai, developers]
 ---
-<section class="formations-section" id="formations">
-  <div class="container">
-    <p class="section-description">Structured programs, consistent design, and module lists in site style.</p>
 
-    <h3>"AI for Developers" Training (Flagship Program)</h3>
-    <ul>
-      <li>Level: Beginner to advanced</li>
-      <li>Duration: 2-5 days depending on needs</li>
-      <li>Format: On-site Sophia Antipolis / Remote / In-company</li>
-      <li>Program:
-        <ul>
-          <li>Practical introduction to LLMs</li>
-          <li>AI APIs integration (OpenAI, Anthropic, etc.)</li>
-          <li>Prompt engineering for developers</li>
-          <li>AI coding tools (Cursor, GitHub Copilot, etc.)</li>
-          <li>Task automation with AI</li>
-          <li>Practical projects and use cases</li>
-        </ul>
-      </li>
-    </ul>
-
-    <h3>Corporate Training "AI Transformation"</h3>
-    <ul>
-      <li>AI needs and maturity audit</li>
-      <li>Technical team training</li>
-      <li>AI workflows implementation</li>
-      <li>3-6 months support</li>
-      <li>AI ROI and metrics</li>
-    </ul>
-
-    <h3>Specialized Workshops</h3>
-    <ul>
-      <li>"ChatGPT for developers" (1 day)</li>
-      <li>"Integrate AI into your web projects" (2 days)</li>
-      <li>"Automation with AI: from idea to production" (3 days)</li>
-      <li>"Training AI trainers" (for training centers)</li>
-    </ul>
-
-    <h3>Training Locations</h3>
-    <ul>
-      <li>Sophia Antipolis</li>
-      <li>Antibes, Cannes, Nice (travel)</li>
-      <li>Company (in-company)</li>
-      <li>Interactive remote</li>
-    </ul>
+<section class="formations-coming-soon" id="training">
+  <div class="container" style="text-align: center; padding: 4rem 2rem;">
+    <p style="font-size: 1.25rem; color: #475569; max-width: 600px; margin: 0 auto 2.5rem;">
+      My training offer is evolving. To find out about upcoming sessions or discuss a custom program, let's schedule a call.
+    </p>
+    <a href="https://calendly.com/ndabene2807/mcp-tools-plus"
+       class="btn btn-primary"
+       style="display: inline-block; background: #7c3aed; color: white; padding: 1rem 2.5rem; border-radius: 10px; font-size: 1.1rem; font-weight: 600; text-decoration: none;">
+      Book a slot
+    </a>
   </div>
 </section>
-
-
-<p>Want to go further? Discover my <a href="/en/training/">training courses</a>, browse my <a href="/en/blog/">articles</a> or <a href="https://calendly.com/ndabene2807/mcp-tools-plus">Contact me to discuss</a>.</p>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "AI training for developers",
-  "description": {{ page.description | jsonify }},
-  "provider": { "@type": "Person", "name": "Nicolas Dabène" },
-  "url": "{{ page.url | absolute_url }}"
-}
-</script>
