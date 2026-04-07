@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Orchestrator Developer #3 — Why Skills, Context, and Method Change Everything"
-date: 2026-04-28 08:00:00 +0200
+date: 2026-04-30 08:00:00 +0200
 author: Nicolas Dabène
 categories: ["AI", "Web Development", "Agents", "Architecture"]
 tags: ["agentic AI", "web development", "AI", "skills", "context", "method", "orchestration"]

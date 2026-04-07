@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Le développeur-orchestrateur #3 — Pourquoi les skills, le contexte et la méthode changent tout"
-date: 2026-04-28 08:00:00 +0200
+date: 2026-04-30 08:00:00 +0200
 author: Nicolas Dabène
 categories: ["IA", "Développement web", "Agents", "Architecture"]
 tags: ["agentique", "développement web", "IA", "skills", "contexte", "méthode", "orchestration"]
