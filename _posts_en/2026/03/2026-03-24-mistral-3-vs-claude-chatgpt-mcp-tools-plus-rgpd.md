@@ -344,4 +344,4 @@ And that is a genuine strategic inflection point for PrestaShop merchants.
 
 ---
 
-*Nicolas Dabène — Developer of [MCP Tools Plus for PrestaShop](https://nicolas-dabene.fr/modules/mcp-tools-plus/) & convinced that AI governance will be the competitive differentiator for tomorrow's e-merchants.*
+*Nicolas Dabène — Creator of AI solutions for PrestaShop. [Book a strategy call](https://calendly.com/ndabene2807/mcp-tools-plus) to explore how AI can transform your business.*

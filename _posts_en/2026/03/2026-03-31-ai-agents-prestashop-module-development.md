@@ -169,4 +169,4 @@ Personally, I've been working on this topic for over a year — and the differen
 
 ---
 
-*Nicolas Dabène — Senior PHP Developer & AI Orchestrator, 15 years of PrestaShop expertise, 5 PrestaShop Awards, 100,000+ module installations. Author of [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/).*
+*Nicolas Dabène — Senior PHP Developer & AI Orchestrator, 15 years of PrestaShop expertise, 5 PrestaShop Awards, 100,000+ module installations. [Book a strategy call](https://calendly.com/ndabene2807/mcp-tools-plus) to explore how AI can transform your business.*

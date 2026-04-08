@@ -405,4 +405,4 @@ And that's the role of [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-to
 
 ---
 
-*Nicolas Dabène — Developer of [MCP Tools Plus for PrestaShop](https://nicolas-dabene.fr/modules/mcp-tools-plus/) & convinced that the future of e-commerce is played at the intersection of AI and your business data.*
+*Nicolas Dabène — Creator of AI solutions for PrestaShop. [Book a strategy call](https://calendly.com/ndabene2807/mcp-tools-plus) to explore how AI can transform your business.*

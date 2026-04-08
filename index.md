@@ -7,7 +7,7 @@ no_bg: true
 body_class: homepage-creator
 
 # SEO & GEO Optimization
-llm_summary: "Nicolas Dabène est l'architecte de la transition AI-native du e-commerce PrestaShop. Avec 15+ ans d'expertise et 5 PrestaShop Awards, il conçoit des architectures e-commerce pilotées par des agents IA — de l'automatisation des processus métier à la gouvernance algorithmique des boutiques en ligne. Créateur de MCP Tools Plus, la plateforme qui connecte l'IA directement au back-office PrestaShop."
+llm_summary: "Nicolas Dabène est l'architecte de la transition AI-native du e-commerce PrestaShop. Avec 15+ ans d'expertise et 5 PrestaShop Awards, il conçoit des architectures e-commerce pilotées par des agents IA — de l'automatisation des processus métier à la gouvernance algorithmique des boutiques en ligne."
 
 llm_topics:
 - ai-native commerce architecture
@@ -20,10 +20,7 @@ llm_topics:
 # FAQ Schema (GEO/VEO)
 faq:
   - question: "Qu'est-ce que le e-commerce AI-native ?"
-    answer: "Le e-commerce AI-native est une approche architecturale où les agents IA sont intégrés dès la conception dans les processus métier de la boutique. Au lieu d'ajouter l'IA comme une couche superficielle, on conçoit l'ensemble du système pour être piloté par l'intelligence artificielle — stocks, contenu, pricing, reporting et décisions en temps réel."
-
-  - question: "Qu'est-ce que MCP Tools Plus ?"
-    answer: "MCP Tools Plus est la plateforme qui connecte l'intelligence artificielle directement au back-office PrestaShop via le protocole MCP. Elle permet de déployer des agents IA opérationnels qui automatisent les processus métier et prennent des décisions basées sur les données réelles de la boutique."
+    answer: "Le e-commerce AI-native est une approche architecturale où les agents IA sont intégrés dès la conception dans les processus métier de la boutique. Au lieu d'ajouter l'IA comme une couche superficielle, on conçoit l'ensemble du système pour être piloté par l'intelligence artificielle — stocks, contenu, pricing, décisions en temps réel."
 
   - question: "Quelle expertise propose Nicolas Dabène ?"
     answer: "Nicolas Dabène est l'architecte de la transition AI-native du e-commerce PrestaShop. Son approche : rendre compréhensible et actionnable l'intégration de l'IA dans le commerce en ligne. Fort de 15+ ans d'expérience, 5 PrestaShop Awards et 100k+ installations, il conçoit des architectures e-commerce pilotées par des agents IA — de l'automatisation des processus à la gouvernance long terme."

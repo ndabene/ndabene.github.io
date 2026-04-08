@@ -342,4 +342,4 @@ Et ça, c'est un vrai tournant stratégique pour les marchands PrestaShop.
 
 ---
 
-*Nicolas Dabène — Développeur du module [MCP Tools Plus pour PrestaShop](https://nicolas-dabene.fr/modules/mcp-tools-plus/) & convaincu que la gouvernance IA sera le différenciateur compétitif des e-commerçants de demain.*
+*Nicolas Dabène — Créateur de solutions IA pour PrestaShop. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.*

@@ -290,4 +290,4 @@ That's precisely why I think the real rising profession isn't that of a replaced
 
 ---
 
-*Nicolas Dabène — Architect of AI-native e-commerce transition & developer of the [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/) module for PrestaShop. Convinced that the orchestrator developer will be the dominant profile of tomorrow's technical teams.*
+*Nicolas Dabène — Architect of AI-native e-commerce transition & creator of AI solutions for PrestaShop. [Book a strategy call](https://calendly.com/ndabene2807/mcp-tools-plus) to explore how AI can transform your business.*

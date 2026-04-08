@@ -405,4 +405,4 @@ Et ça, c'est le rôle de [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp
 
 ---
 
-*Nicolas Dabène — Développeur du module [MCP Tools Plus pour PrestaShop](https://nicolas-dabene.fr/modules/mcp-tools-plus/) & convaincu que l'avenir du e-commerce se joue à la connexion entre l'IA et vos données métier.*
+*Nicolas Dabène — Créateur de solutions IA pour PrestaShop. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.*

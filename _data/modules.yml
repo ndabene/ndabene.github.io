@@ -16,17 +16,6 @@
       category: prestashop
     - tech: Payment
       category: payment
-- title: "MCP Tools Plus"
-  description: "Pilotez votre boutique PrestaShop avec l'IA en langage naturel grâce au protocole MCP."
-  link: "https://addons.prestashop.com/fr/outils-administration-modules-prestashop/96638-mcp-tools-plus.html"
-  image: "assets/images/blog/2025/11/ps-mcp-server-tools-plus.jpg"
-  tags:
-    - tech: PrestaShop
-      category: prestashop
-    - tech: AI
-      category: ai
-    - tech: Automation
-      category: automation 
 - title: "Google Merchant Center PRO (Google Shopping)"
   description: "Intégrez Google Shopping pour augmenter vos ventes."
   link: "https://www.businesstech.fr/fr/modules-prestashop-google-et-publicite/45-google-merchant-center-pro-module-pour-prestashop-0656272492397.html"

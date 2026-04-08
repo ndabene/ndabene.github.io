@@ -251,10 +251,6 @@ body_class: "page-skills-modern"
         <p>Découvrez comment intégrer l'IA native dans votre boutique PrestaShop ou échangeons sur vos enjeux de performance</p>
         
         <div class="cta-buttons">
-            <a href="{{ '/modules/mcp-tools-plus/' | relative_url }}" class="btn-cta btn-primary">
-                <i class="fas fa-robot"></i>
-                <span>MCP Tools Plus</span>
-            </a>
             <a href="{{ '/blog/' | relative_url }}" class="btn-cta btn-secondary">
                 <i class="fas fa-blog"></i>
                 <span>Articles IA & E-commerce</span>

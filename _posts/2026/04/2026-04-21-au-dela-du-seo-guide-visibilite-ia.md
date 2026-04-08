@@ -227,4 +227,4 @@ Le trafic organique ne disparaît pas — il migre. Et cette migration récompen
 
 ---
 
-*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & développeur du module [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/) pour PrestaShop. Convaincu que la visibilité IA sera le différenciateur compétitif des marchands de demain.*
+*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & créateur de solutions IA pour PrestaShop. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.

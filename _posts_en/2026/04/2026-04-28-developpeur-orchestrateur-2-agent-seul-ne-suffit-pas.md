@@ -276,4 +276,4 @@ That's what I'll cover in the next article.
 
 ---
 
-*Nicolas Dabène — Architect of AI-native e-commerce transition & developer of the [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/) module for PrestaShop. Convinced that agentic orchestration will be the competitive differentiator for tomorrow's developers.*
+*Nicolas Dabène — Architect of AI-native e-commerce transition & creator of AI solutions for PrestaShop. [Book a strategy call](https://calendly.com/ndabene2807/mcp-tools-plus) to explore how AI can transform your business.*

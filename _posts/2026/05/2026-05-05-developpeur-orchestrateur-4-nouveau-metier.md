@@ -290,4 +290,4 @@ C'est précisément pour cela que je pense que le vrai métier qui monte n'est p
 
 ---
 
-*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & développeur du module [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/) pour PrestaShop. Convaincu que le développeur-orchestrateur sera le profil dominant des équipes techniques de demain.*
+*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & créateur de solutions IA pour PrestaShop. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.

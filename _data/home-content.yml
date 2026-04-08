@@ -129,10 +129,6 @@ cta_final:
       url: "https://calendly.com/ndabene2807/mcp-tools-plus"
       style: "primary"
       icon: "fas fa-envelope"
-    - text: "Explorer mes solutions"
-      url: "/modules/mcp-tools-plus/"
-      style: "secondary"
-      icon: "fas fa-search"
 
 # ============================================
 # LEGACY - Sections existantes (conservées pour compatibilité)

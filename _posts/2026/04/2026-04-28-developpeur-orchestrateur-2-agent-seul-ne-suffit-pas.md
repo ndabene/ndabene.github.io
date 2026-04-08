@@ -276,4 +276,4 @@ C'est ce que j'aborderai dans le prochain article.
 
 ---
 
-*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & développeur du module [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/) pour PrestaShop. Convaincu que l'orchestration agentique sera le différenciateur compétitif des développeurs de demain.*
+*Nicolas Dabène — Architecte de la transition AI-native du e-commerce & créateur de solutions IA pour PrestaShop. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.

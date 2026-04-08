@@ -168,4 +168,4 @@ Personnellement, je travaille sur ce sujet depuis plus d'un an — et la différ
 
 ---
 
-*Nicolas Dabène — Développeur PHP Senior & Orchestrateur IA, 15 ans d'expertise PrestaShop, 5 PrestaShop Awards, 100 000+ installations de modules. Auteur du module [MCP Tools Plus](https://nicolas-dabene.fr/modules/mcp-tools-plus/).*
+*Nicolas Dabène — Développeur PHP Senior & Orchestrateur IA, 15 ans d'expertise PrestaShop, 5 PrestaShop Awards, 100 000+ installations de modules. [Réservez un appel strategy](https://calendly.com/ndabene2807/mcp-tools-plus) pour explorer comment l'IA peut transformer votre activité.*

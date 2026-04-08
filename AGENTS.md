@@ -38,10 +38,10 @@ python3 scripts/analyze_translations.py
 npm run generate:webp       # PNG/JPG → WebP
 npm run generate:variants   # responsive 480/720/1080 + AVIF
 
-# Tag management
-python3 scripts/harmonize_tags.py --apply
-ruby scripts/normalize_tags.rb --apply
-ruby scripts/generate_tag_pages.rb
+# Individual script tests
+node scripts/test-sharp.mjs                       # Test Sharp image processing
+node scripts/gen-variants.mjs                     # Test responsive image generation
+ruby scripts/test_youtube_local.rb                # Test YouTube API integration
 
 # Debug build with trace
 bundle exec jekyll build --trace --config _config.yml,_config_github.yml
@@ -56,12 +56,60 @@ bundle exec jekyll build --trace --config _config.yml,_config_github.yml
 | **YAML** | 2-space indent, `snake_case` keys, `true/false` booleans, no quotes unless needed |
 | **Ruby** | `frozen_string_literal: true`, `snake_case`, constants `UPPER_SNAKE_CASE`, `.freeze` |
 | **Python** | Type hints, docstrings, `snake_case`, constants `UPPER_SNAKE_CASE` |
-| **JS/Node** | ES6+, `async/await`, `camelCase`, `const` over `let` |
+| **JS/Node** | ES6+, `async/await`, `camelCase`, `const` over `let`, prefer arrow functions |
 | **SCSS** | BEM-like naming (`.block__element--modifier`), max 3 levels nesting |
 | **HTML/Liquid** | Semantic HTML5, kebab-case classes, `loading="lazy"` on images |
 | **Git** | Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:` |
 
-### Blog Post Frontmatter (required)
+### Ruby Style (scripts/*.rb)
+
+```ruby
+# frozen_string_literal: true
+require 'json'
+require 'yaml'
+
+module MyModule
+  class MyClass
+    attr_reader :items
+    def initialize(items)
+      @items = items.freeze
+    end
+    def process
+      @items.map { |item| transform(item) }
+    end
+    private
+    def transform(item)
+      item.upcase
+    end
+  end
+end
+```
+
+### JavaScript/Node Style (scripts/*.js, scripts/*.mjs)
+
+```javascript
+import sharp from 'sharp';
+const DEFAULT_OPTIONS = { quality: 80, format: 'webp' };
+
+export async function generateVariants(inputPath, outputDir, options = {}) {
+  const config = { ...DEFAULT_OPTIONS, ...options };
+  // Implementation
+}
+```
+
+### Python Style (scripts/*.py)
+
+```python
+from __future__ import annotations
+from pathlib import Path
+def analyze_translations(base_dir: Path, threshold: int = 5) -> dict[str, list[str]]:
+    """Analyze translation coverage between FR and EN content."""
+    return {}
+```
+
+---
+
+## Blog Post Frontmatter (required)
 
 ```yaml
 ---
@@ -87,9 +135,6 @@ Filename: `YYYY-MM-DD-slug.md` — date must match frontmatter `date:`.
 |---------|------|
 | French posts | `_posts/YYYY/MM/YYYY-MM-DD-slug.md` |
 | English posts | `_posts_en/YYYY/MM/YYYY-MM-DD-slug.md` |
-| Case studies | `_case_studies/` |
-| Quizzes | `_quizz/` (FR), `_quizz_en/` (EN) |
-| Plugins | `_plugins/` |
 | Images | `assets/images/blog/YYYY/MM/` |
 | Data | `_data/*.yml` · `_data/i18n/{fr,en}.yml` |
 | Templates | `_includes/` · `_layouts/` · `_sass/` |
@@ -109,7 +154,7 @@ Filename: `YYYY-MM-DD-slug.md` — date must match frontmatter `date:`.
 
 ## CI/CD Pipeline (`.github/workflows/jekyll.yml`)
 
-Runs on push/PR to `main`: Ruby setup → frontmatter validation → tag harmonization/normalization → tag page generation → Node.js + Sharp image generation → image completeness validation → Jekyll build → Pagefind search index → GitHub Pages deploy. **Do not bypass validation steps.**
+Runs on push/PR to `main`: Ruby setup → frontmatter validation → tag harmonization → Jekyll build → Pagefind → GitHub Pages deploy. **Do not bypass validation steps.**
 
 ---
 
@@ -128,7 +173,6 @@ Runs on push/PR to `main`: Ruby setup → frontmatter validation → tag harmoni
 ## Quick Reference
 
 - **New article:** `_posts/` (FR) or `_posts_en/` (EN), follow frontmatter, use `.webp` image
-- **Edit data:** `_data/*.yml`, validate with matching script
 - **Add image:** `assets/images/blog/YYYY/MM/`, then `npm run generate:webp`
 - **Fix error:** Run the specific validation script, fix the source
 - **Deploy:** Push to `main` — CI/CD handles everything

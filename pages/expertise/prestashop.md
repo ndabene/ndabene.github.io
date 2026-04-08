@@ -77,18 +77,9 @@ ai_topics: ["PrestaShop", "e-commerce", "modules", "développement", "expertise"
           <a href="https://calendly.com/ndabene2807/mcp-tools-plus" class="btn btn--cta btn--large btn-cta-devis-expert" data-cta="devis-prestashop-hero">
             <span>Demander un devis</span>
           </a>
-          <a href="https://addons.prestashop.com/en/administration-tools-prestashop-modules/96638-mcp-tools-plus.html" target="_blank" class="btn btn--primary btn--large">
-            <span>🚀 Découvrir MCP Tools</span>
-          </a>
           <a href="#projets" class="btn btn--ghost">
             <span>Voir mes réalisations</span>
           </a>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div>
-          <img src="/assets/images/modules/mcp-tools-plus-prestashop.jpg" alt="MCP Tools Plus PrestaShop" class="profile-image-modern" style="border-radius: 12px; object-fit: cover; aspect-ratio: 1/1; width: 100%; max-width: 400px;" onerror="this.src='/assets/images/logo.png'">
         </div>
       </div>
     </div>
