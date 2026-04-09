@@ -36,12 +36,6 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      - name: Validate blog posts frontmatter
-        run: |
-          echo "🔍 Validation du frontmatter des articles..."
-          ruby scripts/validate_frontmatter.rb
-          echo "✅ Frontmatter validé avec succès"
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -143,6 +137,12 @@ jobs:
             exit 1
           fi
           echo "✅ Toutes les images sont complètes (WebP + AVIF)"
+
+      - name: Validate blog posts frontmatter
+        run: |
+          echo "🔍 Validation du frontmatter des articles..."
+          ruby scripts/validate_frontmatter.rb
+          echo "✅ Frontmatter validé avec succès"
 
       - name: Build with Jekyll
         run: |
