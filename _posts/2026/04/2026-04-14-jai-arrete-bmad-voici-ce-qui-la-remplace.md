@@ -112,7 +112,7 @@ Ce que ça change pour toi : tu décides ce qu'on fait, pas comment on le coordi
 
 ## Ce que l'architecture ressemble aujourd'hui
 
-Je la décris en détail dans [l'article du 31 mars](https://nicolas-dabene.fr/articles/2026/03/31/pourquoi-orchestration-multi-agents-prestashop/), mais voici l'essentiel pour comprendre la différence avec BMAD.
+Je la décris en détail dans l'article du 31 mars, mais voici l'essentiel pour comprendre la différence avec BMAD.
 
 **L'agent `master`** est le seul point d'entrée. Il ne touche pas au code. Il ne rédige pas. Son unique responsabilité : comprendre la demande, analyser les dépendances, router vers les bons spécialistes, synthétiser le résultat.
 
@@ -186,7 +186,3 @@ On n'y est pas encore. Mais la direction est claire : moins de coordination huma
 BMAD était une étape vers ça. L'orchestration agentique en est une autre. La prochaine, je ne sais pas encore exactement quelle forme elle prendra — mais je sais que ce sera toujours une question de savoir où placer l'intelligence : dans la tête du développeur, dans la méthode, ou dans l'architecture elle-même.
 
 La réponse change à mesure que les outils changent. Ce qui ne change pas : la qualité des décisions qu'on prend sur ce placement.
-
----
-
-*Cet article fait suite à [Pourquoi l'orchestration multi-agents n'est plus optionnelle pour PrestaShop](https://nicolas-dabene.fr/articles/2026/03/31/pourquoi-orchestration-multi-agents-prestashop/) — si tu veux le détail de l'architecture elle-même, c'est là.*
