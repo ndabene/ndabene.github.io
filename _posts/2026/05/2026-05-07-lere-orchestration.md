@@ -17,7 +17,7 @@ tags:
 excerpt: "En février 2026, Andrej Karpathy a déclenché le Breakpoint de l'ingénierie logicielle. Le code n'est plus l'output, c'est le résidu. L'enjeu : maîtriser l'Ingénierie Agentique."
 seo_title: "L'Ère de l'Orchestration 2026 : la fin du code traditionnel"
 canonical_url: "https://dabene.github.io/fr/2026/05/lere-orchestration/"
-image: "/assets/images/blog/2026/05/lere-orchestration/lere-orchestration.png"
+image: "/assets/images/blog/2026/05/lere-orchestration/lere-orchestration.webp"
 featured: false
 difficulty: "Avancé"
 technologies:
